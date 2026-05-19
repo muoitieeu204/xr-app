@@ -14,3 +14,13 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Visual Studio
+.vs/
+
+# C# build output
+bin/
+obj/
+
+# Vosk speech models
+GodotSpeechRecognition/models/
