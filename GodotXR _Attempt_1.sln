@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodotXR _Attempt_1", "GodotXR _Attempt_1.csproj", "{BD4B85F6-209F-443D-916F-CA2144F4E478}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD4B85F6-209F-443D-916F-CA2144F4E478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4B85F6-209F-443D-916F-CA2144F4E478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4B85F6-209F-443D-916F-CA2144F4E478}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{BD4B85F6-209F-443D-916F-CA2144F4E478}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{BD4B85F6-209F-443D-916F-CA2144F4E478}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{BD4B85F6-209F-443D-916F-CA2144F4E478}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
