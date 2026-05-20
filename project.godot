@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="GodotXR _Attempt_1"
-run/main_scene="uid://ba076lt5lio3t"
+config/name="GodotXR"
+run/main_scene="uid://ds2jh0eifemm"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

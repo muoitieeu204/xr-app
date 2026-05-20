@@ -179,13 +179,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.001117, 2.6105936, -2.7830
 [node name="RockClimbObject12" parent="Environment/RockClimbObjects" instance=ExtResource("5_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.001117, 2.723804, -2.9976509)
 
-[node name="Viewport2Din3D" parent="Environment" instance=ExtResource("5_kry3j")]
+[node name="Viewport2Din3D" parent="Environment" node_paths=PackedStringArray("startButton", "partialResultText", "finalResultText", "speechRecognizer") instance=ExtResource("5_kry3j")]
 transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.018512607, 1.4211048, -1.3397179)
 screen_size = Vector2(640, 360)
 scene = ExtResource("5_21xkr")
 viewport_size = Vector2(640, 360)
 transparent = 0
 scene_properties_keys = PackedStringArray("SpeechUIManager", "startButton", "partialResultText", "finalResultText", "speechRecognizer")
+startButton = NodePath("Viewport/Control/MarginContainer/VBoxContainer/StartListeningButton")
+partialResultText = NodePath("Viewport/Control/MarginContainer/VBoxContainer/PartialResult")
+finalResultText = NodePath("Viewport/Control/MarginContainer/VBoxContainer/FinalResult")
+speechRecognizer = NodePath("Viewport/Control/SpeechRecognizer")
 
 [node name="PlayerXR" parent="." instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3975535, 0)

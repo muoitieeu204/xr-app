@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://ds2jh0eifemm"]
+
+[ext_resource type="PackedScene" uid="uid://crbxfl6kkm26g" path="res://first-person-movement-/fpv_player.tscn" id="1_of4it"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ushyl"]
+size = Vector3(25, 0.1, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_of4it"]
+size = Vector3(25, 0.1, 25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_of4it"]
+size = Vector3(25, 10, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0bg83"]
+size = Vector3(25, 10, 0.1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of4it"]
+
+[sub_resource type="Sky" id="Sky_0bg83"]
+sky_material = SubResource("ProceduralSkyMaterial_of4it")
+
+[sub_resource type="Environment" id="Environment_msh8m"]
+background_mode = 2
+sky = SubResource("Sky_0bg83")
+tonemap_mode = 2
+
+[node name="Main" type="Node3D"]
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="Ground" type="MeshInstance3D" parent="Environment"]
+mesh = SubResource("BoxMesh_ushyl")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ground/StaticBody3D"]
+shape = SubResource("BoxShape3D_of4it")
+
+[node name="Wall" type="Node3D" parent="Environment"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.480915)
+mesh = SubResource("BoxMesh_of4it")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_0bg83")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.398446)
+mesh = SubResource("BoxMesh_of4it")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("BoxShape3D_0bg83")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.425149, 0, -0.014202118)
+mesh = SubResource("BoxMesh_of4it")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("BoxShape3D_0bg83")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.524835, 0, -0.014202118)
+mesh = SubResource("BoxMesh_of4it")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("BoxShape3D_0bg83")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_msh8m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.39946917, -0.73355955, 0.5498316, 2.307037e-08, 0.5997641, 0.8001769, -0.9167467, -0.31964603, 0.23958725, 0, -0.03205633, 0)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_of4it")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.401608, 0.096880436, -9.3665905)
+visible = false
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.907517)
+size = Vector3(25, 10, 0.1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52503836, 0)
+operation = 2
+size = Vector3(3, 5, 1)
