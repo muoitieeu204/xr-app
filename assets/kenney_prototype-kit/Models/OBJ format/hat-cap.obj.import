@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bhb4re38fh0sk"
+path="res://.godot/imported/hat-cap.obj-83307a33efd9c6e8ff17b5e116e7ddda.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hat-cap.obj-83307a33efd9c6e8ff17b5e116e7ddda.mesh"]
+
+source_file="res://assets/kenney_prototype-kit/Models/OBJ format/hat-cap.obj"
+dest_files=["res://.godot/imported/hat-cap.obj-83307a33efd9c6e8ff17b5e116e7ddda.mesh", "res://.godot/imported/hat-cap.obj-83307a33efd9c6e8ff17b5e116e7ddda.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

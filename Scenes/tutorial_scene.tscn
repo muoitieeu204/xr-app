@@ -1,6 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://ds2jh0eifemm"]
+[gd_scene load_steps=40 format=3 uid="uid://ds2jh0eifemm"]
 
-[ext_resource type="PackedScene" uid="uid://crbxfl6kkm26g" path="res://first-person-movement-/fpv_player.tscn" id="1_of4it"]
+[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_oaf0i"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2_0bg83"]
+[ext_resource type="PackedScene" uid="uid://74sco75cmpj2" path="res://GodotSpeechRecognition/speech_recognizer_demo.tscn" id="3_msh8m"]
+[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Scenes/xr_origin_3d.tscn" id="5_oaf0i"]
+[ext_resource type="PackedScene" uid="uid://b2dnnn88rv0bs" path="res://assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb" id="6_qc1uj"]
+[ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="7_2moqc"]
+[ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="7_7f8g8"]
+[ext_resource type="PackedScene" uid="uid://chy5bpaqrk4ei" path="res://assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb" id="8_2moqc"]
+[ext_resource type="Script" uid="uid://mi8g8chk1gbt" path="res://first-person-movement-/replayer.gd" id="9_7f8g8"]
+[ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Scenes/DummyScene.tscn" id="10_2moqc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of4it"]
+
+[sub_resource type="Sky" id="Sky_0bg83"]
+sky_material = SubResource("ProceduralSkyMaterial_of4it")
+
+[sub_resource type="Environment" id="Environment_msh8m"]
+background_mode = 2
+sky = SubResource("Sky_0bg83")
+tonemap_mode = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_ushyl"]
 size = Vector3(25, 0.1, 25)
@@ -14,19 +33,108 @@ size = Vector3(25, 10, 0.1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0bg83"]
 size = Vector3(25, 10, 0.1)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of4it"]
+[sub_resource type="BoxMesh" id="BoxMesh_0bg83"]
+size = Vector3(33, 10, 0.285)
 
-[sub_resource type="Sky" id="Sky_0bg83"]
-sky_material = SubResource("ProceduralSkyMaterial_of4it")
+[sub_resource type="BoxShape3D" id="BoxShape3D_msh8m"]
+size = Vector3(2, 2.52, 0.285)
 
-[sub_resource type="Environment" id="Environment_msh8m"]
-background_mode = 2
-sky = SubResource("Sky_0bg83")
-tonemap_mode = 2
+[sub_resource type="BoxMesh" id="BoxMesh_qc1uj"]
+size = Vector3(2, 2.52, 0.285)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mw53g"]
+size = Vector3(17.345, 10, 0.285)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oaf0i"]
+size = Vector3(15.9, 10, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7u0dx"]
+size = Vector3(1, 1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qc1uj"]
+albedo_color = Color(0, 0.98361856, 0.009731268, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7f8g8"]
+size = Vector3(1, 1, 0.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7f8g8"]
+data = PackedVector3Array(-0.14999999, 2.3999999, 0, -0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 0, 2.1, 0.14999999, 0, 0, 0.14999999, 0, 0, -0.14999999, 0, 0, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 0, -0.225, 1.275, 1.65, 0.225, 1.275, 1.65, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.9499999, 0.225, 0.525, 1.9499999, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, -0.225, 0.525, 1.65, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.9499999, -0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.14999999, 0, 2.1, -0.14999999, 0, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, -0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 0.75, 1.875, -0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 1.05, 1.875, -0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.875, -0.375, 1.05, 1.875, -0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 1.05, 1.875, -0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.875, 0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, -0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 1.05, 1.7249999, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.7249999, 0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.375, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 1.05, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.525, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.525, 1.05, 1.875, 0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.875, 0.525, 1.05, 1.875, 0.375, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 0.75, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, -0.375, 1.05, 1.875, -0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 1.05, 1.875, -0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 1.05, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.375, 1.05, 1.875, -0.375, 0.75, 1.875, -0.525, 0.75, 1.875, -0.375, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 1.05, 1.875, 0.525, 0.75, 1.875, 0.375, 0.75, 1.875, -0.525, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.525, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, 0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.7249999, -0.375, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, 0.375, 0.75, 1.875, 0.375, 0.75, 1.875, -0.375, 0.75, 1.875, -0.375, 0.75, 1.7249999, 0.375, 0.59999996, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kcl8b"]
+size = Vector3(0.2, 0.5, 0.5)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7f8g8"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2moqc"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_kcl8b"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_haxi5"]
+animation = &"Grip 5"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_m7jwp"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_cmr4g"]
+graph_offset = Vector2(-536, 11)
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_7f8g8")
+nodes/ClosedHand1/position = Vector2(-600, 300)
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_2moqc")
+nodes/ClosedHand2/position = Vector2(-360, 300)
+nodes/Grip/node = SubResource("AnimationNodeBlend2_kcl8b")
+nodes/Grip/position = Vector2(0, 20)
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_haxi5")
+nodes/OpenHand/position = Vector2(-600, 100)
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_m7jwp")
+nodes/Trigger/position = Vector2(-360, 20)
+node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c2gyy"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5x4xl"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_hqtx2"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_of731"]
+animation = &"Grip 5"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_66e2s"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_tqcl1"]
+graph_offset = Vector2(-552.664, 107.301)
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_c2gyy")
+nodes/ClosedHand1/position = Vector2(-600, 300)
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_5x4xl")
+nodes/ClosedHand2/position = Vector2(-360, 300)
+nodes/Grip/node = SubResource("AnimationNodeBlend2_hqtx2")
+nodes/Grip/position = Vector2(0, 40)
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_of731")
+nodes/OpenHand/position = Vector2(-600, 100)
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_66e2s")
+nodes/Trigger/position = Vector2(-360, 40)
+node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_oaf0i")
 
 [node name="Environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_msh8m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.39946917, -0.73355955, 0.54983175, 2.307037e-08, 0.5997641, 0.8001769, -0.9167467, -0.31964603, 0.23958726, 0, -0.03205633, 0)
 
 [node name="Ground" type="MeshInstance3D" parent="Environment"]
 mesh = SubResource("BoxMesh_ushyl")
@@ -60,7 +168,7 @@ skeleton = NodePath("../../..")
 shape = SubResource("BoxShape3D_0bg83")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment/Wall"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.425149, 0, -0.014202118)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12.422954, -0.01865983, -0.017359734)
 mesh = SubResource("BoxMesh_of4it")
 skeleton = NodePath("../../..")
 
@@ -79,21 +187,142 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/MeshInstance3D4/StaticBody3D"]
 shape = SubResource("BoxShape3D_0bg83")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
-environment = SubResource("Environment_msh8m")
+[node name="inner_wall" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.998, -0.033, -6.85)
+mesh = SubResource("BoxMesh_0bg83")
+skeleton = NodePath("../../..")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(0.39946917, -0.73355955, 0.5498316, 2.307037e-08, 0.5997641, 0.8001769, -0.9167467, -0.31964603, 0.23958725, 0, -0.03205633, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/inner_wall"]
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_of4it")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.401608, 0.096880436, -9.3665905)
-visible = false
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall/StaticBody3D"]
+shape = SubResource("BoxShape3D_msh8m")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.907517)
-size = Vector3(25, 10, 0.1)
+[node name="inner_wall4" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.374881, 3.7095385, -6.8481727)
+mesh = SubResource("BoxMesh_qc1uj")
+skeleton = NodePath("../../..")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52503836, 0)
-operation = 2
-size = Vector3(3, 5, 1)
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/inner_wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall4/StaticBody3D"]
+shape = SubResource("BoxShape3D_msh8m")
+
+[node name="inner_wall5" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.4197185, 3.71449, 11.452285)
+mesh = SubResource("BoxMesh_qc1uj")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/inner_wall5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall5/StaticBody3D"]
+shape = SubResource("BoxShape3D_msh8m")
+
+[node name="inner_wall2" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(-0.0010821063, 0, 0.9999994, 0, 1, 0, -0.9999994, 0, -0.0010821063, -1.4206494, -0.032567024, 1.8792899)
+mesh = SubResource("BoxMesh_mw53g")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/inner_wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall2/StaticBody3D"]
+shape = SubResource("BoxShape3D_oaf0i")
+
+[node name="inner_wall3" type="MeshInstance3D" parent="Environment/Wall"]
+transform = Transform3D(-0.0106812315, 0, 0.99994296, 0, 1, 0, -0.99994296, 0, -0.0106812315, 11.505857, 0.57299477, 10.790783)
+mesh = SubResource("BoxMesh_7u0dx")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qc1uj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/inner_wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall3/StaticBody3D"]
+shape = SubResource("BoxShape3D_7f8g8")
+
+[node name="Doors" type="Node3D" parent="Environment"]
+
+[node name="door-sliding2" parent="Environment/Doors" instance=ExtResource("6_qc1uj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.470038, 0.049999952, -6.884688)
+script = ExtResource("7_2moqc")
+
+[node name="door-sliding" parent="Environment/Doors/door-sliding2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19567299)
+
+[node name="door" parent="Environment/Doors/door-sliding2/door-sliding" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03334236, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Doors/door-sliding2/door-sliding/door" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Doors/door-sliding2/door-sliding/door/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7f8g8")
+
+[node name="door-sliding3" parent="Environment/Doors" instance=ExtResource("6_qc1uj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4439826, 0.05000019, 10.406693)
+script = ExtResource("7_2moqc")
+
+[node name="door" parent="Environment/Doors/door-sliding3/door-sliding" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0057526827, 0, 0)
+
+[node name="Buttons" type="Node3D" parent="Environment"]
+
+[node name="InteractableAreaButton" parent="Environment/Buttons" instance=ExtResource("7_7f8g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.377472, 1.1854341, -8.603415)
+button = NodePath("button-floor-round2/button-floor-round/button")
+
+[node name="button-floor-round2" parent="Environment/Buttons/InteractableAreaButton" instance=ExtResource("8_2moqc")]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Buttons/InteractableAreaButton"]
+shape = SubResource("BoxShape3D_kcl8b")
+
+[node name="InteractableAreaButton2" parent="Environment/Buttons" instance=ExtResource("7_7f8g8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.377472, 1.1854341, -5.2662673)
+button = NodePath("button-floor-round2/button-floor-round/button")
+
+[node name="button-floor-round2" parent="Environment/Buttons/InteractableAreaButton2" instance=ExtResource("8_2moqc")]
+transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Buttons/InteractableAreaButton2"]
+shape = SubResource("BoxShape3D_kcl8b")
+
+[node name="Screen" parent="." node_paths=PackedStringArray("startButton", "partialResultText", "finalResultText", "speechRecognizer") instance=ExtResource("2_0bg83")]
+transform = Transform3D(-1.3113416e-10, 0, -0.003, 0, 0.003, 0, 0.003, 0, -1.3113416e-10, -1.6260853, 1.4013016, 8.172296)
+screen_size = Vector2(640, 360)
+scene = ExtResource("3_msh8m")
+viewport_size = Vector2(640, 360)
+transparent = 0
+scene_properties_keys = PackedStringArray("SpeechUIManager", "startButton", "partialResultText", "finalResultText", "speechRecognizer")
+startButton = NodePath("Viewport/Control/MarginContainer/VBoxContainer/StartListeningButton")
+partialResultText = NodePath("Viewport/Control/MarginContainer/VBoxContainer/PartialResult")
+finalResultText = NodePath("Viewport/Control/MarginContainer/VBoxContainer/FinalResult")
+speechRecognizer = NodePath("Viewport/Control/SpeechRecognizer")
+
+[node name="PlayerXR" parent="." instance=ExtResource("5_oaf0i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0277185, 0.67929363, -8.755685)
+
+[node name="AnimationTree" parent="PlayerXR/LeftController/LeftHand" index="1"]
+tree_root = SubResource("AnimationNodeBlendTree_cmr4g")
+
+[node name="AnimationTree" parent="PlayerXR/RightController/RightHand" index="1"]
+tree_root = SubResource("AnimationNodeBlendTree_tqcl1")
+
+[node name="Replayer" type="Node" parent="PlayerXR" node_paths=PackedStringArray("recorded_objects")]
+script = ExtResource("9_7f8g8")
+recorded_objects = [NodePath(".."), NodePath("../XRCamera3D"), NodePath("../LeftController"), NodePath("../RightController")]
+dummy_scene = ExtResource("10_2moqc")
+
+[node name="Delay" type="Timer" parent="PlayerXR/Replayer"]
+process_callback = 0
+wait_time = 0.1
+
+[connection signal="button_pressed" from="Environment/Buttons/InteractableAreaButton" to="Environment/Doors/door-sliding2" method="_on_interactable_area_button_button_pressed"]
+[connection signal="button_pressed" from="Environment/Buttons/InteractableAreaButton2" to="Environment/Doors/door-sliding2" method="_on_interactable_area_button_button_pressed"]
+
+[editable path="Environment/Doors/door-sliding2"]
+[editable path="Environment/Doors/door-sliding3"]
+[editable path="Environment/Buttons/InteractableAreaButton/button-floor-round2"]
+[editable path="Environment/Buttons/InteractableAreaButton2/button-floor-round2"]
+[editable path="PlayerXR"]
+[editable path="PlayerXR/LeftController/LeftHand"]
+[editable path="PlayerXR/LeftController/LeftHand/Hand_low_L"]
+[editable path="PlayerXR/RightController/RightHand"]
+[editable path="PlayerXR/RightController/RightHand/Hand_low_R"]

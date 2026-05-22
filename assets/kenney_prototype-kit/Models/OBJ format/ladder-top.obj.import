@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cr5mri7tmuj20"
+path="res://.godot/imported/ladder-top.obj-d28471a0ea03596a5ffd341b555b9744.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ladder-top.obj-d28471a0ea03596a5ffd341b555b9744.mesh"]
+
+source_file="res://assets/kenney_prototype-kit/Models/OBJ format/ladder-top.obj"
+dest_files=["res://.godot/imported/ladder-top.obj-d28471a0ea03596a5ffd341b555b9744.mesh", "res://.godot/imported/ladder-top.obj-d28471a0ea03596a5ffd341b555b9744.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
