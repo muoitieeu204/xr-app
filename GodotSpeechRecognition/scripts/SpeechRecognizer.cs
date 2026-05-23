@@ -19,6 +19,9 @@ public partial class SpeechRecognizer : Node
 	long noChangeTimeoutInMS = 3000;
 	[Export(PropertyHint.None, "Don't stop recongizer until timeout.")]
 	bool continuousRecognition = false;
+	// ADD THIS: The strict Grammar rule for Vosk
+	// It MUST include "[unk]" at the end so it knows how to handle random background noise!
+	private string _grammarJson = "[\"mở cửa\", \"đóng cửa\", \"bắt đầu\", \"open door\", \"close door\", \"start\", \"[unk]\"]";
 	[Signal]
 	public delegate void OnPartialResultEventHandler(string partialResults);
 	[Signal]
@@ -39,7 +42,8 @@ public partial class SpeechRecognizer : Node
 		IntializeOSSpecificLibs(); //Doesn't seem to automatically load these libs
 		recordBusIdx = AudioServer.GetBusIndex(recordBusName);
 		_microphoneRecord = AudioServer.GetBusEffect(recordBusIdx, 0) as AudioEffectRecord;
-		model = new Model(ProjectSettings.GlobalizePath(modelPath));
+        GD.Print($"Microphone Mix Rate: {AudioServer.GetMixRate()} Hz");
+        model = new Model(ProjectSettings.GlobalizePath(modelPath));
 		Vosk.Vosk.SetLogLevel(0);
 		cancelToken = new CancellationTokenSource();
 		DebugPrint("Initialized Speech Recognition");
@@ -112,7 +116,7 @@ public partial class SpeechRecognizer : Node
 			var recordedSample = _microphoneRecord.GetRecording();
 			if (recordedSample != null)
 			{
-				VoskRecognizer recognizer = new(model, recordedSample.MixRate);
+				VoskRecognizer recognizer = new(model, recordedSample.MixRate, _grammarJson);
 				byte[] data = recordedSample.Stereo ? MixStereoToMono(recordedSample.Data) : recordedSample.Data;
 				if (!recognizer.AcceptWaveform(data, data.Length))
 				{

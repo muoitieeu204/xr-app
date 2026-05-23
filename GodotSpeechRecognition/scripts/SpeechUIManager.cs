@@ -3,44 +3,54 @@ using System;
 
 public partial class SpeechUIManager : Node
 {
-	[Export] public Button startButton;
-	[Export] public Label partialResultText;
-	[Export] public Label finalResultText;
-	[Export] public SpeechRecognizer speechRecognizer;
+	public Button startButton;
+	public Label partialResultText;
+	public Label finalResultText;
 
-	private string partialResult;
-	private string finalResult;
+	// Point to your AutoLoad
+	private MicInput globalMic;
 
 	public override void _Ready()
 	{
+		startButton = GetNode<Button>("MarginContainer/VBoxContainer/StartListeningButton");
+		partialResultText = GetNode<Label>("MarginContainer/VBoxContainer/PartialResult");
+		finalResultText = GetNode<Label>("MarginContainer/VBoxContainer/FinalResult");
+
+		globalMic = GetNodeOrNull<MicInput>("/root/MicInput");
+
+		if (startButton == null || globalMic == null)
+		{
+			GD.PrintErr("CRITICAL: SpeechUIManager missing UI elements or globalMic!");
+			return;
+		}
+
 		startButton.Pressed += () =>
 		{
-			if (!speechRecognizer.isCurrentlyListening())
+			if (!globalMic.IsListening())
 			{
 				partialResultText.Text = "";
 				finalResultText.Text = "";
 				OnStartSpeechRecognition();
-				speechRecognizer.StartSpeechRecognition();
+				globalMic.TurnOnMic();
 			}
 			else
 			{
 				OnStopSpeechRecognition();
-				finalResult = speechRecognizer.StopSpeechRecoginition();
+				string finalResult = globalMic.TurnOffMic();
 			}
 		};
-		speechRecognizer.OnPartialResult += (partialResult) =>
+
+		// Subscribe to the new Pass-Through events from the Brain!
+		globalMic.OnRawPartialText += (partialText) =>
 		{
-			partialResultText.Text = partialResult;
+			partialResultText.Text = partialText;
 		};
-		speechRecognizer.OnFinalResult += (finalResult) =>
+
+		globalMic.OnRawFinalText += (finalText) =>
 		{
-			finalResultText.Text = finalResult;
+			finalResultText.Text = finalText;
 			OnStopSpeechRecognition();
 		};
-	}
-
-	public override void _Process(double delta)
-	{
 	}
 
 	private void OnStopSpeechRecognition()
@@ -48,7 +58,6 @@ public partial class SpeechUIManager : Node
 		startButton.Text = "Start Recognition";
 		startButton.Modulate = new Color(1, 1, 1, 1f);
 	}
-
 
 	private void OnStartSpeechRecognition()
 	{

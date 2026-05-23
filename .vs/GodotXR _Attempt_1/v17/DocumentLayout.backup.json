@@ -1,9 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "J:\\Godot Projects\\godot-xr--attempt-1\\godot-xr-grpc\\",
+  "WorkspaceRootPath": "J:\\Godot Projects\\godot-xr\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|j:\\godot projects\\godot-xr--attempt-1\\godot-xr-grpc\\godotxr _attempt_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|j:\\godot projects\\godot-xr\\godotspeechrecognition\\scripts\\speechrecognizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|solutionrelative:godotspeechrecognition\\scripts\\speechrecognizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|j:\\godot projects\\godot-xr\\scripts\\micinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|solutionrelative:scripts\\micinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|j:\\godot projects\\godot-xr\\scripts\\voicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|solutionrelative:scripts\\voicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|j:\\godot projects\\godot-xr\\godotspeechrecognition\\scripts\\speechuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|solutionrelative:godotspeechrecognition\\scripts\\speechuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|j:\\godot projects\\godot-xr\\godotxr _attempt_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{BD4B85F6-209F-443D-916F-CA2144F4E478}|GodotXR _Attempt_1.csproj|solutionrelative:godotxr _attempt_1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
@@ -14,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpeechRecognizer.cs",
+              "DocumentMoniker": "J:\\Godot Projects\\godot-xr\\GodotSpeechRecognition\\scripts\\SpeechRecognizer.cs",
+              "RelativeDocumentMoniker": "GodotSpeechRecognition\\scripts\\SpeechRecognizer.cs",
+              "ToolTip": "J:\\Godot Projects\\godot-xr\\GodotSpeechRecognition\\scripts\\SpeechRecognizer.cs",
+              "RelativeToolTip": "GodotSpeechRecognition\\scripts\\SpeechRecognizer.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAC0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T07:37:54.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SpeechUIManager.cs",
+              "DocumentMoniker": "J:\\Godot Projects\\godot-xr\\GodotSpeechRecognition\\scripts\\SpeechUIManager.cs",
+              "RelativeDocumentMoniker": "GodotSpeechRecognition\\scripts\\SpeechUIManager.cs",
+              "ToolTip": "J:\\Godot Projects\\godot-xr\\GodotSpeechRecognition\\scripts\\SpeechUIManager.cs",
+              "RelativeToolTip": "GodotSpeechRecognition\\scripts\\SpeechUIManager.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T06:49:58.164Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -34,11 +76,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GodotXR _Attempt_1",
-              "DocumentMoniker": "J:\\Godot Projects\\godot-xr--attempt-1\\godot-xr-grpc\\GodotXR _Attempt_1.csproj",
+              "DocumentIndex": 1,
+              "Title": "MicInput.cs",
+              "DocumentMoniker": "J:\\Godot Projects\\godot-xr\\scripts\\MicInput.cs",
+              "RelativeDocumentMoniker": "scripts\\MicInput.cs",
+              "ToolTip": "J:\\Godot Projects\\godot-xr\\scripts\\MicInput.cs",
+              "RelativeToolTip": "scripts\\MicInput.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwB0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T06:45:08.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VoiceCommandHandler.cs",
+              "DocumentMoniker": "J:\\Godot Projects\\godot-xr\\scripts\\VoiceCommandHandler.cs",
+              "RelativeDocumentMoniker": "scripts\\VoiceCommandHandler.cs",
+              "ToolTip": "J:\\Godot Projects\\godot-xr\\scripts\\VoiceCommandHandler.cs",
+              "RelativeToolTip": "scripts\\VoiceCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T05:45:30.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GodotXR _Attempt_1.csproj",
+              "DocumentMoniker": "J:\\Godot Projects\\godot-xr\\GodotXR _Attempt_1.csproj",
               "RelativeDocumentMoniker": "GodotXR _Attempt_1.csproj",
-              "ToolTip": "J:\\Godot Projects\\godot-xr--attempt-1\\godot-xr-grpc\\GodotXR _Attempt_1.csproj",
+              "ToolTip": "J:\\Godot Projects\\godot-xr\\GodotXR _Attempt_1.csproj",
               "RelativeToolTip": "GodotXR _Attempt_1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
