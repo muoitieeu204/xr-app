@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ignlkesudv6f"
-path="res://.godot/imported/shape-hexagon-half.fbx-406b634eb507fe90862167d334eff7c4.scn"
+path="res://.godot/imported/shape-hexagon-half.fbx-38354048becb5ea87a92ac6958480a54.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/shape-hexagon-half.fbx"
-dest_files=["res://.godot/imported/shape-hexagon-half.fbx-406b634eb507fe90862167d334eff7c4.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/shape-hexagon-half.fbx"
+dest_files=["res://.godot/imported/shape-hexagon-half.fbx-38354048becb5ea87a92ac6958480a54.scn"]
 
 [params]
 

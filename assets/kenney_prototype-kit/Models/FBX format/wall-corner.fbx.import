@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cuyhpfw2u46u4"
-path="res://.godot/imported/wall-corner.fbx-2c87061ec64d2ea9198fabcb91434ab1.scn"
+path="res://.godot/imported/wall-corner.fbx-fde3373c8183e1f4b282f4a2c49d7b72.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/wall-corner.fbx"
-dest_files=["res://.godot/imported/wall-corner.fbx-2c87061ec64d2ea9198fabcb91434ab1.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/wall-corner.fbx"
+dest_files=["res://.godot/imported/wall-corner.fbx-fde3373c8183e1f4b282f4a2c49d7b72.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c51mgh3sucm2v"
-path="res://.godot/imported/door-sliding-double.fbx-a579283968d3b146af92ee76b1605f53.scn"
+path="res://.godot/imported/door-sliding-double.fbx-35ef625006580df3622c6b31bb696fc8.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/door-sliding-double.fbx"
-dest_files=["res://.godot/imported/door-sliding-double.fbx-a579283968d3b146af92ee76b1605f53.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/door-sliding-double.fbx"
+dest_files=["res://.godot/imported/door-sliding-double.fbx-35ef625006580df3622c6b31bb696fc8.scn"]
 
 [params]
 

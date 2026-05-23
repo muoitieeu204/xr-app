@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://iss8ck8r8u23"
-path="res://.godot/imported/door-sliding-double-wide.obj-6cb89a76d6b13f77999c3457017f0ad0.mesh"
+path="res://.godot/imported/door-sliding-double-wide.obj-16ead9703c9ad4c916515db9babd2392.mesh"
 
 [deps]
 
-files=["res://.godot/imported/door-sliding-double-wide.obj-6cb89a76d6b13f77999c3457017f0ad0.mesh"]
+files=["res://.godot/imported/door-sliding-double-wide.obj-16ead9703c9ad4c916515db9babd2392.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/door-sliding-double-wide.obj"
-dest_files=["res://.godot/imported/door-sliding-double-wide.obj-6cb89a76d6b13f77999c3457017f0ad0.mesh", "res://.godot/imported/door-sliding-double-wide.obj-6cb89a76d6b13f77999c3457017f0ad0.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/door-sliding-double-wide.obj"
+dest_files=["res://.godot/imported/door-sliding-double-wide.obj-16ead9703c9ad4c916515db9babd2392.mesh", "res://.godot/imported/door-sliding-double-wide.obj-16ead9703c9ad4c916515db9babd2392.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cvp223vufm4hc"
-path="res://.godot/imported/shape-hexagon.obj-52519fe1e63005721dbf24322c45317f.mesh"
+path="res://.godot/imported/shape-hexagon.obj-7fa98539c0728ff323a1cea06e8773e1.mesh"
 
 [deps]
 
-files=["res://.godot/imported/shape-hexagon.obj-52519fe1e63005721dbf24322c45317f.mesh"]
+files=["res://.godot/imported/shape-hexagon.obj-7fa98539c0728ff323a1cea06e8773e1.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/shape-hexagon.obj"
-dest_files=["res://.godot/imported/shape-hexagon.obj-52519fe1e63005721dbf24322c45317f.mesh", "res://.godot/imported/shape-hexagon.obj-52519fe1e63005721dbf24322c45317f.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/shape-hexagon.obj"
+dest_files=["res://.godot/imported/shape-hexagon.obj-7fa98539c0728ff323a1cea06e8773e1.mesh", "res://.godot/imported/shape-hexagon.obj-7fa98539c0728ff323a1cea06e8773e1.mesh"]
 
 [params]
 

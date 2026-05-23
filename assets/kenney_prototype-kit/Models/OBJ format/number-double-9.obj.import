@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ddjklxr5wcleo"
-path="res://.godot/imported/number-double-9.obj-d62c797b25496afe2e70e8c6bcfaa7c6.mesh"
+path="res://.godot/imported/number-double-9.obj-345e6bfe4a8f8d80a4d7d8b3efaa65d5.mesh"
 
 [deps]
 
-files=["res://.godot/imported/number-double-9.obj-d62c797b25496afe2e70e8c6bcfaa7c6.mesh"]
+files=["res://.godot/imported/number-double-9.obj-345e6bfe4a8f8d80a4d7d8b3efaa65d5.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/number-double-9.obj"
-dest_files=["res://.godot/imported/number-double-9.obj-d62c797b25496afe2e70e8c6bcfaa7c6.mesh", "res://.godot/imported/number-double-9.obj-d62c797b25496afe2e70e8c6bcfaa7c6.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/number-double-9.obj"
+dest_files=["res://.godot/imported/number-double-9.obj-345e6bfe4a8f8d80a4d7d8b3efaa65d5.mesh", "res://.godot/imported/number-double-9.obj-345e6bfe4a8f8d80a4d7d8b3efaa65d5.mesh"]
 
 [params]
 

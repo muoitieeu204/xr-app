@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://flnspay4cpsa"
-path="res://.godot/imported/pipe-half.fbx-0c09ea2b8ee27a668ebcc9052ce187c4.scn"
+path="res://.godot/imported/pipe-half.fbx-01163ca3c25bd952d4c1411e67896680.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/pipe-half.fbx"
-dest_files=["res://.godot/imported/pipe-half.fbx-0c09ea2b8ee27a668ebcc9052ce187c4.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/pipe-half.fbx"
+dest_files=["res://.godot/imported/pipe-half.fbx-01163ca3c25bd952d4c1411e67896680.scn"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm4vwgaysjx26"
-path="res://.godot/imported/floor-diagonal.png-4d777f700f131d70a4f9055a518dc93d.ctex"
+path="res://.godot/imported/floor-diagonal.png-a7851a9f97e438d3c5671a9ffa5b5cd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/floor-diagonal.png"
-dest_files=["res://.godot/imported/floor-diagonal.png-4d777f700f131d70a4f9055a518dc93d.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/floor-diagonal.png"
+dest_files=["res://.godot/imported/floor-diagonal.png-a7851a9f97e438d3c5671a9ffa5b5cd2.ctex"]
 
 [params]
 

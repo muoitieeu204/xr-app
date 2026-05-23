@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://p1bwtbv071uc"
-path="res://.godot/imported/shape-slope.obj-ad99f5ca2eca1cc3bd8e3b61e32360dd.mesh"
+path="res://.godot/imported/shape-slope.obj-34c0403308f56a8ecf342f48e20ccd7e.mesh"
 
 [deps]
 
-files=["res://.godot/imported/shape-slope.obj-ad99f5ca2eca1cc3bd8e3b61e32360dd.mesh"]
+files=["res://.godot/imported/shape-slope.obj-34c0403308f56a8ecf342f48e20ccd7e.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/shape-slope.obj"
-dest_files=["res://.godot/imported/shape-slope.obj-ad99f5ca2eca1cc3bd8e3b61e32360dd.mesh", "res://.godot/imported/shape-slope.obj-ad99f5ca2eca1cc3bd8e3b61e32360dd.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/shape-slope.obj"
+dest_files=["res://.godot/imported/shape-slope.obj-34c0403308f56a8ecf342f48e20ccd7e.mesh", "res://.godot/imported/shape-slope.obj-34c0403308f56a8ecf342f48e20ccd7e.mesh"]
 
 [params]
 

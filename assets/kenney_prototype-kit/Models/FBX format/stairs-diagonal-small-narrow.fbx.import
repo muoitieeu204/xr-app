@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://74ff7rtg4jfw"
-path="res://.godot/imported/stairs-diagonal-small-narrow.fbx-9935353f08cf54c18b1bb1899ba2f49f.scn"
+path="res://.godot/imported/stairs-diagonal-small-narrow.fbx-9f34a75e421fd0574934f415d4194ff3.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/stairs-diagonal-small-narrow.fbx"
-dest_files=["res://.godot/imported/stairs-diagonal-small-narrow.fbx-9935353f08cf54c18b1bb1899ba2f49f.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/stairs-diagonal-small-narrow.fbx"
+dest_files=["res://.godot/imported/stairs-diagonal-small-narrow.fbx-9f34a75e421fd0574934f415d4194ff3.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://l6gk00yykagn"
-path="res://.godot/imported/animal-dog.obj-cbd7f7020300b3c9718e404daf4de445.mesh"
+path="res://.godot/imported/animal-dog.obj-9b669fe0185acd88b92f05fca0d237f0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/animal-dog.obj-cbd7f7020300b3c9718e404daf4de445.mesh"]
+files=["res://.godot/imported/animal-dog.obj-9b669fe0185acd88b92f05fca0d237f0.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/animal-dog.obj"
-dest_files=["res://.godot/imported/animal-dog.obj-cbd7f7020300b3c9718e404daf4de445.mesh", "res://.godot/imported/animal-dog.obj-cbd7f7020300b3c9718e404daf4de445.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/animal-dog.obj"
+dest_files=["res://.godot/imported/animal-dog.obj-9b669fe0185acd88b92f05fca0d237f0.mesh", "res://.godot/imported/animal-dog.obj-9b669fe0185acd88b92f05fca0d237f0.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bbixn0m7cg5jb"
-path="res://.godot/imported/wall-window-barred-small.obj-10780a39726c6c8f3e83496df60150c2.mesh"
+path="res://.godot/imported/wall-window-barred-small.obj-9356e36ad434eb24aea80ae0b842f520.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wall-window-barred-small.obj-10780a39726c6c8f3e83496df60150c2.mesh"]
+files=["res://.godot/imported/wall-window-barred-small.obj-9356e36ad434eb24aea80ae0b842f520.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/wall-window-barred-small.obj"
-dest_files=["res://.godot/imported/wall-window-barred-small.obj-10780a39726c6c8f3e83496df60150c2.mesh", "res://.godot/imported/wall-window-barred-small.obj-10780a39726c6c8f3e83496df60150c2.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/wall-window-barred-small.obj"
+dest_files=["res://.godot/imported/wall-window-barred-small.obj-9356e36ad434eb24aea80ae0b842f520.mesh", "res://.godot/imported/wall-window-barred-small.obj-9356e36ad434eb24aea80ae0b842f520.mesh"]
 
 [params]
 

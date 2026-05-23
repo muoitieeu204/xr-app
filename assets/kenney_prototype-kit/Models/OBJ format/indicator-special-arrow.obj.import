@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dmoykg48ogh1d"
-path="res://.godot/imported/indicator-special-arrow.obj-652139000690118944934f275090614c.mesh"
+path="res://.godot/imported/indicator-special-arrow.obj-dbe516dfe05c5ce9778716081ec0f686.mesh"
 
 [deps]
 
-files=["res://.godot/imported/indicator-special-arrow.obj-652139000690118944934f275090614c.mesh"]
+files=["res://.godot/imported/indicator-special-arrow.obj-dbe516dfe05c5ce9778716081ec0f686.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/indicator-special-arrow.obj"
-dest_files=["res://.godot/imported/indicator-special-arrow.obj-652139000690118944934f275090614c.mesh", "res://.godot/imported/indicator-special-arrow.obj-652139000690118944934f275090614c.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/indicator-special-arrow.obj"
+dest_files=["res://.godot/imported/indicator-special-arrow.obj-dbe516dfe05c5ce9778716081ec0f686.mesh", "res://.godot/imported/indicator-special-arrow.obj-dbe516dfe05c5ce9778716081ec0f686.mesh"]
 
 [params]
 

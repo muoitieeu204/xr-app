@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://2iivhhr8owja"
-path="res://.godot/imported/pipe-corner.obj-1d129155d70cdb5fe5f512d8771e841d.mesh"
+path="res://.godot/imported/pipe-corner.obj-211457ec309e20a55f23e82164bd7fbf.mesh"
 
 [deps]
 
-files=["res://.godot/imported/pipe-corner.obj-1d129155d70cdb5fe5f512d8771e841d.mesh"]
+files=["res://.godot/imported/pipe-corner.obj-211457ec309e20a55f23e82164bd7fbf.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/pipe-corner.obj"
-dest_files=["res://.godot/imported/pipe-corner.obj-1d129155d70cdb5fe5f512d8771e841d.mesh", "res://.godot/imported/pipe-corner.obj-1d129155d70cdb5fe5f512d8771e841d.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/pipe-corner.obj"
+dest_files=["res://.godot/imported/pipe-corner.obj-211457ec309e20a55f23e82164bd7fbf.mesh", "res://.godot/imported/pipe-corner.obj-211457ec309e20a55f23e82164bd7fbf.mesh"]
 
 [params]
 

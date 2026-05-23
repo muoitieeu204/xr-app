@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de6iosej1muif"
-path="res://.godot/imported/flag.png-2d9493f0426bad2f5804b203ae06980b.ctex"
+path="res://.godot/imported/flag.png-f0cb80c4735292787fb14af2868b234b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/flag.png"
-dest_files=["res://.godot/imported/flag.png-2d9493f0426bad2f5804b203ae06980b.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/flag.png"
+dest_files=["res://.godot/imported/flag.png-f0cb80c4735292787fb14af2868b234b.ctex"]
 
 [params]
 

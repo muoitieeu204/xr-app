@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bdxlc5k7w3crp"
-path="res://.godot/imported/target-a-round.glb-19ae37d0e7af263c2107be91d8f66ca5.scn"
+path="res://.godot/imported/target-a-round.glb-bd9e648abe9a698d1c4154b156a1eaa0.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/target-a-round.glb"
-dest_files=["res://.godot/imported/target-a-round.glb-19ae37d0e7af263c2107be91d8f66ca5.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/target-a-round.glb"
+dest_files=["res://.godot/imported/target-a-round.glb-bd9e648abe9a698d1c4154b156a1eaa0.scn"]
 
 [params]
 

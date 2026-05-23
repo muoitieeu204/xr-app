@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwusql0acnpj3"
-path="res://.godot/imported/door-rotate.png-cb40f089530f6a5bc173ba7befc133dd.ctex"
+path="res://.godot/imported/door-rotate.png-4048ef2beb1207287e74d4bf003578d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/door-rotate.png"
-dest_files=["res://.godot/imported/door-rotate.png-cb40f089530f6a5bc173ba7befc133dd.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/door-rotate.png"
+dest_files=["res://.godot/imported/door-rotate.png-4048ef2beb1207287e74d4bf003578d2.ctex"]
 
 [params]
 

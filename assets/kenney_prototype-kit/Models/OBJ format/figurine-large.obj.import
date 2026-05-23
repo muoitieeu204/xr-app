@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://ukggykypfuga"
-path="res://.godot/imported/figurine-large.obj-809ac3aa676af456b52806b237bfb2c6.mesh"
+path="res://.godot/imported/figurine-large.obj-89c362fc2d0bf9f888ef1af9d8695af3.mesh"
 
 [deps]
 
-files=["res://.godot/imported/figurine-large.obj-809ac3aa676af456b52806b237bfb2c6.mesh"]
+files=["res://.godot/imported/figurine-large.obj-89c362fc2d0bf9f888ef1af9d8695af3.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/figurine-large.obj"
-dest_files=["res://.godot/imported/figurine-large.obj-809ac3aa676af456b52806b237bfb2c6.mesh", "res://.godot/imported/figurine-large.obj-809ac3aa676af456b52806b237bfb2c6.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/figurine-large.obj"
+dest_files=["res://.godot/imported/figurine-large.obj-89c362fc2d0bf9f888ef1af9d8695af3.mesh", "res://.godot/imported/figurine-large.obj-89c362fc2d0bf9f888ef1af9d8695af3.mesh"]
 
 [params]
 

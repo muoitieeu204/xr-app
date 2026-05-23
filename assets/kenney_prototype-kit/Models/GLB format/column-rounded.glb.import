@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://63ncytarqum"
-path="res://.godot/imported/column-rounded.glb-710a3b24b24bf5837bfe638c4721bbac.scn"
+path="res://.godot/imported/column-rounded.glb-047f78f8ac72f7202d61b4111f03b29c.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/column-rounded.glb"
-dest_files=["res://.godot/imported/column-rounded.glb-710a3b24b24bf5837bfe638c4721bbac.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/column-rounded.glb"
+dest_files=["res://.godot/imported/column-rounded.glb-047f78f8ac72f7202d61b4111f03b29c.scn"]
 
 [params]
 

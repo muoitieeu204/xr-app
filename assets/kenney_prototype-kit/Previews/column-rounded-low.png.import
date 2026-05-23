@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://urbqr5w1afts"
-path="res://.godot/imported/column-rounded-low.png-7ab8ffc60faad15b8ab58933cd4a5871.ctex"
+path="res://.godot/imported/column-rounded-low.png-b45626af0326c01d82d79e64c536befb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/column-rounded-low.png"
-dest_files=["res://.godot/imported/column-rounded-low.png-7ab8ffc60faad15b8ab58933cd4a5871.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/column-rounded-low.png"
+dest_files=["res://.godot/imported/column-rounded-low.png-b45626af0326c01d82d79e64c536befb.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c6omww2p78yc6"
-path="res://.godot/imported/door-garage.fbx-5dfa67df124d061b2fa249b85bd1769e.scn"
+path="res://.godot/imported/door-garage.fbx-914f1c2a32ca606dc88042fd313dead1.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/door-garage.fbx"
-dest_files=["res://.godot/imported/door-garage.fbx-5dfa67df124d061b2fa249b85bd1769e.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/door-garage.fbx"
+dest_files=["res://.godot/imported/door-garage.fbx-914f1c2a32ca606dc88042fd313dead1.scn"]
 
 [params]
 

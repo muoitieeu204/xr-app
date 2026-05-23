@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://d3rlgmga7o0oe"
-path="res://.godot/imported/shape-cube-half.obj-8b7c872e95cf6c1eded805dc1edd71e5.mesh"
+path="res://.godot/imported/shape-cube-half.obj-b12056757e6ee6a6ded975d103513169.mesh"
 
 [deps]
 
-files=["res://.godot/imported/shape-cube-half.obj-8b7c872e95cf6c1eded805dc1edd71e5.mesh"]
+files=["res://.godot/imported/shape-cube-half.obj-b12056757e6ee6a6ded975d103513169.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/shape-cube-half.obj"
-dest_files=["res://.godot/imported/shape-cube-half.obj-8b7c872e95cf6c1eded805dc1edd71e5.mesh", "res://.godot/imported/shape-cube-half.obj-8b7c872e95cf6c1eded805dc1edd71e5.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/shape-cube-half.obj"
+dest_files=["res://.godot/imported/shape-cube-half.obj-b12056757e6ee6a6ded975d103513169.mesh", "res://.godot/imported/shape-cube-half.obj-b12056757e6ee6a6ded975d103513169.mesh"]
 
 [params]
 

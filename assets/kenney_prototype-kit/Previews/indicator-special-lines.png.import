@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dulp3smsb7pny"
-path="res://.godot/imported/indicator-special-lines.png-424fab21dca036ea52b148d88efa2387.ctex"
+path="res://.godot/imported/indicator-special-lines.png-2ac51f2a85c976105f29785c94270a3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/indicator-special-lines.png"
-dest_files=["res://.godot/imported/indicator-special-lines.png-424fab21dca036ea52b148d88efa2387.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/indicator-special-lines.png"
+dest_files=["res://.godot/imported/indicator-special-lines.png-2ac51f2a85c976105f29785c94270a3c.ctex"]
 
 [params]
 

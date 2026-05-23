@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dlc5mvx5dirty"
-path="res://.godot/imported/crate-color.fbx-5ce3f728cbe63941b1cf75ab50bb9412.scn"
+path="res://.godot/imported/crate-color.fbx-fadc06c5e02d505b2a4b375aa258ec77.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/crate-color.fbx"
-dest_files=["res://.godot/imported/crate-color.fbx-5ce3f728cbe63941b1cf75ab50bb9412.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/crate-color.fbx"
+dest_files=["res://.godot/imported/crate-color.fbx-fadc06c5e02d505b2a4b375aa258ec77.scn"]
 
 [params]
 

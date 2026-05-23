@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cthiqddxsxtug"
-path="res://.godot/imported/crate-color.glb-5f2124e7c80dbc80848b59a660b328dc.scn"
+path="res://.godot/imported/crate-color.glb-a2bd24841ad8110058326a7554d33760.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/crate-color.glb"
-dest_files=["res://.godot/imported/crate-color.glb-5f2124e7c80dbc80848b59a660b328dc.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/crate-color.glb"
+dest_files=["res://.godot/imported/crate-color.glb-a2bd24841ad8110058326a7554d33760.scn"]
 
 [params]
 

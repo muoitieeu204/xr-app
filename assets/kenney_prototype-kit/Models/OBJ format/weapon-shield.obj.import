@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://comdgwk1elahl"
-path="res://.godot/imported/weapon-shield.obj-ec3017482c77749782cf6eceaaef431d.mesh"
+path="res://.godot/imported/weapon-shield.obj-17c4241aa8fe980b14087a0df8e780d0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/weapon-shield.obj-ec3017482c77749782cf6eceaaef431d.mesh"]
+files=["res://.godot/imported/weapon-shield.obj-17c4241aa8fe980b14087a0df8e780d0.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/weapon-shield.obj"
-dest_files=["res://.godot/imported/weapon-shield.obj-ec3017482c77749782cf6eceaaef431d.mesh", "res://.godot/imported/weapon-shield.obj-ec3017482c77749782cf6eceaaef431d.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/weapon-shield.obj"
+dest_files=["res://.godot/imported/weapon-shield.obj-17c4241aa8fe980b14087a0df8e780d0.mesh", "res://.godot/imported/weapon-shield.obj-17c4241aa8fe980b14087a0df8e780d0.mesh"]
 
 [params]
 

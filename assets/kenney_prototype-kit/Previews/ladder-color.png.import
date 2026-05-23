@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddq3mqfduymtj"
-path="res://.godot/imported/ladder-color.png-844d362bf98a2c1451fc126027ef1a78.ctex"
+path="res://.godot/imported/ladder-color.png-7e3811b76c9256c0b3c3d0855fb51b36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/ladder-color.png"
-dest_files=["res://.godot/imported/ladder-color.png-844d362bf98a2c1451fc126027ef1a78.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/ladder-color.png"
+dest_files=["res://.godot/imported/ladder-color.png-7e3811b76c9256c0b3c3d0855fb51b36.ctex"]
 
 [params]
 

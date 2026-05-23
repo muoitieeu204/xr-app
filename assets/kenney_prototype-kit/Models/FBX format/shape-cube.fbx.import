@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b8v3abe0ou8j7"
-path="res://.godot/imported/shape-cube.fbx-845545394e2939bdef6fa5e50794bdb1.scn"
+path="res://.godot/imported/shape-cube.fbx-b0a3fef33625cf8f885aca6c38fc6436.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/shape-cube.fbx"
-dest_files=["res://.godot/imported/shape-cube.fbx-845545394e2939bdef6fa5e50794bdb1.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/shape-cube.fbx"
+dest_files=["res://.godot/imported/shape-cube.fbx-b0a3fef33625cf8f885aca6c38fc6436.scn"]
 
 [params]
 

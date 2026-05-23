@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1gmv5pfmb0qh"
-path="res://.godot/imported/wall-corner-rounded.png-6537b9e3ab2b2c6fe63e60e3c9563d5f.ctex"
+path="res://.godot/imported/wall-corner-rounded.png-cef3ff527d9ab4365f633ac64a9a7d5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/wall-corner-rounded.png"
-dest_files=["res://.godot/imported/wall-corner-rounded.png-6537b9e3ab2b2c6fe63e60e3c9563d5f.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/wall-corner-rounded.png"
+dest_files=["res://.godot/imported/wall-corner-rounded.png-cef3ff527d9ab4365f633ac64a9a7d5d.ctex"]
 
 [params]
 

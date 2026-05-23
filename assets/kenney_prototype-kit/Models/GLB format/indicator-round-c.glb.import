@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cpwcf4k730yh3"
-path="res://.godot/imported/indicator-round-c.glb-0d71882b7339afc098c86612c78d1462.scn"
+path="res://.godot/imported/indicator-round-c.glb-b7a4df141d7ab586d9734a79b106a0a1.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/indicator-round-c.glb"
-dest_files=["res://.godot/imported/indicator-round-c.glb-0d71882b7339afc098c86612c78d1462.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-round-c.glb"
+dest_files=["res://.godot/imported/indicator-round-c.glb-b7a4df141d7ab586d9734a79b106a0a1.scn"]
 
 [params]
 

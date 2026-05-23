@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b2oadkc2jbplu"
-path="res://.godot/imported/shape-hexagon.glb-b6479b17791e38c976b6aa469a290a3f.scn"
+path="res://.godot/imported/shape-hexagon.glb-f775420ef8a000d105a5895533199001.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/shape-hexagon.glb"
-dest_files=["res://.godot/imported/shape-hexagon.glb-b6479b17791e38c976b6aa469a290a3f.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/shape-hexagon.glb"
+dest_files=["res://.godot/imported/shape-hexagon.glb-f775420ef8a000d105a5895533199001.scn"]
 
 [params]
 

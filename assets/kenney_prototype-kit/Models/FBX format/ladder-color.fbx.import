@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b64qvjqgqfkyf"
-path="res://.godot/imported/ladder-color.fbx-a7d1a80f6cc3ce619088ef20d5e251ba.scn"
+path="res://.godot/imported/ladder-color.fbx-769dd9aec044ebbc12686ad533876141.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/ladder-color.fbx"
-dest_files=["res://.godot/imported/ladder-color.fbx-a7d1a80f6cc3ce619088ef20d5e251ba.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/ladder-color.fbx"
+dest_files=["res://.godot/imported/ladder-color.fbx-769dd9aec044ebbc12686ad533876141.scn"]
 
 [params]
 

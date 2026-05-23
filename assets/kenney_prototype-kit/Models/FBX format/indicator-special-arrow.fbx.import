@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c3bg08t2hnish"
-path="res://.godot/imported/indicator-special-arrow.fbx-6c4a0cce5127a4ae2e32585301b94446.scn"
+path="res://.godot/imported/indicator-special-arrow.fbx-ba38287e58eafbf2b1565ef099c4fd81.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/indicator-special-arrow.fbx"
-dest_files=["res://.godot/imported/indicator-special-arrow.fbx-6c4a0cce5127a4ae2e32585301b94446.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/indicator-special-arrow.fbx"
+dest_files=["res://.godot/imported/indicator-special-arrow.fbx-ba38287e58eafbf2b1565ef099c4fd81.scn"]
 
 [params]
 

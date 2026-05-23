@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bv4wrcg1b8wxp"
-path="res://.godot/imported/floor-small-square.obj-552c1ceebc78553ed4ceebe11d3460a1.mesh"
+path="res://.godot/imported/floor-small-square.obj-3753437802a30d6fc7adc8090ab49219.mesh"
 
 [deps]
 
-files=["res://.godot/imported/floor-small-square.obj-552c1ceebc78553ed4ceebe11d3460a1.mesh"]
+files=["res://.godot/imported/floor-small-square.obj-3753437802a30d6fc7adc8090ab49219.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/floor-small-square.obj"
-dest_files=["res://.godot/imported/floor-small-square.obj-552c1ceebc78553ed4ceebe11d3460a1.mesh", "res://.godot/imported/floor-small-square.obj-552c1ceebc78553ed4ceebe11d3460a1.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/floor-small-square.obj"
+dest_files=["res://.godot/imported/floor-small-square.obj-3753437802a30d6fc7adc8090ab49219.mesh", "res://.godot/imported/floor-small-square.obj-3753437802a30d6fc7adc8090ab49219.mesh"]
 
 [params]
 

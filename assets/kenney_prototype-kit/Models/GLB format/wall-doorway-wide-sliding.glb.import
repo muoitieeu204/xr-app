@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://belxesrqu57g3"
-path="res://.godot/imported/wall-doorway-wide-sliding.glb-e03c33bfa7f934f0de736097de9840fe.scn"
+path="res://.godot/imported/wall-doorway-wide-sliding.glb-89db751f677661f155b1fe2196fd2c53.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/wall-doorway-wide-sliding.glb"
-dest_files=["res://.godot/imported/wall-doorway-wide-sliding.glb-e03c33bfa7f934f0de736097de9840fe.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/wall-doorway-wide-sliding.glb"
+dest_files=["res://.godot/imported/wall-doorway-wide-sliding.glb-89db751f677661f155b1fe2196fd2c53.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b1mf0mypbx0po"
-path="res://.godot/imported/button-floor-square-small.obj-484e58ade8a53680faf1a4487bdab20e.mesh"
+path="res://.godot/imported/button-floor-square-small.obj-e156a71eb8895353644f61de6a2037a4.mesh"
 
 [deps]
 
-files=["res://.godot/imported/button-floor-square-small.obj-484e58ade8a53680faf1a4487bdab20e.mesh"]
+files=["res://.godot/imported/button-floor-square-small.obj-e156a71eb8895353644f61de6a2037a4.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/button-floor-square-small.obj"
-dest_files=["res://.godot/imported/button-floor-square-small.obj-484e58ade8a53680faf1a4487bdab20e.mesh", "res://.godot/imported/button-floor-square-small.obj-484e58ade8a53680faf1a4487bdab20e.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/button-floor-square-small.obj"
+dest_files=["res://.godot/imported/button-floor-square-small.obj-e156a71eb8895353644f61de6a2037a4.mesh", "res://.godot/imported/button-floor-square-small.obj-e156a71eb8895353644f61de6a2037a4.mesh"]
 
 [params]
 

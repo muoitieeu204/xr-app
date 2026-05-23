@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diveqosaq021e"
-path="res://.godot/imported/button-floor-square-small.png-69411448eee111708a21b10db2cd89a4.ctex"
+path="res://.godot/imported/button-floor-square-small.png-f006c9393d58ba690c93206138a319e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/button-floor-square-small.png"
-dest_files=["res://.godot/imported/button-floor-square-small.png-69411448eee111708a21b10db2cd89a4.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/button-floor-square-small.png"
+dest_files=["res://.godot/imported/button-floor-square-small.png-f006c9393d58ba690c93206138a319e2.ctex"]
 
 [params]
 

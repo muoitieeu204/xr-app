@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://caqnp30cker14"
-path="res://.godot/imported/column-low.glb-7c31341cf80796b244b93a43ded2bb7a.scn"
+path="res://.godot/imported/column-low.glb-7e938cc725b7280f4269a224bfbcb891.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/column-low.glb"
-dest_files=["res://.godot/imported/column-low.glb-7c31341cf80796b244b93a43ded2bb7a.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/column-low.glb"
+dest_files=["res://.godot/imported/column-low.glb-7e938cc725b7280f4269a224bfbcb891.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://1uwhl3qlxr27"
-path="res://.godot/imported/stairs-narrow.glb-076c67de6b6ccc7f87b410b506946a50.scn"
+path="res://.godot/imported/stairs-narrow.glb-1942518f5f2cd2572c18a57997e9bf3a.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/stairs-narrow.glb"
-dest_files=["res://.godot/imported/stairs-narrow.glb-076c67de6b6ccc7f87b410b506946a50.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/stairs-narrow.glb"
+dest_files=["res://.godot/imported/stairs-narrow.glb-1942518f5f2cd2572c18a57997e9bf3a.scn"]
 
 [params]
 

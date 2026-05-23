@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cnngcccr1lfw5"
-path="res://.godot/imported/coin.obj-1b7a9185c5f4f45e77c5ad7930676d05.mesh"
+path="res://.godot/imported/coin.obj-c142e29c68d15e85de2ce2cd3408a9cd.mesh"
 
 [deps]
 
-files=["res://.godot/imported/coin.obj-1b7a9185c5f4f45e77c5ad7930676d05.mesh"]
+files=["res://.godot/imported/coin.obj-c142e29c68d15e85de2ce2cd3408a9cd.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/coin.obj"
-dest_files=["res://.godot/imported/coin.obj-1b7a9185c5f4f45e77c5ad7930676d05.mesh", "res://.godot/imported/coin.obj-1b7a9185c5f4f45e77c5ad7930676d05.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/coin.obj"
+dest_files=["res://.godot/imported/coin.obj-c142e29c68d15e85de2ce2cd3408a9cd.mesh", "res://.godot/imported/coin.obj-c142e29c68d15e85de2ce2cd3408a9cd.mesh"]
 
 [params]
 

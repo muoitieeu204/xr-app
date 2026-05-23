@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3uey83tiwxm2"
-path="res://.godot/imported/crate-color.png-854ebe338279402a15ebcda061380387.ctex"
+path="res://.godot/imported/crate-color.png-822d1fa2a4fc126e9a96a24e72538d58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/crate-color.png"
-dest_files=["res://.godot/imported/crate-color.png-854ebe338279402a15ebcda061380387.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/crate-color.png"
+dest_files=["res://.godot/imported/crate-color.png-822d1fa2a4fc126e9a96a24e72538d58.ctex"]
 
 [params]
 

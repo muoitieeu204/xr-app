@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://di0m4w4541dpd"
-path="res://.godot/imported/wall-round-low.fbx-d72361bb7bc8dedce9b86da6fc4e1ff6.scn"
+path="res://.godot/imported/wall-round-low.fbx-9e280ba13e806014ddb14bc6ab52ade4.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/wall-round-low.fbx"
-dest_files=["res://.godot/imported/wall-round-low.fbx-d72361bb7bc8dedce9b86da6fc4e1ff6.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/wall-round-low.fbx"
+dest_files=["res://.godot/imported/wall-round-low.fbx-9e280ba13e806014ddb14bc6ab52ade4.scn"]
 
 [params]
 

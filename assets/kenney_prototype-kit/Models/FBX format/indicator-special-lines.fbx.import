@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cewjdxlpb04xv"
-path="res://.godot/imported/indicator-special-lines.fbx-a23254ded95f28218ce5781fc8f9465d.scn"
+path="res://.godot/imported/indicator-special-lines.fbx-88c20f94b9872d356ed91c1da55f1396.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/indicator-special-lines.fbx"
-dest_files=["res://.godot/imported/indicator-special-lines.fbx-a23254ded95f28218ce5781fc8f9465d.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/indicator-special-lines.fbx"
+dest_files=["res://.godot/imported/indicator-special-lines.fbx-88c20f94b9872d356ed91c1da55f1396.scn"]
 
 [params]
 

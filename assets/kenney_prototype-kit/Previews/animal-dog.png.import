@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d32w8s2uikxhr"
-path="res://.godot/imported/animal-dog.png-e3814838cb783d6a6dba4537b5d6dd25.ctex"
+path="res://.godot/imported/animal-dog.png-22ed5dd5c0031cddc61e5850de7bab32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/animal-dog.png"
-dest_files=["res://.godot/imported/animal-dog.png-e3814838cb783d6a6dba4537b5d6dd25.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/animal-dog.png"
+dest_files=["res://.godot/imported/animal-dog.png-22ed5dd5c0031cddc61e5850de7bab32.ctex"]
 
 [params]
 

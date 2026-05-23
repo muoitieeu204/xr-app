@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d2bisfpiyhhsc"
-path="res://.godot/imported/floor-thick-corner-diagonal.fbx-6971b80e11932fb4ab83ba8043630c07.scn"
+path="res://.godot/imported/floor-thick-corner-diagonal.fbx-5b83f69637f1bb7a1bff47775212b696.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/floor-thick-corner-diagonal.fbx"
-dest_files=["res://.godot/imported/floor-thick-corner-diagonal.fbx-6971b80e11932fb4ab83ba8043630c07.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/floor-thick-corner-diagonal.fbx"
+dest_files=["res://.godot/imported/floor-thick-corner-diagonal.fbx-5b83f69637f1bb7a1bff47775212b696.scn"]
 
 [params]
 

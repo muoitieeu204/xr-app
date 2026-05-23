@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c52nd2i0f5b1u"
-path="res://.godot/imported/pipe-half-section.obj-350bb89661206e8abb6246f5b806f046.mesh"
+path="res://.godot/imported/pipe-half-section.obj-76db5ec456a3b85e4c810156dea29261.mesh"
 
 [deps]
 
-files=["res://.godot/imported/pipe-half-section.obj-350bb89661206e8abb6246f5b806f046.mesh"]
+files=["res://.godot/imported/pipe-half-section.obj-76db5ec456a3b85e4c810156dea29261.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/pipe-half-section.obj"
-dest_files=["res://.godot/imported/pipe-half-section.obj-350bb89661206e8abb6246f5b806f046.mesh", "res://.godot/imported/pipe-half-section.obj-350bb89661206e8abb6246f5b806f046.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/pipe-half-section.obj"
+dest_files=["res://.godot/imported/pipe-half-section.obj-76db5ec456a3b85e4c810156dea29261.mesh", "res://.godot/imported/pipe-half-section.obj-76db5ec456a3b85e4c810156dea29261.mesh"]
 
 [params]
 

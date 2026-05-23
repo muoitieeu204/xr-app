@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bmci4gjlq4pga"
-path="res://.godot/imported/wall-doorway-wide-sliding.obj-656c3282157bc1ae63f7591322ec488f.mesh"
+path="res://.godot/imported/wall-doorway-wide-sliding.obj-e0a08762b5589642bea50dae1083046c.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wall-doorway-wide-sliding.obj-656c3282157bc1ae63f7591322ec488f.mesh"]
+files=["res://.godot/imported/wall-doorway-wide-sliding.obj-e0a08762b5589642bea50dae1083046c.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/wall-doorway-wide-sliding.obj"
-dest_files=["res://.godot/imported/wall-doorway-wide-sliding.obj-656c3282157bc1ae63f7591322ec488f.mesh", "res://.godot/imported/wall-doorway-wide-sliding.obj-656c3282157bc1ae63f7591322ec488f.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/wall-doorway-wide-sliding.obj"
+dest_files=["res://.godot/imported/wall-doorway-wide-sliding.obj-e0a08762b5589642bea50dae1083046c.mesh", "res://.godot/imported/wall-doorway-wide-sliding.obj-e0a08762b5589642bea50dae1083046c.mesh"]
 
 [params]
 

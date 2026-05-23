@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b3tcdmb5cps8r"
-path="res://.godot/imported/figurine-large.glb-91f37da8d951317c2297891d34520edc.scn"
+path="res://.godot/imported/figurine-large.glb-8978926c722ed45f3a08b3ef7b519638.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/figurine-large.glb"
-dest_files=["res://.godot/imported/figurine-large.glb-91f37da8d951317c2297891d34520edc.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/figurine-large.glb"
+dest_files=["res://.godot/imported/figurine-large.glb-8978926c722ed45f3a08b3ef7b519638.scn"]
 
 [params]
 

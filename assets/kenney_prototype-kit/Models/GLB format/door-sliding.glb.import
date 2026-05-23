@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b2dnnn88rv0bs"
-path="res://.godot/imported/door-sliding.glb-30dcf3d5e62a84bf9a92e8b30219da32.scn"
+path="res://.godot/imported/door-sliding.glb-f2934ddbd1821f6167a4cbcf80d804d9.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb"
-dest_files=["res://.godot/imported/door-sliding.glb-30dcf3d5e62a84bf9a92e8b30219da32.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb"
+dest_files=["res://.godot/imported/door-sliding.glb-f2934ddbd1821f6167a4cbcf80d804d9.scn"]
 
 [params]
 

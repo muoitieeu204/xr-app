@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b6cysb6yeui72"
-path="res://.godot/imported/indicator-round-a.obj-c654fe2a6d5dc713112cc6368412ea55.mesh"
+path="res://.godot/imported/indicator-round-a.obj-9299fd7f6dcd220011ae4475e5c759a0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/indicator-round-a.obj-c654fe2a6d5dc713112cc6368412ea55.mesh"]
+files=["res://.godot/imported/indicator-round-a.obj-9299fd7f6dcd220011ae4475e5c759a0.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/indicator-round-a.obj"
-dest_files=["res://.godot/imported/indicator-round-a.obj-c654fe2a6d5dc713112cc6368412ea55.mesh", "res://.godot/imported/indicator-round-a.obj-c654fe2a6d5dc713112cc6368412ea55.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/indicator-round-a.obj"
+dest_files=["res://.godot/imported/indicator-round-a.obj-9299fd7f6dcd220011ae4475e5c759a0.mesh", "res://.godot/imported/indicator-round-a.obj-9299fd7f6dcd220011ae4475e5c759a0.mesh"]
 
 [params]
 

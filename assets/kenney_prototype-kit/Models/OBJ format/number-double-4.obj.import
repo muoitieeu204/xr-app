@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c5af8o5j6xms1"
-path="res://.godot/imported/number-double-4.obj-cc0e0a547c23d910d109161399ea9d5c.mesh"
+path="res://.godot/imported/number-double-4.obj-b312a92a067dc73d77bb01d9a7c69e49.mesh"
 
 [deps]
 
-files=["res://.godot/imported/number-double-4.obj-cc0e0a547c23d910d109161399ea9d5c.mesh"]
+files=["res://.godot/imported/number-double-4.obj-b312a92a067dc73d77bb01d9a7c69e49.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/number-double-4.obj"
-dest_files=["res://.godot/imported/number-double-4.obj-cc0e0a547c23d910d109161399ea9d5c.mesh", "res://.godot/imported/number-double-4.obj-cc0e0a547c23d910d109161399ea9d5c.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/number-double-4.obj"
+dest_files=["res://.godot/imported/number-double-4.obj-b312a92a067dc73d77bb01d9a7c69e49.mesh", "res://.godot/imported/number-double-4.obj-b312a92a067dc73d77bb01d9a7c69e49.mesh"]
 
 [params]
 

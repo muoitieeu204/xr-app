@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bflpt7e3lomsm"
-path="res://.godot/imported/door-sliding-double-round.glb-cc7c1338f61580e1eadce5c69f239bb8.scn"
+path="res://.godot/imported/door-sliding-double-round.glb-1b8a8255d0d9f50327788554feb440ae.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/door-sliding-double-round.glb"
-dest_files=["res://.godot/imported/door-sliding-double-round.glb-cc7c1338f61580e1eadce5c69f239bb8.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding-double-round.glb"
+dest_files=["res://.godot/imported/door-sliding-double-round.glb-1b8a8255d0d9f50327788554feb440ae.scn"]
 
 [params]
 

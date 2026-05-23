@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dc2u1pvskc8gd"
-path="res://.godot/imported/floor-small-square.fbx-0a8bf445095d5e2aad299b3967ea7c40.scn"
+path="res://.godot/imported/floor-small-square.fbx-14e5787eac8467a0c8fe74e7b2142de6.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/floor-small-square.fbx"
-dest_files=["res://.godot/imported/floor-small-square.fbx-0a8bf445095d5e2aad299b3967ea7c40.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/floor-small-square.fbx"
+dest_files=["res://.godot/imported/floor-small-square.fbx-14e5787eac8467a0c8fe74e7b2142de6.scn"]
 
 [params]
 

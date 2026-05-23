@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d2oxi8hrit2wd"
-path="res://.godot/imported/wall-window-large.glb-833be431adebb0f5b626c0744d0a4667.scn"
+path="res://.godot/imported/wall-window-large.glb-320a757ca9496b05b3fe6bff61509853.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/wall-window-large.glb"
-dest_files=["res://.godot/imported/wall-window-large.glb-833be431adebb0f5b626c0744d0a4667.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/wall-window-large.glb"
+dest_files=["res://.godot/imported/wall-window-large.glb-320a757ca9496b05b3fe6bff61509853.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://wgpyiketuyag"
-path="res://.godot/imported/indicator-square-b.obj-24c0659481c08a2fbb80e1b60e18b16d.mesh"
+path="res://.godot/imported/indicator-square-b.obj-7fd786c27cb964d556f8c0ec2dbda7ec.mesh"
 
 [deps]
 
-files=["res://.godot/imported/indicator-square-b.obj-24c0659481c08a2fbb80e1b60e18b16d.mesh"]
+files=["res://.godot/imported/indicator-square-b.obj-7fd786c27cb964d556f8c0ec2dbda7ec.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/indicator-square-b.obj"
-dest_files=["res://.godot/imported/indicator-square-b.obj-24c0659481c08a2fbb80e1b60e18b16d.mesh", "res://.godot/imported/indicator-square-b.obj-24c0659481c08a2fbb80e1b60e18b16d.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/indicator-square-b.obj"
+dest_files=["res://.godot/imported/indicator-square-b.obj-7fd786c27cb964d556f8c0ec2dbda7ec.mesh", "res://.godot/imported/indicator-square-b.obj-7fd786c27cb964d556f8c0ec2dbda7ec.mesh"]
 
 [params]
 

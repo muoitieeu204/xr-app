@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c381w7smamlxj"
-path="res://.godot/imported/indicator-special-arrow.glb-4201359d0d1d5ce4d5416039f68eecff.scn"
+path="res://.godot/imported/indicator-special-arrow.glb-c63f70eea8bebd53ee8ca7d90fbc3e4f.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/indicator-special-arrow.glb"
-dest_files=["res://.godot/imported/indicator-special-arrow.glb-4201359d0d1d5ce4d5416039f68eecff.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-special-arrow.glb"
+dest_files=["res://.godot/imported/indicator-special-arrow.glb-c63f70eea8bebd53ee8ca7d90fbc3e4f.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://omq5s5kdv8v0"
-path="res://.godot/imported/door-rotate.obj-316fc89715ba982bfccdcd1c46682aa1.mesh"
+path="res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh"
 
 [deps]
 
-files=["res://.godot/imported/door-rotate.obj-316fc89715ba982bfccdcd1c46682aa1.mesh"]
+files=["res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/door-rotate.obj"
-dest_files=["res://.godot/imported/door-rotate.obj-316fc89715ba982bfccdcd1c46682aa1.mesh", "res://.godot/imported/door-rotate.obj-316fc89715ba982bfccdcd1c46682aa1.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/door-rotate.obj"
+dest_files=["res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh", "res://.godot/imported/door-rotate.obj-d13eec931a16aa0c023156692d5f6a4e.mesh"]
 
 [params]
 

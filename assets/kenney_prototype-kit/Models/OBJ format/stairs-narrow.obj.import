@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c1v6lh2qqxaf"
-path="res://.godot/imported/stairs-narrow.obj-db90cca927f510dc9a73969856ad4020.mesh"
+path="res://.godot/imported/stairs-narrow.obj-f67d68f36df31f9483a2bf2221cd0ded.mesh"
 
 [deps]
 
-files=["res://.godot/imported/stairs-narrow.obj-db90cca927f510dc9a73969856ad4020.mesh"]
+files=["res://.godot/imported/stairs-narrow.obj-f67d68f36df31f9483a2bf2221cd0ded.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/stairs-narrow.obj"
-dest_files=["res://.godot/imported/stairs-narrow.obj-db90cca927f510dc9a73969856ad4020.mesh", "res://.godot/imported/stairs-narrow.obj-db90cca927f510dc9a73969856ad4020.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/stairs-narrow.obj"
+dest_files=["res://.godot/imported/stairs-narrow.obj-f67d68f36df31f9483a2bf2221cd0ded.mesh", "res://.godot/imported/stairs-narrow.obj-f67d68f36df31f9483a2bf2221cd0ded.mesh"]
 
 [params]
 

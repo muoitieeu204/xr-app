@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3q02pccppn6s"
-path="res://.godot/imported/shape-hexagon.png-cff36e07e04e37496dad4326d46e67ae.ctex"
+path="res://.godot/imported/shape-hexagon.png-304fec5087ff2b1b10dff70e9e65cd2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/shape-hexagon.png"
-dest_files=["res://.godot/imported/shape-hexagon.png-cff36e07e04e37496dad4326d46e67ae.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/shape-hexagon.png"
+dest_files=["res://.godot/imported/shape-hexagon.png-304fec5087ff2b1b10dff70e9e65cd2d.ctex"]
 
 [params]
 

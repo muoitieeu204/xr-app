@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://m7npdx5v5lm8"
-path="res://.godot/imported/floor-thick.fbx-0f92591bc09b1d02794c6b99abece111.scn"
+path="res://.godot/imported/floor-thick.fbx-5986e8bb7be611a78d1efac91f986e42.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/floor-thick.fbx"
-dest_files=["res://.godot/imported/floor-thick.fbx-0f92591bc09b1d02794c6b99abece111.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/floor-thick.fbx"
+dest_files=["res://.godot/imported/floor-thick.fbx-5986e8bb7be611a78d1efac91f986e42.scn"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://igps2xxplfwo"
-path="res://.godot/imported/indicator-round-d.png-47f244dca9575def8af182464114fba3.ctex"
+path="res://.godot/imported/indicator-round-d.png-7803383821f468963543a4cf9e52cbb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/indicator-round-d.png"
-dest_files=["res://.godot/imported/indicator-round-d.png-47f244dca9575def8af182464114fba3.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/indicator-round-d.png"
+dest_files=["res://.godot/imported/indicator-round-d.png-7803383821f468963543a4cf9e52cbb7.ctex"]
 
 [params]
 

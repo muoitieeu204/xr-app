@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cn5p0qrxqldea"
-path="res://.godot/imported/vehicle-convertible.png-0d73e38b4ec3eafaa428c31eed935480.ctex"
+path="res://.godot/imported/vehicle-convertible.png-e08fd7c206445efed617cafb8f1d33f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/vehicle-convertible.png"
-dest_files=["res://.godot/imported/vehicle-convertible.png-0d73e38b4ec3eafaa428c31eed935480.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/vehicle-convertible.png"
+dest_files=["res://.godot/imported/vehicle-convertible.png-e08fd7c206445efed617cafb8f1d33f0.ctex"]
 
 [params]
 

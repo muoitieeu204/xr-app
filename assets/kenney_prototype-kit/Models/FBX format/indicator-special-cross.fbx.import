@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b61sgevc1lsxu"
-path="res://.godot/imported/indicator-special-cross.fbx-3adad8cc09bb9baa6715e44b49bfc9bf.scn"
+path="res://.godot/imported/indicator-special-cross.fbx-528e1026cb69dbe9f44b1789eb78dda5.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/indicator-special-cross.fbx"
-dest_files=["res://.godot/imported/indicator-special-cross.fbx-3adad8cc09bb9baa6715e44b49bfc9bf.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/indicator-special-cross.fbx"
+dest_files=["res://.godot/imported/indicator-special-cross.fbx-528e1026cb69dbe9f44b1789eb78dda5.scn"]
 
 [params]
 

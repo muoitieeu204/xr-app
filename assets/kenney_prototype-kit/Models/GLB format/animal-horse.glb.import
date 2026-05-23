@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://csvxrcm1msyjt"
-path="res://.godot/imported/animal-horse.glb-720e66bb28145cf8932a7688895f43dc.scn"
+path="res://.godot/imported/animal-horse.glb-945cb76d603bd17984dacdbac445bebf.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/animal-horse.glb"
-dest_files=["res://.godot/imported/animal-horse.glb-720e66bb28145cf8932a7688895f43dc.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/animal-horse.glb"
+dest_files=["res://.godot/imported/animal-horse.glb-945cb76d603bd17984dacdbac445bebf.scn"]
 
 [params]
 

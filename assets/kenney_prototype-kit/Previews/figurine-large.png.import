@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmbmuttaxa66v"
-path="res://.godot/imported/figurine-large.png-fb892069eb02f4261a6e6911a9d184af.ctex"
+path="res://.godot/imported/figurine-large.png-a588d3cc8fc31dee70d33e6803fb86cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/figurine-large.png"
-dest_files=["res://.godot/imported/figurine-large.png-fb892069eb02f4261a6e6911a9d184af.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/figurine-large.png"
+dest_files=["res://.godot/imported/figurine-large.png-a588d3cc8fc31dee70d33e6803fb86cf.ctex"]
 
 [params]
 

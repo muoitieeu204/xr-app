@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b1fbwfr8hbsp2"
-path="res://.godot/imported/wall-doorway-garage.obj-0e62ddbe606830c7ebdfd4fc9c7f591d.mesh"
+path="res://.godot/imported/wall-doorway-garage.obj-c4d598ed6ee6a28cd1f6d5cccea28cf0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wall-doorway-garage.obj-0e62ddbe606830c7ebdfd4fc9c7f591d.mesh"]
+files=["res://.godot/imported/wall-doorway-garage.obj-c4d598ed6ee6a28cd1f6d5cccea28cf0.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/wall-doorway-garage.obj"
-dest_files=["res://.godot/imported/wall-doorway-garage.obj-0e62ddbe606830c7ebdfd4fc9c7f591d.mesh", "res://.godot/imported/wall-doorway-garage.obj-0e62ddbe606830c7ebdfd4fc9c7f591d.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/wall-doorway-garage.obj"
+dest_files=["res://.godot/imported/wall-doorway-garage.obj-c4d598ed6ee6a28cd1f6d5cccea28cf0.mesh", "res://.godot/imported/wall-doorway-garage.obj-c4d598ed6ee6a28cd1f6d5cccea28cf0.mesh"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dwgcnwxn71gad"
-path="res://.godot/imported/weapon-shield.glb-5bb3800ae8dd192f420412b908adbbb6.scn"
+path="res://.godot/imported/weapon-shield.glb-c42bfda67f5c80c733522f22ce25f6df.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/weapon-shield.glb"
-dest_files=["res://.godot/imported/weapon-shield.glb-5bb3800ae8dd192f420412b908adbbb6.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/weapon-shield.glb"
+dest_files=["res://.godot/imported/weapon-shield.glb-c42bfda67f5c80c733522f22ce25f6df.scn"]
 
 [params]
 

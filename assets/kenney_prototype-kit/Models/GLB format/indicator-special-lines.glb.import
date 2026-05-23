@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c117iynf0u6g5"
-path="res://.godot/imported/indicator-special-lines.glb-c7d21c39b7816468498aa9d6caf5cd18.scn"
+path="res://.godot/imported/indicator-special-lines.glb-9c455385840fc5648c7cb42141e1d5c8.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/indicator-special-lines.glb"
-dest_files=["res://.godot/imported/indicator-special-lines.glb-c7d21c39b7816468498aa9d6caf5cd18.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-special-lines.glb"
+dest_files=["res://.godot/imported/indicator-special-lines.glb-9c455385840fc5648c7cb42141e1d5c8.scn"]
 
 [params]
 

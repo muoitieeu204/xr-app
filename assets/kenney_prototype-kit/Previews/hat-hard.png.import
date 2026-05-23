@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwccf57xqljow"
-path="res://.godot/imported/hat-hard.png-165272906e3056305fabaa1af1e049c7.ctex"
+path="res://.godot/imported/hat-hard.png-6c003521168497e2a343aa2867f82740.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/hat-hard.png"
-dest_files=["res://.godot/imported/hat-hard.png-165272906e3056305fabaa1af1e049c7.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/hat-hard.png"
+dest_files=["res://.godot/imported/hat-hard.png-6c003521168497e2a343aa2867f82740.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://yf3fa8iwca7q"
-path="res://.godot/imported/shape-triangular-prism-low.glb-ece4176e5ecac7e63592d349dc14b926.scn"
+path="res://.godot/imported/shape-triangular-prism-low.glb-408c3560f093e11ea9080092c794a989.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/shape-triangular-prism-low.glb"
-dest_files=["res://.godot/imported/shape-triangular-prism-low.glb-ece4176e5ecac7e63592d349dc14b926.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/shape-triangular-prism-low.glb"
+dest_files=["res://.godot/imported/shape-triangular-prism-low.glb-408c3560f093e11ea9080092c794a989.scn"]
 
 [params]
 

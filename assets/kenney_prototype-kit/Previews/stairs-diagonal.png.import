@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4bm2qdj876fx"
-path="res://.godot/imported/stairs-diagonal.png-e3b64fd625435f69cdd4d856c2f5e7db.ctex"
+path="res://.godot/imported/stairs-diagonal.png-4748fea82d59f537f36232a7c291f827.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/stairs-diagonal.png"
-dest_files=["res://.godot/imported/stairs-diagonal.png-e3b64fd625435f69cdd4d856c2f5e7db.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/stairs-diagonal.png"
+dest_files=["res://.godot/imported/stairs-diagonal.png-4748fea82d59f537f36232a7c291f827.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dsvb01220abt6"
-path="res://.godot/imported/shape-hollow-cylinder-half-detailed.glb-1d0794c761ffdcdcf4f2c0ae02fad53e.scn"
+path="res://.godot/imported/shape-hollow-cylinder-half-detailed.glb-45e955731de4cfd2149afd31c53d9e52.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/shape-hollow-cylinder-half-detailed.glb"
-dest_files=["res://.godot/imported/shape-hollow-cylinder-half-detailed.glb-1d0794c761ffdcdcf4f2c0ae02fad53e.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/shape-hollow-cylinder-half-detailed.glb"
+dest_files=["res://.godot/imported/shape-hollow-cylinder-half-detailed.glb-45e955731de4cfd2149afd31c53d9e52.scn"]
 
 [params]
 

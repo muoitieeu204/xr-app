@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de10m5piuuyoi"
-path="res://.godot/imported/wall-doorway-garage.png-8bc0b9113facdf963c7523402b622886.ctex"
+path="res://.godot/imported/wall-doorway-garage.png-d213531e7af32d33bb58235ca1467f1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/wall-doorway-garage.png"
-dest_files=["res://.godot/imported/wall-doorway-garage.png-8bc0b9113facdf963c7523402b622886.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/wall-doorway-garage.png"
+dest_files=["res://.godot/imported/wall-doorway-garage.png-d213531e7af32d33bb58235ca1467f1b.ctex"]
 
 [params]
 

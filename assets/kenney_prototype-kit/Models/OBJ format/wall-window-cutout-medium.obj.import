@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dlo476lnbgv4f"
-path="res://.godot/imported/wall-window-cutout-medium.obj-4f2001591588dce1acb968bb989beb77.mesh"
+path="res://.godot/imported/wall-window-cutout-medium.obj-94ba70a8de6f4db76c618a302b4e7916.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wall-window-cutout-medium.obj-4f2001591588dce1acb968bb989beb77.mesh"]
+files=["res://.godot/imported/wall-window-cutout-medium.obj-94ba70a8de6f4db76c618a302b4e7916.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/wall-window-cutout-medium.obj"
-dest_files=["res://.godot/imported/wall-window-cutout-medium.obj-4f2001591588dce1acb968bb989beb77.mesh", "res://.godot/imported/wall-window-cutout-medium.obj-4f2001591588dce1acb968bb989beb77.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/wall-window-cutout-medium.obj"
+dest_files=["res://.godot/imported/wall-window-cutout-medium.obj-94ba70a8de6f4db76c618a302b4e7916.mesh", "res://.godot/imported/wall-window-cutout-medium.obj-94ba70a8de6f4db76c618a302b4e7916.mesh"]
 
 [params]
 

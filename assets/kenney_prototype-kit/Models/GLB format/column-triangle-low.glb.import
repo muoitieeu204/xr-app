@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://irelu4nhpt55"
-path="res://.godot/imported/column-triangle-low.glb-a13911d277f8465850effa9ae7627ce7.scn"
+path="res://.godot/imported/column-triangle-low.glb-98cd8326e27b56f772a04889429df923.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/column-triangle-low.glb"
-dest_files=["res://.godot/imported/column-triangle-low.glb-a13911d277f8465850effa9ae7627ce7.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/column-triangle-low.glb"
+dest_files=["res://.godot/imported/column-triangle-low.glb-98cd8326e27b56f772a04889429df923.scn"]
 
 [params]
 

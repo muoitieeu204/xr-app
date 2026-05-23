@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmi8x2vwi1pgk"
-path="res://.godot/imported/number-double-3.png-70ea11a291213d2ac73b47d3d5fedeb0.ctex"
+path="res://.godot/imported/number-double-3.png-cb96595269baadd1305744c9848bd592.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/number-double-3.png"
-dest_files=["res://.godot/imported/number-double-3.png-70ea11a291213d2ac73b47d3d5fedeb0.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/number-double-3.png"
+dest_files=["res://.godot/imported/number-double-3.png-cb96595269baadd1305744c9848bd592.ctex"]
 
 [params]
 

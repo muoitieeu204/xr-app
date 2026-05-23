@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxwmwuih3y3hx"
-path="res://.godot/imported/wall-diagonal-low.png-8c70057b826700c2ec398e6693e9cf19.ctex"
+path="res://.godot/imported/wall-diagonal-low.png-f76f2b0abfec333c856e0b6f9ef1985a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/wall-diagonal-low.png"
-dest_files=["res://.godot/imported/wall-diagonal-low.png-8c70057b826700c2ec398e6693e9cf19.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/wall-diagonal-low.png"
+dest_files=["res://.godot/imported/wall-diagonal-low.png-f76f2b0abfec333c856e0b6f9ef1985a.ctex"]
 
 [params]
 

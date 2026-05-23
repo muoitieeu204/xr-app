@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://iamix3nc23qq"
-path="res://.godot/imported/shape-slope.glb-4fbec9f0355cbda9b1c172f40f1b7061.scn"
+path="res://.godot/imported/shape-slope.glb-511da511004a64fb10060c422fd702fe.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/shape-slope.glb"
-dest_files=["res://.godot/imported/shape-slope.glb-4fbec9f0355cbda9b1c172f40f1b7061.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/shape-slope.glb"
+dest_files=["res://.godot/imported/shape-slope.glb-511da511004a64fb10060c422fd702fe.scn"]
 
 [params]
 

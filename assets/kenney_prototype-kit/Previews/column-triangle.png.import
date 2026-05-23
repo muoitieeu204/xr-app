@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxsjc3d2boivk"
-path="res://.godot/imported/column-triangle.png-29276c8961c4c2179dd5d74fd9d317f6.ctex"
+path="res://.godot/imported/column-triangle.png-f49feec67511cde114aede410b9bafd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/column-triangle.png"
-dest_files=["res://.godot/imported/column-triangle.png-29276c8961c4c2179dd5d74fd9d317f6.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/column-triangle.png"
+dest_files=["res://.godot/imported/column-triangle.png-f49feec67511cde114aede410b9bafd8.ctex"]
 
 [params]
 

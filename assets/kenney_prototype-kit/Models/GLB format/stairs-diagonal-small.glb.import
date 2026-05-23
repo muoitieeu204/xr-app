@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://slq3l5bqv0ij"
-path="res://.godot/imported/stairs-diagonal-small.glb-385064640d6b24f85373acc5f8d57690.scn"
+path="res://.godot/imported/stairs-diagonal-small.glb-af9c71dc955a1d097cefa24044c9eb30.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/stairs-diagonal-small.glb"
-dest_files=["res://.godot/imported/stairs-diagonal-small.glb-385064640d6b24f85373acc5f8d57690.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/stairs-diagonal-small.glb"
+dest_files=["res://.godot/imported/stairs-diagonal-small.glb-af9c71dc955a1d097cefa24044c9eb30.scn"]
 
 [params]
 

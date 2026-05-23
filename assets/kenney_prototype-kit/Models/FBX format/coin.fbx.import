@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cd1ymtrdax485"
-path="res://.godot/imported/coin.fbx-c66badbb79d53e699c3ea1a4b5cbc3ab.scn"
+path="res://.godot/imported/coin.fbx-8e30d78d51ac90cafb58ea9459c24850.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/coin.fbx"
-dest_files=["res://.godot/imported/coin.fbx-c66badbb79d53e699c3ea1a4b5cbc3ab.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/coin.fbx"
+dest_files=["res://.godot/imported/coin.fbx-8e30d78d51ac90cafb58ea9459c24850.scn"]
 
 [params]
 

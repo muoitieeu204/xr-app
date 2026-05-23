@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d271j25hr3bek"
-path="res://.godot/imported/indicator-square-a.fbx-26abbbeeb235f988fc9b6661f3175b18.scn"
+path="res://.godot/imported/indicator-square-a.fbx-0c215fac70768c9ebddd74537b343ed1.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/indicator-square-a.fbx"
-dest_files=["res://.godot/imported/indicator-square-a.fbx-26abbbeeb235f988fc9b6661f3175b18.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/indicator-square-a.fbx"
+dest_files=["res://.godot/imported/indicator-square-a.fbx-0c215fac70768c9ebddd74537b343ed1.scn"]
 
 [params]
 

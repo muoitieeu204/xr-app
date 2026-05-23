@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwsleiwxo44uw"
-path="res://.godot/imported/ladder-top.png-55f3612268aa70b6bc98dc46e0ea860c.ctex"
+path="res://.godot/imported/ladder-top.png-c17cc7c2b99df489077bd2948830383a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/ladder-top.png"
-dest_files=["res://.godot/imported/ladder-top.png-55f3612268aa70b6bc98dc46e0ea860c.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/ladder-top.png"
+dest_files=["res://.godot/imported/ladder-top.png-c17cc7c2b99df489077bd2948830383a.ctex"]
 
 [params]
 

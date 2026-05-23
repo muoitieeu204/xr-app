@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b2x7ovw1pqxrc"
-path="res://.godot/imported/weapon-shield.fbx-75046d025a72cc3d77f5c4aef767829e.scn"
+path="res://.godot/imported/weapon-shield.fbx-c2d94aaeb404e01bcd0f6a3f768d308f.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/weapon-shield.fbx"
-dest_files=["res://.godot/imported/weapon-shield.fbx-75046d025a72cc3d77f5c4aef767829e.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/weapon-shield.fbx"
+dest_files=["res://.godot/imported/weapon-shield.fbx-c2d94aaeb404e01bcd0f6a3f768d308f.scn"]
 
 [params]
 

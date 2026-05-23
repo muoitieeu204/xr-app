@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d4kwrm6kxt27q"
-path="res://.godot/imported/target-b-round.fbx-9bbe165b937ae8b49af696357ddb1671.scn"
+path="res://.godot/imported/target-b-round.fbx-520a8990eaa82aa10f3f4f3fc1207298.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/target-b-round.fbx"
-dest_files=["res://.godot/imported/target-b-round.fbx-9bbe165b937ae8b49af696357ddb1671.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/target-b-round.fbx"
+dest_files=["res://.godot/imported/target-b-round.fbx-520a8990eaa82aa10f3f4f3fc1207298.scn"]
 
 [params]
 

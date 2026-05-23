@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cwhougi4xvcwi"
-path="res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-76352da0c266faa053de265c894787cc.mesh"
+path="res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-405770e9ff74efeb4ab3f1ca5b6efeb2.mesh"
 
 [deps]
 
-files=["res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-76352da0c266faa053de265c894787cc.mesh"]
+files=["res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-405770e9ff74efeb4ab3f1ca5b6efeb2.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/shape-hollow-cylinder-half-detailed.obj"
-dest_files=["res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-76352da0c266faa053de265c894787cc.mesh", "res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-76352da0c266faa053de265c894787cc.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/shape-hollow-cylinder-half-detailed.obj"
+dest_files=["res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-405770e9ff74efeb4ab3f1ca5b6efeb2.mesh", "res://.godot/imported/shape-hollow-cylinder-half-detailed.obj-405770e9ff74efeb4ab3f1ca5b6efeb2.mesh"]
 
 [params]
 

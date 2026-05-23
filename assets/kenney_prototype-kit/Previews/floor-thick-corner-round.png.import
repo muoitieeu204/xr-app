@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkrm2u65eqpy"
-path="res://.godot/imported/floor-thick-corner-round.png-cd228dc8621b3cc49336a40062db763d.ctex"
+path="res://.godot/imported/floor-thick-corner-round.png-ca1a0ce43957458f0393432b4420788a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/floor-thick-corner-round.png"
-dest_files=["res://.godot/imported/floor-thick-corner-round.png-cd228dc8621b3cc49336a40062db763d.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/floor-thick-corner-round.png"
+dest_files=["res://.godot/imported/floor-thick-corner-round.png-ca1a0ce43957458f0393432b4420788a.ctex"]
 
 [params]
 

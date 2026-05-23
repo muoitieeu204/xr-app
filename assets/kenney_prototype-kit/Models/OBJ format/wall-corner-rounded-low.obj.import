@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bewxstsplsi78"
-path="res://.godot/imported/wall-corner-rounded-low.obj-39deee3c1357b4b13814761919b6ea14.mesh"
+path="res://.godot/imported/wall-corner-rounded-low.obj-0843e7893f68ce9560223df7a230aade.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wall-corner-rounded-low.obj-39deee3c1357b4b13814761919b6ea14.mesh"]
+files=["res://.godot/imported/wall-corner-rounded-low.obj-0843e7893f68ce9560223df7a230aade.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/wall-corner-rounded-low.obj"
-dest_files=["res://.godot/imported/wall-corner-rounded-low.obj-39deee3c1357b4b13814761919b6ea14.mesh", "res://.godot/imported/wall-corner-rounded-low.obj-39deee3c1357b4b13814761919b6ea14.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/wall-corner-rounded-low.obj"
+dest_files=["res://.godot/imported/wall-corner-rounded-low.obj-0843e7893f68ce9560223df7a230aade.mesh", "res://.godot/imported/wall-corner-rounded-low.obj-0843e7893f68ce9560223df7a230aade.mesh"]
 
 [params]
 

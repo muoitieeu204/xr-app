@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://uclgqpwv3xww"
-path="res://.godot/imported/shape-cube-rounded.glb-995ce6db9fd3933941c088f071146ce8.scn"
+path="res://.godot/imported/shape-cube-rounded.glb-7ed81931ad304c7289dff2da179086f3.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/shape-cube-rounded.glb"
-dest_files=["res://.godot/imported/shape-cube-rounded.glb-995ce6db9fd3933941c088f071146ce8.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/shape-cube-rounded.glb"
+dest_files=["res://.godot/imported/shape-cube-rounded.glb-7ed81931ad304c7289dff2da179086f3.scn"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bwp11hvmliitp"
-path="res://.godot/imported/column-rounded-low.obj-173894d28e58ea3fd79a0171f61c594d.mesh"
+path="res://.godot/imported/column-rounded-low.obj-8f599ea748f86a8125291222806345d5.mesh"
 
 [deps]
 
-files=["res://.godot/imported/column-rounded-low.obj-173894d28e58ea3fd79a0171f61c594d.mesh"]
+files=["res://.godot/imported/column-rounded-low.obj-8f599ea748f86a8125291222806345d5.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/column-rounded-low.obj"
-dest_files=["res://.godot/imported/column-rounded-low.obj-173894d28e58ea3fd79a0171f61c594d.mesh", "res://.godot/imported/column-rounded-low.obj-173894d28e58ea3fd79a0171f61c594d.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/column-rounded-low.obj"
+dest_files=["res://.godot/imported/column-rounded-low.obj-8f599ea748f86a8125291222806345d5.mesh", "res://.godot/imported/column-rounded-low.obj-8f599ea748f86a8125291222806345d5.mesh"]
 
 [params]
 

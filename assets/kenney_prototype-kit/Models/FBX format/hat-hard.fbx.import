@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dfkvoamhdpnyn"
-path="res://.godot/imported/hat-hard.fbx-53fe08fa7c5b285a8a93bdb5ecdadcb5.scn"
+path="res://.godot/imported/hat-hard.fbx-f1d20f17ab0e58540468cd64789a4fda.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/hat-hard.fbx"
-dest_files=["res://.godot/imported/hat-hard.fbx-53fe08fa7c5b285a8a93bdb5ecdadcb5.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/hat-hard.fbx"
+dest_files=["res://.godot/imported/hat-hard.fbx-f1d20f17ab0e58540468cd64789a4fda.scn"]
 
 [params]
 

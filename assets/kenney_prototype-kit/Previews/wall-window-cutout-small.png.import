@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://be7dbc24rn6wo"
-path="res://.godot/imported/wall-window-cutout-small.png-7fe10939887049c9d4de0ccd36749b1d.ctex"
+path="res://.godot/imported/wall-window-cutout-small.png-bf185fa59a4ab4664ba2c3c8e17df633.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/wall-window-cutout-small.png"
-dest_files=["res://.godot/imported/wall-window-cutout-small.png-7fe10939887049c9d4de0ccd36749b1d.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/wall-window-cutout-small.png"
+dest_files=["res://.godot/imported/wall-window-cutout-small.png-bf185fa59a4ab4664ba2c3c8e17df633.ctex"]
 
 [params]
 

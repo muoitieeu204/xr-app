@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bqnq73kgamrpj"
-path="res://.godot/imported/floor-thick.obj-c294d496ddf3ca379fc2e23839fa250f.mesh"
+path="res://.godot/imported/floor-thick.obj-fec2149461ec66bb97be953e9983f370.mesh"
 
 [deps]
 
-files=["res://.godot/imported/floor-thick.obj-c294d496ddf3ca379fc2e23839fa250f.mesh"]
+files=["res://.godot/imported/floor-thick.obj-fec2149461ec66bb97be953e9983f370.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/floor-thick.obj"
-dest_files=["res://.godot/imported/floor-thick.obj-c294d496ddf3ca379fc2e23839fa250f.mesh", "res://.godot/imported/floor-thick.obj-c294d496ddf3ca379fc2e23839fa250f.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/floor-thick.obj"
+dest_files=["res://.godot/imported/floor-thick.obj-fec2149461ec66bb97be953e9983f370.mesh", "res://.godot/imported/floor-thick.obj-fec2149461ec66bb97be953e9983f370.mesh"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://chy5bpaqrk4ei"
-path="res://.godot/imported/button-floor-round.glb-713dc22509fcf5fbf4cbd2fbc3199695.scn"
+path="res://.godot/imported/button-floor-round.glb-2299fefdf211328119f2d09f6c0182c6.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb"
-dest_files=["res://.godot/imported/button-floor-round.glb-713dc22509fcf5fbf4cbd2fbc3199695.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb"
+dest_files=["res://.godot/imported/button-floor-round.glb-2299fefdf211328119f2d09f6c0182c6.scn"]
 
 [params]
 

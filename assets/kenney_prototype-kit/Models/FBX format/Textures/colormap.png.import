@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3pjihbti5ca4"
-path.s3tc="res://.godot/imported/colormap.png-20c0af306afe661a26043ff27f6fe858.s3tc.ctex"
+uid="uid://ctmr035s87mhe"
+path.s3tc="res://.godot/imported/colormap.png-53726133c1ba6fb60a7911020c8fe2dd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-20c0af306afe661a26043ff27f6fe858.s3tc.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/Textures/colormap.png"
+dest_files=["res://.godot/imported/colormap.png-53726133c1ba6fb60a7911020c8fe2dd.s3tc.ctex"]
 
 [params]
 

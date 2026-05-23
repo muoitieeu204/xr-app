@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dj7s45pvqmvls"
-path="res://.godot/imported/floor-thick-corner-rounded.obj-457662bedbf40e07753a41a267f6f7e1.mesh"
+path="res://.godot/imported/floor-thick-corner-rounded.obj-92f07c04075a3916cd5e68441d3fd54a.mesh"
 
 [deps]
 
-files=["res://.godot/imported/floor-thick-corner-rounded.obj-457662bedbf40e07753a41a267f6f7e1.mesh"]
+files=["res://.godot/imported/floor-thick-corner-rounded.obj-92f07c04075a3916cd5e68441d3fd54a.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/floor-thick-corner-rounded.obj"
-dest_files=["res://.godot/imported/floor-thick-corner-rounded.obj-457662bedbf40e07753a41a267f6f7e1.mesh", "res://.godot/imported/floor-thick-corner-rounded.obj-457662bedbf40e07753a41a267f6f7e1.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/floor-thick-corner-rounded.obj"
+dest_files=["res://.godot/imported/floor-thick-corner-rounded.obj-92f07c04075a3916cd5e68441d3fd54a.mesh", "res://.godot/imported/floor-thick-corner-rounded.obj-92f07c04075a3916cd5e68441d3fd54a.mesh"]
 
 [params]
 

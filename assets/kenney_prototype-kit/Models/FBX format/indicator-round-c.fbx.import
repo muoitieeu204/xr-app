@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bxhkovoh4fqfx"
-path="res://.godot/imported/indicator-round-c.fbx-9f7b3aa17eae980a02124d2c1305d67f.scn"
+path="res://.godot/imported/indicator-round-c.fbx-44dc32e1e2c2028c60ae1aaf92fa4f78.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/indicator-round-c.fbx"
-dest_files=["res://.godot/imported/indicator-round-c.fbx-9f7b3aa17eae980a02124d2c1305d67f.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/indicator-round-c.fbx"
+dest_files=["res://.godot/imported/indicator-round-c.fbx-44dc32e1e2c2028c60ae1aaf92fa4f78.scn"]
 
 [params]
 

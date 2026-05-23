@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyv3mfylg13tf"
-path="res://.godot/imported/shape-hollow-cylinder-detailed.fbx-008a417d832ed3d104b9b8af9056c5a8.scn"
+path="res://.godot/imported/shape-hollow-cylinder-detailed.fbx-7cd5e19d9c7e9182cac528dcb9cbe038.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/shape-hollow-cylinder-detailed.fbx"
-dest_files=["res://.godot/imported/shape-hollow-cylinder-detailed.fbx-008a417d832ed3d104b9b8af9056c5a8.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/shape-hollow-cylinder-detailed.fbx"
+dest_files=["res://.godot/imported/shape-hollow-cylinder-detailed.fbx-7cd5e19d9c7e9182cac528dcb9cbe038.scn"]
 
 [params]
 

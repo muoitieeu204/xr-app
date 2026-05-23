@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dkpvgoyh2ug53"
-path="res://.godot/imported/vehicle-convertible.obj-046145b989e9e4399c276501c09d1e60.mesh"
+path="res://.godot/imported/vehicle-convertible.obj-a3af11b7960a863d3a11e6d47c6adec6.mesh"
 
 [deps]
 
-files=["res://.godot/imported/vehicle-convertible.obj-046145b989e9e4399c276501c09d1e60.mesh"]
+files=["res://.godot/imported/vehicle-convertible.obj-a3af11b7960a863d3a11e6d47c6adec6.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/vehicle-convertible.obj"
-dest_files=["res://.godot/imported/vehicle-convertible.obj-046145b989e9e4399c276501c09d1e60.mesh", "res://.godot/imported/vehicle-convertible.obj-046145b989e9e4399c276501c09d1e60.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/vehicle-convertible.obj"
+dest_files=["res://.godot/imported/vehicle-convertible.obj-a3af11b7960a863d3a11e6d47c6adec6.mesh", "res://.godot/imported/vehicle-convertible.obj-a3af11b7960a863d3a11e6d47c6adec6.mesh"]
 
 [params]
 

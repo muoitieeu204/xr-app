@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://8lsjw55hp70d"
-path="res://.godot/imported/animal-bison.fbx-b087d1fc3b3c4c58714e40ff86c97bb3.scn"
+path="res://.godot/imported/animal-bison.fbx-87793ad24e806ebb181387105f4c6d22.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/animal-bison.fbx"
-dest_files=["res://.godot/imported/animal-bison.fbx-b087d1fc3b3c4c58714e40ff86c97bb3.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/animal-bison.fbx"
+dest_files=["res://.godot/imported/animal-bison.fbx-87793ad24e806ebb181387105f4c6d22.scn"]
 
 [params]
 

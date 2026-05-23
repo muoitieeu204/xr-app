@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://wwxssoarg5y8"
-path="res://.godot/imported/indicator-doorway.fbx-4ca31aa87b100559436047363ed6a7a9.scn"
+path="res://.godot/imported/indicator-doorway.fbx-ff0a9d726661a1068b0b9a98f8b9cacc.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/indicator-doorway.fbx"
-dest_files=["res://.godot/imported/indicator-doorway.fbx-4ca31aa87b100559436047363ed6a7a9.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/indicator-doorway.fbx"
+dest_files=["res://.godot/imported/indicator-doorway.fbx-ff0a9d726661a1068b0b9a98f8b9cacc.scn"]
 
 [params]
 

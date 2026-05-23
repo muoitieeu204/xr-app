@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfpm3w7ud821l"
-path="res://.godot/imported/indicator-doorway.png-14eadd8cc30b13761054befd957cb22a.ctex"
+path="res://.godot/imported/indicator-doorway.png-e11d1bb5fb7e6eda11ae488829bb8caa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/indicator-doorway.png"
-dest_files=["res://.godot/imported/indicator-doorway.png-14eadd8cc30b13761054befd957cb22a.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/indicator-doorway.png"
+dest_files=["res://.godot/imported/indicator-doorway.png-e11d1bb5fb7e6eda11ae488829bb8caa.ctex"]
 
 [params]
 

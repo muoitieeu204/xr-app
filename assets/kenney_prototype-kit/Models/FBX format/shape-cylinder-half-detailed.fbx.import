@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://blikfbwf22jjq"
-path="res://.godot/imported/shape-cylinder-half-detailed.fbx-1a444d9b6cc1ad07a62c20256c3dc6c0.scn"
+path="res://.godot/imported/shape-cylinder-half-detailed.fbx-49a383aa8f4bf62948ea9a28bca1a03e.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/shape-cylinder-half-detailed.fbx"
-dest_files=["res://.godot/imported/shape-cylinder-half-detailed.fbx-1a444d9b6cc1ad07a62c20256c3dc6c0.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/shape-cylinder-half-detailed.fbx"
+dest_files=["res://.godot/imported/shape-cylinder-half-detailed.fbx-49a383aa8f4bf62948ea9a28bca1a03e.scn"]
 
 [params]
 

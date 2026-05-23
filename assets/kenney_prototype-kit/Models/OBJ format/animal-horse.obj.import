@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b1lf5w1lh4lug"
-path="res://.godot/imported/animal-horse.obj-db29ae75bba4c32d0085b5d7268c6cce.mesh"
+path="res://.godot/imported/animal-horse.obj-4fcc2ce4933fe3bd80fb573a308067c5.mesh"
 
 [deps]
 
-files=["res://.godot/imported/animal-horse.obj-db29ae75bba4c32d0085b5d7268c6cce.mesh"]
+files=["res://.godot/imported/animal-horse.obj-4fcc2ce4933fe3bd80fb573a308067c5.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/animal-horse.obj"
-dest_files=["res://.godot/imported/animal-horse.obj-db29ae75bba4c32d0085b5d7268c6cce.mesh", "res://.godot/imported/animal-horse.obj-db29ae75bba4c32d0085b5d7268c6cce.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/animal-horse.obj"
+dest_files=["res://.godot/imported/animal-horse.obj-4fcc2ce4933fe3bd80fb573a308067c5.mesh", "res://.godot/imported/animal-horse.obj-4fcc2ce4933fe3bd80fb573a308067c5.mesh"]
 
 [params]
 

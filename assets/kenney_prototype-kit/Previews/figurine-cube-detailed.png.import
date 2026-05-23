@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm5vs05i8bmju"
-path="res://.godot/imported/figurine-cube-detailed.png-79b639eefafc84a013c36c5ed0fc4d89.ctex"
+path="res://.godot/imported/figurine-cube-detailed.png-084c0478b1911e3df16615c5039dcf18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/figurine-cube-detailed.png"
-dest_files=["res://.godot/imported/figurine-cube-detailed.png-79b639eefafc84a013c36c5ed0fc4d89.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/figurine-cube-detailed.png"
+dest_files=["res://.godot/imported/figurine-cube-detailed.png-084c0478b1911e3df16615c5039dcf18.ctex"]
 
 [params]
 

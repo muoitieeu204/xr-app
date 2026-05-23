@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://nxmkqxgawan7"
-path="res://.godot/imported/pipe-half-section.glb-59f71c28d56b91df42ad8c7b8b0cb4d3.scn"
+path="res://.godot/imported/pipe-half-section.glb-e19fabbd74dad4a88c5d06a9cc4384f8.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/pipe-half-section.glb"
-dest_files=["res://.godot/imported/pipe-half-section.glb-59f71c28d56b91df42ad8c7b8b0cb4d3.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/pipe-half-section.glb"
+dest_files=["res://.godot/imported/pipe-half-section.glb-e19fabbd74dad4a88c5d06a9cc4384f8.scn"]
 
 [params]
 

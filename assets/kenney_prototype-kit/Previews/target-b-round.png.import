@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbiawfosl5dco"
-path="res://.godot/imported/target-b-round.png-0d79eef1d95574a797701fd545005127.ctex"
+path="res://.godot/imported/target-b-round.png-b3f42ca111a82e0082189587d76bce74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/target-b-round.png"
-dest_files=["res://.godot/imported/target-b-round.png-0d79eef1d95574a797701fd545005127.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/target-b-round.png"
+dest_files=["res://.godot/imported/target-b-round.png-b3f42ca111a82e0082189587d76bce74.ctex"]
 
 [params]
 

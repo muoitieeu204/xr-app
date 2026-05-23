@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://c13x64m7sgmer"
-path="res://.godot/imported/stairs-diagonal-narrow.obj-bace4c73f0c39e5cd0c7a8cde7a8c21e.mesh"
+path="res://.godot/imported/stairs-diagonal-narrow.obj-c5d013c5ad2f86ee9005fd092e5ad3c5.mesh"
 
 [deps]
 
-files=["res://.godot/imported/stairs-diagonal-narrow.obj-bace4c73f0c39e5cd0c7a8cde7a8c21e.mesh"]
+files=["res://.godot/imported/stairs-diagonal-narrow.obj-c5d013c5ad2f86ee9005fd092e5ad3c5.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/stairs-diagonal-narrow.obj"
-dest_files=["res://.godot/imported/stairs-diagonal-narrow.obj-bace4c73f0c39e5cd0c7a8cde7a8c21e.mesh", "res://.godot/imported/stairs-diagonal-narrow.obj-bace4c73f0c39e5cd0c7a8cde7a8c21e.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/stairs-diagonal-narrow.obj"
+dest_files=["res://.godot/imported/stairs-diagonal-narrow.obj-c5d013c5ad2f86ee9005fd092e5ad3c5.mesh", "res://.godot/imported/stairs-diagonal-narrow.obj-c5d013c5ad2f86ee9005fd092e5ad3c5.mesh"]
 
 [params]
 

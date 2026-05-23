@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbk02cyrao0jn"
-path="res://.godot/imported/stairs-narrow.png-b92262a92d08c0b0b3e4e9a91d519e22.ctex"
+path="res://.godot/imported/stairs-narrow.png-52a3ba9de946530c5163a355862243b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/stairs-narrow.png"
-dest_files=["res://.godot/imported/stairs-narrow.png-b92262a92d08c0b0b3e4e9a91d519e22.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/stairs-narrow.png"
+dest_files=["res://.godot/imported/stairs-narrow.png-52a3ba9de946530c5163a355862243b2.ctex"]
 
 [params]
 

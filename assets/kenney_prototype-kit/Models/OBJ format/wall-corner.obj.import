@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bscmni1bemfte"
-path="res://.godot/imported/wall-corner.obj-89cbaed217ee28ff9b85309452c26bee.mesh"
+path="res://.godot/imported/wall-corner.obj-12aee83c5882dcc2a218981900f4aed6.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wall-corner.obj-89cbaed217ee28ff9b85309452c26bee.mesh"]
+files=["res://.godot/imported/wall-corner.obj-12aee83c5882dcc2a218981900f4aed6.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/wall-corner.obj"
-dest_files=["res://.godot/imported/wall-corner.obj-89cbaed217ee28ff9b85309452c26bee.mesh", "res://.godot/imported/wall-corner.obj-89cbaed217ee28ff9b85309452c26bee.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/wall-corner.obj"
+dest_files=["res://.godot/imported/wall-corner.obj-12aee83c5882dcc2a218981900f4aed6.mesh", "res://.godot/imported/wall-corner.obj-12aee83c5882dcc2a218981900f4aed6.mesh"]
 
 [params]
 

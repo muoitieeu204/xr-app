@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://xodnv0iw7ogx"
-path="res://.godot/imported/indicator-doorway.obj-5e2e5485e8a98ca8aba873ae74115a51.mesh"
+path="res://.godot/imported/indicator-doorway.obj-07f6c67094077c52ca7e79fbbcd9bcd8.mesh"
 
 [deps]
 
-files=["res://.godot/imported/indicator-doorway.obj-5e2e5485e8a98ca8aba873ae74115a51.mesh"]
+files=["res://.godot/imported/indicator-doorway.obj-07f6c67094077c52ca7e79fbbcd9bcd8.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/indicator-doorway.obj"
-dest_files=["res://.godot/imported/indicator-doorway.obj-5e2e5485e8a98ca8aba873ae74115a51.mesh", "res://.godot/imported/indicator-doorway.obj-5e2e5485e8a98ca8aba873ae74115a51.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/indicator-doorway.obj"
+dest_files=["res://.godot/imported/indicator-doorway.obj-07f6c67094077c52ca7e79fbbcd9bcd8.mesh", "res://.godot/imported/indicator-doorway.obj-07f6c67094077c52ca7e79fbbcd9bcd8.mesh"]
 
 [params]
 

@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://d4mfqr0jbqp0j"
-path="res://.godot/imported/shape-triangular-prism-low.obj-b95663ca6a5432bca404de0b18395a1c.mesh"
+path="res://.godot/imported/shape-triangular-prism-low.obj-73a244ec9a6dd36b05772bbe8e1f9459.mesh"
 
 [deps]
 
-files=["res://.godot/imported/shape-triangular-prism-low.obj-b95663ca6a5432bca404de0b18395a1c.mesh"]
+files=["res://.godot/imported/shape-triangular-prism-low.obj-73a244ec9a6dd36b05772bbe8e1f9459.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/shape-triangular-prism-low.obj"
-dest_files=["res://.godot/imported/shape-triangular-prism-low.obj-b95663ca6a5432bca404de0b18395a1c.mesh", "res://.godot/imported/shape-triangular-prism-low.obj-b95663ca6a5432bca404de0b18395a1c.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/shape-triangular-prism-low.obj"
+dest_files=["res://.godot/imported/shape-triangular-prism-low.obj-73a244ec9a6dd36b05772bbe8e1f9459.mesh", "res://.godot/imported/shape-triangular-prism-low.obj-73a244ec9a6dd36b05772bbe8e1f9459.mesh"]
 
 [params]
 

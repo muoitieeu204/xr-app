@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhbr2aauoykdf"
-path="res://.godot/imported/pipe-split.png-d438f31971c567b523bc241fd755b020.ctex"
+path="res://.godot/imported/pipe-split.png-c400ab2311654aebe164ee1c68a01408.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/pipe-split.png"
-dest_files=["res://.godot/imported/pipe-split.png-d438f31971c567b523bc241fd755b020.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/pipe-split.png"
+dest_files=["res://.godot/imported/pipe-split.png-c400ab2311654aebe164ee1c68a01408.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://yl8dmivmmkb8"
-path="res://.godot/imported/number-6.fbx-c7a86022501defeb48e31eb2b4603823.scn"
+path="res://.godot/imported/number-6.fbx-a6e3baa67905f620b3b0cc063e2a7924.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/number-6.fbx"
-dest_files=["res://.godot/imported/number-6.fbx-c7a86022501defeb48e31eb2b4603823.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/number-6.fbx"
+dest_files=["res://.godot/imported/number-6.fbx-a6e3baa67905f620b3b0cc063e2a7924.scn"]
 
 [params]
 

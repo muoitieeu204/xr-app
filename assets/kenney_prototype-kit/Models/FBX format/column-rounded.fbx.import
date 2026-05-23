@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bmyvkey7lin86"
-path="res://.godot/imported/column-rounded.fbx-15cc43dc7a01603b2c3308ae5dd38324.scn"
+path="res://.godot/imported/column-rounded.fbx-1994b468ec1838be1261ccae8b52f2f7.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/column-rounded.fbx"
-dest_files=["res://.godot/imported/column-rounded.fbx-15cc43dc7a01603b2c3308ae5dd38324.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/column-rounded.fbx"
+dest_files=["res://.godot/imported/column-rounded.fbx-1994b468ec1838be1261ccae8b52f2f7.scn"]
 
 [params]
 

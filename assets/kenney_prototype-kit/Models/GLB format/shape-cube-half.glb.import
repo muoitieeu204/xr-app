@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://pgerdprm2l2h"
-path="res://.godot/imported/shape-cube-half.glb-5d27e1cc2c5350956188a1b0eafb1e7d.scn"
+path="res://.godot/imported/shape-cube-half.glb-234184fc06fe7ef4ab65f82522b2c24a.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/shape-cube-half.glb"
-dest_files=["res://.godot/imported/shape-cube-half.glb-5d27e1cc2c5350956188a1b0eafb1e7d.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/shape-cube-half.glb"
+dest_files=["res://.godot/imported/shape-cube-half.glb-234184fc06fe7ef4ab65f82522b2c24a.scn"]
 
 [params]
 

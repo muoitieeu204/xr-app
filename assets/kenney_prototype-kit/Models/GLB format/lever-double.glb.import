@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ds4d45gvg0v38"
-path="res://.godot/imported/lever-double.glb-6242955e51410208c8100e2059ce7b3e.scn"
+path="res://.godot/imported/lever-double.glb-d6667fe962c3095cf5586accc3ad1dd0.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/lever-double.glb"
-dest_files=["res://.godot/imported/lever-double.glb-6242955e51410208c8100e2059ce7b3e.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/lever-double.glb"
+dest_files=["res://.godot/imported/lever-double.glb-d6667fe962c3095cf5586accc3ad1dd0.scn"]
 
 [params]
 

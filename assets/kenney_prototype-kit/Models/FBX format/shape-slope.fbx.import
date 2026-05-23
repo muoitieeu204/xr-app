@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://loa6wmiv1p81"
-path="res://.godot/imported/shape-slope.fbx-eb5a80d302480bfd97bb50d8e5825ab4.scn"
+path="res://.godot/imported/shape-slope.fbx-05e307c33774fde69129c11cc5399de0.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/shape-slope.fbx"
-dest_files=["res://.godot/imported/shape-slope.fbx-eb5a80d302480bfd97bb50d8e5825ab4.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/shape-slope.fbx"
+dest_files=["res://.godot/imported/shape-slope.fbx-05e307c33774fde69129c11cc5399de0.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://duuoxkpvgf71k"
-path="res://.godot/imported/shape-cylinder.fbx-5f1c1a4b525472ffd925b5353fb5d060.scn"
+path="res://.godot/imported/shape-cylinder.fbx-1731d310b5defeb539e9b695a3374e5b.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/shape-cylinder.fbx"
-dest_files=["res://.godot/imported/shape-cylinder.fbx-5f1c1a4b525472ffd925b5353fb5d060.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/shape-cylinder.fbx"
+dest_files=["res://.godot/imported/shape-cylinder.fbx-1731d310b5defeb539e9b695a3374e5b.scn"]
 
 [params]
 

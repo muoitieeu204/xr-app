@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cyhp1vmakxmcm"
-path="res://.godot/imported/number-double-6.glb-7154224afab53eb21511db41b0491332.scn"
+path="res://.godot/imported/number-double-6.glb-e33e53ba7a11257f9ec143ad9ed140a2.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/GLB format/number-double-6.glb"
-dest_files=["res://.godot/imported/number-double-6.glb-7154224afab53eb21511db41b0491332.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/GLB format/number-double-6.glb"
+dest_files=["res://.godot/imported/number-double-6.glb-e33e53ba7a11257f9ec143ad9ed140a2.scn"]
 
 [params]
 

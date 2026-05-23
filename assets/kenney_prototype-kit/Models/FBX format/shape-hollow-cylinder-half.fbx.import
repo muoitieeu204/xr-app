@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbn46rdf04mln"
-path="res://.godot/imported/shape-hollow-cylinder-half.fbx-165760dbd7ebe8c05b3b5d910c0f625b.scn"
+path="res://.godot/imported/shape-hollow-cylinder-half.fbx-d923ed9db328e3e4f762127ad1acea81.scn"
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Models/FBX format/shape-hollow-cylinder-half.fbx"
-dest_files=["res://.godot/imported/shape-hollow-cylinder-half.fbx-165760dbd7ebe8c05b3b5d910c0f625b.scn"]
+source_file="res://Assets/kenney_prototype-kit/Models/FBX format/shape-hollow-cylinder-half.fbx"
+dest_files=["res://.godot/imported/shape-hollow-cylinder-half.fbx-d923ed9db328e3e4f762127ad1acea81.scn"]
 
 [params]
 

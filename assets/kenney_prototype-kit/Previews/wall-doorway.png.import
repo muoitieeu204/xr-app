@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bixrdkfnpvy03"
-path="res://.godot/imported/wall-doorway.png-a86d4956485c59b64303990279e1fa87.ctex"
+path="res://.godot/imported/wall-doorway.png-15ea82a5468ce401a476c0cb1f7db44d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/wall-doorway.png"
-dest_files=["res://.godot/imported/wall-doorway.png-a86d4956485c59b64303990279e1fa87.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/wall-doorway.png"
+dest_files=["res://.godot/imported/wall-doorway.png-15ea82a5468ce401a476c0cb1f7db44d.ctex"]
 
 [params]
 

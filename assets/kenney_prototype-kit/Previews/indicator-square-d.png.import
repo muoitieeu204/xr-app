@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ooniiary5ksn"
-path="res://.godot/imported/indicator-square-d.png-464897c566576cc66a26f48e39eee2e8.ctex"
+path="res://.godot/imported/indicator-square-d.png-a101087ca36d1b2ed3833b56b4afca77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/indicator-square-d.png"
-dest_files=["res://.godot/imported/indicator-square-d.png-464897c566576cc66a26f48e39eee2e8.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/indicator-square-d.png"
+dest_files=["res://.godot/imported/indicator-square-d.png-a101087ca36d1b2ed3833b56b4afca77.ctex"]
 
 [params]
 

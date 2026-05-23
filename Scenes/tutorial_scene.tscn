@@ -1,16 +1,22 @@
-[gd_scene load_steps=42 format=3 uid="uid://ds2jh0eifemm"]
+[gd_scene load_steps=50 format=3 uid="uid://ds2jh0eifemm"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_oaf0i"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2_0bg83"]
 [ext_resource type="PackedScene" uid="uid://74sco75cmpj2" path="res://GodotSpeechRecognition/speech_recognizer_demo.tscn" id="3_msh8m"]
 [ext_resource type="Script" uid="uid://bj17quj8beehy" path="res://scripts/VoiceCommandHandler.cs" id="4_kcl8b"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Scenes/xr_origin_3d.tscn" id="5_oaf0i"]
-[ext_resource type="PackedScene" uid="uid://b2dnnn88rv0bs" path="res://assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb" id="6_qc1uj"]
-[ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="7_2moqc"]
+[ext_resource type="PackedScene" uid="uid://b2dnnn88rv0bs" path="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb" id="6_qc1uj"]
+[ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="7_2moqc"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="7_7f8g8"]
-[ext_resource type="PackedScene" uid="uid://chy5bpaqrk4ei" path="res://assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb" id="8_2moqc"]
+[ext_resource type="PackedScene" uid="uid://chy5bpaqrk4ei" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb" id="8_2moqc"]
 [ext_resource type="Script" uid="uid://mi8g8chk1gbt" path="res://first-person-movement-/replayer.gd" id="9_7f8g8"]
+[ext_resource type="PackedScene" uid="uid://y57awkqbs4jp" path="res://Prefabs/interactable-table.tscn" id="9_of731"]
 [ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Scenes/DummyScene.tscn" id="10_2moqc"]
+[ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/cat-animal-cube.tscn" id="13_m7jwp"]
+[ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/caterpillar-animal-cube.tscn" id="16_66e2s"]
+[ext_resource type="PackedScene" uid="uid://cawp6ndtryner" path="res://Prefabs/chicken-animal-cube.tscn" id="17_tqcl1"]
+[ext_resource type="PackedScene" uid="uid://dusdb37cvd7sk" path="res://Prefabs/cow-animal-cube.tscn" id="18_e7hfx"]
+[ext_resource type="PackedScene" uid="uid://qlbb2bkdgmcg" path="res://Prefabs/dog-animal-cube.tscn" id="19_1jtxp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of4it"]
 
@@ -34,13 +40,16 @@ size = Vector3(25, 10, 0.1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0bg83"]
 size = Vector3(25, 10, 0.1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0bg83"]
+[sub_resource type="BoxMesh" id="BoxMesh_hqtx2"]
 size = Vector3(33, 10, 0.285)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_msh8m"]
-size = Vector3(2, 2.52, 0.285)
+[sub_resource type="BoxShape3D" id="BoxShape3D_of731"]
+size = Vector3(33.06299, 10.018492, 0.285)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qc1uj"]
+size = Vector3(2, 2.52, 0.285)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_msh8m"]
 size = Vector3(2, 2.52, 0.285)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mw53g"]
@@ -48,15 +57,6 @@ size = Vector3(17.345, 10, 0.285)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oaf0i"]
 size = Vector3(17.345, 10, 0.285)
-
-[sub_resource type="BoxMesh" id="BoxMesh_7u0dx"]
-size = Vector3(1, 1, 0.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qc1uj"]
-albedo_color = Color(0, 0.98361856, 0.009731268, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7f8g8"]
-size = Vector3(1, 1, 0.5)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7f8g8"]
 data = PackedVector3Array(-0.14999999, 2.3999999, 0, -0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 0, 2.1, 0.14999999, 0, 0, 0.14999999, 0, 0, -0.14999999, 0, 0, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 0, -0.225, 1.275, 1.65, 0.225, 1.275, 1.65, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.9499999, 0.225, 0.525, 1.9499999, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, -0.225, 0.525, 1.65, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.9499999, -0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.14999999, 0, 2.1, -0.14999999, 0, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, -0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 0.75, 1.875, -0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 1.05, 1.875, -0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.875, -0.375, 1.05, 1.875, -0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 1.05, 1.875, -0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.875, 0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, -0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 1.05, 1.7249999, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.7249999, 0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.375, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 1.05, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.525, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.525, 1.05, 1.875, 0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.875, 0.525, 1.05, 1.875, 0.375, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 0.75, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, -0.375, 1.05, 1.875, -0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 1.05, 1.875, -0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 1.05, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.375, 1.05, 1.875, -0.375, 0.75, 1.875, -0.525, 0.75, 1.875, -0.375, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 1.05, 1.875, 0.525, 0.75, 1.875, 0.375, 0.75, 1.875, -0.525, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.525, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, 0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.7249999, -0.375, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, 0.375, 0.75, 1.875, 0.375, 0.75, 1.875, -0.375, 0.75, 1.875, -0.375, 0.75, 1.7249999, 0.375, 0.59999996, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.875)
@@ -67,36 +67,17 @@ points = PackedVector3Array(-0.5440476, 0.6668455, 1.6950104, 0.17973578, 2.4190
 [sub_resource type="BoxShape3D" id="BoxShape3D_kcl8b"]
 size = Vector3(0.2, 0.5, 0.5)
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kcl8b"]
-animation = &"Grip"
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66e2s"]
+albedo_color = Color(1, 0.40392157, 0.9647059, 1)
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_haxi5"]
-animation = &"Grip"
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tqcl1"]
+albedo_color = Color(0.99607843, 0.5529412, 0.47058824, 1)
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_m7jwp"]
-filter_enabled = true
-filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7hfx"]
+albedo_color = Color(0.17142254, 0.7780324, 0.69851786, 1)
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cmr4g"]
-animation = &"Grip 5"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_c2gyy"]
-filter_enabled = true
-filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_5x4xl"]
-graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_kcl8b")
-nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_haxi5")
-nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_m7jwp")
-nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_cmr4g")
-nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_c2gyy")
-nodes/Trigger/position = Vector2(-360, 20)
-node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jtxp"]
+albedo_color = Color(0.8284124, 0.5713773, 0.22481188, 1)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hqtx2"]
 animation = &"Grip"
@@ -106,26 +87,57 @@ animation = &"Grip"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_66e2s"]
 filter_enabled = true
-filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
+filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tqcl1"]
 animation = &"Grip 5"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_e7hfx"]
 filter_enabled = true
-filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
+filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1jtxp"]
-graph_offset = Vector2(-552.664, 107.301)
+graph_offset = Vector2(-536, 11)
 nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_hqtx2")
 nodes/ClosedHand1/position = Vector2(-600, 300)
 nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_of731")
 nodes/ClosedHand2/position = Vector2(-360, 300)
 nodes/Grip/node = SubResource("AnimationNodeBlend2_66e2s")
-nodes/Grip/position = Vector2(0, 40)
+nodes/Grip/position = Vector2(0, 20)
 nodes/OpenHand/node = SubResource("AnimationNodeAnimation_tqcl1")
 nodes/OpenHand/position = Vector2(-600, 100)
 nodes/Trigger/node = SubResource("AnimationNodeBlend2_e7hfx")
+nodes/Trigger/position = Vector2(-360, 20)
+node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tw6i0"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dyx75"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_hnqnc"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yl3ch"]
+animation = &"Grip 5"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_h23hh"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_r7o0a"]
+graph_offset = Vector2(-552.664, 107.301)
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_tw6i0")
+nodes/ClosedHand1/position = Vector2(-600, 300)
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_dyx75")
+nodes/ClosedHand2/position = Vector2(-360, 300)
+nodes/Grip/node = SubResource("AnimationNodeBlend2_hnqnc")
+nodes/Grip/position = Vector2(0, 40)
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_yl3ch")
+nodes/OpenHand/position = Vector2(-600, 100)
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_h23hh")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
@@ -192,14 +204,15 @@ skeleton = NodePath("../../..")
 shape = SubResource("BoxShape3D_0bg83")
 
 [node name="inner_wall" type="MeshInstance3D" parent="Environment/Wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.998, -0.033, -6.85)
-mesh = SubResource("BoxMesh_0bg83")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.047185, 0.11783671, -6.910688)
+mesh = SubResource("BoxMesh_hqtx2")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/inner_wall"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall/StaticBody3D"]
-shape = SubResource("BoxShape3D_msh8m")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05102539, -0.0009449646, 0)
+shape = SubResource("BoxShape3D_of731")
 
 [node name="inner_wall4" type="MeshInstance3D" parent="Environment/Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.374881, 3.7095385, -6.8481727)
@@ -222,7 +235,7 @@ skeleton = NodePath("../../..")
 shape = SubResource("BoxShape3D_msh8m")
 
 [node name="inner_wall2" type="MeshInstance3D" parent="Environment/Wall"]
-transform = Transform3D(-0.0010821063, 0, 0.9999994, 0, 1, 0, -0.9999994, 0, -0.0010821063, -1.4202524, -0.032567024, 1.8749392)
+transform = Transform3D(-0.0010821063, 0, 0.9999994, 0, 1, 0, -0.9999994, 0, -0.0010821063, -1.4202524, -0.032567024, 1.7854207)
 mesh = SubResource("BoxMesh_mw53g")
 skeleton = NodePath("../../..")
 
@@ -230,17 +243,6 @@ skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall2/StaticBody3D"]
 shape = SubResource("BoxShape3D_oaf0i")
-
-[node name="inner_wall3" type="MeshInstance3D" parent="Environment/Wall"]
-transform = Transform3D(-0.0106812315, 0, 0.99994296, 0, 1, 0, -0.99994296, 0, -0.0106812315, 11.505857, 0.57299477, 10.790783)
-mesh = SubResource("BoxMesh_7u0dx")
-skeleton = NodePath("../../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_qc1uj")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/inner_wall3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall/inner_wall3/StaticBody3D"]
-shape = SubResource("BoxShape3D_7f8g8")
 
 [node name="Doors" type="Node3D" parent="Environment"]
 
@@ -295,7 +297,7 @@ transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 
 shape = SubResource("BoxShape3D_kcl8b")
 
 [node name="Screen" parent="Environment" instance=ExtResource("2_0bg83")]
-transform = Transform3D(-1.3113416e-10, 0, -0.003, 0, 0.003, 0, 0.003, 0, -1.3113416e-10, -1.6260853, 1.4013016, 8.172296)
+transform = Transform3D(-1.3113416e-10, 0, -0.003, 0, 0.003, 0, 0.003, 0, -1.3113416e-10, -1.6260853, 1.4013016, 7.6602144)
 screen_size = Vector2(640, 360)
 scene = ExtResource("3_msh8m")
 viewport_size = Vector2(640, 360)
@@ -303,21 +305,71 @@ transparent = 0
 scene_properties_keys = PackedStringArray("SpeechUIManager")
 
 [node name="Screen2" parent="Environment" instance=ExtResource("2_0bg83")]
-transform = Transform3D(-1.3113416e-10, 0, 0.003, 0, 0.003, 0, -0.003, 0, -1.3113416e-10, -1.2514865, 1.4013016, 8.172296)
+transform = Transform3D(-1.3113416e-10, 0, 0.003, 0, 0.003, 0, -0.003, 0, -1.3113416e-10, -1.2514865, 1.4013016, 7.6602144)
 screen_size = Vector2(640, 360)
 scene = ExtResource("3_msh8m")
 viewport_size = Vector2(640, 360)
 transparent = 0
 scene_properties_keys = PackedStringArray("SpeechUIManager")
 
+[node name="Tables" type="Node3D" parent="Environment"]
+transform = Transform3D(0.8283096, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08562136, 0)
+
+[node name="Table" parent="Environment/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_of731")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.497051, 0.5413646, 9.501607)
+spawn_obj = ExtResource("13_m7jwp")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Tables/Table" index="0"]
+skeleton = NodePath("../../../../..")
+
+[node name="Main3" parent="Environment/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_of731")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.497051, 0.5665198, 6.040852)
+spawn_obj = ExtResource("16_66e2s")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Tables/Main3" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_66e2s")
+
+[node name="Main4" parent="Environment/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_of731")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.497051, 0.5665198, 3.0272965)
+spawn_obj = ExtResource("17_tqcl1")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Tables/Main4" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_tqcl1")
+
+[node name="Main5" parent="Environment/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_of731")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.497051, 0.5665198, 0.040796757)
+spawn_obj = ExtResource("18_e7hfx")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Tables/Main5" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_e7hfx")
+
+[node name="Main6" parent="Environment/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_of731")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.497051, 0.5665198, -2.9743106)
+spawn_obj = ExtResource("19_1jtxp")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Tables/Main6" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1jtxp")
+
 [node name="PlayerXR" parent="." instance=ExtResource("5_oaf0i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6181397, 0.4855733, 6.2256565)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7956872, 0.4855733, 6.2256565)
+
+[node name="XRCamera3D" parent="PlayerXR" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0041422844, 0, 0)
 
 [node name="AnimationTree" parent="PlayerXR/LeftController/LeftHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_5x4xl")
+tree_root = SubResource("AnimationNodeBlendTree_1jtxp")
 
 [node name="AnimationTree" parent="PlayerXR/RightController/RightHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_1jtxp")
+tree_root = SubResource("AnimationNodeBlendTree_r7o0a")
 
 [node name="Replayer" type="Node" parent="PlayerXR" node_paths=PackedStringArray("recorded_objects")]
 script = ExtResource("9_7f8g8")
@@ -335,6 +387,16 @@ wait_time = 0.1
 [editable path="Environment/Doors/door-sliding3"]
 [editable path="Environment/Buttons/InteractableAreaButton/button-floor-round2"]
 [editable path="Environment/Buttons/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Table"]
+[editable path="Environment/Tables/Table/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main3"]
+[editable path="Environment/Tables/Main3/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main4"]
+[editable path="Environment/Tables/Main4/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main5"]
+[editable path="Environment/Tables/Main5/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main6"]
+[editable path="Environment/Tables/Main6/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
 [editable path="PlayerXR"]
 [editable path="PlayerXR/LeftController/LeftHand"]
 [editable path="PlayerXR/LeftController/LeftHand/Hand_low_L"]

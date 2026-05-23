@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7ep41neo1du2"
-path="res://.godot/imported/door-sliding-double.png-0f6f7aef3727f32e72c331dde92a92d5.ctex"
+path="res://.godot/imported/door-sliding-double.png-e3e671cb94d71edd1ca577d2c2ce6c00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/door-sliding-double.png"
-dest_files=["res://.godot/imported/door-sliding-double.png-0f6f7aef3727f32e72c331dde92a92d5.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/door-sliding-double.png"
+dest_files=["res://.godot/imported/door-sliding-double.png-e3e671cb94d71edd1ca577d2c2ce6c00.ctex"]
 
 [params]
 

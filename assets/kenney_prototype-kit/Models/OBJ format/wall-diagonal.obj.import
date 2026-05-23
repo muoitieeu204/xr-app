@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://vxyn71ud8n1w"
-path="res://.godot/imported/wall-diagonal.obj-26f422710356b68d151e9b44cefd6a2b.mesh"
+path="res://.godot/imported/wall-diagonal.obj-aadabf336271508520c856dbb403c299.mesh"
 
 [deps]
 
-files=["res://.godot/imported/wall-diagonal.obj-26f422710356b68d151e9b44cefd6a2b.mesh"]
+files=["res://.godot/imported/wall-diagonal.obj-aadabf336271508520c856dbb403c299.mesh"]
 
-source_file="res://assets/kenney_prototype-kit/Models/OBJ format/wall-diagonal.obj"
-dest_files=["res://.godot/imported/wall-diagonal.obj-26f422710356b68d151e9b44cefd6a2b.mesh", "res://.godot/imported/wall-diagonal.obj-26f422710356b68d151e9b44cefd6a2b.mesh"]
+source_file="res://Assets/kenney_prototype-kit/Models/OBJ format/wall-diagonal.obj"
+dest_files=["res://.godot/imported/wall-diagonal.obj-aadabf336271508520c856dbb403c299.mesh", "res://.godot/imported/wall-diagonal.obj-aadabf336271508520c856dbb403c299.mesh"]
 
 [params]
 

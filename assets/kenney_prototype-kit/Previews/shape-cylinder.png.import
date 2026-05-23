@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8mg8b82v8pkl"
-path="res://.godot/imported/shape-cylinder.png-b1ed962145d0c76495a657a5491b2ad0.ctex"
+path="res://.godot/imported/shape-cylinder.png-8982d94da24c4f1efa2654f5ce9b2fda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kenney_prototype-kit/Previews/shape-cylinder.png"
-dest_files=["res://.godot/imported/shape-cylinder.png-b1ed962145d0c76495a657a5491b2ad0.ctex"]
+source_file="res://Assets/kenney_prototype-kit/Previews/shape-cylinder.png"
+dest_files=["res://.godot/imported/shape-cylinder.png-8982d94da24c4f1efa2654f5ce9b2fda.ctex"]
 
 [params]
 
