@@ -18,10 +18,14 @@ albedo_color = Color(0.8989168, 0.10775343, 0.17416146, 1)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 mesh = SubResource("SphereMesh_e6ykt")
 
-[node name="LeftController" type="MeshInstance3D" parent="XRCamera3D"]
+[node name="LeftController" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, -0.33386073, 0, 0)
 mesh = SubResource("BoxMesh_e6ykt")
+skeleton = NodePath("../XRCamera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_fmciy")
 
-[node name="RightController" type="MeshInstance3D" parent="XRCamera3D"]
+[node name="RightController" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, 0.31117445, 0, 0)
 mesh = SubResource("BoxMesh_8ipmv")
+skeleton = NodePath("../XRCamera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_rmohg")

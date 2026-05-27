@@ -1,5 +1,5 @@
 extends Node
-
+class_name  ReplayController
 @export var recorded_objects : Array[Node3D]
 @export var dummy_scene : PackedScene # Drag your saved Dummy scene here in the Inspector
 @onready var delay: Timer = $Delay
@@ -20,8 +20,6 @@ func start_recording_session() -> void:
 	if is_playing:
 		print("Cannot record while a replay is playing!")
 		return
-	
-	print("--- RECORDING STARTED ---")
 	recording = true
 	frames = 0
 	recording_data = {} # Wipes the previous run out of RAM
@@ -55,8 +53,6 @@ func _on_delay_timeout() -> void:
 func stop_and_save_session() -> void:
 	if not recording:
 		return
-		
-	print("--- RECORDING STOPPED ---")
 	recording = false
 	delay.stop()
 	
