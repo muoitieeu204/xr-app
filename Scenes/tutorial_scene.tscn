@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://ds2jh0eifemm"]
+[gd_scene load_steps=52 format=3 uid="uid://ds2jh0eifemm"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_oaf0i"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2_0bg83"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/caterpillar-animal-cube.tscn" id="16_66e2s"]
 [ext_resource type="PackedScene" uid="uid://cawp6ndtryner" path="res://Prefabs/chicken-animal-cube.tscn" id="17_tqcl1"]
 [ext_resource type="PackedScene" uid="uid://dusdb37cvd7sk" path="res://Prefabs/cow-animal-cube.tscn" id="18_e7hfx"]
+[ext_resource type="Script" uid="uid://cki1do8tx7xj" path="res://Scenes/mic_controller.gd" id="18_of731"]
 [ext_resource type="PackedScene" uid="uid://qlbb2bkdgmcg" path="res://Prefabs/dog-animal-cube.tscn" id="19_1jtxp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_of4it"]
@@ -140,6 +141,8 @@ nodes/OpenHand/position = Vector2(-600, 100)
 nodes/Trigger/node = SubResource("AnimationNodeBlend2_h23hh")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_of731"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_oaf0i")
@@ -373,15 +376,24 @@ tree_root = SubResource("AnimationNodeBlendTree_r7o0a")
 
 [node name="Replayer" type="Node" parent="PlayerXR" node_paths=PackedStringArray("recorded_objects")]
 script = ExtResource("9_7f8g8")
-recorded_objects = [NodePath(".."), NodePath("../XRCamera3D"), NodePath("../LeftController"), NodePath("../RightController")]
+recorded_objects = [NodePath("../XRCamera3D"), NodePath("../LeftController"), NodePath("../RightController")]
 dummy_scene = ExtResource("10_2moqc")
 
 [node name="Delay" type="Timer" parent="PlayerXR/Replayer"]
 process_callback = 0
 wait_time = 0.1
 
+[node name="MicController" type="Node" parent="PlayerXR"]
+script = ExtResource("18_of731")
+
+[node name="PlayerInputMic" type="AudioStreamPlayer" parent="PlayerXR/MicController"]
+stream = SubResource("AudioStreamMicrophone_of731")
+autoplay = true
+bus = &"Record"
+
 [connection signal="button_pressed" from="Environment/Buttons/InteractableAreaButton" to="Environment/Doors/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/Buttons/InteractableAreaButton2" to="Environment/Doors/door-sliding2" method="_on_interactable_area_button_button_pressed"]
+[connection signal="timeout" from="PlayerXR/Replayer/Delay" to="PlayerXR/Replayer" method="_on_delay_timeout"]
 
 [editable path="Environment/Doors/door-sliding2"]
 [editable path="Environment/Doors/door-sliding3"]

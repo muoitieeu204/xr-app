@@ -1,5 +1,6 @@
 extends Node3D
-@onready var replayer: Node = $PlayerXR/Replayer
+@onready var replayer: ReplayController = $PlayerXR/Replayer
+@onready var mic_controller: MicController = $PlayerXR/MicController
 
 
 var xr_interface : XRInterface
@@ -16,15 +17,15 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("record"):
-		print("Start recording")
-		replayer.recording = true
-		replayer.record()
+		print("Start recording telementry and audio ")
+		replayer.start_recording_session()
+		mic_controller.start_record()
 	
 	if event.is_action_pressed("stop"):
-		print("Stop recording")
-		replayer.recording = false
-		replayer.record()
+		print("Stop recording telementry and audio")
+		replayer.stop_and_save_session()
+		replayer.stop_and_save_session()
 		
 	if event.is_action_pressed("play"):
 		print("Playing back animation...")
-		replayer.play()
+		replayer.load_and_play_session()
