@@ -11,9 +11,6 @@ var frame_duration: float = 0.1
 var max_duration: float = 0.0
 var active_dummy: Node3D = null
 
-const replay_save_path : String = "user://temp_replay.json"
-const audio_save_path : String = "user://player_audio.wav"
-
 func _ready() -> void:
 	load_spectator_data()
 
@@ -44,8 +41,8 @@ func _process(delta: float) -> void:
 
 func load_spectator_data() -> void:
 	# --- LOAD JSON ---
-	if FileAccess.file_exists(replay_save_path):
-		var file = FileAccess.open(replay_save_path, FileAccess.READ)
+	if FileAccess.file_exists(SessionData.target_replay_path):
+		var file = FileAccess.open(SessionData.target_replay_path, FileAccess.READ)
 		var parsed = JSON.parse_string(file.get_as_text())
 		file.close()
 		
@@ -63,8 +60,8 @@ func load_spectator_data() -> void:
 			add_child(active_dummy)
 			
 	# --- LOAD WAV (With 44-byte Bypass) ---
-	if FileAccess.file_exists(audio_save_path):
-		var file = FileAccess.open(audio_save_path, FileAccess.READ)
+	if FileAccess.file_exists(SessionData.target_audio_path):
+		var file = FileAccess.open(SessionData.target_audio_path, FileAccess.READ)
 		var bytes = file.get_buffer(file.get_length())
 		file.close()
 		
