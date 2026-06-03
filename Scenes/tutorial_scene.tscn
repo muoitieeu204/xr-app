@@ -99,8 +99,9 @@ dummy_scene = ExtResource("10_2moqc")
 process_callback = 0
 wait_time = 0.1
 
-[node name="MicController" type="Node" parent="PlayerXR/ReplayManager"]
+[node name="MicController" type="Node" parent="PlayerXR/ReplayManager" node_paths=PackedStringArray("replayController")]
 script = ExtResource("18_of731")
+replayController = NodePath("../Replayer")
 
 [node name="PlayerInputMic" type="AudioStreamPlayer" parent="PlayerXR/ReplayManager/MicController"]
 stream = SubResource("AudioStreamMicrophone_oaf0i")

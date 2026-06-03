@@ -5,7 +5,7 @@ class_name  ReplayController
 @onready var delay: Timer = $Delay
 
 # File path configuration
-const SAVE_PATH : String = "user://temp_replay.json"
+var SAVE_PATH : String = "user://replay.json"
 
 # Runtime tracking state
 var frames : int = 0
@@ -13,7 +13,7 @@ var recording_data : Dictionary = {}
 var recording : bool = false
 var is_playing : bool = false
 var current_dummy : Node3D = null
-
+var linked_audio_filename: String = ""
 # --- STEP 1: RECORDING TIMELINE ---
 
 func start_recording_session() -> void:
@@ -66,7 +66,8 @@ func save_telemetry_to_json() -> void:
 		"metadata": {
 			"player_profile": "Hoc",
 			"total_recorded_frames": frames,
-			"engine_version": "Godot 4"
+			"engine_version": "Godot 4",
+			"audio_file" : linked_audio_filename
 		},
 		"frames": {}
 	}

@@ -1,8 +1,6 @@
 extends CanvasLayer
-@onready var audio_dialog: FileDialog = $Control/AudioDialog
 @onready var replay_dialog: FileDialog = $Control/ReplayDialog
 @onready var replay_button: Button = $Control/BoxContainer/SelectReplay
-@onready var audio_button: Button = $Control/BoxContainer/SelectAudio
 @onready var accept_dialog: AcceptDialog = $Control/AcceptDialog
 
 @export var loadScene : PackedScene
@@ -11,11 +9,6 @@ extends CanvasLayer
 
 func _on_select_replay_pressed() -> void:
 	replay_dialog.popup_centered(Vector2(800,600))
-
-
-func _on_select_audio_pressed() -> void:
-	audio_dialog.popup_centered(Vector2(800,600))
-
 
 func _on_start_spectator_pressed() -> void:
 	if SessionData.target_replay_path != "" and SessionData.target_audio_path != "" :
@@ -26,10 +19,26 @@ func _on_start_spectator_pressed() -> void:
 		accept_dialog.popup_centered()
 
 func _on_replay_dialog_file_selected(path: String) -> void:
-	SessionData.target_replay_path = path
-	replay_button.text = "Replay: " + path.get_file()
-
-
-func _on_audio_dialog_file_selected(path: String) -> void:
-	SessionData.target_audio_path = path
-	audio_button.text = "Audio: " + path.get_file()
+	var file = FileAccess.open(path, FileAccess.READ)
+	var parsed = JSON.parse_string(file.get_as_text())
+	file.close()
+	if parsed == null or not parsed.has("metadata"):
+		accept_dialog.dialog_text = "Invalid file! This is not a replay JSON file"
+		accept_dialog.popup_centered()
+		return
+	
+	var targetAudioName = parsed["metadata"]["audio_file"]
+	var baseFolder = path.get_base_dir()
+	var audioPath = baseFolder + "/" + targetAudioName
+	if FileAccess.file_exists(audioPath):
+		SessionData.target_replay_path = path
+		SessionData.target_audio_path = audioPath
+		replay_button.text = "Replay: " + path.get_file()
+		print("Successfully link metadata audio: ", targetAudioName)
+	else:
+		SessionData.target_replay_path = ""
+		SessionData.target_audio_path = ""
+		
+		accept_dialog.dialog_text = "Missing Audio! The metadata requires " + targetAudioName + "', but it is missing from the folder."
+		accept_dialog.popup_centered()
+		

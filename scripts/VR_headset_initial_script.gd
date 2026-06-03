@@ -23,7 +23,6 @@ func _input(event):
 	
 	if event.is_action_pressed("stop"):
 		print("Stop recording telementry and audio")
-		replayer.stop_and_save_session()
 		mic_controller.stop_record_and_save()
 		
 	if event.is_action_pressed("play"):
