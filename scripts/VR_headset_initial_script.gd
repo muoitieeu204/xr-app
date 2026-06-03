@@ -1,6 +1,6 @@
 extends Node3D
-@onready var replayer: ReplayController = $PlayerXR/Replayer
-@onready var mic_controller: MicController = $PlayerXR/MicController
+@onready var replayer: ReplayController = $PlayerXR/ReplayManager/Replayer
+@onready var mic_controller: MicController = $PlayerXR/ReplayManager/MicController
 
 
 var xr_interface : XRInterface

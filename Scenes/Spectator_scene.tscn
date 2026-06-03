@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://baxaxbbxisq24"]
+
+[ext_resource type="Script" uid="uid://160na1mdo336" path="res://Scenes/spectator_scene.gd" id="1_ny3ol"]
+[ext_resource type="PackedScene" uid="uid://cq5jodxpu2j8d" path="res://Prefabs/World_geometry/tutorial_world_geometry.tscn" id="1_o7nsr"]
+[ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Scenes/DummyScene.tscn" id="2_nd5bl"]
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("playerAudio", "timeSlider")]
+script = ExtResource("1_ny3ol")
+dummyScene = ExtResource("2_nd5bl")
+playerAudio = NodePath("PlayerSound")
+timeSlider = NodePath("UI/Control/MarginContainer/HBoxContainer/Timeline Slider")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 4
+
+[node name="Play_Pause Button" type="Button" parent="UI/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Play"
+
+[node name="Backward Button" type="Button" parent="UI/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "<<<"
+
+[node name="Forward Button" type="Button" parent="UI/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = ">>>"
+
+[node name="Timeline Slider" type="HSlider" parent="UI/Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+
+[node name="SpectatorCam" type="Camera3D" parent="."]
+transform = Transform3D(-0.021462364, 0.9829803, -0.18245316, 0.11483833, 0.18371116, 0.97624916, 0.9931523, -1.8751385e-09, -0.11682669, 0, 16.993092, 0)
+
+[node name="ReplayManager" type="Node3D" parent="."]
+
+[node name="Environment" parent="." instance=ExtResource("1_o7nsr")]
+
+[node name="PlayerSound" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="UI/Control/MarginContainer/HBoxContainer/Play_Pause Button" to="." method="_on_play_pause_button_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/HBoxContainer/Backward Button" to="." method="_on_backward_button_pressed"]
+[connection signal="pressed" from="UI/Control/MarginContainer/HBoxContainer/Forward Button" to="." method="_on_forward_button_pressed"]
+[connection signal="drag_ended" from="UI/Control/MarginContainer/HBoxContainer/Timeline Slider" to="." method="_on_timeline_slider_drag_ended"]
+[connection signal="drag_started" from="UI/Control/MarginContainer/HBoxContainer/Timeline Slider" to="." method="_on_timeline_slider_drag_started"]
+
+[editable path="Environment"]
+[editable path="Environment/Doors/door-sliding2"]
+[editable path="Environment/Doors/door-sliding3"]
+[editable path="Environment/Buttons/InteractableAreaButton/button-floor-round2"]
+[editable path="Environment/Buttons/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Table"]
+[editable path="Environment/Tables/Table/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main3"]
+[editable path="Environment/Tables/Main3/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main4"]
+[editable path="Environment/Tables/Main4/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main5"]
+[editable path="Environment/Tables/Main5/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Tables/Main6"]
+[editable path="Environment/Tables/Main6/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
