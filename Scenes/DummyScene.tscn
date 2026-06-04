@@ -18,6 +18,9 @@ albedo_color = Color(0.8989168, 0.10775343, 0.17416146, 1)
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 mesh = SubResource("SphereMesh_e6ykt")
 
+[node name="FPVCam" type="Camera3D" parent="XRCamera3D"]
+transform = Transform3D(3.333333, 0, 0, 0, 3.333333, 0, 0, 0, 3.333333, 0, 0, 0)
+
 [node name="LeftController" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, -0.33386073, 0, 0)
 mesh = SubResource("BoxMesh_e6ykt")

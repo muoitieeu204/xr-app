@@ -42,8 +42,8 @@ public partial class SpeechRecognizer : Node
 		IntializeOSSpecificLibs(); //Doesn't seem to automatically load these libs
 		recordBusIdx = AudioServer.GetBusIndex(recordBusName);
 		_microphoneRecord = AudioServer.GetBusEffect(recordBusIdx, 0) as AudioEffectRecord;
-        GD.Print($"Microphone Mix Rate: {AudioServer.GetMixRate()} Hz");
-        model = new Model(ProjectSettings.GlobalizePath(modelPath));
+		GD.Print($"Microphone Mix Rate: {AudioServer.GetMixRate()} Hz");
+		model = new Model(ProjectSettings.GlobalizePath(modelPath));
 		Vosk.Vosk.SetLogLevel(0);
 		cancelToken = new CancellationTokenSource();
 		DebugPrint("Initialized Speech Recognition");

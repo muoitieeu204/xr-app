@@ -1,4 +1,5 @@
 extends Node3D
+class_name SpectatorManager
 
 @export var dummyScene : PackedScene
 @export var playerAudio : AudioStreamPlayer
@@ -172,3 +173,18 @@ func _on_forward_button_pressed() -> void:
 	render_frame_at_time(playback_time)
 	if is_playing == true:
 		playerAudio.play(playback_time)
+
+func _on_toggle_view_button_pressed() -> void:
+	var freeCam = $SpectatorCam
+	var dummyCam = active_dummy.find_child("FPVCam")
+	if freeCam.current:
+		# If we are in 3rd person, switch TO 1st person
+		dummyCam.make_current()
+		$UI/Control/ToggleViewButton.text = "Switch to 3rd Person"
+		print("View: 1st Person")
+	else:
+		 # If we are in 1st person, switch TO 3rd person
+		freeCam.make_current()
+		$UI/Control/ToggleViewButton.text = "Switch to 1st Person"
+		print("View: 3rd Person (Free Cam)")
+		
