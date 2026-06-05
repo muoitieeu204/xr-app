@@ -10,6 +10,7 @@
 
 [node name="Staging" type="Node3D"]
 script = ExtResource("1_76doy")
+main_scene = "uid://dokpcl80603c4"
 
 [node name="Fade" parent="." instance=ExtResource("2_ofb47")]
 

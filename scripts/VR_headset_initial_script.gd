@@ -1,6 +1,8 @@
-extends Node3D
-@onready var replayer: ReplayController = $PlayerXR/ReplayManager/Replayer
-@onready var mic_controller: MicController = $PlayerXR/ReplayManager/MicController
+extends XRToolsSceneBase
+
+
+@onready var replayer: ReplayController = $XROrigin3D/ReplayManager/Replayer
+@onready var mic_controller: MicController = $XROrigin3D/ReplayManager/MicController
 
 
 var xr_interface : XRInterface
