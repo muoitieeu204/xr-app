@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvxy47bd4iv38"]
+
+[ext_resource type="Script" uid="uid://mcs8okq8ny4h" path="res://scripts/SessionUploader.cs" id="1_4j4x8"]
+
+[node name="SessionUploader" type="Node"]
+script = ExtResource("1_4j4x8")

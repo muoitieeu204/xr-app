@@ -1,11 +1,10 @@
 extends XRToolsSceneBase
 
+@onready var replayer: ReplayController = $ReplayManager/Replayer
+@onready var mic_controller: MicController = $ReplayManager/MicController
 
-@onready var replayer: ReplayController = $XROrigin3D/ReplayManager/Replayer
-@onready var mic_controller: MicController = $XROrigin3D/ReplayManager/MicController
 
-
-var xr_interface : XRInterface
+var xr_interface: XRInterface
 
 func _ready():
 	xr_interface = XRServer.find_interface("OpenXR")
@@ -30,3 +29,17 @@ func _input(event):
 	if event.is_action_pressed("play"):
 		print("Playing back animation...")
 		replayer.load_and_play_session()
+	
+	if event.is_action_pressed("ui_accept"):
+		test_the_upload()
+	
+func test_the_upload() -> void:
+		print("Trigger upload function...")
+		var jsonPath = "user://temp_replay_2026-06-03T23-05-10.json"
+		var audioPath = "user://player_audio_2026-06-06T00-39-55.wav"
+		#Call the uploader node
+		var test_node = get_node("/root/SessionUploader")
+		if test_node:
+			test_node.UploadSessionDataAsync(jsonPath, audioPath)
+		else: 
+			print("Error: Cannt find SessionUploader node");
