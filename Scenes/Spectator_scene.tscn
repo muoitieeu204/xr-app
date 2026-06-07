@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://baxaxbbxisq24"]
+[gd_scene load_steps=4 format=3 uid="uid://baxaxbbxisq24"]
 
 [ext_resource type="Script" uid="uid://160na1mdo336" path="res://Scenes/spectator_scene.gd" id="1_ny3ol"]
 [ext_resource type="PackedScene" uid="uid://cq5jodxpu2j8d" path="res://Prefabs/World_geometry/tutorial_world_geometry.tscn" id="1_o7nsr"]
-[ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Scenes/DummyScene.tscn" id="2_nd5bl"]
-[ext_resource type="Script" uid="uid://8eeqnfu3lup3" path="res://Scenes/spectator_cam.gd" id="4_xjkv0"]
+[ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/DummyScene.tscn" id="2_nd5bl"]
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("playerAudio", "timeSlider")]
 script = ExtResource("1_ny3ol")
@@ -69,7 +68,6 @@ text = "1st Person View
 
 [node name="SpectatorCam" type="Camera3D" parent="."]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 0, 12.011184, 0)
-script = ExtResource("4_xjkv0")
 
 [node name="ReplayManager" type="Node3D" parent="."]
 

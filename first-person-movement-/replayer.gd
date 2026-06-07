@@ -1,5 +1,5 @@
 extends Node
-class_name  ReplayController
+class_name  replayer
 @export var recorded_objects : Array[Node3D]
 @export var dummy_scene : PackedScene # Drag your saved Dummy scene here in the Inspector
 @onready var delay: Timer = $Delay

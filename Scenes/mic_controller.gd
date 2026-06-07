@@ -1,5 +1,5 @@
 extends Node
-class_name MicController
+class_name mic_controller
 
 @export var replayController: ReplayController
 
