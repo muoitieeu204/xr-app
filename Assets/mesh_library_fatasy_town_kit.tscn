@@ -672,4 +672,6 @@ visible = false
 visible = false
 
 [editable path="balcony-wall-fence2"]
+[editable path="balcony-wall2"]
+[editable path="roof-high-right2"]
 [editable path="windmill2"]
