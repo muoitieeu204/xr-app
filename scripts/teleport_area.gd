@@ -11,9 +11,12 @@ func _ready() -> void:
 
 
 func _on_body_entered(_body: Node3D) -> void:
+	var playerBody := _body as XRToolsPlayerBody
+	if not playerBody:
+		return	
+	
 	if not target_scene or target_scene == "":
 		return
-		
 	#Find the XRToolsSceneBase is a child node of 
 	var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
 	if not scene_base:

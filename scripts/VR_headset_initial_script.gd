@@ -1,3 +1,4 @@
+@tool
 extends XRToolsSceneBase
 
 @onready var replayer: ReplayController = $ReplayManager/Replayer

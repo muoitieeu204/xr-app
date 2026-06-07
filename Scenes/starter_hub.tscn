@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://dokpcl80603c4"]
+[gd_scene load_steps=23 format=3 uid="uid://dokpcl80603c4"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_3ekjb"]
 [ext_resource type="PackedScene" uid="uid://b7om36ix41f1d" path="res://Prefabs/Shader/water_shader.tscn" id="1_ot8gx"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Scenes/xr_origin_3d.tscn" id="3_04ajj"]
 [ext_resource type="MeshLibrary" uid="uid://cfvea0hls1qt1" path="res://Assets/platform_mesh_library_v2.tres" id="4_3ekjb"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/teleport_area.tscn" id="4_6yq6p"]
+[ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="4_u35q7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6r1au"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -116,8 +117,13 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 11, 0)
 
+[node name="StaticGeometry" type="GridMap" parent="Environment"]
+mesh_library = ExtResource("4_u35q7")
+cell_scale = 2.0
+metadata/_editor_floor_ = Vector3(0, 4, 0)
+
 [node name="TeleportArea" parent="Environment" instance=ExtResource("4_6yq6p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.64632, 9.790928, 13.1249275)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.64632, 9.659918, 13.1249275)
 target_scene = "uid://ds2jh0eifemm"
 
 [node name="XROrigin3D" parent="." instance=ExtResource("3_04ajj")]

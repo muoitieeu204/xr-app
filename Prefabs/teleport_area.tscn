@@ -1,26 +1,90 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4mettyqpc1cu"]
+[gd_scene load_steps=13 format=3 uid="uid://b4mettyqpc1cu"]
 
 [ext_resource type="Script" uid="uid://bubjo0pgcpwas" path="res://scripts/teleport_area.gd" id="1_b1v42"]
+[ext_resource type="Shader" uid="uid://jt7yuo5fk1yr" path="res://Prefabs/teleport_area_shader.gdshader" id="2_4h3l1"]
+[ext_resource type="Script" uid="uid://cstbwtrbrr1lg" path="res://Prefabs/text_ring_mesh.gd" id="3_slshs"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4h3l1"]
-height = 3.0
+cap_top = false
+cap_bottom = false
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_slshs"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_slshs"]
+render_priority = 0
+shader = ExtResource("2_4h3l1")
+shader_parameter/hologram_color = Color(0, 0.4, 1, 0.3)
+shader_parameter/scanline_color = Color(0.5, 0.9, 1, 1)
+shader_parameter/scan_speed = 0.3
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_m4xex"]
+top_radius = 0.515
+bottom_radius = 0.655
+height = 0.191
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_slshs"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r2gbq"]
+resource_local_to_scene = true
 transparency = 1
 shading_mode = 0
-albedo_color = Color(0.25882354, 0.20784314, 1, 1)
+albedo_texture = SubResource("ViewportTexture_slshs")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_5urin"]
-height = 3.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5urin"]
+top_radius = 0.495
+bottom_radius = 0.585
+height = 0.051
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4xex"]
+albedo_color = Color(0.6627451, 0.6627451, 0.6627451, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bnh0a"]
+top_radius = 0.495
+bottom_radius = 0.585
+height = 0.246
 
 [node name="TeleportArea" type="Area3D"]
 collision_layer = 524288
 collision_mask = 524288
 script = ExtResource("1_b1v42")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Teleport pillar" type="MeshInstance3D" parent="."]
 mesh = SubResource("CylinderMesh_4h3l1")
-surface_material_override/0 = SubResource("StandardMaterial3D_slshs")
+surface_material_override/0 = SubResource("ShaderMaterial_slshs")
+
+[node name="TextRingMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0236629, 0)
+mesh = SubResource("CylinderMesh_m4xex")
+surface_material_override/0 = SubResource("StandardMaterial3D_r2gbq")
+script = ExtResource("3_slshs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_5urin")
+
+[node name="BottomStand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0160836, 0)
+mesh = SubResource("CylinderMesh_5urin")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4xex")
+
+[node name="TopStand" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0179933, 0)
+mesh = SubResource("CylinderMesh_bnh0a")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4xex")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(512, 100)
+
+[node name="Label" type="Label" parent="SubViewport"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.0
+offset_right = 54.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Teleport Zone 																						"
+metadata/_edit_use_anchors_ = true
