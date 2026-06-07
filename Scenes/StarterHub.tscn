@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bt0ier0gd1sh5"]
+[gd_scene load_steps=12 format=3 uid="uid://bt0ier0gd1sh5"]
 
-[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_umhdh"]
+[ext_resource type="Script" uid="uid://f4jm268vb48c" path="res://Scenes/StaterHubTestScript.gd" id="1_bipgs"]
 [ext_resource type="PackedScene" uid="uid://b7om36ix41f1d" path="res://Prefabs/Shader/water_shader.tscn" id="2_bipgs"]
 [ext_resource type="MeshLibrary" uid="uid://cfvea0hls1qt1" path="res://Assets/platform_mesh_library_v2.tres" id="3_ty580"]
 [ext_resource type="MeshLibrary" uid="uid://cu44ow40wsm28" path="res://Assets/fantatsy_town_mesh_library.tres" id="4_7aait"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/teleport_area.tscn" id="5_lxn05"]
+[ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="6_bipgs"]
+[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/VRPlayer.tscn" id="7_ty580"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6r1au"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -23,7 +25,7 @@ glow_enabled = true
 points = PackedVector3Array(253.96826, 3.9682531, 253.96826, -253.96814, -3.9682531, -253.96814, -253.96814, 3.9682531, -253.96814, 253.96826, -3.9682531, -253.96814, -253.96814, -3.9682531, 253.96826, -253.96814, 3.9682531, 253.96826, 253.96826, 3.9682531, -253.96814, 253.96826, -3.9682531, 253.96826)
 
 [node name="World" type="Node3D"]
-script = ExtResource("1_umhdh")
+script = ExtResource("1_bipgs")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.549368, 0.19165029, -0.81330496, 0.04541782, 0.9787513, 0.19995803, 0.8343453, 0.072912015, -0.546399, 0.28186226, 5.299016, -0.56202793)
@@ -32,15 +34,14 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ot8gx")
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="WaterShader" type="Area3D" parent="."]
 
-[node name="Water" parent="Area3D" instance=ExtResource("2_bipgs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.344018, 0)
+[node name="Water" parent="WaterShader" instance=ExtResource("2_bipgs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02009964, 2.344016, -0.09396422)
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Area3D/Water"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D/Water/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterShader"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.344018, 0)
 shape = SubResource("ConvexPolygonShape3D_3ekjb")
 
 [node name="Environment" type="Node3D" parent="."]
@@ -65,4 +66,8 @@ metadata/_editor_floor_ = Vector3(0, 4, 0)
 
 [node name="TeleportArea" parent="." instance=ExtResource("5_lxn05")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.0437856, 9.659918, -0.9340749)
-target_scene = "uid://ds2jh0eifemm"
+target_scene = "uid://cs26wosuk6egg"
+
+[node name="Spawner" parent="." instance=ExtResource("6_bipgs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.772787, 9.359912, 0)
+playerNode = ExtResource("7_ty580")

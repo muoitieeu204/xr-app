@@ -1,10 +1,6 @@
 @tool
 extends XRToolsSceneBase
 
-@onready var replayer: ReplayController = $ReplayManager/Replayer
-@onready var mic_controller: MicController = $ReplayManager/MicController
-
-
 var xr_interface: XRInterface
 
 func _ready():
@@ -20,8 +16,8 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("record"):
 		print("Start recording telementry and audio ")
-		replayer.start_recording_session()
-		mic_controller.start_record()
+	var replayer = find_child("Replayer", true, false)
+	var mic_controller = find_child("MicController", true, false)
 	
 	if event.is_action_pressed("stop"):
 		print("Stop recording telementry and audio")

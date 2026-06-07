@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8125h0c6y0nv"]
+[gd_scene load_steps=2 format=3 uid="uid://b8125h0c6y0nv"]
 
 [ext_resource type="Script" uid="uid://t5umdxx4jjq7" path="res://Scenes/import_session.gd" id="1_q7esw"]
-[ext_resource type="PackedScene" uid="uid://baxaxbbxisq24" path="res://Scenes/Spectator_scene.tscn" id="2_kqdg5"]
 
 [node name="SetupMenu" type="CanvasLayer"]
 script = ExtResource("1_q7esw")
-loadScene = ExtResource("2_kqdg5")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

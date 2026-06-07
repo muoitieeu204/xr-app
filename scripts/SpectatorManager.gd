@@ -1,9 +1,15 @@
-extends Node3D
-class_name SpectatorScene
+extends Node
+class_name SpectatorManager
 
 @export var dummyScene : PackedScene
 @export var playerAudio : AudioStreamPlayer
 @export var timeSlider : HSlider
+
+@onready var playPauseButton = $"Control/MarginContainer/HBoxContainer/Play_Pause Button"
+@onready var forward_button: Button = $"Control/MarginContainer/HBoxContainer/Forward Button"
+@onready var backward_button: Button = $"Control/MarginContainer/HBoxContainer/Backward Button"
+@onready var timeline_slider: HSlider = $"Control/MarginContainer/HBoxContainer/Timeline Slider"
+@onready var toggle_view_button: Button = $Control/ToggleViewButton
 
 var replay_data: Dictionary = {}
 var is_playing: bool = false
@@ -38,7 +44,7 @@ func _process(delta: float) -> void:
 		playerAudio.stop()
 		playback_time = max_duration
 		timeSlider.value = max_duration
-		$"UI/Control/MarginContainer/HBoxContainer/Play_Pause Button".text = "Play"
+		playPauseButton.text = "Play"
 
 func load_spectator_data() -> void:
 	# --- LOAD JSON ---
@@ -59,6 +65,7 @@ func load_spectator_data() -> void:
 			if active_dummy: active_dummy.queue_free()
 			active_dummy = dummyScene.instantiate()
 			add_child(active_dummy)
+			active_dummy.global_position = Vector3(28,9,0)
 			
 	# --- LOAD WAV (With 44-byte Bypass) ---
 	if FileAccess.file_exists(SessionData.target_audio_path):
@@ -119,11 +126,11 @@ func _input(event: InputEvent) -> void:
 		if is_playing:
 			is_playing = false
 			playerAudio.stop()
-			$"UI/Control/MarginContainer/HBoxContainer/Play_Pause Button".text = "Play"
+			playPauseButton.text = "Play"
 		else:
 			is_playing = true
 			playerAudio.play(playback_time)
-			$"UI/Control/MarginContainer/HBoxContainer/Play_Pause Button".text = "Pause"
+			playPauseButton.text = "Pause"
 
 func _on_timeline_slider_drag_ended(value_changed: bool) -> void:
 	playback_time = timeSlider.value
@@ -136,8 +143,8 @@ func _on_timeline_slider_drag_started() -> void:
 	is_playing = false 
 	playerAudio.stop()	
 	# Force the play button to pop back up without triggering the signal again
-	$"UI/Control/MarginContainer/HBoxContainer/Play_Pause Button".set_pressed_no_signal(false)
-	$"UI/Control/MarginContainer/HBoxContainer/Play_Pause Button".text = "Play"
+	playPauseButton.set_pressed_no_signal(false)
+	playPauseButton.text = "Play"
 
 
 
@@ -151,10 +158,10 @@ func _on_play_pause_button_pressed() -> void:
 		playback_time = timeSlider.value
 		render_frame_at_time(playback_time) # Instantly snap graphics to new time
 		playerAudio.play(playback_time)      # Resume audio from new time
-		$"UI/Control/MarginContainer/HBoxContainer/Play_Pause Button".text = "Pause"
+		playPauseButton.text = "Pause"
 	else :
 		playerAudio.stop()    # Resume audio from new time
-		$"UI/Control/MarginContainer/HBoxContainer/Play_Pause Button".text = "Play"
+		playPauseButton.text = "Play"
 	
 
 func _on_backward_button_pressed() -> void:
@@ -176,15 +183,19 @@ func _on_forward_button_pressed() -> void:
 
 func _on_toggle_view_button_pressed() -> void:
 	var freeCam = $SpectatorCam
-	var dummyCam = active_dummy.find_child("FPVCam")
+	if active_dummy == null:
+		return
+	var dummyCam = active_dummy.find_child("FPVCam",true,false)
+	if dummyCam == null:
+		return
 	if freeCam.current:
 		# If we are in 3rd person, switch TO 1st person
 		dummyCam.make_current()
-		$UI/Control/ToggleViewButton.text = "Switch to 3rd Person"
+		toggle_view_button.text = "Switch to 3rd Person"
 		print("View: 1st Person")
 	else:
 		 # If we are in 1st person, switch TO 3rd person
 		freeCam.make_current()
-		$UI/Control/ToggleViewButton.text = "Switch to 1st Person"
+		toggle_view_button.text = "Switch to 1st Person"
 		print("View: 3rd Person (Free Cam)")
 		
