@@ -5,7 +5,8 @@ extends Node3D
 var is_open = false
 
 # This function runs when the door hears the button's signal
-func _on_interactable_area_button_button_pressed(_button):
+
+func _on_interactable_area_button_button_pressed(button: Variant) -> void:
 	if animation_player.is_playing():
 		return
 	if not is_open:
@@ -22,3 +23,4 @@ func close_door():
 	is_open = false
 	print("Signal received! Playing sliding door animation...")
 	animation_player.play("close")
+	
