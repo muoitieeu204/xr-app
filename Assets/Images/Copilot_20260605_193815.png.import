@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyp6lul877cim"
 path.s3tc="res://.godot/imported/Copilot_20260605_193815.png-2c01098db203f761e0b41d1372f98d22.s3tc.ctex"
+path.etc2="res://.godot/imported/Copilot_20260605_193815.png-2c01098db203f761e0b41d1372f98d22.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Images/Copilot_20260605_193815.png"
-dest_files=["res://.godot/imported/Copilot_20260605_193815.png-2c01098db203f761e0b41d1372f98d22.s3tc.ctex"]
+dest_files=["res://.godot/imported/Copilot_20260605_193815.png-2c01098db203f761e0b41d1372f98d22.s3tc.ctex", "res://.godot/imported/Copilot_20260605_193815.png-2c01098db203f761e0b41d1372f98d22.etc2.ctex"]
 
 [params]
 

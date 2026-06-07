@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2trt74uokjjk"
 path.s3tc="res://.godot/imported/colormap.png-1a85c309a25ef793e31a8405af30f1a6.s3tc.ctex"
+path.etc2="res://.godot/imported/colormap.png-1a85c309a25ef793e31a8405af30f1a6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/kenney_tower-defense-kit/Models/OBJ format/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-1a85c309a25ef793e31a8405af30f1a6.s3tc.ctex"]
+dest_files=["res://.godot/imported/colormap.png-1a85c309a25ef793e31a8405af30f1a6.s3tc.ctex", "res://.godot/imported/colormap.png-1a85c309a25ef793e31a8405af30f1a6.etc2.ctex"]
 
 [params]
 

@@ -24,3 +24,6 @@ obj/
 
 # Vosk speech models
 GodotSpeechRecognition/models/
+
+#Android build
+android/
