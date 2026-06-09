@@ -21,7 +21,7 @@ public partial class SpeechRecognizer : Node
 	bool continuousRecognition = false;
 	// ADD THIS: The strict Grammar rule for Vosk
 	// It MUST include "[unk]" at the end so it knows how to handle random background noise!
-	private string _grammarJson = "[\"mở cửa\", \"đóng cửa\", \"bắt đầu\", \"open door\", \"close door\", \"start\", \"[unk]\"]";
+	private string _grammarJson = "[\"mở cửa\", \"đóng cửa\", \"bắt đầu\", \"[unk]\"]";
 	[Signal]
 	public delegate void OnPartialResultEventHandler(string partialResults);
 	[Signal]
