@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqt7w3ir1rvt2"]
+
+[ext_resource type="PackedScene" uid="uid://cjyilbm4ucc7s" path="res://addons/godot-xr-tools/objects/climbable.tscn" id="1_1n53n"]
+[ext_resource type="PackedScene" uid="uid://dt3ukm4tcx6f8" path="res://Assets/kenney_prototype-kit/Models/GLB format/ladder-color.glb" id="2_txfyy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_il3w1"]
+size = Vector3(0.17224121, 1.001709, 0.571167)
+
+[node name="Ladder" instance=ExtResource("1_1n53n")]
+
+[node name="ladder-color2" parent="." index="0" instance=ExtResource("2_txfyy")]
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0016479492, 0.4984131, -0.0015258789)
+shape = SubResource("BoxShape3D_il3w1")
+
+[editable path="ladder-color2"]

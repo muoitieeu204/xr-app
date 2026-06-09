@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dtp04c42gwtvy"]
+[gd_scene load_steps=32 format=3 uid="uid://dtp04c42gwtvy"]
 
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_yu5ic"]
 [ext_resource type="PackedScene" uid="uid://bjcxf427un2wp" path="res://addons/godot-xr-tools/player/poke/poke.tscn" id="2_o152u"]
@@ -80,9 +80,16 @@ node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &
 
 [sub_resource type="Resource" id="Resource_nkf4f"]
 script = ExtResource("8_o2y4m")
-flags = 16
+flags = 20
+move_max_slope = 60.0
 jump_velocity = 4.0
 metadata/_custom_type_script = "uid://cjfu28jmrajlo"
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dihpl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onuvk"]
+transparency = 1
+albedo_color = Color(0.39607844, 0.7137255, 1, 0.15686275)
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_tnuef"]
 
@@ -202,7 +209,14 @@ show_laser = 2
 laser_length = 1
 
 [node name="PlayerBody" parent="." instance=ExtResource("4_qxkev")]
+editor_description = "
+"
+floor_snap_length = 0.2
 physics = SubResource("Resource_nkf4f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerBody"]
+mesh = SubResource("CapsuleMesh_dihpl")
+surface_material_override/0 = SubResource("StandardMaterial3D_onuvk")
 
 [node name="ReplayManager" type="Node" parent="."]
 

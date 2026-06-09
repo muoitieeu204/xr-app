@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://cs26wosuk6egg"]
+[gd_scene load_steps=43 format=4 uid="uid://bgmuimeoyhrbt"]
 
 [ext_resource type="Script" uid="uid://cijjlg2j5o6ye" path="res://scripts/InitializeScript.gd" id="1_x35nm"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="1_xw0nv"]

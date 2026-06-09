@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4cfjryucsbig"]
+
+[ext_resource type="Script" uid="uid://bu6osf1mahm2j" path="res://GodotSpeechRecognition/scripts/SpeechUIManager.cs" id="1_l0ef5"]
+[ext_resource type="PackedScene" uid="uid://q6m2t6myang5" path="res://Scenes/mic_input.tscn" id="3_a4pja"]
+[ext_resource type="WhisperResource" uid="uid://cw0obde356qx5" path="res://addons/godot_whisper/models/ggml-tiny.en.bin" id="3_l0ef5"]
+[ext_resource type="WhisperResource" uid="uid://byneg2him828o" path="res://addons/godot_whisper/models/ggml-silero-v6.2.0.bin" id="4_0arg7"]
+[ext_resource type="Script" uid="uid://dgcg0ht2a21kp" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="5_n5cyk"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_qiane"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l0ef5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "Whisper Speech Recognition "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartialLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Partial Result:"
+
+[node name="PartialResult" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FinalLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Final Result:"
+
+[node name="FinalResult" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StartListeningButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Start Listening"
+
+[node name="MicrophoneStream" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_qiane")
+autoplay = true
+bus = &"Record"
+
+[node name="MicInput" parent="." node_paths=PackedStringArray("_whisperNode") instance=ExtResource("3_a4pja")]
+_whisperNode = NodePath("../WhisperSpeechRecognizer")
+
+[node name="WhisperSpeechRecognizer" type="SpeechToText" parent="."]
+language_model = ExtResource("3_l0ef5")
+vad_model = ExtResource("4_0arg7")
+vad_threshold = 0.4
+vad_min_silence_duration_ms = 700
+vad_speech_pad_ms = 200
+script = ExtResource("5_n5cyk")
+audio_effect_capture_index = 2

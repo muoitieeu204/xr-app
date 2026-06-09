@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://74sco75cmpj2"]
+[gd_scene load_steps=7 format=3 uid="uid://74sco75cmpj2"]
 
 [ext_resource type="Script" uid="uid://bu6osf1mahm2j" path="res://GodotSpeechRecognition/scripts/SpeechUIManager.cs" id="1_qnajv"]
 [ext_resource type="Script" uid="uid://c6rj7bcqflidq" path="res://GodotSpeechRecognition/scripts/SpeechRecognizer.cs" id="2_hyxph"]
+[ext_resource type="PackedScene" uid="uid://q6m2t6myang5" path="res://Scenes/mic_input.tscn" id="3_6adhq"]
+[ext_resource type="WhisperResource" uid="uid://bxcwyyt4imxqp" path="res://addons/godot_whisper/models/ggml-base-q5_1.bin" id="4_0as4u"]
+[ext_resource type="Script" uid="uid://dgcg0ht2a21kp" path="res://addons/godot_whisper/capture_stream_to_text.gd" id="5_ko7mx"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_qiane"]
 
@@ -33,7 +36,7 @@ layout_mode = 2
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"HeaderLarge"
-text = "Speech Recognition Demo"
+text = "Whisper Speech Recognition "
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -63,3 +66,11 @@ bus = &"Record"
 
 [node name="SpeechRecognizer" type="Node" parent="."]
 script = ExtResource("2_hyxph")
+
+[node name="MicInput" parent="." node_paths=PackedStringArray("_whisperNode") instance=ExtResource("3_6adhq")]
+_whisperNode = NodePath("../WhisperSpeechRecognizer")
+
+[node name="WhisperSpeechRecognizer" type="SpeechToText" parent="."]
+language_model = ExtResource("4_0as4u")
+script = ExtResource("5_ko7mx")
+audio_effect_capture_index = 3

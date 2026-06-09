@@ -62,13 +62,23 @@ func save_telemetry_to_json() -> void:
 	print("Serializing RAM dictionary to JSON structure...")
 	
 	# 1. Build a clean, scalable envelope payload layout
+	
+	# Architecture Fix: When using a Staging system, get_tree().current_scene returns the Staging node.
+	# We must search up the tree to find the actual loaded level (which inherits from XRToolsSceneBase)
+	var active_world_path : String = ""
+	var level_node = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
+	if level_node != null:
+		active_world_path = level_node.scene_file_path
+	else:
+		active_world_path = get_tree().current_scene.scene_file_path # Fallback
+	
 	var file_payload : Dictionary = {
 		"metadata": {
 			"player_profile": "Hoc",
 			"total_recorded_frames": frames,
 			"engine_version": "Godot 4",
 			"audio_file" : linked_audio_filename,
-			"world_path": get_tree().current_scene.scene_file_path
+			"world_path": active_world_path
 		},
 		"frames": {}
 	}

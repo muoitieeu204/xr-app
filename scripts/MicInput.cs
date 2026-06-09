@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 public partial class MicInput : Node
 {
-	// 1. Unified into a SINGLE exported variable that matches the rest of the code!
-	[Export] private SpeechRecognizer _recognizer;
+	// 1. We change this from SpeechRecognizer to a generic Node so it can hold the GDScript Whisper node
+	[Export] public Node _whisperNode;
 
 	public static MicInput Instance { get; private set; }
 
@@ -17,33 +17,24 @@ public partial class MicInput : Node
 
 	private Dictionary<string, string> _vocabulary = new Dictionary<string, string>
 	{
-		{ "open door", "door_open" },
 		{ "mở cửa", "door_open" },
-		{ "close door", "door_close" },
 		{ "đóng cửa", "door_close" },
-		{ "start", "tutorial_start" },
 		{ "bắt đầu", "tutorial_start" }
 	};
 
 	public override void _Ready()
 	{
 		Instance = this;
-		// 2. We don't need GetNode anymore because the Inspector handles the link
-		if (_recognizer != null)
+
+		if (_whisperNode != null)
 		{
-			_recognizer.OnPartialResult += (text) =>
-			{
-				ProcessRawSpeech(text);
-				OnRawPartialText?.Invoke(text);
-			};
-
-			_recognizer.OnFinalResult += (text) => OnRawFinalText?.Invoke(text);
-
-			GD.Print("SpeechBrain: Online and listening.");
+			// Automatically connect the Whisper signal via code so you don't have to use the Editor!
+			_whisperNode.Connect("transcribed_msg", new Callable(this, MethodName._on_whisper_transcribed_msg));
+			GD.Print("SpeechBrain (Whisper): Online and listening.");
 		}
 		else
 		{
-			GD.PrintErr("SpeechBrain: Critical Failure. SpeechRecognizer is null. Did you assign it in the Inspector?");
+			GD.PrintErr("SpeechBrain: Critical Failure. Whisper Node is null. Did you assign it in the Inspector?");
 		}
 	}
 
@@ -63,7 +54,37 @@ public partial class MicInput : Node
 		}
 	}
 
-	public void TurnOnMic() => _recognizer?.StartSpeechRecognition();
-	public string TurnOffMic() => _recognizer?.StopSpeechRecoginition();
-	public bool IsListening() => _recognizer != null && _recognizer.isCurrentlyListening();
+	public void TurnOnMic() 
+	{
+		if (_whisperNode != null) _whisperNode.Set("recording", true);
+	}
+
+	public string TurnOffMic() 
+	{
+		if (_whisperNode != null) _whisperNode.Set("recording", false);
+		return "";
+	}
+
+	public bool IsListening() 
+	{
+		if (_whisperNode != null) return (bool)_whisperNode.Get("recording");
+		return false;
+	}
+
+	public void _on_whisper_transcribed_msg(bool isComplete, string newText)
+	{
+		// Still check for our keywords like "mở cửa"!
+		ProcessRawSpeech(newText);
+
+		if (isComplete)
+		{
+			// This is a final result! Send it to your UI.
+			OnRawFinalText?.Invoke(newText);
+		}
+		else
+		{
+			// This is a partial, live-updating result! Send it to your UI.
+			OnRawPartialText?.Invoke(newText);
+		}
+	}
 }

@@ -16,7 +16,8 @@ public partial class SpeechUIManager : Node
 		partialResultText = GetNode<Label>("MarginContainer/VBoxContainer/PartialResult");
 		finalResultText = GetNode<Label>("MarginContainer/VBoxContainer/FinalResult");
 
-		globalMic = GetNodeOrNull<MicInput>("/root/MicInput");
+		// We use the static Instance instead of /root/MicInput, because your MicInput is in the Scene Tree!
+		globalMic = MicInput.Instance;
 
 		if (startButton == null || globalMic == null)
 		{
