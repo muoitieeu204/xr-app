@@ -20,7 +20,7 @@ script = ExtResource("5_unmod")
 closed_pose = ExtResource("4_k07ct")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
-[node name="PickableObject" instance=ExtResource("1_bexmu")]
+[node name="PickableObject" groups=["interactable"] instance=ExtResource("1_bexmu")]
 
 [node name="animal-dog2" parent="." index="0" instance=ExtResource("2_8e6dj")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.8915703e-05, 0.0009148568, -7.286668e-05)

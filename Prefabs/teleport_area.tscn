@@ -1,7 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4mettyqpc1cu"]
+[gd_scene load_steps=15 format=3 uid="uid://b4mettyqpc1cu"]
 
 [ext_resource type="Script" uid="uid://bubjo0pgcpwas" path="res://scripts/teleport_area.gd" id="1_b1v42"]
 [ext_resource type="Shader" uid="uid://jt7yuo5fk1yr" path="res://Prefabs/teleport_area_shader.gdshader" id="2_4h3l1"]
+[ext_resource type="AudioStream" uid="uid://d11stv3umutt6" path="res://Prefabs/Audio/TeleportSuccess.mp3" id="2_m4xex"]
+[ext_resource type="AudioStream" uid="uid://co7k1ewpgq4b6" path="res://Prefabs/Audio/TeleportDenied.mp3" id="3_bnh0a"]
 [ext_resource type="Script" uid="uid://cstbwtrbrr1lg" path="res://Prefabs/text_ring_mesh.gd" id="3_slshs"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4h3l1"]
@@ -46,10 +48,14 @@ top_radius = 0.495
 bottom_radius = 0.585
 height = 0.246
 
-[node name="TeleportArea" type="Area3D"]
+[node name="TeleportArea" type="Area3D" node_paths=PackedStringArray("portalMesh", "portalAudio")]
 collision_layer = 524288
 collision_mask = 524288
 script = ExtResource("1_b1v42")
+portalMesh = NodePath("Teleport pillar")
+portalAudio = NodePath("TeleportSound")
+successSound = ExtResource("2_m4xex")
+errorSound = ExtResource("3_bnh0a")
 
 [node name="Teleport pillar" type="MeshInstance3D" parent="."]
 mesh = SubResource("CylinderMesh_4h3l1")
@@ -88,3 +94,5 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 text = "Teleport Zone 																						"
 metadata/_edit_use_anchors_ = true
+
+[node name="TeleportSound" type="AudioStreamPlayer3D" parent="."]

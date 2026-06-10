@@ -1,15 +1,15 @@
 [gd_scene load_steps=24 format=3 uid="uid://ba076lt5lio3t"]
 
-[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_ynf5e"]
+[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://dxmtbhfk3csrg" path="res://Scenes/cube.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b8yhh0yw4eni4" path="res://Scenes/block.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://74sco75cmpj2" path="res://GodotSpeechRecognition/speech_recognizer_demo.tscn" id="5_21xkr"]
+[ext_resource type="PackedScene" path="res://GodotSpeechRecognition/speech_recognizer_demo.tscn" id="5_21xkr"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://ciixuulnmtx61" path="res://Prefabs/rock_climb_object.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://mi8g8chk1gbt" path="res://first-person-movement-/replayer.gd" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://crbxfl6kkm26g" path="res://first-person-movement-/fpv_player.tscn" id="7_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/DummyScene.tscn" id="8_344ge"]
-[ext_resource type="Script" uid="uid://cki1do8tx7xj" path="res://Scenes/mic_controller.gd" id="10_hptm8"]
+[ext_resource type="Script" path="res://Scenes/mic_controller.gd" id="10_hptm8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 size = Vector3(10, 0.1, 10)

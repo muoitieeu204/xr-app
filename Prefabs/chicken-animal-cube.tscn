@@ -20,7 +20,7 @@ script = ExtResource("5_hj7q7")
 closed_pose = ExtResource("4_cbsgx")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
-[node name="PickableObject" instance=ExtResource("1_07h87")]
+[node name="PickableObject" groups=["interactable"] instance=ExtResource("1_07h87")]
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016082764, 0.17580414, 0.0026855469)

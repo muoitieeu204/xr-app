@@ -17,10 +17,10 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://bf6srmdlar5gb"
+buses/default_bus_layout="uid://dpr132vrqgah0"
 driver/enable_input=true
 driver/mix_rate=16000
-input/transcribe/use_gpu=false
+input/transcribe/use_gpu=true
 
 [autoload]
 
@@ -36,6 +36,10 @@ project/assembly_name="GodotXR _Attempt_1"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+
+[global_group]
+
+interactable="Interactable Object"
 
 [godot_xr_tools]
 

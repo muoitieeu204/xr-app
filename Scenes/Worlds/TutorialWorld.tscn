@@ -1,6 +1,6 @@
-[gd_scene load_steps=44 format=4 uid="uid://cs26wosuk6egg"]
+[gd_scene load_steps=59 format=4 uid="uid://cs26wosuk6egg"]
 
-[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_e2g1d"]
+[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_e2g1d"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="1_xw0nv"]
 [ext_resource type="PackedScene" uid="uid://crtvxpuyg328w" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall.glb" id="2_b3bv3"]
 [ext_resource type="PackedScene" uid="uid://d21st8nky57qa" path="res://Assets/kenney_prototype-kit/Models/GLB format/column.glb" id="2_ri6mv"]
@@ -19,6 +19,13 @@
 [ext_resource type="PackedScene" uid="uid://croxnhtq5b51o" path="res://Assets/kenney_prototype-kit/Models/GLB format/floor-thick.glb" id="13_0vhvw"]
 [ext_resource type="PackedScene" uid="uid://dqt7w3ir1rvt2" path="res://Prefabs/climable_ladder.tscn" id="14_e2g1d"]
 [ext_resource type="PackedScene" uid="uid://kqwlr8tlv55l" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-special-area.glb" id="15_ajraq"]
+[ext_resource type="PackedScene" uid="uid://b4uxef3n4qcwm" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-square-f.glb" id="16_ajraq"]
+[ext_resource type="Script" uid="uid://dwk8a1tg6wtlj" path="res://scripts/basket_trigger.gd" id="17_luug5"]
+[ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/cat-animal-cube.tscn" id="17_y4oqr"]
+[ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/caterpillar-animal-cube.tscn" id="18_qec81"]
+[ext_resource type="PackedScene" uid="uid://cawp6ndtryner" path="res://Prefabs/chicken-animal-cube.tscn" id="19_ln6h8"]
+[ext_resource type="PackedScene" uid="uid://dusdb37cvd7sk" path="res://Prefabs/cow-animal-cube.tscn" id="20_vphai"]
+[ext_resource type="PackedScene" uid="uid://qlbb2bkdgmcg" path="res://Prefabs/dog-animal-cube.tscn" id="21_4qjy7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hhen"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -183,6 +190,33 @@ shadow_mesh = SubResource("ArrayMesh_2gnr2")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qbkic"]
 data = PackedVector3Array(-0.5, 0.19999999, -0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0.19999999, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0.19999999, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0.19999999, 0.5, -0.5, 0.19999999, -0.5, 0.5, 0.19999999, -0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, -0.5, 0.19999999, 0.5, -0.5, 0.19999999, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikgg2"]
+albedo_color = Color(0, 0.9843137, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3cfy"]
+albedo_color = Color(0.95052606, 0.80514675, 0.13580999, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q56sk"]
+albedo_color = Color(1, 0.74375844, 0.6815284, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwvwc"]
+albedo_color = Color(0.9647059, 0.3529412, 0.9529412, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_luug5"]
+points = PackedVector3Array(0.33332092, 0.21426398, 0.50793654, -0.33332092, -0.007914752, -0.50793654, -0.3809524, -0.007914752, -0.4920262, 0.3809524, -0.007914752, 0.4920262, 0.46030504, 0.21426398, -0.46030504, -0.50793654, 0.21426398, 0.33332092, -0.46030504, -0.007914752, 0.46030504, -0.46030504, 0.21426398, -0.46030504, 0.46030504, -0.007914752, -0.46030504, 0.50793654, 0.21426398, 0.33332092, -0.50793654, -0.007914752, -0.33332092, -0.33332092, 0.21426398, 0.50793654, 0.50793654, -0.007914752, 0.33332092, 0.33332092, 0.21426398, -0.50793654, 0.50793654, -0.007914752, -0.33332092, -0.33332092, -0.007914752, 0.50793654, -0.33332092, 0.21426398, -0.50793654, 0.33332092, -0.007914752, -0.50793654, -0.50793654, 0.21426398, -0.33332092, -0.50793654, -0.007914752, 0.33332092, 0.50793654, 0.21426398, -0.33332092, 0.46030504, 0.21426398, 0.46030504, -0.46030504, 0.21426398, 0.46030504, 0.33332092, -0.007914752, 0.50793654, -0.46030504, -0.007914752, -0.46030504, 0.46030504, -0.007914752, 0.46030504, -0.42848444, 0.21426398, 0.4761159, 0.4761159, -0.007914752, -0.42848444, 0.4761159, -0.007914752, 0.42848444, 0.42848444, 0.21426398, -0.4761159, -0.4761159, -0.007914752, 0.42848444, -0.4761159, -0.007914752, -0.42848444)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_06nu6"]
+size = Vector3(0.9, 0.05, 0.8)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6cyi6"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itpu7"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_6cyi6")
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_e2g1d")
@@ -490,21 +524,85 @@ surface_material_override/0 = SubResource("StandardMaterial3D_06nu6")
 [node name="indicator-special-area2" parent="Environment/Zone1" instance=ExtResource("15_ajraq")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -37.81559, 3.0735023, 4.828159)
 
-[node name="Table" parent="." instance=ExtResource("9_3hhen")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.461826, 3.6854877, 39.415752)
+[node name="Zone3" type="Node3D" parent="Environment"]
+
+[node name="Tables" type="Node3D" parent="Environment/Zone3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.884381, 0, -3)
+
+[node name="Table" parent="Environment/Zone3/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_3hhen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.461826, 3.6854877, 42.415752)
+spawn_obj = ExtResource("17_y4oqr")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Zone3/Tables/Table" index="0"]
+skeleton = NodePath("../../../../..")
+
+[node name="Table2" parent="Environment/Zone3/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_3hhen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.461826, 3.6854877, 45.415752)
+spawn_obj = ExtResource("18_qec81")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Zone3/Tables/Table2" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ikgg2")
+
+[node name="Table3" parent="Environment/Zone3/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_3hhen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.461826, 3.6854877, 48.415752)
+spawn_obj = ExtResource("19_ln6h8")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Zone3/Tables/Table3" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_o3cfy")
+
+[node name="Table4" parent="Environment/Zone3/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_3hhen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.461826, 3.6854877, 51.415752)
+spawn_obj = ExtResource("20_vphai")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Zone3/Tables/Table4" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_q56sk")
+
+[node name="Table5" parent="Environment/Zone3/Tables" node_paths=PackedStringArray("spawn_pos") instance=ExtResource("9_3hhen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.461826, 3.6854877, 54.415752)
+spawn_obj = ExtResource("21_4qjy7")
+spawn_pos = NodePath("SpawnPoint")
+
+[node name="inner_wall3" parent="Environment/Zone3/Tables/Table5" index="0"]
+skeleton = NodePath("../../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_iwvwc")
+
+[node name="Basket" parent="Environment/Zone3" instance=ExtResource("16_ajraq")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -8.884381, 3, 36)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Zone3/Basket/indicator-square-f" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone3/Basket/indicator-square-f/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_luug5")
+
+[node name="BasketTrigger" type="Area3D" parent="Environment/Zone3/Basket"]
+script = ExtResource("17_luug5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone3/Basket/BasketTrigger"]
+shape = SubResource("BoxShape3D_06nu6")
 
 [node name="Spawner" parent="." instance=ExtResource("10_0r11v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.033428, 4.501993, 4.67628)
 playerNode = ExtResource("12_2lgl8")
 
 [node name="TeleportArea" parent="." instance=ExtResource("11_x35nm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.877719, 4.1074586, 58.476166)
-target_scene = "uid://bt0ier0gd1sh5"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.096805, 59)
+require_unlock = true
+
+[node name="TextRingMesh" parent="TeleportArea" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_itpu7")
 
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton3" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton2" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
+[connection signal="puzzle_solved" from="Environment/Zone3/Basket/BasketTrigger" to="TeleportArea" method="unlock_portal"]
 
 [editable path="Environment/Wall/wall2"]
 [editable path="Environment/Wall/wall3"]
@@ -531,3 +629,15 @@ target_scene = "uid://bt0ier0gd1sh5"
 [editable path="Environment/Zone1/floor-thick6"]
 [editable path="Environment/Zone1/floor-thick7"]
 [editable path="Environment/Zone1/floor-thick8"]
+[editable path="Environment/Zone3/Tables/Table"]
+[editable path="Environment/Zone3/Tables/Table/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Zone3/Tables/Table2"]
+[editable path="Environment/Zone3/Tables/Table2/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Zone3/Tables/Table3"]
+[editable path="Environment/Zone3/Tables/Table3/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Zone3/Tables/Table4"]
+[editable path="Environment/Zone3/Tables/Table4/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Zone3/Tables/Table5"]
+[editable path="Environment/Zone3/Tables/Table5/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
+[editable path="Environment/Zone3/Basket"]
+[editable path="TeleportArea"]

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Xml;
 public partial class VoiceCommandHandler : Node
 {
-	private SpeechRecognizer speechRecognizer;
 	// Link your specific door node here in the Inspector
 	[Export] public Node3D targetDoor;
 	public override void _Ready()
@@ -18,7 +17,7 @@ public partial class VoiceCommandHandler : Node
 			// Assuming your new signal in MicInput.cs is named OnCommandRecognized
 			globalMic.OnCommandRecognized += ReactToCommand;
 			GD.Print("VoiceCommandHandler: Connected to Global MicInput!");
-		}
+		}	
 		else
 		{
 			GD.PrintErr("VoiceCommandHandler: Could not find the global MicInput AutoLoad!");

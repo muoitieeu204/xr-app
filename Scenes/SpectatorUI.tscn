@@ -66,6 +66,8 @@ text = "1st Person View
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 36.038727, 0)
 current = true
 script = ExtResource("3_xbg42")
+move_speed = 8.0
+mouse_sensitve = 0.01
 
 [node name="PlayerSound" type="AudioStreamPlayer" parent="."]
 

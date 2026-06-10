@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_il3w1"]
 size = Vector3(0.17224121, 1.001709, 0.571167)
 
-[node name="Ladder" instance=ExtResource("1_1n53n")]
+[node name="Ladder" groups=["interactable"] instance=ExtResource("1_1n53n")]
 
 [node name="ladder-color2" parent="." index="0" instance=ExtResource("2_txfyy")]
 

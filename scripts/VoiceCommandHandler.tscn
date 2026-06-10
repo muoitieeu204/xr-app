@@ -1,12 +1,13 @@
 [gd_scene load_steps=21 format=3 uid="uid://ccf7nil4tosjx"]
 
-[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/VR_headset_initial_script.gd" id="1_v5k34"]
+[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_v5k34"]
 [ext_resource type="PackedScene" uid="uid://cq5jodxpu2j8d" path="res://Prefabs/World_geometry/tutorial_world_geometry.tscn" id="2_28y3b"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/teleport_area.tscn" id="3_5wths"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/VRPlayer.tscn" id="4_melf1"]
 [ext_resource type="Script" uid="uid://mi8g8chk1gbt" path="res://first-person-movement-/replayer.gd" id="5_3xbmm"]
 [ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/DummyScene.tscn" id="6_gv75o"]
-[ext_resource type="Script" uid="uid://cki1do8tx7xj" path="res://Scenes/mic_controller.gd" id="7_kr10w"]
+[ext_resource type="Script" path="res://Scenes/mic_controller.gd" id="7_kr10w"]
+
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ujd73"]
 animation = &"Grip"
