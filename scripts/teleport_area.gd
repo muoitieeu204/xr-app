@@ -17,11 +17,11 @@ func _ready() -> void:
 	
 	if require_unlock:
 		# Initialize portal to RED (locked)
-		_set_portal_color(Color(1.0, 0.0, 0.0)) # Red
+		_set_portal_color(Color(1.0, 0.0, 0.0, 0.3)) # Red
 	else:
 		# Automatically unlocked!
 		isUnlocked = true
-		_set_portal_color(Color(0.0, 0.0, 1.0)) # Blue
+		_set_portal_color(Color(0.0, 0.0, 1.0, 0.3)) # Blue
 
 func _on_body_entered(_body: Node3D) -> void:
 	var playerBody := _body as XRToolsPlayerBody
@@ -36,13 +36,19 @@ func _on_body_entered(_body: Node3D) -> void:
 			portalAudio.play()
 			
 		if not target_scene or target_scene == "":
+		
 			return
-			
 		#Find the XRToolsSceneBase is a child node of 
 		var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
 		if not scene_base:
 			return
-		
+			
+		#Freeze player movement when enter teleport
+		var movementNode = get_tree().get_nodes_in_group("movement_providers")
+		for node in movementNode:
+			if "enabled" in node:
+				node.enabled = false
+
 		#Start loading scene
 		scene_base.load_scene(target_scene)
 	else:
@@ -61,7 +67,7 @@ func unlock_portal() -> void:
 	isUnlocked = true
 	
 	# Change color to BLUE
-	_set_portal_color(Color(0.0, 0.0, 1.0)) # Blue
+	_set_portal_color(Color(0.0, 0.0, 1.0, 0.3)) # Blue
 
 func _set_portal_color(color: Color) -> void:
 	if not portalMesh:

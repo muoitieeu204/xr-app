@@ -1,12 +1,11 @@
-[gd_scene load_steps=34 format=3 uid="uid://cq5jodxpu2j8d"]
+[gd_scene load_steps=33 format=3 uid="uid://cq5jodxpu2j8d"]
 
 [ext_resource type="PackedScene" uid="uid://b2dnnn88rv0bs" path="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb" id="1_q3kpf"]
 [ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="2_nw4y8"]
-[ext_resource type="Script" uid="uid://bj17quj8beehy" path="res://scripts/VoiceCommandHandler.cs" id="3_gnjsf"]
+[ext_resource type="PackedScene" uid="uid://b6jji0b685hmk" path="res://Prefabs/VoiceCommandHandler.tscn" id="3_e5dr6"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="4_30it3"]
 [ext_resource type="PackedScene" uid="uid://chy5bpaqrk4ei" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb" id="5_nnr6a"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="6_fmjue"]
-[ext_resource type="PackedScene" uid="uid://74sco75cmpj2" path="res://GodotSpeechRecognition/speech_recognizer_demo.tscn" id="7_r4swh"]
 [ext_resource type="PackedScene" uid="uid://y57awkqbs4jp" path="res://Prefabs/interactable-table.tscn" id="8_lbtgq"]
 [ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/cat-animal-cube.tscn" id="9_83gy4"]
 [ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/caterpillar-animal-cube.tscn" id="10_ydqgj"]
@@ -201,9 +200,7 @@ script = ExtResource("2_nw4y8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Doors/door-sliding3/door-sliding/door/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_2moqc")
 
-[node name="VoiceCommandHandler" type="Node" parent="Doors/door-sliding3" node_paths=PackedStringArray("targetDoor")]
-script = ExtResource("3_gnjsf")
-targetDoor = NodePath("..")
+[node name="VoiceCommandHandler" parent="Doors/door-sliding3" instance=ExtResource("3_e5dr6")]
 
 [node name="Buttons" type="Node3D" parent="."]
 
@@ -230,7 +227,6 @@ shape = SubResource("BoxShape3D_kcl8b")
 [node name="Screen" parent="." instance=ExtResource("6_fmjue")]
 transform = Transform3D(-1.3113416e-10, 0, -0.003, 0, 0.003, 0, 0.003, 0, -1.3113416e-10, -1.6260853, 1.4013016, 7.6602144)
 screen_size = Vector2(640, 360)
-scene = ExtResource("7_r4swh")
 viewport_size = Vector2(640, 360)
 transparent = 0
 scene_properties_keys = PackedStringArray("SpeechUIManager")
@@ -238,7 +234,6 @@ scene_properties_keys = PackedStringArray("SpeechUIManager")
 [node name="Screen2" parent="." instance=ExtResource("6_fmjue")]
 transform = Transform3D(-1.3113416e-10, 0, 0.003, 0, 0.003, 0, -0.003, 0, -1.3113416e-10, -1.2514865, 1.4013016, 7.6602144)
 screen_size = Vector2(640, 360)
-scene = ExtResource("7_r4swh")
 viewport_size = Vector2(640, 360)
 transparent = 0
 scene_properties_keys = PackedStringArray("SpeechUIManager")

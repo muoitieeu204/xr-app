@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6jji0b685hmk"]
+
+[ext_resource type="Script" uid="uid://bj17quj8beehy" path="res://scripts/VoiceCommandHandler.cs" id="1_b245c"]
+
+[node name="VoiceCommandHandler" type="Node" node_paths=PackedStringArray("targetDoor")]
+script = ExtResource("1_b245c")
+targetDoor = NodePath("")

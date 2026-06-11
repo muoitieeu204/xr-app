@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://cs26wosuk6egg"]
+[gd_scene load_steps=62 format=4 uid="uid://cs26wosuk6egg"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_e2g1d"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="1_xw0nv"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://y57awkqbs4jp" path="res://Prefabs/interactable-table.tscn" id="9_3hhen"]
 [ext_resource type="Script" uid="uid://c54peyseci6w2" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding_2.gd" id="9_uqxnd"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="10_0r11v"]
+[ext_resource type="PackedScene" uid="uid://b6jji0b685hmk" path="res://Prefabs/VoiceCommandHandler.tscn" id="10_y4oqr"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/teleport_area.tscn" id="11_x35nm"]
 [ext_resource type="PackedScene" uid="uid://dg7f7d5v4xbft" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall-corner.glb" id="11_y8byv"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/VRPlayer.tscn" id="12_2lgl8"]
@@ -21,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://kqwlr8tlv55l" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-special-area.glb" id="15_ajraq"]
 [ext_resource type="PackedScene" uid="uid://b4uxef3n4qcwm" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-square-f.glb" id="16_ajraq"]
 [ext_resource type="Script" uid="uid://dwk8a1tg6wtlj" path="res://scripts/basket_trigger.gd" id="17_luug5"]
+[ext_resource type="Script" uid="uid://bnekavxga6afl" path="res://scripts/AzureSpeechSpawner.gd" id="17_qec81"]
 [ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/cat-animal-cube.tscn" id="17_y4oqr"]
 [ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/caterpillar-animal-cube.tscn" id="18_qec81"]
 [ext_resource type="PackedScene" uid="uid://cawp6ndtryner" path="res://Prefabs/chicken-animal-cube.tscn" id="19_ln6h8"]
@@ -191,6 +193,9 @@ shadow_mesh = SubResource("ArrayMesh_2gnr2")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qbkic"]
 data = PackedVector3Array(-0.5, 0.19999999, -0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0.19999999, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0.19999999, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0.19999999, 0.5, -0.5, 0.19999999, -0.5, 0.5, 0.19999999, -0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, -0.5, 0.19999999, 0.5, -0.5, 0.19999999, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ln6h8"]
+size = Vector3(5, 0.5, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikgg2"]
 albedo_color = Color(0, 0.9843137, 1, 1)
 
@@ -210,7 +215,7 @@ points = PackedVector3Array(0.33332092, 0.21426398, 0.50793654, -0.33332092, -0.
 size = Vector3(0.9, 0.05, 0.8)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6cyi6"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("../SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itpu7"]
 resource_local_to_scene = true
@@ -378,19 +383,19 @@ shape = SubResource("ConvexPolygonShape3D_3hhen")
 [node name="Door2" type="Node3D" parent="Environment/InteractableStructure"]
 
 [node name="door-sliding3" parent="Environment/InteractableStructure/Door2" instance=ExtResource("3_rpmc8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.134693, 3.1605926, 58.21174)
+transform = Transform3D(1.43, 0, 0, 0, 1.015, 0, 0, 0, 1.015, -31.01609, 3.1605926, 58.095905)
 script = ExtResource("9_uqxnd")
 
 [node name="door-sliding" parent="Environment/InteractableStructure/Door2/door-sliding3" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13488746, -0.111371994)
 
-[node name="door" parent="Environment/InteractableStructure/Door2/door-sliding3/door-sliding" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099910736, 0, -0.15146255)
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/InteractableStructure/Door2/door-sliding3/door-sliding/door" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/InteractableStructure/Door2/door-sliding3/door-sliding/door/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ykflw")
+
+[node name="VoiceCommandHandler" parent="Environment/InteractableStructure/Door2/door-sliding3" node_paths=PackedStringArray("targetDoor") instance=ExtResource("10_y4oqr")]
+targetDoor = NodePath("../..")
 
 [node name="InteractableAreaButton" parent="Environment/InteractableStructure/Door2" instance=ExtResource("6_ykflw")]
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -28.662119, 4.5844326, 60.79984)
@@ -524,6 +529,17 @@ surface_material_override/0 = SubResource("StandardMaterial3D_06nu6")
 [node name="indicator-special-area2" parent="Environment/Zone1" instance=ExtResource("15_ajraq")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -37.81559, 3.0735023, 4.828159)
 
+[node name="Zone2" type="Node3D" parent="Environment"]
+
+[node name="SpeechTrigger" type="Area3D" parent="Environment/Zone2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 7, 36)
+collision_mask = 524289
+script = ExtResource("17_qec81")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone2/SpeechTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -4, -2)
+shape = SubResource("BoxShape3D_ln6h8")
+
 [node name="Zone3" type="Node3D" parent="Environment"]
 
 [node name="Tables" type="Node3D" parent="Environment/Zone3"]
@@ -588,7 +604,7 @@ script = ExtResource("17_luug5")
 shape = SubResource("BoxShape3D_06nu6")
 
 [node name="Spawner" parent="." instance=ExtResource("10_0r11v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.033428, 4.501993, 4.67628)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.03343, 4.501993, 28.676281)
 playerNode = ExtResource("12_2lgl8")
 
 [node name="TeleportArea" parent="." instance=ExtResource("11_x35nm")]
@@ -602,6 +618,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_itpu7")
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton3" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton2" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
+[connection signal="body_entered" from="Environment/Zone2/SpeechTrigger" to="Environment/Zone2/SpeechTrigger" method="_on_body_entered"]
 [connection signal="puzzle_solved" from="Environment/Zone3/Basket/BasketTrigger" to="TeleportArea" method="unlock_portal"]
 
 [editable path="Environment/Wall/wall2"]

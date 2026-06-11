@@ -6,42 +6,50 @@ public partial class VoiceCommandHandler : Node
 {
 	// Link your specific door node here in the Inspector
 	[Export] public Node3D targetDoor;
+
+	private Dictionary<string, string> _vocab = new Dictionary<string, string>
+	{
+		{"mở cửa", "open_door"},
+		{"đóng cửa", "close_door"}
+	};
+
 	public override void _Ready()
 	{
-		// Fetch the AutoLoad directly from the absolute root of the game!
-		// "MicInput" must exactly match the Name column in your AutoLoad tab
-		MicInput globalMic = GetNodeOrNull<MicInput>("/root/MicInput");
-
-		if (globalMic != null)
-		{
-			// Assuming your new signal in MicInput.cs is named OnCommandRecognized
-			globalMic.OnCommandRecognized += ReactToCommand;
-			GD.Print("VoiceCommandHandler: Connected to Global MicInput!");
-		}	
+		if(AzureSpeechManager.Instance == null) GD.PrintErr("VoiceCommandHandler: AzureSpeechManager not found");
 		else
 		{
-			GD.PrintErr("VoiceCommandHandler: Could not find the global MicInput AutoLoad!");
+			AzureSpeechManager.Instance.OnspeechRecognized += HandleSpeech;
+		}
+	}
+	
+	private void HandleSpeech(string rawText){
+		// We MUST loop through our dictionary to translate the spoken words ("mở cửa") into the action ID ("open_door")
+		foreach (var kvp in _vocab)
+		{
+			if (rawText.Contains(kvp.Key))
+			{
+				ExecuteAction(kvp.Value);
+				break;
+			}
 		}
 	}
 
-	private void ReactToCommand(string actionId)
+	private void ExecuteAction(string actionId)
 	{
-		if (targetDoor == null) return;
-		AnimationPlayer animationPlayer = targetDoor.GetNodeOrNull<AnimationPlayer>("AnimationPlayer");
-		if (animationPlayer == null)
+		if(targetDoor == null) return;
+		AnimationPlayer animPlayer = targetDoor.GetNodeOrNull<AnimationPlayer>("AnimationPlayer");
+		if(animPlayer == null) return;
+		
+		// Notice how it checks for "open_door" to match your dictionary!
+		if(actionId == "open_door")
 		{
-			GD.PrintErr("Error, cannot find AnimationPlayer node");
-			return;
+			GD.Print("Open Door");
+			animPlayer.Play("open");
 		}
-		if (actionId == "door_open")
+		if(actionId == "close_door")
 		{
-			GD.Print("Call animation open door");
-			animationPlayer.Play("open");
-		}
-		else if (actionId == "door_close")
-		{
-			GD.Print("Call animation close door");
-			animationPlayer.Play("close");
+			GD.Print("Close Door");
+			animPlayer.Play("close");
 		}
 	}
 }
