@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://cs26wosuk6egg"]
+[gd_scene load_steps=69 format=4 uid="uid://cs26wosuk6egg"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_e2g1d"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="1_xw0nv"]
@@ -21,13 +21,21 @@
 [ext_resource type="PackedScene" uid="uid://dqt7w3ir1rvt2" path="res://Prefabs/climable_ladder.tscn" id="14_e2g1d"]
 [ext_resource type="PackedScene" uid="uid://kqwlr8tlv55l" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-special-area.glb" id="15_ajraq"]
 [ext_resource type="PackedScene" uid="uid://b4uxef3n4qcwm" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-square-f.glb" id="16_ajraq"]
+[ext_resource type="Script" uid="uid://craotcurqjn1" path="res://scripts/LadderTrigger.gd" id="16_qec81"]
 [ext_resource type="Script" uid="uid://dwk8a1tg6wtlj" path="res://scripts/basket_trigger.gd" id="17_luug5"]
 [ext_resource type="Script" uid="uid://bnekavxga6afl" path="res://scripts/AzureSpeechSpawner.gd" id="17_qec81"]
 [ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/cat-animal-cube.tscn" id="17_y4oqr"]
+[ext_resource type="PackedScene" uid="uid://pfqmgskegt4x" path="res://Prefabs/Boards/BoardViewPort.tscn" id="18_ln6h8"]
 [ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/caterpillar-animal-cube.tscn" id="18_qec81"]
 [ext_resource type="PackedScene" uid="uid://cawp6ndtryner" path="res://Prefabs/chicken-animal-cube.tscn" id="19_ln6h8"]
+[ext_resource type="Script" uid="uid://c6oy6ob3ejkoi" path="res://Prefabs/Guide Sound/LabelAudioTrigger.gd" id="19_vphai"]
+[ext_resource type="AudioStream" uid="uid://da10a0aw5gnca" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/1_chao_mung_ban_den_voi_khu_vuc_1_hay_bat_dau_bang_0e116d24-37e1-4c5b-be74-08f66de58ca8.mp3.mp3" id="20_4qjy7"]
+[ext_resource type="AudioStream" uid="uid://de8t8aphp262a" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/2_tuyet_lam_tiep_theo_hay_thu_nhan_nut_a_tren_tay_38d59ef2-e25a-4c50-b56a-816868986780.mp3.mp3" id="20_iwvwc"]
 [ext_resource type="PackedScene" uid="uid://dusdb37cvd7sk" path="res://Prefabs/cow-animal-cube.tscn" id="20_vphai"]
 [ext_resource type="PackedScene" uid="uid://qlbb2bkdgmcg" path="res://Prefabs/dog-animal-cube.tscn" id="21_4qjy7"]
+[ext_resource type="AudioStream" uid="uid://dye8w1clywiic" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/7_de_leo_len_thang_ban_hay_nhan_giu_nut_trigger_o_f8f35ab2-3218-4470-afe8-1708f32ada17.mp3.mp3" id="22_d6ifv"]
+[ext_resource type="AudioStream" uid="uid://c5s7gp2mllh4w" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/6_neu_ban_can_luon_lach_qua_cac_khe_hep_hoac_nhat_d70f53aa-0b41-4880-bb20-9ab649a00cb2.mp3.mp3" id="23_efjx1"]
+[ext_resource type="AudioStream" uid="uid://gpxr2eub6e00" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/5_xuat_sac_ban_da_nam_vung_toan_bo_cac_thao_tac_di_e9353316-d08d-49c0-a04d-7ebb8bc8bf2a.mp3.mp3" id="24_e78ep"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hhen"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -146,6 +154,9 @@ albedo_color = Color(0.9607843, 0.52156866, 0.24313726, 1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gtab7"]
 points = PackedVector3Array(0.5, 1, 0.5, 0.5, 1, -0.5, 0.24990213, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.24990213, 1, -0.5, -0.25009787, 0.49990213, 0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.25009787, 0.49990213, -0.5, -0.5, 0.24990211, 0.5, -0.5, 0.24990211, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vphai"]
+size = Vector3(2.5, 0.5, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luug5"]
 albedo_color = Color(0.9607843, 0.52156866, 0.24313726, 1)
 
@@ -193,6 +204,9 @@ shadow_mesh = SubResource("ArrayMesh_2gnr2")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qbkic"]
 data = PackedVector3Array(-0.5, 0.19999999, -0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0.19999999, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0.19999999, -0.5, -0.5, 0.19999999, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0.19999999, 0.5, -0.5, 0.19999999, -0.5, 0.5, 0.19999999, -0.5, 0.5, 0.19999999, 0.5, 0.5, 0.19999999, 0.5, -0.5, 0.19999999, 0.5, -0.5, 0.19999999, -0.5)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4qjy7"]
+size = Vector3(4, 4, 4)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_ln6h8"]
 size = Vector3(5, 0.5, 1)
 
@@ -208,20 +222,8 @@ albedo_color = Color(1, 0.74375844, 0.6815284, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwvwc"]
 albedo_color = Color(0.9647059, 0.3529412, 0.9529412, 1)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_luug5"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qec81"]
 points = PackedVector3Array(0.33332092, 0.21426398, 0.50793654, -0.33332092, -0.007914752, -0.50793654, -0.3809524, -0.007914752, -0.4920262, 0.3809524, -0.007914752, 0.4920262, 0.46030504, 0.21426398, -0.46030504, -0.50793654, 0.21426398, 0.33332092, -0.46030504, -0.007914752, 0.46030504, -0.46030504, 0.21426398, -0.46030504, 0.46030504, -0.007914752, -0.46030504, 0.50793654, 0.21426398, 0.33332092, -0.50793654, -0.007914752, -0.33332092, -0.33332092, 0.21426398, 0.50793654, 0.50793654, -0.007914752, 0.33332092, 0.33332092, 0.21426398, -0.50793654, 0.50793654, -0.007914752, -0.33332092, -0.33332092, -0.007914752, 0.50793654, -0.33332092, 0.21426398, -0.50793654, 0.33332092, -0.007914752, -0.50793654, -0.50793654, 0.21426398, -0.33332092, -0.50793654, -0.007914752, 0.33332092, 0.50793654, 0.21426398, -0.33332092, 0.46030504, 0.21426398, 0.46030504, -0.46030504, 0.21426398, 0.46030504, 0.33332092, -0.007914752, 0.50793654, -0.46030504, -0.007914752, -0.46030504, 0.46030504, -0.007914752, 0.46030504, -0.42848444, 0.21426398, 0.4761159, 0.4761159, -0.007914752, -0.42848444, 0.4761159, -0.007914752, 0.42848444, 0.42848444, 0.21426398, -0.4761159, -0.4761159, -0.007914752, 0.42848444, -0.4761159, -0.007914752, -0.42848444)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_06nu6"]
-size = Vector3(0.9, 0.05, 0.8)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_6cyi6"]
-viewport_path = NodePath("../SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_itpu7"]
-resource_local_to_scene = true
-transparency = 1
-shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_6cyi6")
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_e2g1d")
@@ -475,17 +477,43 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -46.77906, 7.339802, 1.134502
 [node name="floor-thick4" parent="Environment/Zone1" instance=ExtResource("13_0vhvw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.68327, 7.339802, 1.1345026)
 
-[node name="Ladder" parent="Environment/Zone1" instance=ExtResource("14_e2g1d")]
+[node name="Ladder" type="Node3D" parent="Environment/Zone1"]
+
+[node name="Ladder" parent="Environment/Zone1/Ladder" instance=ExtResource("14_e2g1d")]
 transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, -44, 5, 3)
 
-[node name="Ladder2" parent="Environment/Zone1" instance=ExtResource("14_e2g1d")]
+[node name="Ladder2" parent="Environment/Zone1/Ladder" instance=ExtResource("14_e2g1d")]
 transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, -44, 2, 3)
 
-[node name="Ladder3" parent="Environment/Zone1" instance=ExtResource("14_e2g1d")]
+[node name="Ladder3" parent="Environment/Zone1/Ladder" instance=ExtResource("14_e2g1d")]
 transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, -48, 5, 3)
 
-[node name="Ladder4" parent="Environment/Zone1" instance=ExtResource("14_e2g1d")]
+[node name="Ladder4" parent="Environment/Zone1/Ladder" instance=ExtResource("14_e2g1d")]
 transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, -48, 2, 3)
+
+[node name="LadderTrigger" type="Marker3D" parent="Environment/Zone1/Ladder" node_paths=PackedStringArray("spawnPoint")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 9, 2)
+script = ExtResource("16_qec81")
+spawnPoint = NodePath(".")
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/Ladder/LadderTrigger"]
+collision_mask = 524289
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/Ladder/LadderTrigger/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
+shape = SubResource("BoxShape3D_vphai")
+
+[node name="LadderTrigger2" type="Marker3D" parent="Environment/Zone1/Ladder" node_paths=PackedStringArray("spawnPoint")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 9, 2)
+script = ExtResource("16_qec81")
+spawnPoint = NodePath(".")
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/Ladder/LadderTrigger2"]
+collision_mask = 524289
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/Ladder/LadderTrigger2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
+shape = SubResource("BoxShape3D_vphai")
 
 [node name="floor-thick5" parent="Environment/Zone1" instance=ExtResource("13_0vhvw")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -44, 5.3727894, 18)
@@ -528,6 +556,100 @@ surface_material_override/0 = SubResource("StandardMaterial3D_06nu6")
 
 [node name="indicator-special-area2" parent="Environment/Zone1" instance=ExtResource("15_ajraq")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -37.81559, 3.0735023, 4.828159)
+
+[node name="GuidingBoard" parent="Environment/Zone1" instance=ExtResource("18_ln6h8")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -41.54303, 5.153576, 7.991928)
+
+[node name="Visual+Audio Guide" type="Node3D" parent="Environment/Zone1"]
+
+[node name="Label3D" type="Label3D" parent="Environment/Zone1/Visual+Audio Guide" node_paths=PackedStringArray("audioFile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 5, 14)
+billboard = 1
+text = "Nhấn nút A trên tay cầm để nhảy qua các chướng ngại vật. "
+script = ExtResource("19_vphai")
+audioFile = NodePath("AudioStreamPlayer3D")
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.79)
+shape = SubResource("BoxShape3D_4qjy7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D"]
+stream = ExtResource("20_iwvwc")
+volume_db = -16.0
+
+[node name="Label3D3" type="Label3D" parent="Environment/Zone1/Visual+Audio Guide" node_paths=PackedStringArray("audioFile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 5, 7)
+billboard = 1
+script = ExtResource("19_vphai")
+audioFile = NodePath("AudioStreamPlayer3D")
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D3"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D3/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+shape = SubResource("BoxShape3D_4qjy7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D3"]
+stream = ExtResource("20_4qjy7")
+volume_db = -16.0
+
+[node name="Label3D2" type="Label3D" parent="Environment/Zone1/Visual+Audio Guide" node_paths=PackedStringArray("audioFile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 5, 4)
+billboard = 1
+text = "Nhấn giữ nút Trigger ở cả hai tay cầm và thực hiện động tác kéo người lên nhé!"
+autowrap_mode = 1
+script = ExtResource("19_vphai")
+audioFile = NodePath("AudioStreamPlayer3D")
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D2"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D2/Area3D"]
+shape = SubResource("BoxShape3D_4qjy7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D2"]
+stream = ExtResource("22_d6ifv")
+volume_db = -16.0
+
+[node name="Label3D4" type="Label3D" parent="Environment/Zone1/Visual+Audio Guide" node_paths=PackedStringArray("audioFile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 5, 12)
+billboard = 1
+text = "Nhấn nút B để ngồi xuống."
+autowrap_mode = 1
+script = ExtResource("19_vphai")
+audioFile = NodePath("AudioStreamPlayer3D")
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D4"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D4/Area3D"]
+shape = SubResource("BoxShape3D_4qjy7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D4"]
+stream = ExtResource("23_efjx1")
+volume_db = -16.0
+
+[node name="Label3D5" type="Label3D" parent="Environment/Zone1/Visual+Audio Guide" node_paths=PackedStringArray("audioFile")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 5, 30)
+billboard = 1
+text = "Hãy bước qua cánh cửa phía trước để đi tiếp tới Khu vực 2 nhé."
+autowrap_mode = 1
+script = ExtResource("19_vphai")
+audioFile = NodePath("AudioStreamPlayer3D")
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D5"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D5/Area3D"]
+shape = SubResource("BoxShape3D_4qjy7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Environment/Zone1/Visual+Audio Guide/Label3D5"]
+stream = ExtResource("24_e78ep")
+volume_db = -16.0
 
 [node name="Zone2" type="Node3D" parent="Environment"]
 
@@ -590,36 +712,39 @@ skeleton = NodePath("../../../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_iwvwc")
 
 [node name="Basket" parent="Environment/Zone3" instance=ExtResource("16_ajraq")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -8.884381, 3, 36)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -8.884381, 3.105474, 36)
+
+[node name="indicator-square-f" parent="Environment/Zone3/Basket" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.011489511, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Zone3/Basket/indicator-square-f" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone3/Basket/indicator-square-f/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_luug5")
+shape = SubResource("ConvexPolygonShape3D_qec81")
 
 [node name="BasketTrigger" type="Area3D" parent="Environment/Zone3/Basket"]
 script = ExtResource("17_luug5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone3/Basket/BasketTrigger"]
-shape = SubResource("BoxShape3D_06nu6")
-
 [node name="Spawner" parent="." instance=ExtResource("10_0r11v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.03343, 4.501993, 28.676281)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -23.033428, 4.501993, 4.676281)
 playerNode = ExtResource("12_2lgl8")
 
 [node name="TeleportArea" parent="." instance=ExtResource("11_x35nm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.096805, 59)
 require_unlock = true
 
-[node name="TextRingMesh" parent="TeleportArea" index="1"]
-surface_material_override/0 = SubResource("StandardMaterial3D_itpu7")
-
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton3" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton2" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
+[connection signal="body_entered" from="Environment/Zone1/Ladder/LadderTrigger/Area3D" to="Environment/Zone1/Ladder/LadderTrigger" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Environment/Zone1/Ladder/LadderTrigger2/Area3D" to="Environment/Zone1/Ladder/LadderTrigger2" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D3/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D3" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D2/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D2" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D4/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D4" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D5/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D5" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Environment/Zone2/SpeechTrigger" to="Environment/Zone2/SpeechTrigger" method="_on_body_entered"]
-[connection signal="puzzle_solved" from="Environment/Zone3/Basket/BasketTrigger" to="TeleportArea" method="unlock_portal"]
 
 [editable path="Environment/Wall/wall2"]
 [editable path="Environment/Wall/wall3"]
@@ -657,4 +782,3 @@ surface_material_override/0 = SubResource("StandardMaterial3D_itpu7")
 [editable path="Environment/Zone3/Tables/Table5"]
 [editable path="Environment/Zone3/Tables/Table5/XRToolsInteractableAreaButton/InteractableAreaButton2/button-floor-round2"]
 [editable path="Environment/Zone3/Basket"]
-[editable path="TeleportArea"]

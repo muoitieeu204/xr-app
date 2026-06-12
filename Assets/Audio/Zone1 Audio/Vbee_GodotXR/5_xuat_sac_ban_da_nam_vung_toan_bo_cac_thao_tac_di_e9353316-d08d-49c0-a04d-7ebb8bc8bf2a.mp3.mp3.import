@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gpxr2eub6e00"
+path="res://.godot/imported/5_xuat_sac_ban_da_nam_vung_toan_bo_cac_thao_tac_di_e9353316-d08d-49c0-a04d-7ebb8bc8bf2a.mp3.mp3-96a9a6dc643a990d2c291477e0abf320.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/5_xuat_sac_ban_da_nam_vung_toan_bo_cac_thao_tac_di_e9353316-d08d-49c0-a04d-7ebb8bc8bf2a.mp3.mp3"
+dest_files=["res://.godot/imported/5_xuat_sac_ban_da_nam_vung_toan_bo_cac_thao_tac_di_e9353316-d08d-49c0-a04d-7ebb8bc8bf2a.mp3.mp3-96a9a6dc643a990d2c291477e0abf320.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

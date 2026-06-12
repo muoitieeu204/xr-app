@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://pfqmgskegt4x"]
+
+[ext_resource type="PackedScene" uid="uid://xt5ao31gteux" path="res://Prefabs/Boards/GuidingBoard.tscn" id="1_kxl4h"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_qwslm"]
+size = Vector2(2, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_m00vu"]
+viewport_path = NodePath("MeshInstance3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akxyr"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_m00vu")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_qwslm")
+surface_material_override/0 = SubResource("StandardMaterial3D_akxyr")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D"]
+size = Vector2i(1152, 648)
+
+[node name="Control" parent="MeshInstance3D/SubViewport" instance=ExtResource("1_kxl4h")]

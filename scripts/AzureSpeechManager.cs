@@ -53,12 +53,14 @@ public partial class AzureSpeechManager : Node
 		}
 		GD.Print("Connecting to Azure Service...");
 
-		var config = SpeechConfig.FromSubscription(SubscriptionKey, Region);
-		config.SpeechRecognitionLanguage = Language;
-		using var recognizer = new SpeechRecognizer(config);
-		GD.Print("AzureSpeechManager: Listening... Speak now!");
-		var result = await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
-		CallDeferred(MethodName.ProcessResult, result.Text, (int)result.Reason);
+		await System.Threading.Tasks.Task.Run(async () => {
+			var config = SpeechConfig.FromSubscription(SubscriptionKey, Region);
+			config.SpeechRecognitionLanguage = Language;
+			using var recognizer = new SpeechRecognizer(config);
+			GD.Print("AzureSpeechManager: Listening... Speak now!");
+			var result = await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
+			CallDeferred(MethodName.ProcessResult, result.Text, (int)result.Reason);
+		});
 	}
 
 	private void ProcessResult(string recognizeText, int reasonCode)

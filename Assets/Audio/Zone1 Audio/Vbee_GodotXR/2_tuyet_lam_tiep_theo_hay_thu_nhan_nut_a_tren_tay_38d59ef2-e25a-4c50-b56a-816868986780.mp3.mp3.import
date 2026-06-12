@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de8t8aphp262a"
+path="res://.godot/imported/2_tuyet_lam_tiep_theo_hay_thu_nhan_nut_a_tren_tay_38d59ef2-e25a-4c50-b56a-816868986780.mp3.mp3-d6a55d7cc659d02e4c6d9f8911e82fd3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/2_tuyet_lam_tiep_theo_hay_thu_nhan_nut_a_tren_tay_38d59ef2-e25a-4c50-b56a-816868986780.mp3.mp3"
+dest_files=["res://.godot/imported/2_tuyet_lam_tiep_theo_hay_thu_nhan_nut_a_tren_tay_38d59ef2-e25a-4c50-b56a-816868986780.mp3.mp3-d6a55d7cc659d02e4c6d9f8911e82fd3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8miyt5pum3vg"
+path="res://.godot/imported/4_rat_tot_ban_co_the_xoay_co_tay_de_xem_xet_no_de_177f548e-bc24-448e-ac4f-07ae2c461b22.mp3.mp3-42022e78ac93144c3c9328aff3f62fd8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/4_rat_tot_ban_co_the_xoay_co_tay_de_xem_xet_no_de_177f548e-bc24-448e-ac4f-07ae2c461b22.mp3.mp3"
+dest_files=["res://.godot/imported/4_rat_tot_ban_co_the_xoay_co_tay_de_xem_xet_no_de_177f548e-bc24-448e-ac4f-07ae2c461b22.mp3.mp3-42022e78ac93144c3c9328aff3f62fd8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
