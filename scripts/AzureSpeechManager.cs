@@ -10,6 +10,9 @@ public partial class AzureSpeechManager : Node
 
 	[Signal]
 	public delegate void OnspeechRecognizedEventHandler(string text);
+	[Signal]
+	public delegate void OnSpeechFailedEventHandler(string reason);
+
 	public static AzureSpeechManager Instance {get; private set;}
 
 	public override void _Ready(){
@@ -69,6 +72,13 @@ public partial class AzureSpeechManager : Node
 		else if(reason == ResultReason.NoMatch)
 		{
 			GD.Print("AzureSpeechManager: Speech could not be recognized");
+			EmitSignal(SignalName.OnSpeechFailed, "No Match");
 		}
 	}
+
+    public override void _ExitTree()
+    {
+		if(Instance == this) Instance = null;
+    }
+
 }

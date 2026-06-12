@@ -27,3 +27,6 @@ GodotSpeechRecognition/models/
 
 #Android build
 android/
+
+#Godot appsettings ignore
+Prefabs/PlayerPrefabs/appsettings.json
