@@ -42,6 +42,7 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 [global_group]
 
 interactable="Interactable Object"
+VoiceLines=""
 
 [godot_xr_tools]
 

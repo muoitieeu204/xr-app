@@ -5,5 +5,12 @@ extends Label3D
 
 
 func _on_area_3d_body_entered(_body: Node3D) -> void:
-	if not audioFile.playing:
+	# 1. Stop all other voice lines
+	get_tree().call_group("VoiceLines", "stop")
+	
+	# 2. Play this new speaker
+	if audioFile != null:
 		audioFile.play()
+	else:
+		$AudioStreamPlayer3D.play()
+	

@@ -9,7 +9,7 @@ public partial class AzureSpeechManager : Node
 	private string Language = "";
 
 	[Signal]
-	public delegate void OnspeechRecognizedEventHandler(string text);
+	public delegate void OnSpeechRecognizedEventHandler(string text);
 	[Signal]
 	public delegate void OnSpeechFailedEventHandler(string reason);
 
@@ -69,7 +69,7 @@ public partial class AzureSpeechManager : Node
 		if(reason == ResultReason.RecognizedSpeech)
 		{
 			GD.Print($"AzureSpeechManager: Heard '{recognizeText}'");
-			EmitSignal(SignalName.OnspeechRecognized, recognizeText.ToLower());
+			EmitSignal(SignalName.OnSpeechRecognized, recognizeText.ToLower());
 		}
 		else if(reason == ResultReason.NoMatch)
 		{

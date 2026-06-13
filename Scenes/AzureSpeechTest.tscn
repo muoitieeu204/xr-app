@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dftw32k6boo54"]
 
 [ext_resource type="Script" uid="uid://sdgif64tmxp2" path="res://scripts/AzureSpeechManager.cs" id="1_wxcq8"]
-[ext_resource type="Script" uid="uid://c0a43qhll1qeb" path="res://Scenes/AzureTestScript.gd" id="2_fg1ro"]
+[ext_resource type="Script" uid="uid://c0a43qhll1qeb" path="res://Prefabs/Boards/AzureSpeechChecker.gd" id="2_fg1ro"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

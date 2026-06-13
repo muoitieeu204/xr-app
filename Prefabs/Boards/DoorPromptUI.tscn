@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb4st7km0nnuy"]
+
+[ext_resource type="Script" uid="uid://b7ht46gtbo36k" path="res://Prefabs/Boards/DoorPromptUIScript.gd" id="1_jnjr2"]
+[ext_resource type="Texture2D" uid="uid://bafj8i136cogh" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/button_grey.png" id="2_t4etl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dew7a"]
+atlas = ExtResource("2_t4etl")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jnjr2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Speak here"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+icon = SubResource("AtlasTexture_dew7a")

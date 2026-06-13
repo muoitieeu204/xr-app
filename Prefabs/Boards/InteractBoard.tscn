@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsr5hwjiii4jk"]
+
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_f65lx"]
+[ext_resource type="PackedScene" uid="uid://doqgebgfxfg8x" path="res://Prefabs/Boards/WordCheckerBoard.tscn" id="2_ln4p2"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("1_f65lx")]
+scene = ExtResource("2_ln4p2")
+viewport_size = Vector2(1152, 648)
+transparent = 0
+scene_properties_keys = PackedStringArray()
