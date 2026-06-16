@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cawp6ndtryner"]
+[gd_scene load_steps=11 format=3 uid="uid://cawp6ndtryner"]
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_07h87"]
 [ext_resource type="PackedScene" uid="uid://copcbe0vw58e3" path="res://Assets/kenney_cube-pets_1.0/Models/GLB format/animal-chick.glb" id="2_bhfs2"]
@@ -6,6 +6,7 @@
 [ext_resource type="Animation" uid="uid://dlxa6f6hwurka" path="res://addons/godot-xr-tools/hands/animations/left/Default pose.res" id="4_cbsgx"]
 [ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_hj7q7"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="6_greas"]
+[ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="7_bhfs2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1vxe"]
 size = Vector3(0.31134033, 0.2940216, 0.24560547)
@@ -17,7 +18,7 @@ metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [sub_resource type="Resource" id="Resource_55yln"]
 script = ExtResource("5_hj7q7")
-closed_pose = ExtResource("4_cbsgx")
+closed_pose = ExtResource("7_bhfs2")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [node name="PickableObject" groups=["interactable"] instance=ExtResource("1_07h87")]

@@ -36,16 +36,16 @@ func _input(event):
 		if replayer:
 			replayer.load_and_play_session()
 	
-	# if event.is_action_pressed("ui_accept"):
-	# 	test_the_upload()
+	if event.is_action_pressed("ui_accept"):
+		test_the_upload()
 	
-# func test_the_upload() -> void:
-# 		print("Trigger upload function...")
-# 		var jsonPath = "user://temp_replay_2026-06-03T23-05-10.json"
-# 		var audioPath = "user://player_audio_2026-06-06T00-39-55.wav"
-# 		#Call the uploader node
-# 		var test_node = get_node("/root/SessionUploader")
-# 		if test_node:
-# 			test_node.UploadSessionDataAsync(jsonPath, audioPath)
-# 		else: 
-# 			print("Error: Cannt find SessionUploader node");
+func test_the_upload() -> void:
+		print("Trigger upload function...")
+		var jsonPath = "user://temp_replay_2026-06-03T23-05-10.json"
+		var audioPath = "user://player_audio_2026-06-06T00-39-55.wav"
+		#Call the uploader node
+		var test_node = get_node("/root/SessionUploader")
+		if test_node:
+			test_node.UploadSessionDataAsync(jsonPath, audioPath)
+		else: 
+			print("Error: Cannt find SessionUploader node");

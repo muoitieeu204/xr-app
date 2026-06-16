@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://q6m2t6myang5"]
-
-[ext_resource type="Script" uid="uid://blx75jywsu1nr" path="res://scripts/MicInput.cs" id="1_bo8vy"]
-
-[node name="MicInput" type="Node"]
-script = ExtResource("1_bo8vy")

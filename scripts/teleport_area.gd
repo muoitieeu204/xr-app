@@ -94,3 +94,7 @@ func _set_portal_color(color: Color) -> void:
 		# Optional: Also change scanline color if you want it to match
 		# mat.set_shader_parameter("scanline_color", color)
 
+
+
+func _on_basket_trigger_puzzle_solved() -> void:
+	unlock_portal()

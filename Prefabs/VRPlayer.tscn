@@ -90,7 +90,7 @@ metadata/_custom_type_script = "uid://cjfu28jmrajlo"
 transparency = 1
 albedo_color = Color(0.39607844, 0.7137255, 1, 0.15686275)
 
-[node name="XROrigin3D" type="XROrigin3D"]
+[node name="XROrigin3D" type="XROrigin3D" groups=["player_body"]]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 
@@ -133,10 +133,11 @@ bone_idx = 9
 [node name="AnimationTree" parent="LeftController/LeftHand" index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_p3mcy")
 
-[node name="MovementDirect" parent="LeftController/LeftHand" instance=ExtResource("2_rhvbn")]
+[node name="MovementDirect" parent="LeftController" instance=ExtResource("2_rhvbn")]
 strafe = true
 
-[node name="FunctionPickup" parent="LeftController/LeftHand" instance=ExtResource("3_qxkev")]
+[node name="FunctionPickup" parent="LeftController" instance=ExtResource("3_qxkev")]
+grab_distance = 0.2
 
 [node name="MovementClimb" parent="LeftController" instance=ExtResource("4_nkf4f")]
 
@@ -192,6 +193,7 @@ turn_mode = 2
 step_turn_angle = 10.0
 
 [node name="FunctionPickup" parent="RightController" instance=ExtResource("3_qxkev")]
+grab_distance = 0.2
 
 [node name="MovementJump" parent="RightController" instance=ExtResource("6_i8lb1")]
 jump_button_action = "ax_button"

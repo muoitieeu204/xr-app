@@ -15,5 +15,7 @@
     </PackageReference>
     <PackageReference Include="Vosk" Version="0.3.38" />
     <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.50.0" />
+    <Compile Remove="android\**" />
+    <Content Remove="android\**" />
   </ItemGroup>
 </Project>

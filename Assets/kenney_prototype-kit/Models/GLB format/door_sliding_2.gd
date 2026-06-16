@@ -24,3 +24,10 @@ func close_door():
 	print("Signal received! Playing sliding door animation...")
 	animation_player.play("close")
 	
+
+func _on_voice_command_handler_door_command_open() -> void:
+	open_door()
+
+
+func _on_voice_command_handler_door_command_close() -> void:
+	close_door()

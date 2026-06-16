@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtgq71mug4376" path="res://scripts/ModeSpawnerController.gd" id="1_bqvwl"]
 [ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/DummyScene.tscn" id="2_ivhjm"]
-[ext_resource type="PackedScene" uid="uid://c7ugp5kvp5qho" path="res://Scenes/SpectatorUI.tscn" id="3_cbimh"]
+[ext_resource type="PackedScene" uid="uid://c7ugp5kvp5qho" path="res://Prefabs/SpectatorPrefabs/SpectatorUI.tscn" id="3_cbimh"]
 
 [node name="Marker3D" type="Marker3D"]
 script = ExtResource("1_bqvwl")
