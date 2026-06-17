@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://07ihdpsumddq"]
 
 [ext_resource type="Script" uid="uid://djsdw83fxnqnm" path="res://scripts/ReplayController.gd" id="1_erdcu"]
-[ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/DummyScene.tscn" id="2_8u1gn"]
+[ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/InteractableObject/DummyScene.tscn" id="2_8u1gn"]
 [ext_resource type="Script" uid="uid://dweni8esu18e1" path="res://scripts/MicController.gd" id="3_uhca4"]
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_dihpl"]

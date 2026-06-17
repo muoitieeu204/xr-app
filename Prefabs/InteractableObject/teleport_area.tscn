@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://b4mettyqpc1cu"]
 
 [ext_resource type="Script" uid="uid://bubjo0pgcpwas" path="res://scripts/teleport_area.gd" id="1_b1v42"]
-[ext_resource type="Shader" uid="uid://jt7yuo5fk1yr" path="res://Prefabs/teleport_area_shader.gdshader" id="2_4h3l1"]
+[ext_resource type="Shader" uid="uid://jt7yuo5fk1yr" path="res://Prefabs/Shader/teleport_area_shader.gdshader" id="2_4h3l1"]
 [ext_resource type="AudioStream" uid="uid://d11stv3umutt6" path="res://Prefabs/Audio/TeleportSuccess.mp3" id="2_m4xex"]
 [ext_resource type="AudioStream" uid="uid://co7k1ewpgq4b6" path="res://Prefabs/Audio/TeleportDenied.mp3" id="3_bnh0a"]
-[ext_resource type="Script" uid="uid://cstbwtrbrr1lg" path="res://Prefabs/text_ring_mesh.gd" id="3_slshs"]
+[ext_resource type="Script" uid="uid://cstbwtrbrr1lg" path="res://scripts/text_ring_mesh.gd" id="3_slshs"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4h3l1"]
 cap_top = false

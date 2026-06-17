@@ -9,27 +9,27 @@
 [ext_resource type="PackedScene" uid="uid://cjq5edftlpt0g" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round-small.glb" id="5_b3bv3"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="6_ykflw"]
 [ext_resource type="Texture2D" uid="uid://8054t8qrhji7" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="7_ykflw"]
-[ext_resource type="PackedScene" uid="uid://y57awkqbs4jp" path="res://Prefabs/interactable-table.tscn" id="9_3hhen"]
+[ext_resource type="PackedScene" uid="uid://y57awkqbs4jp" path="res://Prefabs/InteractableObject/interactable-table.tscn" id="9_3hhen"]
 [ext_resource type="Script" uid="uid://c54peyseci6w2" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding_2.gd" id="9_uqxnd"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="10_0r11v"]
-[ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/teleport_area.tscn" id="11_x35nm"]
+[ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="11_x35nm"]
 [ext_resource type="PackedScene" uid="uid://dg7f7d5v4xbft" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall-corner.glb" id="11_y8byv"]
-[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/VRPlayer.tscn" id="12_2lgl8"]
+[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="12_2lgl8"]
 [ext_resource type="PackedScene" uid="uid://ow0722t1n6aq" path="res://Assets/kenney_prototype-kit/Models/GLB format/stairs.glb" id="12_ddbay"]
 [ext_resource type="PackedScene" uid="uid://croxnhtq5b51o" path="res://Assets/kenney_prototype-kit/Models/GLB format/floor-thick.glb" id="13_0vhvw"]
-[ext_resource type="PackedScene" uid="uid://dqt7w3ir1rvt2" path="res://Prefabs/climable_ladder.tscn" id="14_e2g1d"]
+[ext_resource type="PackedScene" uid="uid://dqt7w3ir1rvt2" path="res://Prefabs/InteractableObject/climable_ladder.tscn" id="14_e2g1d"]
 [ext_resource type="PackedScene" uid="uid://kqwlr8tlv55l" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-special-area.glb" id="15_ajraq"]
 [ext_resource type="PackedScene" uid="uid://b4uxef3n4qcwm" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-square-f.glb" id="16_ajraq"]
 [ext_resource type="Script" uid="uid://craotcurqjn1" path="res://scripts/LadderTrigger.gd" id="16_qec81"]
 [ext_resource type="Script" uid="uid://dwk8a1tg6wtlj" path="res://scripts/basket_trigger.gd" id="17_luug5"]
-[ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/cat-animal-cube.tscn" id="17_y4oqr"]
+[ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/InteractableObject/cat-animal-cube.tscn" id="17_y4oqr"]
 [ext_resource type="PackedScene" uid="uid://pfqmgskegt4x" path="res://Prefabs/Boards/BoardViewPort.tscn" id="18_ln6h8"]
-[ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/caterpillar-animal-cube.tscn" id="18_qec81"]
-[ext_resource type="PackedScene" uid="uid://cawp6ndtryner" path="res://Prefabs/chicken-animal-cube.tscn" id="19_ln6h8"]
+[ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/InteractableObject/caterpillar-animal-cube.tscn" id="18_qec81"]
+[ext_resource type="PackedScene" uid="uid://cawp6ndtryner" path="res://Prefabs/InteractableObject/chicken-animal-cube.tscn" id="19_ln6h8"]
 [ext_resource type="Script" uid="uid://c6oy6ob3ejkoi" path="res://Prefabs/Guide Sound/LabelAudioTrigger.gd" id="19_vphai"]
 [ext_resource type="AudioStream" uid="uid://da10a0aw5gnca" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/1_chao_mung_ban_den_voi_khu_vuc_1_hay_bat_dau_bang_0e116d24-37e1-4c5b-be74-08f66de58ca8.mp3.mp3" id="20_4qjy7"]
-[ext_resource type="PackedScene" uid="uid://dusdb37cvd7sk" path="res://Prefabs/cow-animal-cube.tscn" id="20_vphai"]
-[ext_resource type="PackedScene" uid="uid://qlbb2bkdgmcg" path="res://Prefabs/dog-animal-cube.tscn" id="21_4qjy7"]
+[ext_resource type="PackedScene" uid="uid://dusdb37cvd7sk" path="res://Prefabs/InteractableObject/cow-animal-cube.tscn" id="20_vphai"]
+[ext_resource type="PackedScene" uid="uid://qlbb2bkdgmcg" path="res://Prefabs/InteractableObject/dog-animal-cube.tscn" id="21_4qjy7"]
 [ext_resource type="PackedScene" uid="uid://gobjygmd0k5j" path="res://Prefabs/Audio/GuidingScene.tscn" id="21_rs4d8"]
 [ext_resource type="AudioStream" uid="uid://dye8w1clywiic" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/7_de_leo_len_thang_ban_hay_nhan_giu_nut_trigger_o_f8f35ab2-3218-4470-afe8-1708f32ada17.mp3.mp3" id="22_d6ifv"]
 [ext_resource type="AudioStream" uid="uid://c5s7gp2mllh4w" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/6_neu_ban_can_luon_lach_qua_cac_khe_hep_hoac_nhat_d70f53aa-0b41-4880-bb20-9ab649a00cb2.mp3.mp3" id="23_efjx1"]
@@ -431,7 +431,8 @@ mesh = SubResource("ArrayMesh_ropn8")
 shape = SubResource("ConvexPolygonShape3D_0r11v")
 
 [node name="Viewport2Din3D" parent="Environment/InteractableStructure/Door2" instance=ExtResource("26_efjx1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31.205975, 4.8029943, 54.153946)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31.205975, 4.541245, 54.153946)
+screen_size = Vector2(1, 1)
 scene = ExtResource("27_e78ep")
 transparent = 0
 scene_properties_keys = PackedStringArray()

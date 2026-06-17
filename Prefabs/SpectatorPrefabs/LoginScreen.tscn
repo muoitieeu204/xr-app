@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwbgi35lse2ea"]
+[gd_scene load_steps=8 format=3 uid="uid://dwbgi35lse2ea"]
+
+[ext_resource type="Script" uid="uid://phfwkpu6aoxp" path="res://scripts/LoginController.gd" id="1_cg2wo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
 content_margin_left = 48.0
@@ -71,13 +73,13 @@ label_settings = SubResource("LabelSettings_4jofw")
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="Username" type="LineEdit" parent="VBoxContainer"]
+[node name="Email" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
 theme_override_colors/font_placeholder_color = Color(0.6, 0.6, 0.6, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_input")
 theme_override_styles/focus = SubResource("StyleBoxFlat_input")
-placeholder_text = "Username"
+placeholder_text = "Email"
 
 [node name="Password" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
@@ -87,6 +89,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_input")
 theme_override_styles/focus = SubResource("StyleBoxFlat_input")
 placeholder_text = "Password"
 secret = true
+
+[node name="ShowPasswordToggle" type="CheckBox" parent="VBoxContainer/Password"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
 
 [node name="Spacing2" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 8)
@@ -110,3 +125,8 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_rxrqw")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_rxrqw")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rxrqw")
 text = "Forgot password?"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="LoginManager" type="Node" parent="."]
+script = ExtResource("1_cg2wo")

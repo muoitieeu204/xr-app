@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://b7om36ix41f1d" path="res://Prefabs/Shader/water_shader.tscn" id="2_bipgs"]
 [ext_resource type="MeshLibrary" uid="uid://cfvea0hls1qt1" path="res://Assets/platform_mesh_library_v2.tres" id="3_ty580"]
 [ext_resource type="MeshLibrary" uid="uid://cu44ow40wsm28" path="res://Assets/fantatsy_town_mesh_library.tres" id="4_7aait"]
-[ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/teleport_area.tscn" id="5_lxn05"]
+[ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="5_lxn05"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="6_bipgs"]
-[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/VRPlayer.tscn" id="7_ty580"]
+[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="7_ty580"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6r1au"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

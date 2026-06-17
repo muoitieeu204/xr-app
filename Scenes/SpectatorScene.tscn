@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_g2ck1"]
 [ext_resource type="PackedScene" uid="uid://cq5jodxpu2j8d" path="res://Prefabs/World_geometry/tutorial_world_geometry.tscn" id="2_augrm"]
-[ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/teleport_area.tscn" id="3_tnoq4"]
-[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/VRPlayer.tscn" id="4_akcv2"]
+[ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="3_tnoq4"]
+[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="4_akcv2"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7g3o2"]
 animation = &"Grip"
