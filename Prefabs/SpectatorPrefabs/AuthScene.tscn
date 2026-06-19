@@ -15,15 +15,39 @@ grow_vertical = 2
 script = ExtResource("1_2vo2r")
 
 [node name="LoginBox" parent="." instance=ExtResource("1_fl2ql")]
-visible = false
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="WelcomeScene" parent="." instance=ExtResource("2_2vo2r")]
+visible = false
 layout_mode = 1
+
+[node name="WelcomeBox" parent="WelcomeScene" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LogoutBox" parent="." instance=ExtResource("3_ld27q")]
 visible = false
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [editable path="LoginBox"]
 [editable path="WelcomeScene"]

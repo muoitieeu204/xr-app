@@ -1,0 +1,154 @@
+[gd_scene load_steps=23 format=3 uid="uid://dacrvo5efu5py"]
+
+[ext_resource type="Script" uid="uid://bh6uyhywmhoy2" path="res://scripts/LoginSceneManager.gd" id="1_55k4d"]
+[ext_resource type="PackedScene" uid="uid://cqi801cqfnv3i" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall.glb" id="1_wld3x"]
+[ext_resource type="PackedScene" uid="uid://bt2bmq724hx1k" path="res://Assets/computer_monitor_lowpoly_model.glb" id="2_jbn7o"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_76d8l"]
+[ext_resource type="PackedScene" uid="uid://bho8ebcx5lvhs" path="res://Prefabs/SpectatorPrefabs/AuthScene.tscn" id="4_7bcn3"]
+[ext_resource type="PackedScene" uid="uid://dgdb1texynduw" path="res://addons/godot-xr-tools/objects/virtual_keyboard.tscn" id="5_7bcn3"]
+[ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="6_t1kom"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_3b7j4"]
+[ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="8_55k4d"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="9_3b7j4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t1kom"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_3b7j4"]
+sky_material = SubResource("ProceduralSkyMaterial_t1kom")
+
+[sub_resource type="Environment" id="Environment_55k4d"]
+background_mode = 2
+sky = SubResource("Sky_3b7j4")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jbn7o"]
+size = Vector2(5, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p25gn"]
+size = Vector3(5, 0.1, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_76d8l"]
+points = PackedVector3Array(0.325, 0.3655014, 0.47494125, 0.29999506, 0.3655014, 0.5, 0.325, 0.31548467, 0.47494125, 0.325, 0.3655014, -0.47503915, 0.29999506, 0.31548467, 0.5, -0.30005872, 0.3655014, 0.5, 0.24998528, 0, 0.44998044, 0.325, 0.31548467, -0.47503915, 0.29999506, 0.3655014, -0.5, -0.30005872, 0.31548467, 0.5, -0.325, 0.3655014, 0.47494125, -0.25004894, 0, 0.44998044, 0.24998528, 0, -0.4500783, 0.29999506, 0.31548467, -0.5, -0.30005872, 0.3655014, -0.5, -0.325, 0.31548467, 0.47494125, -0.325, 0.3655014, -0.47503915, -0.25004894, 0, -0.4500783, -0.30005872, 0.31548467, -0.5, -0.325, 0.31548467, -0.47503915)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p25gn"]
+points = PackedVector3Array(-1.8966349, 0.53346515, -0.2908349, 1.8966349, 2.4893699, -0.23156506, 1.8966349, 2.4893699, -0.2908349, -1.8966349, 2.4893699, -0.23156506, 1.8966349, 0.53346515, -0.23156506, 1.8966349, 0.53346515, -0.2908349, -1.8966349, 2.4893699, -0.2908349, -1.8966349, 0.53346515, -0.23156506)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7bcn3"]
+points = PackedVector3Array(1.9544617, 2.4908838, -0.22572988, 1.8932413, 2.4298968, -0.53114444, 1.9544617, 0.5366494, -0.22572988, -1.9544617, 2.4908838, -0.22572988, -1.8320209, 2.4908838, -0.53114444, 1.8932413, 0.5366494, -0.53114444, -1.9544617, 0.5366494, -0.22572988, -1.8932413, 0.5366494, -0.53114444, 1.8320209, 2.4908838, -0.53114444, -1.8932413, 2.4298968, -0.53114444)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4453i"]
+points = PackedVector3Array(1.2763133, 1.8416, 4.603772, -1.3220081, 1.8416, 2.6436923, -1.4131122, 1.8416, 2.6895478, -0.6450682, 2.727503, 3.4304025, 1.4874936, 2.1056147, 2.6403754, -1.4393935, 2.1056147, 4.607291, 0.63300276, 2.719459, 3.8136237, 1.4131122, 1.8416, 2.6895478, -1.3674172, 1.8416, 4.558109, 1.4393935, 2.1056147, 4.607291, -1.4874936, 2.1056147, 2.6403754, 0.6450682, 2.727503, 3.4304025, -0.63300276, 2.719459, 3.8136237, -1.5355936, 2.1056147, 4.5113587, 1.5355936, 2.1056147, 4.5113587, 1.3915942, 2.1056147, 2.5921063, -1.3434942, 2.1056147, 4.6553583, -1.3915942, 2.1056147, 2.5921063, 1.3434942, 2.1056147, 4.6553583, 1.4588069, 1.8416, 4.4669733, 1.5355936, 2.1056147, 2.7363079, -1.5355936, 2.1056147, 2.7363079, -1.4588069, 1.8416, 4.4669733, 1.3220081, 1.8416, 2.6436923, -1.2763133, 1.8416, 4.603772, -1.4588069, 1.8416, 2.780683, 1.4588069, 1.8416, 2.780683, 1.3674172, 1.8416, 4.558109)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nooqn"]
+points = PackedVector3Array(-0.9888547, -0.17675607, -0.722375, 0.2174472, 1.1072571, -0.735574, 0.9834662, -0.073648214, 0.18996984, -0.99526626, -0.073648214, 0.18996984, 0.91769904, -0.17827566, -0.75400573, -0.21574469, 1.0677006, -0.89431477, -0.2930322, -0.073648214, -0.9590587, 0.98602074, -0.18249999, 0.14238916, 1.0154587, -0.073648214, -0.7035191, 0.20303363, 1.0650318, -0.89210165, -0.9583837, -0.17696673, 0.16855252, 0.50477934, -0.073648214, -0.9271162, -1.0272588, -0.073648214, -0.735574, -0.22924726, 1.1072571, -0.735574, -0.7717191, -0.073648214, -0.8632313, -0.27811387, -0.16736329, -0.9292091, -1.0272588, -0.073648214, 0.15802735, 1.0154587, -0.073648214, 0.15802735, 0.8239039, -0.073648214, -0.8312889, 0.28123215, -0.073648214, -0.9590587, 0.26549602, -0.16549969, -0.9275727, -0.99419206, -0.18017532, 0.14046147, 0.9827272, -0.18039009, -0.6932969, -0.5163794, -0.073648214, -0.9271162, 0.94880486, -0.17843574, 0.16984238, 0.9514738, -0.073648214, -0.76751643, -0.99526626, -0.073648214, -0.76751643, -0.73046356, -0.16611037, -0.8374439, 0.6323492, -0.073648214, -0.8951738, 0.5963495, -0.16445316, -0.8663723, -0.93148136, -0.073648214, -0.79934645, -0.48883158, -0.16604917, -0.8978365)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3b7j4"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_55k4d"]
+
+[node name="LoginScene" type="Node3D"]
+script = ExtResource("1_55k4d")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_55k4d")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("PlaneMesh_jbn7o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_p25gn")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1470213, 1.094101)
+current = true
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+
+[node name="LeftHandController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="XROrigin3D/LeftHandController" instance=ExtResource("6_t1kom")]
+
+[node name="FunctionPointer" parent="XROrigin3D/LeftHandController" instance=ExtResource("7_3b7j4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0.05, -0.1)
+
+[node name="RightHandController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"right_hand"
+
+[node name="RightHand" parent="XROrigin3D/RightHandController" instance=ExtResource("8_55k4d")]
+
+[node name="FunctionPointer" parent="XROrigin3D/RightHandController" instance=ExtResource("7_3b7j4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.05, -0.1)
+
+[node name="ComputerSetup" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.3410091, -1.0825944)
+
+[node name="stall2" parent="ComputerSetup" instance=ExtResource("1_wld3x")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.018718332, 0.049999952, 0.059293747)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ComputerSetup/stall2/stall" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerSetup/stall2/stall/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_76d8l")
+
+[node name="ComputerMonitor" parent="ComputerSetup" instance=ExtResource("2_jbn7o")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0003217291, 0.46083164, 0.032366633)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Cube_0/Object_4" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Cube_0/Object_4/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_p25gn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Cube_0/Object_5" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Cube_0/Object_5/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_7bcn3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Plane_1/Object_7" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Plane_1/Object_7/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_4453i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Cube_001_2/Object_9" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerSetup/ComputerMonitor/Sketchfab_model/root/GLTF_SceneRootNode/Cube_001_2/Object_9/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nooqn")
+
+[node name="Viewport2Din3D" parent="ComputerSetup/ComputerMonitor" instance=ExtResource("3_76d8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4493115, -0.22666705)
+screen_size = Vector2(3.78, 2)
+scene = ExtResource("4_7bcn3")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("AuthController.gd")
+
+[node name="VirtualKeyboard" parent="ComputerSetup" instance=ExtResource("5_7bcn3")]
+transform = Transform3D(0.47, 0, 0, 0, 0.23603646, 0.4064318, 0, -0.4064318, 0.23603646, 0, 0.5144188, 0.3120752)
+scene_properties_keys = PackedStringArray("virtual_keyboard_2d.gd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ComputerSetup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5410888, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ComputerSetup/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37513095, 0)
+mesh = SubResource("BoxMesh_3b7j4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerSetup/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37513095, 0)
+shape = SubResource("BoxShape3D_55k4d")
+
+[node name="StartXR" parent="." instance=ExtResource("9_3b7j4")]
+target_refresh_rate = 90.0
+
+[editable path="ComputerSetup/stall2"]
+[editable path="ComputerSetup/ComputerMonitor"]

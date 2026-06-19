@@ -28,6 +28,7 @@ func _ready() -> void:
 		logoutButton.pressed.connect(_on_logout_button_pressed)
 
 func _on_login_pressed() -> void:
+	print_debug("Login button was pressed! Sending request...")
 	var emailText = emailInput.text
 	var passwordText = passwordInput.text
 	var data_to_send = {
@@ -39,14 +40,29 @@ func _on_login_pressed() -> void:
 		"accept: text/plain",
 		"Content-Type: application/json"
 	]
-	httpRequest.request(apiUrl,headers,HTTPClient.METHOD_POST, json)
+	
+	# Allow unsafe localhost certificates in VR
+	httpRequest.set_tls_options(TLSOptions.client_unsafe())
+	httpRequest.request(apiUrl, headers, HTTPClient.METHOD_POST, json)
 
 func _on_show_password_toggle(button_pressed:bool) -> void:
 	passwordInput.secret = not button_pressed
 
 func _on_request_completed(result, responseCode, headers, body):
-	var json = JSON.parse_string(body.get_string_from_utf8())
-	if json["success"] == true:
+	print_debug("Request completed! Result code: ", result, " HTTP Status: ", responseCode)
+	
+	if result != HTTPRequest.RESULT_SUCCESS:
+		print_debug("HTTP Request failed completely! Make sure server is running.")
+		return
+		
+	var body_string = body.get_string_from_utf8()
+	var json = JSON.parse_string(body_string)
+	
+	if json == null:
+		print_debug("Failed to parse JSON response: ", body_string)
+		return
+		
+	if json.has("success") and json["success"] == true:
 		SessionData.accessToken = json["data"]["accessToken"]
 		SessionData.refreshToken = json["data"]["refreshToken"]
 		SessionData.userId = json["data"]["user"]["id"]
