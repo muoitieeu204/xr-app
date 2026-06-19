@@ -1,6 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwbgi35lse2ea"]
-
-[ext_resource type="Script" uid="uid://phfwkpu6aoxp" path="res://scripts/LoginController.gd" id="1_cg2wo"]
+[gd_scene load_steps=7 format=3 uid="uid://dwbgi35lse2ea"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
 content_margin_left = 48.0
@@ -127,6 +125,3 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_rxrqw")
 text = "Forgot password?"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
-
-[node name="LoginManager" type="Node" parent="."]
-script = ExtResource("1_cg2wo")

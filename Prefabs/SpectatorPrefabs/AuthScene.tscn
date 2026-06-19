@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bho8ebcx5lvhs"]
+
+[ext_resource type="Script" uid="uid://2u116woexcme" path="res://Prefabs/SpectatorPrefabs/AuthController.gd" id="1_2vo2r"]
+[ext_resource type="PackedScene" uid="uid://dwbgi35lse2ea" path="res://Prefabs/SpectatorPrefabs/LoginScreen.tscn" id="1_fl2ql"]
+[ext_resource type="PackedScene" uid="uid://djmys4bj6qmku" path="res://Prefabs/SpectatorPrefabs/WelcomeScene.tscn" id="2_2vo2r"]
+[ext_resource type="PackedScene" uid="uid://lxhjaoisofpk" path="res://Prefabs/SpectatorPrefabs/LogoutScreen.tscn" id="3_ld27q"]
+
+[node name="AuthScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2vo2r")
+
+[node name="LoginBox" parent="." instance=ExtResource("1_fl2ql")]
+visible = false
+layout_mode = 0
+
+[node name="WelcomeScene" parent="." instance=ExtResource("2_2vo2r")]
+layout_mode = 1
+
+[node name="LogoutBox" parent="." instance=ExtResource("3_ld27q")]
+visible = false
+layout_mode = 0
+
+[editable path="LoginBox"]
+[editable path="WelcomeScene"]

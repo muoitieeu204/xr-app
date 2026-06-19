@@ -1,0 +1,77 @@
+extends Control
+
+# var apiUrl : String = "https://103-162-31-23.sslip.io/api/auth/login"
+var apiUrl : String = "https://localhost:7153/api/auth/login"
+
+@onready var httpRequest = $LoginBox/HTTPRequest                                                                                                                                                                             
+@onready var emailInput = $LoginBox/VBoxContainer/Email                                                                                                                                                                      
+@onready var passwordInput = $LoginBox/VBoxContainer/Password                                                                                                                                                                
+@onready var loginButton = $LoginBox/VBoxContainer/LoginButton                                                                                                                                                               
+@onready var passwordToggle = $LoginBox/VBoxContainer/Password/ShowPasswordToggle   
+@onready var welcomeLabel = $WelcomeScene/WelcomeBox/VBoxContainer/Label2                                                                                 
+@onready var logoutButton = $LogoutBox/VBoxContainer/LogoutButton
+
+
+func _ready() -> void:
+	loginButton.pressed.connect(_on_login_pressed)
+	httpRequest.request_completed.connect(_on_request_completed)
+	passwordToggle.toggled.connect(_on_show_password_toggle)
+	welcomeLabel.text = SessionData.fullName
+
+	$LoginBox.visible = true
+	$WelcomeScene.visible = false
+	$LogoutBox.visible = false
+
+	if logoutButton == null :
+		printerr("Node not found, make sure to assign in the inspector!")
+	else:
+		logoutButton.pressed.connect(_on_logout_button_pressed)
+
+func _on_login_pressed() -> void:
+	var emailText = emailInput.text
+	var passwordText = passwordInput.text
+	var data_to_send = {
+		"email": emailText,
+		"password": passwordText
+	}
+	var json = JSON.stringify(data_to_send)
+	var headers = [
+		"accept: text/plain",
+		"Content-Type: application/json"
+	]
+	httpRequest.request(apiUrl,headers,HTTPClient.METHOD_POST, json)
+
+func _on_show_password_toggle(button_pressed:bool) -> void:
+	passwordInput.secret = not button_pressed
+
+func _on_request_completed(result, responseCode, headers, body):
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	if json["success"] == true:
+		SessionData.accessToken = json["data"]["accessToken"]
+		SessionData.refreshToken = json["data"]["refreshToken"]
+		SessionData.userId = json["data"]["user"]["id"]
+		SessionData.fullName = json["data"]["user"]["fullName"]
+		SessionData.userName = json["data"]["user"]["username"]
+		SessionData.roleName = json["data"]["user"]["roleName"]
+		SessionData.isActive = json["data"]["user"]["isActive"]
+		print_debug(JSON.stringify(json, "\t"))
+		print_debug("Successfully logged in as ", SessionData.fullName)
+
+		welcomeLabel.text = SessionData.fullName
+		$LoginBox.visible = false
+		$WelcomeScene.visible = true
+		$LogoutBox.visible = false
+		
+func _on_logout_button_pressed() -> void:
+	SessionData.accessToken = ""
+	SessionData.refreshToken = ""
+	SessionData.userId = 0
+	SessionData.fullName = ""
+	SessionData.userName = ""
+	SessionData.roleName = ""
+	SessionData.isActive = false
+	print_debug("User Logout Successfully")
+
+	$LoginBox.visible = true
+	$WelcomeScene.visible = false
+	$LogoutBox.visible = false
