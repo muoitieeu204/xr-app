@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cok3gljvnxsad"
 path.s3tc="res://.godot/imported/button-floor-round-small.png-7096baa7b2a554bc2f5bc10ba81aad07.s3tc.ctex"
+path.etc2="res://.godot/imported/button-floor-round-small.png-7096baa7b2a554bc2f5bc10ba81aad07.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/kenney_prototype-kit/Previews/button-floor-round-small.png"
-dest_files=["res://.godot/imported/button-floor-round-small.png-7096baa7b2a554bc2f5bc10ba81aad07.s3tc.ctex"]
+dest_files=["res://.godot/imported/button-floor-round-small.png-7096baa7b2a554bc2f5bc10ba81aad07.s3tc.ctex", "res://.godot/imported/button-floor-round-small.png-7096baa7b2a554bc2f5bc10ba81aad07.etc2.ctex"]
 
 [params]
 

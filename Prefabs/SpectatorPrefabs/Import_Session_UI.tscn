@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8125h0c6y0nv"]
+
+[ext_resource type="Script" uid="uid://t5umdxx4jjq7" path="res://Scenes/import_session.gd" id="1_q7esw"]
+
+[node name="SetupMenu" type="CanvasLayer"]
+script = ExtResource("1_q7esw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxContainer" type="BoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9058642
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 9
+metadata/_edit_use_anchors_ = true
+
+[node name="SelectReplay" type="Button" parent="Control/BoxContainer"]
+layout_mode = 2
+text = "Select Replay"
+
+[node name="StartSpectator" type="Button" parent="Control/BoxContainer"]
+layout_mode = 2
+text = "Start Spectator"
+
+[node name="ReplayDialog" type="FileDialog" parent="Control"]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.json")
+use_native_dialog = true
+
+[node name="AcceptDialog" type="AcceptDialog" parent="Control"]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(173, 100)
+dialog_text = "Please add both file!"
+
+[connection signal="pressed" from="Control/BoxContainer/SelectReplay" to="." method="_on_select_replay_pressed"]
+[connection signal="pressed" from="Control/BoxContainer/StartSpectator" to="." method="_on_start_spectator_pressed"]
+[connection signal="file_selected" from="Control/ReplayDialog" to="." method="_on_replay_dialog_file_selected"]

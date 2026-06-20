@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://byshjm0rj22by"
+path="res://.godot/imported/roof-right.obj-52b58efabeca3fd5566949c5c79ed15c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roof-right.obj-52b58efabeca3fd5566949c5c79ed15c.mesh"]
+
+source_file="res://Assets/kenney_fantasy-town-kit_2.0/Models/OBJ format/roof-right.obj"
+dest_files=["res://.godot/imported/roof-right.obj-52b58efabeca3fd5566949c5c79ed15c.mesh", "res://.godot/imported/roof-right.obj-52b58efabeca3fd5566949c5c79ed15c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

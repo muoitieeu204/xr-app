@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://crbxfl6kkm26g"]
+[gd_scene load_steps=5 format=3 uid="uid://crbxfl6kkm26g"]
 
 [ext_resource type="Script" uid="uid://brrpl4pjewjmv" path="res://first-person-movement-/player.gd" id="1_h5gbs"]
+[ext_resource type="PackedScene" uid="uid://07ihdpsumddq" path="res://Prefabs/PlayerPrefabs/ReplayManager.tscn" id="2_cxkt2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0aunn"]
 
@@ -21,3 +22,10 @@ shape = SubResource("CapsuleShape3D_uti77")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4614255, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
+
+[node name="ReplayManager" parent="." instance=ExtResource("2_cxkt2")]
+
+[node name="Replayer" parent="ReplayManager" index="0" node_paths=PackedStringArray("recorded_objects")]
+recorded_objects = [NodePath("../../Neck/Camera3D")]
+
+[editable path="ReplayManager"]

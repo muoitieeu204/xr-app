@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dftw32k6boo54"]
+
+[ext_resource type="Script" uid="uid://sdgif64tmxp2" path="res://scripts/AzureSpeechManager.cs" id="1_wxcq8"]
+[ext_resource type="Script" uid="uid://c0a43qhll1qeb" path="res://Prefabs/Boards/AzureSpeechChecker.gd" id="2_fg1ro"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AzureManager" type="Node" parent="."]
+script = ExtResource("1_wxcq8")
+
+[node name="TestController" type="Node" parent="." node_paths=PackedStringArray("speechManager", "recordButton", "outputLabel")]
+script = ExtResource("2_fg1ro")
+speechManager = NodePath("../AzureManager")
+recordButton = NodePath("../MarginContainer/VBoxContainer/Button")
+outputLabel = NodePath("../MarginContainer/VBoxContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -338.0
+offset_top = -81.5
+offset_right = 344.0
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Output: "
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Press To Record"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="TestController" method="_on_button_pressed"]

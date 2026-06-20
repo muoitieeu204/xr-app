@@ -1,19 +1,19 @@
 extends Node
-class_name  ReplayController
-@export var recorded_objects : Array[Node3D]
-@export var dummy_scene : PackedScene # Drag your saved Dummy scene here in the Inspector
+class_name ReplayerFpv
+@export var recorded_objects: Array[Node3D]
+@export var dummy_scene: PackedScene # Drag your saved Dummy scene here in the Inspector
 @onready var delay: Timer = $Delay
 
 # File path configuration
-const SAVE_PATH : String = "user://temp_replay.json"
+var SAVE_PATH: String = "user://replay.json"
 
 # Runtime tracking state
-var frames : int = 0
-var recording_data : Dictionary = {}
-var recording : bool = false
-var is_playing : bool = false
-var current_dummy : Node3D = null
-
+var frames: int = 0
+var recording_data: Dictionary = {}
+var recording: bool = false
+var is_playing: bool = false
+var current_dummy: Node3D = null
+var linked_audio_filename: String = ""
 # --- STEP 1: RECORDING TIMELINE ---
 
 func start_recording_session() -> void:
@@ -62,11 +62,13 @@ func save_telemetry_to_json() -> void:
 	print("Serializing RAM dictionary to JSON structure...")
 	
 	# 1. Build a clean, scalable envelope payload layout
-	var file_payload : Dictionary = {
+	var file_payload: Dictionary = {
 		"metadata": {
 			"player_profile": "Hoc",
 			"total_recorded_frames": frames,
-			"engine_version": "Godot 4"
+			"engine_version": "Godot 4",
+			"audio_file": linked_audio_filename,
+			"world_path": get_tree().current_scene.scene_file_path
 		},
 		"frames": {}
 	}
@@ -86,7 +88,7 @@ func save_telemetry_to_json() -> void:
 			}
 			
 	# 3. Stringify the structured dictionary into raw plain text
-	var json_string : String = JSON.stringify(file_payload, "\t") # Tab indents make it readable
+	var json_string: String = JSON.stringify(file_payload, "\t") # Tab indents make it readable
 	
 	# 4. Use FileAccess to overwrite the target path
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
@@ -111,7 +113,7 @@ func load_and_play_session() -> void:
 	
 	# 1. Pull down the raw file contents
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
-	var raw_text : String = file.get_as_text()
+	var raw_text: String = file.get_as_text()
 	file.close()
 	
 	# 2. Parse the text back into an active memory dictionary
@@ -139,7 +141,7 @@ func run_playback_loop(frames_data: Dictionary, total_frames: int) -> void:
 	
 	# Playback sequence execution loop
 	for f in total_frames:
-		var frame_key : String = str(f) # Remember: JSON file keys are ALWAYS strings!
+		var frame_key: String = str(f) # Remember: JSON file keys are ALWAYS strings!
 		
 		# If this specific frame index isn't in the file data map, skip smoothly
 		if not frames_data.has(frame_key):

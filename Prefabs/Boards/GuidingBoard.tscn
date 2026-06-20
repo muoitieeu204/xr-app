@@ -1,0 +1,123 @@
+[gd_scene load_steps=14 format=3 uid="uid://xt5ao31gteux"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v80bs"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_2chn7"]
+font_size = 32
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tu5tx"]
+load_path = "res://.godot/imported/meta-quest_sheet_double.png-82b7bcf65d403fc619b472f5831b50b4.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v80bs"]
+atlas = SubResource("CompressedTexture2D_tu5tx")
+region = Rect2(272, 400, 96, 96)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tpkxc"]
+paragraph_spacing = 3.0
+font_size = 32
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lwcpl"]
+load_path = "res://.godot/imported/meta-quest_sheet_double.png-82b7bcf65d403fc619b472f5831b50b4.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swsfs"]
+atlas = SubResource("CompressedTexture2D_lwcpl")
+region = Rect2(272, 272, 96, 96)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6nsat"]
+font_size = 32
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ahx48"]
+load_path = "res://.godot/imported/meta-quest_sheet_double.png-82b7bcf65d403fc619b472f5831b50b4.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe70n"]
+atlas = SubResource("CompressedTexture2D_ahx48")
+region = Rect2(16, 656, 96, 96)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nyhtu"]
+font_size = 32
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_336y7"]
+load_path = "res://.godot/imported/meta-quest_sheet_double.png-82b7bcf65d403fc619b472f5831b50b4.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6amc"]
+atlas = SubResource("CompressedTexture2D_336y7")
+region = Rect2(272, 656, 96, 96)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = -26
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "🎮 Hướng dẫn sử dụng tay cầm
+ "
+label_settings = SubResource("LabelSettings_v80bs")
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 184
+theme_override_constants/v_separation = 59
+columns = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Joystick Trái: Di chuyển"
+label_settings = SubResource("LabelSettings_2chn7")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_v80bs")
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Joystick Phải: Nhìn"
+label_settings = SubResource("LabelSettings_tpkxc")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_swsfs")
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Nút A: Nhảy"
+label_settings = SubResource("LabelSettings_6nsat")
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_xe70n")
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Nút B: Ngồi"
+label_settings = SubResource("LabelSettings_nyhtu")
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_k6amc")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5s7gp2mllh4w"
+path="res://.godot/imported/6_neu_ban_can_luon_lach_qua_cac_khe_hep_hoac_nhat_d70f53aa-0b41-4880-bb20-9ab649a00cb2.mp3.mp3-38f17df2fb6fc13f6de51a3b195e6e76.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/6_neu_ban_can_luon_lach_qua_cac_khe_hep_hoac_nhat_d70f53aa-0b41-4880-bb20-9ab649a00cb2.mp3.mp3"
+dest_files=["res://.godot/imported/6_neu_ban_can_luon_lach_qua_cac_khe_hep_hoac_nhat_d70f53aa-0b41-4880-bb20-9ab649a00cb2.mp3.mp3-38f17df2fb6fc13f6de51a3b195e6e76.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

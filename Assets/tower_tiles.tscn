@@ -1,0 +1,991 @@
+[gd_scene load_steps=199 format=3 uid="uid://bxfc1ojpdnet5"]
+
+[ext_resource type="PackedScene" uid="uid://dq56r8m4fvq8v" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-crystal-large.glb" id="1_mw0qr"]
+[ext_resource type="PackedScene" uid="uid://dci4o13db4vs8" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-crystal.glb" id="2_1rots"]
+[ext_resource type="PackedScene" uid="uid://durb4gtiftci7" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-dirt-large.glb" id="3_fyhpp"]
+[ext_resource type="PackedScene" uid="uid://dsosskw2o5u85" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-dirt.glb" id="4_kvim8"]
+[ext_resource type="PackedScene" uid="uid://7qonsb58to85" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-rocks-large.glb" id="5_3hgav"]
+[ext_resource type="PackedScene" uid="uid://bn7klgt23nhlj" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-rocks.glb" id="6_yd3ij"]
+[ext_resource type="PackedScene" uid="uid://cgl7ru7yenh8d" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-tree-large.glb" id="7_6vxdr"]
+[ext_resource type="PackedScene" uid="uid://cp8efq0un1w0x" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/detail-tree.glb" id="8_8pl7b"]
+[ext_resource type="PackedScene" uid="uid://b5df4vni53wv1" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-a-weapon.glb" id="9_4p6ka"]
+[ext_resource type="PackedScene" uid="uid://bx4myff4h2cre" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-a.glb" id="10_p4amu"]
+[ext_resource type="PackedScene" uid="uid://dvtv5isaj7ta6" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-b-weapon.glb" id="11_bhb46"]
+[ext_resource type="PackedScene" uid="uid://cri0mje8asn4r" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-b.glb" id="12_giwuy"]
+[ext_resource type="PackedScene" uid="uid://bs5ff4ek2pr0b" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-beam-burst.glb" id="13_xlkry"]
+[ext_resource type="PackedScene" uid="uid://cqtmcswcduopr" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-beam.glb" id="14_rodlc"]
+[ext_resource type="PackedScene" uid="uid://8rwkwcith8ci" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-c-weapon.glb" id="15_3ernl"]
+[ext_resource type="PackedScene" uid="uid://csup4i668sj1g" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-c.glb" id="16_vt5vw"]
+[ext_resource type="PackedScene" uid="uid://b7vk82skqrd75" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-d-weapon.glb" id="17_kbpo1"]
+[ext_resource type="PackedScene" uid="uid://ugtb3y48atti" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/enemy-ufo-d.glb" id="18_edpo2"]
+[ext_resource type="PackedScene" uid="uid://luajuxlppgqr" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/selection-a.glb" id="19_s3nlp"]
+[ext_resource type="PackedScene" uid="uid://d3ib3tkqi7la0" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/selection-b.glb" id="20_j7gju"]
+[ext_resource type="PackedScene" uid="uid://ctodjluiei2uu" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-crystal-large.glb" id="21_x885s"]
+[ext_resource type="PackedScene" uid="uid://1tea8u1ss3gn" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-crystal.glb" id="22_fg63r"]
+[ext_resource type="PackedScene" uid="uid://cic41tikwrq0f" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-dirt-large.glb" id="23_vy3ck"]
+[ext_resource type="PackedScene" uid="uid://bnhme1d2aivks" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-dirt.glb" id="24_uxeay"]
+[ext_resource type="PackedScene" uid="uid://cttfik0gnkab5" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-rocks-large.glb" id="25_4ym6u"]
+[ext_resource type="PackedScene" uid="uid://ceqniwsw2ub0j" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-rocks.glb" id="26_a2mve"]
+[ext_resource type="PackedScene" uid="uid://bx1or8mamus71" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-tree-large.glb" id="27_s6s3d"]
+[ext_resource type="PackedScene" uid="uid://86cu2mpo0tjj" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-detail-tree.glb" id="28_71fhk"]
+[ext_resource type="PackedScene" uid="uid://twm4spgeufr2" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-bump.glb" id="29_mtb8l"]
+[ext_resource type="PackedScene" uid="uid://dha7ybinc7oo8" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-inner.glb" id="30_b15mm"]
+[ext_resource type="PackedScene" uid="uid://bfwaq805x5y4o" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-large.glb" id="31_1wf2n"]
+[ext_resource type="PackedScene" uid="uid://bip6ma5hpnqix" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-outer.glb" id="32_bdfij"]
+[ext_resource type="PackedScene" uid="uid://slgs0lmywkc6" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-round.glb" id="33_p7hfs"]
+[ext_resource type="PackedScene" uid="uid://ce6aumry4ixin" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-corner-square.glb" id="34_d5uwg"]
+[ext_resource type="PackedScene" uid="uid://u3myaq46jiih" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-crossing.glb" id="35_akbvv"]
+[ext_resource type="PackedScene" uid="uid://bodt0uwg6vjst" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-crystal.glb" id="36_kfjlv"]
+[ext_resource type="PackedScene" uid="uid://buuxu8ffpq6w3" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-dirt.glb" id="37_pejjr"]
+[ext_resource type="PackedScene" uid="uid://owlcmsxgvn3n" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-end-round.glb" id="38_ntkm6"]
+[ext_resource type="PackedScene" uid="uid://cms2erdo3kayq" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-end.glb" id="39_eigau"]
+[ext_resource type="PackedScene" uid="uid://du0atdtx3g7x5" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-hill.glb" id="40_ix50o"]
+[ext_resource type="PackedScene" uid="uid://cusybg0g1c702" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-river-bridge.glb" id="41_rd76b"]
+[ext_resource type="PackedScene" uid="uid://chk5w1rfjekii" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-river-corner.glb" id="42_6qucm"]
+[ext_resource type="PackedScene" uid="uid://dd8a1oocur8fn" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-river-slope-large.glb" id="43_mewve"]
+[ext_resource type="PackedScene" uid="uid://0uylrpfhvgp7" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-river-slope.glb" id="44_nmfkq"]
+[ext_resource type="PackedScene" uid="uid://diffembqat186" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-river-straight.glb" id="45_kynk7"]
+[ext_resource type="PackedScene" uid="uid://c7htev6aurjvb" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-river-transition.glb" id="46_fj5ne"]
+[ext_resource type="PackedScene" uid="uid://d1kl8n1t73s6r" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-river-waterfall.glb" id="47_ner5d"]
+[ext_resource type="PackedScene" uid="uid://cxfa6myph6tkt" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-rock.glb" id="48_j1q2n"]
+[ext_resource type="PackedScene" uid="uid://hwwrn3nudbl6" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-slope.glb" id="49_8e848"]
+[ext_resource type="PackedScene" uid="uid://qkrwj4gtpgp2" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-spawn-end-round.glb" id="50_1c42e"]
+[ext_resource type="PackedScene" uid="uid://dxv8hwxcgfk0v" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-spawn-end.glb" id="51_3mc4v"]
+[ext_resource type="PackedScene" uid="uid://df6mp0kcj38io" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-spawn-round.glb" id="52_0uj5v"]
+[ext_resource type="PackedScene" uid="uid://68ngapsmb3bi" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-spawn.glb" id="53_yf015"]
+[ext_resource type="PackedScene" uid="uid://ctitdjajl76xr" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-split.glb" id="54_bfxow"]
+[ext_resource type="PackedScene" uid="uid://wxs24m58ln7d" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-straight-slope-large.glb" id="55_m76x8"]
+[ext_resource type="PackedScene" uid="uid://5fgc3hj7ihgm" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-straight-slope.glb" id="56_xhvi8"]
+[ext_resource type="PackedScene" uid="uid://can68fpf322ur" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-straight.glb" id="57_6t85b"]
+[ext_resource type="PackedScene" uid="uid://fi3817y8w4sm" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-transition.glb" id="58_t27fq"]
+[ext_resource type="PackedScene" uid="uid://2dlfq1xngq5d" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-tree-double.glb" id="59_h1i3b"]
+[ext_resource type="PackedScene" uid="uid://pw7i8fpflujg" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-tree-quad.glb" id="60_rq3ek"]
+[ext_resource type="PackedScene" uid="uid://dsw3iq3qmy038" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-tree.glb" id="61_slhs3"]
+[ext_resource type="PackedScene" uid="uid://dd1ud0wd511r6" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-wide-corner.glb" id="62_hm6f2"]
+[ext_resource type="PackedScene" uid="uid://dbu7d773bq7e3" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-wide-split.glb" id="63_gxp5s"]
+[ext_resource type="PackedScene" uid="uid://xdxtqnrw4fmy" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-wide-straight.glb" id="64_sk6hr"]
+[ext_resource type="PackedScene" uid="uid://mcpcrxyy2fjd" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile-wide-transition.glb" id="65_anm1c"]
+[ext_resource type="PackedScene" uid="uid://drj2w0cqbtt2o" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-tile.glb" id="66_48k5g"]
+[ext_resource type="PackedScene" uid="uid://1jidluko86y" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-wood-structure-high-part.glb" id="67_3mcvx"]
+[ext_resource type="PackedScene" uid="uid://un3fp32qbcx4" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-wood-structure-high.glb" id="68_q55lb"]
+[ext_resource type="PackedScene" uid="uid://des14666kvw4e" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-wood-structure-part.glb" id="69_uvgxo"]
+[ext_resource type="PackedScene" uid="uid://cu5y7jkc1506j" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/snow-wood-structure.glb" id="70_jhdnk"]
+[ext_resource type="PackedScene" uid="uid://b8lgcscs4fjf3" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/spawn-round.glb" id="71_blsol"]
+[ext_resource type="PackedScene" uid="uid://busvjfytflgc5" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/spawn-square.glb" id="72_x4vjt"]
+[ext_resource type="PackedScene" uid="uid://djtieisrmtc81" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-bump.glb" id="73_23tg2"]
+[ext_resource type="PackedScene" uid="uid://c8n8y7rxboe1r" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-corner-inner.glb" id="74_gk3o8"]
+[ext_resource type="PackedScene" uid="uid://dw85jtp2xkrjb" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-corner-large.glb" id="75_dmgox"]
+[ext_resource type="PackedScene" uid="uid://c84t5clncnhby" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-corner-outer.glb" id="76_1ju3i"]
+[ext_resource type="PackedScene" uid="uid://c38gd1d0dyx0c" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-corner-round.glb" id="77_fyuar"]
+[ext_resource type="PackedScene" uid="uid://dlrcg4dfctacn" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-corner-square.glb" id="78_618st"]
+[ext_resource type="PackedScene" uid="uid://10xt1trun0cw" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-crossing.glb" id="79_xndm1"]
+[ext_resource type="PackedScene" uid="uid://dg7jmyajc0aut" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-crystal.glb" id="80_dr4ej"]
+[ext_resource type="PackedScene" uid="uid://cj2bmpx8aqj7w" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-dirt.glb" id="81_vam6s"]
+[ext_resource type="PackedScene" uid="uid://cyjhr0k3j8j8w" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-end-round.glb" id="82_i5jrp"]
+[ext_resource type="PackedScene" uid="uid://uir3m2fymin6" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-end.glb" id="83_e2efn"]
+[ext_resource type="PackedScene" uid="uid://boldo6ax6nru1" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-hill.glb" id="84_wu3dp"]
+[ext_resource type="PackedScene" uid="uid://bt0x214uj6ux2" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-river-bridge.glb" id="85_6g8ue"]
+[ext_resource type="PackedScene" uid="uid://c11tcgdmx66yl" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-river-corner.glb" id="86_y3vq4"]
+[ext_resource type="PackedScene" uid="uid://bss1tdw6meto2" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-river-slope-large.glb" id="87_s22kl"]
+[ext_resource type="PackedScene" uid="uid://cy60i2ycnwqd4" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-river-slope.glb" id="88_gbm6g"]
+[ext_resource type="PackedScene" uid="uid://dxmna6xfa164k" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-river-straight.glb" id="89_v3wg7"]
+[ext_resource type="PackedScene" uid="uid://cfa7e33nru4ta" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-river-transition.glb" id="90_0aq6f"]
+[ext_resource type="PackedScene" uid="uid://u4c4ih152ecc" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-river-waterfall.glb" id="91_7xejv"]
+[ext_resource type="PackedScene" uid="uid://3ebxc4fmdghy" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-rock.glb" id="92_r7ur4"]
+[ext_resource type="PackedScene" uid="uid://blrb0nu6c36ur" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-slope.glb" id="93_2tlan"]
+[ext_resource type="PackedScene" uid="uid://cybhbdommfugb" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-spawn-end-round.glb" id="94_54cxm"]
+[ext_resource type="PackedScene" uid="uid://k2kpmpwfvdnb" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-spawn-end.glb" id="95_nd54e"]
+[ext_resource type="PackedScene" uid="uid://bx56lr5ja5cb7" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-spawn-round.glb" id="96_batpr"]
+[ext_resource type="PackedScene" uid="uid://byo4qjya6sxah" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-spawn.glb" id="97_si7jk"]
+[ext_resource type="PackedScene" uid="uid://b7iu2qnot8kgv" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-split.glb" id="98_1stal"]
+[ext_resource type="PackedScene" uid="uid://b52blvd7mvko4" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-straight-slope-large.glb" id="99_f0njb"]
+[ext_resource type="PackedScene" uid="uid://b1iiunpvhkkn2" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-straight-slope.glb" id="100_juwki"]
+[ext_resource type="PackedScene" uid="uid://b646phnxb6cax" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-straight.glb" id="101_foyul"]
+[ext_resource type="PackedScene" uid="uid://bosu3sryh0o58" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-transition.glb" id="102_mnli7"]
+[ext_resource type="PackedScene" uid="uid://dop5at01ka327" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-tree-double.glb" id="103_hlvi1"]
+[ext_resource type="PackedScene" uid="uid://wcdnsod2vnd3" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-tree-quad.glb" id="104_etuc2"]
+[ext_resource type="PackedScene" uid="uid://bp4i2xpftfh1l" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-tree.glb" id="105_7cs6c"]
+[ext_resource type="PackedScene" uid="uid://cgamhaivx747g" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-wide-corner.glb" id="106_ds8l1"]
+[ext_resource type="PackedScene" uid="uid://3v3iqqdruga3" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-wide-split.glb" id="107_t7pvw"]
+[ext_resource type="PackedScene" uid="uid://bs0e46138owdq" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-wide-straight.glb" id="108_fc7n5"]
+[ext_resource type="PackedScene" uid="uid://cniv5jqjur53e" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile-wide-transition.glb" id="109_l4pj7"]
+[ext_resource type="PackedScene" uid="uid://ccg0n5ckqoslu" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tile.glb" id="110_otduw"]
+[ext_resource type="PackedScene" uid="uid://bwgnsp34oectx" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-base.glb" id="111_iiso7"]
+[ext_resource type="PackedScene" uid="uid://dji14fagmyq2e" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-bottom-a.glb" id="112_xxwos"]
+[ext_resource type="PackedScene" uid="uid://drpcrmvyqwueh" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-bottom-b.glb" id="113_t1s1q"]
+[ext_resource type="PackedScene" uid="uid://drvvqyk8u3vjc" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-bottom-c.glb" id="114_fjxdt"]
+[ext_resource type="PackedScene" uid="uid://b7m5feflsn337" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-build-a.glb" id="115_k36in"]
+[ext_resource type="PackedScene" uid="uid://uhoqw2b17svi" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-build-b.glb" id="116_uo48f"]
+[ext_resource type="PackedScene" uid="uid://bgyttygdtqmd2" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-build-c.glb" id="117_rwdp6"]
+[ext_resource type="PackedScene" uid="uid://dntdix068byok" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-build-d.glb" id="118_nfx23"]
+[ext_resource type="PackedScene" uid="uid://d3ts5lqobiyq6" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-build-e.glb" id="119_x6bm7"]
+[ext_resource type="PackedScene" uid="uid://c4vii2cf2w3f1" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-build-f.glb" id="120_htyih"]
+[ext_resource type="PackedScene" uid="uid://bf4ugjx2umbug" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-crystals.glb" id="121_yta6v"]
+[ext_resource type="PackedScene" uid="uid://crifpmvov4wa3" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-middle-a.glb" id="122_3ci5l"]
+[ext_resource type="PackedScene" uid="uid://boe6h2st8xsi5" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-middle-b.glb" id="123_07onn"]
+[ext_resource type="PackedScene" uid="uid://cvanpmrxs0l5d" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-middle-c.glb" id="124_uai81"]
+[ext_resource type="PackedScene" uid="uid://ds3ynk7kf43t2" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-roof-a.glb" id="125_6kiw0"]
+[ext_resource type="PackedScene" uid="uid://cdbkdlp5r4u76" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-roof-b.glb" id="126_7wyrj"]
+[ext_resource type="PackedScene" uid="uid://dkh42we7q5aj6" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-roof-c.glb" id="127_p4mxn"]
+[ext_resource type="PackedScene" uid="uid://oe1ufr1f6mj0" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-top-a.glb" id="128_ahf0w"]
+[ext_resource type="PackedScene" uid="uid://dxs4mum6jj2i0" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-top-b.glb" id="129_q702s"]
+[ext_resource type="PackedScene" uid="uid://ciwliyu3gf6di" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-round-top-c.glb" id="130_ld0g0"]
+[ext_resource type="PackedScene" uid="uid://btlir6ndn7oa3" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-bottom-a.glb" id="131_g35p8"]
+[ext_resource type="PackedScene" uid="uid://co0nh8be8f5t" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-bottom-b.glb" id="132_yoyml"]
+[ext_resource type="PackedScene" uid="uid://b6ehotm8hcojt" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-bottom-c.glb" id="133_s4npm"]
+[ext_resource type="PackedScene" uid="uid://cfp55u5e5dmiq" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-build-a.glb" id="134_5lkgl"]
+[ext_resource type="PackedScene" uid="uid://cf2wjd75e2ujp" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-build-b.glb" id="135_s0r3d"]
+[ext_resource type="PackedScene" uid="uid://cc88vffko8uxf" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-build-c.glb" id="136_dmdua"]
+[ext_resource type="PackedScene" uid="uid://baxlh6p0pgdq7" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-build-d.glb" id="137_5m4b6"]
+[ext_resource type="PackedScene" uid="uid://86a2ctcbqlac" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-build-e.glb" id="138_2qhy5"]
+[ext_resource type="PackedScene" uid="uid://bxdtbfsa5nv1t" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-build-f.glb" id="139_vyaon"]
+[ext_resource type="PackedScene" uid="uid://viqj26eg1df5" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-middle-a.glb" id="140_p81ba"]
+[ext_resource type="PackedScene" uid="uid://p8s5sgcg5x8f" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-middle-b.glb" id="141_lnk68"]
+[ext_resource type="PackedScene" uid="uid://wv6nrdktfo8" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-middle-c.glb" id="142_nh7fl"]
+[ext_resource type="PackedScene" uid="uid://bic0bavfnxsk4" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-roof-a.glb" id="143_3paxf"]
+[ext_resource type="PackedScene" uid="uid://ccwajq40y5dif" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-roof-b.glb" id="144_xjavm"]
+[ext_resource type="PackedScene" uid="uid://banq7yhei4k8b" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-roof-c.glb" id="145_soqy8"]
+[ext_resource type="PackedScene" uid="uid://dm8omy06shccf" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-top-a.glb" id="146_os1wg"]
+[ext_resource type="PackedScene" uid="uid://dkbjle1t8j66v" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-top-b.glb" id="147_5a3f5"]
+[ext_resource type="PackedScene" uid="uid://bpj6ap6a1c64t" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/tower-square-top-c.glb" id="148_ul776"]
+[ext_resource type="PackedScene" uid="uid://6ulsblrqje1y" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-ammo-arrow.glb" id="149_cn453"]
+[ext_resource type="PackedScene" uid="uid://bvhxah5jwltwi" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-ammo-boulder.glb" id="150_sx8sc"]
+[ext_resource type="PackedScene" uid="uid://bt1dnyuyefubv" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-ammo-bullet.glb" id="151_jah6f"]
+[ext_resource type="PackedScene" uid="uid://dketumnkt4700" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-ammo-cannonball.glb" id="152_3axyt"]
+[ext_resource type="PackedScene" uid="uid://di28v0q6b0wk1" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-ballista.glb" id="153_up1m8"]
+[ext_resource type="PackedScene" uid="uid://o0mog4ohukr0" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-cannon.glb" id="154_cpwti"]
+[ext_resource type="PackedScene" uid="uid://dec0jgc1wc65" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-catapult.glb" id="155_c0gp0"]
+[ext_resource type="PackedScene" uid="uid://wrofrwgake1s" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/weapon-turret.glb" id="156_448wf"]
+[ext_resource type="PackedScene" uid="uid://c1tkicafh45ct" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/wood-structure-high-part.glb" id="157_mgww1"]
+[ext_resource type="PackedScene" uid="uid://doilypqg72crc" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/wood-structure-high.glb" id="158_5w42m"]
+[ext_resource type="PackedScene" uid="uid://b1hr3meqibqxo" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/wood-structure-part.glb" id="159_x0thc"]
+[ext_resource type="PackedScene" uid="uid://c2uctvfd3lfs5" path="res://Assets/kenney_tower-defense-kit/Models/GLB format/wood-structure.glb" id="160_7cxbw"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i4seb"]
+points = PackedVector3Array(-0.45917603, 0.27992284, -0.22962056, 0.4743461, 0.21006821, 0.47434378, 0.4826335, 0, 0.48263174, 0.4826335, 0, -0.48263174, -0.48256508, 0, 0.48263174, -0.48256508, 0, -0.48263174, 0.4743461, 0.21006821, -0.47434378, -0.47427768, 0.21006821, 0.47434378, 0.45810917, 0.29389417, 0.12878619, -0.47427768, 0.21006821, -0.47434378, -0.45917603, 0.27992284, 0.22962056, 0.45810917, 0.29389417, -0.12878619, -0.45804074, 0.29389417, 0.12878619, 0.46770516, 0.25306514, 0.35077676, 0.46770516, 0.25306514, -0.35077676, -0.45804074, 0.29389417, -0.12878619, -0.46763673, 0.25306514, 0.35077676, -0.46763673, 0.25306514, -0.35077676, 0.45924446, 0.27992284, -0.22962056, 0.45924446, 0.27992284, 0.22962056, -0.46829438, 0.22393075, 0.4390188, -0.46829438, 0.22393075, -0.4390188, 0.4683628, 0.22393075, -0.4390188, 0.4683628, 0.22393075, 0.4390188)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_egpd2"]
+points = PackedVector3Array(0.49273643, 0.39854726, 0.49273545, 0.4884974, 0, 0.48849615, 0.49273643, 0.39854726, -0.49273545, -0.48843518, 0, -0.48849615, -0.48843518, 0, 0.48849615, 0.4884974, 0, -0.48849615, -0.50787437, 0.4047215, -0.44439474, -0.50787437, 0.21424533, 0.50793654, 0.44439867, 0.4047215, 0.50793654, -0.49267325, 0.39854687, -0.4927345)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g64e6"]
+points = PackedVector3Array(-0.98329544, 5.551115e-17, -0.98329544, -0.98329544, 5.551115e-17, 0.98329544, 0.98329544, 5.551115e-17, -0.98329544, -0.4761159, 0.96815765, -0.6982636, 0.98329544, 5.551115e-17, 0.98329544, 0.6982636, 0.96815765, 0.66664183, -1.0158731, 0.20641756, 1.0158731, 1.0158731, 0.20641756, -1.0158731, -1.0158731, 0.20641756, -1.0158731, -0.57118, 0.96815765, -0.5713789, 1.0158731, 0.20641756, 1.0158731, 0.6031995, 0.96815765, 0.79352653, 0.76170594, 0.904591, 0.6982636, 0.62934947, 0.6709524, 0.89896333, -0.6030006, 0.9363743, -0.6030006, 0.7015424, 0.91838396, 0.7625045, -0.5445561, 0.945226, -0.66571605, 0.7300842, 0.9363743, 0.66664183)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yqai6"]
+points = PackedVector3Array(0.44439474, 0.40472153, -0.44439474, -0.48857865, 0, -0.48857865, -0.48857865, 0, 0.48857865, 0.48857865, 0, -0.48857865, 0.50793654, 0.21424246, 0.50793654, -0.50793654, 0.21424246, 0.50793654, -0.50793654, 0.21424246, -0.50793654, 0.48857865, 0, 0.48857865, 0.49273187, 0.39854634, -0.49273187, 0.50793654, 0.40472153, -0.44439474, 0.44439474, 0.40472153, -0.50793654)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_36rxd"]
+points = PackedVector3Array(-0.17451617, 0.3094617, -0.142795, -0.50793654, -0.007905424, -0.50793654, -0.50793654, -0.007905424, 0.50793654, 0.50793654, -0.007905424, -0.50793654, 0.50793654, 0.21423602, 0.50793654, 0.50793654, 0.21423602, -0.50793654, 0.50793654, -0.007905424, 0.50793654, -0.50793654, 0.2142671, 0.50793654, -0.50793654, 0.2142671, -0.50793654, -0.41267356, 0.3094617, -0.3015003, -0.19042648, 0.3094617, -0.39676327, -0.23805796, 0.3094617, -0.12698413, -0.41267356, 0.3094617, -0.22214764, -0.23805796, 0.3094617, -0.39676327, -0.17451617, 0.3094617, -0.3809524, -0.20633678, 0.3094617, -0.12698413)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kwg51"]
+points = PackedVector3Array(0.5079366, 0.21426398, 0.50793654, -0.4717478, 1.3877788e-17, -0.47174773, -0.4717478, 1.3877788e-17, 0.47174773, -0.5079366, 0.21426398, -0.50793654, 0.4717478, 1.3877788e-17, -0.47174773, -0.5079366, 0.21426398, 0.50793654, 0.5079366, 0.21426398, -0.50793654, 0.4717478, 1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lh0oi"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.50793654, -0.007914752, -0.50793654, -0.50793654, 0.21426398, -0.50793654, 0.50793654, -0.007914752, -0.50793654, -0.50793654, -0.007914752, 0.50793654, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.50793654, -0.007914752, 0.50793654)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3clvb"]
+points = PackedVector3Array(0.2875913, 0.7210579, 0.090743445, -0.49743754, -5.551115e-17, -0.49743754, -0.49743754, -5.551115e-17, 0.49743754, 0.49753493, 0, -0.49753493, 0.49753493, 0, 0.49753493, -0.24223346, 0.6303249, -0.13619703, -0.50793654, 0.21433394, 0.50793654, 0.50793654, 0.21433394, -0.50793654, 0.50793654, 0.21433394, 0.50793654, -0.50793654, 0.21433394, -0.50793654, -0.14958474, 0.56747746, 0.26927128, 0.13507287, 0.61317736, -0.16507863, -0.19579335, 0.53857905, -0.25599387, 0.23673685, 0.65402645, 0.1923371, 0.34623095, 0.6288882, 0.13543656, 0.26747036, 0.7296038, 0.04450081, 0.014540743, 0.43129998, -0.3503496, 0.27146715, 0.7349324, 0.09042605, -0.1478588, 0.5799613, 0.2513414, -0.14834456, 0.49163666, 0.32633945, 0.21890287, 0.72324634, 0.08750629, -0.2077533, 0.5806563, -0.20766033, -0.07288662, 0.43129998, -0.3503496, 0.3368445, 0.6219512, 0, 0.28359345, 0.7162196, 0.044694256, 0.25421154, 0.70198274, 0.13455504, -0.17734915, 0.5946798, -0.19216682)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yy3o6"]
+points = PackedVector3Array(0.47900525, 0.099999994, 0.47900525, -0.50793654, -0.00792563, -0.50793654, -0.50793654, -0.00792563, 0.50793654, 0.50793654, -0.00792563, -0.50793654, -0.47900525, 0.099999994, -0.47900525, 0.50793654, -0.00792563, 0.50793654, -0.47900525, 0.099999994, 0.47900525, 0.47900525, 0.099999994, -0.47900525)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_r1emr"]
+points = PackedVector3Array(0.5079366, 0.21426398, 0.50793654, -0.4717478, 1.3877788e-17, -0.47174773, -0.4717478, 1.3877788e-17, 0.47174773, -0.5079366, 0.21426398, -0.50793654, 0.4717478, 1.3877788e-17, -0.47174773, -0.5079366, 0.21426398, 0.50793654, 0.5079366, 0.21426398, -0.50793654, 0.4717478, 1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uqfrr"]
+points = PackedVector3Array(0.5079366, 0.21426398, 0.50793654, -0.4717478, 1.3877788e-17, -0.47174773, -0.4717478, 1.3877788e-17, 0.47174773, -0.5079366, 0.21426398, -0.50793654, 0.4717478, 1.3877788e-17, -0.47174773, -0.5079366, 0.21426398, 0.50793654, 0.5079366, 0.21426398, -0.50793654, 0.4717478, 1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8otde"]
+points = PackedVector3Array(0.5079117, 0.21435095, 0.50793654, 0.4953105, 0, -0.49533504, -0.49533528, 0, 0.49533504, -0.49533528, 0, -0.49533504, -0.5079365, 0.21435095, 0.50793654, 0.5079117, 0.21435095, -0.50793654, 0.4953105, 0, 0.49533504, -0.5079365, 0.21435095, -0.50793654, 0.13534608, 0.6103999, -0.16543175, 0.057529368, 0.59740895, 0.1439482, -0.47611666, 0.30949274, -0.20633678, 0.105653934, 0.44535118, 0.34727907, -0.075170435, 0.42974544, -0.36082378, -0.0829548, 0.5861677, -0.013780733, -0.014382836, 0.5980124, -0.14424995, 0.17712753, 0.6047836, 0.11812703, 0.19269936, 0.60597056, -0.07411459, -1.2424388e-05, 0.59304917, 0.14176822, -0.47611666, 0.30949274, -0.26977912, -0.5079365, 0.27786165, -0.20633678, 0.014918744, 0.42939284, -0.3597655, 0.20723018, 0.5907917, 0, 0.18988986, 0.60164875, 0.08758599, -0.07996865, 0.5762078, 0.03993732, 0.14921702, 0.60797834, -0.1492331)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6rnls"]
+points = PackedVector3Array(0.14486112, 0.29561943, 0.34772113, -0.48263174, 0, -0.48263174, -0.48263174, 0, 0.48263174, 0.48263174, 0, -0.48263174, -0.50793654, 0.2142671, -0.50793654, 0.48263174, 0, 0.48263174, 0.50793654, 0.2142671, -0.50793654, -0.50793654, 0.2142671, 0.50793654, 0.50793654, 0.2142671, 0.50793654, -0.14486112, 0.29561943, -0.34772113, -0.14486112, 0.29561943, 0.34772113, 0.14486112, 0.29561943, -0.34772113, 0.34017655, 0.25, 0.45368716, -0.34017655, 0.25, -0.45368716, 0.34017655, 0.25, -0.45368716, -0.34017655, 0.25, 0.45368716)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_us0u4"]
+points = PackedVector3Array(0.50793654, 0.26197004, 0.3809524, -0.49796683, -5.551115e-17, -0.49796683, -0.49796683, -5.551115e-17, 0.49796683, -0.15870531, 0.7856366, -0.26977912, 0.4978693, -5.551115e-17, -0.4978693, 0.4978693, -5.551115e-17, 0.4978693, -0.50793654, 0.21435691, 0.50793654, 0.50793654, 0.21435691, -0.50793654, -0.50793654, 0.21435691, -0.50793654, 0.38085297, 0.26197004, 0.50793654, -0.11107382, 0.7856366, -0.31741062, -0.38085297, 0.26197004, 0.50793654, 0.50793654, 0.26197004, -0.3809524, -0.15187624, 0.5407429, -0.4252725, 0.50793654, 0.21435691, 0.50793654, -0.11107382, 0.7856366, -0.26977912, -0.1746156, 0.76971376, -0.25396827, -0.13784271, 0.37359092, -0.47496223, -0.15245046, 0.77, -0.3049009)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_72aq3"]
+points = PackedVector3Array(-0.5158731, 0.42852795, -0.9522318, 0.4968254, 0, 0.9481482, 0.53174603, 0.42852795, -1.0158731, -0.48095244, 0, -0.9481482, -0.5158731, 0.23802379, 0.9522318, 0.4968254, 0, -0.9481482, -0.48095244, 0, 0.9481482, 0.4046904, 0.30150962, 0.8253471, -0.3887149, 0.4603175, -0.7619048, -0.3887149, 0.26976672, 1.0158731, 0.4046904, 0.4603175, -0.7619048, 0.53174603, 0.23802379, 0.9522318, -0.5158731, 0.42852795, -1.0158731, -0.3887149, 0.30150962, 0.8253471, 0.4046904, 0.26976672, 1.0158731, -0.36334756, 0.4450904, -0.9509042, 0.53174603, 0.42852795, -0.9522318, 0.375, 0.44250003, -0.93985194)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kkoda"]
+points = PackedVector3Array(-0.4904214, 0, -0.4904214, -0.4904214, 0, 0.4904214, -0.50793654, 0.40475413, -0.44439474, 0.4904214, 0, -0.4904214, 0.4904214, 0, 0.4904214, 0.4880642, 0.3976128, -0.4880642, -0.50793654, 0.21433698, 0.50793654, 0.50793654, 0.21433698, 0.50793654, -0.37490213, 0.4487847, -0.5, -0.3445552, 0.2580946, 0.4595269, 0.37490213, 0.4487847, -0.5, 0.3445552, 0.2580946, 0.4595269, 0.50793654, 0.40475413, -0.44439474, -0.4880642, 0.3976128, -0.4880642, -0.33686778, 0.42579964, -0.37899825, 0.33686778, 0.42579964, -0.37899825)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nmgto"]
+points = PackedVector3Array(0.44439477, 0.24603021, 0.41267356, -0.47805798, 0, -0.47805792, -0.47805798, 0, 0.47805792, 0.47805798, 0, -0.47805792, -0.34724832, 0.25, -0.46311855, -0.5079366, 0.21425465, 0.50793654, 0.47805798, 0, 0.47805792, 0.5079366, 0.21425465, -0.50793654, -0.5079366, 0.21425465, -0.50793654, 0.5079366, 0.21425465, 0.50793654, -0.34724832, 0.25, 0.46311855, 0.34724826, 0.25, -0.46311855, 0.34724826, 0.25, 0.46311855, 0.44439477, 0.24603021, 0.3650421)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t7plf"]
+points = PackedVector3Array(0.38085297, 0.26190478, -0.46030504, -0.47805792, 0, -0.47805792, -0.47805792, 0, 0.47805792, 0.47805792, 0, -0.47805792, 0.50793654, 0.21425465, 0.50793654, -0.50793654, 0.21425465, 0.50793654, -0.38085297, 0.26190478, -0.50793654, 0.47805792, 0, 0.47805792, 0.50793654, 0.21425465, -0.50793654, -0.50793654, 0.21425465, -0.50793654, -0.38085297, 0.26190478, -0.46030504, 0.38085297, 0.26190478, -0.50793654)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ix85l"]
+points = PackedVector3Array(0.3381562, 0.42657825, 0.014038337, -0.4904214, 0, -0.4904214, -0.4904214, 0, 0.4904214, 0.4904214, 0, -0.4904214, -0.37490213, 0.4487847, -0.5, 0.4904214, 0, 0.4904214, -0.38085297, 0.26187366, 0.50793654, 0.49470702, 0.39999998, -0.49470702, 0.50793654, 0.21433698, 0.50793654, -0.50793654, 0.40475413, -0.015810866, -0.49470702, 0.39999998, -0.49470702, 0.37490213, 0.4487847, -0.5, 0.50793654, 0.40475413, -0.015810866, 0.38085297, 0.26187366, 0.50793654, -0.50793654, 0.21433698, 0.50793654, -0.3381562, 0.42657825, 0.014038337)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v4pi6"]
+points = PackedVector3Array(-0.49533504, -5.551115e-17, -0.49533504, -0.49533504, -5.551115e-17, 0.49533504, 0.49533504, -5.551115e-17, -0.49533504, -0.07116693, 0.5941804, -0.09961586, 0.49533504, -5.551115e-17, 0.49533504, 0.50793654, 0.21435095, -0.50793654, -0.50793654, 0.21435095, 0.50793654, -0.50793654, 0.21435095, -0.50793654, 0.19329822, 0.60700876, 0.10410516, 0.50793654, 0.21435095, 0.50793654, 0.08795375, 0.6028753, -0.16129449, -0.08672008, 0.59876066, 0.08672008, -0.31546143, 0.429687, -0.19533944, 0.05851502, 0.6022709, 0.17563677, 0.1925255, 0.6058196, -0.014759669, 0.13443829, 0.4439431, 0.34367895, -0.3491318, 0.38885006, 0.19042648, 0.14656046, 0.6026333, -0.11726674, 0.014556897, 0.45562208, 0.32144195, -0.29927188, 0.4291986, -0.22445391)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7extw"]
+points = PackedVector3Array(-0.48849615, 0, -0.48849615, -0.48849615, 0, 0.48849615, -0.50793654, 0.4047215, -0.44439474, 0.48849615, 0, -0.48849615, 0.50793654, 0.21424533, 0.50793654, 0.4927345, 0.39854687, -0.4927345, -0.50793654, 0.21424533, 0.50793654, 0.48849615, 0, 0.48849615, 0.50793654, 0.4047215, -0.44439474, -0.4927345, 0.39854687, -0.4927345)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gxffu"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.47174773, -1.3877788e-17, -0.47174773, -0.47174773, -1.3877788e-17, 0.47174773, -0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bsks0"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.47174773, -1.3877788e-17, -0.47174773, -0.47174773, -1.3877788e-17, 0.47174773, -0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qdkk7"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.47174773, -1.3877788e-17, -0.47174773, -0.47174773, -1.3877788e-17, 0.47174773, -0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nnq0x"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.47174773, -1.3877788e-17, -0.47174773, -0.47174773, -1.3877788e-17, 0.47174773, -0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2wnbi"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, -0.50793654, -0.50793654, -0.007914752, 0.50793654, 0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.50793654, -0.007914752, 0.50793654)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_btqxb"]
+points = PackedVector3Array(-0.5158731, 0.42852795, -0.9522318, 0.4944263, 0, 0.94349545, 0.53174603, 0.42852795, -1.0158731, -0.47855335, 0, -0.94349545, -0.5158731, 0.23805797, 0.9522318, 0.4944263, 0, -0.94349545, -0.47855335, 0, 0.94349545, 0.53174603, 0.23805797, 0.9522318, -0.5158731, 0.42852795, -1.0158731, 0.53174603, 0.42852795, -0.9522318)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tss01"]
+points = PackedVector3Array(-0.49267325, 0.39854687, -0.4927345, 0.5079366, 0.21424533, 0.50793654, 0.4884974, 0, 0.48849615, -0.50787437, 0.21424533, 0.50793654, 0.4884974, 0, -0.48849615, -0.48843518, 0, -0.48849615, 0.5079366, 0.4047215, -0.44439474, -0.48843518, 0, 0.48849615, -0.50787437, 0.4047215, -0.44439474, 0.49273548, 0.39854687, -0.4927345)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ku1gi"]
+points = PackedVector3Array(-0.47174856, 0, -0.47174773, 0.5079117, 0.21426398, 0.50793654, -0.5079365, 0.21426398, 0.50793654, 0.5079117, 0.21426398, -0.50793654, 0.47172377, 0, 0.47174773, -0.5079365, 0.21426398, -0.50793654, -0.47174856, 0, 0.47174773, 0.47172377, 0, -0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_le007"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.47174773, -1.3877788e-17, -0.47174773, -0.47174773, -1.3877788e-17, 0.47174773, -0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, 0.47174773)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_llokb"]
+points = PackedVector3Array(0.31829053, 0.8475299, -0.30309767, -0.49960968, 5.551115e-17, -0.49960968, -0.49960968, 5.551115e-17, 0.49960968, 0.49960968, 5.551115e-17, -0.49960968, 0.50793654, 0.2143183, 0.50793654, -0.27754447, 0.946515, 0.27754447, -0.50793654, 0.2143183, -0.50793654, 0.49960968, 5.551115e-17, 0.49960968, 0.20623735, 0.96031743, -0.28568944, -0.50793654, 0.2143183, 0.50793654, 0.50793654, 0.2143183, -0.50793654, 0.3015003, 0.9443947, -0.20633678, -0.20633678, 0.9443947, 0.3015003, -0.30159974, 0.9443947, 0.20633678, 0.25754192, 0.6503626, -0.4394256, 0.4394256, 0.6503626, -0.25754192, -0.25754192, 0.6503626, 0.4394256, -0.4393962, 0.6503886, 0.25758034, -0.48152167, 0.4537281, 0.25574946, -0.25575048, 0.45372802, 0.4815236, 0.25575048, 0.45372802, -0.4815236, 0.48152167, 0.4537281, -0.25574946, -0.20633678, 0.96031743, 0.28568944, -0.38028222, 0.66632116, 0.38028222, 0.38028222, 0.66632116, -0.38028222, -0.28568944, 0.96031743, 0.20633678, 0.28568944, 0.96031743, -0.20633678, 0.20623735, 0.9443947, -0.3015003, 0.27754447, 0.946515, -0.27754447, 0.39487758, 0.65077066, -0.36452433, -0.36445177, 0.65078145, 0.39490202, 0.36445177, 0.65078145, -0.39490202)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bch1p"]
+points = PackedVector3Array(-0.3788891, 0.6353036, -0.37888753, 0.50792414, 0.2143183, 0.50793654, 0.41205657, 0.54482406, 0.41206777, 0.50792414, 0.2143183, -0.50793654, -0.49960977, 0, 0.49960968, -0.20624104, 0.96031743, 0.28568944, -0.49960977, 0, -0.49960968, 0.27753663, 0.94651794, -0.2775462, 0.49959737, 0, -0.49960968, 0.49959737, 0, 0.49960968, -0.50793654, 0.2143183, 0.50793654, -0.43942586, 0.6503624, 0.25754157, -0.50793654, 0.2143183, -0.50793654, 0.2575342, 0.6503637, -0.43942827, 0.43942204, 0.65036577, -0.2575466, 0.33417135, 0.75724006, 0.33418164, -0.25754452, 0.65036225, 0.43942472, -0.3341803, 0.7572372, -0.33417818, -0.28569216, 0.96031743, 0.20633678, 0.20632808, 0.96031743, -0.28568944, 0.28567976, 0.96031743, -0.20633678, -0.45783424, 0.5295978, -0.32052177, -0.32052392, 0.52959776, -0.45783338, 0.457866, 0.5295118, 0.3205527, 0.32051417, 0.52959824, 0.45783716, -0.38028285, 0.6663207, 0.3802813, 0.48157105, 0.4536354, -0.2557821, 0.25574294, 0.45372787, -0.48152685, -0.25575304, 0.45372808, 0.48152253, -0.48152173, 0.45372814, 0.25574932, 0.3802741, 0.66632247, -0.3802849, -0.20624104, 0.9443947, 0.3015003)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_llxpn"]
+points = PackedVector3Array(0.030320704, 0.9389435, 0.030320704, -0.49960968, 5.551115e-17, -0.49960968, -0.49960968, 5.551115e-17, 0.49960968, 0.49960968, 5.551115e-17, -0.49960968, 0.50793654, 0.2143183, 0.50793654, -0.50793654, 0.2143183, -0.50793654, 0.50793654, 0.2143183, -0.50793654, -0.50793654, 0.2143183, 0.50793654, 0.49960968, 5.551115e-17, 0.49960968, -0.030320704, 0.9389435, -0.030320704, -0.030320704, 0.9389435, 0.030320704, 0.030320704, 0.9389435, -0.030320704)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ylihd"]
+points = PackedVector3Array(-0.98325753, 0, -0.98325753, -0.98325753, 0, 0.98325753, 0.9834501, 0, -0.9834501, 0.9834501, 0, 0.9834501, -1.0158731, 0.2064031, -1.0158731, -1.0158731, 0.2064031, 1.0158731, 1.0158731, 0.2064031, -1.0158731, 0.6031995, 0.96815765, 0.50793654, 1.0158731, 0.2064031, 1.0158731, 0.2537694, 0.7776468, 0.79352653, 0.7300842, 0.96815765, 0.50793654, 0.63482124, 0.9363737, 0.63482124, 0.84694475, 0.6727746, 0.544478, 0.6031995, 0.96815765, 0.6030006, 0.6981536, 0.94664085, 0.5766281)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v5lo1"]
+points = PackedVector3Array(0.954305, 0.19959478, 0.5, -1.0158731, -0.01585126, -0.5158731, -0.9580105, 0.19999999, -0.48603767, 1.0158731, -0.01585126, -0.5158731, -1.0158731, -0.01585126, 0.53174603, 1.0158731, -0.01585126, 0.53174603, 0.9580105, 0.19999999, -0.48603767, -0.954305, 0.19959478, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qyo7l"]
+points = PackedVector3Array(0.954305, 0.19959478, 0.5, -1.0158731, -0.01585126, -0.5158731, -0.9580105, 0.19999999, -0.48603767, 1.0158731, -0.01585126, -0.5158731, -1.0158731, -0.01585126, 0.53174603, 1.0158731, -0.01585126, 0.53174603, 0.9580105, 0.19999999, -0.48603767, -0.954305, 0.19959478, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7ehgw"]
+points = PackedVector3Array(0.954305, 0.19959478, 0.5, -0.43545943, -1.3877788e-17, -0.4411311, -0.9206101, -0.01585126, 0.21426083, 1.0158731, -0.01585126, 0.53174603, -0.954305, 0.19959478, 0.5, 0.47900525, 0.19999999, -0.48603767, -0.47900525, 0.19999999, -0.48603767, 0.43545943, 0, -0.4411311, -1.0158731, -0.01585126, 0.53174603, 0.9206101, -0.01585126, 0.21426083, 0.9580105, 0.19999999, 0.3820919, -0.9580105, 0.19999999, 0.3820919, 1.0158731, -0.01585126, 0.4046904, -1.0158731, -0.01585126, 0.4046904, -0.86535895, 0.19966035, 0.20187812, 0.86535895, 0.19966035, 0.20187812)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2j7dr"]
+points = PackedVector3Array(0.50793654, 0.21426398, 0.50793654, -0.47174773, -1.3877788e-17, -0.47174773, -0.47174773, -1.3877788e-17, 0.47174773, -0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, -0.47174773, -0.50793654, 0.21426398, 0.50793654, 0.50793654, 0.21426398, -0.50793654, 0.47174773, -1.3877788e-17, 0.47174773)
+
+[node name="Tiles" type="Node3D"]
+
+[node name="detail-crystal-large2" parent="." instance=ExtResource("1_mw0qr")]
+visible = false
+
+[node name="detail-crystal2" parent="." instance=ExtResource("2_1rots")]
+visible = false
+
+[node name="detail-dirt-large2" parent="." instance=ExtResource("3_fyhpp")]
+visible = false
+
+[node name="detail-dirt2" parent="." instance=ExtResource("4_kvim8")]
+visible = false
+
+[node name="detail-rocks-large2" parent="." instance=ExtResource("5_3hgav")]
+visible = false
+
+[node name="detail-rocks2" parent="." instance=ExtResource("6_yd3ij")]
+visible = false
+
+[node name="detail-tree-large2" parent="." instance=ExtResource("7_6vxdr")]
+visible = false
+
+[node name="detail-tree2" parent="." instance=ExtResource("8_8pl7b")]
+visible = false
+
+[node name="enemy-ufo-a-weapon2" parent="." instance=ExtResource("9_4p6ka")]
+visible = false
+
+[node name="enemy-ufo-a2" parent="." instance=ExtResource("10_p4amu")]
+visible = false
+
+[node name="enemy-ufo-b-weapon2" parent="." instance=ExtResource("11_bhb46")]
+visible = false
+
+[node name="enemy-ufo-b2" parent="." instance=ExtResource("12_giwuy")]
+visible = false
+
+[node name="enemy-ufo-beam-burst2" parent="." instance=ExtResource("13_xlkry")]
+visible = false
+
+[node name="enemy-ufo-beam2" parent="." instance=ExtResource("14_rodlc")]
+visible = false
+
+[node name="enemy-ufo-c-weapon2" parent="." instance=ExtResource("15_3ernl")]
+visible = false
+
+[node name="enemy-ufo-c2" parent="." instance=ExtResource("16_vt5vw")]
+visible = false
+
+[node name="enemy-ufo-d-weapon2" parent="." instance=ExtResource("17_kbpo1")]
+visible = false
+
+[node name="enemy-ufo-d2" parent="." instance=ExtResource("18_edpo2")]
+visible = false
+
+[node name="selection-a2" parent="." instance=ExtResource("19_s3nlp")]
+visible = false
+
+[node name="selection-b2" parent="." instance=ExtResource("20_j7gju")]
+visible = false
+
+[node name="snow-detail-crystal-large2" parent="." instance=ExtResource("21_x885s")]
+visible = false
+
+[node name="snow-detail-crystal2" parent="." instance=ExtResource("22_fg63r")]
+visible = false
+
+[node name="snow-detail-dirt-large2" parent="." instance=ExtResource("23_vy3ck")]
+visible = false
+
+[node name="snow-detail-dirt2" parent="." instance=ExtResource("24_uxeay")]
+visible = false
+
+[node name="snow-detail-rocks-large2" parent="." instance=ExtResource("25_4ym6u")]
+visible = false
+
+[node name="snow-detail-rocks2" parent="." instance=ExtResource("26_a2mve")]
+visible = false
+
+[node name="snow-detail-tree-large2" parent="." instance=ExtResource("27_s6s3d")]
+visible = false
+
+[node name="snow-detail-tree2" parent="." instance=ExtResource("28_71fhk")]
+visible = false
+
+[node name="snow-tile-bump2" parent="." instance=ExtResource("29_mtb8l")]
+visible = false
+
+[node name="snow-tile-corner-inner2" parent="." instance=ExtResource("30_b15mm")]
+visible = false
+
+[node name="snow-tile-corner-large2" parent="." instance=ExtResource("31_1wf2n")]
+visible = false
+
+[node name="snow-tile-corner-outer2" parent="." instance=ExtResource("32_bdfij")]
+visible = false
+
+[node name="snow-tile-corner-round2" parent="." instance=ExtResource("33_p7hfs")]
+visible = false
+
+[node name="snow-tile-corner-square2" parent="." instance=ExtResource("34_d5uwg")]
+visible = false
+
+[node name="snow-tile-crossing2" parent="." instance=ExtResource("35_akbvv")]
+visible = false
+
+[node name="snow-tile-crystal2" parent="." instance=ExtResource("36_kfjlv")]
+visible = false
+
+[node name="snow-tile-dirt2" parent="." instance=ExtResource("37_pejjr")]
+visible = false
+
+[node name="snow-tile-end-round2" parent="." instance=ExtResource("38_ntkm6")]
+visible = false
+
+[node name="snow-tile-end2" parent="." instance=ExtResource("39_eigau")]
+visible = false
+
+[node name="snow-tile-hill2" parent="." instance=ExtResource("40_ix50o")]
+visible = false
+
+[node name="snow-tile-river-bridge2" parent="." instance=ExtResource("41_rd76b")]
+visible = false
+
+[node name="snow-tile-river-corner2" parent="." instance=ExtResource("42_6qucm")]
+visible = false
+
+[node name="snow-tile-river-slope-large2" parent="." instance=ExtResource("43_mewve")]
+visible = false
+
+[node name="snow-tile-river-slope2" parent="." instance=ExtResource("44_nmfkq")]
+visible = false
+
+[node name="snow-tile-river-straight2" parent="." instance=ExtResource("45_kynk7")]
+visible = false
+
+[node name="snow-tile-river-transition2" parent="." instance=ExtResource("46_fj5ne")]
+visible = false
+
+[node name="snow-tile-river-waterfall2" parent="." instance=ExtResource("47_ner5d")]
+visible = false
+
+[node name="snow-tile-rock2" parent="." instance=ExtResource("48_j1q2n")]
+visible = false
+
+[node name="snow-tile-slope2" parent="." instance=ExtResource("49_8e848")]
+visible = false
+
+[node name="snow-tile-spawn-end-round2" parent="." instance=ExtResource("50_1c42e")]
+visible = false
+
+[node name="snow-tile-spawn-end2" parent="." instance=ExtResource("51_3mc4v")]
+visible = false
+
+[node name="snow-tile-spawn-round2" parent="." instance=ExtResource("52_0uj5v")]
+visible = false
+
+[node name="snow-tile-spawn2" parent="." instance=ExtResource("53_yf015")]
+visible = false
+
+[node name="snow-tile-split2" parent="." instance=ExtResource("54_bfxow")]
+visible = false
+
+[node name="snow-tile-straight-slope-large2" parent="." instance=ExtResource("55_m76x8")]
+visible = false
+
+[node name="snow-tile-straight-slope2" parent="." instance=ExtResource("56_xhvi8")]
+visible = false
+
+[node name="snow-tile-straight2" parent="." instance=ExtResource("57_6t85b")]
+visible = false
+
+[node name="snow-tile-transition2" parent="." instance=ExtResource("58_t27fq")]
+visible = false
+
+[node name="snow-tile-tree-double2" parent="." instance=ExtResource("59_h1i3b")]
+visible = false
+
+[node name="snow-tile-tree-quad2" parent="." instance=ExtResource("60_rq3ek")]
+visible = false
+
+[node name="snow-tile-tree2" parent="." instance=ExtResource("61_slhs3")]
+visible = false
+
+[node name="snow-tile-wide-corner2" parent="." instance=ExtResource("62_hm6f2")]
+visible = false
+
+[node name="snow-tile-wide-split2" parent="." instance=ExtResource("63_gxp5s")]
+visible = false
+
+[node name="snow-tile-wide-straight2" parent="." instance=ExtResource("64_sk6hr")]
+visible = false
+
+[node name="snow-tile-wide-transition2" parent="." instance=ExtResource("65_anm1c")]
+visible = false
+
+[node name="snow-tile2" parent="." instance=ExtResource("66_48k5g")]
+visible = false
+
+[node name="snow-wood-structure-high-part2" parent="." instance=ExtResource("67_3mcvx")]
+visible = false
+
+[node name="snow-wood-structure-high2" parent="." instance=ExtResource("68_q55lb")]
+visible = false
+
+[node name="snow-wood-structure-part2" parent="." instance=ExtResource("69_uvgxo")]
+visible = false
+
+[node name="snow-wood-structure2" parent="." instance=ExtResource("70_jhdnk")]
+visible = false
+
+[node name="spawn-round2" parent="." instance=ExtResource("71_blsol")]
+visible = false
+
+[node name="spawn-square2" parent="." instance=ExtResource("72_x4vjt")]
+visible = false
+
+[node name="tile-bump2" parent="." instance=ExtResource("73_23tg2")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-bump2/tile-bump" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-bump2/tile-bump/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_i4seb")
+
+[node name="tile-corner-inner2" parent="." instance=ExtResource("74_gk3o8")]
+visible = false
+
+[node name="tile-corner-inner" parent="tile-corner-inner2" index="0"]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-corner-inner2/tile-corner-inner" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-corner-inner2/tile-corner-inner/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_egpd2")
+
+[node name="tile-corner-large2" parent="." instance=ExtResource("75_dmgox")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-corner-large2/tile-corner-large" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-corner-large2/tile-corner-large/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_g64e6")
+
+[node name="tile-corner-outer2" parent="." instance=ExtResource("76_1ju3i")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-corner-outer2/tile-corner-outer" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-corner-outer2/tile-corner-outer/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_yqai6")
+
+[node name="tile-corner-round2" parent="." instance=ExtResource("77_fyuar")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-corner-round2/tile-corner-round" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-corner-round2/tile-corner-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_36rxd")
+
+[node name="tile-corner-square2" parent="." instance=ExtResource("78_618st")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-corner-square2/tile-corner-square" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-corner-square2/tile-corner-square/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_kwg51")
+
+[node name="tile-crossing2" parent="." instance=ExtResource("79_xndm1")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-crossing2/tile-crossing" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-crossing2/tile-crossing/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_lh0oi")
+
+[node name="tile-crystal2" parent="." instance=ExtResource("80_dr4ej")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-crystal2/tile-crystal" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-crystal2/tile-crystal/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_3clvb")
+
+[node name="tile-dirt2" parent="." instance=ExtResource("81_vam6s")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-dirt2/tile-dirt" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-dirt2/tile-dirt/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_yy3o6")
+
+[node name="tile-end-round2" parent="." instance=ExtResource("82_i5jrp")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-end-round2/tile-end-round" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-end-round2/tile-end-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_r1emr")
+
+[node name="tile-end2" parent="." instance=ExtResource("83_e2efn")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-end2/tile-end" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-end2/tile-end/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_uqfrr")
+
+[node name="tile-hill2" parent="." instance=ExtResource("84_wu3dp")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-hill2/tile-hill" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-hill2/tile-hill/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_8otde")
+
+[node name="tile-river-bridge2" parent="." instance=ExtResource("85_6g8ue")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-river-bridge2/tile-river-bridge" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-river-bridge2/tile-river-bridge/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_6rnls")
+
+[node name="tile-river-corner2" parent="." instance=ExtResource("86_y3vq4")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-river-corner2/tile-river-corner" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-river-corner2/tile-river-corner/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_us0u4")
+
+[node name="tile-river-slope-large2" parent="." instance=ExtResource("87_s22kl")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-river-slope-large2/tile-river-slope-large" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-river-slope-large2/tile-river-slope-large/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_72aq3")
+
+[node name="tile-river-slope2" parent="." instance=ExtResource("88_gbm6g")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-river-slope2/tile-river-slope" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-river-slope2/tile-river-slope/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_kkoda")
+
+[node name="tile-river-straight2" parent="." instance=ExtResource("89_v3wg7")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-river-straight2/tile-river-straight" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-river-straight2/tile-river-straight/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nmgto")
+
+[node name="tile-river-transition2" parent="." instance=ExtResource("90_0aq6f")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-river-transition2/tile-river-transition" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-river-transition2/tile-river-transition/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_t7plf")
+
+[node name="tile-river-waterfall2" parent="." instance=ExtResource("91_7xejv")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-river-waterfall2/tile-river-waterfall" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-river-waterfall2/tile-river-waterfall/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ix85l")
+
+[node name="tile-rock2" parent="." instance=ExtResource("92_r7ur4")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-rock2/tile-rock" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-rock2/tile-rock/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_v4pi6")
+
+[node name="tile-slope2" parent="." instance=ExtResource("93_2tlan")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-slope2/tile-slope" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-slope2/tile-slope/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_7extw")
+
+[node name="tile-spawn-end-round2" parent="." instance=ExtResource("94_54cxm")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-spawn-end-round2/tile-spawn-end-round" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-spawn-end-round2/tile-spawn-end-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_gxffu")
+
+[node name="tile-spawn-end2" parent="." instance=ExtResource("95_nd54e")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-spawn-end2/tile-spawn-end" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-spawn-end2/tile-spawn-end/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_bsks0")
+
+[node name="tile-spawn-round2" parent="." instance=ExtResource("96_batpr")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-spawn-round2/tile-spawn-round" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-spawn-round2/tile-spawn-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qdkk7")
+
+[node name="tile-spawn2" parent="." instance=ExtResource("97_si7jk")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-spawn2/tile-spawn" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-spawn2/tile-spawn/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nnq0x")
+
+[node name="tile-split2" parent="." instance=ExtResource("98_1stal")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-split2/tile-split" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-split2/tile-split/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2wnbi")
+
+[node name="tile-straight-slope-large2" parent="." instance=ExtResource("99_f0njb")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-straight-slope-large2/tile-straight-slope-large" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-straight-slope-large2/tile-straight-slope-large/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_btqxb")
+
+[node name="tile-straight-slope2" parent="." instance=ExtResource("100_juwki")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-straight-slope2/tile-straight-slope" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-straight-slope2/tile-straight-slope/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tss01")
+
+[node name="tile-straight2" parent="." instance=ExtResource("101_foyul")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-straight2/tile-straight" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-straight2/tile-straight/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ku1gi")
+
+[node name="tile-transition2" parent="." instance=ExtResource("102_mnli7")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-transition2/tile-transition" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-transition2/tile-transition/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_le007")
+
+[node name="tile-tree-double2" parent="." instance=ExtResource("103_hlvi1")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-tree-double2/tile-tree-double" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-tree-double2/tile-tree-double/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_llokb")
+
+[node name="tile-tree-quad2" parent="." instance=ExtResource("104_etuc2")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-tree-quad2/tile-tree-quad" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-tree-quad2/tile-tree-quad/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_bch1p")
+
+[node name="tile-tree2" parent="." instance=ExtResource("105_7cs6c")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-tree2/tile-tree" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-tree2/tile-tree/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_llxpn")
+
+[node name="tile-wide-corner2" parent="." instance=ExtResource("106_ds8l1")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-wide-corner2/tile-wide-corner" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-wide-corner2/tile-wide-corner/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ylihd")
+
+[node name="tile-wide-split2" parent="." instance=ExtResource("107_t7pvw")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-wide-split2/tile-wide-split" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-wide-split2/tile-wide-split/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_v5lo1")
+
+[node name="tile-wide-straight2" parent="." instance=ExtResource("108_fc7n5")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-wide-straight2/tile-wide-straight" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-wide-straight2/tile-wide-straight/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qyo7l")
+
+[node name="tile-wide-transition2" parent="." instance=ExtResource("109_l4pj7")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile-wide-transition2/tile-wide-transition" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile-wide-transition2/tile-wide-transition/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_7ehgw")
+
+[node name="tile2" parent="." instance=ExtResource("110_otduw")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tile2/tile" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tile2/tile/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2j7dr")
+
+[node name="tower-round-base2" parent="." instance=ExtResource("111_iiso7")]
+visible = false
+
+[node name="tower-round-bottom-a2" parent="." instance=ExtResource("112_xxwos")]
+visible = false
+
+[node name="tower-round-bottom-b2" parent="." instance=ExtResource("113_t1s1q")]
+visible = false
+
+[node name="tower-round-bottom-c2" parent="." instance=ExtResource("114_fjxdt")]
+visible = false
+
+[node name="tower-round-build-a2" parent="." instance=ExtResource("115_k36in")]
+visible = false
+
+[node name="tower-round-build-b2" parent="." instance=ExtResource("116_uo48f")]
+visible = false
+
+[node name="tower-round-build-c2" parent="." instance=ExtResource("117_rwdp6")]
+visible = false
+
+[node name="tower-round-build-d2" parent="." instance=ExtResource("118_nfx23")]
+visible = false
+
+[node name="tower-round-build-e2" parent="." instance=ExtResource("119_x6bm7")]
+visible = false
+
+[node name="tower-round-build-f2" parent="." instance=ExtResource("120_htyih")]
+visible = false
+
+[node name="tower-round-crystals2" parent="." instance=ExtResource("121_yta6v")]
+visible = false
+
+[node name="tower-round-middle-a2" parent="." instance=ExtResource("122_3ci5l")]
+visible = false
+
+[node name="tower-round-middle-b2" parent="." instance=ExtResource("123_07onn")]
+visible = false
+
+[node name="tower-round-middle-c2" parent="." instance=ExtResource("124_uai81")]
+visible = false
+
+[node name="tower-round-roof-a2" parent="." instance=ExtResource("125_6kiw0")]
+visible = false
+
+[node name="tower-round-roof-b2" parent="." instance=ExtResource("126_7wyrj")]
+visible = false
+
+[node name="tower-round-roof-c2" parent="." instance=ExtResource("127_p4mxn")]
+visible = false
+
+[node name="tower-round-top-a2" parent="." instance=ExtResource("128_ahf0w")]
+visible = false
+
+[node name="tower-round-top-b2" parent="." instance=ExtResource("129_q702s")]
+visible = false
+
+[node name="tower-round-top-c2" parent="." instance=ExtResource("130_ld0g0")]
+visible = false
+
+[node name="tower-square-bottom-a2" parent="." instance=ExtResource("131_g35p8")]
+visible = false
+
+[node name="tower-square-bottom-b2" parent="." instance=ExtResource("132_yoyml")]
+visible = false
+
+[node name="tower-square-bottom-c2" parent="." instance=ExtResource("133_s4npm")]
+visible = false
+
+[node name="tower-square-build-a2" parent="." instance=ExtResource("134_5lkgl")]
+visible = false
+
+[node name="tower-square-build-b2" parent="." instance=ExtResource("135_s0r3d")]
+visible = false
+
+[node name="tower-square-build-c2" parent="." instance=ExtResource("136_dmdua")]
+visible = false
+
+[node name="tower-square-build-d2" parent="." instance=ExtResource("137_5m4b6")]
+visible = false
+
+[node name="tower-square-build-e2" parent="." instance=ExtResource("138_2qhy5")]
+visible = false
+
+[node name="tower-square-build-f2" parent="." instance=ExtResource("139_vyaon")]
+visible = false
+
+[node name="tower-square-middle-a2" parent="." instance=ExtResource("140_p81ba")]
+visible = false
+
+[node name="tower-square-middle-b2" parent="." instance=ExtResource("141_lnk68")]
+visible = false
+
+[node name="tower-square-middle-c2" parent="." instance=ExtResource("142_nh7fl")]
+visible = false
+
+[node name="tower-square-roof-a2" parent="." instance=ExtResource("143_3paxf")]
+visible = false
+
+[node name="tower-square-roof-b2" parent="." instance=ExtResource("144_xjavm")]
+visible = false
+
+[node name="tower-square-roof-c2" parent="." instance=ExtResource("145_soqy8")]
+visible = false
+
+[node name="tower-square-top-a2" parent="." instance=ExtResource("146_os1wg")]
+visible = false
+
+[node name="tower-square-top-b2" parent="." instance=ExtResource("147_5a3f5")]
+visible = false
+
+[node name="tower-square-top-c2" parent="." instance=ExtResource("148_ul776")]
+visible = false
+
+[node name="weapon-ammo-arrow2" parent="." instance=ExtResource("149_cn453")]
+visible = false
+
+[node name="weapon-ammo-boulder2" parent="." instance=ExtResource("150_sx8sc")]
+visible = false
+
+[node name="weapon-ammo-bullet2" parent="." instance=ExtResource("151_jah6f")]
+visible = false
+
+[node name="weapon-ammo-cannonball2" parent="." instance=ExtResource("152_3axyt")]
+visible = false
+
+[node name="weapon-ballista2" parent="." instance=ExtResource("153_up1m8")]
+visible = false
+
+[node name="weapon-cannon2" parent="." instance=ExtResource("154_cpwti")]
+visible = false
+
+[node name="weapon-catapult2" parent="." instance=ExtResource("155_c0gp0")]
+visible = false
+
+[node name="weapon-turret2" parent="." instance=ExtResource("156_448wf")]
+visible = false
+
+[node name="wood-structure-high-part2" parent="." instance=ExtResource("157_mgww1")]
+visible = false
+
+[node name="wood-structure-high2" parent="." instance=ExtResource("158_5w42m")]
+visible = false
+
+[node name="wood-structure-part2" parent="." instance=ExtResource("159_x0thc")]
+visible = false
+
+[node name="wood-structure2" parent="." instance=ExtResource("160_7cxbw")]
+visible = false
+
+[editable path="detail-crystal-large2"]
+[editable path="tile-bump2"]
+[editable path="tile-corner-inner2"]
+[editable path="tile-corner-large2"]
+[editable path="tile-corner-outer2"]
+[editable path="tile-corner-round2"]
+[editable path="tile-corner-square2"]
+[editable path="tile-crossing2"]
+[editable path="tile-crystal2"]
+[editable path="tile-dirt2"]
+[editable path="tile-end-round2"]
+[editable path="tile-end2"]
+[editable path="tile-hill2"]
+[editable path="tile-river-bridge2"]
+[editable path="tile-river-corner2"]
+[editable path="tile-river-slope-large2"]
+[editable path="tile-river-slope2"]
+[editable path="tile-river-straight2"]
+[editable path="tile-river-transition2"]
+[editable path="tile-river-waterfall2"]
+[editable path="tile-rock2"]
+[editable path="tile-slope2"]
+[editable path="tile-spawn-end-round2"]
+[editable path="tile-spawn-end2"]
+[editable path="tile-spawn-round2"]
+[editable path="tile-spawn2"]
+[editable path="tile-split2"]
+[editable path="tile-straight-slope-large2"]
+[editable path="tile-straight-slope2"]
+[editable path="tile-straight2"]
+[editable path="tile-transition2"]
+[editable path="tile-tree-double2"]
+[editable path="tile-tree-quad2"]
+[editable path="tile-tree2"]
+[editable path="tile-wide-corner2"]
+[editable path="tile-wide-split2"]
+[editable path="tile-wide-straight2"]
+[editable path="tile-wide-transition2"]
+[editable path="tile2"]

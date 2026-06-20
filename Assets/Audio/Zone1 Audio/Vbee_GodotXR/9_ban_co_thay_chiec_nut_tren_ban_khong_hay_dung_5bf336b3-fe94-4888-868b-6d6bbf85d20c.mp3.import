@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6hnmgy604s2w"
+path="res://.godot/imported/9_ban_co_thay_chiec_nut_tren_ban_khong_hay_dung_5bf336b3-fe94-4888-868b-6d6bbf85d20c.mp3-61413d2ece25c0d3e8539097eb20a11b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/9_ban_co_thay_chiec_nut_tren_ban_khong_hay_dung_5bf336b3-fe94-4888-868b-6d6bbf85d20c.mp3"
+dest_files=["res://.godot/imported/9_ban_co_thay_chiec_nut_tren_ban_khong_hay_dung_5bf336b3-fe94-4888-868b-6d6bbf85d20c.mp3-61413d2ece25c0d3e8539097eb20a11b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

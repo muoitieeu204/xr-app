@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://07ihdpsumddq"]
+
+[ext_resource type="Script" uid="uid://djsdw83fxnqnm" path="res://scripts/ReplayController.gd" id="1_erdcu"]
+[ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/InteractableObject/DummyScene.tscn" id="2_8u1gn"]
+[ext_resource type="Script" uid="uid://dweni8esu18e1" path="res://scripts/MicController.gd" id="3_uhca4"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_dihpl"]
+
+[node name="ReplayManager" type="Node"]
+
+[node name="Replayer" type="Node" parent="." node_paths=PackedStringArray("recorded_objects")]
+script = ExtResource("1_erdcu")
+recorded_objects = [null, null, null]
+dummy_scene = ExtResource("2_8u1gn")
+
+[node name="Delay" type="Timer" parent="Replayer"]
+process_callback = 0
+wait_time = 0.1
+
+[node name="MicController" type="Node" parent="." node_paths=PackedStringArray("replayController")]
+script = ExtResource("3_uhca4")
+replayController = NodePath("../Replayer")
+
+[node name="PlayerInputMic" type="AudioStreamPlayer" parent="MicController"]
+stream = SubResource("AudioStreamMicrophone_dihpl")
+autoplay = true
+bus = &"ReplayMic"
+
+[connection signal="timeout" from="Replayer/Delay" to="Replayer" method="_on_delay_timeout"]

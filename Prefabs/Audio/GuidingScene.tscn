@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://gobjygmd0k5j"]
+
+[ext_resource type="Script" uid="uid://c6oy6ob3ejkoi" path="res://Prefabs/Guide Sound/LabelAudioTrigger.gd" id="1_chb8t"]
+[ext_resource type="AudioStream" uid="uid://de8t8aphp262a" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/2_tuyet_lam_tiep_theo_hay_thu_nhan_nut_a_tren_tay_38d59ef2-e25a-4c50-b56a-816868986780.mp3.mp3" id="2_2ia4r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4qjy7"]
+size = Vector3(4, 4, 4)
+
+[node name="Label3D" type="Label3D" node_paths=PackedStringArray("audioFile")]
+billboard = 1
+text = "Nhấn nút A trên tay cầm để nhảy qua các chướng ngại vật. "
+script = ExtResource("1_chb8t")
+audioFile = NodePath("AudioStreamPlayer3D")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.79)
+shape = SubResource("BoxShape3D_4qjy7")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." groups=["VoiceLines"]]
+stream = ExtResource("2_2ia4r")
+volume_db = -16.0
+bus = &"Sounds"
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
