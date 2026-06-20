@@ -87,7 +87,7 @@ autoplay = "Scroll"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5" groups=["VoiceLines"]]
 stream = ExtResource("2_vakt2")
-volume_db = -16.0
+volume_db = -20.0
 pitch_scale = 1.32
 autoplay = true
 bus = &"Sounds"
