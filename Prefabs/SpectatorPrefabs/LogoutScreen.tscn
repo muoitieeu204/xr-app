@@ -1,42 +1,35 @@
 [gd_scene load_steps=5 format=3 uid="uid://lxhjaoisofpk"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
-content_margin_left = 48.0
-content_margin_top = 48.0
-content_margin_right = 48.0
-content_margin_bottom = 48.0
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.04)
-shadow_size = 40
-shadow_offset = Vector2(0, 10)
+[ext_resource type="Texture2D" uid="uid://sfoi1u6lm80c" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/panel_brown.png" id="1_panel"]
+[ext_resource type="Texture2D" uid="uid://ceo3mrig86xvp" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/button_red.png" id="2_btn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxFlat_ylf5s"]
+texture = ExtResource("1_panel")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_4jofw"]
 font_size = 32
-font_color = Color(0.12, 0.12, 0.12, 1)
-outline_size = 10
-outline_color = Color(0.8474744, 0.84747446, 0.84747446, 1)
+font_color = Color(1, 1, 1, 1)
+outline_size = 8
+outline_color = Color(0.4, 0.2, 0.1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jofw"]
-content_margin_top = 16.0
-content_margin_bottom = 16.0
-bg_color = Color(0.12, 0.12, 0.12, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+[sub_resource type="StyleBoxTexture" id="StyleBoxFlat_4jofw"]
+texture = ExtResource("2_btn")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 20.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vktwn"]
-content_margin_top = 16.0
-content_margin_bottom = 16.0
-bg_color = Color(0.25, 0.25, 0.25, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+[sub_resource type="StyleBoxTexture" id="StyleBoxFlat_vktwn"]
+texture = ExtResource("2_btn")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 20.0
+modulate_color = Color(0.8, 0.8, 0.8, 1)
 
 [node name="LogoutBox" type="PanelContainer"]
 custom_minimum_size = Vector2(416, 0)

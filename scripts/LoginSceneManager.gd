@@ -1,11 +1,22 @@
 extends Node3D
 
+@export_file('*.tscn') var main_scene : String
 
-# Called when the node enters the scene tree for the first time.
+var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
+signal joinButton
+
 func _ready() -> void:
-	pass # Replace with function body.
+	var viewport2d = $Room/ComputerSetup/ComputerMonitor/Viewport2Din3D
+	var authScene = viewport2d.get_scene_instance()
+	if authScene:
+		var joinButton_node = authScene.get_node("WelcomeScene/WelcomeBox/VBoxContainer/Button")
+		if joinButton_node: 
+			joinButton_node.pressed.connect(_on_join_button_pressed)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_join_button_pressed() -> void:
+	joinButton.emit()
+	if scene_base:
+		scene_base.load_scene(main_scene)
+	else:
+		print("No XRToolsSceneBase found. Falling back to direct scene load for testing...")
+		get_tree().change_scene_to_file(main_scene)

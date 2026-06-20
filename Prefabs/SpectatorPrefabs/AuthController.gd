@@ -1,15 +1,18 @@
 extends Control
 
-# var apiUrl : String = "https://103-162-31-23.sslip.io/api/auth/login"
-var apiUrl : String = "https://localhost:7153/api/auth/login"
+var apiUrl : String = "https://103-162-31-23.sslip.io/api/auth/login"
+# var apiUrl : String = "https://localhost:7153/api/auth/login"
 
 @onready var httpRequest = $LoginBox/HTTPRequest                                                                                                                                                                             
 @onready var emailInput = $LoginBox/VBoxContainer/Email                                                                                                                                                                      
 @onready var passwordInput = $LoginBox/VBoxContainer/Password                                                                                                                                                                
 @onready var loginButton = $LoginBox/VBoxContainer/LoginButton                                                                                                                                                               
 @onready var passwordToggle = $LoginBox/VBoxContainer/Password/ShowPasswordToggle   
+@onready var errorLabel = $LoginBox/VBoxContainer/ErrorLabel
+@onready var forgotButton = $LoginBox/VBoxContainer/ForgotButton
 @onready var welcomeLabel = $WelcomeScene/WelcomeBox/VBoxContainer/Label2                                                                                 
 @onready var logoutButton = $LogoutBox/VBoxContainer/LogoutButton
+
 
 
 func _ready() -> void:
@@ -29,6 +32,13 @@ func _ready() -> void:
 
 func _on_login_pressed() -> void:
 	print_debug("Login button was pressed! Sending request...")
+	if errorLabel != null:
+		errorLabel.visible = false
+		
+	loginButton.disabled = true
+	if forgotButton != null:
+		forgotButton.disabled = true
+	
 	var emailText = emailInput.text
 	var passwordText = passwordInput.text
 	var data_to_send = {
@@ -51,8 +61,19 @@ func _on_show_password_toggle(button_pressed:bool) -> void:
 func _on_request_completed(result, responseCode, headers, body):
 	print_debug("Request completed! Result code: ", result, " HTTP Status: ", responseCode)
 	
+	loginButton.disabled = false
+	if forgotButton != null:
+		forgotButton.disabled = false
+	
 	if result != HTTPRequest.RESULT_SUCCESS:
 		print_debug("HTTP Request failed completely! Make sure server is running.")
+		return
+		
+	if responseCode == 401:
+		print_debug("Unauthorized: Incorrect email or password.")
+		if errorLabel != null:
+			errorLabel.text = "Incorrect email or password."
+			errorLabel.visible = true
 		return
 		
 	var body_string = body.get_string_from_utf8()

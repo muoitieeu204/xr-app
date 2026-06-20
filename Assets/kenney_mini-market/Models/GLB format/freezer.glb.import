@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/freezer.glb-60ba74daf21c6238e61ed5cc4c70a24b.
 
 nodes/root_type=""
 nodes/root_name=""
-nodes/root_script=Resource("uid://b61xwycyvbuo6", "res://scripts/bulk_physic.gd")
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -33,7 +33,7 @@ animation/fps=60.0
 animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
-import_script/path="uid://b61xwycyvbuo6"
+import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
