@@ -245,14 +245,14 @@ theme_override_constants/separation = 22
 [node name="Title" type="Label" parent="MenuBox/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "🖥️ BẢNG ĐIỀU KHIỂN GIÁM SÁT"
+text = "BẢNG ĐIỀU KHIỂN VR"
 label_settings = SubResource("LabelSettings_title")
 horizontal_alignment = 1
 
 [node name="WelcomeLabel" type="Label" parent="MenuBox/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Xin chào, Người giám sát! 👋"
+text = "Xin chào, bạn nhỏ!"
 label_settings = SubResource("LabelSettings_welcome")
 horizontal_alignment = 1
 
@@ -272,7 +272,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_settings_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_settings_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_settings_pressed")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
-text = "⚙️ CÀI ĐẶT ÂM THANH"
+text = "CÀI ĐẶT ÂM THANH"
 
 [node name="ProgressButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer/ButtonsContainer"]
 layout_mode = 2
@@ -282,7 +282,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_progress_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_progress_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_progress_pressed")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
-text = "📊 XEM TIẾN ĐỘ"
+text = "XEM TIẾN ĐỘ"
 
 [node name="LogoutButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer/ButtonsContainer"]
 layout_mode = 2
@@ -292,4 +292,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_logout_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_logout_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_logout_pressed")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
-text = "🚪 ĐĂNG XUẤT"
+text = "ĐĂNG XUẤT"
