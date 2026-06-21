@@ -1,6 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://djmys4bj6qmku"]
-
-[ext_resource type="Texture2D" uid="uid://6c1ms2ydhyg8" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/banner_modern.png" id="1_ik6pn"]
+[gd_scene load_steps=3 format=3 uid="uid://djmys4bj6qmku"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
 content_margin_left = 48.0
@@ -20,18 +18,6 @@ shadow_offset = Vector2(0, 10)
 font_size = 32
 outline_size = 8
 outline_color = Color(0.4, 0.2, 0.1, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aso70"]
-atlas = ExtResource("1_ik6pn")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqkx5"]
-texture = SubResource("AtlasTexture_aso70")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aso70"]
-texture = ExtResource("1_ik6pn")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ik6pn"]
-texture = ExtResource("1_ik6pn")
 
 [node name="WelcomeScene" type="Control"]
 layout_mode = 3
@@ -74,7 +60,4 @@ layout_mode = 2
 [node name="Button" type="Button" parent="WelcomeBox/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_wqkx5")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_aso70")
-theme_override_styles/hover = SubResource("StyleBoxTexture_ik6pn")
 text = "JOIN WORLD"
