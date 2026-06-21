@@ -12,6 +12,7 @@ var apiUrl : String = "https://103-162-31-23.sslip.io/api/auth/login"
 @onready var forgotButton = $LoginBox/VBoxContainer/ForgotButton
 @onready var welcomeLabel = $WelcomeScene/WelcomeBox/VBoxContainer/Label2                                                                                 
 @onready var logoutButton = $LogoutBox/VBoxContainer/LogoutButton
+@onready var joinWorldButton = $WelcomeScene/WelcomeBox/VBoxContainer/Button
 
 
 
@@ -20,6 +21,17 @@ func _ready() -> void:
 	httpRequest.request_completed.connect(_on_request_completed)
 	passwordToggle.toggled.connect(_on_show_password_toggle)
 	welcomeLabel.text = SessionData.fullName
+	
+	# Kids playful micro-animations (scale & tilt on hover)
+	loginButton.mouse_entered.connect(_on_login_hover)
+	loginButton.mouse_exited.connect(_on_login_unhover)
+	forgotButton.mouse_entered.connect(_on_forgot_hover)
+	forgotButton.mouse_exited.connect(_on_forgot_unhover)
+	
+	if joinWorldButton != null:
+		joinWorldButton.pressed.connect(_on_join_world_pressed)
+		joinWorldButton.mouse_entered.connect(_on_join_hover)
+		joinWorldButton.mouse_exited.connect(_on_join_unhover)
 
 	$LoginBox.visible = true
 	$WelcomeScene.visible = false
@@ -112,3 +124,40 @@ func _on_logout_button_pressed() -> void:
 	$LoginBox.visible = true
 	$WelcomeScene.visible = false
 	$LogoutBox.visible = false
+
+func _on_login_hover() -> void:
+	loginButton.pivot_offset = loginButton.size / 2
+	var tween = create_tween().set_parallel(true)
+	tween.tween_property(loginButton, "scale", Vector2(1.05, 1.05), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(loginButton, "rotation_degrees", 1.5, 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func _on_login_unhover() -> void:
+	var tween = create_tween().set_parallel(true)
+	tween.tween_property(loginButton, "scale", Vector2(1.0, 1.0), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(loginButton, "rotation_degrees", 0.0, 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func _on_forgot_hover() -> void:
+	forgotButton.pivot_offset = forgotButton.size / 2
+	var tween = create_tween()
+	tween.tween_property(forgotButton, "scale", Vector2(1.08, 1.08), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func _on_forgot_unhover() -> void:
+	var tween = create_tween()
+	tween.tween_property(forgotButton, "scale", Vector2(1.0, 1.0), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func _on_join_world_pressed() -> void:
+	print_debug("Join World pressed! Loading Spectator Dashboard...")
+	get_tree().change_scene_to_file("res://Prefabs/SpectatorPrefabs/SpectatorDashboard.tscn")
+
+func _on_join_hover() -> void:
+	if joinWorldButton != null:
+		joinWorldButton.pivot_offset = joinWorldButton.size / 2
+		var tween = create_tween().set_parallel(true)
+		tween.tween_property(joinWorldButton, "scale", Vector2(1.05, 1.05), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		tween.tween_property(joinWorldButton, "rotation_degrees", 1.5, 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func _on_join_unhover() -> void:
+	if joinWorldButton != null:
+		var tween = create_tween().set_parallel(true)
+		tween.tween_property(joinWorldButton, "scale", Vector2(1.0, 1.0), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		tween.tween_property(joinWorldButton, "rotation_degrees", 0.0, 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)

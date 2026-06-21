@@ -1,0 +1,295 @@
+[gd_scene load_steps=27 format=3 uid="uid://hswk7nctikan"]
+
+[ext_resource type="Script" path="res://Prefabs/SpectatorPrefabs/SpectatorDashboard.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://b8settingmenu" path="res://Prefabs/SpectatorPrefabs/SettingsMenu.tscn" id="2_settings"]
+[ext_resource type="PackedScene" uid="uid://b0tvfsri66iru" path="res://Prefabs/SpectatorPrefabs/ProgressMenu.tscn" id="3_progress"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
+content_margin_left = 36.0
+content_margin_top = 36.0
+content_margin_right = 36.0
+content_margin_bottom = 36.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.05)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 24
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_welcome"]
+font_size = 15
+font_color = Color(0.45, 0.45, 0.45, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_settings_normal"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_settings_hover"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_settings_pressed"]
+content_margin_top = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_normal"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.984314, 0.682353, 0.141176, 1)
+border_width_bottom = 4
+border_color = Color(0.796078, 0.52549, 0.066667, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_hover"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.85098, 0.572549, 0.086275, 1)
+border_width_bottom = 4
+border_color = Color(0.796078, 0.52549, 0.066667, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_pressed"]
+content_margin_top = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.85098, 0.572549, 0.086275, 1)
+border_width_bottom = 2
+border_color = Color(0.796078, 0.52549, 0.066667, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_logout_normal"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(1, 0.556863, 0.556863, 1)
+border_width_bottom = 4
+border_color = Color(0.827451, 0.431373, 0.431373, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_logout_hover"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.898039, 0.470588, 0.470588, 1)
+border_width_bottom = 4
+border_color = Color(0.827451, 0.431373, 0.431373, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_logout_pressed"]
+content_margin_top = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.898039, 0.470588, 0.470588, 1)
+border_width_bottom = 2
+border_color = Color(0.827451, 0.431373, 0.431373, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="Gradient" id="Gradient_teal_glow"]
+colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_teal_glow"]
+gradient = SubResource("Gradient_teal_glow")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_pink_glow"]
+colors = PackedColorArray(1, 0.556863, 0.556863, 0.25098, 1, 0.556863, 0.556863, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pink_glow"]
+gradient = SubResource("Gradient_pink_glow")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_sparkles"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="SpectatorDashboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+settings_menu_scene = ExtResource("2_settings")
+progress_menu_scene = ExtResource("3_progress")
+
+[node name="BackgroundDim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.992157, 0.960784, 0.627451)
+
+[node name="GlowTopRight" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -350.0
+offset_bottom = 350.0
+grow_horizontal = 0
+texture = SubResource("GradientTexture2D_teal_glow")
+
+[node name="GlowBottomLeft" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -350.0
+offset_right = 350.0
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_pink_glow")
+
+[node name="MenuBox" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(520, 440)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -220.0
+offset_right = 260.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_menu")
+
+[node name="SparkleParticles" type="CPUParticles2D" parent="MenuBox"]
+position = Vector2(260, 220)
+amount = 12
+lifetime = 4.0
+preprocess = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(230, 190)
+gravity = Vector2(0, -10)
+initial_velocity_min = 5.0
+initial_velocity_max = 12.0
+angular_velocity_min = -20.0
+angular_velocity_max = 20.0
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_scale")
+color_ramp = SubResource("Gradient_sparkles")
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuBox"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBox/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Title" type="Label" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "🖥️ BẢNG ĐIỀU KHIỂN GIÁM SÁT"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="WelcomeLabel" type="Label" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Xin chào, Người giám sát! 👋"
+label_settings = SubResource("LabelSettings_welcome")
+horizontal_alignment = 1
+
+[node name="Spacing" type="Control" parent="MenuBox/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SettingsButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_settings_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_settings_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_settings_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "⚙️ CÀI ĐẶT ÂM THANH"
+
+[node name="ProgressButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_progress_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_progress_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_progress_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "📊 XEM TIẾN ĐỘ"
+
+[node name="LogoutButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_logout_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_logout_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_logout_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "🚪 ĐĂNG XUẤT"

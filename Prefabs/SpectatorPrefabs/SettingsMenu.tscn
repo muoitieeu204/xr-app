@@ -1,0 +1,361 @@
+[gd_scene load_steps=27 format=3 uid="uid://b8settingmenu"]
+
+[ext_resource type="Script" path="res://Prefabs/SpectatorPrefabs/SettingsMenu.gd" id="1_script"]
+[ext_resource type="AudioStream" path="res://Prefabs/Audio/TeleportSuccess.mp3" id="2_sfx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.05)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 24
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_row"]
+font_size = 14
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_value_master"]
+font_size = 14
+font_color = Color(0.305882, 0.67451, 0.686275, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_value_music"]
+font_size = 14
+font_color = Color(1, 0.556863, 0.556863, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_value_sfx"]
+font_size = 14
+font_color = Color(0.984314, 0.733333, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_pressed"]
+content_margin_top = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_button_focus"]
+
+[sub_resource type="Gradient" id="Gradient_grabber"]
+offsets = PackedFloat32Array(0, 0.75, 0.85, 0.95)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.862745, 0.862745, 0.862745, 1, 0.862745, 0.862745, 0.862745, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_grabber"]
+gradient = SubResource("Gradient_grabber")
+width = 20
+height = 20
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_grabber_highlight"]
+offsets = PackedFloat32Array(0, 0.75, 0.85, 0.95)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0.305882, 0.67451, 0.686275, 1, 0.305882, 0.67451, 0.686275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_grabber_highlight"]
+gradient = SubResource("Gradient_grabber_highlight")
+width = 24
+height = 24
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_track"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.921569, 0.929412, 0.941176, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_area_master"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_area_music"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(1, 0.556863, 0.556863, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_area_sfx"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.984314, 0.733333, 0.141176, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Gradient" id="Gradient_teal_glow"]
+colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_teal_glow"]
+gradient = SubResource("Gradient_teal_glow")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_pink_glow"]
+colors = PackedColorArray(1, 0.556863, 0.556863, 0.25098, 1, 0.556863, 0.556863, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pink_glow"]
+gradient = SubResource("Gradient_pink_glow")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_sparkles"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="BackgroundDim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.992157, 0.960784, 0.627451)
+
+[node name="GlowTopRight" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -350.0
+offset_bottom = 350.0
+grow_horizontal = 0
+texture = SubResource("GradientTexture2D_teal_glow")
+
+[node name="GlowBottomLeft" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -350.0
+offset_right = 350.0
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_pink_glow")
+
+[node name="MenuBox" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(480, 420)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -210.0
+offset_right = 240.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_menu")
+
+[node name="SparkleParticles" type="CPUParticles2D" parent="MenuBox"]
+position = Vector2(240, 210)
+amount = 12
+lifetime = 4.0
+preprocess = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(210, 180)
+gravity = Vector2(0, -10)
+initial_velocity_min = 5.0
+initial_velocity_max = 12.0
+angular_velocity_min = -20.0
+angular_velocity_max = 20.0
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_scale")
+color_ramp = SubResource("Gradient_sparkles")
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuBox"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBox/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Title" type="Label" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "⚙️ SETTINGS MENU"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="VolumeSliders" type="VBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MasterRow" type="VBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MasterRow"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MasterRow/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "🎧 Master Volume"
+label_settings = SubResource("LabelSettings_row")
+
+[node name="MasterValue" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MasterRow/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+label_settings = SubResource("LabelSettings_value_master")
+horizontal_alignment = 2
+
+[node name="MasterSlider" type="HSlider" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MasterRow"]
+layout_mode = 2
+theme_override_icons/grabber = SubResource("GradientTexture2D_grabber")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_grabber_highlight")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_track")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_area_master")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_area_master")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicRow" type="VBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MusicRow"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MusicRow/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "🎵 Music Volume"
+label_settings = SubResource("LabelSettings_row")
+
+[node name="MusicValue" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MusicRow/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+label_settings = SubResource("LabelSettings_value_music")
+horizontal_alignment = 2
+
+[node name="MusicSlider" type="HSlider" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/MusicRow"]
+layout_mode = 2
+theme_override_icons/grabber = SubResource("GradientTexture2D_grabber")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_grabber_highlight")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_track")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_area_music")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_area_music")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SFXRow" type="VBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/SFXRow"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/SFXRow/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "🔊 SFX & Voice Volume"
+label_settings = SubResource("LabelSettings_row")
+
+[node name="SFXValue" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/SFXRow/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+label_settings = SubResource("LabelSettings_value_sfx")
+horizontal_alignment = 2
+
+[node name="SFXSlider" type="HSlider" parent="MenuBox/MarginContainer/VBoxContainer/VolumeSliders/SFXRow"]
+layout_mode = 2
+theme_override_icons/grabber = SubResource("GradientTexture2D_grabber")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_grabber_highlight")
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_track")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_area_sfx")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_area_sfx")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="CloseButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_button_focus")
+text = "❌ Close Settings"
+
+[node name="SFXTestPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_sfx")
+bus = &"Sounds"
