@@ -2,7 +2,7 @@ extends Node3D
 
 @export_file('*.tscn') var main_scene : String
 
-var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
+@onready var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
 signal joinButton
 
 func _ready() -> void:

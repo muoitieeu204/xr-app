@@ -1,8 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bho8ebcx5lvhs"]
+[gd_scene load_steps=6 format=3 uid="uid://bho8ebcx5lvhs"]
 
-[ext_resource type="Script" uid="uid://2u116woexcme" path="res://Prefabs/SpectatorPrefabs/AuthController.gd" id="1_2vo2r"]
+[ext_resource type="Script" uid="uid://2u116woexcme" path="res://scripts/AuthController.gd" id="1_2vo2r"]
 [ext_resource type="PackedScene" uid="uid://dwbgi35lse2ea" path="res://Prefabs/SpectatorPrefabs/LoginScreen.tscn" id="1_fl2ql"]
 [ext_resource type="PackedScene" uid="uid://djmys4bj6qmku" path="res://Prefabs/SpectatorPrefabs/WelcomeScene.tscn" id="2_2vo2r"]
+[ext_resource type="PackedScene" uid="uid://lxhjaoisofpk" path="res://Prefabs/SpectatorPrefabs/LogoutScreen.tscn" id="4_2vo2r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_input"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.976471, 0.980392, 0.984314, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="AuthScene" type="Control"]
 layout_mode = 3
@@ -23,11 +40,48 @@ offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Label" parent="LoginBox/VBoxContainer" index="0"]
+text = "Welcome To VoxCresco"
+
+[node name="Email" parent="LoginBox/VBoxContainer" index="2"]
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_placeholder_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_input")
+theme_override_styles/focus = SubResource("StyleBoxFlat_input")
+placeholder_text = "Email"
+
+[node name="Password" parent="LoginBox/VBoxContainer" index="3"]
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_placeholder_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_input")
+theme_override_styles/focus = SubResource("StyleBoxFlat_input")
+placeholder_text = "Password"
+
+[node name="LoginButton" parent="LoginBox/VBoxContainer" index="6"]
+text = "Login"
+
+[node name="ForgotButton" parent="LoginBox/VBoxContainer" index="7"]
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_colors/font_pressed_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.2, 0.2, 1)
+text = "Forgot password?"
 
 [node name="WelcomeScene" parent="." instance=ExtResource("2_2vo2r")]
 layout_mode = 1
 
 [node name="WelcomeBox" parent="WelcomeScene" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LogoutBox" parent="." instance=ExtResource("4_2vo2r")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

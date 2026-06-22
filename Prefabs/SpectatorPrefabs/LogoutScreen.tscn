@@ -1,35 +1,59 @@
-[gd_scene load_steps=5 format=3 uid="uid://lxhjaoisofpk"]
+[gd_scene load_steps=6 format=3 uid="uid://lxhjaoisofpk"]
 
-[ext_resource type="Texture2D" uid="uid://sfoi1u6lm80c" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/panel_brown.png" id="1_panel"]
-[ext_resource type="Texture2D" uid="uid://ceo3mrig86xvp" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/button_red.png" id="2_btn"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxFlat_ylf5s"]
-texture = ExtResource("1_panel")
-texture_margin_left = 32.0
-texture_margin_top = 32.0
-texture_margin_right = 32.0
-texture_margin_bottom = 32.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
+content_margin_left = 48.0
+content_margin_top = 48.0
+content_margin_right = 48.0
+content_margin_bottom = 48.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.04)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4jofw"]
-font_size = 32
-font_color = Color(1, 1, 1, 1)
+font_size = 26
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
 outline_size = 8
 outline_color = Color(0.4, 0.2, 0.1, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxFlat_4jofw"]
-texture = ExtResource("2_btn")
-texture_margin_left = 16.0
-texture_margin_top = 16.0
-texture_margin_right = 16.0
-texture_margin_bottom = 20.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jofw"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxFlat_vktwn"]
-texture = ExtResource("2_btn")
-texture_margin_left = 16.0
-texture_margin_top = 16.0
-texture_margin_right = 16.0
-texture_margin_bottom = 20.0
-modulate_color = Color(0.8, 0.8, 0.8, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_top = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vktwn"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="LogoutBox" type="PanelContainer"]
 custom_minimum_size = Vector2(416, 0)
@@ -55,5 +79,6 @@ layout_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
 text = "Logout"
