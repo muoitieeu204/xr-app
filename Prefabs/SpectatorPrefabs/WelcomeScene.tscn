@@ -1,20 +1,31 @@
+<<<<<<< HEAD
 [gd_scene load_steps=10 format=3 uid="uid://djmys4bj6qmku"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://djmys4bj6qmku"]
+>>>>>>> dev
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
 content_margin_left = 48.0
 content_margin_top = 48.0
 content_margin_right = 48.0
 content_margin_bottom = 48.0
+<<<<<<< HEAD
 bg_color = Color(1, 0.980392, 0.921569, 1)
 border_width_left = 6
 border_width_top = 6
 border_width_right = 6
 border_width_bottom = 12
 border_color = Color(1, 0.54902, 0.647059, 1)
+=======
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+>>>>>>> dev
 corner_radius_top_left = 24
 corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
+<<<<<<< HEAD
 shadow_color = Color(0.156863, 0.0784314, 0.2, 0.08)
 shadow_size = 35
 shadow_offset = Vector2(0, 12)
@@ -85,6 +96,50 @@ point_count = 4
 [sub_resource type="Gradient" id="Gradient_rainbow"]
 offsets = PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1)
 colors = PackedColorArray(1, 0.4, 0.4, 0, 1, 0.701961, 0.301961, 0.8, 0.4, 0.901961, 0.4, 0.8, 0.301961, 0.701961, 1, 0.8, 1, 0.85098, 0.4, 0.8, 1, 0.85098, 0.4, 0)
+=======
+shadow_color = Color(0, 0, 0, 0.04)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jofw"]
+font_size = 26
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+outline_size = 8
+outline_color = Color(0.4, 0.2, 0.1, 1)
+>>>>>>> dev
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jofw"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_top = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vktwn"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="WelcomeScene" type="Control"]
 layout_mode = 3
@@ -128,7 +183,11 @@ theme_override_constants/separation = 20
 [node name="Label" type="Label" parent="WelcomeBox/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+<<<<<<< HEAD
 text = "✨ CHÀO MỪNG QUAY LẠI! ✨"
+=======
+text = "Chào Mừng Trở Lại"
+>>>>>>> dev
 label_settings = SubResource("LabelSettings_4jofw")
 
 [node name="Spacing" type="Control" parent="WelcomeBox/VBoxContainer"]
@@ -147,9 +206,17 @@ layout_mode = 2
 [node name="Button" type="Button" parent="WelcomeBox/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
 theme_override_styles/focus = SubResource("StyleBoxFlat_btn_focus")
 text = "🎮 THAM GIA THẾ GIỚI! 🚀"
+=======
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "JOIN WORLD"
+>>>>>>> dev
