@@ -81,6 +81,7 @@ mesh = SubResource("ArrayMesh_wfluj")
 skeleton = NodePath("")
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="." index="2"]
+visible = false
 script = ExtResource("3_u0u35")
 metadata/_custom_type_script = "uid://0b7wkxi4vymb"
 
@@ -92,12 +93,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_b8v1k")
 
 [node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("4_bw4yx")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.09363252, 0.022735894, -0.01772771)
-visible = true
 hand_pose = SubResource("Resource_ybmgi")
 
 [node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("7_6extl")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.08734977, 0.02578038, 0)
-visible = true
 hand_pose = SubResource("Resource_ah1ox")
 
 [node name="UnFreezeHelper" type="Node" parent="." index="5"]
