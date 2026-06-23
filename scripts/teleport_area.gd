@@ -9,11 +9,15 @@ extends Area3D
 @export var portalAudio: AudioStreamPlayer3D
 @export var successSound: AudioStream
 @export var errorSound: AudioStream
+@export var holoText : String = "Teleport Area"
+
+@onready var label = $TextRingMesh/SubViewport/Label 
 
 var isUnlocked : bool = false
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
+	label.text = holoText
 	
 	if require_unlock:
 		# Initialize portal to RED (locked)
