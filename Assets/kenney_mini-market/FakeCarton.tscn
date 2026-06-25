@@ -47,11 +47,12 @@ shadow_mesh = SubResource("ArrayMesh_irs6p")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lvt8r"]
 points = PackedVector3Array(-0.076969504, 0, -0.076969504, -0.076969504, 0, 0.076969504, -0.076969504, 0.19724534, -0.076969504, 0.076969504, 0, -0.076969504, 0.076969504, 0, 0.076969504, -0.076969504, 0.19724534, 0.076969504, 0, 0.28639263, -0.06340793, 0, 0.27279627, -0.076969504, 0.076969504, 0.19724534, -0.076969504, 0.076969504, 0.19724534, 0.076969504, 0, 0.27279627, 0.076969504, 0, 0.28639263, 0.06339285)
 
-[node name="FakeCarton" type="Area3D"]
+[node name="Carton" type="Area3D"]
 collision_layer = 5
 collision_mask = 131077
 script = ExtResource("1_w0ltb")
 realItem = ExtResource("2_w0ltb")
+item_id = "hộp sữa tươi"
 
 [node name="carton3" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ifsoj")

@@ -22,10 +22,9 @@ targetWord = "con chó"
 [node name="AzureManager" type="Node" parent="."]
 script = ExtResource("1_cdeuh")
 
-[node name="CheckerBoardController" type="Node" parent="." node_paths=PackedStringArray("speechManager", "recordButton", "outputLabel")]
+[node name="CheckerBoardController" type="Node" parent="." node_paths=PackedStringArray("recordButton", "outputLabel")]
 unique_name_in_owner = true
 script = ExtResource("2_ddyxf")
-speechManager = NodePath("../AzureManager")
 recordButton = NodePath("../MarginContainer/VBoxContainer/Button")
 outputLabel = NodePath("../MarginContainer/VBoxContainer/Label")
 

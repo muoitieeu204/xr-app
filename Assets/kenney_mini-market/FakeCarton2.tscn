@@ -52,6 +52,7 @@ collision_layer = 5
 collision_mask = 131077
 script = ExtResource("1_a6gbp")
 realItem = ExtResource("2_qn2vl")
+item_id = "Carton2"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.5896957e-08, 0, 1.05, 0, 1.05, 0, -1.05, 0, -4.5896957e-08, 0, 0, 0)

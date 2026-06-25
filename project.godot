@@ -30,6 +30,7 @@ XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
 SessionData="*res://scripts/SessionData.gd"
 SessionUploader="*res://scripts/SessionUploader.cs"
 AzureSpeechManager="*res://scripts/AzureSpeechManager.cs"
+GameManager="*res://scripts/GameManager.gd"
 
 [dotnet]
 

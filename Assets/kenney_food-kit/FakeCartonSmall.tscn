@@ -47,11 +47,12 @@ shadow_mesh = SubResource("ArrayMesh_c6crn")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ylaja"]
 size = Vector3(0.14648438, 0.22035217, 0.14578247)
 
-[node name="StaticBody3D" type="StaticBody3D"]
+[node name="CartonSmall" type="Area3D"]
 collision_layer = 5
 collision_mask = 196613
 script = ExtResource("1_cet27")
 realItem = ExtResource("2_ovwvi")
+item_id = "hộp sữa dâu"
 
 [node name="carton-small" type="MeshInstance3D" parent="."]
 transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 0, 0, 0)

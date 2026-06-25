@@ -46,21 +46,38 @@ public partial class AzureSpeechManager : Node
 		else GD.PrintErr($"AzureSpeechManager: Could not find {path}!. Make sure it exists");
 	}
 
+	private SpeechRecognizer _currentRecognizer;
+
 	public async void StartListening(){
 		if(string.IsNullOrEmpty(SubscriptionKey) || string.IsNullOrEmpty(Region)){
 			GD.PrintErr("AzureSpeechManager: Key or Reigon not found");
 			return;
 		}
+		
+		StopListening(); // Stop any ongoing listening just in case
+		
 		GD.Print("Connecting to Azure Service...");
 
 		await System.Threading.Tasks.Task.Run(async () => {
 			var config = SpeechConfig.FromSubscription(SubscriptionKey, Region);
 			config.SpeechRecognitionLanguage = Language;
-			using var recognizer = new SpeechRecognizer(config);
+			_currentRecognizer = new SpeechRecognizer(config);
 			GD.Print("AzureSpeechManager: Listening... Speak now!");
-			var result = await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
-			CallDeferred(MethodName.ProcessResult, result.Text, (int)result.Reason);
+			try {
+				var result = await _currentRecognizer.RecognizeOnceAsync().ConfigureAwait(false);
+				CallDeferred(MethodName.ProcessResult, result.Text, (int)result.Reason);
+			} catch (ObjectDisposedException) {
+				// Safely ignore if we forced it to stop!
+			}
 		});
+	}
+
+	public void StopListening() {
+		if (_currentRecognizer != null) {
+			_currentRecognizer.Dispose();
+			_currentRecognizer = null;
+			GD.Print("AzureSpeechManager: Microphone turned off.");
+		}
 	}
 
 	private void ProcessResult(string recognizeText, int reasonCode)
