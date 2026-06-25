@@ -47,6 +47,7 @@ public partial class AzureSpeechManager : Node
 	}
 
 	private SpeechRecognizer _currentRecognizer;
+	private bool _isListening = false;
 
 	public async void StartListening(){
 		if(string.IsNullOrEmpty(SubscriptionKey) || string.IsNullOrEmpty(Region)){
@@ -54,30 +55,38 @@ public partial class AzureSpeechManager : Node
 			return;
 		}
 		
-		StopListening(); // Stop any ongoing listening just in case
+		_isListening = true;
 		
 		GD.Print("Connecting to Azure Service...");
 
 		await System.Threading.Tasks.Task.Run(async () => {
 			var config = SpeechConfig.FromSubscription(SubscriptionKey, Region);
 			config.SpeechRecognitionLanguage = Language;
-			_currentRecognizer = new SpeechRecognizer(config);
+			
+			var recognizer = new SpeechRecognizer(config);
+			_currentRecognizer = recognizer;
+			
 			GD.Print("AzureSpeechManager: Listening... Speak now!");
 			try {
-				var result = await _currentRecognizer.RecognizeOnceAsync().ConfigureAwait(false);
-				CallDeferred(MethodName.ProcessResult, result.Text, (int)result.Reason);
-			} catch (ObjectDisposedException) {
-				// Safely ignore if we forced it to stop!
+				var result = await recognizer.RecognizeOnceAsync().ConfigureAwait(false);
+				
+				// Only process the result if we haven't dropped the item!
+				if (_isListening && _currentRecognizer == recognizer) {
+					CallDeferred(MethodName.ProcessResult, result.Text, (int)result.Reason);
+				}
+				
+				// Safely dispose only AFTER it finishes running
+				recognizer.Dispose();
+			} catch (Exception e) {
+				GD.PrintErr("AzureSpeechManager Error: " + e.Message);
 			}
 		});
 	}
 
 	public void StopListening() {
-		if (_currentRecognizer != null) {
-			_currentRecognizer.Dispose();
-			_currentRecognizer = null;
-			GD.Print("AzureSpeechManager: Microphone turned off.");
-		}
+		_isListening = false;
+		_currentRecognizer = null;
+		GD.Print("AzureSpeechManager: Microphone turned off (ignoring result).");
 	}
 
 	private void ProcessResult(string recognizeText, int reasonCode)
