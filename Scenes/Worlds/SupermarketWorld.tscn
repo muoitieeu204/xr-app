@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=4 uid="uid://ciondyec656d3"]
+[gd_scene load_steps=94 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
 [ext_resource type="Script" uid="uid://cijjlg2j5o6ye" path="res://scripts/InitializeScript.gd" id="1_c4e85"]
@@ -16,7 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://crtvxpuyg328w" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall.glb" id="24_acpa7"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="24_c7od5"]
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="25_h8g51"]
+[ext_resource type="PackedScene" uid="uid://bvg614f3o0mp6" path="res://Assets/kenney_mini-market/ShelfEnd2.tscn" id="26_c7od5"]
 [ext_resource type="PackedScene" uid="uid://50wk5a1g78ll" path="res://Assets/kenney_mini-market/FakeShelfEnd.tscn" id="26_ieq8a"]
+[ext_resource type="PackedScene" uid="uid://cgxfwuk3xib2n" path="res://Assets/kenney_mini-market/Models/GLB format/fence.glb" id="27_c4e85"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="27_r2rb5"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="28_c4e85"]
 [ext_resource type="PackedScene" uid="uid://dvob3g7lkktfb" path="res://Assets/kenney_mini-market/ShoppingCart.tscn" id="30_jewmw"]
@@ -612,6 +614,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sifgk")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tv2ia"]
+points = PackedVector3Array(0.02496326, 0.379, 0.024990208, 0.02496326, 0.379, -0.025004897, -0.025017142, 0.379, 0.024990208, 0.02496326, 0.228973, 0.049995102, 0.03745836, 0.050973576, 0.075, 0.07499999, 0.050973576, 0.037485316, 0.04995346, 0.228973, 0.024990208, 0.04995346, 0.228973, -0.025004897, 0.07499999, 0.050973576, -0.037514687, 0.03745836, 0.050973576, -0.075, 0.02496326, 0.228973, -0.05000979, -0.025017142, 0.379, -0.025004897, -0.5, 0.228973, 0.024990208, -0.025017142, 0.228973, 0.049995102, 0.03745836, 0, 0.075, -0.037512243, 0.050973576, 0.075, 0.07499999, 0, 0.037485316, 0.07499999, 0, -0.037514687, 0.03745836, 0, -0.075, -0.037512243, 0.050973576, -0.075, -0.025017142, 0.228973, -0.05000979, -0.5, 0.228973, -0.025004897, -0.5, 0.17896399, 0.024990208, -0.037512243, 0, 0.075, -0.037512243, 0, -0.075, -0.5, 0.17896399, -0.025004897, -0.07505384, 0, 0.037485316, -0.07505384, 0, -0.037514687)
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_c4e85")
 
@@ -661,7 +666,7 @@ mesh_library = ExtResource("1_1qkro")
 cell_octant_size = 16
 cell_scale = 2.0
 data = {
-"cells": PackedInt32Array(0, 65516, 1441811, 0, 65517, 1441811, 0, 65518, 1441812, 0, 65519, 1441812, 0, 65520, 1441812, 0, 65523, 1441812, 0, 65524, 1441812, 0, 65525, 1441812, 0, 65526, 1441812, 0, 65527, 1441812, 0, 65528, 1441812, 0, 65529, 1441812, 0, 65530, 1441811, 0, 65531, 1441811, 0, 65532, 1441811, 0, 65534, 1441812, 0, 65535, 655377, 0, 65515, 1441811, 0, 65514, 1441812, 0, 65513, 1441812, 0, 65512, 1048593, 1, 65512, 655380, 5, 65512, 655380, 6, 65512, 655380, 7, 65512, 655380, 8, 65512, 655380, 9, 65512, 655380, 14, 65512, 655380, 15, 65512, 655380, 16, 65512, 655380, 17, 65512, 655380, 18, 65512, 655380, 19, 65512, 655380, 22, 65512, 655380, 23, 65512, 655380, 24, 65512, 17, 24, 65513, 1048596, 24, 65514, 1048596, 24, 65515, 1048595, 24, 65516, 1048595, 24, 65517, 1048595, 24, 65518, 1048596, 24, 65519, 1048596, 24, 65520, 1048596, 24, 65521, 1048596, 24, 65522, 1048596, 24, 65525, 1048596, 24, 65526, 1048596, 24, 65527, 1048596, 24, 65528, 1048596, 24, 65529, 1048596, 24, 65530, 1048595, 24, 65531, 1048595, 24, 65532, 1048595, 24, 65533, 1048596, 24, 65534, 1048596, 24, 65535, 1441809, 1, 65535, 20, 2, 65535, 20, 3, 65535, 20, 4, 65535, 20, 5, 65535, 20, 6, 65535, 20, 7, 65535, 20, 8, 65535, 20, 9, 65535, 20, 10, 65535, 20, 11, 65535, 20, 12, 65535, 20, 13, 65535, 20, 14, 65535, 20, 15, 65535, 20, 16, 65535, 20, 17, 65535, 20, 18, 65535, 20, 19, 65535, 20, 20, 65535, 20, 21, 65535, 20, 22, 65535, 20, 23, 65535, 20, 0, 65533, 1441812, 0, 65521, 1441812, 0, 65522, 1441812, 24, 65524, 1048596, 24, 65523, 1048596, 2, 65512, 655380)
+"cells": PackedInt32Array(0, 65516, 1441811, 0, 65517, 1441811, 0, 65518, 1048596, 0, 65519, 1048596, 0, 65520, 1048596, 0, 65526, 1048596, 0, 65527, 1048596, 0, 65528, 1048596, 0, 65529, 1048596, 0, 65530, 1441811, 0, 65531, 1441811, 0, 65532, 1441811, 0, 65534, 1048596, 0, 65535, 655377, 0, 65515, 1441811, 0, 65514, 1048596, 0, 65513, 1048596, 0, 65512, 1048593, 1, 65512, 20, 5, 65512, 20, 6, 65512, 20, 7, 65512, 20, 8, 65512, 20, 9, 65512, 20, 14, 65512, 20, 15, 65512, 20, 16, 65512, 20, 17, 65512, 20, 18, 65512, 20, 19, 65512, 20, 22, 65512, 655380, 23, 65512, 655380, 24, 65512, 17, 24, 65513, 1441812, 24, 65514, 1441812, 24, 65515, 1048595, 24, 65516, 1048595, 24, 65517, 1441812, 24, 65518, 1441812, 24, 65519, 1441812, 24, 65520, 1441812, 24, 65521, 1441812, 24, 65522, 1441812, 24, 65525, 1441812, 24, 65526, 1441812, 24, 65527, 1441812, 24, 65528, 1441812, 24, 65529, 1441812, 24, 65530, 1048595, 24, 65531, 1048595, 24, 65532, 1048595, 24, 65533, 1441812, 24, 65534, 1441812, 24, 65535, 1441809, 1, 65535, 655380, 2, 65535, 655380, 3, 65535, 655380, 4, 65535, 655380, 5, 65535, 655380, 6, 65535, 655380, 7, 65535, 655380, 8, 65535, 655380, 9, 65535, 655380, 10, 65535, 655380, 11, 65535, 655380, 12, 65535, 655380, 13, 65535, 655380, 14, 65535, 655380, 15, 65535, 655380, 16, 65535, 655380, 17, 65535, 655380, 18, 65535, 655380, 19, 65535, 655380, 20, 65535, 655380, 21, 65535, 655380, 22, 65535, 655380, 23, 65535, 655380, 0, 65533, 1048596, 24, 65524, 1441812, 24, 65523, 1441812, 2, 65512, 20, 0, 65524, 1048596, 0, 65525, 1048596, 0, 65521, 1048596, 0, 65522, 1048596, 0, 65523, 1048596, 8, 65534, 655380, 9, 65534, 655380)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
@@ -1177,14 +1182,14 @@ playerNode = ExtResource("28_c4e85")
 [node name="DisplayBread" parent="." instance=ExtResource("22_h8g51")]
 transform = Transform3D(-2.5, 0, 3.774895e-07, 0, 2.5, 0, -3.774895e-07, 0, -2.5, 6, 1, -3)
 
-[node name="DisplayBread2" parent="." instance=ExtResource("22_h8g51")]
-transform = Transform3D(-2.5, 0, 3.774895e-07, 0, 2.5, 0, -3.774895e-07, 0, -2.5, 8, 1, -3)
+[node name="DisplayBread2" parent="DisplayBread" instance=ExtResource("22_h8g51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79999995, 0, 1.1920929e-07)
 
-[node name="DisplayBread3" parent="." instance=ExtResource("22_h8g51")]
-transform = Transform3D(-2.5, 0, 3.774895e-07, 0, 2.5, 0, -3.774895e-07, 0, -2.5, 10, 1, -3)
+[node name="DisplayBread3" parent="DisplayBread" instance=ExtResource("22_h8g51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999999, 0, 2.3841858e-07)
 
-[node name="DisplayBread4" parent="." instance=ExtResource("22_h8g51")]
-transform = Transform3D(-2.5, 0, 3.774895e-07, 0, 2.5, 0, -3.774895e-07, 0, -2.5, 12, 1, -3)
+[node name="DisplayBread4" parent="DisplayBread" instance=ExtResource("22_h8g51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4000003, 0, 3.5762787e-07)
 
 [node name="freezer2" parent="." instance=ExtResource("23_ieq8a")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 38, 1, -3)
@@ -1216,15 +1221,6 @@ shape = SubResource("ConvexPolygonShape3D_jewmw")
 
 [node name="ShelfEnd" type="Node3D" parent="."]
 
-[node name="ShelfEnd7" parent="ShelfEnd" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -21.5531)
-
-[node name="ShelfEnd8" parent="ShelfEnd" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -23.5531)
-
-[node name="ShelfEnd9" parent="ShelfEnd" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -25.5531)
-
 [node name="ShelfEnd10" parent="ShelfEnd" instance=ExtResource("26_ieq8a")]
 transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -27.5531)
 
@@ -1233,6 +1229,15 @@ transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474
 
 [node name="ShelfEnd12" parent="ShelfEnd" instance=ExtResource("26_ieq8a")]
 transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -31.5531)
+
+[node name="shelf-end2" parent="ShelfEnd" instance=ExtResource("26_c7od5")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -21.5531)
+
+[node name="shelf-end3" parent="ShelfEnd" instance=ExtResource("26_c7od5")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -23.5531)
+
+[node name="shelf-end4" parent="ShelfEnd" instance=ExtResource("26_c7od5")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -25.5531)
 
 [node name="ShelfEnd2" type="Node3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -35)
@@ -1255,6 +1260,444 @@ transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474
 [node name="ShelfEnd12" parent="ShelfEnd2" instance=ExtResource("26_ieq8a")]
 transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -31.5531)
 
+[node name="Fence" type="Node3D" parent="."]
+
+[node name="Fences" type="Node3D" parent="Fence"]
+
+[node name="fence2" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence2/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence2/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence3" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence3/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence3/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence4" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 3, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence4/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence4/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence5" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 4, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence5/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence5/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence6" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 5, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence6/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence6/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence7" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 6, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence7/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence7/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence8" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 7, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence8/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence8/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence9" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 8, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence9/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence9/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence10" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence10/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence10/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence11" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence11/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence11/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence12" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 10, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence12/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence12/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence13" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 11, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence13/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence13/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence14" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 12, 1, -17)
+
+[node name="fence" parent="Fence/Fences/fence14" index="0"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.7683716e-07, 0, 1.6000004)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence14/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence14/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Fence/Fences/fence14/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence15" parent="Fence/Fences" instance=ExtResource("27_c4e85")]
+transform = Transform3D(2.5, 0, 1.5893255e-07, 0, 2.5, 0, -1.5893255e-07, 0, 2.5, 13, 1, -13)
+
+[node name="fence" parent="Fence/Fences/fence15" index="0"]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, -0.4000001, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences/fence15/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences/fence15/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="Fences2" type="Node3D" parent="Fence"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="fence2" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence2/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence2/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence3" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence3/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence3/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence4" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 3, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence4/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence4/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence5" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 4, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence5/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence5/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence6" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 5, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence6/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence6/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence7" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 6, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence7/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence7/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence8" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 7, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence8/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence8/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence9" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 8, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence9/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence9/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence10" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence10/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence10/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence11" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence11/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence11/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence12" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 10, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence12/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence12/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence13" parent="Fence/Fences2" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 11, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences2/fence13/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences2/fence13/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="Fences3" type="Node3D" parent="Fence"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="fence2" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence2/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence2/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence3" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence3/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence3/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence4" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 3, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence4/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence4/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence5" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 4, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence5/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence5/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence6" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 5, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence6/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence6/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence7" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 6, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence7/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence7/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence8" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 7, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence8/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence8/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence9" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 8, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence9/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence9/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence10" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence10/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence10/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence11" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence11/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence11/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence12" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 10, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence12/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence12/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence13" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(2.5, 0, 1.5893255e-07, 0, 2.5, 0, -1.5893255e-07, 0, 2.5, 11, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence13/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence13/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence14" parent="Fence/Fences3" instance=ExtResource("27_c4e85")]
+transform = Transform3D(2.5, 0, 1.5893255e-07, 0, 2.5, 0, -1.5893255e-07, 0, 2.5, 12, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences3/fence14/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences3/fence14/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="Fences4" type="Node3D" parent="Fence"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -25)
+
+[node name="fence2" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence2/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence2/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence3" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence3/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence3/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence4" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 3, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence4/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence4/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence5" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 4, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence5/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence5/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence6" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 5, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence6/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence6/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence7" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 6, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence7/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence7/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence8" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 7, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence8/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence8/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence9" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 8, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence9/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence9/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence10" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence10/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence10/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence11" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 9, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence11/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence11/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence12" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 10, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence12/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence12/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence13" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 11, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence13/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence13/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
+[node name="fence14" parent="Fence/Fences4" instance=ExtResource("27_c4e85")]
+transform = Transform3D(2.5, 0, 1.5893255e-07, 0, 2.5, 0, -1.5893255e-07, 0, 2.5, 12, 1, -13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fence/Fences4/fence14/fence" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/Fences4/fence14/fence/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tv2ia")
+
 [editable path="Market/MarketRoad/roadTile_034"]
 [editable path="Market/MarketArchitecture/Banner"]
 [editable path="Market/MarketArchitecture/GlassDoors/GlassDoor"]
@@ -1271,3 +1714,55 @@ transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474
 [editable path="Market/FreezerStanding/freezers-standing3"]
 [editable path="Market/FreezerStanding/freezers-standing4"]
 [editable path="freezer2"]
+[editable path="Fence/Fences/fence2"]
+[editable path="Fence/Fences/fence3"]
+[editable path="Fence/Fences/fence4"]
+[editable path="Fence/Fences/fence5"]
+[editable path="Fence/Fences/fence6"]
+[editable path="Fence/Fences/fence7"]
+[editable path="Fence/Fences/fence8"]
+[editable path="Fence/Fences/fence9"]
+[editable path="Fence/Fences/fence10"]
+[editable path="Fence/Fences/fence11"]
+[editable path="Fence/Fences/fence12"]
+[editable path="Fence/Fences/fence13"]
+[editable path="Fence/Fences/fence14"]
+[editable path="Fence/Fences/fence15"]
+[editable path="Fence/Fences2/fence2"]
+[editable path="Fence/Fences2/fence3"]
+[editable path="Fence/Fences2/fence4"]
+[editable path="Fence/Fences2/fence5"]
+[editable path="Fence/Fences2/fence6"]
+[editable path="Fence/Fences2/fence7"]
+[editable path="Fence/Fences2/fence8"]
+[editable path="Fence/Fences2/fence9"]
+[editable path="Fence/Fences2/fence10"]
+[editable path="Fence/Fences2/fence11"]
+[editable path="Fence/Fences2/fence12"]
+[editable path="Fence/Fences2/fence13"]
+[editable path="Fence/Fences3/fence2"]
+[editable path="Fence/Fences3/fence3"]
+[editable path="Fence/Fences3/fence4"]
+[editable path="Fence/Fences3/fence5"]
+[editable path="Fence/Fences3/fence6"]
+[editable path="Fence/Fences3/fence7"]
+[editable path="Fence/Fences3/fence8"]
+[editable path="Fence/Fences3/fence9"]
+[editable path="Fence/Fences3/fence10"]
+[editable path="Fence/Fences3/fence11"]
+[editable path="Fence/Fences3/fence12"]
+[editable path="Fence/Fences3/fence13"]
+[editable path="Fence/Fences3/fence14"]
+[editable path="Fence/Fences4/fence2"]
+[editable path="Fence/Fences4/fence3"]
+[editable path="Fence/Fences4/fence4"]
+[editable path="Fence/Fences4/fence5"]
+[editable path="Fence/Fences4/fence6"]
+[editable path="Fence/Fences4/fence7"]
+[editable path="Fence/Fences4/fence8"]
+[editable path="Fence/Fences4/fence9"]
+[editable path="Fence/Fences4/fence10"]
+[editable path="Fence/Fences4/fence11"]
+[editable path="Fence/Fences4/fence12"]
+[editable path="Fence/Fences4/fence13"]
+[editable path="Fence/Fences4/fence14"]
