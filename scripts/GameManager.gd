@@ -1,11 +1,5 @@
 extends Node
 
-var itemDictionary = {
-	"CartonSmall": "carton",
-	"ChipBag" : "red wine",
-	"ChipBagRed": "red chip bag"
-}
-
 var currentHeldItemId = ""
 var validScannedItem = []
 
@@ -29,8 +23,10 @@ func _item_dropped(pickable = null):
 		speechManager.StopListening()
 
 func _on_speech_recognized(text:String):
-	var targetWord = itemDictionary.get(currentHeldItemId, "")
-	if targetWord != "" and text.to_lower().contains(targetWord):
-		validScannedItem.append(currentHeldItemId)
-	else:
-		print("Incorrect! You said: ", text)
+	if currentHeldItemId != "":
+
+		if text.to_lower().contains(currentHeldItemId.to_lower()):
+			print("Correct! World matched: ", currentHeldItemId)
+			validScannedItem.append(currentHeldItemId)
+		else:
+			print("Incorrect! You said: ", text)

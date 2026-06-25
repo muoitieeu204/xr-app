@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://bxvk8ja6jom74"]
+[gd_scene load_steps=7 format=4 uid="uid://bxvk8ja6jom74"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_tvajx"]
 [ext_resource type="PackedScene" uid="uid://co4tesdayal2s" path="res://Assets/kenney_mini-market/FakeBread.tscn" id="2_y1mep"]
-[ext_resource type="PackedScene" uid="uid://bnurliwyatm57" path="res://Assets/kenney_mini-market/PickableBread.tscn" id="3_3y2to"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3y2to"]
 points = PackedVector3Array(-0.35000002, 0, -0.3, -0.35000002, 0, 0.19998041, -0.35000002, 0.5, -0.3, 0.34999996, 0, -0.3, -0.35000002, 0.09999021, 0.3, 0.34999996, 0, 0.19998041, -0.35000002, 0.5, -0.15005875, 0.34999996, 0.5, -0.3, -0.35000002, 0.24843383, 0.3, 0.34999996, 0.09999021, 0.3, -0.35000002, 0.31245106, 0.24996084, 0.34999996, 0.5, -0.15005875, 0.34999996, 0.24843383, 0.3, 0.34999996, 0.31245106, 0.24996084)
@@ -58,8 +57,6 @@ skeleton = NodePath("")
 
 [node name="FakeBread" parent="display-bread" instance=ExtResource("2_y1mep")]
 transform = Transform3D(1, 0, 0, 0, 0.9049162, -0.42558977, 0, 0.42558977, 0.9049162, -0.114460535, 0.27240312, -0.0058425665)
-realItem = ExtResource("3_3y2to")
 
 [node name="FakeBread2" parent="display-bread" instance=ExtResource("2_y1mep")]
 transform = Transform3D(1, 0, 0, 0, 0.9416293, -0.33665156, 0, 0.33665156, 0.9416293, 0.12112665, 0.25549695, -0.022233546)
-realItem = ExtResource("3_3y2to")

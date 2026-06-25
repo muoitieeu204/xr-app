@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bvg614f3o0mp6"]
+[gd_scene load_steps=10 format=4 uid="uid://bvg614f3o0mp6"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_ftsxm"]
 [ext_resource type="PackedScene" uid="uid://c6qg2wmqtgdnu" path="res://Assets/kenney_food-kit/FakeWineRed.tscn" id="2_h4woc"]
@@ -44,6 +44,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jca6n")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ftsxm"]
+points = PackedVector3Array(-0.4, -1.6653345e-16, -0.40110952, 0.4, -1.6653345e-16, -0.40110952, -0.4, -1.6653345e-16, -0.0011094809, -0.4, 0.7499609, -0.40110952, 0.4, -1.6653345e-16, -0.0011094809, 0.4, 0.7499609, -0.40110952, -0.4, 0.049960848, -0.0011094809, -0.4, 0.7499609, -0.30114865, -0.35003915, 0.8000001, -0.30114865, -0.35003915, 0.79992175, -0.40110952, 0.4, 0.049960848, -0.0011094809, 0.34996083, 0.79992175, -0.40110952, 0.4, 0.7499609, -0.30114865, -0.35003915, 0.5499609, -0.030436039, -0.35003915, 0.58527803, -0.06579235, 0.34996083, 0.79992175, -0.30114865, 0.34996083, 0.58527803, -0.06579235, 0.34996083, 0.5499609, -0.030436039)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_o68cj"]
 _surfaces = [{
 "aabb": AABB(-0.325, 0, -0.050000012, 0.65, 0.25000003, 0.100000024),
@@ -81,6 +84,11 @@ shadow_mesh = SubResource("ArrayMesh_o68cj")
 [node name="shelf-end" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_ilrgs")
 skeleton = NodePath("")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="shelf-end"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shelf-end/StaticBody3D7"]
+shape = SubResource("ConvexPolygonShape3D_ftsxm")
 
 [node name="Group" type="MeshInstance3D" parent="shelf-end"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 7.76996e-09, 0.8, -0.35110953)
