@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://uxed2fhnknlo"]
+[gd_scene load_steps=9 format=4 uid="uid://uxed2fhnknlo"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_cet27"]
 [ext_resource type="PackedScene" uid="uid://byrgmwurc03ag" path="res://Assets/kenney_food-kit/CartonSmallPickable.tscn" id="2_ovwvi"]
-[ext_resource type="Texture2D" uid="uid://d0kovp8l0vh0g" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="3_pbtwy"]
+[ext_resource type="Texture2D" uid="uid://c1x6jy5sf5emi" path="res://Assets/kenney_food-kit/Previews/carton-small.png" id="3_ovwvi"]
+[ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="3_pbtwy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikry7"]
 resource_name = "colormap"
@@ -52,7 +53,8 @@ collision_layer = 5
 collision_mask = 196613
 script = ExtResource("1_cet27")
 realItem = ExtResource("2_ovwvi")
-item_id = "hộp sữa dâu"
+itemId = "hộp sữa dâu"
+itemIcon = ExtResource("3_ovwvi")
 
 [node name="carton-small" type="MeshInstance3D" parent="."]
 transform = Transform3D(-2.6226834e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.6226834e-08, 0, 0, 0)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://b3h3k1n3wxtf2"]
+[gd_scene load_steps=9 format=4 uid="uid://b3h3k1n3wxtf2"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_a6gbp"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_u7cxx"]
 [ext_resource type="PackedScene" uid="uid://dh1fmhvg2cvg0" path="res://Assets/kenney_mini-market/PickableCarton.tscn" id="2_qn2vl"]
+[ext_resource type="Texture2D" uid="uid://0behm14kiw5n" path="res://Assets/kenney_food-kit/Previews/carton.png" id="3_s64de"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s64de"]
 points = PackedVector3Array(-0.0019924506, 0.27503136, 0.07980695, -0.077, 0.0018834068, -0.07696971, -0.076465, 0.002861703, 0.077, 0.077, 0.0029126266, -0.07640708, -0.0019924506, 0.2795596, -0.07924187, 0.077, 0.0029126266, 0.076972164, 0.0750885, 0.19874161, 0.07506138, -0.07480135, 0.1989732, 0.07533697, 0.0750885, 0.19874161, -0.0744963, -0.07480135, 0.1989732, -0.07477189, 0.0025397227, 0.288673, 0.066181764, -0.0019924506, 0.288673, -0.0701636, -0.0019924506, 0.288673, 0.066181764, 0.0025397227, 0.288673, -0.0701636, 0.0025397227, 0.27503136, 0.07980695, 0.0025397227, 0.2795596, -0.07924187)
@@ -52,7 +53,8 @@ collision_layer = 5
 collision_mask = 131077
 script = ExtResource("1_a6gbp")
 realItem = ExtResource("2_qn2vl")
-item_id = "Carton2"
+itemId = "hộp nước ép nho"
+itemIcon = ExtResource("3_s64de")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.5896957e-08, 0, 1.05, 0, 1.05, 0, -1.05, 0, -4.5896957e-08, 0, 0, 0)

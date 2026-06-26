@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://b3ex4i4gcx74t"]
+[gd_scene load_steps=9 format=4 uid="uid://b3ex4i4gcx74t"]
 
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="1_6ocih"]
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_lgydc"]
 [ext_resource type="PackedScene" uid="uid://csbltr6aso1i6" path="res://Assets/kenney_food-kit/BananaPickable.tscn" id="2_2w8fm"]
+[ext_resource type="Texture2D" uid="uid://biuneo84yudvh" path="res://Assets/kenney_food-kit/Previews/banana.png" id="3_2w8fm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6ocih"]
 size = Vector3(0.6936035, 0.23486328, 0.6796875)
@@ -53,7 +54,8 @@ collision_layer = 5
 collision_mask = 196613
 script = ExtResource("1_lgydc")
 realItem = ExtResource("2_2w8fm")
-item_id = "nải chuối "
+itemId = "nải chuối"
+itemIcon = ExtResource("3_2w8fm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.096069336, 0.10668945, -0.0009765625)

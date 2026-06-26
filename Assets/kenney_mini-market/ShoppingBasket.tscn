@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://fdtoyggbwvi2"]
+[gd_scene load_steps=8 format=4 uid="uid://fdtoyggbwvi2"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_a42mh"]
 [ext_resource type="Script" uid="uid://bqaw61naktnlh" path="res://scripts/ShoppingBasketController.gd" id="1_yw7co"]
@@ -46,8 +46,10 @@ shadow_mesh = SubResource("ArrayMesh_kew5q")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yw7co"]
 points = PackedVector3Array(0.17496575, 0.22499022, 0.024975523, 0.17496575, 0.125, 0.024975523, 0.17496575, 0.22499022, -0.025009796, 0.14999022, 0.25, 0.024975523, 0.13532694, 0.14998531, 0.16033673, 0.14999022, 0.14998531, 0.12498042, 0.14999022, 0, 0.12498042, 0.17496575, 0.125, -0.025009796, 0.14999022, 0.25, -0.025009796, 0.14999022, 0.14998531, -0.12501469, 0.13532694, 0.14998531, -0.160371, -0.15002447, 0.25, 0.024975523, 0.09997065, 0.14998531, 0.17499998, 0.13532694, 0, 0.16033673, 0.14999022, 0, -0.12501469, -0.15002447, 0.25, -0.025009796, 0.09997065, 0.14998531, -0.17500001, 0.13532694, 0, -0.160371, -0.175, 0.22499022, 0.024975523, -0.1353612, 0.14998531, 0.16033673, -0.10000489, 0.14998531, 0.17499998, 0.09997065, 0, 0.17499998, -0.175, 0.22499022, -0.025009796, -0.10000489, 0.14998531, -0.17500001, -0.1353612, 0.14998531, -0.160371, 0.09997065, 0, -0.17500001, -0.15002447, 0.14998531, 0.12498042, -0.175, 0.125, 0.024975523, -0.1353612, 0, 0.16033673, -0.10000489, 0, 0.17499998, -0.175, 0.125, -0.025009796, -0.15002447, 0.14998531, -0.12501469, -0.10000489, 0, -0.17500001, -0.1353612, 0, -0.160371, -0.15002447, 0, 0.12498042, -0.15002447, 0, -0.12501469)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yw7co"]
+size = Vector3(0.2025299, 0.30612183, 0.25146484)
+
 [node name="shopping-basket" type="RigidBody3D"]
-script = ExtResource("1_yw7co")
 
 [node name="shopping-basket" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_rghce")
@@ -55,3 +57,9 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_yw7co")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00038909912, 0.19535828, 0.0012207031)
+shape = SubResource("BoxShape3D_yw7co")

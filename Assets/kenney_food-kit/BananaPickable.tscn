@@ -83,6 +83,9 @@ closed_pose = ExtResource("8_rkxig")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [node name="BananaPickable" instance=ExtResource("1_wf1cn")]
+continuous_cd = true
+linear_damp = 1.0
+angular_damp = 2.0
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07788086, 0.055664063, -0.0053710938)

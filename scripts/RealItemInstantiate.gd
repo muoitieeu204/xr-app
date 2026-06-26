@@ -1,7 +1,10 @@
 extends Area3D
 
 @export var realItem : PackedScene
-@export var item_id : String = ""
+@export var itemId : String = ""
+@export var itemIcon : Texture2D
+@export var hintAudio : AudioStream
+
 	# 1. Godot XR Tools checks this to see if it's allowed to grab it                                                                                                                                                      
 func can_pick_up(by: Node3D) -> bool:                                                                                                                                                                                  
 	return true                                                                                                                                                                                                           
@@ -20,20 +23,11 @@ func pick_up(by: Node3D) -> void:
 	by.picked_up_object = realItemInstance
 	realItemInstance.pick_up(by)
 
-	#Tell GameManager to start the STT check
-	var gameManger = get_node_or_null("/root/GameManager")
-	if gameManger:
-		print("DEBUG: Found GameManager! Sending item info...")
-		var final_id = item_id if item_id != "" else self.name
-		# If Godot added numbers to the end of the name (e.g., CartonSmall2), strip them out just in case!
-		final_id = final_id.rstrip("0123456789")
-		gameManger._item_pickup(final_id)
-		
-		# Listen for when the player drops the REAL item
-		if realItemInstance.has_signal("dropped"):
-			realItemInstance.connect("dropped", Callable(gameManger, "_item_dropped"))
-	else:
-		print("DEBUG: ERROR - GameManager NOT FOUND at /root/GameManager!")
+	# INJECT METADATA INTO THE REAL ITEM
+	var final_id = itemId if itemId != "" else self.name
+	final_id = final_id.rstrip("0123456789")
+	realItemInstance.set_meta("itemId", final_id)
+	realItemInstance.set_meta("hintAudio", hintAudio)
 
 	# Delete the fake item
 	queue_free()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://8gesik4l22v7"]
+[gd_scene load_steps=9 format=4 uid="uid://8gesik4l22v7"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_2ihwm"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_tiv84"]
 [ext_resource type="PackedScene" uid="uid://dpkl84rmmapx2" path="res://Assets/kenney_mini-market/ChipBagRedPickable.tscn" id="2_woryi"]
+[ext_resource type="Texture2D" uid="uid://bcg0n1odtcaph" path="res://Assets/kenney_ui-pack-adventure/Vector/button_red.svg" id="3_xfas1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aquf2"]
 resource_name = "colormap"
@@ -52,7 +53,8 @@ collision_layer = 5
 collision_mask = 131077
 script = ExtResource("1_2ihwm")
 realItem = ExtResource("2_woryi")
-item_id = "bịch snack đỏ"
+itemId = "bịch snack đỏ"
+itemIcon = ExtResource("3_xfas1")
 
 [node name="bag3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.50000006, -0.8660253, 0, 0.8660253, 0.50000006, 0, 0, 0)

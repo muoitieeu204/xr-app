@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dmky3h7xn4i28" path="res://scripts/CashRegisterController.gd" id="2_7iebq"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="2_f8c31"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_7iebq"]
+size = Vector3(0.8534546, 0.26013184, 0.85595703)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5scrc"]
 resource_name = "colormap"
 cull_mode = 2
@@ -46,21 +49,22 @@ shadow_mesh = SubResource("ArrayMesh_v0la0")
 [sub_resource type="BoxShape3D" id="BoxShape3D_af4od"]
 size = Vector3(0.5595703, 0.5751953, 1)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7iebq"]
-points = PackedVector3Array(-0.4, 0.19996932, -0.4, -0.3500783, 0, -0.4, -0.4, 0, -0.3500783, -0.4, 0.23531626, -0.38543952, -4.4047832e-05, 0.19996932, -0.4, -0.050048918, 0, -0.4, -0.4, 0, 0.34990707, -0.4, 0.24999076, -0.3500783, 0.20871183, 0.5949, 0.2214419, 0.36330268, 0.5949, 0.18000689, -4.4047832e-05, 0.23531626, -0.38543952, 0.39999512, 0.299954, -0.050048918, 0.39999512, 0.24999076, -0.050048918, 0.39999512, 0, -4.4047832e-05, -0.4, 0.19996932, 0.39999512, -0.3500783, 0, 0.39999512, -0.4, 0.24999076, 0.34990707, 0.22235712, 0.5949, 0.2721124, 0.37686476, 0.5949, 0.2306774, 0.38743153, 0.56986016, 0.17351708, 0.45000002, 0.299954, -4.4047832e-05, 0.45000002, 0.24999076, -4.4047832e-05, 0.39999512, 0, 0.29998532, -0.4, 0.23531626, 0.38526824, -4.4047832e-05, 0.24999076, 0.45000002, -4.4047832e-05, 0.299954, 0.45000002, 0.29998532, 0, 0.39999512, 0.3098865, 0.299954, 0.45000002, 0.28459284, 0.55524385, 0.2920811, 0.3328505, 0.55524385, 0.27910146, 0.40889785, 0.299954, 0.40889785, 0.40099356, 0.56986016, 0.22427079, 0.45000002, 0.299954, 0.3098865, 0.45000002, 0.24999076, 0.3098865, 0.40889785, 0.24999076, 0.40889785, 0.37062457, 0, 0.37062457, 0.3098865, 0.24999076, 0.45000002)
-
 [node name="cash-register2" type="StaticBody3D"]
 script = ExtResource("2_7iebq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027252197, 0.11932373, 0.024658203)
+shape = SubResource("BoxShape3D_7iebq")
 
 [node name="cash-register" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_fekh6")
 skeleton = NodePath("")
 
 [node name="RollerArea" type="Area3D" parent="."]
+collision_mask = 196615
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RollerArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22021484, 0.21240234, 0)
 shape = SubResource("BoxShape3D_af4od")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_7iebq")
+[connection signal="body_entered" from="RollerArea" to="." method="_on_roller_area_body_entered"]

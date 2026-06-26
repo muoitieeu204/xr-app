@@ -68,6 +68,9 @@ metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 [node name="BoxPickable" instance=ExtResource("1_fwvy7")]
 freeze = true
 freeze_mode = 0
+continuous_cd = true
+linear_damp = 1.0
+angular_damp = 2.0
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00091552734, 0.14807129, -0.0002975464)

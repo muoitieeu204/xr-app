@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://c6qg2wmqtgdnu"]
+[gd_scene load_steps=9 format=4 uid="uid://c6qg2wmqtgdnu"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_1cyv0"]
-[ext_resource type="Texture2D" uid="uid://d0kovp8l0vh0g" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="2_ei331"]
+[ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="2_ei331"]
 [ext_resource type="PackedScene" uid="uid://djmg2rotjwyxj" path="res://Assets/kenney_food-kit/WineRedPickable.tscn" id="2_x7kef"]
+[ext_resource type="Texture2D" uid="uid://dfhgdnh5bk2sh" path="res://Assets/kenney_food-kit/Previews/wine-red.png" id="3_x7kef"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ow56y"]
 resource_name = "colormap"
@@ -53,7 +54,8 @@ collision_layer = 5
 collision_mask = 196609
 script = ExtResource("1_1cyv0")
 realItem = ExtResource("2_x7kef")
-item_id = "chai rượu vang"
+itemId = "chai rượu vang"
+itemIcon = ExtResource("3_x7kef")
 
 [node name="wine-red" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

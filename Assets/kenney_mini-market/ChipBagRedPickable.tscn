@@ -70,6 +70,9 @@ metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 [node name="ChipBagRed" instance=ExtResource("1_7ut7m")]
 freeze = true
 freeze_mode = 0
+continuous_cd = true
+linear_damp = 1.0
+angular_damp = 2.0
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07295598, 0)

@@ -3,20 +3,22 @@ extends Node
 var currentHeldItemId = ""
 var validScannedItem = []
 
+signal speech_result(is_correct: bool)
+
 func _ready() -> void:
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
 		speechManager.OnSpeechRecognized.connect(_on_speech_recognized)
 
-func _item_pickup(itemId: String):
+func start_checkout_test(itemId: String):
 	currentHeldItemId = itemId
-	print("Player pickup: ", itemId, "- Please say the name!")
+	print("GameManager: Checkout test started for: ", itemId)
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
 		speechManager.StartListening()
 
-func _item_dropped(pickable = null):
-	print("Player dropped the item. Stopping check.")
+func stop_checkout_test():
+	print("GameManager: Checkout test stopped.")
 	currentHeldItemId = ""
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager and speechManager.has_method("StopListening"):
@@ -24,9 +26,10 @@ func _item_dropped(pickable = null):
 
 func _on_speech_recognized(text:String):
 	if currentHeldItemId != "":
-
 		if text.to_lower().contains(currentHeldItemId.to_lower()):
-			print("Correct! World matched: ", currentHeldItemId)
+			print("Correct! Word matched: ", currentHeldItemId)
 			validScannedItem.append(currentHeldItemId)
+			emit_signal("speech_result", true)
 		else:
 			print("Incorrect! You said: ", text)
+			emit_signal("speech_result", false)
