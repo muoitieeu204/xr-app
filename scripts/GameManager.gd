@@ -4,7 +4,7 @@ var currentHeldItemId = ""
 var validScannedItem = []
 
 signal speech_result(is_correct: bool)
-
+signal profile_selected
 func _ready() -> void:
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:

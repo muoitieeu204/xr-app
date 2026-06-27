@@ -22,7 +22,7 @@ var apiUrl : String = "https://103-162-31-23.sslip.io/api/auth/login"
 
 @onready var rememberMeCheckbox = get_node_or_null("LoginBox/VBoxContainer/RememberMe")
 
-
+signal join_world_requested
 
 func _ready() -> void:
 	loginButton.pressed.connect(_on_login_pressed)
@@ -215,9 +215,8 @@ func _on_forgot_unhover() -> void:
 	tween.tween_property(forgotButton, "scale", Vector2(1.0, 1.0), 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 func _on_join_world_pressed() -> void:
-	print_debug("Join World pressed! Yielding to VR Scene Manager...")
-	# get_tree().change_scene_to_file("res://Prefabs/SpectatorPrefabs/SpectatorDashboard.tscn")
-
+	print_debug("Join World pressed! Loading world...")
+	join_world_requested.emit()
 func _on_join_hover() -> void:
 	if joinWorldButton != null:
 		joinWorldButton.pivot_offset = joinWorldButton.size / 2

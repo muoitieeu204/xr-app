@@ -111,7 +111,6 @@ common/physics_ticks_per_second=90
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/msaa_3d=1
 
@@ -119,6 +118,5 @@ anti_aliasing/quality/msaa_3d=1
 
 openxr/enabled=true
 openxr/reference_space=1
-openxr/foveation_level=3
-openxr/foveation_dynamic=true
+openxr/foveation_level=1
 shaders/enabled=true

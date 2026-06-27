@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://djmys4bj6qmku"]
+[gd_scene load_steps=7 format=3 uid="uid://djmys4bj6qmku"]
+
+[ext_resource type="Script" uid="uid://rnp6je1i4gsg" path="res://Prefabs/UI/WelcomeScene.gd" id="1_upf63"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
 content_margin_left = 48.0
@@ -62,6 +64,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_upf63")
 
 [node name="WelcomeBox" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(416, 0)

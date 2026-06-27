@@ -1,7 +1,7 @@
 [gd_scene load_steps=101 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
-[ext_resource type="Script" uid="uid://cijjlg2j5o6ye" path="res://scripts/InitializeScript.gd" id="1_c4e85"]
+[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_r2rb5"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_acpa7"]
 [ext_resource type="PackedScene" uid="uid://canh6gljuhhoc" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_027.gltf" id="5_r2rb5"]
 [ext_resource type="PackedScene" uid="uid://cngiglc3db05c" path="res://Assets/kenney_mini-market/FakeShelfBag.tscn" id="12_h8g51"]
@@ -712,7 +712,7 @@ shadow_mesh = SubResource("ArrayMesh_sifgk")
 points = PackedVector3Array(0.02496326, 0.379, 0.024990208, 0.02496326, 0.379, -0.025004897, -0.025017142, 0.379, 0.024990208, 0.02496326, 0.228973, 0.049995102, 0.03745836, 0.050973576, 0.075, 0.07499999, 0.050973576, 0.037485316, 0.04995346, 0.228973, 0.024990208, 0.04995346, 0.228973, -0.025004897, 0.07499999, 0.050973576, -0.037514687, 0.03745836, 0.050973576, -0.075, 0.02496326, 0.228973, -0.05000979, -0.025017142, 0.379, -0.025004897, -0.5, 0.228973, 0.024990208, -0.025017142, 0.228973, 0.049995102, 0.03745836, 0, 0.075, -0.037512243, 0.050973576, 0.075, 0.07499999, 0, 0.037485316, 0.07499999, 0, -0.037514687, 0.03745836, 0, -0.075, -0.037512243, 0.050973576, -0.075, -0.025017142, 0.228973, -0.05000979, -0.5, 0.228973, -0.025004897, -0.5, 0.17896399, 0.024990208, -0.037512243, 0, 0.075, -0.037512243, 0, -0.075, -0.5, 0.17896399, -0.025004897, -0.07505384, 0, 0.037485316, -0.07505384, 0, -0.037514687)
 
 [node name="Main" type="Node3D"]
-script = ExtResource("1_c4e85")
+script = ExtResource("1_r2rb5")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jopcc")
