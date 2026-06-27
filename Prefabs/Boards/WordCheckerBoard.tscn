@@ -7,7 +7,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_10sii"]
 font_size = 64
 
-[node name="Control" type="Control" node_paths=PackedStringArray("titleLabel")]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ddyxf")
-titleLabel = NodePath("MarginContainer/VBoxContainer/Label2")
 titleLabelText = "Con Chó🐶"
 targetWord = "con chó"
 
