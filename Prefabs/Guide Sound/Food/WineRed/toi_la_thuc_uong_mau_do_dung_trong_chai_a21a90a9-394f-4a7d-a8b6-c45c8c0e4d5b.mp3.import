@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cafrd5mp20nvu"
+path="res://.godot/imported/toi_la_thuc_uong_mau_do_dung_trong_chai_a21a90a9-394f-4a7d-a8b6-c45c8c0e4d5b.mp3-d48373d520f49c5ebae24bad0bad9626.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/WineRed/toi_la_thuc_uong_mau_do_dung_trong_chai_a21a90a9-394f-4a7d-a8b6-c45c8c0e4d5b.mp3"
+dest_files=["res://.godot/imported/toi_la_thuc_uong_mau_do_dung_trong_chai_a21a90a9-394f-4a7d-a8b6-c45c8c0e4d5b.mp3-d48373d520f49c5ebae24bad0bad9626.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vpo2gnqjdecq"
+path="res://.godot/imported/toi_la_cai_hop_nho_ben_trong_co_sua_ngon_lam_6d5a75bd-f78e-4b82-b54a-a5570c55bef1.mp3-26f9afacf2b8147cbbb0a0d2ea2497cc.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Carton small/toi_la_cai_hop_nho_ben_trong_co_sua_ngon_lam_6d5a75bd-f78e-4b82-b54a-a5570c55bef1.mp3"
+dest_files=["res://.godot/imported/toi_la_cai_hop_nho_ben_trong_co_sua_ngon_lam_6d5a75bd-f78e-4b82-b54a-a5570c55bef1.mp3-26f9afacf2b8147cbbb0a0d2ea2497cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dptivcqcovlwg"
+path="res://.godot/imported/toi_la_qua_mau_do_tron_tron_74b12fba-2422-42de-b2d8-d775d764cdaa.mp3-d6f1fdc62b80bf0c456a3cae92348110.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Tomato/toi_la_qua_mau_do_tron_tron_74b12fba-2422-42de-b2d8-d775d764cdaa.mp3"
+dest_files=["res://.godot/imported/toi_la_qua_mau_do_tron_tron_74b12fba-2422-42de-b2d8-d775d764cdaa.mp3-d6f1fdc62b80bf0c456a3cae92348110.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

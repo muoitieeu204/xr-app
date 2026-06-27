@@ -10,9 +10,6 @@ var failed_attempts = 0
 var is_currently_teaching = false # <--- NEW: Prevents other NPCs from reacting!
 
 func _ready():
-	if npc_animation_player and npc_animation_player.has_animation("Idle"):
-		npc_animation_player.play("Idle")
-		
 	var gameManager = get_node_or_null("/root/GameManager")
 	if gameManager:
 		gameManager.connect("speech_result", Callable(self, "_on_speech_result"))

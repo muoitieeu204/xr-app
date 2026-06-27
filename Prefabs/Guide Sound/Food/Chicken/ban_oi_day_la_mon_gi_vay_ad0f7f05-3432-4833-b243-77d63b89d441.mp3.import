@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://45wxum1bfjut"
+path="res://.godot/imported/ban_oi_day_la_mon_gi_vay_ad0f7f05-3432-4833-b243-77d63b89d441.mp3-b516b76cd7d72ac378d0b31223613209.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Chicken/ban_oi_day_la_mon_gi_vay_ad0f7f05-3432-4833-b243-77d63b89d441.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_mon_gi_vay_ad0f7f05-3432-4833-b243-77d63b89d441.mp3-b516b76cd7d72ac378d0b31223613209.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

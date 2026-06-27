@@ -1,0 +1,156 @@
+[gd_scene load_steps=9 format=3 uid="uid://baunwki7bfafh"]
+
+[ext_resource type="Script" uid="uid://v4xpck7ifcnx" path="res://Prefabs/UI/childprofile-my-child-api.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
+content_margin_left = 48.0
+content_margin_top = 48.0
+content_margin_right = 48.0
+content_margin_bottom = 48.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.04)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_sparkles"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jofw"]
+font_size = 26
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+outline_size = 8
+outline_color = Color(0.4, 0.2, 0.1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jofw"]
+content_margin_left = 32.0
+content_margin_top = 24.0
+content_margin_right = 32.0
+content_margin_bottom = 24.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 6
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_left = 32.0
+content_margin_top = 26.0
+content_margin_right = 32.0
+content_margin_bottom = 22.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vktwn"]
+content_margin_left = 32.0
+content_margin_top = 24.0
+content_margin_right = 32.0
+content_margin_bottom = 24.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 6
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="ChildProfileBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="ProfileBox" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ylf5s")
+
+[node name="SparkleParticles" type="CPUParticles2D" parent="ProfileBox"]
+position = Vector2(250, 200)
+amount = 18
+lifetime = 4.0
+preprocess = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(230, 180)
+gravity = Vector2(0, -10)
+initial_velocity_min = 5.0
+initial_velocity_max = 12.0
+angular_velocity_min = -20.0
+angular_velocity_max = 20.0
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_scale")
+color_ramp = SubResource("Gradient_sparkles")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ProfileBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="ProfileBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "🌟 Ai đang chơi vậy? 🌟"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="LoadingLabel" type="Label" parent="ProfileBox/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.3, 0.3, 1)
+text = "Đang tải danh sách..."
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ProfileBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProfilesGrid" type="GridContainer" parent="ProfileBox/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="TemplateButton" type="Button" parent="ProfileBox/VBoxContainer/ScrollContainer/ProfilesGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "🧒 Template"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

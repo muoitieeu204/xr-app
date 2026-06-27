@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3mxoss3qu0qp"
+path="res://.godot/imported/toi_la_trai_cay_mau_vang_cong_cong_5299c72a-67d6-422e-8453-55201c626230.mp3-18795f7f854880a19011e58583029235.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Banana/toi_la_trai_cay_mau_vang_cong_cong_5299c72a-67d6-422e-8453-55201c626230.mp3"
+dest_files=["res://.godot/imported/toi_la_trai_cay_mau_vang_cong_cong_5299c72a-67d6-422e-8453-55201c626230.mp3-18795f7f854880a19011e58583029235.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

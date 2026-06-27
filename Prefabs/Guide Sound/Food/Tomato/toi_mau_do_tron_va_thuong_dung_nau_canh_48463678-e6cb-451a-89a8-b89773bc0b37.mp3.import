@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b62fsttbdw6oi"
+path="res://.godot/imported/toi_mau_do_tron_va_thuong_dung_nau_canh_48463678-e6cb-451a-89a8-b89773bc0b37.mp3-303a9648494b5591bcbb08757280a9a5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Tomato/toi_mau_do_tron_va_thuong_dung_nau_canh_48463678-e6cb-451a-89a8-b89773bc0b37.mp3"
+dest_files=["res://.godot/imported/toi_mau_do_tron_va_thuong_dung_nau_canh_48463678-e6cb-451a-89a8-b89773bc0b37.mp3-303a9648494b5591bcbb08757280a9a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -31,6 +31,8 @@ SessionData="*res://scripts/SessionData.gd"
 SessionUploader="*res://scripts/SessionUploader.cs"
 AzureSpeechManager="*res://scripts/AzureSpeechManager.cs"
 GameManager="*res://scripts/GameManager.gd"
+PlayerData="*res://Prefabs/PlayerPrefabs/PlayerData.gd"
+RefreshTokenApi="*res://scripts/RefreshTokenApi.gd"
 
 [dotnet]
 

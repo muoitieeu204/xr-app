@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b313qr8q4w56x"
+path="res://.godot/imported/toi_la_qua_to_ben_trong_do_ngot_mat_3a21201c-5ac2-44c5-9440-b59dae035f2e.mp3-a6fc3277c0b0b30a796009d5bb4cbc78.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Watermelon/toi_la_qua_to_ben_trong_do_ngot_mat_3a21201c-5ac2-44c5-9440-b59dae035f2e.mp3"
+dest_files=["res://.godot/imported/toi_la_qua_to_ben_trong_do_ngot_mat_3a21201c-5ac2-44c5-9440-b59dae035f2e.mp3-a6fc3277c0b0b30a796009d5bb4cbc78.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
