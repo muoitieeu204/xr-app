@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=4 uid="uid://c2h6ch3df0bew"]
+
+[ext_resource type="Texture2D" uid="uid://8054t8qrhji7" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="1_ogqvl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhruy"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_ogqvl")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_11dxf"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.2, 1),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("CAAGAAkABgAIAAkABgADAAgAAwAGAAgACQABAAgAAQAJAAgACgAIAAMACAAKAAMACQABAAQAAQAJAAQABQAEAAEABAAFAAEAAwALAAoACwADAAoADAAFAAQABQAMAAQACgAHAAsABwAKAAsABAANAAwADQAEAAwABwALAAAACwAHAAAADAAOAA0ADgAMAA0ADwAAAAsAAAAPAAsADwAAAA4AAAAPAA4AAgAOAA8ADgACAA8ADQACAA4AAgANAA4A"),
+"lods": [0.26839954, PackedByteArray("BAACAAUAAgAEAAUABQAEAAEABAAFAAEABQAAAAIAAAAFAAIAAQAGAAQABgABAAQAAgAAAAMAAAACAAMAAwAGAAEABgADAAEAAwAHAAAABwADAAAABwABAAMAAQAHAAMA"), 0.70136136, PackedByteArray("AAABAAIAAQAAAAIAAgAAAAMAAQAAAAMAAAACAAMAAAABAAMAAwABAAIAAQADAAIA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/3//////AAD/f///AAAAAIHaAACB2gAAAAAAAP9/AACB2gAAfSUAAIHa//99JQAAfSUAAH0lAAB9Jf//gdoAAH0l//99JQAA/38AAAAAAAAAAP///38AAH0lAACB2gAA//////9/AAD//wAA/38AAIHa//+B2gAA/38AAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8qmj3"]
+resource_name = "indicator-round-a_rotate-y"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 0.2, 1),
+"attribute_data": PackedByteArray("/1dlhv9XZYb/V/+f/1f/n/9XZYb/V2WG/1f/n/9X/5//V/+f/1dlhv9X/5//V2WG/1f/n/9XZYb/V/+f/1dlhv9XZYb/V/+f/1dlhv9X/5//V2WG/1f/n/9XZYb/V/+f/1dlhv9XZYb/V/+f/1dlhv9XZYb/V/+f/1f/n/9XZYb/V2WG/1f/n/9XZYb/V2WG/1dlhv9X/5//V/+f/1f/n/9XZYb/V/+f/1f/n/9X/5//V2WG/1f/n/9X/5//V2WG/1dlhv9X/5//V/+f/1dlhv9X/5//V2WG/1f/n/9XZYb/V2WG/1f/n/9X/5//V2WG/1f/n/9XZYb/V/+f/1dlhg=="),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("EAAKABEAEQABABAADgASABMABAATABIAFAAJAAgACAAVABQADQAWAAwAFwAMABYAGAAZABoAGgACABgAGwAcAB0ABgAdABwAAwAeAB8AHwAgAAMAIQAHACIAIwAiAAcAJAAlACYAJgAAACQAJwAoACkABQApACgAKgArACwALAALACoALQAuAC8ADwAvAC4AMAAxADIAMgAzADAANAA1ADYANwA2ADUAOAA5ADoAOgA7ADgAPAA9AD4APwA+AD0A"),
+"lods": [0.26839954, PackedByteArray("CAACAAkAAAAJAAIACAAJAAEAAAACAAMAAQAKAAgAAwAKAAEAAwALAAAAAQALAAMABgAMAA0ADQAFAAYADQAMAAQABgAFAAcADgAEAAwADgAHAAQADwAHAAUADwAEAAcA"), 0.70136136, PackedByteArray("AAABAAIAAQADAAIAAAACAAMAAQAAAAMABAAFAAYABgAFAAcABQAEAAcABwAEAAYA")],
+"material": SubResource("StandardMaterial3D_xhruy"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("/3//////AID/f///AAD//4HaAACB2v+fAAAAAP9//7//f///AAAAAP9//////wAAgdoAAIHaAAAAAAAA/38AAIHaAAB9Jf/fgdr//30l/999JQAAfSX/330l//+B2v+fgdoAAH0lAACB2v//fSUAAH0lAAB9JQAAfSX//4HaAAB9Jf//fSX/3/9/AAAAAP//fSX//30lAAD/fwAAAAAAAP//////f/+///8AAP9//7///////38AAP//AAD/fwAAgdr//4Ha/5///////3//v///AAD/f/+///////9/AACB2v//gdoAAP//AAD/fwAAfSUAAH0l/999Jf//fSX/3wAA////f/+/fSUAAH0lAAB9Jf//fSUAAAAA////fwAAgdr//4Ha/5+B2gAAgdr/n/9/AAD//wCAgdoAAIHaAACB2v//gdoAAP9/AAD//wAAfSUAAIHa/58AAAAA/3//vwAA////f/+/AAAAAP9/AAB9JQAAgdoAAAAA////fwAA/3///wAA////fwAAAAD//4HaAAB9Jf/fgdr//30l/9//fwAAAAAAAP9///8AAAAAgdoAAH0lAACB2v//fSUAAP9//////wCA/38AAP//AIB9JQAAgdr/n30l//+B2v+f/38AAP//AAD/f/////8AAH0lAACB2gAAfSX//4HaAAD/f////3////9/AAD/f////3//f////3///3yl/7//f/9/AAD/fwAA/3////9///+CWv9/glr/f3yl/3+B2v9//3////9///98pf9//3//f/9/AAD/fwAA/z//f/8//3//fwAA/38AAP9/AAD/P/9///98pf8//3//f////3////9///98pf9/fKX/f/+//3//fwAA/38AAP9//////3yl//98pf///3//f////3////9/////v/9/gdr/f/+//3//f////3////9/AAD/fwAA/3//f/9//3+CWv9/glr/f/9/////f////3////9///////9/////f4Ha/3+B2v9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_11dxf")
+
+[sub_resource type="Animation" id="Animation_kma5f"]
+resource_name = "animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("indicator-round-a/rotate-y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0, 0.022905448, 0, -0.9997377, 0.06666667, 1, 0, 0.07845912, 0, -0.9969174, 0.1, 1, 0, 0.14673048, 0, -0.9891765, 0.13333334, 1, 0, 0.20791171, 0, -0.9781476, 1.1333333, 1, 0, 0.97814757, 0, 0.20791179, 1.8666667, 1, 0, 0.20791157, 0, 0.9781477, 1.9, 1, 0, 0.14673057, 0, 0.9891766, 1.9333333, 1, 0, 0.078459285, 0, 0.9969174, 1.9666667, 1, 0, 0.039259747, 0, 0.99922913, 2, 1, 0, -8.742278e-08, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c43jm"]
+_data = {
+&"animation": SubResource("Animation_kma5f")
+}
+
+[node name="indicator-round-a2" type="Node3D"]
+
+[node name="indicator-round-a" type="Node3D" parent="."]
+
+[node name="rotate-y" type="MeshInstance3D" parent="indicator-round-a"]
+mesh = SubResource("ArrayMesh_8qmj3")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_c43jm")
+}
+autoplay = "animation"

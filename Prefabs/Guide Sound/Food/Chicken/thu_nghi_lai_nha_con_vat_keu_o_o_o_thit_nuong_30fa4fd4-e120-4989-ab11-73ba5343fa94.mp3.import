@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsaltdpctlvfx"
+path="res://.godot/imported/thu_nghi_lai_nha_con_vat_keu_o_o_o_thit_nuong_30fa4fd4-e120-4989-ab11-73ba5343fa94.mp3-43b79963c73d600e629bd8626aa7dda4.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Chicken/thu_nghi_lai_nha_con_vat_keu_o_o_o_thit_nuong_30fa4fd4-e120-4989-ab11-73ba5343fa94.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_con_vat_keu_o_o_o_thit_nuong_30fa4fd4-e120-4989-ab11-73ba5343fa94.mp3-43b79963c73d600e629bd8626aa7dda4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

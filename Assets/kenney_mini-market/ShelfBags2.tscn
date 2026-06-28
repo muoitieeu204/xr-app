@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bu4lky2y3b6tv" path="res://Assets/kenney_mini-market/ChipBagPickable.tscn" id="2_0emta"]
 [ext_resource type="PackedScene" uid="uid://dpkl84rmmapx2" path="res://Assets/kenney_mini-market/ChipBagRedPickable.tscn" id="3_hh4jc"]
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0emta"]
+points = PackedVector3Array(-0.4, 0, -0.35000002, -0.4, 0, 0.34999996, -0.4, 0.049960848, -0.35000002, 0.4, 0, -0.35000002, 0.4, 0, 0.34999996, -0.4, 0.049960848, 0.34999996, 0.4, 0.049960848, -0.35000002, -0.4, 0.7499609, -0.050019592, -0.35003915, 0.5146437, -0.31156033, 0.4, 0.049960848, 0.34999996, -0.35003915, 0.5146437, 0.31142324, -0.4, 0.7499609, 0.049951047, 0.34996083, 0.5146437, -0.31156033, 0.4, 0.7499609, -0.050019592, -0.35003915, 0.8000001, 0.049951047, -0.35003915, 0.79992175, -0.050019592, -0.35003915, 0.55794835, -0.28655052, 0.4, 0.7499609, 0.049951047, 0.34996083, 0.5146437, 0.31142324, -0.35003915, 0.55794835, 0.28641343, 0.34996083, 0.55794835, -0.28655052, 0.34996083, 0.79992175, -0.050019592, 0.34996083, 0.79992175, 0.049951047, 0.34996083, 0.55794835, 0.28641343)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aquf2"]
 resource_name = "colormap"
 cull_mode = 2
@@ -44,43 +47,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e64w8")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0emta"]
-points = PackedVector3Array(0.35550997, 0.5650694, -0.29279748, -0.399093, 0.00090702943, -0.35, -0.39999998, 4.8429143e-08, 0.34920627, -0.36816475, 0.80634916, 0.06268845, 0.39999384, 0, 0.34920633, 0.3990868, 0.00090702943, -0.35, 0.33818984, 0.5327355, 0.30108687, 0.40634298, 0.76824397, 0.06268845, -0.3430744, 0.5224441, -0.30702877, -0.33819604, 0.5327355, 0.30108687, 0.35654926, 0.7934507, -0.049926862, -0.39344773, 0.7565522, -0.049926475, 0.40634298, 0.057212472, -0.3563492, -0.40634918, 0.057212472, 0.35476187, -0.3565121, 0.79348785, -0.0499315, -0.40634918, 0.76824397, 0.06268845, -0.40634918, 0.057212472, -0.3563492, 0.40634298, 0.057212472, 0.35476187, 0.3682381, 0.80634916, 0.06268845, -0.16507125, 0.5650694, -0.29279748, 0.3430682, 0.5224441, -0.30702877, 0.39344478, 0.7565552, -0.04992688, -0.34130138, 0.54625, -0.29328406)
+[node name="ShelfBags" type="StaticBody3D"]
 
-[node name="ShelfBags" type="Node3D"]
-
-[node name="shelf-bags2" type="Node3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+shape = SubResource("ConvexPolygonShape3D_0emta")
 
-[node name="shelf-bags" type="MeshInstance3D" parent="shelf-bags2"]
+[node name="shelf-bags" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 mesh = SubResource("ArrayMesh_an1ob")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="shelf-bags2/shelf-bags"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="shelf-bags2/shelf-bags/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_0emta")
-
-[node name="ChipBag" parent="shelf-bags2" instance=ExtResource("2_0emta")]
+[node name="ChipBag" parent="shelf-bags" instance=ExtResource("2_0emta")]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, -0.86602545, 0, 0.86602545, 0.49999997, -0.17563558, 0.29523122, 0.117663145)
 
-[node name="ChipBag2" parent="shelf-bags2" instance=ExtResource("2_0emta")]
+[node name="ChipBag2" parent="shelf-bags" instance=ExtResource("2_0emta")]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, -0.86602545, 0, 0.86602545, 0.49999997, 0.15958846, 0.29523122, 0.117663145)
 
-[node name="ChipBag3" parent="shelf-bags2" instance=ExtResource("2_0emta")]
+[node name="ChipBag3" parent="shelf-bags" instance=ExtResource("2_0emta")]
 transform = Transform3D(-1, 7.5710346e-08, 4.3711385e-08, 0, 0.49999997, -0.86602545, -8.742278e-08, -0.86602545, -0.49999997, -0.17563558, 0.65617317, -0.09578574)
 
-[node name="ChipBag4" parent="shelf-bags2" instance=ExtResource("2_0emta")]
+[node name="ChipBag4" parent="shelf-bags" instance=ExtResource("2_0emta")]
 transform = Transform3D(-1, 7.5710346e-08, 4.3711385e-08, 0, 0.49999997, -0.86602545, -8.742278e-08, -0.86602545, -0.49999997, 0.15958846, 0.65617317, -0.09578574)
 
-[node name="PickableObject" parent="shelf-bags2" instance=ExtResource("3_hh4jc")]
+[node name="ChipBagRedPickable" parent="shelf-bags" instance=ExtResource("3_hh4jc")]
+transform = Transform3D(-1, -7.5710346e-08, -4.3711385e-08, 0, 0.49999997, -0.86602545, 8.742278e-08, -0.86602545, -0.49999997, -0.16104913, 0.2787412, -0.087263525)
+
+[node name="ChipBagRedPickable2" parent="shelf-bags" instance=ExtResource("3_hh4jc")]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, -0.86602545, 0, 0.86602545, 0.49999997, -0.16104913, 0.66244614, 0.094693065)
 
-[node name="PickableObject2" parent="shelf-bags2" instance=ExtResource("3_hh4jc")]
+[node name="ChipBagRedPickable3" parent="shelf-bags" instance=ExtResource("3_hh4jc")]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, -0.86602545, 0, 0.86602545, 0.49999997, 0.17707586, 0.66244614, 0.094693065)
 
-[node name="PickableObject3" parent="shelf-bags2" instance=ExtResource("3_hh4jc")]
+[node name="ChipBagRedPickable4" parent="shelf-bags" instance=ExtResource("3_hh4jc")]
 transform = Transform3D(-1, -7.5710346e-08, -4.3711385e-08, 0, 0.49999997, -0.86602545, 8.742278e-08, -0.86602545, -0.49999997, 0.17707586, 0.2787412, -0.087263525)
-
-[node name="PickableObject4" parent="shelf-bags2" instance=ExtResource("3_hh4jc")]
-transform = Transform3D(-1, -7.5710346e-08, -4.3711385e-08, 0, 0.49999997, -0.86602545, 8.742278e-08, -0.86602545, -0.49999997, -0.16104913, 0.2787412, -0.087263525)

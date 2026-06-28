@@ -10,6 +10,7 @@ func _ready():
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 		
 		get_viewport().use_xr = true
+		get_viewport().scaling_3d_scale = 1.0
 	else:
 		print("OpenXR not initalise, please check if your headset is connected")
 

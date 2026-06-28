@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0ceb38q4ki7m"
+path="res://.godot/imported/toi_la_mon_an_thom_ngon_duoc_nuong_vang_uom_e9ddb68b-1861-437d-97c7-8ca4d38c516b.mp3-616786c3f2b9fdf827dae412833bc5f6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Chicken/toi_la_mon_an_thom_ngon_duoc_nuong_vang_uom_e9ddb68b-1861-437d-97c7-8ca4d38c516b.mp3"
+dest_files=["res://.godot/imported/toi_la_mon_an_thom_ngon_duoc_nuong_vang_uom_e9ddb68b-1861-437d-97c7-8ca4d38c516b.mp3-616786c3f2b9fdf827dae412833bc5f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

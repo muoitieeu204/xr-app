@@ -1,8 +1,9 @@
 [gd_scene load_steps=27 format=3 uid="uid://hswk7nctikan"]
 
 [ext_resource type="Script" path="res://Prefabs/SpectatorPrefabs/SpectatorDashboard.gd" id="1_script"]
-[ext_resource type="PackedScene" uid="uid://b8settingmenu" path="res://Prefabs/SpectatorPrefabs/SettingsMenu.tscn" id="2_settings"]
-[ext_resource type="PackedScene" uid="uid://b0tvfsri66iru" path="res://Prefabs/SpectatorPrefabs/ProgressMenu.tscn" id="3_progress"]
+[ext_resource type="PackedScene" uid="uid://b8settingmenu" path="res://Prefabs/UI/SettingsMenu.tscn" id="2_settings"]
+[ext_resource type="PackedScene" uid="uid://b0tvfsri66iru" path="res://Prefabs/UI/ProgressMenu.tscn" id="3_progress"]
+
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
 content_margin_left = 36.0

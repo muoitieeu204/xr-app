@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bt2bmq724hx1k" path="res://Assets/computer_monitor_lowpoly_model.glb" id="2_jbn7o"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_76d8l"]
 [ext_resource type="PackedScene" uid="uid://kebck1vasldd" path="res://Assets/kenney_furniture-kit/Models/GLTF format/bear.glb" id="3_xfkw6"]
-[ext_resource type="PackedScene" uid="uid://bho8ebcx5lvhs" path="res://Prefabs/SpectatorPrefabs/AuthScene.tscn" id="4_7bcn3"]
+[ext_resource type="PackedScene" uid="uid://bho8ebcx5lvhs" path="res://Prefabs/UI/AuthScene.tscn" id="4_7bcn3"]
 [ext_resource type="PackedScene" uid="uid://b5hwt4i0amlao" path="res://Assets/kenney_furniture-kit/Models/GLTF format/kitchenCabinetDrawer.glb" id="4_oeo85"]
 [ext_resource type="PackedScene" uid="uid://dgdb1texynduw" path="res://addons/godot-xr-tools/objects/virtual_keyboard.tscn" id="5_7bcn3"]
 [ext_resource type="PackedScene" uid="uid://yp4sngrdcout" path="res://Assets/kenney_mini-market/Models/GLB format/floor.glb" id="5_lunnw"]

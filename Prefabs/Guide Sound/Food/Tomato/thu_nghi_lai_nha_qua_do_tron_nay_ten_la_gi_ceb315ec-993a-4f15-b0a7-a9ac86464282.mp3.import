@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csqtfqqppr8nk"
+path="res://.godot/imported/thu_nghi_lai_nha_qua_do_tron_nay_ten_la_gi_ceb315ec-993a-4f15-b0a7-a9ac86464282.mp3-052dabf91db1c7d3c1d63ea68e576155.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Tomato/thu_nghi_lai_nha_qua_do_tron_nay_ten_la_gi_ceb315ec-993a-4f15-b0a7-a9ac86464282.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_qua_do_tron_nay_ten_la_gi_ceb315ec-993a-4f15-b0a7-a9ac86464282.mp3-052dabf91db1c7d3c1d63ea68e576155.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

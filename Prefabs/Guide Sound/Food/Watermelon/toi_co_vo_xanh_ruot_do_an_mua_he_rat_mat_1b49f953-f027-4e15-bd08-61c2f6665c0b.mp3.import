@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6vvxlj10s5f6"
+path="res://.godot/imported/toi_co_vo_xanh_ruot_do_an_mua_he_rat_mat_1b49f953-f027-4e15-bd08-61c2f6665c0b.mp3-86d174e082d4d635d01db996ab1802c5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Watermelon/toi_co_vo_xanh_ruot_do_an_mua_he_rat_mat_1b49f953-f027-4e15-bd08-61c2f6665c0b.mp3"
+dest_files=["res://.godot/imported/toi_co_vo_xanh_ruot_do_an_mua_he_rat_mat_1b49f953-f027-4e15-bd08-61c2f6665c0b.mp3-86d174e082d4d635d01db996ab1802c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
