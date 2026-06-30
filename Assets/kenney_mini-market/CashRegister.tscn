@@ -1,7 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://b5gng5pbbud36"]
+[gd_scene load_steps=9 format=4 uid="uid://b5gng5pbbud36"]
 
 [ext_resource type="Script" uid="uid://dmky3h7xn4i28" path="res://scripts/CashRegisterController.gd" id="2_7iebq"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="2_f8c31"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7iebq"]
+rough = true
+absorbent = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7iebq"]
 size = Vector3(0.8534546, 0.26013184, 0.85595703)
@@ -50,6 +54,7 @@ shadow_mesh = SubResource("ArrayMesh_v0la0")
 size = Vector3(0.5595703, 0.5751953, 1)
 
 [node name="cash-register2" type="StaticBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_7iebq")
 script = ExtResource("2_7iebq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

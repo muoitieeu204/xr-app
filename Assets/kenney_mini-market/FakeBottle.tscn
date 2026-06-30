@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://vblhq1w7difm"]
+[gd_scene load_steps=11 format=4 uid="uid://vblhq1w7difm"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_posoo"]
 [ext_resource type="PackedScene" uid="uid://bd33s0xagrmt1" path="res://Assets/kenney_mini-market/PickableBottle.tscn" id="2_6i3gh"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="2_n3jem"]
-[ext_resource type="Texture2D" uid="uid://xdsy36aob115" path="res://Assets/kenney_food-kit/Previews/plate-rectangle.png" id="3_6i3gh"]
+[ext_resource type="AudioStream" uid="uid://erh5430a827u" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/cai_chai_f6cb12c9-4d07-4cc7-9bbb-9c74c814e407.mp3" id="3_6i3gh"]
+[ext_resource type="AudioStream" uid="uid://cusx7t23ebxc" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/thu_nghi_lai_nha_vat_dung_nuoc_co_co_dai_nap_77560f20-0eaf-41b2-a15e-2c936d47bd18.mp3" id="4_oowq8"]
+[ext_resource type="AudioStream" uid="uid://s7wq27af7pky" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/toi_dung_de_dung_nuoc_co_co_dai_va_nap_day_dec98a18-d570-4928-8c03-ed9cbfd78556.mp3" id="5_a1vsw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbut4"]
 resource_name = "colormap"
@@ -54,7 +56,8 @@ collision_mask = 131077
 script = ExtResource("1_posoo")
 realItem = ExtResource("2_6i3gh")
 itemId = "chai nước"
-itemIcon = ExtResource("3_6i3gh")
+itemNameSound = ExtResource("3_6i3gh")
+hintAudios = Array[AudioStream]([ExtResource("4_oowq8"), ExtResource("5_a1vsw")])
 
 [node name="bottle" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_6i3gh")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bix2xv0stht4"
+path="res://.godot/imported/thu_nghi_lai_nha_mon_lam_tu_bot_mi_an_sang_nay_bb314cc5-0f57-457b-b274-26bac974ced4.mp3-6f672ba3cddcb3b40fa751c1059b601c.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBread/thu_nghi_lai_nha_mon_lam_tu_bot_mi_an_sang_nay_bb314cc5-0f57-457b-b274-26bac974ced4.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_mon_lam_tu_bot_mi_an_sang_nay_bb314cc5-0f57-457b-b274-26bac974ced4.mp3-6f672ba3cddcb3b40fa751c1059b601c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

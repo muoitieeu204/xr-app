@@ -6,7 +6,8 @@ signal item_scanned_for_teaching(item_id, hint_audio)
 func _on_roller_area_body_entered(body: Node3D) -> void:
 	if body is RigidBody3D and body.has_meta("itemId"):
 		var id = body.get_meta("itemId")
-		var hint = body.get_meta("hintAudio")
+		var hintArray = body.get_meta("hintAudios")
+		var hint = hintArray.pick_random()
 		
 		print("Cash Register detected: ", id)
 		emit_signal("item_scanned_for_teaching", id, hint)

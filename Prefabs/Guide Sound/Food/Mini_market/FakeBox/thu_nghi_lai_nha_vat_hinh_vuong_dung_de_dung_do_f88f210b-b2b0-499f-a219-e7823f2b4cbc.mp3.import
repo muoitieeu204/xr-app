@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmsr6nx3co1qt"
+path="res://.godot/imported/thu_nghi_lai_nha_vat_hinh_vuong_dung_de_dung_do_f88f210b-b2b0-499f-a219-e7823f2b4cbc.mp3-e58fb24b9722ea30b2ea17364dc05120.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBox/thu_nghi_lai_nha_vat_hinh_vuong_dung_de_dung_do_f88f210b-b2b0-499f-a219-e7823f2b4cbc.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_vat_hinh_vuong_dung_de_dung_do_f88f210b-b2b0-499f-a219-e7823f2b4cbc.mp3-e58fb24b9722ea30b2ea17364dc05120.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

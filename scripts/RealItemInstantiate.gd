@@ -2,9 +2,8 @@ extends Area3D
 
 @export var realItem : PackedScene
 @export var itemId : String = ""
-@export var itemIcon : Texture2D
-@export var hintAudio : AudioStream
-
+@export var itemNameSound : AudioStream
+@export var hintAudios : Array[AudioStream] = []
 	# 1. Godot XR Tools checks this to see if it's allowed to grab it                                                                                                                                                      
 func can_pick_up(by: Node3D) -> bool:                                                                                                                                                                                  
 	return true                                                                                                                                                                                                           
@@ -27,7 +26,13 @@ func pick_up(by: Node3D) -> void:
 	var final_id = itemId if itemId != "" else self.name
 	final_id = final_id.rstrip("0123456789")
 	realItemInstance.set_meta("itemId", final_id)
-	realItemInstance.set_meta("hintAudio", hintAudio)
+	realItemInstance.set_meta("itemNameSound", itemNameSound)
+	realItemInstance.set_meta("hintAudios", hintAudios)
 
+	if itemNameSound:
+		var audioPlayer = AudioStreamPlayer3D.new()
+		audioPlayer.stream = itemNameSound
+		realItemInstance.add_child(audioPlayer)
+		audioPlayer.play()
 	# Delete the fake item
 	queue_free()

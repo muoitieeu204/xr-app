@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bm5qpmtralvte"
+path="res://.godot/imported/cai_hop_1bb473e7-81f9-42cb-b177-5aa375a8eb82.mp3-cca2e2fc982aa72e63065decfb6f5249.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBox/cai_hop_1bb473e7-81f9-42cb-b177-5aa375a8eb82.mp3"
+dest_files=["res://.godot/imported/cai_hop_1bb473e7-81f9-42cb-b177-5aa375a8eb82.mp3-cca2e2fc982aa72e63065decfb6f5249.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

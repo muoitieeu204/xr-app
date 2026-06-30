@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b3xralthu5m31" path="res://Assets/kenney_mini-market/CharacterEmployee.tscn" id="14_c4e85"]
 [ext_resource type="PackedScene" uid="uid://i134r505gwsa" path="res://Assets/kenney_mini-market/FakeShelfBox.tscn" id="16_h8g51"]
 [ext_resource type="PackedScene" uid="uid://dyounjrkpjjgc" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle-convertible.glb" id="20_u0m48"]
-[ext_resource type="Texture2D" uid="uid://8054t8qrhji7" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="21_d1idn"]
+[ext_resource type="Texture2D" uid="uid://ni4880cfgnhe" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="21_d1idn"]
 [ext_resource type="MeshLibrary" uid="uid://bu5pxtjly78gp" path="res://Assets/kenney_3d-road-tiles/city_road_kit_mesh_library_fixed.tres" id="21_ydvpe"]
 [ext_resource type="PackedScene" uid="uid://b5yvsrj3u37yq" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle.glb" id="22_acpa7"]
 [ext_resource type="PackedScene" uid="uid://b67kn2fqwbkvy" path="res://Assets/kenney_mini-market/DisplayWatermelon.tscn" id="22_fsytt"]
@@ -1289,19 +1289,19 @@ metadata/_editor_floor_ = Vector3(0, 5, 0)
 [node name="CashRegister" type="Node3D" parent="Market"]
 
 [node name="cash-register2" parent="Market/CashRegister" instance=ExtResource("30_ou86s")]
-transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 6, 1, -16)
+transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 6, 1, -16)
 
 [node name="CharacterEmployee" parent="Market/CashRegister/cash-register2" instance=ExtResource("14_c4e85")]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0.4000001, 0, -0.4000001)
 
 [node name="cash-register3" parent="Market/CashRegister" instance=ExtResource("30_ou86s")]
-transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 6, 1, -24)
+transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 6, 1, -24)
 
 [node name="CharacterEmployee" parent="Market/CashRegister/cash-register3" instance=ExtResource("14_c4e85")]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0.40000153, 0, -0.4000001)
 
 [node name="cash-register4" parent="Market/CashRegister" instance=ExtResource("30_ou86s")]
-transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 6, 1, -33)
+transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 6, 1, -33)
 
 [node name="CharacterEmployee" parent="Market/CashRegister/cash-register4" instance=ExtResource("14_c4e85")]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0.39999866, 0, -0.4000001)

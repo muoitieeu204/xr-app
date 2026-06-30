@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3anm8xyf24ql"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_ke_bay_cac_chai_nuoc_va_25d20aef-7b26-477b-9b0a-8af6cde340d8.mp3-9e9020d2d1a131ba6d3a8f83c29765f5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeShelfEnd/thu_nghi_lai_nha_cai_ke_bay_cac_chai_nuoc_va_25d20aef-7b26-477b-9b0a-8af6cde340d8.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_ke_bay_cac_chai_nuoc_va_25d20aef-7b26-477b-9b0a-8af6cde340d8.mp3-9e9020d2d1a131ba6d3a8f83c29765f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

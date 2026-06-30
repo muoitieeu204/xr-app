@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://s7wq27af7pky"
+path="res://.godot/imported/toi_dung_de_dung_nuoc_co_co_dai_va_nap_day_dec98a18-d570-4928-8c03-ed9cbfd78556.mp3-07c072d4e1dbc0844567264339d9e2a5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/toi_dung_de_dung_nuoc_co_co_dai_va_nap_day_dec98a18-d570-4928-8c03-ed9cbfd78556.mp3"
+dest_files=["res://.godot/imported/toi_dung_de_dung_nuoc_co_co_dai_va_nap_day_dec98a18-d570-4928-8c03-ed9cbfd78556.mp3-07c072d4e1dbc0844567264339d9e2a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

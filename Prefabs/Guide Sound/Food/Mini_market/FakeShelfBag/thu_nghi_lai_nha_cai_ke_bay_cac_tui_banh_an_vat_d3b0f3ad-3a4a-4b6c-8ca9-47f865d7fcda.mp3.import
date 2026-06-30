@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0tyqb7vftj8f"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_ke_bay_cac_tui_banh_an_vat_d3b0f3ad-3a4a-4b6c-8ca9-47f865d7fcda.mp3-cd924da4fa1c7287a477cc0513f8fc0e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeShelfBag/thu_nghi_lai_nha_cai_ke_bay_cac_tui_banh_an_vat_d3b0f3ad-3a4a-4b6c-8ca9-47f865d7fcda.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_ke_bay_cac_tui_banh_an_vat_d3b0f3ad-3a4a-4b6c-8ca9-47f865d7fcda.mp3-cd924da4fa1c7287a477cc0513f8fc0e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

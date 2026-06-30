@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://q5vc8qlwptpf"
+path="res://.godot/imported/toi_la_cai_ke_trung_bay_nhieu_hop_giay_122f0ed3-7dfb-472c-9e8a-777d423a7803.mp3-a838e487e76ce64feb3cca7bdd21f554.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeShelfBox/toi_la_cai_ke_trung_bay_nhieu_hop_giay_122f0ed3-7dfb-472c-9e8a-777d423a7803.mp3"
+dest_files=["res://.godot/imported/toi_la_cai_ke_trung_bay_nhieu_hop_giay_122f0ed3-7dfb-472c-9e8a-777d423a7803.mp3-a838e487e76ce64feb3cca7bdd21f554.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

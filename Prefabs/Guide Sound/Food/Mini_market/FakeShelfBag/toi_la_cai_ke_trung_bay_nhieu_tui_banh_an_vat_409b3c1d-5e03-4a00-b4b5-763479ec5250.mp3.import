@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsxtmtwmpkgj8"
+path="res://.godot/imported/toi_la_cai_ke_trung_bay_nhieu_tui_banh_an_vat_409b3c1d-5e03-4a00-b4b5-763479ec5250.mp3-83be9f72fbbe0a0917b2ecd9e7b94470.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeShelfBag/toi_la_cai_ke_trung_bay_nhieu_tui_banh_an_vat_409b3c1d-5e03-4a00-b4b5-763479ec5250.mp3"
+dest_files=["res://.godot/imported/toi_la_cai_ke_trung_bay_nhieu_tui_banh_an_vat_409b3c1d-5e03-4a00-b4b5-763479ec5250.mp3-83be9f72fbbe0a0917b2ecd9e7b94470.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

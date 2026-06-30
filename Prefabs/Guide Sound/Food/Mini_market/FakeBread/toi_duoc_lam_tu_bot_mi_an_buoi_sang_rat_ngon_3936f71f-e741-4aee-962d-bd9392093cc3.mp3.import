@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://utw00m285oo"
+path="res://.godot/imported/toi_duoc_lam_tu_bot_mi_an_buoi_sang_rat_ngon_3936f71f-e741-4aee-962d-bd9392093cc3.mp3-79482f4e82872bfecbefde0be0860bd0.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBread/toi_duoc_lam_tu_bot_mi_an_buoi_sang_rat_ngon_3936f71f-e741-4aee-962d-bd9392093cc3.mp3"
+dest_files=["res://.godot/imported/toi_duoc_lam_tu_bot_mi_an_buoi_sang_rat_ngon_3936f71f-e741-4aee-962d-bd9392093cc3.mp3-79482f4e82872bfecbefde0be0860bd0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

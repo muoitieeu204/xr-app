@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbvb0p1q760bp"
+path="res://.godot/imported/toi_co_hinh_vuong_hoac_chu_nhat_dung_de_dung_do_eb636689-d881-4568-8340-2d977725dee4.mp3-85479cf2146a97e3706611615d6b4d03.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBox/toi_co_hinh_vuong_hoac_chu_nhat_dung_de_dung_do_eb636689-d881-4568-8340-2d977725dee4.mp3"
+dest_files=["res://.godot/imported/toi_co_hinh_vuong_hoac_chu_nhat_dung_de_dung_do_eb636689-d881-4568-8340-2d977725dee4.mp3-85479cf2146a97e3706611615d6b4d03.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
