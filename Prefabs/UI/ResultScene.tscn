@@ -1,0 +1,159 @@
+[gd_scene load_steps=9 format=3 uid="uid://ifitwicr1j4h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
+content_margin_left = 48.0
+content_margin_top = 48.0
+content_margin_right = 48.0
+content_margin_bottom = 48.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.04)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_sparkles"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jofw"]
+font_size = 26
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+outline_size = 8
+outline_color = Color(0.4, 0.2, 0.1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_score"]
+font_size = 48
+font_color = Color(0.305882, 0.67451, 0.686275, 1)
+outline_size = 4
+outline_color = Color(0.239216, 0.541176, 0.54902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jofw"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_top = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vktwn"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="ResultScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultBox" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(416, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ylf5s")
+
+[node name="SparkleParticles" type="CPUParticles2D" parent="CenterContainer/ResultBox"]
+position = Vector2(208, 203)
+amount = 18
+lifetime = 4.0
+preprocess = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(190, 180)
+gravity = Vector2(0, -10)
+initial_velocity_min = 5.0
+initial_velocity_max = 12.0
+angular_velocity_min = -20.0
+angular_velocity_max = 20.0
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_scale")
+color_ramp = SubResource("Gradient_sparkles")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ResultBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "🏆 KẾT QUẢ 🏆"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="Spacing" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "100"
+label_settings = SubResource("LabelSettings_score")
+horizontal_alignment = 1
+
+[node name="ScoreDesc" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.305882, 0.67451, 0.686275, 1)
+text = "Điểm của bạn"
+horizontal_alignment = 1
+
+[node name="Spacing2" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="RetryButton" type="Button" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "🔄 Chơi Lại"
+
+[node name="HomeButton" type="Button" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "🏠 Về StarterHub"

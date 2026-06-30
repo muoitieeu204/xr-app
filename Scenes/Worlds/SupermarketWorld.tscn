@@ -43,7 +43,6 @@ background_mode = 2
 sky = SubResource("Sky_4aox8")
 tonemap_mode = 2
 tonemap_exposure = 1.3
-ssr_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jbj0c"]
 size = Vector3(51, 0.2, 46)
@@ -720,7 +719,7 @@ environment = SubResource("Environment_jopcc")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 light_energy = 0.0
-shadow_enabled = true
+light_bake_mode = 1
 sky_mode = 1
 
 [node name="Market" type="Node3D" parent="."]

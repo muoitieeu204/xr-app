@@ -9,6 +9,7 @@ var apiUrl: String = "https://103-162-31-23.sslip.io/api/child-profiles/my-child
 @onready var loadingLabel: Label = $ProfileBox/VBoxContainer/LoadingLabel
 @onready var templateButton: Button = $ProfileBox/VBoxContainer/ScrollContainer/ProfilesGrid/TemplateButton
 @onready var welcomeScene: Control = get_node_or_null(welcome_scene_path)
+var interactionLog : TextDirection
 
 var children_data: Array = []
 
