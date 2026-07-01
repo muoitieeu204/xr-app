@@ -7,9 +7,9 @@ extends Control
 @onready var logoutScreen = $LogoutBox
 
 func _ready():
-	switchSreens("main")
+	switch_screen("main")
 	
-	# 2. Connect the buttons from the MenuScreen to their functions automatically
+	# Connect the buttons from the MenuScreen to their functions automatically
 	var btn_progress = $MenuScreen/MenuBox/MarginContainer/VBoxContainer/BtnProgress
 	var btn_setting = $MenuScreen/MenuBox/MarginContainer/VBoxContainer/BtnSetting
 	var btn_logout = $MenuScreen/MenuBox/MarginContainer/VBoxContainer/BtnLogout
@@ -18,12 +18,12 @@ func _ready():
 	var setting_back_btn = $SettingsMenu/MenuBox/MarginContainer/VBoxContainer/CloseButton
 	var logout_back_btn = $LogoutBox/VBoxContainer/ReturnButton
 
-	if btn_progress: btn_progress.pressed.connect(switchSreens.bind("progress"))
-	if btn_setting: btn_setting.pressed.connect(switchSreens.bind("setting"))
-	if btn_logout: btn_logout.pressed.connect(switchSreens.bind("logout"))
-	if progress_back_btn: progress_back_btn.pressed.connect(switchSreens.bind("main"))
-	if setting_back_btn: setting_back_btn.pressed.connect(switchSreens.bind("main"))
-	if logout_back_btn: logout_back_btn.pressed.connect(switchSreens.bind("main"))
+	if btn_progress: btn_progress.pressed.connect(switch_screen.bind("progress"))
+	if btn_setting: btn_setting.pressed.connect(switch_screen.bind("setting"))
+	if btn_logout: btn_logout.pressed.connect(switch_screen.bind("logout"))
+	if progress_back_btn: progress_back_btn.pressed.connect(switch_screen.bind("main"))
+	if setting_back_btn: setting_back_btn.pressed.connect(switch_screen.bind("main"))
+	if logout_back_btn: logout_back_btn.pressed.connect(switch_screen.bind("main"))
 
 func hideAllScreens():
 	menuScreen.visible = false
@@ -32,7 +32,7 @@ func hideAllScreens():
 	resultScreen.visible = false
 	logoutScreen.visible = false
 
-func switchSreens(screenName: String):
+func switch_screen(screenName: String):
 	hideAllScreens()
 	match screenName:
 		"main": 
@@ -43,25 +43,5 @@ func switchSreens(screenName: String):
 			settingMenuScreen.visible = true
 		"logout":
 			logoutScreen.visible = true
-
-# --- NAVIGATION FUNCTIONS ---
-
-func show_menu_screen():
-	hideAllScreens()
-	menuScreen.visible = true
-
-func show_progress_screen():
-	hideAllScreens()
-	progressScreen.visible = true
-
-func show_setting_screen():
-	hideAllScreens()
-	settingMenuScreen.visible = true
-
-func show_logout_screen():
-	hideAllScreens()
-	logoutScreen.visible = true
-
-func show_result_screen():
-	hideAllScreens()
-	resultScreen.visible = true
+		"result":
+			resultScreen.visible = true

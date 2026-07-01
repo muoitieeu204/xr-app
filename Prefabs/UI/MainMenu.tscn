@@ -17,12 +17,8 @@ grow_vertical = 2
 script = ExtResource("1_lt1ks")
 
 [node name="MenuScreen" parent="." instance=ExtResource("2_shwl4")]
-visible = false
 layout_mode = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="Title" parent="MenuScreen/MenuBox/MarginContainer/VBoxContainer" index="0"]
-text = "⏸ MAIN MENU"
 
 [node name="ProgressMenu" parent="." instance=ExtResource("3_urm24")]
 visible = false
@@ -45,7 +41,4 @@ offset_top = -263.0
 offset_right = 352.92905
 offset_bottom = 263.0
 
-[editable path="MenuScreen"]
-[editable path="ProgressMenu"]
-[editable path="SettingsMenu"]
 [editable path="LogoutBox"]
