@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://djjkvb56333df"]
+
+[ext_resource type="Script" uid="uid://f7kfuk35spbq" path="res://scripts/MenuController.gd" id="1_lt1ks"]
+[ext_resource type="PackedScene" uid="uid://bq6frg3g1t8mh" path="res://Prefabs/UI/MenuScreeen.tscn" id="2_shwl4"]
+[ext_resource type="PackedScene" uid="uid://b0tvfsri66iru" path="res://Prefabs/UI/ProgressMenu.tscn" id="3_urm24"]
+[ext_resource type="PackedScene" uid="uid://b8settingmenu" path="res://Prefabs/UI/SettingsMenu.tscn" id="4_gl2bj"]
+[ext_resource type="PackedScene" uid="uid://ifitwicr1j4h" path="res://Prefabs/UI/ResultScene.tscn" id="5_jq8ge"]
+[ext_resource type="PackedScene" uid="uid://lxhjaoisofpk" path="res://Prefabs/UI/LogoutScreen.tscn" id="6_g0lmj"]
+
+[node name="MasterControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lt1ks")
+
+[node name="MenuScreen" parent="." instance=ExtResource("2_shwl4")]
+visible = false
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" parent="MenuScreen/MenuBox/MarginContainer/VBoxContainer" index="0"]
+text = "⏸ MAIN MENU"
+
+[node name="ProgressMenu" parent="." instance=ExtResource("3_urm24")]
+visible = false
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsMenu" parent="." instance=ExtResource("4_gl2bj")]
+visible = false
+layout_mode = 1
+
+[node name="ResultScene" parent="." instance=ExtResource("5_jq8ge")]
+visible = false
+layout_mode = 1
+
+[node name="LogoutBox" parent="." instance=ExtResource("6_g0lmj")]
+visible = false
+layout_mode = 1
+offset_left = -352.92905
+offset_top = -263.0
+offset_right = 352.92905
+offset_bottom = 263.0
+
+[editable path="MenuScreen"]
+[editable path="ProgressMenu"]
+[editable path="SettingsMenu"]
+[editable path="LogoutBox"]

@@ -1,7 +1,26 @@
-[gd_scene load_steps=27 format=3 uid="uid://b8settingmenu"]
+[gd_scene load_steps=25 format=3 uid="uid://b8settingmenu"]
 
-[ext_resource type="Script" path="res://Prefabs/SpectatorPrefabs/SettingsMenu.gd" id="1_script"]
-[ext_resource type="AudioStream" path="res://Prefabs/Audio/TeleportSuccess.mp3" id="2_sfx"]
+[sub_resource type="Gradient" id="Gradient_qq24o"]
+colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_teal_glow"]
+gradient = SubResource("Gradient_qq24o")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_2mxg4"]
+colors = PackedColorArray(1, 0.556863, 0.556863, 0.25098, 1, 0.556863, 0.556863, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pink_glow"]
+gradient = SubResource("Gradient_2mxg4")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
 content_margin_left = 32.0
@@ -19,6 +38,14 @@ shadow_color = Color(0, 0, 0, 0.05)
 shadow_size = 40
 shadow_offset = Vector2(0, 10)
 
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_sparkles"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+
 [sub_resource type="LabelSettings" id="LabelSettings_title"]
 font_size = 24
 font_color = Color(0.066667, 0.094118, 0.152941, 1)
@@ -30,49 +57,6 @@ font_color = Color(0.066667, 0.094118, 0.152941, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_value_master"]
 font_size = 14
 font_color = Color(0.305882, 0.67451, 0.686275, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_value_music"]
-font_size = 14
-font_color = Color(1, 0.556863, 0.556863, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_value_sfx"]
-font_size = 14
-font_color = Color(0.984314, 0.733333, 0.141176, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
-content_margin_top = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.305882, 0.67451, 0.686275, 1)
-border_width_bottom = 4
-border_color = Color(0.239216, 0.541176, 0.54902, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
-content_margin_top = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.223529, 0.552941, 0.564706, 1)
-border_width_bottom = 4
-border_color = Color(0.239216, 0.541176, 0.54902, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_pressed"]
-content_margin_top = 16.0
-content_margin_bottom = 12.0
-bg_color = Color(0.223529, 0.552941, 0.564706, 1)
-border_width_bottom = 2
-border_color = Color(0.239216, 0.541176, 0.54902, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_button_focus"]
 
 [sub_resource type="Gradient" id="Gradient_grabber"]
 offsets = PackedFloat32Array(0, 0.75, 0.85, 0.95)
@@ -116,6 +100,10 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
+[sub_resource type="LabelSettings" id="LabelSettings_value_music"]
+font_size = 14
+font_color = Color(1, 0.556863, 0.556863, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_area_music"]
 content_margin_top = 6.0
 content_margin_bottom = 6.0
@@ -124,6 +112,10 @@ corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_value_sfx"]
+font_size = 14
+font_color = Color(0.984314, 0.733333, 0.141176, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_area_sfx"]
 content_margin_top = 6.0
@@ -134,35 +126,40 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[sub_resource type="Gradient" id="Gradient_teal_glow"]
-colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_teal_glow"]
-gradient = SubResource("Gradient_teal_glow")
-width = 500
-height = 500
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_pressed"]
+content_margin_top = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
-[sub_resource type="Gradient" id="Gradient_pink_glow"]
-colors = PackedColorArray(1, 0.556863, 0.556863, 0.25098, 1, 0.556863, 0.556863, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pink_glow"]
-gradient = SubResource("Gradient_pink_glow")
-width = 500
-height = 500
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 0)
-
-[sub_resource type="Gradient" id="Gradient_sparkles"]
-offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
-colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
-
-[sub_resource type="Curve" id="Curve_scale"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 4
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_button_focus"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
@@ -171,7 +168,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_script")
 
 [node name="BackgroundDim" type="ColorRect" parent="."]
 layout_mode = 1
@@ -351,11 +347,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
-theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_button_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_button_focus")
-text = "❌ Close Settings"
-
-[node name="SFXTestPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_sfx")
-bus = &"Sounds"
+text = "❌ Back To Main Menu"

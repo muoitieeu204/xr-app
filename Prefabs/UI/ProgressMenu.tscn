@@ -1,92 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b0tvfsri66iru"]
-
-[ext_resource type="Script" path="res://Prefabs/SpectatorPrefabs/ProgressMenu.gd" id="1_script"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
-content_margin_left = 32.0
-content_margin_top = 32.0
-content_margin_right = 32.0
-content_margin_bottom = 32.0
-bg_color = Color(1, 1, 1, 1)
-border_width_bottom = 8
-border_color = Color(0.952941, 0.956863, 0.964706, 1)
-corner_radius_top_left = 24
-corner_radius_top_right = 24
-corner_radius_bottom_right = 24
-corner_radius_bottom_left = 24
-shadow_color = Color(0, 0, 0, 0.05)
-shadow_size = 40
-shadow_offset = Vector2(0, 10)
-
-[sub_resource type="LabelSettings" id="LabelSettings_title"]
-font_size = 24
-font_color = Color(0.066667, 0.094118, 0.152941, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_row"]
-font_size = 14
-font_color = Color(0.35, 0.35, 0.35, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_value"]
-font_size = 16
-font_color = Color(0.066667, 0.094118, 0.152941, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_stars"]
-font_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_bg"]
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-bg_color = Color(0.921569, 0.929412, 0.941176, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_fill"]
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-bg_color = Color(0.305882, 0.67451, 0.686275, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close"]
-content_margin_top = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.305882, 0.67451, 0.686275, 1)
-border_width_bottom = 4
-border_color = Color(0.239216, 0.541176, 0.54902, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close_hover"]
-content_margin_top = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.223529, 0.552941, 0.564706, 1)
-border_width_bottom = 4
-border_color = Color(0.239216, 0.541176, 0.54902, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close_pressed"]
-content_margin_top = 16.0
-content_margin_bottom = 12.0
-bg_color = Color(0.223529, 0.552941, 0.564706, 1)
-border_width_bottom = 2
-border_color = Color(0.239216, 0.541176, 0.54902, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+[gd_scene load_steps=18 format=3 uid="uid://b0tvfsri66iru"]
 
 [sub_resource type="Gradient" id="Gradient_teal_glow"]
 colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
@@ -110,13 +22,96 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 
-[sub_resource type="Gradient" id="Gradient_sparkles"]
-offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
-colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.05)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
 
 [sub_resource type="Curve" id="Curve_scale"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_sparkles"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 24
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_bg"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.921569, 0.929412, 0.941176, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_fill"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_row"]
+font_size = 14
+font_color = Color(0.35, 0.35, 0.35, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_value"]
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_stars"]
+font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close_pressed"]
+content_margin_top = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_close_hover"]
+content_margin_top = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
 
 [node name="ProgressMenu" type="Control"]
 layout_mode = 3
@@ -125,7 +120,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_script")
 
 [node name="BackgroundDim" type="ColorRect" parent="."]
 layout_mode = 1
@@ -265,17 +259,15 @@ label_settings = SubResource("LabelSettings_row")
 
 [node name="StarsLabel" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/StatsSection"]
 layout_mode = 2
-text = "⭐⭐⭐⭐⭐⭐⭐"
+text = " "
 label_settings = SubResource("LabelSettings_stars")
-
-
 
 [node name="CloseButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_btn_close")
-theme_override_styles/hover = SubResource("StyleBoxFlat_btn_close_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_close_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_close_hover")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
-text = "❌ Close Progress"
+text = "❌Back To Main Menu"
