@@ -6,9 +6,9 @@ var httpRequest : HTTPRequest
 # --- ALL API PAYLOAD FIELDS ---
 # (Comment out or delete the ones you don't need to send to the server)
 var sessionId: String = ""
-var childId: int = 0
-var exerciseId: int = 0
-var lessonId: int = 0
+var childId: int = 1
+var exerciseId: int = 1
+var lessonId: int = 1
 var attemptNumber: int = 1
 var completionStatus: String = "Completed"
 var score: int = 0
@@ -31,13 +31,15 @@ func _ready() -> void:
 	httpRequest = HTTPRequest.new()
 	add_child(httpRequest)
 	httpRequest.request_completed.connect(_on_request_complete)
+	_on_send_result()
 
+	
 func _on_send_result() -> void:
 	var data_to_send = {
 		"sessionId": sessionId,
 		"childId": childId,
 		"exerciseId": exerciseId,
-		"lessonId": lessonId,
+		# "lessonId": lessonId,
 		"attemptNumber": attemptNumber,
 		"completionStatus": completionStatus,
 		"score": score,
@@ -59,7 +61,7 @@ func _on_send_result() -> void:
 	
 	var json = JSON.stringify(data_to_send)
 	var headers = [
-		"Authorization: Bearer " + SessionData.accessToken,
+		"Authorization: Bearer " + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjI2IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiYnVkZ2V0cGM1MDBAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6Ik5ndXnhu4VuIFbEg24gQSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlBhcmVudCIsImV4cCI6MTc4MzAwNjM1NSwiaXNzIjoiR29kb3RYUiIsImF1ZCI6IkdvZG90WFIifQ.62QOYxJbGHJK8cm7ueDytBihXTGl6PoYQBlEZxfmFq4",
 		"accept: application/json",
 		"Content-Type: application/json"
 	]
