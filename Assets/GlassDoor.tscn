@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://vqp31n7iy4bk"]
 
-[ext_resource type="Script" uid="uid://c7ntv6adlua4w" path="res://scripts/glass_door.gd" id="1_m0jl5"]
+[ext_resource type="Script" uid="uid://c7ntv6adlua4w" path="res://scripts/Environment Script/glass_door.gd" id="1_m0jl5"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_abmgh"]
 size = Vector2(2.5, 2)

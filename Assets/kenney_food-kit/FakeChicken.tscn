@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://dw4jilwleeuov"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_uipe0"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_uipe0"]
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="2_0o7p2"]
 [ext_resource type="PackedScene" uid="uid://384b41cnnlia" path="res://Assets/kenney_food-kit/ChickenPickable.tscn" id="2_o8gjp"]
 [ext_resource type="Texture2D" uid="uid://gwcpbjs5jkky" path="res://Assets/kenney_food-kit/Previews/turkey.png" id="3_o8gjp"]

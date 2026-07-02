@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bt0ier0gd1sh5"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_1o35l"]
-[ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/respawn_hazard.gd" id="2_1o35l"]
+[ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="2_1o35l"]
 [ext_resource type="PackedScene" uid="uid://b7om36ix41f1d" path="res://Prefabs/Shader/water_shader.tscn" id="2_bipgs"]
 [ext_resource type="MeshLibrary" uid="uid://cfvea0hls1qt1" path="res://Assets/platform_mesh_library_v2.tres" id="3_ty580"]
 [ext_resource type="MeshLibrary" uid="uid://cu44ow40wsm28" path="res://Assets/fantatsy_town_mesh_library.tres" id="4_7aait"]

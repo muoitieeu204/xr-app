@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://8gesik4l22v7"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_2ihwm"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_2ihwm"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_tiv84"]
 [ext_resource type="PackedScene" uid="uid://dpkl84rmmapx2" path="res://Assets/kenney_mini-market/ChipBagRedPickable.tscn" id="2_woryi"]
 [ext_resource type="AudioStream" uid="uid://brn2llgheiaa6" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBagRed/tui_banh_do_26180b4e-3fed-42bf-889b-7030bba97c41.mp3" id="3_7t4ue"]

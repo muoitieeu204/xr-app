@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://b5gng5pbbud36"]
 
-[ext_resource type="Script" uid="uid://dmky3h7xn4i28" path="res://scripts/CashRegisterController.gd" id="2_7iebq"]
+[ext_resource type="Script" uid="uid://dmky3h7xn4i28" path="res://scripts/Environment Script/CashRegisterController.gd" id="2_7iebq"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="2_f8c31"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7iebq"]

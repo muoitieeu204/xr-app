@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://y57awkqbs4jp"]
 
-[ext_resource type="Script" uid="uid://h0wlfyv2k5bf" path="res://scripts/interactable_table.gd" id="1_6dcga"]
+[ext_resource type="Script" uid="uid://h0wlfyv2k5bf" path="res://scripts/Environment Script/interactable_table.gd" id="1_6dcga"]
 [ext_resource type="Script" uid="uid://dq042kibpfryy" path="res://addons/godot-xr-tools/interactables/interactable_area_button.gd" id="1_blsdf"]
 [ext_resource type="PackedScene" uid="uid://chy5bpaqrk4ei" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb" id="3_6dcga"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="3_dgrtx"]

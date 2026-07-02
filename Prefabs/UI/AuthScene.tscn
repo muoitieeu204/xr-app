@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bho8ebcx5lvhs"]
 
-[ext_resource type="Script" uid="uid://2u116woexcme" path="res://scripts/AuthController.gd" id="1_2vo2r"]
+[ext_resource type="Script" uid="uid://2u116woexcme" path="res://scripts/API/AuthController.gd" id="1_2vo2r"]
 [ext_resource type="PackedScene" uid="uid://dwbgi35lse2ea" path="res://Prefabs/UI/LoginScreen.tscn" id="1_fl2ql"]
 [ext_resource type="PackedScene" uid="uid://djmys4bj6qmku" path="res://Prefabs/UI/WelcomeScene.tscn" id="2_2vo2r"]
 [ext_resource type="PackedScene" uid="uid://chjmor7jfhj5" path="res://Prefabs/UI/ForgotPasswordScreen.tscn" id="3_p341f"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://bf5dv27pogb3i"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_3ij1q"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_3ij1q"]
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="1_fnary"]
 [ext_resource type="PackedScene" uid="uid://decsnsqx8xytn" path="res://Assets/kenney_food-kit/TomatoPickable.tscn" id="2_5b3b0"]
 [ext_resource type="Texture2D" uid="uid://bdto0l37plam6" path="res://Assets/kenney_food-kit/Previews/tomato.png" id="3_jbqgw"]

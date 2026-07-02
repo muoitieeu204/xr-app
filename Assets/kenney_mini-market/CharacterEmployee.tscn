@@ -1,7 +1,7 @@
 [gd_scene load_steps=42 format=4 uid="uid://b3xralthu5m31"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_2ttuh"]
-[ext_resource type="Script" uid="uid://nt6onlsgwd67" path="res://scripts/NpcController.gd" id="1_3xq87"]
+[ext_resource type="Script" uid="uid://nt6onlsgwd67" path="res://scripts/NPCs/NpcController.gd" id="1_3xq87"]
 [ext_resource type="AudioStream" uid="uid://bux71gkg4bvxk" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/ban_oi_day_la_cai_gi_vay_82ce6a09-6c73-4efb-b64e-e681949f2bb4.mp3" id="2_4dnc7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ynqf"]

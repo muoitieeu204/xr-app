@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://djjkvb56333df"]
 
-[ext_resource type="Script" uid="uid://f7kfuk35spbq" path="res://scripts/MenuController.gd" id="1_lt1ks"]
+[ext_resource type="Script" uid="uid://f7kfuk35spbq" path="res://scripts/UI Script/MenuController.gd" id="1_lt1ks"]
 [ext_resource type="PackedScene" uid="uid://bq6frg3g1t8mh" path="res://Prefabs/UI/MenuScreeen.tscn" id="2_shwl4"]
 [ext_resource type="PackedScene" uid="uid://b0tvfsri66iru" path="res://Prefabs/UI/ProgressMenu.tscn" id="3_urm24"]
 [ext_resource type="PackedScene" uid="uid://b8settingmenu" path="res://Prefabs/UI/SettingsMenu.tscn" id="4_gl2bj"]

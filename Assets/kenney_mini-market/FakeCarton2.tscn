@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://b3h3k1n3wxtf2"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_a6gbp"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_a6gbp"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_u7cxx"]
 [ext_resource type="PackedScene" uid="uid://dh1fmhvg2cvg0" path="res://Assets/kenney_mini-market/PickableCarton.tscn" id="2_qn2vl"]
 

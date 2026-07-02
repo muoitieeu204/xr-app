@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://d8g65w7gnnmq"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_30cfx"]
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_eipfe"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_eipfe"]
 [ext_resource type="PackedScene" uid="uid://d3aywl414yoou" path="res://Assets/kenney_mini-market/BoxPickable.tscn" id="2_jc2cm"]
 [ext_resource type="AudioStream" uid="uid://bm5qpmtralvte" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBox/cai_hop_1bb473e7-81f9-42cb-b177-5aa375a8eb82.mp3" id="3_bbqym"]
 [ext_resource type="AudioStream" uid="uid://bmsr6nx3co1qt" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBox/thu_nghi_lai_nha_vat_hinh_vuong_dung_de_dung_do_f88f210b-b2b0-499f-a219-e7823f2b4cbc.mp3" id="4_skyv7"]

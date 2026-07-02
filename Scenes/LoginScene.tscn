@@ -1,6 +1,6 @@
 [gd_scene load_steps=45 format=3 uid="uid://dacrvo5efu5py"]
 
-[ext_resource type="Script" uid="uid://bh6uyhywmhoy2" path="res://scripts/LoginSceneManager.gd" id="1_55k4d"]
+[ext_resource type="Script" uid="uid://bh6uyhywmhoy2" path="res://scripts/UI Script/LoginSceneManager.gd" id="1_55k4d"]
 [ext_resource type="PackedScene" uid="uid://bh00oe74ggou4" path="res://Assets/kenney_furniture-kit/Models/GLTF format/cabinetBed.glb" id="2_gsr68"]
 [ext_resource type="PackedScene" uid="uid://bt2bmq724hx1k" path="res://Assets/computer_monitor_lowpoly_model.glb" id="2_jbn7o"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_76d8l"]
@@ -30,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://ceffnctp0uw24" path="res://Assets/kenney_furniture-kit/Models/GLTF format/cabinetTelevision.glb" id="28_mx64i"]
 [ext_resource type="PackedScene" uid="uid://chmxbx5fe04ti" path="res://Assets/kenney_furniture-kit/Models/GLTF format/trashcan.glb" id="29_c43m1"]
 [ext_resource type="PackedScene" uid="uid://rv7vcwasuhhq" path="res://Assets/kenney_furniture-kit/Models/GLTF format/ceilingFan.glb" id="30_lunnw"]
-[ext_resource type="Script" uid="uid://cgwkve8w16l7e" path="res://scripts/CellingFanRotation.gd" id="31_6ukg0"]
+[ext_resource type="Script" uid="uid://cgwkve8w16l7e" path="res://scripts/Environment Script/CellingFanRotation.gd" id="31_6ukg0"]
 [ext_resource type="PackedScene" uid="uid://dabmjc38dvcwj" path="res://Assets/kenney_furniture-kit/Models/GLTF format/coatRack.glb" id="31_xckbt"]
 [ext_resource type="PackedScene" uid="uid://etof3fda1tbi" path="res://Assets/kenney_furniture-kit/Models/GLTF format/coatRackStanding.glb" id="32_6ukg0"]
 

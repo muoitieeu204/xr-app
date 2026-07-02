@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://dw2k324h54q1p"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_6tvun"]
-[ext_resource type="Script" uid="uid://bp10eay5ryubr" path="res://scripts/BottleReturnController.gd" id="1_mggbw"]
+[ext_resource type="Script" uid="uid://bp10eay5ryubr" path="res://scripts/Environment Script/BottleReturnController.gd" id="1_mggbw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tnnk8"]
 resource_name = "colormap"

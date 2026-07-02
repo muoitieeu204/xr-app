@@ -1,7 +1,7 @@
 [gd_scene load_steps=41 format=4 uid="uid://b3qm1vyvqpqvo"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="2_l8sq6"]
-[ext_resource type="Script" uid="uid://bh1dgkxwpo6ro" path="res://scripts/EmployeeController.gd" id="2_m4lhf"]
+[ext_resource type="Script" uid="uid://bh1dgkxwpo6ro" path="res://scripts/NPCs/EmployeeController.gd" id="2_m4lhf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ynqf"]
 resource_name = "colormap"

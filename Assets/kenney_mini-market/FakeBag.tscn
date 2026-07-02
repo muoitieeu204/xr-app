@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=4 uid="uid://ot1pv42c1p1c"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_jq7nk"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_jq7nk"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_mlyrd"]
 [ext_resource type="PackedScene" uid="uid://bu4lky2y3b6tv" path="res://Assets/kenney_mini-market/ChipBagPickable.tscn" id="2_r6gss"]
 [ext_resource type="AudioStream" uid="uid://c8f0huj3h3nt1" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBag/toi_la_cai_tui_dung_banh_an_vat_ben_trong_gion_d6160988-9c20-4b7b-9e6c-075d801529ee (1).mp3" id="3_d2suv"]

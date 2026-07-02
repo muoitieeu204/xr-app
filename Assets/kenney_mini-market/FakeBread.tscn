@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://co4tesdayal2s"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_11ecf"]
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_oqen6"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_oqen6"]
 [ext_resource type="PackedScene" uid="uid://bnurliwyatm57" path="res://Assets/kenney_mini-market/PickableBread.tscn" id="2_ypcm4"]
 [ext_resource type="AudioStream" uid="uid://da4e5dk0b27x1" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBread/banh_mi_3594b8f5-cd8e-4f28-a27e-0190cae19de1.mp3" id="3_l6ata"]
 [ext_resource type="AudioStream" uid="uid://bix2xv0stht4" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBread/thu_nghi_lai_nha_mon_lam_tu_bot_mi_an_sang_nay_bb314cc5-0f57-457b-b274-26bac974ced4.mp3" id="4_h2di4"]

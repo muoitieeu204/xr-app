@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://vblhq1w7difm"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_posoo"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_posoo"]
 [ext_resource type="PackedScene" uid="uid://bd33s0xagrmt1" path="res://Assets/kenney_mini-market/PickableBottle.tscn" id="2_6i3gh"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="2_n3jem"]
 [ext_resource type="AudioStream" uid="uid://erh5430a827u" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/cai_chai_f6cb12c9-4d07-4cc7-9bbb-9c74c814e407.mp3" id="3_6i3gh"]
