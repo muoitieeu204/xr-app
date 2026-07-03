@@ -33,6 +33,7 @@ AzureSpeechManager="*res://scripts/CoreManager/AzureSpeechManager.cs"
 GameManager="*res://scripts/CoreManager/GameManager.gd"
 PlayerData="*res://Prefabs/PlayerPrefabs/PlayerData.gd"
 RefreshTokenApi="*res://scripts/API/RefreshTokenApi.gd"
+LevelController="*res://scripts/CoreManager/LevelController.gd"
 
 [dotnet]
 

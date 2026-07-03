@@ -3,6 +3,7 @@ extends Node
 var accessToken: String = ""
 var refreshToken : String = ""
 var userId: int = 0
+var sessionId: String = ""
 var fullName : String = ""
 var userName : String = ""
 var roleName : String = ""

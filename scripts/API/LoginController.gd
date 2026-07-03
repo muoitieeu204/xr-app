@@ -40,5 +40,6 @@ func _on_request_completed(result, responseCode, headers, body):
 		SessionData.userName = json["data"]["user"]["username"]
 		SessionData.roleName = json["data"]["user"]["roleName"]
 		SessionData.isActive = json["data"]["user"]["isActive"]
+		SessionData.sessionId = str(ResourceUID.create_id())
 		print_debug(JSON.stringify(json, "\t"))
 		print_debug("Successfully logged in as ", SessionData.fullName)

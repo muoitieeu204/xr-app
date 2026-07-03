@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 public partial class SessionUploader : Node
 {
 	private static readonly System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
-	private readonly string apiUrl = "https://localhost:7153/api/files";
+	private readonly string apiUrl = "https://103-162-31-23.sslip.io/api/files";
 	// Called when the node enters the scene tree for the first time.
 	public async void UploadSessionDataAsync(string jsonPath, string audioPath)
 	{
