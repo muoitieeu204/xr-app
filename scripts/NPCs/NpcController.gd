@@ -65,3 +65,9 @@ func _on_speech_result(is_correct: bool):
 		else:
 			print("NPC: Failed again. Let's move on or give the direct answer!")
 			is_currently_teaching = false # Unlock NPC
+
+func _on_child_correct_answer():
+	LevelController.CorrectAnswer(10)
+
+func _on_child_wrong_answer():
+	LevelController.WrongAnswer(5)

@@ -19,8 +19,9 @@ func _ready() -> void:
 		var cam = instance_to_spawn.find_child("XRCamera3D", true, false)
 		var leftHand = instance_to_spawn.find_child("LeftHand",true,false)
 		var rightHand = instance_to_spawn.find_child("RightHand", true,false)
-		ReplayManager.replayer.recorded_objects= [cam,leftHand,rightHand]
-		
+		ReplayManager.replayer.recorded_objects.assign([cam, leftHand, rightHand])
+		LevelController.StartLevel()
+
 	# Safely add the chosen mode to the world
 	get_parent().call_deferred("add_child", instance_to_spawn)
 	

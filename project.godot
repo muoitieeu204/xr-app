@@ -49,6 +49,7 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 
 interactable="Interactable Object"
 VoiceLines=""
+LevelController=""
 
 [godot_xr_tools]
 

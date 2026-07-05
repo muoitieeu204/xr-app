@@ -36,6 +36,17 @@ func record_frame() -> void:
 		
 	# Capture the global positions/rotations of our VR components
 	for ro in recorded_objects:
+		# If the player was deleted (e.g. level restarted or scene changed),
+		# automatically stop and save the replay to prevent a crash!
+		if not is_instance_valid(ro):
+			print("Player was freed/deleted! Auto-stopping replay...")
+			stop_and_save_session()
+			return
+			
+		# Prevent spam errors if the player is spawned but not fully inside the world yet
+		if not ro.is_inside_tree():
+			continue
+			
 		recording_data[frames][ro.name] = {
 			"position": ro.global_position,
 			"rotation": ro.global_rotation
@@ -61,16 +72,7 @@ func stop_and_save_session() -> void:
 func save_telemetry_to_json() -> void:
 	print("Serializing RAM dictionary to JSON structure...")
 	
-	# 1. Build a clean, scalable envelope payload layout
-	
-	# Architecture Fix: When using a Staging system, get_tree().current_scene returns the Staging node.
-	# We must search up the tree to find the actual loaded level (which inherits from XRToolsSceneBase)
-	var active_world_path : String = ""
-	var level_node = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
-	if level_node != null:
-		active_world_path = level_node.scene_file_path
-	else:
-		active_world_path = get_tree().current_scene.scene_file_path # Fallback
+	var active_world_path: String = SessionData.target_scene_path
 	
 	var file_payload : Dictionary = {
 		"metadata": {
@@ -113,7 +115,7 @@ func log_event_to_replay(eventText : String) -> void:
 	if not recording:
 		return
 	if not recording_data.has(frames):
-		recording_data[frames] = []
+		recording_data[frames] = {}
 
 	recording_data[frames]["event"] = eventText
 	print("Replay recorded at frame", frames, ": ", eventText)

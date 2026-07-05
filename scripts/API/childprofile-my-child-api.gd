@@ -67,12 +67,12 @@ func _on_request_completed(result: int, responseCode: int, headers: PackedString
 		loadingLabel.text = "Khong tim thay ho so nao!"
 
 func _on_profile_selected(child_data: Dictionary) -> void:
-	PlayerData.child_id = int(child_data.get("id", 0))
-	PlayerData.parent_user_id = int(child_data.get("userId", 0))
-	PlayerData.full_name = str(child_data.get("fullName", ""))
+	PlayerData.childId = int(child_data.get("id", 0))
+	PlayerData.parentUserId = int(child_data.get("userId", 0))
+	PlayerData.fullName = str(child_data.get("fullName", ""))
 	PlayerData.age = int(child_data.get("age", 0))
 	PlayerData.gender = str(child_data.get("gender", ""))
-	PlayerData.learning_level = str(child_data.get("learningLevel", ""))
+	PlayerData.learningLevel = str(child_data.get("learningLevel", ""))
 	PlayerData.status = str(child_data.get("status", ""))
 
 	if welcomeScene == null:

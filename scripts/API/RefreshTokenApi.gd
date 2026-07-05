@@ -8,7 +8,7 @@ var http_request : HTTPRequest
 var refresh_timer : Timer
 
 # Refresh once after 10 minutes
-var refresh_delay_sec : float = 10 * 60
+var refresh_delay_sec : float = 9 * 60
 
 func _ready():
 	http_request = HTTPRequest.new()

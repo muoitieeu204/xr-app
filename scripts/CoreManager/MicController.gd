@@ -20,13 +20,13 @@ func stop_record_and_save():
 		recording = record_effect.get_recording()
 	if recording:
 		var time_string = Time.get_datetime_string_from_system().replace(":", "-")
-		var final_audio_name = "player_audio_" + time_string + ".wav"
+		var final_audio_name = "player_audio_" + str(PlayerData.childId) + "_" + time_string + ".wav"
 		var full_save_path = "user://" + final_audio_name 
 		recording.save_to_wav(full_save_path)
 		print("Audio successfully saved: ", final_audio_name)
 		
 		if replayController != null:
 			replayController.linked_audio_filename = final_audio_name
-			var final_json_name = "player_replay_" + time_string + ".json"
+			var final_json_name = "player_replay_" + str(PlayerData.childId) + "_"  + time_string + ".json"
 			replayController.SAVE_PATH = "user://" + final_json_name
 			replayController.stop_and_save_session()

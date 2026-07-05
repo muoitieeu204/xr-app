@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bt0ier0gd1sh5"]
+[gd_scene load_steps=13 format=3 uid="uid://bt0ier0gd1sh5"]
 
+[ext_resource type="Script" uid="uid://cijjlg2j5o6ye" path="res://scripts/InitializeScript.gd" id="1_1o35l"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="2_1o35l"]
 [ext_resource type="PackedScene" uid="uid://b7om36ix41f1d" path="res://Prefabs/Shader/water_shader.tscn" id="2_bipgs"]
 [ext_resource type="MeshLibrary" uid="uid://cfvea0hls1qt1" path="res://Assets/platform_mesh_library_v2.tres" id="3_ty580"]
@@ -25,6 +26,7 @@ glow_enabled = true
 points = PackedVector3Array(253.96826, 3.9682531, 253.96826, -253.96814, -3.9682531, -253.96814, -253.96814, 3.9682531, -253.96814, 253.96826, -3.9682531, -253.96814, -253.96814, -3.9682531, 253.96826, -253.96814, 3.9682531, 253.96826, 253.96826, 3.9682531, -253.96814, 253.96826, -3.9682531, 253.96826)
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_1o35l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.549368, 0.19165029, -0.81330496, 0.04541782, 0.9787513, 0.19995803, 0.8343453, 0.072912015, -0.546399, 0.28186226, 5.299016, -0.56202793)
