@@ -1,5 +1,5 @@
 extends Node
-class_name  ReplayController
+class_name  TelementryController
 @export var recorded_objects : Array[Node3D]
 @export var dummy_scene : PackedScene # Drag your saved Dummy scene here in the Inspector
 @onready var delay: Timer = $Delay
@@ -74,7 +74,7 @@ func save_telemetry_to_json() -> void:
 	
 	var file_payload : Dictionary = {
 		"metadata": {
-			"player_profile": "Hoc",
+			"player_profile": PlayerData.fullName,
 			"total_recorded_frames": frames,
 			"engine_version": "Godot 4",
 			"audio_file" : linked_audio_filename,
@@ -109,76 +109,85 @@ func save_telemetry_to_json() -> void:
 	else:
 		push_error("OS Error: Failed to open save track destination path.")
 
-# --- STEP 3: LOADING & DESERIALIZATION (LOCAL IMPORT) ---
-
-func load_and_play_session() -> void:
-	if is_playing or recording:
+func log_event_to_replay(eventText : String) -> void:
+	if not recording:
 		return
-		
-	if not FileAccess.file_exists(SAVE_PATH):
-		push_error("Playback failed: No replay file exists at storage directory.")
-		return
-		
-	print("Reading file data from internal storage disk...")
-	
-	# 1. Pull down the raw file contents
-	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
-	var raw_text : String = file.get_as_text()
-	file.close()
-	
-	# 2. Parse the text back into an active memory dictionary
-	var parsed_payload = JSON.parse_string(raw_text)
-	if parsed_payload == null:
-		push_error("Deserialization failed: The target file content layout is corrupted.")
-		return
-		
-	var imported_frames_data: Dictionary = parsed_payload["frames"]
-	var total_frames_to_play: int = int(parsed_payload["metadata"]["total_recorded_frames"])
-	
-	print("Loaded file successfully! Initializing playback sequence...")
-	run_playback_loop(imported_frames_data, total_frames_to_play)
+	if not recording_data.has(frames):
+		recording_data[frames] = []
 
-# --- STEP 4: RECONSTRUCTED PLAYBACK ---
+	recording_data[frames]["event"] = eventText
+	print("Replay recorded at frame", frames, ": ", eventText)
 
-func run_playback_loop(frames_data: Dictionary, total_frames: int) -> void:
-	is_playing = true
-	
-	# Setup the virtual dummy instance clone
-	if current_dummy != null:
-		current_dummy.queue_free()
-	current_dummy = dummy_scene.instantiate()
-	get_tree().current_scene.add_child(current_dummy)
-	
-	# Playback sequence execution loop
-	for f in total_frames:
-		var frame_key : String = str(f) # Remember: JSON file keys are ALWAYS strings!
+# # --- STEP 3: LOADING & DESERIALIZATION (LOCAL IMPORT) ---
+# Comment to follow SRP (Single Responsibility Principle)
+# func load_and_play_session() -> void:
+# 	if is_playing or recording:
+# 		return
 		
-		# If this specific frame index isn't in the file data map, skip smoothly
-		if not frames_data.has(frame_key):
-			continue
+# 	if not FileAccess.file_exists(SAVE_PATH):
+# 		push_error("Playback failed: No replay file exists at storage directory.")
+# 		return
+		
+# 	print("Reading file data from internal storage disk...")
+	
+# 	# 1. Pull down the raw file contents
+# 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+# 	var raw_text : String = file.get_as_text()
+# 	file.close()
+	
+# 	# 2. Parse the text back into an active memory dictionary
+# 	var parsed_payload = JSON.parse_string(raw_text)
+# 	if parsed_payload == null:
+# 		push_error("Deserialization failed: The target file content layout is corrupted.")
+# 		return
+		
+# 	var imported_frames_data: Dictionary = parsed_payload["frames"]
+# 	var total_frames_to_play: int = int(parsed_payload["metadata"]["total_recorded_frames"])
+	
+# 	print("Loaded file successfully! Initializing playback sequence...")
+# 	run_playback_loop(imported_frames_data, total_frames_to_play)
+
+# # --- STEP 4: RECONSTRUCTED PLAYBACK ---
+
+# func run_playback_loop(frames_data: Dictionary, total_frames: int) -> void:
+# 	is_playing = true
+	
+# 	# Setup the virtual dummy instance clone
+# 	if current_dummy != null:
+# 		current_dummy.queue_free()
+# 	current_dummy = dummy_scene.instantiate()
+# 	get_tree().current_scene.add_child(current_dummy)
+	
+# 	# Playback sequence execution loop
+# 	for f in total_frames:
+# 		var frame_key : String = str(f) # Remember: JSON file keys are ALWAYS strings!
+		
+# 		# If this specific frame index isn't in the file data map, skip smoothly
+# 		if not frames_data.has(frame_key):
+# 			continue
 			
-		for node_name in frames_data[frame_key].keys():
-			var dummy_part = current_dummy.get_node_or_null(node_name)
+# 		for node_name in frames_data[frame_key].keys():
+# 			var dummy_part = current_dummy.get_node_or_null(node_name)
 			
-			if dummy_part != null:
-				var target_raw = frames_data[frame_key][node_name]
+# 			if dummy_part != null:
+# 				var target_raw = frames_data[frame_key][node_name]
 				
-				# Transform standard web data maps right back into Godot Vector3 types
-				var target_pos = Vector3(target_raw["position"]["x"], target_raw["position"]["y"], target_raw["position"]["z"])
-				var target_rot = Vector3(target_raw["rotation"]["x"], target_raw["rotation"]["y"], target_raw["rotation"]["z"])
+# 				# Transform standard web data maps right back into Godot Vector3 types
+# 				var target_pos = Vector3(target_raw["position"]["x"], target_raw["position"]["y"], target_raw["position"]["z"])
+# 				var target_rot = Vector3(target_raw["rotation"]["x"], target_raw["rotation"]["y"], target_raw["rotation"]["z"])
 				
-				if f == 0:
-					# Instantly snap dummy nodes to matching positions on frame 0
-					dummy_part.global_position = target_pos
-					dummy_part.global_rotation = target_rot
-				else:
-					# Smoothly interpolate positional changes across active intervals
-					var tween = create_tween().set_parallel(true)
-					tween.tween_property(dummy_part, "global_position", target_pos, 0.1)
-					tween.tween_property(dummy_part, "global_rotation", target_rot, 0.1)
+# 				if f == 0:
+# 					# Instantly snap dummy nodes to matching positions on frame 0
+# 					dummy_part.global_position = target_pos
+# 					dummy_part.global_rotation = target_rot
+# 				else:
+# 					# Smoothly interpolate positional changes across active intervals
+# 					var tween = create_tween().set_parallel(true)
+# 					tween.tween_property(dummy_part, "global_position", target_pos, 0.1)
+# 					tween.tween_property(dummy_part, "global_rotation", target_rot, 0.1)
 					
-		# Await synchronization pacing delay signature
-		await get_tree().create_timer(0.1).timeout
+# 		# Await synchronization pacing delay signature
+# 		await get_tree().create_timer(0.1).timeout
 		
-	print("--- PLAYBACK COMPLETED ---")
-	is_playing = false
+# 	print("--- PLAYBACK COMPLETED ---")
+# 	is_playing = false

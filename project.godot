@@ -34,6 +34,8 @@ GameManager="*res://scripts/CoreManager/GameManager.gd"
 PlayerData="*res://Prefabs/PlayerPrefabs/PlayerData.gd"
 RefreshTokenApi="*res://scripts/API/RefreshTokenApi.gd"
 LevelController="*res://scripts/CoreManager/LevelController.gd"
+ResultApi="*res://scripts/API/result-api.gd"
+ReplayManager="*res://Prefabs/PlayerPrefabs/ReplayManager.tscn"
 
 [dotnet]
 

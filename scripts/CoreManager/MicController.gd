@@ -1,7 +1,7 @@
 extends Node
 class_name MicController
 
-@export var replayController: ReplayController
+@export var replayController: TelementryController
 
 var record_effect: AudioEffectRecord
 var recording: AudioStreamWAV

@@ -15,7 +15,7 @@ func _on_visibility_changed() -> void:
 		_update_welcome_label()
 
 func _update_welcome_label() -> void:
-	var child_name := PlayerData.full_name.strip_edges()
+	var child_name := PlayerData.fullName.strip_edges()
 
 	if child_name.is_empty():
 		welcomeLabel.text = "Hello!"

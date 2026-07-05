@@ -4,18 +4,18 @@ var apiUrl : String = "https://103-162-31-23.sslip.io/api/results/submit"
 var httpRequest : HTTPRequest
 
 # --- ALL API PAYLOAD FIELDS ---
-var sessionId: String = ""
-var childId: int = 1
-var exerciseId: int = 0
-var lessonId: int = 0
-var attemptNumber: int = 1
-var completionStatus: String = "Completed"
-var score: int = 0
-var startedAt: String = Time.get_datetime_string_from_system()
-var completedAt: String = Time.get_datetime_string_from_system()  
-var durationSeconds: int = 0
-var interactionLog: String = ""
-var feedbackText: String = ""
+# var sessionId: String = ""
+# var childId: int = 0
+# var exerciseId: int = 0
+# var lessonId: int = 0
+# var attemptNumber: int = 0
+# var completionStatus: String = ""
+# var score: int = 0
+# var startedAt: String = ""
+# var completedAt: String = ""  
+# var durationSeconds: int = 0
+# var interactionLog: String = ""
+# var feedbackText: String = ""
 
 
 func _ready() -> void:
@@ -29,21 +29,22 @@ func _level_type(data: Dictionary) -> void:
 	else: 
 		data["exerciseId"] = LevelController.levelId
 
-func _on_send_result() -> void:
-	var data_to_send = {
-		"sessionId": sessionId,
-		"childId": childId,
-		"attemptNumber": attemptNumber,
-		"completionStatus": completionStatus,
-		"score": score,
-		"startedAt": startedAt,
-		"completedAt": completedAt,
-		"durationSeconds": durationSeconds,
-		"interactionLog": interactionLog,
-		"feedbackText": feedbackText
-	}
+func send_result(data_to_send:Dictionary) -> void:
 	#Inject lessonId/exerciseId 
 	_level_type(data_to_send)
+	# completedAt = Time.get_datetime_string_from_system()
+	# var data_to_send = {
+	# 	"sessionId": sessionId,
+	# 	"childId": childId,
+	# 	"attemptNumber": attemptNumber,
+	# 	"completionStatus": completionStatus,
+	# 	"score": score,
+	# 	"startedAt": startedAt,
+	# 	"completedAt": completedAt,
+	# 	"durationSeconds": durationSeconds,
+	# 	"interactionLog": interactionLog,
+	# 	"feedbackText": feedbackText
+	# }
 	var json = JSON.stringify(data_to_send)
 	var headers = [
 		"Authorization: Bearer " + SessionData.accessToken,
