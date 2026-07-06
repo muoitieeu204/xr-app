@@ -1,7 +1,7 @@
 extends Node
 
-var apiUrl : String = "https://103-162-31-23.sslip.io/api/results/submit"
-var httpRequest : HTTPRequest
+var apiUrl: String = "https://103-162-31-23.sslip.io/api/results/submit"
+var httpRequest: HTTPRequest
 
 # --- ALL API PAYLOAD FIELDS ---
 # var sessionId: String = ""
@@ -23,15 +23,9 @@ func _ready() -> void:
 	add_child(httpRequest)
 	httpRequest.request_completed.connect(_on_request_complete)
 
-func _level_type(data: Dictionary) -> void:
-	if LevelController.isLesson == true:
-		data["lessonId"] = LevelController.levelId
-	else: 
-		data["exerciseId"] = LevelController.levelId
 
-func send_result(data_to_send:Dictionary) -> void:
+func send_result(data_to_send: Dictionary) -> void:
 	#Inject lessonId/exerciseId 
-	_level_type(data_to_send)
 	# completedAt = Time.get_datetime_string_from_system()
 	# var data_to_send = {
 	# 	"sessionId": sessionId,
@@ -52,7 +46,11 @@ func send_result(data_to_send:Dictionary) -> void:
 	]
 	
 	httpRequest.set_tls_options(TLSOptions.client_unsafe())
-	httpRequest.request(apiUrl, headers, HTTPClient.METHOD_POST, json)
+	var err = httpRequest.request(apiUrl, headers, HTTPClient.METHOD_POST, json)
+	if err != OK:
+		print("CRITICAL ERROR: Godot refused to send! Error Code: ", err)
+	else:
+		print("SUCCESS: Request successfully left Godot! Waiting for server...")
 
 func _on_request_complete(result, responseCode, headers, body):
 	if result != HTTPRequest.RESULT_SUCCESS:

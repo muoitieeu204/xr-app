@@ -91,6 +91,9 @@ func save_telemetry_to_json() -> void:
 		file_payload["frames"][frame_str] = {}
 		
 		for node_name in recording_data[f].keys():
+			if node_name == "event":
+				file_payload["frames"][frame_str]["event"] = recording_data[f]["event"]
+				continue
 			var pos: Vector3 = recording_data[f][node_name]["position"]
 			var rot: Vector3 = recording_data[f][node_name]["rotation"]
 			

@@ -36,7 +36,8 @@ public partial class SessionUploader : Node
 				HttpResponseMessage response = await client.PostAsync(apiUrl, form);
 				if (response.IsSuccessStatusCode)
 				{
-					GD.Print($"Upload successful! Status: {response.StatusCode} ");
+					string responseBody = await response.Content.ReadAsStringAsync();
+					GD.Print($"Upload successful! Status: {responseBody} ");
 				}
 				else GD.Print($"Upload failed! Server response with: {response.StatusCode}, message: {response.ReasonPhrase}");
 			}

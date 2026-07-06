@@ -54,12 +54,14 @@ func _on_speech_result(is_correct: bool):
 		is_currently_teaching = false # Unlock NPC
 		if npc_animation_player and npc_animation_player.has_animation("emote-yes"):
 			npc_animation_player.play("emote-yes")
+			_on_child_correct_answer()
 	else:
 		failed_attempts += 1
 		print("NPC: That's not right. Attempt ", failed_attempts)
 		if npc_animation_player and npc_animation_player.has_animation("emote-no"):
 			npc_animation_player.play("emote-no")
-			
+			_on_child_wrong_answer()
+
 		if failed_attempts == 1:
 			ask_question_2()
 		else:
@@ -67,7 +69,7 @@ func _on_speech_result(is_correct: bool):
 			is_currently_teaching = false # Unlock NPC
 
 func _on_child_correct_answer():
-	LevelController.CorrectAnswer(10)
+	get_tree().call_group("LevelController", "CorrectAnswer", 10)   
 
 func _on_child_wrong_answer():
-	LevelController.WrongAnswer(5)
+	get_tree().call_group("LevelController", "WrongAnswer", 5)   

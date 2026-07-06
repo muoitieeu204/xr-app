@@ -1,7 +1,7 @@
 [gd_scene load_steps=101 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
-[ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_r2rb5"]
+[ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/LevelController.gd" id="1_r2rb5"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_acpa7"]
 [ext_resource type="PackedScene" uid="uid://canh6gljuhhoc" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_027.gltf" id="5_r2rb5"]
 [ext_resource type="PackedScene" uid="uid://cngiglc3db05c" path="res://Assets/kenney_mini-market/FakeShelfBag.tscn" id="12_h8g51"]
@@ -712,6 +712,8 @@ points = PackedVector3Array(0.02496326, 0.379, 0.024990208, 0.02496326, 0.379, -
 
 [node name="Main" type="Node3D" groups=["LevelController"]]
 script = ExtResource("1_r2rb5")
+isLesson = true
+levelId = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jopcc")
@@ -1857,7 +1859,7 @@ transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.376341)
 
 [node name="FakeShelfBox" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -26.20308)
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.283691, 1.0943806, -26.203087)
 
 [node name="FakeShelfBox2" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
 transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -24.151041)
