@@ -30,3 +30,6 @@ func stop_record_and_save():
 			var final_json_name = "player_replay_" + str(PlayerData.childId) + "_"  + time_string + ".json"
 			replayController.SAVE_PATH = "user://" + final_json_name
 			replayController.stop_and_save_session()
+			await replayController.saveCompleted #Add await signal for the thread
+			var uploader = get_node_or_null("/root/SessionUploader")
+			uploader.UploadSessionDataAsync("user://"+final_json_name, full_save_path, SessionData.accessToken, PlayerData.childId)

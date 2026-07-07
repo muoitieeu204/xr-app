@@ -10,18 +10,21 @@ public partial class SessionUploader : Node
 	private static readonly System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
 	private readonly string apiUrl = "https://103-162-31-23.sslip.io/api/files";
 	// Called when the node enters the scene tree for the first time.
-	public async void UploadSessionDataAsync(string jsonPath, string audioPath)
+	public async void UploadSessionDataAsync(string jsonPath, string audioPath, string token, int childProfileId)
 	{
 		string absoluteJsonPath = ProjectSettings.GlobalizePath(jsonPath);
 		string absoluteAudioPath = ProjectSettings.GlobalizePath(audioPath);
 		try
 		{
-
+			// Inject Authorization Bearer Token
+			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 			//Setup FileStream
 			using (var form = new MultipartFormDataContent())
 			using (var jsonStream = File.OpenRead(absoluteJsonPath))
 			using (var audioStream = File.OpenRead(absoluteAudioPath))
 			{
+				// Attach childId into request body
+				form.Add(new StringContent(childProfileId.ToString()), "ChildProfileId");
 				//Use FileStream for json
 				var jsonContent = new StreamContent(jsonStream);
 				jsonContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -34,10 +37,12 @@ public partial class SessionUploader : Node
 
 				GD.Print("Starting upload to server...");
 				HttpResponseMessage response = await client.PostAsync(apiUrl, form);
+				string responseBody = await response.Content.ReadAsStringAsync();
 				if (response.IsSuccessStatusCode)
 				{
-					string responseBody = await response.Content.ReadAsStringAsync();
-					GD.Print($"Upload successful! Status: {responseBody} ");
+					var jsonNode = Godot.Json.ParseString(responseBody);
+					string folderId = jsonNode.AsGodotDictionary()["folderId"].AsString();
+					GD.Print($"Upload successful! Server return folderId: {folderId} ");
 				}
 				else GD.Print($"Upload failed! Server response with: {response.StatusCode}, message: {response.ReasonPhrase}");
 			}

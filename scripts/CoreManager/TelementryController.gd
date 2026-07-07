@@ -1,5 +1,6 @@
-extends Node
-class_name  TelementryController
+class_name  TelementryController extends Node
+signal saveCompleted
+
 @export var recorded_objects : Array[Node3D]
 @export var dummy_scene : PackedScene # Drag your saved Dummy scene here in the Inspector
 @onready var delay: Timer = $Delay
@@ -69,7 +70,7 @@ func stop_and_save_session() -> void:
 	
 	save_telemetry_to_json()
 
-func save_telemetry_to_json() -> void:
+func _thread_save_json() -> void:
 	print("Serializing RAM dictionary to JSON structure...")
 	
 	var active_world_path: String = SessionData.target_scene_path
@@ -111,9 +112,13 @@ func save_telemetry_to_json() -> void:
 		file.store_string(json_string)
 		file.close()
 		print(" Successfully exported data to local path: ", ProjectSettings.globalize_path(SAVE_PATH))
+		call_deferred("emit_signal","saveCompleted")
 	else:
 		push_error("OS Error: Failed to open save track destination path.")
 
+func save_telemetry_to_json() -> void:
+	WorkerThreadPool.add_task(_thread_save_json)
+	
 func log_event_to_replay(eventText : String) -> void:
 	if not recording:
 		return
@@ -122,6 +127,7 @@ func log_event_to_replay(eventText : String) -> void:
 
 	recording_data[frames]["event"] = eventText
 	print("Replay recorded at frame", frames, ": ", eventText)
+
 
 # # --- STEP 3: LOADING & DESERIALIZATION (LOCAL IMPORT) ---
 # Comment to follow SRP (Single Responsibility Principle)
