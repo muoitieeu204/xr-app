@@ -1,9 +1,8 @@
-[gd_scene load_steps=23 format=4 uid="uid://dp1q2xtpkipiq"]
+[gd_scene load_steps=22 format=4 uid="uid://dp1q2xtpkipiq"]
 
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="1_7sgy3"]
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_k6am5"]
 [ext_resource type="PackedScene" uid="uid://ds164i4dxlvia" path="res://Assets/kenney_food-kit/WatermelonPickable.tscn" id="2_bdeco"]
-[ext_resource type="Texture2D" uid="uid://chg8xixfkgore" path="res://Assets/kenney_food-kit/Previews/watermelon.png" id="3_o4pqv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3oack"]
 resource_name = "colormap"
@@ -271,10 +270,11 @@ shadow_mesh = SubResource("ArrayMesh_2kmvv")
 radius = 0.13368724
 
 [node name="FakeWatermelon" type="Area3D"]
+collision_layer = 5
+collision_mask = 196613
 script = ExtResource("1_k6am5")
 realItem = ExtResource("2_bdeco")
 itemId = "trái dưa hấu"
-itemIcon = ExtResource("3_o4pqv")
 
 [node name="watermelon" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

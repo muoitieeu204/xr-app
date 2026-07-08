@@ -59,6 +59,6 @@ func FinishLevel():
 		finalResult["lessonId"] = levelId
 	else: 
 		finalResult["exeriseId"] = levelId #This need to be fix for the exercise 
-	print("Sending to server: ", JSON.stringify(finalResult))
+	print("Sending result to server: ", JSON.stringify(finalResult))
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()

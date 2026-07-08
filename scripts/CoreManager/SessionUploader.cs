@@ -24,7 +24,9 @@ public partial class SessionUploader : Node
 			using (var audioStream = File.OpenRead(absoluteAudioPath))
 			{
 				// Attach childId into request body
-				form.Add(new StringContent(childProfileId.ToString()), "ChildProfileId");
+				var childId = new StringContent(childProfileId.ToString());
+				childId.Headers.ContentType = null;
+				form.Add(childId, "ChildProfileId");
 				//Use FileStream for json
 				var jsonContent = new StreamContent(jsonStream);
 				jsonContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
@@ -42,9 +44,9 @@ public partial class SessionUploader : Node
 				{
 					var jsonNode = Godot.Json.ParseString(responseBody);
 					string folderId = jsonNode.AsGodotDictionary()["folderId"].AsString();
-					GD.Print($"Upload successful! Server return folderId: {folderId} ");
+					GD.Print($"Upload session replay successful! Server return folderId: {folderId} ");
 				}
-				else GD.Print($"Upload failed! Server response with: {response.StatusCode}, message: {response.ReasonPhrase}");
+				else GD.Print($"Upload session failed! Server response with: {response.StatusCode}, message: {response.ReasonPhrase}");
 			}
 
 		}

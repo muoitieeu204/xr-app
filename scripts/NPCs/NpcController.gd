@@ -7,7 +7,7 @@ extends Node3D
 var current_item_id = ""
 var current_hint_audio = null
 var failed_attempts = 0
-var is_currently_teaching = false # <--- NEW: Prevents other NPCs from reacting!
+static var activeTeacher = null
 
 func _ready():
 	var gameManager = get_node_or_null("/root/GameManager")
@@ -16,10 +16,10 @@ func _ready():
 
 # YOU MUST CONNECT THE CASH REGISTER'S 'item_scanned_for_teaching' SIGNAL TO THIS FUNCTION!
 func _on_item_scanned_for_teaching(item_id: String, hint_audio: AudioStream):
+	activeTeacher = self
 	current_item_id = item_id
 	current_hint_audio = hint_audio
 	failed_attempts = 0
-	is_currently_teaching = true # <--- Lock this NPC into teaching mode!
 	
 	print("NPC: Received item scan for ", current_item_id)
 	ask_question_1()
@@ -46,12 +46,11 @@ func ask_question_2():
 
 func _on_speech_result(is_correct: bool):
 	# If this NPC isn't the one who scanned the item, ignore the signal!
-	if not is_currently_teaching:
+	if activeTeacher != self:
 		return
 		
 	if is_correct:
 		print("NPC: Correct! Great job!")
-		is_currently_teaching = false # Unlock NPC
 		if npc_animation_player and npc_animation_player.has_animation("emote-yes"):
 			npc_animation_player.play("emote-yes")
 			_on_child_correct_answer()
@@ -66,7 +65,6 @@ func _on_speech_result(is_correct: bool):
 			ask_question_2()
 		else:
 			print("NPC: Failed again. Let's move on or give the direct answer!")
-			is_currently_teaching = false # Unlock NPC
 
 func _on_child_correct_answer():
 	get_tree().call_group("LevelController", "CorrectAnswer", 10)   
