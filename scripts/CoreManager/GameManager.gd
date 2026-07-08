@@ -32,4 +32,4 @@ func _on_speech_recognized(text:String):
 			emit_signal("speech_result", true)
 		else:
 			print("Incorrect! You said: ", text)
-			emit_signal("speech_result", false)
+			emit_signal("speech_result", false) 

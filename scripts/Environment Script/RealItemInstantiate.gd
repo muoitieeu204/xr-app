@@ -1,6 +1,7 @@
 extends Area3D
 
 @export var realItem : PackedScene
+@export var itemName : String = ""
 @export var itemId : String = ""
 @export var itemNameSound : AudioStream
 @export var hintAudios : Array[AudioStream] = []
@@ -26,6 +27,7 @@ func pick_up(by: Node3D) -> void:
 	var final_id = itemId if itemId != "" else self.name
 	final_id = final_id.rstrip("0123456789")
 	realItemInstance.set_meta("itemId", final_id)
+	realItemInstance.set_meta("itemName", itemName)
 	realItemInstance.set_meta("itemNameSound", itemNameSound)
 	realItemInstance.set_meta("hintAudios", hintAudios)
 
