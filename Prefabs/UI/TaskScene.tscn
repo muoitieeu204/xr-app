@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://tda1gis6yxsn"]
+[gd_scene load_steps=4 format=3 uid="uid://bv2k7culujhsw"]
 
 [ext_resource type="Script" uid="uid://nqihh2t4gpcj" path="res://scripts/UI Script/TaskSceneController.gd" id="1_script"]
 
@@ -24,8 +24,27 @@ font_color = Color(0.066667, 0.094118, 0.152941, 1)
 outline_size = 4
 outline_color = Color(0.305882, 0.67451, 0.686275, 1)
 
-[node name="TaskScene" type="PanelContainer"]
+[node name="TaskScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="BackgroundDim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.992157, 0.960784, 0.627451)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(416, 0)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,21 +57,20 @@ offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
-script = ExtResource("1_script")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = "📋 Nhiệm vụ của bạn"
 label_settings = SubResource("LabelSettings_title")
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="TaskListContainer" type="VBoxContainer" parent="VBoxContainer"]
+[node name="TaskListContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 16

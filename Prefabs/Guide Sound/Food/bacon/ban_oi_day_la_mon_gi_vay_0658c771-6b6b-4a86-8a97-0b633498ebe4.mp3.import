@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cskvolv0f3o6i"
+path="res://.godot/imported/ban_oi_day_la_mon_gi_vay_0658c771-6b6b-4a86-8a97-0b633498ebe4.mp3-eed3fc0eff19c3004ac357f1a594108a.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bacon/ban_oi_day_la_mon_gi_vay_0658c771-6b6b-4a86-8a97-0b633498ebe4.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_mon_gi_vay_0658c771-6b6b-4a86-8a97-0b633498ebe4.mp3-eed3fc0eff19c3004ac357f1a594108a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clmt5x0qc34g0"
+path="res://.godot/imported/thu_nghi_lai_nha_qua_vo_xanh_san_ben_trong_vang_6165efe1-20dc-4733-a93f-acc3e99a4848.mp3-b29357594722a25cce2f969d4e11db4b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/avocado/thu_nghi_lai_nha_qua_vo_xanh_san_ben_trong_vang_6165efe1-20dc-4733-a93f-acc3e99a4848.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_qua_vo_xanh_san_ben_trong_vang_6165efe1-20dc-4733-a93f-acc3e99a4848.mp3-b29357594722a25cce2f969d4e11db4b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

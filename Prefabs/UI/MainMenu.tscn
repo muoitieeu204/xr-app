@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://djjkvb56333df"]
+[gd_scene load_steps=6 format=3 uid="uid://djjkvb56333df"]
 
 [ext_resource type="Script" uid="uid://f7kfuk35spbq" path="res://scripts/UI Script/MenuController.gd" id="1_lt1ks"]
 [ext_resource type="PackedScene" uid="uid://bq6frg3g1t8mh" path="res://Prefabs/UI/MenuScreeen.tscn" id="2_shwl4"]
-[ext_resource type="PackedScene" uid="uid://b0tvfsri66iru" path="res://Prefabs/UI/ProgressMenu.tscn" id="3_urm24"]
 [ext_resource type="PackedScene" uid="uid://b8settingmenu" path="res://Prefabs/UI/SettingsMenu.tscn" id="4_gl2bj"]
 [ext_resource type="PackedScene" uid="uid://ifitwicr1j4h" path="res://Prefabs/UI/ResultScene.tscn" id="5_jq8ge"]
 [ext_resource type="PackedScene" uid="uid://lxhjaoisofpk" path="res://Prefabs/UI/LogoutScreen.tscn" id="6_g0lmj"]
@@ -17,11 +16,6 @@ grow_vertical = 2
 script = ExtResource("1_lt1ks")
 
 [node name="MenuScreen" parent="." instance=ExtResource("2_shwl4")]
-layout_mode = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="ProgressMenu" parent="." instance=ExtResource("3_urm24")]
-visible = false
 layout_mode = 1
 metadata/_edit_use_anchors_ = true
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d31bt4g47k5uf"
+path="res://.godot/imported/be_hay_dem_do_vat_toi_quay_thu_ngan_de_tra_loi_1e57e221-2d77-4047-9efb-f35e2edd51b8.mp3-5d1e1158b5e5f3f0cdbf42b36ee93f2f.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/be_hay_dem_do_vat_toi_quay_thu_ngan_de_tra_loi_1e57e221-2d77-4047-9efb-f35e2edd51b8.mp3"
+dest_files=["res://.godot/imported/be_hay_dem_do_vat_toi_quay_thu_ngan_de_tra_loi_1e57e221-2d77-4047-9efb-f35e2edd51b8.mp3-5d1e1158b5e5f3f0cdbf42b36ee93f2f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

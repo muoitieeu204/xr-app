@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cllpvpq4drckb"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_246605ac-720c-4096-a542-bd5039e458be.mp3-94b5d60ace8f334a4c4c30eac96be575.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bacon-raw/ban_oi_day_la_cai_gi_vay_246605ac-720c-4096-a542-bd5039e458be.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_246605ac-720c-4096-a542-bd5039e458be.mp3-94b5d60ace8f334a4c4c30eac96be575.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

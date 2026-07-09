@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://buubx7w7uoj5o"
+path="res://.godot/imported/cai_tui_8ebc756a-0d37-4df7-b1ba-1bf3676c21e9.mp3-996f7b586fb0f7687857a3d32e29f5be.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bag/cai_tui_8ebc756a-0d37-4df7-b1ba-1bf3676c21e9.mp3"
+dest_files=["res://.godot/imported/cai_tui_8ebc756a-0d37-4df7-b1ba-1bf3676c21e9.mp3-996f7b586fb0f7687857a3d32e29f5be.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7f6oi82to1j2"
+path="res://.godot/imported/cai_thung_9a392d9d-faba-45ba-bf9b-4c921268756f.mp3-74b2c365c21539a973710f7f68972636.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/barrel/cai_thung_9a392d9d-faba-45ba-bf9b-4c921268756f.mp3"
+dest_files=["res://.godot/imported/cai_thung_9a392d9d-faba-45ba-bf9b-4c921268756f.mp3-74b2c365c21539a973710f7f68972636.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

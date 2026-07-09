@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3yi5de0m2tf5"
+path="res://.godot/imported/toi_la_cai_chai_dung_nuoc_sot_mau_do_cham_voi_18d8c9a6-a605-454b-8504-c15b882f5c60.mp3-25d0f0db942ebfe98b8719bc136d265b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bottle-ketchup/toi_la_cai_chai_dung_nuoc_sot_mau_do_cham_voi_18d8c9a6-a605-454b-8504-c15b882f5c60.mp3"
+dest_files=["res://.godot/imported/toi_la_cai_chai_dung_nuoc_sot_mau_do_cham_voi_18d8c9a6-a605-454b-8504-c15b882f5c60.mp3-25d0f0db942ebfe98b8719bc136d265b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

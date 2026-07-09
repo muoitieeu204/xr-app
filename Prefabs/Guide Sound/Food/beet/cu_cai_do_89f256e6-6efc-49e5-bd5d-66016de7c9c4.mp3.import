@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmw8kkmsl0lte"
+path="res://.godot/imported/cu_cai_do_89f256e6-6efc-49e5-bd5d-66016de7c9c4.mp3-bafbe097be615836681c9ac0eaacadb0.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/beet/cu_cai_do_89f256e6-6efc-49e5-bd5d-66016de7c9c4.mp3"
+dest_files=["res://.godot/imported/cu_cai_do_89f256e6-6efc-49e5-bd5d-66016de7c9c4.mp3-bafbe097be615836681c9ac0eaacadb0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

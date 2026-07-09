@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuwsin5h7ya7o"
+path="res://.godot/imported/toi_co_vo_xanh_san_sui_ben_trong_vang_min_va_beo_1684bbdb-77a5-4964-bd1e-48e91108067f.mp3-e0c8e3edfe2c5859b725c302b02fb468.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/avocado/toi_co_vo_xanh_san_sui_ben_trong_vang_min_va_beo_1684bbdb-77a5-4964-bd1e-48e91108067f.mp3"
+dest_files=["res://.godot/imported/toi_co_vo_xanh_san_sui_ben_trong_vang_min_va_beo_1684bbdb-77a5-4964-bd1e-48e91108067f.mp3-e0c8e3edfe2c5859b725c302b02fb468.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

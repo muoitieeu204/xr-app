@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bms5vrxb366gf"
+path="res://.godot/imported/toi_la_qua_tron_do_bi_cat_doi_ben_trong_trang_60c994e9-16cd-44c8-8cbc-509908372a17.mp3-f8ff93201be31bd3e0ab0dd6c90387ae.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/apple-half/toi_la_qua_tron_do_bi_cat_doi_ben_trong_trang_60c994e9-16cd-44c8-8cbc-509908372a17.mp3"
+dest_files=["res://.godot/imported/toi_la_qua_tron_do_bi_cat_doi_ben_trong_trang_60c994e9-16cd-44c8-8cbc-509908372a17.mp3-f8ff93201be31bd3e0ab0dd6c90387ae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

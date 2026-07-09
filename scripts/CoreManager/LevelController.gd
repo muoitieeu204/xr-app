@@ -3,12 +3,14 @@ extends XRToolsSceneBase
 
 @export var isLesson: bool = false
 @export var levelId: int = 0
+@export var taskList : Array[String] = []
 
 var currentScore: int = 0
 var startedAt: String = ""
 var interactionLog: String = ""
 var startTick: int = 0
 var isLevelFinished: bool = false
+var completedTask : Array[String] = []
 
 func _ready() -> void:
 	currentScore = 0
@@ -62,3 +64,10 @@ func FinishLevel():
 	print("Sending result to server: ", JSON.stringify(finalResult))
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()
+
+func markTaskComplete(levelTask: Array[String]) -> void:
+	if taskList.has(levelTask) and not completedTask.has(levelTask):
+		completedTask.append(taskList)
+		get_tree().call_group("TaskUI", "update_tasks", taskList,completedTask)
+	if completedTask.size() == levelTask.size():
+		print("All tasks completed!") 
