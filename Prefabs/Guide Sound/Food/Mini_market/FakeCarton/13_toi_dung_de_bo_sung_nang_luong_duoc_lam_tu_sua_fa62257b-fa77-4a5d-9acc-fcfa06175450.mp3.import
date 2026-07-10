@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bou557yb68tbp"
+path="res://.godot/imported/13_toi_dung_de_bo_sung_nang_luong_duoc_lam_tu_sua_fa62257b-fa77-4a5d-9acc-fcfa06175450.mp3-a83ebf06d123f88f8cecb3bc2a755746.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeCarton/13_toi_dung_de_bo_sung_nang_luong_duoc_lam_tu_sua_fa62257b-fa77-4a5d-9acc-fcfa06175450.mp3"
+dest_files=["res://.godot/imported/13_toi_dung_de_bo_sung_nang_luong_duoc_lam_tu_sua_fa62257b-fa77-4a5d-9acc-fcfa06175450.mp3-a83ebf06d123f88f8cecb3bc2a755746.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

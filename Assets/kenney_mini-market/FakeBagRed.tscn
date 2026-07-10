@@ -53,9 +53,11 @@ points = PackedVector3Array(0.12449999, 0.07877232, 0.17496575, -0.12449999, 0.0
 [node name="ChipBagRed" type="Area3D"]
 collision_layer = 5
 collision_mask = 131077
+audio_bus_override = true
+audio_bus_name = &"Sounds"
 script = ExtResource("1_2ihwm")
 realItem = ExtResource("2_woryi")
-itemId = "túi bánh đỏ"
+itemName = "túi bánh đỏ"
 itemNameSound = ExtResource("3_7t4ue")
 hintAudios = Array[AudioStream]([ExtResource("4_wff7s"), ExtResource("5_f5v3p")])
 

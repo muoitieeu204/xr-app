@@ -50,6 +50,8 @@ interactable="Interactable Object"
 VoiceLines=""
 LevelController=""
 TaskUI=""
+MenuUI="Main Menu popup"
+MenuViewport="Vr Player Main Menu"
 
 [godot_xr_tools]
 

@@ -99,5 +99,8 @@ mesh = SubResource("ArrayMesh_ws5rt")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_44fp3")
 
-[node name="UnFreezeHelper" type="Node" parent="." index="5"]
+[node name="ItemLabel" type="Label3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.039868414, 0)
+
+[node name="UnFreezeHelper" type="Node" parent="." index="6"]
 script = ExtResource("9_o3ses")

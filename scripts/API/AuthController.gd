@@ -51,6 +51,9 @@ func _ready() -> void:
 
 	if childProfileScene != null:
 		childProfileScene.visible = false
+		var cpLogout = childProfileScene.get_node_or_null("ProfileBox/VBoxContainer/LogoutButton")
+		if cpLogout != null:
+			cpLogout.pressed.connect(_on_logout_button_pressed)
 
 	$LoginBox.visible = true
 	$WelcomeScene.visible = false
@@ -170,13 +173,13 @@ func _on_request_completed(result, responseCode, headers, body):
 			errorLabel.visible = true
 		
 func _on_logout_button_pressed() -> void:
-	# SessionData.accessToken = ""
-	# SessionData.refreshToken = ""
-	# SessionData.userId = 0
-	# SessionData.fullName = ""
-	# SessionData.userName = ""
-	# SessionData.roleName = ""
-	# SessionData.isActive = false
+	SessionData.accessToken = ""
+	SessionData.refreshToken = ""
+	SessionData.userId = 0
+	SessionData.fullName = ""
+	SessionData.userName = ""
+	SessionData.roleName = ""
+	SessionData.isActive = false
 	PlayerData.clear()
 	print_debug("User Logout Successfully")
 	
@@ -194,6 +197,8 @@ func _on_logout_button_pressed() -> void:
 	$LoginBox.visible = true
 	$WelcomeScene.visible = false
 	$LogoutBox.visible = false
+	if childProfileScene != null:
+		childProfileScene.visible = false
 
 func _on_login_hover() -> void:
 	loginButton.pivot_offset = loginButton.size / 2

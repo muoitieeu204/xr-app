@@ -1,4 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://b8settingmenu"]
+[gd_scene load_steps=26 format=3 uid="uid://b8settingmenu"]
+
+[ext_resource type="Script" uid="uid://cc1jw18wb6osh" path="res://scripts/UI Script/SettingController.gd" id="1_2mxg4"]
 
 [sub_resource type="Gradient" id="Gradient_qq24o"]
 colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
@@ -168,6 +170,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2mxg4")
 
 [node name="BackgroundDim" type="ColorRect" parent="."]
 layout_mode = 1

@@ -119,15 +119,18 @@ shape = SubResource("BoxShape3D_vajms")
 mesh = SubResource("ArrayMesh_7h8vg")
 skeleton = NodePath("")
 
-[node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("3_dsh84")]
+[node name="ItemLabel" type="Label3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.039868414, 0)
+
+[node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("3_dsh84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03709027, 0.09758732, 0)
 hand_pose = SubResource("Resource_cdybs")
 
-[node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("6_p4r44")]
+[node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("6_p4r44")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0498282, 0.09758732, 0)
 hand_pose = SubResource("Resource_n85vp")
 
-[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="4"]
+[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="5"]
 visible = false
 script = ExtResource("8_bk7cr")
 metadata/_custom_type_script = "uid://0b7wkxi4vymb"
@@ -138,5 +141,5 @@ mesh = SubResource("ArrayMesh_ws5rt")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_44fp3")
 
-[node name="UnFreezeHelper" type="Node" parent="." index="5"]
+[node name="UnFreezeHelper" type="Node" parent="." index="6"]
 script = ExtResource("9_a7r7h")

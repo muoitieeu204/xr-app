@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ifitwicr1j4h" path="res://Prefabs/UI/ResultScene.tscn" id="5_jq8ge"]
 [ext_resource type="PackedScene" uid="uid://lxhjaoisofpk" path="res://Prefabs/UI/LogoutScreen.tscn" id="6_g0lmj"]
 
-[node name="MasterControl" type="Control"]
+[node name="MasterControl" type="Control" groups=["MenuUI"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

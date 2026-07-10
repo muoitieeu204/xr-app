@@ -79,5 +79,5 @@ target_scene = "uid://ciondyec656d3"
 holoText = "Supermarket World"
 
 [node name="Spawner" parent="." instance=ExtResource("6_bipgs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.772787, 10.125311, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28.772787, 10.125311, 0)
 playerNode = ExtResource("7_ty580")

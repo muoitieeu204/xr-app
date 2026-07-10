@@ -88,7 +88,10 @@ hand_pose = SubResource("Resource_mchii")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05461713, 0.11364113, 0)
 hand_pose = SubResource("Resource_dc2eg")
 
-[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="4"]
+[node name="ItemLabel" type="Label3D" parent="." index="4"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.019934207, 0)
+
+[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="5"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 visible = false
 script = ExtResource("8_gurfk")
@@ -100,5 +103,5 @@ mesh = SubResource("ArrayMesh_kyh04")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_c2vnu")
 
-[node name="UnFreezeHelper" type="Node" parent="." index="5"]
+[node name="UnFreezeHelper" type="Node" parent="." index="6"]
 script = ExtResource("9_c2vnu")

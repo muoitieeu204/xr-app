@@ -110,7 +110,7 @@ scene_properties_keys = PackedStringArray("TaskSceneController.gd", "pending_ico
 pending_icon = null
 completed_icon = null
 
-[node name="MainMenu" parent="XRCamera3D" instance=ExtResource("1_heowi")]
+[node name="MainMenu" parent="XRCamera3D" groups=["MenuViewport"] instance=ExtResource("1_heowi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.382)
 visible = false
 scene = ExtResource("3_hkkl5")

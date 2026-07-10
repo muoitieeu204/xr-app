@@ -53,9 +53,11 @@ points = PackedVector3Array(-0.076969504, 0, -0.076969504, -0.076969504, 0, 0.07
 [node name="Carton" type="Area3D"]
 collision_layer = 5
 collision_mask = 131077
+audio_bus_override = true
+audio_bus_name = &"Sounds"
 script = ExtResource("1_w0ltb")
 realItem = ExtResource("2_w0ltb")
-itemId = "hộp sữa"
+itemName = "hộp sữa"
 itemNameSound = ExtResource("3_ifsoj")
 hintAudios = Array[AudioStream]([ExtResource("4_lvt8r"), ExtResource("5_uwjj1")])
 

@@ -2821,3 +2821,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3580017, -0.016784668)
 shape = SubResource("BoxShape3D_3xq87")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+bus = &"Sounds"

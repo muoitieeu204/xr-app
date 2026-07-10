@@ -66,6 +66,8 @@ func FinishLevel():
 	print("Sending result to server: ", JSON.stringify(finalResult))
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()
+	get_tree().call_group("MenuUI", "show_result",currentScore)
+	get_tree().call_group("MenuViewport", "set_visible", true)
 
 func markTaskComplete(taskName: Array[String]) -> void:
 	if taskList.has(taskName) and not completedTask.has(taskName):

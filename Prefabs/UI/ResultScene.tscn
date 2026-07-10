@@ -178,15 +178,7 @@ layout_mode = 2
 [node name="ScoreLabel" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "100"
 label_settings = SubResource("LabelSettings_score")
-horizontal_alignment = 1
-
-[node name="ScoreDesc" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.305882, 0.67451, 0.686275, 1)
-text = "Điểm của bạn"
 horizontal_alignment = 1
 
 [node name="Spacing2" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
@@ -200,11 +192,3 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
 text = "🔄 Chơi Lại"
-
-[node name="HomeButton" type="Button" parent="CenterContainer/ResultBox/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
-text = "🏠 Về StarterHub"

@@ -71,6 +71,45 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_red_normal"]
+content_margin_left = 32.0
+content_margin_top = 24.0
+content_margin_right = 32.0
+content_margin_bottom = 24.0
+bg_color = Color(0.85, 0.25, 0.25, 1)
+border_width_bottom = 6
+border_color = Color(0.65, 0.15, 0.15, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_red_pressed"]
+content_margin_left = 32.0
+content_margin_top = 26.0
+content_margin_right = 32.0
+content_margin_bottom = 22.0
+bg_color = Color(0.75, 0.15, 0.15, 1)
+border_width_bottom = 2
+border_color = Color(0.65, 0.15, 0.15, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_red_hover"]
+content_margin_left = 32.0
+content_margin_top = 24.0
+content_margin_right = 32.0
+content_margin_bottom = 24.0
+bg_color = Color(0.75, 0.15, 0.15, 1)
+border_width_bottom = 6
+border_color = Color(0.65, 0.15, 0.15, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [node name="ChildProfileBox" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -143,6 +182,15 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 2
+
+[node name="LogoutButton" type="Button" parent="ProfileBox/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_red_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_red_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_red_hover")
+text = "Đăng Xuất"
+
 
 [node name="TemplateButton" type="Button" parent="ProfileBox/VBoxContainer/ScrollContainer/ProfilesGrid"]
 layout_mode = 2

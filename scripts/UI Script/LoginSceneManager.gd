@@ -1,4 +1,5 @@
-extends Node3D
+@tool
+extends XRToolsSceneBase
 
 @export_file("*.tscn") var main_scene: String = "res://Scenes/CyberLoadingSpace.tscn"
 

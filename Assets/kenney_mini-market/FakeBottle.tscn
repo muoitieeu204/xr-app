@@ -53,9 +53,11 @@ points = PackedVector3Array(0.06761662, 0.0069580455, -0.0009266519, -0.06592829
 [node name="Bottle" type="Area3D"]
 collision_layer = 5
 collision_mask = 131077
+audio_bus_override = true
+audio_bus_name = &"Sounds"
 script = ExtResource("1_posoo")
 realItem = ExtResource("2_6i3gh")
-itemId = "chai nước"
+itemName = "chai nước"
 itemNameSound = ExtResource("3_6i3gh")
 hintAudios = Array[AudioStream]([ExtResource("4_oowq8"), ExtResource("5_a1vsw")])
 

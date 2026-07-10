@@ -2,10 +2,8 @@ extends Area3D
 
 @export var realItem : PackedScene
 @export var itemName : String = ""
-@export var itemId : String = ""
 @export var itemNameSound : AudioStream
-@export var hintAudios : Array[AudioStream] = []
-	# 1. Godot XR Tools checks this to see if it's allowed to grab it                                                                                                                                                      
+@export var hintAudios : Array[AudioStream] = []                                                                                                                                                
 func can_pick_up(by: Node3D) -> bool:                                                                                                                                                                                  
 	return true                                                                                                                                                                                                           
 
@@ -24,17 +22,24 @@ func pick_up(by: Node3D) -> void:
 	realItemInstance.pick_up(by)
 
 	# INJECT METADATA INTO THE REAL ITEM
-	var final_id = itemId if itemId != "" else self.name
-	final_id = final_id.rstrip("0123456789")
-	realItemInstance.set_meta("itemId", final_id)
 	realItemInstance.set_meta("itemName", itemName)
 	realItemInstance.set_meta("itemNameSound", itemNameSound)
 	realItemInstance.set_meta("hintAudios", hintAudios)
+
+	var labelNode = realItemInstance.find_child("ItemLabel", true,false)
+	if labelNode:
+		labelNode.text = itemName
+		labelNode.visible = true
+		realItemInstance.dropped.connect(func(_pickable): labelNode.visible = false)
+		realItemInstance.picked_up.connect(func(_pickable): labelNode.visible = true)
+	else: 
+		printerr("Item Label name not found!!")
 
 	if itemNameSound:
 		var audioPlayer = AudioStreamPlayer3D.new()
 		audioPlayer.stream = itemNameSound
 		realItemInstance.add_child(audioPlayer)
+		audioPlayer.bus = "Sounds"
 		audioPlayer.play()
 	# Delete the fake item
 	queue_free()

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://ot1pv42c1p1c"]
+[gd_scene load_steps=11 format=4 uid="uid://ot1pv42c1p1c"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_jq7nk"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_mlyrd"]
 [ext_resource type="PackedScene" uid="uid://bu4lky2y3b6tv" path="res://Assets/kenney_mini-market/ChipBagPickable.tscn" id="2_r6gss"]
 [ext_resource type="AudioStream" uid="uid://c8f0huj3h3nt1" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBag/toi_la_cai_tui_dung_banh_an_vat_ben_trong_gion_d6160988-9c20-4b7b-9e6c-075d801529ee (1).mp3" id="3_d2suv"]
+[ext_resource type="AudioStream" uid="uid://7lej0dehpg86" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBag/tui_banh_vang_8ec75e2b-2d6a-427d-ab10-6e3a395cef5f.mp3" id="3_ncb2a"]
 [ext_resource type="AudioStream" uid="uid://cbw2nj5e0j57i" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBag/thu_nghi_lai_nha_cai_tui_dung_banh_mau_vang_nay_17a2df0a-f92f-4c1a-b49d-4dc25e2e26d7.mp3" id="4_ncb2a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aquf2"]
@@ -52,9 +53,12 @@ points = PackedVector3Array(0.12449999, 0.07877232, 0.17496575, -0.12449999, 0.0
 [node name="ChipBag" type="Area3D"]
 collision_layer = 5
 collision_mask = 131077
+audio_bus_override = true
+audio_bus_name = &"Sounds"
 script = ExtResource("1_jq7nk")
 realItem = ExtResource("2_r6gss")
-itemId = "túi bánh vàng"
+itemName = "túi bánh vàng"
+itemNameSound = ExtResource("3_ncb2a")
 hintAudios = Array[AudioStream]([ExtResource("3_d2suv"), ExtResource("4_ncb2a")])
 
 [node name="bag" type="MeshInstance3D" parent="."]
