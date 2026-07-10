@@ -76,6 +76,6 @@ func show_result(score: int):
 			resultScoreLabel.text = "Chúc mừng bé đã hoàn thành bài học"
 		if score <= 80:
 			resultScoreLabel.text = "Chúc mừng bé đã hoàn thành bài học tốt"
-		if score == 100:
+		if score >= 100:
 			resultScoreLabel.text = "Chúc mừng bé đã hoàn thành bài học xuất xắc"
 	switch_screen("result")
