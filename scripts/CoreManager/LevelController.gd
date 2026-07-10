@@ -13,6 +13,8 @@ var isLevelFinished: bool = false
 var completedTask : Array[String] = []
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		return
 	currentScore = 0
 	interactionLog = ""
 	startedAt = Time.get_datetime_string_from_system(true) + "Z"
@@ -65,9 +67,9 @@ func FinishLevel():
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()
 
-func markTaskComplete(levelTask: Array[String]) -> void:
-	if taskList.has(levelTask) and not completedTask.has(levelTask):
+func markTaskComplete(taskName: Array[String]) -> void:
+	if taskList.has(taskName) and not completedTask.has(taskName):
 		completedTask.append(taskList)
 		get_tree().call_group("TaskUI", "update_tasks", taskList,completedTask)
-	if completedTask.size() == levelTask.size():
+	if completedTask.size() == taskList.size():
 		print("All tasks completed!") 

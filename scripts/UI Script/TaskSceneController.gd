@@ -5,8 +5,6 @@ extends Control
 
 @onready var task_list_container = $PanelContainer/VBoxContainer/TaskListContainer
 
-func _ready() -> void:
-	_test_function()
 # Call this function from your LevelController whenever a task is completed!
 func update_tasks(all_tasks: Array[String], completed_tasks: Array[String]) -> void:
 	# 1. Clear the old list to prevent duplicates
@@ -42,8 +40,3 @@ func update_tasks(all_tasks: Array[String], completed_tasks: Array[String]) -> v
 		hbox.add_child(label)
 		task_list_container.add_child(hbox)
 
-
-func _test_function() -> void:
-	var pendingTask: Array[String] = ["apple", "avocado","banana", "tomato","watermelon"]
-	var completeTask : Array[String] = ["banana", "tomato","watermelon"] 
-	update_tasks(pendingTask,completeTask)
