@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=4 uid="uid://ciondyec656d3"]
+[gd_scene load_steps=103 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
 [ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/LevelController.gd" id="1_r2rb5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://canh6gljuhhoc" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_027.gltf" id="5_r2rb5"]
 [ext_resource type="PackedScene" uid="uid://cngiglc3db05c" path="res://Assets/kenney_mini-market/FakeShelfBag.tscn" id="12_h8g51"]
 [ext_resource type="PackedScene" uid="uid://b3xralthu5m31" path="res://Assets/kenney_mini-market/CharacterEmployee.tscn" id="14_c4e85"]
+[ext_resource type="PackedScene" uid="uid://vscosdri0lhs" path="res://Assets/kenney_mini-market/Models/GLB format/fence-door-rotate.glb" id="15_c4e85"]
 [ext_resource type="PackedScene" uid="uid://i134r505gwsa" path="res://Assets/kenney_mini-market/FakeShelfBox.tscn" id="16_h8g51"]
 [ext_resource type="PackedScene" uid="uid://dyounjrkpjjgc" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle-convertible.glb" id="20_u0m48"]
 [ext_resource type="Texture2D" uid="uid://ni4880cfgnhe" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="21_d1idn"]
@@ -655,6 +656,9 @@ points = PackedVector3Array(0.1553898, 0.0055632964, 0.096289225, -0.17869057, -
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0lre2"]
 points = PackedVector3Array(-0.65099686, 0, -0.44768897, -0.69450545, 0, -0.40422502, -0.22920941, 0.5530074, -0.30472437, 0.65099686, -5.551115e-17, -0.44768897, -0.6712575, 0.00062642794, 0.44115826, 0.3750003, 0.553, 0.2991732, 0.6712575, 0.00062642794, 0.44115826, 0.60930485, 0.4175405, -0.39772722, -0.62374115, 0.28214285, 0.39499998, 0.60930485, 0.4175405, 0.41464972, -0.22920941, 0.5530074, 0.2991815, -0.6260945, 0.28214285, -0.38055503, 0.7222857, 0.10159351, -0.42028317, 0.3750003, 0.553, -0.30471608, -0.69966125, 0.10159351, 0.45994282, -0.67703676, 0.10159351, -0.4654857, 0.69966125, 0.10159351, 0.45994282, -0.3836259, 0.4175405, 0.41464972, -0.3836259, 0.4175405, -0.39772722, 0.67703676, 0.10159351, -0.4654857, -0.7222857, 0.10159351, -0.42028317, 0.7222857, 0.10159351, 0.41464972, -0.7222857, 0.10159351, 0.41464972, 0.69450545, -5.551115e-17, -0.40422502, -0.69450545, -5.551115e-17, 0.39859506, -0.543774, 0.34253502, 0.369756, 0.69450545, -5.551115e-17, 0.39859506, -0.37502688, 0.28214285, -0.43007126, -0.543774, 0.34253502, -0.35524967, -0.6260945, 0.28214285, 0.13276877)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fsytt"]
+size = Vector3(3.416504, 2.2329102, 1)
+
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sfy4u"]
 points = PackedVector3Array(0.44998044, 0.9, -0.100039154, 0.42922866, 0.8499608, 0, 0.44998044, 0.82925797, 0, 0.5, 0.8499608, -0.100039154, 0.44998044, 0.9, -0.5, -0.4500783, 0.9, -0.100039154, -0.42932653, 0.8499608, 0, 0.44998044, 0.17064407, 0, 0.5, 0.8499608, -0.5, 0.5, 0.14994127, -0.100039154, -0.4500783, 0.9, -0.5, -0.5, 0.8499608, -0.100039154, -0.4500783, 0.82925797, 0, 0.42922866, 0.14994127, 0, 0.44998044, 0, -0.100039154, 0.5, 0.14994127, -0.5, -0.5, 0.8499608, -0.5, -0.5, 0.14994127, -0.100039154, -0.4500783, 0.17064407, 0, -0.42932653, 0.14994127, 0, 0.44998044, 0, -0.5, -0.4500783, 0, -0.100039154, -0.5, 0.14994127, -0.5, -0.4500783, 0, -0.5)
 
@@ -714,6 +718,7 @@ points = PackedVector3Array(0.02496326, 0.379, 0.024990208, 0.02496326, 0.379, -
 script = ExtResource("1_r2rb5")
 isLesson = true
 levelId = 1
+taskList = Array[String](["túi bánh vàng", "túi bánh đỏ", "chai rượu", "chai nước", "trái dưa hấu", "ổ bánh mì"])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jopcc")
@@ -1296,17 +1301,50 @@ transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 6,
 [node name="CharacterEmployee" parent="Market/CashRegister/cash-register2" instance=ExtResource("14_c4e85")]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0.4000001, 0, -0.4000001)
 
+[node name="WallBarrier2" type="CollisionShape3D" parent="Market/CashRegister/cash-register2"]
+transform = Transform3D(-1.0927847e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.0927847e-08, -0.26240063, 0.27510285, -0.75053436)
+shape = SubResource("BoxShape3D_fsytt")
+
+[node name="WallBarrier4" type="CollisionShape3D" parent="Market/CashRegister/cash-register2"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.8097429, 0.27510285, 0.24946642)
+shape = SubResource("BoxShape3D_fsytt")
+
+[node name="fence-door-rotate2" parent="Market/CashRegister/cash-register2/WallBarrier4" instance=ExtResource("15_c4e85")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1, 0)
+
 [node name="cash-register3" parent="Market/CashRegister" instance=ExtResource("30_ou86s")]
 transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 6, 1, -24)
 
 [node name="CharacterEmployee" parent="Market/CashRegister/cash-register3" instance=ExtResource("14_c4e85")]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0.40000153, 0, -0.4000001)
 
+[node name="WallBarrier" type="CollisionShape3D" parent="Market/CashRegister/cash-register3"]
+transform = Transform3D(-1.0927847e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.0927847e-08, -0.24683523, 0.27510285, -0.7505344)
+shape = SubResource("BoxShape3D_fsytt")
+
+[node name="WallBarrier3" type="CollisionShape3D" parent="Market/CashRegister/cash-register3"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.8097429, 0.27510285, 0.2494663)
+shape = SubResource("BoxShape3D_fsytt")
+
+[node name="fence-door-rotate3" parent="Market/CashRegister/cash-register3/WallBarrier3" instance=ExtResource("15_c4e85")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1, 0)
+
 [node name="cash-register4" parent="Market/CashRegister" instance=ExtResource("30_ou86s")]
 transform = Transform3D(-1.7484555e-07, 0, 4, 0, 4, 0, -4, 0, -1.7484555e-07, 6, 1, -33)
 
 [node name="CharacterEmployee" parent="Market/CashRegister/cash-register4" instance=ExtResource("14_c4e85")]
 transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 0.39999866, 0, -0.4000001)
+
+[node name="WallBarrier2" type="CollisionShape3D" parent="Market/CashRegister/cash-register4"]
+transform = Transform3D(-1.0927847e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.0927847e-08, -0.2607937, 0.27510285, -0.75053436)
+shape = SubResource("BoxShape3D_fsytt")
+
+[node name="WallBarrier4" type="CollisionShape3D" parent="Market/CashRegister/cash-register4"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.8097429, 0.27510285, 0.2494663)
+shape = SubResource("BoxShape3D_fsytt")
+
+[node name="fence-door-rotate4" parent="Market/CashRegister/cash-register4/WallBarrier4" instance=ExtResource("15_c4e85")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1, 0)
 
 [node name="FreezerStanding" type="Node3D" parent="Market"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.233465, 0, 0)
@@ -1376,6 +1414,7 @@ shape = SubResource("ConvexPolygonShape3D_jewmw")
 [node name="Fence" type="Node3D" parent="Market"]
 
 [node name="Fences" type="Node3D" parent="Market/Fence"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [node name="fence2" parent="Market/Fence/Fences" instance=ExtResource("27_c4e85")]
 transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 2, 1, -13)
@@ -1477,7 +1516,7 @@ shape = SubResource("ConvexPolygonShape3D_tv2ia")
 transform = Transform3D(-2.5, 0, -3.774895e-07, 0, 2.5, 0, 3.774895e-07, 0, -2.5, 12, 1, -17)
 
 [node name="fence" parent="Market/Fence/Fences/fence14" index="0"]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.7683716e-07, 0, 1.6000004)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.536743e-07, 0, 2.0000005)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Market/Fence/Fences/fence14/fence" index="0"]
 

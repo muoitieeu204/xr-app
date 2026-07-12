@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btj2kujoy2tm7"
+path="res://.godot/imported/24_wow_xuat_sac_qua_ban_da_doan_hoan_toan_chinh_9fc8c84e-7d2a-44a0-a334-52ca60ead4bf.mp3-8e90f3a6bcfffe19bc81d1827743930a.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/24_wow_xuat_sac_qua_ban_da_doan_hoan_toan_chinh_9fc8c84e-7d2a-44a0-a334-52ca60ead4bf.mp3"
+dest_files=["res://.godot/imported/24_wow_xuat_sac_qua_ban_da_doan_hoan_toan_chinh_9fc8c84e-7d2a-44a0-a334-52ca60ead4bf.mp3-8e90f3a6bcfffe19bc81d1827743930a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

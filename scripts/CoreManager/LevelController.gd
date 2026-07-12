@@ -21,24 +21,29 @@ func _ready() -> void:
 	startTick = Time.get_ticks_msec()
 	ReplayManager.start_recording()
 
-func CorrectAnswer(point: int) -> void:
-	currentScore += point
+func CorrectAnswer(point: int, itemName: String) -> void:
+	if completedTask.has(itemName):
+		return
+	currentScore = min(100,currentScore + point)
 	var seccondsPassed = (Time.get_ticks_msec() - startTick) / 1000
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
-	ReplayManager.log_interaction("Correct Answer")
+	ReplayManager.log_interaction("Correct Answer" + itemName)
 	print("Score updated: ", currentScore)
+	markTaskComplete(itemName)
 
-func WrongAnswer(point: int) -> void:
+func WrongAnswer(point: int, itemName: String) -> void:
+	if completedTask.has(itemName):
+		return
 	currentScore = max(0, currentScore - point)
 	var seccondsPassed = (Time.get_ticks_msec() - startTick) / 1000
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
-	ReplayManager.log_interaction("Wrong Answer")
+	ReplayManager.log_interaction("Wrong Answer" + itemName)
 	print("Score updated: ", currentScore)
 
 func FinishLevel():
@@ -69,9 +74,10 @@ func FinishLevel():
 	get_tree().call_group("MenuUI", "show_result",currentScore)
 	get_tree().call_group("MenuViewport", "set_visible", true)
 
-func markTaskComplete(taskName: Array[String]) -> void:
+func markTaskComplete(taskName: String) -> void:
 	if taskList.has(taskName) and not completedTask.has(taskName):
-		completedTask.append(taskList)
+		completedTask.append(taskName)
 		get_tree().call_group("TaskUI", "update_tasks", taskList,completedTask)
 	if completedTask.size() == taskList.size():
 		print("All tasks completed!") 
+		currentScore = min(100, currentScore + 20)

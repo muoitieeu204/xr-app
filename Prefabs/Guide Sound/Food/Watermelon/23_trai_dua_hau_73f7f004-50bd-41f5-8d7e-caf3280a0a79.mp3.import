@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cev7r6iognh3n"
+path="res://.godot/imported/23_trai_dua_hau_73f7f004-50bd-41f5-8d7e-caf3280a0a79.mp3-76db67252682bb98c8ed04b59908deda.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Watermelon/23_trai_dua_hau_73f7f004-50bd-41f5-8d7e-caf3280a0a79.mp3"
+dest_files=["res://.godot/imported/23_trai_dua_hau_73f7f004-50bd-41f5-8d7e-caf3280a0a79.mp3-76db67252682bb98c8ed04b59908deda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

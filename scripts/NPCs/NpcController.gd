@@ -3,6 +3,9 @@ extends Node3D
 @export var npc_audio_player : AudioStreamPlayer3D
 @export var npc_animation_player : AnimationPlayer
 @export var question_1_audio : AudioStream
+@export var correct_audio: Array[AudioStream]
+@export var wrong_audio: Array[AudioStream]
+
 
 var current_item_id = ""
 var current_hint_audio = null
@@ -51,15 +54,21 @@ func _on_speech_result(is_correct: bool):
 		
 	if is_correct:
 		print("NPC: Correct! Great job!")
+		if npc_audio_player and correct_audio.size() > 0:
+			npc_audio_player.stream = correct_audio.pick_random()
+			npc_audio_player.play()
 		if npc_animation_player and npc_animation_player.has_animation("emote-yes"):
 			npc_animation_player.play("emote-yes")
-			_on_child_correct_answer()
+		_on_child_correct_answer()
 	else:
 		failed_attempts += 1
 		print("NPC: That's not right. Attempt ", failed_attempts)
+		if npc_audio_player and wrong_audio.size() > 0:
+			npc_audio_player.stream = wrong_audio.pick_random()
+			await npc_audio_player.finished
 		if npc_animation_player and npc_animation_player.has_animation("emote-no"):
 			npc_animation_player.play("emote-no")
-			_on_child_wrong_answer()
+		_on_child_wrong_answer()
 
 		if failed_attempts == 1:
 			ask_question_2()
@@ -67,7 +76,7 @@ func _on_speech_result(is_correct: bool):
 			print("NPC: Failed again. Let's move on or give the direct answer!")
 
 func _on_child_correct_answer():
-	get_tree().call_group("LevelController", "CorrectAnswer", 10)   
+	get_tree().call_group("LevelController", "CorrectAnswer", 10, current_item_id)   
 
 func _on_child_wrong_answer():
-	get_tree().call_group("LevelController", "WrongAnswer", 5)   
+	get_tree().call_group("LevelController", "WrongAnswer", 5, current_item_id)   

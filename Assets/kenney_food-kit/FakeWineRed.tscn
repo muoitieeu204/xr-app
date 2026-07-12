@@ -1,8 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://c6qg2wmqtgdnu"]
+[gd_scene load_steps=12 format=4 uid="uid://c6qg2wmqtgdnu"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_1cyv0"]
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="2_ei331"]
 [ext_resource type="PackedScene" uid="uid://djmg2rotjwyxj" path="res://Assets/kenney_food-kit/WineRedPickable.tscn" id="2_x7kef"]
+[ext_resource type="AudioStream" uid="uid://b5sq30442hftp" path="res://Prefabs/Guide Sound/Food/glass-wine/15_chai_ruou_93223034-fbba-4689-8649-208ec3d6e854.mp3" id="3_vr2x2"]
+[ext_resource type="AudioStream" uid="uid://d256tvopbvq8t" path="res://Prefabs/Guide Sound/Food/glass-wine/16_thu_nghi_lai_xem_nha_vat_lam_bang_thuy_tinh_ben_cbbe2fd5-66b1-4142-81c6-219896533cfe.mp3" id="4_a3bvm"]
+[ext_resource type="AudioStream" uid="uid://dsqcsq0svw57h" path="res://Prefabs/Guide Sound/Food/glass-wine/17_toi_dung_de_dung_cac_loai_do_uong_co_con_co_co_4b532fd9-fb55-46cf-b3ac-26143b799253.mp3" id="5_ov5cr"]
+[ext_resource type="AudioStream" uid="uid://dnlqh6qyxwf37" path="res://Prefabs/Guide Sound/Food/glass-wine/18_mot_mon_do_uong_thuong_xuat_hien_trong_cac_bua_83521849-cb64-4943-a9f0-0d05ed89a6cf.mp3" id="6_widif"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ow56y"]
 resource_name = "colormap"
@@ -53,7 +57,9 @@ collision_layer = 5
 collision_mask = 196613
 script = ExtResource("1_1cyv0")
 realItem = ExtResource("2_x7kef")
-itemId = "chai rượu vang"
+itemName = "chai rượu"
+itemNameSound = ExtResource("3_vr2x2")
+hintAudios = Array[AudioStream]([ExtResource("4_a3bvm"), ExtResource("5_ov5cr"), ExtResource("6_widif")])
 
 [node name="wine-red" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

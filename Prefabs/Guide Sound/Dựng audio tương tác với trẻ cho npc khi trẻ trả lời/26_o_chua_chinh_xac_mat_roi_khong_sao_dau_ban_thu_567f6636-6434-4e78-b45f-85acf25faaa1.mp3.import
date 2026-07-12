@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1yq8a4hroo8l"
+path="res://.godot/imported/26_o_chua_chinh_xac_mat_roi_khong_sao_dau_ban_thu_567f6636-6434-4e78-b45f-85acf25faaa1.mp3-ebdf2e8d1ec28e10796f9b93c93c024c.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/26_o_chua_chinh_xac_mat_roi_khong_sao_dau_ban_thu_567f6636-6434-4e78-b45f-85acf25faaa1.mp3"
+dest_files=["res://.godot/imported/26_o_chua_chinh_xac_mat_roi_khong_sao_dau_ban_thu_567f6636-6434-4e78-b45f-85acf25faaa1.mp3-ebdf2e8d1ec28e10796f9b93c93c024c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

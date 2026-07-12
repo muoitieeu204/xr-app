@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d256tvopbvq8t"
+path="res://.godot/imported/16_thu_nghi_lai_xem_nha_vat_lam_bang_thuy_tinh_ben_cbbe2fd5-66b1-4142-81c6-219896533cfe.mp3-e800fa18c9419f9ad1a4f7640eed1d5e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/glass-wine/16_thu_nghi_lai_xem_nha_vat_lam_bang_thuy_tinh_ben_cbbe2fd5-66b1-4142-81c6-219896533cfe.mp3"
+dest_files=["res://.godot/imported/16_thu_nghi_lai_xem_nha_vat_lam_bang_thuy_tinh_ben_cbbe2fd5-66b1-4142-81c6-219896533cfe.mp3-e800fa18c9419f9ad1a4f7640eed1d5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
