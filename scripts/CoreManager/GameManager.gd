@@ -26,10 +26,12 @@ func stop_checkout_test():
 
 func _on_speech_recognized(text:String):
 	if currentHeldItemId != "":
-		if text.to_lower().contains(currentHeldItemId.to_lower()):
+		var cleanText = text.to_lower().replace(",","").replace(".","").replace("?","").replace("!","")
+		var cleanTarget = currentHeldItemId.to_lower()
+		if cleanText.contains(cleanTarget):
 			print("Correct! Word matched: ", currentHeldItemId)
 			validScannedItem.append(currentHeldItemId)
 			emit_signal("speech_result", true)
 		else:
-			print("Incorrect! You said: ", text)
+			print("Incorrect! You said: ", text, " | We cleaned it it to: ", cleanText)
 			emit_signal("speech_result", false) 

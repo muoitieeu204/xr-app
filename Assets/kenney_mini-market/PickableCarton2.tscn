@@ -121,6 +121,7 @@ skeleton = NodePath("")
 
 [node name="ItemLabel" type="Label3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.039868414, 0)
+font_size = 15
 
 [node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("3_dsh84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03709027, 0.09758732, 0)

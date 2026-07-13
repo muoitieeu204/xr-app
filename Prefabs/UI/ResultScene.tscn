@@ -1,4 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ifitwicr1j4h"]
+[gd_scene load_steps=15 format=3 uid="uid://ifitwicr1j4h"]
+
+[ext_resource type="Texture2D" uid="uid://daebid8iytn0y" path="res://Assets/kenney_input-prompts_1.5/Meta Quest/Default/quest_button_menu_outline.png" id="1_7wyvq"]
+[ext_resource type="Script" uid="uid://bvhkeujc6gmfb" path="res://scripts/UI Script/PromptFlicker.gd" id="1_42nhs"]
 
 [sub_resource type="Gradient" id="Gradient_qq24o"]
 colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
@@ -176,10 +179,11 @@ custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
 [node name="ScoreLabel" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-size_flags_horizontal = 4
 label_settings = SubResource("LabelSettings_score")
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Spacing2" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
 custom_minimum_size = Vector2(0, 8)
@@ -192,3 +196,26 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
 text = "🔄 Chơi Lại"
+
+[node name="Spacing3" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="PromptHBox" type="HBoxContainer" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+script = ExtResource("1_42nhs")
+
+[node name="MenuIcon" type="TextureRect" parent="CenterContainer/ResultBox/VBoxContainer/PromptHBox"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("1_7wyvq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel2" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/PromptHBox"]
+layout_mode = 2
+text = "Bấm nút menu để thoát màn hình"
+label_settings = SubResource("LabelSettings_4jofw")

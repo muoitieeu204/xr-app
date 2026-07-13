@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=4 uid="uid://ciondyec656d3"]
+[gd_scene load_steps=105 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
 [ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/LevelController.gd" id="1_r2rb5"]
@@ -25,7 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://50wk5a1g78ll" path="res://Assets/kenney_mini-market/FakeShelfEnd.tscn" id="26_ieq8a"]
 [ext_resource type="PackedScene" uid="uid://cgxfwuk3xib2n" path="res://Assets/kenney_mini-market/Models/GLB format/fence.glb" id="27_c4e85"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="27_r2rb5"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="27_ydvpe"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="28_c4e85"]
+[ext_resource type="PackedScene" uid="uid://dqpsyyclcev87" path="res://Prefabs/Boards/SupermarketLevelGuide.tscn" id="28_ou86s"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="28_r2rb5"]
 [ext_resource type="PackedScene" uid="uid://b5gng5pbbud36" path="res://Assets/kenney_mini-market/CashRegister.tscn" id="30_ou86s"]
 [ext_resource type="PackedScene" uid="uid://dnhxxtqoklwv3" path="res://Assets/kenney_mini-market/Models/GLB format/freezers-standing.glb" id="36_deglg"]
@@ -1921,7 +1923,7 @@ transform = Transform3D(-5, 0, 7.54979e-07, 0, 5, 0, -7.54979e-07, 0, -5, 5, 1, 
 [node name="DisplayBread4" parent="Market/InteractableShelf/DisplayBread" instance=ExtResource("22_h8g51")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4000003, 0, 3.5762787e-07)
 
-[node name="DisplayBread" parent="Market/InteractableShelf/DisplayBread" instance=ExtResource("22_fsytt")]
+[node name="DisplayWatermelon" parent="Market/InteractableShelf/DisplayBread" instance=ExtResource("22_fsytt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79999995, 0, 1.1920929e-07)
 
 [node name="DisplayTomato" parent="Market/InteractableShelf/DisplayBread" instance=ExtResource("23_ydvpe")]
@@ -1967,6 +1969,14 @@ transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474
 
 [node name="shelf-end4" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_c7od5")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 7.5890923, 1, -29)
+
+[node name="Viewport2Din3D" parent="Market" instance=ExtResource("27_ydvpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 3, -46.357876)
+scene = ExtResource("28_ou86s")
+viewport_size = Vector2(1152, 648)
+transparent = 0
+unshaded = true
+scene_properties_keys = PackedStringArray("SlideGuideController.gd")
 
 [node name="Spawner" parent="." instance=ExtResource("27_r2rb5")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 32.63623, 2.4271822, -41.87623)

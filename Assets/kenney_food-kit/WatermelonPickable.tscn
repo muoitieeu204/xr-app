@@ -11,7 +11,7 @@
 [ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="9_le18x"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_namcc"]
-radius = 0.13368724
+radius = 0.116655454
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3oack"]
 resource_name = "colormap"
@@ -291,11 +291,11 @@ linear_damp = 1.0
 angular_damp = 2.0
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11982554, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.15696216, 0)
 shape = SubResource("SphereShape3D_namcc")
 
 [node name="watermelon" type="Node3D" parent="." index="1"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="slice" type="MeshInstance3D" parent="watermelon" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023579106, 1.6029653e-31, 0.1374291)
@@ -394,9 +394,15 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("4_2e7nl")
 
 [node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("5_bmgis")]
-transform = Transform3D(0.9954911, 0.09485549, 0, -0.09485549, 0.9954911, 0, 0, 0, 1, -0.058608614, 0.16090238, -0.048253417)
+transform = Transform3D(0.9690157, -0.24699901, 0, 0.24699901, 0.9690157, 0, 0, 0, 1, -0.1135677, 0.16090238, -0.048253417)
+visible = true
 hand_pose = SubResource("Resource_el1j0")
 
 [node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("8_a1s63")]
-transform = Transform3D(0.99998206, 0.005986437, 0, -0.005986437, 0.99998206, 0, 0, 0, 1, 0.06732459, 0.16483246, -0.048253417)
+transform = Transform3D(0.9688431, 0.24767548, 0, -0.24767548, 0.9688431, 0, 0, 0, 1, 0.119635984, 0.16483246, -0.048253417)
+visible = true
 hand_pose = SubResource("Resource_m2oud")
+
+[node name="ItemLabel" type="Label3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.25881907, 0.9659258, 0, -0.9659258, 0.25881907, 0, -0.015172765, 0.13831642)
+font_size = 15

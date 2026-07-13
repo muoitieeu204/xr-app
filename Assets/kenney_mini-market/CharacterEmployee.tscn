@@ -1,8 +1,14 @@
-[gd_scene load_steps=42 format=4 uid="uid://b3xralthu5m31"]
+[gd_scene load_steps=48 format=4 uid="uid://b3xralthu5m31"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_2ttuh"]
 [ext_resource type="Script" uid="uid://nt6onlsgwd67" path="res://scripts/NPCs/NpcController.gd" id="1_3xq87"]
 [ext_resource type="AudioStream" uid="uid://bux71gkg4bvxk" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/ban_oi_day_la_cai_gi_vay_82ce6a09-6c73-4efb-b64e-e681949f2bb4.mp3" id="2_4dnc7"]
+[ext_resource type="AudioStream" uid="uid://bn3c2a3la7x2w" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/dung_roi_ban_that_thong_minh_7d73fffc-6ddf-4ae2-b29d-52ce6b052864.mp3" id="3_qhcsa"]
+[ext_resource type="AudioStream" uid="uid://dnk22dhmt8e15" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/25_dung_roi_ne_ban_gioi_qua_di_mat_cau_nay_khong_83fbf650-d195-4c36-a689-8044e02916c4.mp3" id="4_sps5u"]
+[ext_resource type="AudioStream" uid="uid://btj2kujoy2tm7" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/24_wow_xuat_sac_qua_ban_da_doan_hoan_toan_chinh_9fc8c84e-7d2a-44a0-a334-52ca60ead4bf.mp3" id="5_rfu36"]
+[ext_resource type="AudioStream" uid="uid://b1yq8a4hroo8l" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/26_o_chua_chinh_xac_mat_roi_khong_sao_dau_ban_thu_567f6636-6434-4e78-b45f-85acf25faaa1.mp3" id="6_2sovy"]
+[ext_resource type="AudioStream" uid="uid://bp0xht85yyftu" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/27_tiec_qua_cau_tra_loi_nay_chua_dung_roi_co_gang_33762bcd-5672-4204-bc0c-9fe50c7ead58.mp3" id="7_rouri"]
+[ext_resource type="AudioStream" uid="uid://btqo58r0aar1x" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/chua_dung_roi_ban_nghi_lai_xem_nao_8d1261c0-b266-428f-9b42-48bdf887c939.mp3" id="8_6ket5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ynqf"]
 resource_name = "colormap"
@@ -2744,6 +2750,8 @@ script = ExtResource("1_3xq87")
 npc_audio_player = NodePath("AudioStreamPlayer3D")
 npc_animation_player = NodePath("character-employee2/AnimationPlayer")
 question_1_audio = ExtResource("2_4dnc7")
+correct_audio = Array[AudioStream]([ExtResource("3_qhcsa"), ExtResource("4_sps5u"), ExtResource("5_rfu36")])
+wrong_audio = Array[AudioStream]([ExtResource("6_2sovy"), ExtResource("7_rouri"), ExtResource("8_6ket5")])
 
 [node name="character-employee2" type="Node3D" parent="."]
 

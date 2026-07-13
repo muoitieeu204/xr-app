@@ -98,3 +98,7 @@ hand_pose = SubResource("Resource_b0dn1")
 [node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("7_j527k")]
 transform = Transform3D(0.9761939, 0, 0.21689965, 0, 1, 0, -0.21689965, 0, 0.9761939, 0.0069277436, 0.05656638, -0.058265496)
 hand_pose = SubResource("Resource_wbmgh")
+
+[node name="ItemLabel" type="Label3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.25881907, 0.9659258, 0, -0.9659258, 0.25881907, 0, 0, 0.10964)
+font_size = 15

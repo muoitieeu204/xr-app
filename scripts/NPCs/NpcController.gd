@@ -65,6 +65,7 @@ func _on_speech_result(is_correct: bool):
 		print("NPC: That's not right. Attempt ", failed_attempts)
 		if npc_audio_player and wrong_audio.size() > 0:
 			npc_audio_player.stream = wrong_audio.pick_random()
+			npc_audio_player.play()
 			await npc_audio_player.finished
 		if npc_animation_player and npc_animation_player.has_animation("emote-no"):
 			npc_animation_player.play("emote-no")

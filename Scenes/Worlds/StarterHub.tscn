@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bt0ier0gd1sh5"]
+[gd_scene load_steps=14 format=3 uid="uid://bt0ier0gd1sh5"]
 
 [ext_resource type="Script" uid="uid://cijjlg2j5o6ye" path="res://scripts/InitializeScript.gd" id="1_1o35l"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="2_1o35l"]
+[ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_140dg"]
 [ext_resource type="PackedScene" uid="uid://b7om36ix41f1d" path="res://Prefabs/Shader/water_shader.tscn" id="2_bipgs"]
 [ext_resource type="MeshLibrary" uid="uid://cfvea0hls1qt1" path="res://Assets/platform_mesh_library_v2.tres" id="3_ty580"]
 [ext_resource type="MeshLibrary" uid="uid://cu44ow40wsm28" path="res://Assets/fantatsy_town_mesh_library.tres" id="4_7aait"]
@@ -9,15 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="6_bipgs"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="7_ty580"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6r1au"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_l1tok"]
+panorama = ExtResource("2_140dg")
+energy_multiplier = 1.1
 
 [sub_resource type="Sky" id="Sky_tlohy"]
-sky_material = SubResource("ProceduralSkyMaterial_6r1au")
+sky_material = SubResource("PanoramaSkyMaterial_l1tok")
 
 [sub_resource type="Environment" id="Environment_ot8gx"]
 background_mode = 2
+background_energy_multiplier = 1.3
 sky = SubResource("Sky_tlohy")
 tonemap_mode = 2
 glow_enabled = true
@@ -29,8 +31,7 @@ points = PackedVector3Array(253.96826, 3.9682531, 253.96826, -253.96814, -3.9682
 script = ExtResource("1_1o35l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.549368, 0.19165029, -0.81330496, 0.04541782, 0.9787513, 0.19995803, 0.8343453, 0.072912015, -0.546399, 0.28186226, 5.299016, -0.56202793)
-shadow_enabled = true
+transform = Transform3D(0.6637287, 0.12003034, -0.7382797, 0.04541781, 0.9787513, 0.19995803, 0.74659324, -0.16624895, 0.6441738, 0.28186226, 5.299016, -0.56202793)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ot8gx")

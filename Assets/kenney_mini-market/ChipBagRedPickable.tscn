@@ -106,4 +106,6 @@ hand_pose = SubResource("Resource_ah1ox")
 script = ExtResource("9_krecr")
 
 [node name="ItemLabel" type="Label3D" parent="." index="6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.039868414, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.039868414, 0.20486963)
+visible = false
+font_size = 15
