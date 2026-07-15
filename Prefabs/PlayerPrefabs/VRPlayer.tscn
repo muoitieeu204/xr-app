@@ -166,6 +166,8 @@ grab_distance = 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0.05, -0.1)
 show_laser = 2
 laser_length = 1
+collision_mask = 5242884
+collide_with_areas = true
 
 [node name="MovementSprint" parent="LeftController" instance=ExtResource("7_ytki8")]
 sprint_type = 1
@@ -226,6 +228,8 @@ grab_distance = 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.05, -0.1)
 show_laser = 2
 laser_length = 1
+collision_mask = 5242884
+collide_with_areas = true
 
 [node name="PlayerBody" parent="." instance=ExtResource("4_qxkev")]
 editor_description = "

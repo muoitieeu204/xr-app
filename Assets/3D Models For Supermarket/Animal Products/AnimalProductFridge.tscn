@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bia6p3cptq7d6"]
+
+[ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="1_1dtum"]
+[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/FakeChicken.tscn" id="10_skd0j"]
+
+[node name="Fridge" instance=ExtResource("1_1dtum")]
+
+[node name="Chicken" parent="." index="1" instance=ExtResource("10_skd0j")]
+transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, -100, -9.884696, 180.61537)
+
+[node name="Chicken2" parent="." index="2" instance=ExtResource("10_skd0j")]
+transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, -52.607315, -9.884696, 180.61537)
+
+[node name="Chicken3" parent="." index="3" instance=ExtResource("10_skd0j")]
+transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, 2.2670264, -9.884696, 180.61537)
+
+[node name="Chicken4" parent="." index="4" instance=ExtResource("10_skd0j")]
+transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, 55.98423, -9.884696, 180.61537)
+
+[node name="Chicken5" parent="." index="5" instance=ExtResource("10_skd0j")]
+transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, 104.403046, -9.884696, 180.61537)
