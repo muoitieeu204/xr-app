@@ -1,28 +1,19 @@
-[gd_scene load_steps=105 format=4 uid="uid://ciondyec656d3"]
+[gd_scene load_steps=88 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
 [ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/LevelController.gd" id="1_r2rb5"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_acpa7"]
 [ext_resource type="PackedScene" uid="uid://canh6gljuhhoc" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_027.gltf" id="5_r2rb5"]
-[ext_resource type="PackedScene" uid="uid://cngiglc3db05c" path="res://Assets/kenney_mini-market/FakeShelfBag.tscn" id="12_h8g51"]
 [ext_resource type="PackedScene" uid="uid://b3xralthu5m31" path="res://Assets/kenney_mini-market/CharacterEmployee.tscn" id="14_c4e85"]
 [ext_resource type="PackedScene" uid="uid://vscosdri0lhs" path="res://Assets/kenney_mini-market/Models/GLB format/fence-door-rotate.glb" id="15_c4e85"]
-[ext_resource type="PackedScene" uid="uid://i134r505gwsa" path="res://Assets/kenney_mini-market/FakeShelfBox.tscn" id="16_h8g51"]
 [ext_resource type="PackedScene" uid="uid://dyounjrkpjjgc" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle-convertible.glb" id="20_u0m48"]
 [ext_resource type="Texture2D" uid="uid://ni4880cfgnhe" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="21_d1idn"]
 [ext_resource type="MeshLibrary" uid="uid://bu5pxtjly78gp" path="res://Assets/kenney_3d-road-tiles/city_road_kit_mesh_library_fixed.tres" id="21_ydvpe"]
 [ext_resource type="PackedScene" uid="uid://b5yvsrj3u37yq" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle.glb" id="22_acpa7"]
-[ext_resource type="PackedScene" uid="uid://b67kn2fqwbkvy" path="res://Assets/kenney_mini-market/DisplayWatermelon.tscn" id="22_fsytt"]
-[ext_resource type="PackedScene" uid="uid://bxvk8ja6jom74" path="res://Assets/kenney_mini-market/DisplayBread.tscn" id="22_h8g51"]
 [ext_resource type="PackedScene" uid="uid://brs5wswbahfai" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_034.gltf" id="22_ou86s"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="23_d1idn"]
-[ext_resource type="PackedScene" uid="uid://ddmbentum71b1" path="res://Assets/kenney_mini-market/Models/GLB format/freezer.glb" id="23_ieq8a"]
-[ext_resource type="PackedScene" uid="uid://daysnqe2mrqcs" path="res://Assets/kenney_mini-market/DisplayTomato.tscn" id="23_ydvpe"]
 [ext_resource type="PackedScene" uid="uid://crtvxpuyg328w" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall.glb" id="24_acpa7"]
-[ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="24_c7od5"]
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="25_h8g51"]
-[ext_resource type="PackedScene" uid="uid://bvg614f3o0mp6" path="res://Assets/kenney_mini-market/ShelfEnd2.tscn" id="26_c7od5"]
-[ext_resource type="PackedScene" uid="uid://50wk5a1g78ll" path="res://Assets/kenney_mini-market/FakeShelfEnd.tscn" id="26_ieq8a"]
 [ext_resource type="PackedScene" uid="uid://cgxfwuk3xib2n" path="res://Assets/kenney_mini-market/Models/GLB format/fence.glb" id="27_c4e85"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="27_r2rb5"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="27_ydvpe"]
@@ -30,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://dqpsyyclcev87" path="res://Prefabs/Boards/SupermarketLevelGuide.tscn" id="28_ou86s"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="28_r2rb5"]
 [ext_resource type="PackedScene" uid="uid://b5gng5pbbud36" path="res://Assets/kenney_mini-market/CashRegister.tscn" id="30_ou86s"]
-[ext_resource type="PackedScene" uid="uid://dnhxxtqoklwv3" path="res://Assets/kenney_mini-market/Models/GLB format/freezers-standing.glb" id="36_deglg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_u0m48"]
 panorama = ExtResource("2_acpa7")
@@ -660,58 +650,6 @@ points = PackedVector3Array(-0.65099686, 0, -0.44768897, -0.69450545, 0, -0.4042
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fsytt"]
 size = Vector3(3.416504, 2.2329102, 1)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sfy4u"]
-points = PackedVector3Array(0.44998044, 0.9, -0.100039154, 0.42922866, 0.8499608, 0, 0.44998044, 0.82925797, 0, 0.5, 0.8499608, -0.100039154, 0.44998044, 0.9, -0.5, -0.4500783, 0.9, -0.100039154, -0.42932653, 0.8499608, 0, 0.44998044, 0.17064407, 0, 0.5, 0.8499608, -0.5, 0.5, 0.14994127, -0.100039154, -0.4500783, 0.9, -0.5, -0.5, 0.8499608, -0.100039154, -0.4500783, 0.82925797, 0, 0.42922866, 0.14994127, 0, 0.44998044, 0, -0.100039154, 0.5, 0.14994127, -0.5, -0.5, 0.8499608, -0.5, -0.5, 0.14994127, -0.100039154, -0.4500783, 0.17064407, 0, -0.42932653, 0.14994127, 0, 0.44998044, 0, -0.5, -0.4500783, 0, -0.100039154, -0.5, 0.14994127, -0.5, -0.4500783, 0, -0.5)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pru0s"]
-points = PackedVector3Array(0.44998044, 0.9, -0.100039154, 0.42922866, 0.8499608, 0, 0.44998044, 0.82925797, 0, 0.5, 0.8499608, -0.100039154, 0.44998044, 0.9, -0.5, -0.4500783, 0.9, -0.100039154, -0.42932653, 0.8499608, 0, 0.44998044, 0.17064407, 0, 0.5, 0.8499608, -0.5, 0.5, 0.14994127, -0.100039154, -0.4500783, 0.9, -0.5, -0.5, 0.8499608, -0.100039154, -0.4500783, 0.82925797, 0, 0.42922866, 0.14994127, 0, 0.44998044, 0, -0.100039154, 0.5, 0.14994127, -0.5, -0.5, 0.8499608, -0.5, -0.5, 0.14994127, -0.100039154, -0.4500783, 0.17064407, 0, -0.42932653, 0.14994127, 0, 0.44998044, 0, -0.5, -0.4500783, 0, -0.100039154, -0.5, 0.14994127, -0.5, -0.4500783, 0, -0.5)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jbjgt"]
-points = PackedVector3Array(0.44998044, 0.9, -0.100039154, 0.42922866, 0.8499608, 0, 0.44998044, 0.82925797, 0, 0.5, 0.8499608, -0.100039154, 0.44998044, 0.9, -0.5, -0.4500783, 0.9, -0.100039154, -0.42932653, 0.8499608, 0, 0.44998044, 0.17064407, 0, 0.5, 0.8499608, -0.5, 0.5, 0.14994127, -0.100039154, -0.4500783, 0.9, -0.5, -0.5, 0.8499608, -0.100039154, -0.4500783, 0.82925797, 0, 0.42922866, 0.14994127, 0, 0.44998044, 0, -0.100039154, 0.5, 0.14994127, -0.5, -0.5, 0.8499608, -0.5, -0.5, 0.14994127, -0.100039154, -0.4500783, 0.17064407, 0, -0.42932653, 0.14994127, 0, 0.44998044, 0, -0.5, -0.4500783, 0, -0.100039154, -0.5, 0.14994127, -0.5, -0.4500783, 0, -0.5)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jewmw"]
-points = PackedVector3Array(-0.35003915, 0.09997064, -0.3, -0.3293657, 0, -0.25001958, -0.35003915, 0, -0.22934613, -0.4, 0.09997064, -0.25001958, -0.35003915, 0.29998043, -0.3, 0.34996083, 0.09997064, -0.3, 0.32920906, 0, -0.25001958, -0.35003915, 0, 0.22922868, -0.4, 0.29998043, -0.25001958, -0.4, 0.09997064, 0.24996084, -0.35003915, 0.34996575, -0.22934613, -0.3293657, 0.34996575, -0.25001958, 0.34996083, 0.29998043, -0.3, 0.4, 0.09997064, -0.25001958, 0.34996083, 0, -0.22934613, -0.3293657, 0, 0.24996084, -0.4, 0.29998043, 0.24996084, -0.35003915, 0.09997064, 0.3, -0.35003915, 0.34996575, 0.22922868, 0.32920906, 0.34996575, -0.25001958, 0.34996083, 0.34996575, -0.22934613, 0.4, 0.29998043, -0.25001958, 0.4, 0.09997064, 0.24996084, 0.34996083, 0, 0.22922868, 0.32920906, 0, 0.24996084, -0.35003915, 0.29998043, 0.3, -0.3293657, 0.34996575, 0.24996084, 0.34996083, 0.09997064, 0.3, 0.34996083, 0.34996575, 0.22922868, 0.4, 0.29998043, 0.24996084, 0.34996083, 0.29998043, 0.3, 0.32920906, 0.34996575, 0.24996084)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ro28"]
-resource_name = "colormap"
-cull_mode = 2
-albedo_texture = ExtResource("24_c7od5")
-texture_filter = 2
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_sifgk"]
-_surfaces = [{
-"aabb": AABB(-0.4, 0, -0.3, 0.8, 0.35, 0.6),
-"format": 34896613377,
-"index_count": 540,
-"index_data": PackedByteArray("AAACADcANwACADgAOQA4AAIAAgAAADkAOAA6ADcAOgA4ADkAOgAEADcANwA7AAAAOwA3AAQABgAAADsACAA5AAAACAAAAAYAOQA8ADoACAA8ADkAAwA6ADwAOgADAAQABAAFADsAOwAFAD0AOwA9AAYAPgAFAAQABQA+AD0AAwA/AAQABAA/AD4AAwBAAD8AQQA+AD8APwBAAEEAQAADAAEAAQBBAEAAPAABAAMACQABADwACQBBAAEACAAJADwAPgBBAAcAQQAJAAcAPgAHAD0ADAAJAAgACQBCAAcAQgAJAAwABwBCAEMADABDAEIAQwBEAAcABwBEAAoACgBEAEMACgA9AAcACgBDAAwAPQAKAEUARQAKAAwARQAGAD0ACABGAAwARQAMAEYARwAIAAYARgAIAEcASAAGAEUABgBIAEcASQBFAEYARQBJAEgARgALAEkASABJAAsARwALAEYACwBHAEgASgAfAEsASwAeAEoATABLAB8AHgBLAEwAHwBNAEwAIQBNAB8ATABNACEAHwBKACEAIQAdAEwATAAdAB4ASgBOACEATgBKAB4AHQAhACAATgAgACEAIAAWAB0ATgBPACAAFgAgAE8ATgBQAE8AHgBRAE4AUABOAFEAHQAVAB4AFQBRAB4ATwBQABwAUQAcAFAAHABSAE8ATwBSABYAFgBSABwAFgAcAFEAFQAbAFEAGwAaAFEAFgBRABoAGgAbABMAEwAbABUAFgAaABcAEwAZABoAFwAaABkAFQAUABMAEAAUABUAEwAUABAAFQARABAAEQAVAB0AHQAWABEADgAQABEAFgAPABEAEQAPAA4AFgAXAA8ADgANABAAEAANABMADQAOAA8AUwAPABcADwBTAA0AFwBUAFMAEgANAFMADQASABMAUwBUABIAVAAXABgAGAASAFQAEgAYABMAGQAYABcAGAAZABMAVQA0AFYAVgAzAFUAVwBWADQAMwBWAFcANABYAFcANgBYADQAVwBYADYANABVADYANgAyAFcAVwAyADMAVQBZADYAWQBVADMAMgA2ADUAWQA1ADYANQArADIAWQBaADUAKwA1AFoAWQBbAFoAMwBcAFkAWwBZAFwAMgAqADMAKgBcADMAWgBbADEAXAAxAFsAMQBdAFoAWgBdACsAKwBdADEAKwAxAFwAKgAwAFwAMAAvAFwAKwBcAC8ALwAwACgAKAAwACoAKwAvACwAKAAuAC8ALAAvAC4AKgApACgAJQApACoAKAApACUAKgAmACUAJgAqADIAMgArACYAIwAlACYAKwAkACYAJgAkACMAKwAsACQAIwAiACUAJQAiACgAIgAjACQAXgAkACwAJABeACIALABfAF4AJwAiAF4AIgAnACgAXgBfACcAXwAsAC0ALQAnAF8AJwAtACgALgAtACwALQAuACgA"),
-"lods": [0.7528151, PackedByteArray("AAABAAIAAwACAAEAAgADAAQAAAACAAQABAADAAEABAAFAAAAAQAFAAQAAAAFAAYABQABAAcABQAHAAYACAABAAAACAAAAAYAAQAJAAcACAAJAAEACgAGAAcACwAIAAYABgAKAAsACAALAAwACwAKAAwADAAJAAgADAAKAAcABwAJAAwADQAOAA8ADgANABAAEQAPAA4ADgAQABEAEgANAA8AEAANABMADQASABMAEwAUABAAEAAUABUAFQARABAAFQAUABMAFgAPABEADwAXABIAFgAXAA8AGAASABcAEgAYABMAGQAYABcAGAAZABMAFwAaABkAEwAZABoAFgAaABcAGgAbABMAEwAbABUAGwAaABwAFgAcABoAFQAbABwAHQAWABEAEQAVAB0AFQAcAB4AHQAVAB4AHgAcAB8AHQAeAB8AHAAWACAAIAAWAB0AIAAfABwAHwAhAB0AHQAhACAAHwAgACEAIgAjACQAIwAiACUAJgAkACMAIwAlACYAJwAiACQAJQAiACgAIgAnACgAKAApACUAJQApACoAKgAmACUAKgApACgAKwAkACYAJAAsACcAKwAsACQALQAnACwAJwAtACgALgAtACwALQAuACgALAAvAC4AKAAuAC8AKwAvACwALwAwACgAKAAwACoAMAAvADEAKwAxAC8AKgAwADEAMgArACYAJgAqADIAKgAxADMAMgAqADMAMwAxADQAMgAzADQAMQArADUANQArADIANQA0ADEANAA2ADIAMgA2ADUANAA1ADYA")],
-"name": "colormap",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 96,
-"vertex_data": PackedByteArray("/+8kSdPhAACgFiRJVRUAAP/vAADT4QAAoBYAAFUVAACgFgAAqeoAAKAWJEmp6gAA/+8kSf//AAAAACRJqeoAAP/vJEkAAAAA/w8kSQAAAAD/D2zb//8AAP//bNtVFQAA/w9s2wAAAAD/p7Xt/58AAP+Xte3/nwAA/5f+//+fAAD/l7XtVNUAAP+X//9U1QAA/6e17f9fAAD/37XtqioAAP/fte1U1QAA/9///1TVAAD/h/7/Kx4AAP+X/v//XwAA/5e17f9fAAD/l7XtqioAAP+X/v+qKgAA/9/+/6oqAABe6f7/VRUAAP+H///T4QAA/+///9PhAABe6WzbqeoAAP+HbNsrHgAA/4ds29PhAAD/L7Xt/58AAP8fte3/nwAA/x/+//+fAAD/H7XtVNUAAP8f//9U1QAA/y+17f9fAAD/Z7XtqioAAP9nte1U1QAA/2f//1TVAAD/D/7/Kx4AAP8f/v//XwAA/x+17f9fAAD/H7XtqioAAP8f/v+qKgAA/2f+/6oqAABecf7/VRUAAP8P///T4QAA/3f//9PhAABecWzbqeoAAP8PbNsrHgAA/w9s29PhAABe6QAAqeoAAP/vAAArHgAA/+8kSSseAABe6QAAVRUAAF7pJEmp6gAAXukkSVUVAAD/DyRJ//8AAP8PJEnT4QAA/w8AANPhAAD/DwAAKx4AAP8PJEkrHgAAAAAkSVUVAAAAAGzbVRUAAAAAbNup6gAA/+9s2///AAD/72zbAAAAAP//JElVFQAA//8kSanqAAD//2zbqeoAAP/vbNvT4QAAXun//6nqAACgjv//qeoAAKCObNup6gAA/+9s2yseAACgjmzbVRUAAF7pbNtVFQAA/+/+/yseAACgjv7/VRUAAP+n2vb/nwAA/6fa9v9fAAD/d2zb0+EAAF5x//+p6gAAoBb//6nqAACgFmzbqeoAAP93bNsrHgAAoBZs21UVAABecWzbVRUAAP93/v8rHgAAoBb+/1UVAAD/L9r2/58AAP8v2vb/XwAA")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_sbihd"]
-resource_name = "freezer_freezer"
-_surfaces = [{
-"aabb": AABB(-0.4, 0, -0.3, 0.8, 0.35, 0.6),
-"attribute_data": PackedByteArray("/zeH6P83h+j/N5j5/zeY+f83mPn/N4fo/zeY+f83mPn/N5j5/zdlxv83Zcb/N2XG/zeY+f83Zcb/N2XG/zeY+f83mPn/N2XG/zdlxv83Zcb/N2XG/zdlxv83Zcb/N2XG/zdlxv83Zcb/d63n/3et5/93ref/d1HY/3et5/93ref/d1HY/3eEyP93hMv/d3n0/3dlxv93eff/d4TL/3d59P93eff/d1HY/3dR2P93Udj/d63n/3d59P93efT/d63n/3eEy/93Udj/d1HY/3eEy/93eff/d2XG/3eY+f93eff/d4TI/3d59/93hMj/d3n0/3d59P93hMv/d4TL/3eEy/93hMv/d4TL/3eEy/93efT/d3n0/3d59P93efT/d5j5/3eEyP93eff/d63n/3et5/93ref/d1HY/3et5/93ref/d1HY/3eEyP93hMv/d3n0/3dlxv93eff/d4TL/3d59P93eff/d1HY/3dR2P93Udj/d63n/3d59P93efT/d63n/3eEy/93Udj/d1HY/3eEy/93eff/d2XG/3eY+f93eff/d4TI/3d59/93hMj/d3n0/3d59P93hMv/d4TL/3eY+f93hMj/d3n3/3d59P93efT/d3n0/3d59P93hMv/d4TL/3eEy/93hMv/l4TL/5d59P+XefT/l63n/5et5/+XUdj/l1HY/5eEy/+XhMv/l3n0/5d59P+Xref/l63n/5dR2P+XUdj/l4TL/zeY+f83h+j/N5j5/zeH6P83h+j/N5j5/zeY+f83h+j/N5j5/zeY+f83h+j/N4fo/zeY+f83mPn/N4fo/zeH6P83h+j/N5j5/zeY+f83h+j/N5j5/zeY+f83mPn/N5j5/zeY+f83mPn/N4fo/zeY+f83mPn/N4fo/zeH6P83Zcb/N2XG/zdlxv83Zcb/N2XG/zdlxv83Zcb/N5j5/zeY+f83Zcb/N2XG/zdlxv83Zcb/N2XG/zdlxv83Zcb/N2XG/zdlxv83Zcb/N5j5/zeY+f83Zcb/N5j5/zdlxv83Zcb/N5j5/zeY+f83mPn/N2XG/zdlxv83mPn/N2XG/zdlxv83mPn/N5j5/zdlxv83Zcb/N5j5/zeY+f93eff/d5j5/3et5/93ref/d1HY/3dR2P93ref/d1HY/3dlxv93hMj/d4TI/3eEyP93eff/d3n3/3eEyP93mPn/d5j5/3eY+f93mPn/d5j5/3eY+f93mPn/d5j5/3eEyP93Zcb/d1HY/3et5/93Zcb/d2XG/3dlxv93Zcb/d3n3/3d59/93mPn/d3n3/3eEyP93Zcb/d2XG/3eEyP93hMj/d2XG/3dlxv93eff/d5j5/3et5/93ref/d1HY/3dR2P93ref/d1HY/3eEyP93eff/d3n3/3eEyP93Zcb/d4TI/3eEyP93Zcb/d2XG/3eY+f93mPn/d4TI/3dlxv93Udj/d63n/3dlxv93Zcb/d2XG/3dlxv93hMj/d4TI/3eY+f93eff/d4TI/3dlxv93Zcb/d5j5/3eY+f93mPn/d5j5/3eY+f93mPn/d3n3/3d59w=="),
-"format": 34896613399,
-"index_count": 540,
-"index_data": PackedByteArray("AAACAIoAigCLAAAABACMAI0AjQAFAAQAjgCPAJAAkACRAI4AkgCTAJQAlACVAJIAlgCXAJgAmACZAJYAmgCbAJwAnACdAJoAngAGAJ8AnwCgAJ4AoAAIAJ4AoAAHAAgABwChAAgABwCiAKEAAwCjAKQApAABAAMApQCmAKcApwCoAKUAqQAJAKoAqgCrAKkAqwALAKkAqwAKAAsACgCsAAsACgCtAKwADACuAK8ArwCwAAwAEAASAA0ADQCxABAAFACyABUAswAUABUAFACzABMAtACzABUAFAATALUAtAAVALYAFwC0ALYAtwAXALYAFgAUALUAFgC1ALgAFgC4ABgAtwC2ABkAGQAYALcAFgAYABkAuQAWABkAGQC6ALkADwC7ABEAEQC8AA8AvQAOAL4AvgC/AL0AwADBAMIAwgDDAMAAxADFAMYAxgDHAMQAyADJAMoAygDLAMgAzADNAM4AzgDPAMwA0AA2ANEA0QA0ANAAHADSABoAGgAbABwAHQAeANMA0wDUAB0AKQAqANUA1QArACkA1gAfACAAIADXANYALAAtAC4ALgAvACwAMAAxADIAMgAzADAA2ADZANoA2gA1ANgA2wDcAN0A3QDeANsAOwA8AD0APQA+ADsA3wDgAOEA4QDiAN8APwBAAEEAQQBCAD8A4wDkADkAOQA3AOMAQwBEAEUARQBGAEMAKADlAOYA5gAlACgAJQAnACgAIwAnACUAJwDnACgAJwAmAOcAJQAhACMAJgAiAOcAIQDnACIAIQAkAOcAIQDoACQAIQAiAOkAIQDqACMAIQDpAOoA6wDsAO0A7QDuAOsA7wDwADgAOAA6AO8ASQDxAEcARwDyAEkA8gDzAEkA8wBIAEkA8wD0AEgA8wD1APQA9gD3APgA+AD5APYA+gBmAPsA+wBkAPoATAD8AEoASgBLAEwATQBOAP0A/QD+AE0AWQBaAP8A/wBbAFkAAAFPAFAAUAABAQABXABdAF4AXgBfAFwAYABhAGIAYgBjAGAAAgEDAQQBBAEFAQIBBgEHAQgBCAFlAAYBawBsAG0AbQBuAGsAagBoAAkBCQEKAWoAWAALAQwBDAFVAFgAVQBXAFgAUwBXAFUAVwANAVgAVwBWAA0BVQBRAFMAVgBSAA0BUQANAVIAUQBUAA0BUQAOAVQAUQBSAA8BUQAQAVMAUQAPARABEQESARMBEwEUAREBZwBpABUBFQEWAWcAcQAXAW8AbwAYAXEAGAEZAXEAGQFwAHEAGQEaAXAAGQEbARoBHAEdAR4BHgEfARwBcgBzAHQAdAB1AHIAIAEhASIBIgEjASABdgB3AHgAeAB5AHYAegB7AHwAfAB9AHoAfgB9AHwAfQB/AHoAfwCAAHoAgACBAHoAggCDAIQAhACFAIIAhgCFAIQAhQCHAIIAhwCIAIIAiACJAIIA"),
-"lods": [0.7528151, PackedByteArray("AAABAAIAAwACAAEAAAACAAQABAADAAEABAAFAAAAAQAFAAQABgAHAAgACQAKAAsADAANAA4ADgAPAAwADQAMABAADwAOABEAEAAPABEAEAASAA0AEQASABAAEwAUABUAFgAUABMAFwATABUAFgATABgAFwAVABkAFgAYABkAGAAXABkAGgAbABwAHQAeAB8AHwAgAB0AIQAgAB8AIQAiACAAIQAfACMAIQAkACIAJQAhACMAJgAiACQAIwAnACUAJwAmACQAJQAnACgAJwAkACgAKQAqACsALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANwA0ADYAOAA2ADUANgA5ADcANwA5ADgANQA6ADgAOAA6ADcAOwA8AD0APQA+ADsAPwBAAEEAQQBCAD8AQwBEAEUARQBGAEMARwBIAEkASgBLAEwATQBOAE8ATwBQAE0AUQBQAE8AUQBSAFAAUQBPAFMAUQBUAFIAVQBRAFMAVgBSAFQAUwBXAFUAVwBWAFQAVQBXAFgAVwBUAFgAWQBaAFsAXABdAF4AXgBfAFwAYABhAGIAYgBjAGAAZABlAGYAZwBkAGYAaABmAGUAZgBpAGcAZwBpAGgAZQBqAGgAaABqAGcAawBsAG0AbQBuAGsAbwBwAHEAcgBzAHQAdAB1AHIAdgB3AHgAeAB5AHYAegB7AHwAfAB9AHoAfgB9AHwAfQB/AHoAfwCAAHoAgACBAHoAggCDAIQAhACFAIIAhgCFAIQAhQCHAIIAhwCIAIIAiACJAIIA")],
-"material": SubResource("StandardMaterial3D_8ro28"),
-"name": "colormap",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 292,
-"vertex_data": PackedByteArray("/+8kSdPh/6+gFiRJVRX/7//vAADT4f+voBYAAFUV/++gFgAAqer/j6AWJEmp6v+P/+8AANPh/7+gFgAAVRX/v6AWAACp6v+///9s21UV////D2zb//////8PbNsAAP////9s21UV/8//7yRJAAD/7//vJEn///+P/w9s2////4//D2zbAAD/7wAAJEmp6v+v/w8kSQAA/++gFiRJVRX/v/8PJEkAAP+/AAAkSanq/7//7yRJAAD/v6AWJEmp6v+//+8kSdPh/7//7yRJ////v/+nte3/nwCA/5e17f+fAID/l/7//58AgP+nte3/X1TV/6e17f+fVNX/l/7//5+awP+X/v//X5rA/4f+/yse/7//l/7/qir/v/+X//9U1f+/Xun+/1UV/7//h///0+H/v//f/v+qKv+//9///1TV/7//7///0+H/v/+Xte3/X////6e17f9f////l/7//1////+Xte3/n1TV/5e17VTVVNX/l///VNVU1f+X/v//n1TV/5e17aoqVNX/l7Xt/19U1f+X/v//X1TV/5f+/6oqVNX/7///0+HIzF7p/v9VFbj0Xuls26nqjMH/h///0+HIzP+HbNsrHhnf/4ds29PhyMz/h/7/Kx4Z3//f//9U1VTV/9+17VTVVNX/37XtqipU1f/f/v+qKlTV/5f+/6oqAID/3/7/qioAgP/fte2qKgCA/5e17aoqAID/l7XtVNX////fte1U1f///9///1TV////l///VNX//17pbNup6v///4ds2yse////h2zb0+H///8vte3/nwCA/x+17f+fAID/H/7//58AgP8vte3/X1TV/y+17f+fVNX/H/7//5+awP8f/v//X5rA/w/+/yse/7//H/7/qir/v/8f//9U1f+/XnH+/1UV/7//D///0+H/v/9n/v+qKv+//2f//1TV/7//d///0+H/v/8fte3/X////y+17f9f////H/7//1////8fte3/n1TV/x+17VTVVNX/H///VNVU1f8f/v//n1TV/x+17aoqVNX/H7Xt/19U1f8f/v//X1TV/x/+/6oqVNX/d///0+HIzF5x/v9VFbj0XnFs26nqjMH/D///0+HIzP8PbNsrHhnf/w9s29PhyMz/D/7/Kx4Z3/9n//9U1VTV/2e17VTVVNX/Z7XtqipU1f9n/v+qKlTVXnFs26nq////D2zbKx7///8PbNvT4f///x+17VTV////Z7XtVNX///9n//9U1f///x///1TV////H/7/qioAgP9n/v+qKgCA/2e17aoqAID/H7XtqioAgP/fte2qKv+//9+17VTV/7//l7XtVNX/v/+nte3/n/+//5e17f+f/7//p7Xt/1//v/+Xte3/X/+//5e17aoq/7//Z7Xtqir/v/9nte1U1f+//x+17VTV/7//L7Xt/5//v/8fte3/n/+//y+17f9f/7//H7Xt/1//v/8fte2qKv+/XukAAKnq/49e6SRJqer/j/8PAADT4f+v/w8kSdPh/6//7yRJKx7/z//vAAArHv/P/+8AANPh/6//7yRJ0+H/r17pAABVFf/v/+8AACse/8//7yRJKx7/z17pJElVFf/v/w8AANPh/6//DwAAKx7/z/8PJEkrHv/P/w8kSdPh/69e6SRJqer/j17pAACp6v+PoBYAAKnq/4+gFiRJqer/j17pAACp6v+//+8AACse/79e6QAAVRX/v/8PAADT4f+//w8AACse/79e6QAAVRX/717pJElVFf/v/w8AACse/8+gFgAAVRX/76AWJElVFf/v/w8kSSse/8//72zbAAD/////bNup6v///+9s2/////8AAGzbVRX//wAAbNup6v////8kSVUV/8///yRJqer/r///bNup6v+v/+9s2wAA/+8AACRJVRX/v/8PJEkrHv+//w8kSdPh/79e6SRJVRX/v/8PJEn///+/XukkSanq/7//7yRJKx7/v///JElVFf+///8kSanq/7//DyRJ////jwAAbNup6v+v/+9s2////4//DyRJ////j/8PbNv///+P//8kSanq/6//7yRJ////j//vbNv///+P//9s26nq/6//72zbAAD/7//vJEkAAP/v//8kSVUV/8///2zbVRX/zwAAJEmp6v+vAAAkSVUV/88AAGzbVRX/zwAAbNup6v+vAAAkSVUV/8//DyRJAAD/7/8PbNsAAP/vAABs21UV/8//72zb0+HIzF7p//+p6ozB/6fa9v+fAID/p9r2/5/hx/+n2vb/X+HH/6fa9v9f////p9r2/5/hx/+n2vb/X+HHXuls21UVuPT/72zbKx4Z3//v/v8rHhnf/+9s2yseGd//72zb0+HIzP/v///T4cjM/+/+/yseGd+gjv//qer/j17p//+p6v+PXuls26nq/4+gjmzbqer/j6CO//+p6ozBoI5s26nqjMFe6f//qer/v6CO//+p6v+//+/+/yse/7+gjv7/VRX/v/+X/v//X/+//5f+//+f/7+gjmzbVRX/717pbNtVFf/vXun+/1UV/++gjv7/VRX/7/+H///T4cjM/4ds29PhyMygjmzbqer////vbNvT4f///+9s2yse//+gjmzbVRX//17pbNtVFf///4f+/yseGd//h2zbKx4Z36CObNtVFbj0oI7+/1UVuPT/d2zb0+HIzF5x//+p6ozB/y/a9v+fAID/L9r2/5/hx/8v2vb/X+HH/y/a9v9f////L9r2/5/hx/8v2vb/X+HH/3ds2yseGd//d2zb0+HIzP93///T4cjM/3f+/yseGd9ecWzbVRW49P93bNsrHhnf/3f+/yseGd+gFmzbVRW49KAW/v9VFbj0XnH//6nq/7+gFv//qer/v/93/v8rHv+/oBb+/1UV/7//H/7//1//v/8f/v//n/+/oBZs21UV/+9ecWzbVRX/715x/v9VFf/voBb+/1UV/+//D2zbKx4Z3/8P/v8rHhnfoBZs26nq////d2zb0+H///93bNsrHv//oBZs21UV//9ecWzbVRX//6AW//+p6v+PXnH//6nq/49ecWzbqer/j6AWbNup6v+PoBb//6nqjMGgFmzbqeqMwf8PbNvT4cjM/w///9PhyMz/fwAA/3////9/AAD/f////3////9///8AAP9/AAD/fwAA/3//f/+//3//v/9//7//fwAA/38AAP9/AAD/f////3////9/////f///AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f/9/////f////3///6qqVVWqqlVVteZac7XmWnP///9/////f////3////9/////f////3////9/////f/9/////f////3///6qqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVmqRkWzW6yUU2kshtY9tj2wbQBtBj22PbBtAG0FTVVNVU1VTVVNVU1VTVVNX/f////3////9/////f////3////9/////f////3////9//z//f/8//3//P/9/////f////3///6qqVVWqqlVVteZac7XmWnP///9/////f////3////9/////f////3////9/////f/9/////f////3///6qqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVmqRkWzW6yUU2kshtY9tj2wbQBtBj22PbBtAG0FTVVNVU1VTVVNVU1VTVVNX/f/8//3//P/9//z//f////3////9/////f////3////9/////f////3///////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3//fwAA/38AAP9/////f////38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////38AAP9/AAD/f////3///wAA/38AAP9/AAD/fwAA/38AAP9//38AAP9/AAD/f////3////9/////f////3//v/9//7//f/+//3//v/9//7//fwAA/38AAP9/AAD/fwAAAAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9//3////9/////fwAA/3////9/////fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f///mqRkWzaSyG3/f///x8BjYMfAY2D/f///x8BjYMfAY2A1uslF+K8GUPivBlD4rwZQmqRkW5qkZFv4rwZQ/3/+//9/AAD/fwAA/3/+/8jtyO3I7cjt////f////3////9/////f////3////9//3////9/AAD/fwAA/3///2PbY9tj22Pb/3//P/9//z//f/8//3//P/9//z8G0AbQBtAG0MnFycXJxcnFmqRkWzaSyG3/f///x8BjYMfAY2D/f///x8BjYMfAY2D4rwZQmqRkW5qkZFv4rwZQNbrJRfivBlD4rwZQycXJxcnFycX///9/////f////3////9/////f////3//f////38AAP9/AAD/f///BtAG0AbQBtD/f/8//3//P/9//z//f/8//3//P/9//v//fwAA/38AAP9//v/I7cjtyO3I7WPbY9tj22Pb")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_sifgk")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tv2ia"]
 points = PackedVector3Array(0.02496326, 0.379, 0.024990208, 0.02496326, 0.379, -0.025004897, -0.025017142, 0.379, 0.024990208, 0.02496326, 0.228973, 0.049995102, 0.03745836, 0.050973576, 0.075, 0.07499999, 0.050973576, 0.037485316, 0.04995346, 0.228973, 0.024990208, 0.04995346, 0.228973, -0.025004897, 0.07499999, 0.050973576, -0.037514687, 0.03745836, 0.050973576, -0.075, 0.02496326, 0.228973, -0.05000979, -0.025017142, 0.379, -0.025004897, -0.5, 0.228973, 0.024990208, -0.025017142, 0.228973, 0.049995102, 0.03745836, 0, 0.075, -0.037512243, 0.050973576, 0.075, 0.07499999, 0, 0.037485316, 0.07499999, 0, -0.037514687, 0.03745836, 0, -0.075, -0.037512243, 0.050973576, -0.075, -0.025017142, 0.228973, -0.05000979, -0.5, 0.228973, -0.025004897, -0.5, 0.17896399, 0.024990208, -0.037512243, 0, 0.075, -0.037512243, 0, -0.075, -0.5, 0.17896399, -0.025004897, -0.07505384, 0, 0.037485316, -0.07505384, 0, -0.037514687)
@@ -1348,71 +1286,6 @@ shape = SubResource("BoxShape3D_fsytt")
 [node name="fence-door-rotate4" parent="Market/CashRegister/cash-register4/WallBarrier4" instance=ExtResource("15_c4e85")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -1, 0)
 
-[node name="FreezerStanding" type="Node3D" parent="Market"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.233465, 0, 0)
-
-[node name="freezers-standing2" parent="Market/FreezerStanding" instance=ExtResource("36_deglg")]
-transform = Transform3D(-3.5, 0, -5.284853e-07, 0, 3.5, 0, 5.284853e-07, 0, -3.5, 16.974045, 1.0936477, -3.3465157)
-
-[node name="freezers-standing" parent="Market/FreezerStanding/freezers-standing2" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.57142925, 0, 1.1920929e-07)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Market/FreezerStanding/freezers-standing2/freezers-standing" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Market/FreezerStanding/freezers-standing2/freezers-standing/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_sfy4u")
-
-[node name="freezers-standing3" parent="Market/FreezerStanding" instance=ExtResource("36_deglg")]
-transform = Transform3D(-3.5, 0, -5.284853e-07, 0, 3.5, 0, 5.284853e-07, 0, -3.5, 19.333761, 1.0936477, -3.3465157)
-
-[node name="freezers-standing" parent="Market/FreezerStanding/freezers-standing3" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28571415, 0, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Market/FreezerStanding/freezers-standing3/freezers-standing" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Market/FreezerStanding/freezers-standing3/freezers-standing/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_pru0s")
-
-[node name="freezers-standing4" parent="Market/FreezerStanding" instance=ExtResource("36_deglg")]
-transform = Transform3D(-3.5, 0, -5.284853e-07, 0, 3.5, 0, 5.284853e-07, 0, -3.5, 21.689312, 1.0936477, -3.3465157)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Market/FreezerStanding/freezers-standing4/freezers-standing" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Market/FreezerStanding/freezers-standing4/freezers-standing/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_jbjgt")
-
-[node name="freezer2" parent="Market" instance=ExtResource("23_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 47, 1, -21)
-
-[node name="freezer" parent="Market/freezer2" index="0"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Market/freezer2/freezer" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Market/freezer2/freezer/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_jewmw")
-
-[node name="freezer2" type="MeshInstance3D" parent="Market/freezer2"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.1999998, 0, 0)
-mesh = SubResource("ArrayMesh_sbihd")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Market/freezer2/freezer2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Market/freezer2/freezer2/StaticBody3D"]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_jewmw")
-
-[node name="freezer3" type="MeshInstance3D" parent="Market/freezer2"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -2.3999996, 0, 0)
-mesh = SubResource("ArrayMesh_sbihd")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Market/freezer2/freezer3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Market/freezer2/freezer3/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_jewmw")
-
 [node name="Fence" type="Node3D" parent="Market"]
 
 [node name="Fences" type="Node3D" parent="Market/Fence"]
@@ -1852,124 +1725,6 @@ transform = Transform3D(2.5, 0, 1.5893255e-07, 0, 2.5, 0, -1.5893255e-07, 0, 2.5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Market/Fence/Fences4/fence14/fence/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_tv2ia")
 
-[node name="InteractableShelf" type="Node3D" parent="Market"]
-
-[node name="ShelfBag" type="Node3D" parent="Market/InteractableShelf"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2.734)
-
-[node name="shelf-bags2" parent="Market/InteractableShelf/ShelfBag" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -26.001867)
-
-[node name="shelf-bags3" parent="Market/InteractableShelf/ShelfBag" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -28.055159)
-
-[node name="shelf-bags4" parent="Market/InteractableShelf/ShelfBag" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -23.942976)
-
-[node name="shelf-bags5" parent="Market/InteractableShelf/ShelfBag" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -32.194782)
-
-[node name="shelf-bags6" parent="Market/InteractableShelf/ShelfBag" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -34.248074)
-
-[node name="shelf-bags7" parent="Market/InteractableShelf/ShelfBag" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -30.13589)
-
-[node name="ShelfBag2" type="Node3D" parent="Market/InteractableShelf"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 2.734)
-
-[node name="shelf-bags2" parent="Market/InteractableShelf/ShelfBag2" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -26.001867)
-
-[node name="shelf-bags3" parent="Market/InteractableShelf/ShelfBag2" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -28.055159)
-
-[node name="shelf-bags4" parent="Market/InteractableShelf/ShelfBag2" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -23.942976)
-
-[node name="shelf-bags5" parent="Market/InteractableShelf/ShelfBag2" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -32.194782)
-
-[node name="shelf-bags6" parent="Market/InteractableShelf/ShelfBag2" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -34.248074)
-
-[node name="shelf-bags7" parent="Market/InteractableShelf/ShelfBag2" instance=ExtResource("12_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -30.13589)
-
-[node name="ShelfBox" type="Node3D" parent="Market/InteractableShelf"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.376341)
-
-[node name="FakeShelfBox" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.283691, 1.0943806, -26.203087)
-
-[node name="FakeShelfBox2" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -24.151041)
-
-[node name="FakeShelfBox3" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -22.12266)
-
-[node name="FakeShelfBox4" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -20.07773)
-
-[node name="FakeShelfBox5" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -18.025692)
-
-[node name="FakeShelfBox6" parent="Market/InteractableShelf/ShelfBox" instance=ExtResource("16_h8g51")]
-transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -15.997311)
-
-[node name="DisplayBread" parent="Market/InteractableShelf" instance=ExtResource("22_h8g51")]
-transform = Transform3D(-5, 0, 7.54979e-07, 0, 5, 0, -7.54979e-07, 0, -5, 5, 1, -3)
-
-[node name="DisplayBread4" parent="Market/InteractableShelf/DisplayBread" instance=ExtResource("22_h8g51")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4000003, 0, 3.5762787e-07)
-
-[node name="DisplayWatermelon" parent="Market/InteractableShelf/DisplayBread" instance=ExtResource("22_fsytt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79999995, 0, 1.1920929e-07)
-
-[node name="DisplayTomato" parent="Market/InteractableShelf/DisplayBread" instance=ExtResource("23_ydvpe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999999, 0, 2.3841858e-07)
-
-[node name="ShelfEnd" type="Node3D" parent="Market/InteractableShelf"]
-
-[node name="ShelfEnd10" parent="Market/InteractableShelf/ShelfEnd" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -27.5531)
-
-[node name="ShelfEnd11" parent="Market/InteractableShelf/ShelfEnd" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -29.5531)
-
-[node name="ShelfEnd12" parent="Market/InteractableShelf/ShelfEnd" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -31.5531)
-
-[node name="shelf-end2" parent="Market/InteractableShelf/ShelfEnd" instance=ExtResource("26_c7od5")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -21.5531)
-
-[node name="shelf-end3" parent="Market/InteractableShelf/ShelfEnd" instance=ExtResource("26_c7od5")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -23.5531)
-
-[node name="ShelfEnd2" type="Node3D" parent="Market/InteractableShelf"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, -33.142853)
-
-[node name="ShelfEnd7" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -21.5531)
-
-[node name="ShelfEnd8" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -23.5531)
-
-[node name="ShelfEnd9" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -25.5531)
-
-[node name="ShelfEnd10" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -27.5531)
-
-[node name="ShelfEnd11" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -29.5531)
-
-[node name="ShelfEnd12" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_ieq8a")]
-transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -31.5531)
-
-[node name="shelf-end4" parent="Market/InteractableShelf/ShelfEnd2" instance=ExtResource("26_c7od5")]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 7.5890923, 1, -29)
-
 [node name="Viewport2Din3D" parent="Market" instance=ExtResource("27_ydvpe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 3, -46.357876)
 scene = ExtResource("28_ou86s")
@@ -2004,10 +1759,6 @@ holoText = "StarterHub"
 [editable path="Market/Vehicle/vehicle3"]
 [editable path="Market/Vehicle/vehicle-convertible3"]
 [editable path="Market/Vehicle/vehicle-convertible4"]
-[editable path="Market/FreezerStanding/freezers-standing2"]
-[editable path="Market/FreezerStanding/freezers-standing3"]
-[editable path="Market/FreezerStanding/freezers-standing4"]
-[editable path="Market/freezer2"]
 [editable path="Market/Fence/Fences/fence2"]
 [editable path="Market/Fence/Fences/fence3"]
 [editable path="Market/Fence/Fences/fence4"]

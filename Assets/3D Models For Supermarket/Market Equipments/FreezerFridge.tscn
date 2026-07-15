@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://oklcm2cowmpk"]
+
+[ext_resource type="PackedScene" uid="uid://fxyslmp0p32" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelfs & Fridges/Fridge2.glb" id="1_1nchx"]
+
+[node name="FreezerFridge" instance=ExtResource("1_1nchx")]
+transform = Transform3D(1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0, 0, 0)

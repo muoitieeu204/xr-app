@@ -1,0 +1,45 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dgk6v5rxf5sii"
+path.s3tc="res://.godot/imported/LiquidDetergent_0.jpg-9236e77fc87a49ed7424f0b7f6c9aeae.s3tc.ctex"
+path.etc2="res://.godot/imported/LiquidDetergent_0.jpg-9236e77fc87a49ed7424f0b7f6c9aeae.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2cc7393b9c4df1f4dbb682ad3dbe6c83"
+}
+
+[deps]
+
+source_file="res://Assets/3D Models For Supermarket/Hygiene Products/LiquidDetergent_0.jpg"
+dest_files=["res://.godot/imported/LiquidDetergent_0.jpg-9236e77fc87a49ed7424f0b7f6c9aeae.s3tc.ctex", "res://.godot/imported/LiquidDetergent_0.jpg-9236e77fc87a49ed7424f0b7f6c9aeae.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
