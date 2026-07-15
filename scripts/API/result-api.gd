@@ -1,6 +1,6 @@
 extends Node
 
-var apiUrl: String = "https://103-162-31-23.sslip.io/api/results/submit"
+var apiUrl: String = "https://103-162-30-111.sslip.io/api/results/submit"
 var httpRequest: HTTPRequest
 
 # --- ALL API PAYLOAD FIELDS ---

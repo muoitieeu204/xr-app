@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cud521eqxsi7u"]
+[gd_scene load_steps=20 format=4 uid="uid://cud521eqxsi7u"]
 
 [ext_resource type="Texture2D" uid="uid://bvrwau3ertbyn" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelfs & Fridges/Fridge_0.png" id="1_2v0bi"]
 [ext_resource type="Texture2D" uid="uid://u3wrwqm3nn3e" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelfs & Fridges/Fridge_1.png" id="2_cv1er"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dlcvvthlvwywc" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelfs & Fridges/Fridge_6.png" id="7_sntas"]
 [ext_resource type="Texture2D" uid="uid://dkdskiw8mg4k1" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelfs & Fridges/Fridge_7.png" id="8_ai3qa"]
 [ext_resource type="Texture2D" uid="uid://drbdatsbbj685" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelfs & Fridges/Fridge_8.png" id="9_fs8c3"]
+[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/FakeChicken.tscn" id="10_cv1er"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twshv"]
 resource_name = "Material_31"
@@ -154,7 +155,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xk7ko")
 
 [node name="Fridge" type="Node3D"]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 
 [node name="Sketchfab_model" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2.220446e-16, 1, 0, -1, 2.220446e-16, 0, 0, 0)
@@ -184,3 +185,21 @@ transform = Transform3D(1, 0, 0, 0, 1, -1.6292068e-07, 0, 1.6292068e-07, 1, -0.4
 [node name="Box006_Material #30_0" type="MeshInstance3D" parent="Sketchfab_model/Supermarket Fridge_FBX/RootNode/Box006"]
 mesh = SubResource("ArrayMesh_cu657")
 skeleton = NodePath("")
+
+[node name="Chicken" parent="." instance=ExtResource("10_cv1er")]
+transform = Transform3D(100, 0, 0, 0, 83.50495, -55.01747, 0, 55.01747, 83.50495, -101.51551, -9.069216, 184.47523)
+
+[node name="Chicken2" parent="." instance=ExtResource("10_cv1er")]
+transform = Transform3D(100, 0, 0, 0, 83.50495, -55.01747, 0, 55.01747, 83.50495, -59.85172, -9.069216, 184.47523)
+
+[node name="Chicken3" parent="." instance=ExtResource("10_cv1er")]
+transform = Transform3D(100, 0, 0, 0, 83.50495, -55.01747, 0, 55.01747, 83.50495, -15.237641, -9.069216, 184.47523)
+
+[node name="Chicken4" parent="." instance=ExtResource("10_cv1er")]
+transform = Transform3D(100, 0, 0, 0, 83.50495, -55.01747, 0, 55.01747, 83.50495, 22.177046, -9.069216, 184.47523)
+
+[node name="Chicken5" parent="." instance=ExtResource("10_cv1er")]
+transform = Transform3D(100, 0, 0, 0, 83.50495, -55.01747, 0, 55.01747, 83.50495, 61.13914, -9.069216, 184.47523)
+
+[node name="Chicken6" parent="." instance=ExtResource("10_cv1er")]
+transform = Transform3D(100, 0, 0, 0, 83.50495, -55.01747, 0, 55.01747, 83.50495, 98.34869, -9.069216, 184.47523)

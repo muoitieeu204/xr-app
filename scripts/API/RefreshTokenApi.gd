@@ -3,7 +3,7 @@ extends Node
 # Autoload script: refreshes the accessToken once, 10 minutes after login.
 # Add this to Project Settings -> Autoload as "RefreshTokenApi"
 
-var refresh_url : String = "https://103-162-31-23.sslip.io/api/auth/refresh-token"
+var refresh_url : String = "https://103-162-30-111.sslip.io/api/auth/refresh-token"
 var http_request : HTTPRequest
 var refresh_timer : Timer
 

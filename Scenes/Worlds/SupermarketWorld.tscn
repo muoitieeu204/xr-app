@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=4 uid="uid://ciondyec656d3"]
+[gd_scene load_steps=89 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
 [ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/LevelController.gd" id="1_r2rb5"]
@@ -11,6 +11,7 @@
 [ext_resource type="MeshLibrary" uid="uid://bu5pxtjly78gp" path="res://Assets/kenney_3d-road-tiles/city_road_kit_mesh_library_fixed.tres" id="21_ydvpe"]
 [ext_resource type="PackedScene" uid="uid://b5yvsrj3u37yq" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle.glb" id="22_acpa7"]
 [ext_resource type="PackedScene" uid="uid://brs5wswbahfai" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_034.gltf" id="22_ou86s"]
+[ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="22_u0m48"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="23_d1idn"]
 [ext_resource type="PackedScene" uid="uid://crtvxpuyg328w" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall.glb" id="24_acpa7"]
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="25_h8g51"]
@@ -1741,6 +1742,15 @@ playerNode = ExtResource("28_c4e85")
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33, 2.095599, -51)
 target_scene = "uid://bt0ier0gd1sh5"
 holoText = "StarterHub"
+
+[node name="Fridge" parent="." instance=ExtResource("22_u0m48")]
+transform = Transform3D(-0.02, 0, -3.0199159e-09, 0, 0.02, 0, 3.0199159e-09, 0, -0.02, 20, 3, -20)
+
+[node name="Fridge2" parent="." instance=ExtResource("22_u0m48")]
+transform = Transform3D(-0.01, 0, 8.7422775e-10, 0, 0.01, 0, -8.7422775e-10, 0, -0.01, 24, 2, -22)
+
+[node name="Fridge3" parent="." instance=ExtResource("22_u0m48")]
+transform = Transform3D(-0.015, 0, 2.264937e-09, 0, 0.015, 0, -2.264937e-09, 0, -0.015, 28, 3, -22)
 
 [connection signal="item_scanned_for_teaching" from="Market/CashRegister/cash-register2" to="Market/CashRegister/cash-register2/CharacterEmployee" method="_on_item_scanned_for_teaching"]
 [connection signal="item_scanned_for_teaching" from="Market/CashRegister/cash-register3" to="Market/CashRegister/cash-register3/CharacterEmployee" method="_on_item_scanned_for_teaching"]

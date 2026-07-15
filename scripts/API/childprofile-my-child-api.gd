@@ -1,6 +1,6 @@
 extends Control
 
-var apiUrl: String = "https://103-162-31-23.sslip.io/api/child-profiles/my-children"
+var apiUrl: String = "https://103-162-30-111.sslip.io/api/child-profiles/my-children"
 
 @export var welcome_scene_path: NodePath = ^"../WelcomeScene"
 
