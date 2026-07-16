@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6vtac1046l7y"
+path="res://.godot/imported/hop_giay_6ff4fc8f-70d3-4325-b965-0ff170c8917c.mp3-db2078c9fbb04832c4d70f00e60dcb08.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeCarton/hop_giay_6ff4fc8f-70d3-4325-b965-0ff170c8917c.mp3"
+dest_files=["res://.godot/imported/hop_giay_6ff4fc8f-70d3-4325-b965-0ff170c8917c.mp3-db2078c9fbb04832c4d70f00e60dcb08.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

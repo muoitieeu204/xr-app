@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy8qp7s5c1ne6"
+path="res://.godot/imported/toi_tron_va_to_dung_de_chua_do_hoac_chat_long_b9725caa-b3ea-4734-8969-758fd8d84bb1.mp3-42b91c86517bba352fca0be884e8f49d.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/barrel/toi_tron_va_to_dung_de_chua_do_hoac_chat_long_b9725caa-b3ea-4734-8969-758fd8d84bb1.mp3"
+dest_files=["res://.godot/imported/toi_tron_va_to_dung_de_chua_do_hoac_chat_long_b9725caa-b3ea-4734-8969-758fd8d84bb1.mp3-42b91c86517bba352fca0be884e8f49d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

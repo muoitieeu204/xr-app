@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://erh5430a827u"
+path="res://.godot/imported/cai_chai_f6cb12c9-4d07-4cc7-9bbb-9c74c814e407.mp3-c4ad14b05f5b0b8ea8e1190ce50d43fb.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/cai_chai_f6cb12c9-4d07-4cc7-9bbb-9c74c814e407.mp3"
+dest_files=["res://.godot/imported/cai_chai_f6cb12c9-4d07-4cc7-9bbb-9c74c814e407.mp3-c4ad14b05f5b0b8ea8e1190ce50d43fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

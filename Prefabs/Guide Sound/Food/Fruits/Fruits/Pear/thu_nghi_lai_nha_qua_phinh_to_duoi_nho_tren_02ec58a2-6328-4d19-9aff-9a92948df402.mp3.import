@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://do05vwes08h25"
+path="res://.godot/imported/thu_nghi_lai_nha_qua_phinh_to_duoi_nho_tren_02ec58a2-6328-4d19-9aff-9a92948df402.mp3-53592dd38ee23c9cc4357a65c664a8ef.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pear/thu_nghi_lai_nha_qua_phinh_to_duoi_nho_tren_02ec58a2-6328-4d19-9aff-9a92948df402.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_qua_phinh_to_duoi_nho_tren_02ec58a2-6328-4d19-9aff-9a92948df402.mp3-53592dd38ee23c9cc4357a65c664a8ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

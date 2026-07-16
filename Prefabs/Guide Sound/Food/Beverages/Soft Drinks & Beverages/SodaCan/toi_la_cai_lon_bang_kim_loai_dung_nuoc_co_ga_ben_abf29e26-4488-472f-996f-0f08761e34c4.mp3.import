@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpeiu64y6owmp"
+path="res://.godot/imported/toi_la_cai_lon_bang_kim_loai_dung_nuoc_co_ga_ben_abf29e26-4488-472f-996f-0f08761e34c4.mp3-03d29973b59859f424c3c92ad75903f6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/SodaCan/toi_la_cai_lon_bang_kim_loai_dung_nuoc_co_ga_ben_abf29e26-4488-472f-996f-0f08761e34c4.mp3"
+dest_files=["res://.godot/imported/toi_la_cai_lon_bang_kim_loai_dung_nuoc_co_ga_ben_abf29e26-4488-472f-996f-0f08761e34c4.mp3-03d29973b59859f424c3c92ad75903f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

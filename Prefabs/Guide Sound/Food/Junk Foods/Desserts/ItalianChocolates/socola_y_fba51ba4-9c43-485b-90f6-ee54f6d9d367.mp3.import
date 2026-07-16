@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ovv0phn7sk0t"
+path="res://.godot/imported/socola_y_fba51ba4-9c43-485b-90f6-ee54f6d9d367.mp3-ad99c73013f400a82e8a266dacf769c5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Desserts/ItalianChocolates/socola_y_fba51ba4-9c43-485b-90f6-ee54f6d9d367.mp3"
+dest_files=["res://.godot/imported/socola_y_fba51ba4-9c43-485b-90f6-ee54f6d9d367.mp3-ad99c73013f400a82e8a266dacf769c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

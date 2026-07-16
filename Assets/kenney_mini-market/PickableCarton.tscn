@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="6_6n25l"]
 [ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="7_wuwwm"]
 [ext_resource type="Script" uid="uid://0b7wkxi4vymb" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="8_jx27t"]
-[ext_resource type="Script" uid="uid://0iajq3ctumod" path="res://scripts/UnFreezePickable.gd" id="9_o3ses"]
+[ext_resource type="Script" uid="uid://0iajq3ctumod" path="res://scripts/Environment Script/UnFreezePickable.gd" id="9_o3ses"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vajms"]
 size = Vector3(0.16558838, 0.2849121, 0.17437744)
@@ -99,5 +99,9 @@ mesh = SubResource("ArrayMesh_ws5rt")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_44fp3")
 
-[node name="UnFreezeHelper" type="Node" parent="." index="5"]
+[node name="ItemLabel" type="Label3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.039868414, 0)
+font_size = 15
+
+[node name="UnFreezeHelper" type="Node" parent="." index="6"]
 script = ExtResource("9_o3ses")

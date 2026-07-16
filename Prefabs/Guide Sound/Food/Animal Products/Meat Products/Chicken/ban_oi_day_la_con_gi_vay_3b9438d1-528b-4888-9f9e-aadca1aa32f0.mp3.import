@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tw62ncaxg7rb"
+path="res://.godot/imported/ban_oi_day_la_con_gi_vay_3b9438d1-528b-4888-9f9e-aadca1aa32f0.mp3-93b78d0135ce6c9ddde76aa1ad1a331b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/Chicken/ban_oi_day_la_con_gi_vay_3b9438d1-528b-4888-9f9e-aadca1aa32f0.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_con_gi_vay_3b9438d1-528b-4888-9f9e-aadca1aa32f0.mp3-93b78d0135ce6c9ddde76aa1ad1a331b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

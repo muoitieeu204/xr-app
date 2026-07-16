@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cieq635htqbal"
+path="res://.godot/imported/thu_nghi_lai_nha_qua_vang_cam_bau_duc_ngot_thom_266476b8-8c0d-4cf1-9315-727f8a10e387.mp3-673c17d732d4c13b9406ccddab450245.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Mango/thu_nghi_lai_nha_qua_vang_cam_bau_duc_ngot_thom_266476b8-8c0d-4cf1-9315-727f8a10e387.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_qua_vang_cam_bau_duc_ngot_thom_266476b8-8c0d-4cf1-9315-727f8a10e387.mp3-673c17d732d4c13b9406ccddab450245.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

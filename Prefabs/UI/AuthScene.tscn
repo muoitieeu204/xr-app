@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bho8ebcx5lvhs"]
 
-[ext_resource type="Script" uid="uid://2u116woexcme" path="res://scripts/AuthController.gd" id="1_2vo2r"]
+[ext_resource type="Script" uid="uid://2u116woexcme" path="res://scripts/API/AuthController.gd" id="1_2vo2r"]
 [ext_resource type="PackedScene" uid="uid://dwbgi35lse2ea" path="res://Prefabs/UI/LoginScreen.tscn" id="1_fl2ql"]
 [ext_resource type="PackedScene" uid="uid://djmys4bj6qmku" path="res://Prefabs/UI/WelcomeScene.tscn" id="2_2vo2r"]
 [ext_resource type="PackedScene" uid="uid://chjmor7jfhj5" path="res://Prefabs/UI/ForgotPasswordScreen.tscn" id="3_p341f"]
@@ -104,12 +104,14 @@ grow_vertical = 2
 [node name="LogoutBox" parent="." instance=ExtResource("4_2vo2r")]
 layout_mode = 1
 anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [editable path="LoginBox"]
 [editable path="WelcomeScene"]

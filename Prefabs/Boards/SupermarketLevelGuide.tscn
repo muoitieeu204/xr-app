@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqpsyyclcev87"]
+
+[ext_resource type="Script" uid="uid://ce1q2rq1oursv" path="res://scripts/UI Script/SlideGuideController.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c1tuydcosceot" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR.png" id="2_i82ux"]
+[ext_resource type="Texture2D" uid="uid://db82or25pnku4" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR2.png" id="3_x1f5s"]
+[ext_resource type="Texture2D" uid="uid://o3n1ksbojqsv" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR3.png" id="4_rvto0"]
+[ext_resource type="Texture2D" uid="uid://cwlxh4s4gm0wi" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR (1).png" id="5_kqrcu"]
+[ext_resource type="Texture2D" uid="uid://cyqdl1ffvnyyf" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR (2).png" id="6_od6nc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+content_margin_top = 4.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="SlidesContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="SlidesContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i82ux")
+
+[node name="TextureRect2" type="TextureRect" parent="SlidesContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_x1f5s")
+
+[node name="TextureRect3" type="TextureRect" parent="SlidesContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rvto0")
+
+[node name="TextureRect4" type="TextureRect" parent="SlidesContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_kqrcu")
+
+[node name="TextureRect5" type="TextureRect" parent="SlidesContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_od6nc")
+
+[node name="PrevButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -82.0
+offset_right = 182.0
+offset_bottom = -32.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Trước"
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -82.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Tiếp"
+
+[connection signal="pressed" from="PrevButton" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

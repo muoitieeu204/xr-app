@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://esqmxblv8uwi"
+path="res://.godot/imported/goi_y_toi_co_mau_vang_va_hinh_cong_nhu_mat_4b2b4852-2f8d-4d31-9571-36d69b7fb0bd.mp3-e7a43d36c79475909e8b42d53d186cca.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Banana/goi_y_toi_co_mau_vang_va_hinh_cong_nhu_mat_4b2b4852-2f8d-4d31-9571-36d69b7fb0bd.mp3"
+dest_files=["res://.godot/imported/goi_y_toi_co_mau_vang_va_hinh_cong_nhu_mat_4b2b4852-2f8d-4d31-9571-36d69b7fb0bd.mp3-e7a43d36c79475909e8b42d53d186cca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

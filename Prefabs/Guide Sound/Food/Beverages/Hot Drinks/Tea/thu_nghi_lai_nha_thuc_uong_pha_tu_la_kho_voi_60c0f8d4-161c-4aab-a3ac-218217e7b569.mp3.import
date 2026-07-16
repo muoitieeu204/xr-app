@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1itkepfpacye"
+path="res://.godot/imported/thu_nghi_lai_nha_thuc_uong_pha_tu_la_kho_voi_60c0f8d4-161c-4aab-a3ac-218217e7b569.mp3-dbca80fdb6b7a55d76a01997eb5c7407.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/Tea/thu_nghi_lai_nha_thuc_uong_pha_tu_la_kho_voi_60c0f8d4-161c-4aab-a3ac-218217e7b569.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_thuc_uong_pha_tu_la_kho_voi_60c0f8d4-161c-4aab-a3ac-218217e7b569.mp3-dbca80fdb6b7a55d76a01997eb5c7407.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

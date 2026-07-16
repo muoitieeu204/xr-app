@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmahgj7h7vt01"
+path="res://.godot/imported/ke_dung_do_uong_9c243c0b-3616-4fc6-9e7b-1c044bd469d8.mp3-c897c1beacefa44ce38e4f5d51f38d5d.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeShelfEnd/ke_dung_do_uong_9c243c0b-3616-4fc6-9e7b-1c044bd469d8.mp3"
+dest_files=["res://.godot/imported/ke_dung_do_uong_9c243c0b-3616-4fc6-9e7b-1c044bd469d8.mp3-c897c1beacefa44ce38e4f5d51f38d5d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

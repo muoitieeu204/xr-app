@@ -56,7 +56,7 @@ mesh = SubResource("ArrayMesh_jm0if")
 skeleton = NodePath("")
 
 [node name="FakeBread" parent="display-bread" instance=ExtResource("2_y1mep")]
-transform = Transform3D(1, 0, 0, 0, 0.9049162, -0.42558977, 0, 0.42558977, 0.9049162, -0.114460535, 0.27240312, -0.0058425665)
+transform = Transform3D(1, 0, 0, 0, 0.9049162, -0.42558977, 0, 0.42558977, 0.9049162, -0.114460535, 0.25248116, 0.033108473)
 
 [node name="FakeBread2" parent="display-bread" instance=ExtResource("2_y1mep")]
-transform = Transform3D(1, 0, 0, 0, 0.9416293, -0.33665156, 0, 0.33665156, 0.9416293, 0.12112665, 0.25549695, -0.022233546)
+transform = Transform3D(1, 0, 0, 0, 0.9416293, -0.33665156, 0, 0.33665156, 0.9416293, 0.12112665, 0.25549695, 0.040322423)

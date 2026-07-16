@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1not2veq7wfc"
+path="res://.godot/imported/bia_16fd0885-842e-4a56-b027-9692214956ab.mp3-fff552e440a4fec4c31306681d9cd6be.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Beer/bia_16fd0885-842e-4a56-b027-9692214956ab.mp3"
+dest_files=["res://.godot/imported/bia_16fd0885-842e-4a56-b027-9692214956ab.mp3-fff552e440a4fec4c31306681d9cd6be.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

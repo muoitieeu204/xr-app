@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://out7m83evffi"
+path="res://.godot/imported/thu_nghi_lai_nha_tui_lat_mong_gion_an_vat_nay_104fa46d-44b4-4dd2-b39a-60d68279b823.mp3-bb9760716aff5ba473ed326b49ccca91.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Chips1/thu_nghi_lai_nha_tui_lat_mong_gion_an_vat_nay_104fa46d-44b4-4dd2-b39a-60d68279b823.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_tui_lat_mong_gion_an_vat_nay_104fa46d-44b4-4dd2-b39a-60d68279b823.mp3-bb9760716aff5ba473ed326b49ccca91.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

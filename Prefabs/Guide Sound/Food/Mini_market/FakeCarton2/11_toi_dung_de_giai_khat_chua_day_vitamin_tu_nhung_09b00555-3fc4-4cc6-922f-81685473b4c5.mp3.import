@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3ybelb476tff"
+path="res://.godot/imported/11_toi_dung_de_giai_khat_chua_day_vitamin_tu_nhung_09b00555-3fc4-4cc6-922f-81685473b4c5.mp3-19c15c9ace1dca119098a5cb5a6d7bb2.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeCarton2/11_toi_dung_de_giai_khat_chua_day_vitamin_tu_nhung_09b00555-3fc4-4cc6-922f-81685473b4c5.mp3"
+dest_files=["res://.godot/imported/11_toi_dung_de_giai_khat_chua_day_vitamin_tu_nhung_09b00555-3fc4-4cc6-922f-81685473b4c5.mp3-19c15c9ace1dca119098a5cb5a6d7bb2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

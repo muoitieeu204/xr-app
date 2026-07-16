@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qpsyg8sfa6bs"
+path="res://.godot/imported/day_la_mon_thit_xong_khoi_0048210e-a604-43de-8d64-dac4e870670c.mp3-cd171e3be6bf907da2ea025d1164fc85.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bacon-raw/day_la_mon_thit_xong_khoi_0048210e-a604-43de-8d64-dac4e870670c.mp3"
+dest_files=["res://.godot/imported/day_la_mon_thit_xong_khoi_0048210e-a604-43de-8d64-dac4e870670c.mp3-cd171e3be6bf907da2ea025d1164fc85.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

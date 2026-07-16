@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bkmjvg5ccnu3t"
+path="res://.godot/imported/pho_mai_cheddar_d4ee78e9-adfb-4774-b8e2-5eb7383c85be.mp3-0043de0c890a20ae3dc8040df264bea8.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Milk Products/CheddarCheese/pho_mai_cheddar_d4ee78e9-adfb-4774-b8e2-5eb7383c85be.mp3"
+dest_files=["res://.godot/imported/pho_mai_cheddar_d4ee78e9-adfb-4774-b8e2-5eb7383c85be.mp3-0043de0c890a20ae3dc8040df264bea8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1m5mo8ja2rcd"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_tron_to_dung_de_chua_do_456d8f67-7f8f-4c78-a40b-ff0dcd0081f2.mp3-c184f24b10aedcfbdb2b29037c087070.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/barrel/thu_nghi_lai_nha_cai_tron_to_dung_de_chua_do_456d8f67-7f8f-4c78-a40b-ff0dcd0081f2.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_tron_to_dung_de_chua_do_456d8f67-7f8f-4c78-a40b-ff0dcd0081f2.mp3-c184f24b10aedcfbdb2b29037c087070.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

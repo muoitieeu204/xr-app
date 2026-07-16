@@ -1,8 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://bvg614f3o0mp6"]
+[gd_scene load_steps=13 format=4 uid="uid://bvg614f3o0mp6"]
 
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="1_ftsxm"]
 [ext_resource type="PackedScene" uid="uid://c6qg2wmqtgdnu" path="res://Assets/kenney_food-kit/FakeWineRed.tscn" id="2_h4woc"]
 [ext_resource type="PackedScene" uid="uid://uxed2fhnknlo" path="res://Assets/kenney_food-kit/FakeCartonSmall.tscn" id="3_4vggo"]
+[ext_resource type="AudioStream" uid="uid://dnlqh6qyxwf37" path="res://Prefabs/Guide Sound/Food/glass-wine/18_mot_mon_do_uong_thuong_xuat_hien_trong_cac_bua_83521849-cb64-4943-a9f0-0d05ed89a6cf.mp3" id="4_pp1m7"]
+[ext_resource type="AudioStream" uid="uid://dsqcsq0svw57h" path="res://Prefabs/Guide Sound/Food/glass-wine/17_toi_dung_de_dung_cac_loai_do_uong_co_con_co_co_4b532fd9-fb55-46cf-b3ac-26143b799253.mp3" id="5_m8ne0"]
+[ext_resource type="AudioStream" uid="uid://d256tvopbvq8t" path="res://Prefabs/Guide Sound/Food/glass-wine/16_thu_nghi_lai_xem_nha_vat_lam_bang_thuy_tinh_ben_cbbe2fd5-66b1-4142-81c6-219896533cfe.mp3" id="6_3hyac"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbut4"]
 resource_name = "colormap"
@@ -97,6 +100,7 @@ skeleton = NodePath("")
 
 [node name="StaticBody3D" parent="shelf-end" instance=ExtResource("2_h4woc")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.203939, 0.55, -0.2011095)
+hintAudios = Array[AudioStream]([ExtResource("4_pp1m7"), ExtResource("5_m8ne0"), ExtResource("6_3hyac")])
 
 [node name="StaticBody3D2" parent="shelf-end" instance=ExtResource("2_h4woc")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.789585e-09, 0.55, -0.2011095)

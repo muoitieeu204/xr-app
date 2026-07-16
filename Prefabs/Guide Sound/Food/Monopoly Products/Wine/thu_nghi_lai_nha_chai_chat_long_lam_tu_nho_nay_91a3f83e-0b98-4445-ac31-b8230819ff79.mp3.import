@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://sg0dkgi1gsbx"
+path="res://.godot/imported/thu_nghi_lai_nha_chai_chat_long_lam_tu_nho_nay_91a3f83e-0b98-4445-ac31-b8230819ff79.mp3-67429a92730fbb247fc3166c511e82ff.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Wine/thu_nghi_lai_nha_chai_chat_long_lam_tu_nho_nay_91a3f83e-0b98-4445-ac31-b8230819ff79.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_chai_chat_long_lam_tu_nho_nay_91a3f83e-0b98-4445-ac31-b8230819ff79.mp3-67429a92730fbb247fc3166c511e82ff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

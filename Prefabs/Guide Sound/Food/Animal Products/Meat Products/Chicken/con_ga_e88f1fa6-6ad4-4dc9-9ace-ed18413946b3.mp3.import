@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmebrwawwtgmh"
+path="res://.godot/imported/con_ga_e88f1fa6-6ad4-4dc9-9ace-ed18413946b3.mp3-52e387b77b27982231bf4f5ebc7a28db.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/Chicken/con_ga_e88f1fa6-6ad4-4dc9-9ace-ed18413946b3.mp3"
+dest_files=["res://.godot/imported/con_ga_e88f1fa6-6ad4-4dc9-9ace-ed18413946b3.mp3-52e387b77b27982231bf4f5ebc7a28db.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

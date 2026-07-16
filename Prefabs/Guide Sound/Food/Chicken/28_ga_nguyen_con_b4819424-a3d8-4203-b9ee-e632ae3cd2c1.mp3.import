@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b56w08j1jx5n0"
+path="res://.godot/imported/28_ga_nguyen_con_b4819424-a3d8-4203-b9ee-e632ae3cd2c1.mp3-3a8eb5d10e0912690e03a77af66edbd6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Chicken/28_ga_nguyen_con_b4819424-a3d8-4203-b9ee-e632ae3cd2c1.mp3"
+dest_files=["res://.godot/imported/28_ga_nguyen_con_b4819424-a3d8-4203-b9ee-e632ae3cd2c1.mp3-3a8eb5d10e0912690e03a77af66edbd6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

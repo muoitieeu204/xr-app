@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="6_arvom"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="7_2lvop"]
 [ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="8_b1cxg"]
-[ext_resource type="Script" uid="uid://0iajq3ctumod" path="res://scripts/UnFreezePickable.gd" id="9_cwlqw"]
+[ext_resource type="Script" uid="uid://0iajq3ctumod" path="res://scripts/Environment Script/UnFreezePickable.gd" id="9_cwlqw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_41iwl"]
 size = Vector3(0.1786499, 0.32110596, 0.21826172)
@@ -103,3 +103,6 @@ hand_pose = SubResource("Resource_d4y7c")
 
 [node name="UnFreezeHelper" type="Node" parent="." index="5"]
 script = ExtResource("9_cwlqw")
+
+[node name="ItemLabel" type="Label3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.039868414, 0)

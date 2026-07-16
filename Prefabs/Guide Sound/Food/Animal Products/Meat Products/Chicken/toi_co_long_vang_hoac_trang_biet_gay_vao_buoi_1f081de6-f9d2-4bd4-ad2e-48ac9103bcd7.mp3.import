@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fym1ik87n5p4"
+path="res://.godot/imported/toi_co_long_vang_hoac_trang_biet_gay_vao_buoi_1f081de6-f9d2-4bd4-ad2e-48ac9103bcd7.mp3-2d2216f911761797df8668f069241869.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/Chicken/toi_co_long_vang_hoac_trang_biet_gay_vao_buoi_1f081de6-f9d2-4bd4-ad2e-48ac9103bcd7.mp3"
+dest_files=["res://.godot/imported/toi_co_long_vang_hoac_trang_biet_gay_vao_buoi_1f081de6-f9d2-4bd4-ad2e-48ac9103bcd7.mp3-2d2216f911761797df8668f069241869.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

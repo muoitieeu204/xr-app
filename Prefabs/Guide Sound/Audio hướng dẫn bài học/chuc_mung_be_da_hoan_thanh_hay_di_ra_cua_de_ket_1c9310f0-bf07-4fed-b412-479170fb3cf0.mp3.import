@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbn6induybd71"
+path="res://.godot/imported/chuc_mung_be_da_hoan_thanh_hay_di_ra_cua_de_ket_1c9310f0-bf07-4fed-b412-479170fb3cf0.mp3-630bb34aead11c87317252be56d63e30.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/chuc_mung_be_da_hoan_thanh_hay_di_ra_cua_de_ket_1c9310f0-bf07-4fed-b412-479170fb3cf0.mp3"
+dest_files=["res://.godot/imported/chuc_mung_be_da_hoan_thanh_hay_di_ra_cua_de_ket_1c9310f0-bf07-4fed-b412-479170fb3cf0.mp3-630bb34aead11c87317252be56d63e30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

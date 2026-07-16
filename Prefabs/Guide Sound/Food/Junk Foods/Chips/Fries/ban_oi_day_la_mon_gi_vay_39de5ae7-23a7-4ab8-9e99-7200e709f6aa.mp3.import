@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dag1wngvdhogq"
+path="res://.godot/imported/ban_oi_day_la_mon_gi_vay_39de5ae7-23a7-4ab8-9e99-7200e709f6aa.mp3-7aebc6a6bf78869d88001c3eabdf1343.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Fries/ban_oi_day_la_mon_gi_vay_39de5ae7-23a7-4ab8-9e99-7200e709f6aa.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_mon_gi_vay_39de5ae7-23a7-4ab8-9e99-7200e709f6aa.mp3-7aebc6a6bf78869d88001c3eabdf1343.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

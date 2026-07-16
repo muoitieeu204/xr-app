@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6vprcqnhx00n"
+path="res://.godot/imported/thu_nghi_lai_nha_ca_con_heo_da_lam_thit_treo_e9a235a2-13e9-481a-b3af-b53d98af7919.mp3-5971a218b274e99e3cb5f62f824dd7a7.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PigCarcass/thu_nghi_lai_nha_ca_con_heo_da_lam_thit_treo_e9a235a2-13e9-481a-b3af-b53d98af7919.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_ca_con_heo_da_lam_thit_treo_e9a235a2-13e9-481a-b3af-b53d98af7919.mp3-5971a218b274e99e3cb5f62f824dd7a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

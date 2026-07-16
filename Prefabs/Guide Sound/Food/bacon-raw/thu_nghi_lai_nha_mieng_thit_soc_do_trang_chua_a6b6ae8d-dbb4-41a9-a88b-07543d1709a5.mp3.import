@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmfgb2ruv0whi"
+path="res://.godot/imported/thu_nghi_lai_nha_mieng_thit_soc_do_trang_chua_a6b6ae8d-dbb4-41a9-a88b-07543d1709a5.mp3-df7efa0c32b56b244dc48295816e037c.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bacon-raw/thu_nghi_lai_nha_mieng_thit_soc_do_trang_chua_a6b6ae8d-dbb4-41a9-a88b-07543d1709a5.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_mieng_thit_soc_do_trang_chua_a6b6ae8d-dbb4-41a9-a88b-07543d1709a5.mp3-df7efa0c32b56b244dc48295816e037c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

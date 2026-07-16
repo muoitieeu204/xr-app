@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnxi1vyx0y7hc"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_lon_kim_loai_dung_nuoc_co_8d69a8d3-955f-481a-ae68-36c2b3f7f7cd.mp3-df27bff8af91eff8566dee43be17ae02.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/SodaCan/thu_nghi_lai_nha_cai_lon_kim_loai_dung_nuoc_co_8d69a8d3-955f-481a-ae68-36c2b3f7f7cd.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_lon_kim_loai_dung_nuoc_co_8d69a8d3-955f-481a-ae68-36c2b3f7f7cd.mp3-df27bff8af91eff8566dee43be17ae02.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

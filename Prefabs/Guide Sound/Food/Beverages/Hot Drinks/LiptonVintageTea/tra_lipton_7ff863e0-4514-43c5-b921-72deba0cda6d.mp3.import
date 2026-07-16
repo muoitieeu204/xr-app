@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dt42y5ra53khy"
+path="res://.godot/imported/tra_lipton_7ff863e0-4514-43c5-b921-72deba0cda6d.mp3-f2398d72545a926b73ff5da7cbe0d6d6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/LiptonVintageTea/tra_lipton_7ff863e0-4514-43c5-b921-72deba0cda6d.mp3"
+dest_files=["res://.godot/imported/tra_lipton_7ff863e0-4514-43c5-b921-72deba0cda6d.mp3-f2398d72545a926b73ff5da7cbe0d6d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b38p3msdlmoww"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_a70e76ba-6b82-4975-85a1-84c611321657.mp3-eb453c188ec691f638d0b2454950995f.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/FakeChicken/ban_oi_day_la_cai_gi_vay_a70e76ba-6b82-4975-85a1-84c611321657.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_a70e76ba-6b82-4975-85a1-84c611321657.mp3-eb453c188ec691f638d0b2454950995f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyk41t2h863eq"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_41cb17b8-4233-48ff-8d20-ff2d2e3dafad.mp3-188e7b08003239242402791a030c43a5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Wine/ban_oi_day_la_cai_gi_vay_41cb17b8-4233-48ff-8d20-ff2d2e3dafad.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_41cb17b8-4233-48ff-8d20-ff2d2e3dafad.mp3-188e7b08003239242402791a030c43a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

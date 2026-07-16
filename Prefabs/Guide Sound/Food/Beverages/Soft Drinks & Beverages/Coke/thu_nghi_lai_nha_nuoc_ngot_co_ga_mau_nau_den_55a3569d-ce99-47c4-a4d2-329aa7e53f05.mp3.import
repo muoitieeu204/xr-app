@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpv3e6dmtseyj"
+path="res://.godot/imported/thu_nghi_lai_nha_nuoc_ngot_co_ga_mau_nau_den_55a3569d-ce99-47c4-a4d2-329aa7e53f05.mp3-aa572ad8d3f5869beb8e449c4c44132e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/thu_nghi_lai_nha_nuoc_ngot_co_ga_mau_nau_den_55a3569d-ce99-47c4-a4d2-329aa7e53f05.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_nuoc_ngot_co_ga_mau_nau_den_55a3569d-ce99-47c4-a4d2-329aa7e53f05.mp3-aa572ad8d3f5869beb8e449c4c44132e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://uxed2fhnknlo"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_cet27"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_cet27"]
 [ext_resource type="PackedScene" uid="uid://byrgmwurc03ag" path="res://Assets/kenney_food-kit/CartonSmallPickable.tscn" id="2_ovwvi"]
 [ext_resource type="Texture2D" uid="uid://c1x6jy5sf5emi" path="res://Assets/kenney_food-kit/Previews/carton-small.png" id="3_ovwvi"]
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="3_pbtwy"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvtvhadreri7b"
+path="res://.godot/imported/thu_nghi_lai_nha_qua_vo_san_vang_nau_co_chum_la_c226683d-9a39-4b83-adfb-f6255d48d79d.mp3-019d9fa5c7f31e7b0afc46ceab0285b9.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pineapple/thu_nghi_lai_nha_qua_vo_san_vang_nau_co_chum_la_c226683d-9a39-4b83-adfb-f6255d48d79d.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_qua_vo_san_vang_nau_co_chum_la_c226683d-9a39-4b83-adfb-f6255d48d79d.mp3-019d9fa5c7f31e7b0afc46ceab0285b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

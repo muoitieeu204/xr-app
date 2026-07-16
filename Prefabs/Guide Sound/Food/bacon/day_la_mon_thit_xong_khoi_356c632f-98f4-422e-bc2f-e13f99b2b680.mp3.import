@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://voo885s5mex0"
+path="res://.godot/imported/day_la_mon_thit_xong_khoi_356c632f-98f4-422e-bc2f-e13f99b2b680.mp3-fd0bdd99e6909a68b21e37f8de98038c.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bacon/day_la_mon_thit_xong_khoi_356c632f-98f4-422e-bc2f-e13f99b2b680.mp3"
+dest_files=["res://.godot/imported/day_la_mon_thit_xong_khoi_356c632f-98f4-422e-bc2f-e13f99b2b680.mp3-fd0bdd99e6909a68b21e37f8de98038c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

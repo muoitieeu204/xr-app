@@ -1,6 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://djmys4bj6qmku"]
 
-[ext_resource type="Script" uid="uid://rnp6je1i4gsg" path="res://Prefabs/UI/WelcomeScene.gd" id="1_upf63"]
+[ext_resource type="Script" uid="uid://rnp6je1i4gsg" path="res://scripts/UI Script/WelcomeScene.gd" id="1_upf63"]
+
+
 
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]

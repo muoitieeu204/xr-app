@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfwduaupx3ldu"
+path="res://.godot/imported/toi_la_nhung_lat_mong_gion_dung_trong_tui_an_e716937b-739c-428f-a4b0-21f2153ce255.mp3-4be42468ad232a5b5b3d1f269756cc93.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Chips1/toi_la_nhung_lat_mong_gion_dung_trong_tui_an_e716937b-739c-428f-a4b0-21f2153ce255.mp3"
+dest_files=["res://.godot/imported/toi_la_nhung_lat_mong_gion_dung_trong_tui_an_e716937b-739c-428f-a4b0-21f2153ce255.mp3-4be42468ad232a5b5b3d1f269756cc93.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

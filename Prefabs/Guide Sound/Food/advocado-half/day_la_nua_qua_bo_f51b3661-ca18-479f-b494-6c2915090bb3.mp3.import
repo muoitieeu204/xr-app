@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c51bgriucyfha"
+path="res://.godot/imported/day_la_nua_qua_bo_f51b3661-ca18-479f-b494-6c2915090bb3.mp3-cb017f87105ade89db759c276cf8739f.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/advocado-half/day_la_nua_qua_bo_f51b3661-ca18-479f-b494-6c2915090bb3.mp3"
+dest_files=["res://.godot/imported/day_la_nua_qua_bo_f51b3661-ca18-479f-b494-6c2915090bb3.mp3-cb017f87105ade89db759c276cf8739f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

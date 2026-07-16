@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bk06mutxpr3pw"
+path="res://.godot/imported/day_la_nua_qua_tao_24af5fc6-ceb9-481d-b97a-a056572ec022.mp3-732d56d9f957d52b03b67b9341c259d3.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/apple-half/day_la_nua_qua_tao_24af5fc6-ceb9-481d-b97a-a056572ec022.mp3"
+dest_files=["res://.godot/imported/day_la_nua_qua_tao_24af5fc6-ceb9-481d-b97a-a056572ec022.mp3-732d56d9f957d52b03b67b9341c259d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

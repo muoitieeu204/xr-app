@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfbbe5v24e168"
+path="res://.godot/imported/toi_la_loai_tra_co_mui_thom_cua_xoai_uong_ngot_6dd5129a-6b26-4384-8c08-f7c3530a7619.mp3-ca192703b9f9c9602c02f166e2ba575a.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/MangoTea/toi_la_loai_tra_co_mui_thom_cua_xoai_uong_ngot_6dd5129a-6b26-4384-8c08-f7c3530a7619.mp3"
+dest_files=["res://.godot/imported/toi_la_loai_tra_co_mui_thom_cua_xoai_uong_ngot_6dd5129a-6b26-4384-8c08-f7c3530a7619.mp3-ca192703b9f9c9602c02f166e2ba575a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

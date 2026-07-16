@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://r36fpoe6i2l8"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_a371a6d4-ac49-4d2f-b546-1a32ef1550c6.mp3-29bd5ac64e04e767dee61d6159188613.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PackOfSausages/ban_oi_day_la_cai_gi_vay_a371a6d4-ac49-4d2f-b546-1a32ef1550c6.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_a371a6d4-ac49-4d2f-b546-1a32ef1550c6.mp3-29bd5ac64e04e767dee61d6159188613.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

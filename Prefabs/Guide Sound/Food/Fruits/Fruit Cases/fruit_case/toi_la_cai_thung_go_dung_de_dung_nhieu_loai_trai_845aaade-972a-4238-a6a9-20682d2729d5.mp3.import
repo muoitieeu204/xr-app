@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg0xlh1pee5o"
+path="res://.godot/imported/toi_la_cai_thung_go_dung_de_dung_nhieu_loai_trai_845aaade-972a-4238-a6a9-20682d2729d5.mp3-3921c255ff61e97ffbddb552c35b5cf9.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruit Cases/fruit_case/toi_la_cai_thung_go_dung_de_dung_nhieu_loai_trai_845aaade-972a-4238-a6a9-20682d2729d5.mp3"
+dest_files=["res://.godot/imported/toi_la_cai_thung_go_dung_de_dung_nhieu_loai_trai_845aaade-972a-4238-a6a9-20682d2729d5.mp3-3921c255ff61e97ffbddb552c35b5cf9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

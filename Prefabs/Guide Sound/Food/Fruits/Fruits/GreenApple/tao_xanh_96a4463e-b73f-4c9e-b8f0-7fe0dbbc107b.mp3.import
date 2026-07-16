@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://g42q3pens8a6"
+path="res://.godot/imported/tao_xanh_96a4463e-b73f-4c9e-b8f0-7fe0dbbc107b.mp3-c155421da20f1ee8f13ddb42b5f8d394.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/GreenApple/tao_xanh_96a4463e-b73f-4c9e-b8f0-7fe0dbbc107b.mp3"
+dest_files=["res://.godot/imported/tao_xanh_96a4463e-b73f-4c9e-b8f0-7fe0dbbc107b.mp3-c155421da20f1ee8f13ddb42b5f8d394.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

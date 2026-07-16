@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cr0xax88dykjb"
+path="res://.godot/imported/bao_thuoc_la_b94ed98e-1f93-461f-a02e-103cf2c793ae.mp3-6f395a376bc8a10a0e00e3c54ed3ff30.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Cigarette1/bao_thuoc_la_b94ed98e-1f93-461f-a02e-103cf2c793ae.mp3"
+dest_files=["res://.godot/imported/bao_thuoc_la_b94ed98e-1f93-461f-a02e-103cf2c793ae.mp3-6f395a376bc8a10a0e00e3c54ed3ff30.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

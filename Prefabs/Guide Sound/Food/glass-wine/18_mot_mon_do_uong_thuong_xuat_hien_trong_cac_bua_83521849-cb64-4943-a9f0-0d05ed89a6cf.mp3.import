@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnlqh6qyxwf37"
+path="res://.godot/imported/18_mot_mon_do_uong_thuong_xuat_hien_trong_cac_bua_83521849-cb64-4943-a9f0-0d05ed89a6cf.mp3-a05cc07cdc604b826a2e9b354e5f9628.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/glass-wine/18_mot_mon_do_uong_thuong_xuat_hien_trong_cac_bua_83521849-cb64-4943-a9f0-0d05ed89a6cf.mp3"
+dest_files=["res://.godot/imported/18_mot_mon_do_uong_thuong_xuat_hien_trong_cac_bua_83521849-cb64-4943-a9f0-0d05ed89a6cf.mp3-a05cc07cdc604b826a2e9b354e5f9628.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

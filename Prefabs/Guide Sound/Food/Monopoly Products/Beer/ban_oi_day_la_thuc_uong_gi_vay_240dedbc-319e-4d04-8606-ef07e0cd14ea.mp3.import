@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2bh1hm7cog53"
+path="res://.godot/imported/ban_oi_day_la_thuc_uong_gi_vay_240dedbc-319e-4d04-8606-ef07e0cd14ea.mp3-200d82a4fab008a12ccf4cbefc2a7cdc.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Beer/ban_oi_day_la_thuc_uong_gi_vay_240dedbc-319e-4d04-8606-ef07e0cd14ea.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_thuc_uong_gi_vay_240dedbc-319e-4d04-8606-ef07e0cd14ea.mp3-200d82a4fab008a12ccf4cbefc2a7cdc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

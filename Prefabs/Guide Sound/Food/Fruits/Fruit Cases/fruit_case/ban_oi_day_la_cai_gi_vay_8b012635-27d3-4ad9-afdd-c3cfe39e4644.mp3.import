@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dk4j83aqrgtj7"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_8b012635-27d3-4ad9-afdd-c3cfe39e4644.mp3-b0a21d0de9519e9e25d2efccf251ed53.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruit Cases/fruit_case/ban_oi_day_la_cai_gi_vay_8b012635-27d3-4ad9-afdd-c3cfe39e4644.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_8b012635-27d3-4ad9-afdd-c3cfe39e4644.mp3-b0a21d0de9519e9e25d2efccf251ed53.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

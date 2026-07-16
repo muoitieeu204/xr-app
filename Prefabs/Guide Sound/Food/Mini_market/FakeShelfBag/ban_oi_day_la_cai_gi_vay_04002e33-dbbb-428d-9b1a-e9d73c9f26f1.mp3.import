@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6451shbcbw8c"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_04002e33-dbbb-428d-9b1a-e9d73c9f26f1.mp3-ab7bc032f2ba04f0ac5f1cc7a50edd82.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeShelfBag/ban_oi_day_la_cai_gi_vay_04002e33-dbbb-428d-9b1a-e9d73c9f26f1.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_04002e33-dbbb-428d-9b1a-e9d73c9f26f1.mp3-ab7bc032f2ba04f0ac5f1cc7a50edd82.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

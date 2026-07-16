@@ -1,4 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://xt5ao31gteux"]
+[gd_scene load_steps=15 format=3 uid="uid://xt5ao31gteux"]
+
+[ext_resource type="Texture2D" uid="uid://b8ihcxak4vs0m" path="res://Assets/kenney_input-prompts_1.5/Meta Quest/Double/quest_button_menu.png" id="1_jap8d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v80bs"]
 font_size = 32
@@ -49,6 +51,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -91,7 +94,7 @@ texture = SubResource("AtlasTexture_v80bs")
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "Joystick Phải: Nhìn"
+text = "Joystick Phải: Xoay camera nhìn"
 label_settings = SubResource("LabelSettings_tpkxc")
 
 [node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
@@ -121,3 +124,14 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = SubResource("AtlasTexture_k6amc")
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Nút Menu: Mở menu/Pause game"
+label_settings = SubResource("LabelSettings_nyhtu")
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_jap8d")

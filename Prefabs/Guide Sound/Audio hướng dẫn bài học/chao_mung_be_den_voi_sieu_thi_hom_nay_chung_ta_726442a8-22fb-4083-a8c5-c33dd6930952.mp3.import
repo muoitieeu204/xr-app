@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dytpkauln2v73"
+path="res://.godot/imported/chao_mung_be_den_voi_sieu_thi_hom_nay_chung_ta_726442a8-22fb-4083-a8c5-c33dd6930952.mp3-2f85f0fb6d03509b6326e47945262342.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/chao_mung_be_den_voi_sieu_thi_hom_nay_chung_ta_726442a8-22fb-4083-a8c5-c33dd6930952.mp3"
+dest_files=["res://.godot/imported/chao_mung_be_den_voi_sieu_thi_hom_nay_chung_ta_726442a8-22fb-4083-a8c5-c33dd6930952.mp3-2f85f0fb6d03509b6326e47945262342.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

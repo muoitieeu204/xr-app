@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4uim8ucnwyxj"
+path="res://.godot/imported/19_qua_ca_chua_4e22b574-e5a3-450a-bc57-a34d6354f411.mp3-0f64c29f63b2bd917b5e0cc82aaa369d.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Tomato/19_qua_ca_chua_4e22b574-e5a3-450a-bc57-a34d6354f411.mp3"
+dest_files=["res://.godot/imported/19_qua_ca_chua_4e22b574-e5a3-450a-bc57-a34d6354f411.mp3-0f64c29f63b2bd917b5e0cc82aaa369d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

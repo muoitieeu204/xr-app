@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://m3lnl42vrvph"
+path="res://.godot/imported/thu_nghi_lai_nha_cu_tron_mau_do_tim_moc_duoi_a13fcf30-4884-48ea-b7b6-890193e00e70.mp3-262dff9c5f3766d40526af52a7a08f50.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/beet/thu_nghi_lai_nha_cu_tron_mau_do_tim_moc_duoi_a13fcf30-4884-48ea-b7b6-890193e00e70.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cu_tron_mau_do_tim_moc_duoi_a13fcf30-4884-48ea-b7b6-890193e00e70.mp3-262dff9c5f3766d40526af52a7a08f50.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cb4st7km0nnuy"]
 
 [ext_resource type="Texture2D" uid="uid://bafj8i136cogh" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/button_grey.png" id="2_t4etl"]
-[ext_resource type="PackedScene" uid="uid://b6jji0b685hmk" path="res://Prefabs/VoiceCommandHandler.tscn" id="3_t4etl"]
+[ext_resource type="PackedScene" uid="uid://b6jji0b685hmk" path="res://scripts/Environment Script/VoiceCommandHandler.tscn" id="3_t4etl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dew7a"]
 atlas = ExtResource("2_t4etl")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cawujiothkj44"
+path="res://.godot/imported/hop_sua_e17eef6d-628d-4b54-adf9-7c61de45c715.mp3-a70c6b57b9c473168f1eb00be8271c29.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Milk Products/MilkCarton/hop_sua_e17eef6d-628d-4b54-adf9-7c61de45c715.mp3"
+dest_files=["res://.godot/imported/hop_sua_e17eef6d-628d-4b54-adf9-7c61de45c715.mp3-a70c6b57b9c473168f1eb00be8271c29.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

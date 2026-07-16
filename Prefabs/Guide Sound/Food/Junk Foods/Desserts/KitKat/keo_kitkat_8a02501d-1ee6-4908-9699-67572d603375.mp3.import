@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbjc1ajpjjlgv"
+path="res://.godot/imported/keo_kitkat_8a02501d-1ee6-4908-9699-67572d603375.mp3-bab1b4dbf25438b9c301bc640b1eb8af.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Desserts/KitKat/keo_kitkat_8a02501d-1ee6-4908-9699-67572d603375.mp3"
+dest_files=["res://.godot/imported/keo_kitkat_8a02501d-1ee6-4908-9699-67572d603375.mp3-bab1b4dbf25438b9c301bc640b1eb8af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

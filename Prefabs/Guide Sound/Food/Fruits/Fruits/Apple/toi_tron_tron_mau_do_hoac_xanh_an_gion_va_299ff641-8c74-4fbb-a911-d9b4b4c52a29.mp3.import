@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b48bukbckyll8"
+path="res://.godot/imported/toi_tron_tron_mau_do_hoac_xanh_an_gion_va_299ff641-8c74-4fbb-a911-d9b4b4c52a29.mp3-44a3cf1535b60fd4d7832822b1ec8671.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Apple/toi_tron_tron_mau_do_hoac_xanh_an_gion_va_299ff641-8c74-4fbb-a911-d9b4b4c52a29.mp3"
+dest_files=["res://.godot/imported/toi_tron_tron_mau_do_hoac_xanh_an_gion_va_299ff641-8c74-4fbb-a911-d9b4b4c52a29.mp3-44a3cf1535b60fd4d7832822b1ec8671.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

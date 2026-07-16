@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://db7oexrhvkkg4"
+path="res://.godot/imported/12_do_ban_biet_day_la_hop_nuoc_ep_vi_gi_nao_bat_mi_156c845f-5280-4072-bf04-e4c248718b00.mp3-05d29c292ec60d8d7be6a9b402217bb3.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeCarton2/12_do_ban_biet_day_la_hop_nuoc_ep_vi_gi_nao_bat_mi_156c845f-5280-4072-bf04-e4c248718b00.mp3"
+dest_files=["res://.godot/imported/12_do_ban_biet_day_la_hop_nuoc_ep_vi_gi_nao_bat_mi_156c845f-5280-4072-bf04-e4c248718b00.mp3-05d29c292ec60d8d7be6a9b402217bb3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

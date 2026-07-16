@@ -1,9 +1,12 @@
-[gd_scene load_steps=23 format=4 uid="uid://dp1q2xtpkipiq"]
+[gd_scene load_steps=26 format=4 uid="uid://dp1q2xtpkipiq"]
 
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="1_7sgy3"]
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_k6am5"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_k6am5"]
 [ext_resource type="PackedScene" uid="uid://ds164i4dxlvia" path="res://Assets/kenney_food-kit/WatermelonPickable.tscn" id="2_bdeco"]
-[ext_resource type="Texture2D" uid="uid://chg8xixfkgore" path="res://Assets/kenney_food-kit/Previews/watermelon.png" id="3_o4pqv"]
+[ext_resource type="AudioStream" uid="uid://cev7r6iognh3n" path="res://Prefabs/Guide Sound/Food/Watermelon/23_trai_dua_hau_73f7f004-50bd-41f5-8d7e-caf3280a0a79.mp3" id="3_woud5"]
+[ext_resource type="AudioStream" uid="uid://5f0s0j06xdv8" path="res://Prefabs/Guide Sound/Food/Watermelon/ban_nghi_lai_xem_qua_vo_xanh_ruot_do_nay_ten_la_d8598a3d-9afd-46bc-8e69-2d2a5f8a33b9.mp3" id="4_0oee0"]
+[ext_resource type="AudioStream" uid="uid://c6vvxlj10s5f6" path="res://Prefabs/Guide Sound/Food/Watermelon/toi_co_vo_xanh_ruot_do_an_mua_he_rat_mat_1b49f953-f027-4e15-bd08-61c2f6665c0b.mp3" id="5_4kmaq"]
+[ext_resource type="AudioStream" uid="uid://b313qr8q4w56x" path="res://Prefabs/Guide Sound/Food/Watermelon/toi_la_qua_to_ben_trong_do_ngot_mat_3a21201c-5ac2-44c5-9440-b59dae035f2e.mp3" id="6_lcu7w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3oack"]
 resource_name = "colormap"
@@ -271,10 +274,13 @@ shadow_mesh = SubResource("ArrayMesh_2kmvv")
 radius = 0.13368724
 
 [node name="FakeWatermelon" type="Area3D"]
+collision_layer = 5
+collision_mask = 196613
 script = ExtResource("1_k6am5")
 realItem = ExtResource("2_bdeco")
-itemId = "trái dưa hấu"
-itemIcon = ExtResource("3_o4pqv")
+itemName = "trái dưa hấu"
+itemNameSound = ExtResource("3_woud5")
+hintAudios = Array[AudioStream]([ExtResource("4_0oee0"), ExtResource("5_4kmaq"), ExtResource("6_lcu7w")])
 
 [node name="watermelon" type="Node3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

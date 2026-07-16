@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://bf5dv27pogb3i"]
+[gd_scene load_steps=12 format=4 uid="uid://bf5dv27pogb3i"]
 
-[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_3ij1q"]
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_3ij1q"]
 [ext_resource type="Texture2D" uid="uid://douedg63l57mx" path="res://Assets/kenney_food-kit/Models/GLB format/Textures/colormap.png" id="1_fnary"]
 [ext_resource type="PackedScene" uid="uid://decsnsqx8xytn" path="res://Assets/kenney_food-kit/TomatoPickable.tscn" id="2_5b3b0"]
-[ext_resource type="Texture2D" uid="uid://bdto0l37plam6" path="res://Assets/kenney_food-kit/Previews/tomato.png" id="3_jbqgw"]
+[ext_resource type="AudioStream" uid="uid://c4uim8ucnwyxj" path="res://Prefabs/Guide Sound/Food/Tomato/19_qua_ca_chua_4e22b574-e5a3-450a-bc57-a34d6354f411.mp3" id="3_av704"]
+[ext_resource type="AudioStream" uid="uid://csqtfqqppr8nk" path="res://Prefabs/Guide Sound/Food/Tomato/thu_nghi_lai_nha_qua_do_tron_nay_ten_la_gi_ceb315ec-993a-4f15-b0a7-a9ac86464282.mp3" id="4_2jfje"]
+[ext_resource type="AudioStream" uid="uid://dptivcqcovlwg" path="res://Prefabs/Guide Sound/Food/Tomato/toi_la_qua_mau_do_tron_tron_74b12fba-2422-42de-b2d8-d775d764cdaa.mp3" id="5_kkxrx"]
+[ext_resource type="AudioStream" uid="uid://b62fsttbdw6oi" path="res://Prefabs/Guide Sound/Food/Tomato/toi_mau_do_tron_va_thuong_dung_nau_canh_48463678-e6cb-451a-89a8-b89773bc0b37.mp3" id="6_yse5c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26r6u"]
 resource_name = "colormap"
@@ -49,10 +52,13 @@ shadow_mesh = SubResource("ArrayMesh_jbqgw")
 radius = 0.062948376
 
 [node name="FakeTomato" type="Area3D"]
+collision_layer = 5
+collision_mask = 196613
 script = ExtResource("1_3ij1q")
 realItem = ExtResource("2_5b3b0")
-itemId = "quả cà chua"
-itemIcon = ExtResource("3_jbqgw")
+itemName = "quả cà chua"
+itemNameSound = ExtResource("3_av704")
+hintAudios = Array[AudioStream]([ExtResource("4_2jfje"), ExtResource("5_kkxrx"), ExtResource("6_yse5c")])
 
 [node name="tomato" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)

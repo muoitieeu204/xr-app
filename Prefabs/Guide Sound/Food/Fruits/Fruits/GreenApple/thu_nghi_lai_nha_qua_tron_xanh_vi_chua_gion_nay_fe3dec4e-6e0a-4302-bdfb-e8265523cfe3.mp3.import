@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bb13u62r415cj"
+path="res://.godot/imported/thu_nghi_lai_nha_qua_tron_xanh_vi_chua_gion_nay_fe3dec4e-6e0a-4302-bdfb-e8265523cfe3.mp3-4671957db0a4b507bd4579726aa14c33.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/GreenApple/thu_nghi_lai_nha_qua_tron_xanh_vi_chua_gion_nay_fe3dec4e-6e0a-4302-bdfb-e8265523cfe3.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_qua_tron_xanh_vi_chua_gion_nay_fe3dec4e-6e0a-4302-bdfb-e8265523cfe3.mp3-4671957db0a4b507bd4579726aa14c33.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

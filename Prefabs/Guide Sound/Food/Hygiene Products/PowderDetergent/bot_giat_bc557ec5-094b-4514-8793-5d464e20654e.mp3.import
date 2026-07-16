@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kmy3ymqw8fsh"
+path="res://.godot/imported/bot_giat_bc557ec5-094b-4514-8793-5d464e20654e.mp3-92c949817c93f24116d0e8fc095e1d51.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Hygiene Products/PowderDetergent/bot_giat_bc557ec5-094b-4514-8793-5d464e20654e.mp3"
+dest_files=["res://.godot/imported/bot_giat_bc557ec5-094b-4514-8793-5d464e20654e.mp3-92c949817c93f24116d0e8fc095e1d51.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

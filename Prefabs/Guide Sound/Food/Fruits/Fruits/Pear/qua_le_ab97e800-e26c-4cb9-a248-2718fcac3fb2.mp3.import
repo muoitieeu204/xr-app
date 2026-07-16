@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djt3r11h5w81l"
+path="res://.godot/imported/qua_le_ab97e800-e26c-4cb9-a248-2718fcac3fb2.mp3-4cdc3f2a7944dec49e1220c2f0f688ae.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pear/qua_le_ab97e800-e26c-4cb9-a248-2718fcac3fb2.mp3"
+dest_files=["res://.godot/imported/qua_le_ab97e800-e26c-4cb9-a248-2718fcac3fb2.mp3-4cdc3f2a7944dec49e1220c2f0f688ae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

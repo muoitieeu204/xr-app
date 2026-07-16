@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxxrljf07lmgt"
+path="res://.godot/imported/ruou_vodka_8b0c90be-6e97-443a-9481-3672f6139f19.mp3-c215e3e6746eeb898216ed7db925a4ae.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Vodka/ruou_vodka_8b0c90be-6e97-443a-9481-3672f6139f19.mp3"
+dest_files=["res://.godot/imported/ruou_vodka_8b0c90be-6e97-443a-9481-3672f6139f19.mp3-c215e3e6746eeb898216ed7db925a4ae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

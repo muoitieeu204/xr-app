@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlnpypu1jq80b"
+path="res://.godot/imported/thu_nghi_lai_nha_chai_chat_long_trong_suot_rat_b241177d-34a3-4e20-8d52-746ed37e5a07.mp3-b1363da87ddb892babbcf7dad4e1e567.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Vodka/thu_nghi_lai_nha_chai_chat_long_trong_suot_rat_b241177d-34a3-4e20-8d52-746ed37e5a07.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_chai_chat_long_trong_suot_rat_b241177d-34a3-4e20-8d52-746ed37e5a07.mp3-b1363da87ddb892babbcf7dad4e1e567.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb72whbh2lhan"
+path="res://.godot/imported/thu_nghi_lai_nha_pho_mai_co_dom_xanh_moc_mui_3d9f5f61-644d-49f2-9077-213c9880b33f.mp3-759ad33f04910ef6dfd6ec764628e18a.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Milk Products/BlueCheese/thu_nghi_lai_nha_pho_mai_co_dom_xanh_moc_mui_3d9f5f61-644d-49f2-9077-213c9880b33f.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_pho_mai_co_dom_xanh_moc_mui_3d9f5f61-644d-49f2-9077-213c9880b33f.mp3-759ad33f04910ef6dfd6ec764628e18a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

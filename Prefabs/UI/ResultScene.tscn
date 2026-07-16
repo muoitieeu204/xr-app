@@ -1,0 +1,221 @@
+[gd_scene load_steps=15 format=3 uid="uid://ifitwicr1j4h"]
+
+[ext_resource type="Texture2D" uid="uid://daebid8iytn0y" path="res://Assets/kenney_input-prompts_1.5/Meta Quest/Default/quest_button_menu_outline.png" id="1_7wyvq"]
+[ext_resource type="Script" uid="uid://bvhkeujc6gmfb" path="res://scripts/UI Script/PromptFlicker.gd" id="1_42nhs"]
+
+[sub_resource type="Gradient" id="Gradient_qq24o"]
+colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qvbay"]
+gradient = SubResource("Gradient_qq24o")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_2mxg4"]
+colors = PackedColorArray(1, 0.556863, 0.556863, 0.25098, 1, 0.556863, 0.556863, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7wyvq"]
+gradient = SubResource("Gradient_2mxg4")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylf5s"]
+content_margin_left = 48.0
+content_margin_top = 48.0
+content_margin_right = 48.0
+content_margin_bottom = 48.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.04)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_sparkles"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.9, 0.5, 0, 1, 0.9, 0.5, 0.6, 1, 0.85, 0.4, 0.6, 1, 0.85, 0.4, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jofw"]
+font_size = 26
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+outline_size = 8
+outline_color = Color(0.4, 0.2, 0.1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_score"]
+font_size = 48
+font_color = Color(0.305882, 0.67451, 0.686275, 1)
+outline_size = 4
+outline_color = Color(0.239216, 0.541176, 0.54902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jofw"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_top = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vktwn"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="ResultScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundDim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.992157, 0.960784, 0.627451)
+
+[node name="GlowTopRight" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -500.0
+offset_bottom = 500.0
+grow_horizontal = 0
+texture = SubResource("GradientTexture2D_qvbay")
+
+[node name="GlowBottomLeft" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -500.0
+offset_right = 500.0
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_7wyvq")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultBox" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(416, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ylf5s")
+
+[node name="SparkleParticles" type="CPUParticles2D" parent="CenterContainer/ResultBox"]
+position = Vector2(208, 203)
+amount = 18
+lifetime = 4.0
+preprocess = 4.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(190, 180)
+gravity = Vector2(0, -10)
+initial_velocity_min = 5.0
+initial_velocity_max = 12.0
+angular_velocity_min = -20.0
+angular_velocity_max = 20.0
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_scale")
+color_ramp = SubResource("Gradient_sparkles")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ResultBox"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "🏆 KẾT QUẢ 🏆"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="Spacing" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_score")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacing2" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="RetryButton" type="Button" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "🔄 Chơi Lại"
+
+[node name="Spacing3" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="PromptHBox" type="HBoxContainer" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+script = ExtResource("1_42nhs")
+
+[node name="MenuIcon" type="TextureRect" parent="CenterContainer/ResultBox/VBoxContainer/PromptHBox"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("1_7wyvq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel2" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/PromptHBox"]
+layout_mode = 2
+text = "Bấm nút menu để thoát màn hình"
+label_settings = SubResource("LabelSettings_4jofw")

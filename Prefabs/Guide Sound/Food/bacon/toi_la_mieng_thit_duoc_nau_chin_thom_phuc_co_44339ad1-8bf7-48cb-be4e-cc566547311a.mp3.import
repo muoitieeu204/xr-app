@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djge8d18y3q2v"
+path="res://.godot/imported/toi_la_mieng_thit_duoc_nau_chin_thom_phuc_co_44339ad1-8bf7-48cb-be4e-cc566547311a.mp3-85ad193eb544fa0528d83f33d967bc81.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bacon/toi_la_mieng_thit_duoc_nau_chin_thom_phuc_co_44339ad1-8bf7-48cb-be4e-cc566547311a.mp3"
+dest_files=["res://.godot/imported/toi_la_mieng_thit_duoc_nau_chin_thom_phuc_co_44339ad1-8bf7-48cb-be4e-cc566547311a.mp3-85ad193eb544fa0528d83f33d967bc81.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbw2nj5e0j57i"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_tui_dung_banh_mau_vang_nay_17a2df0a-f92f-4c1a-b49d-4dc25e2e26d7.mp3-3d4e1d60177115df2366fd586e9ddc5e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBag/thu_nghi_lai_nha_cai_tui_dung_banh_mau_vang_nay_17a2df0a-f92f-4c1a-b49d-4dc25e2e26d7.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_tui_dung_banh_mau_vang_nay_17a2df0a-f92f-4c1a-b49d-4dc25e2e26d7.mp3-3d4e1d60177115df2366fd586e9ddc5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
