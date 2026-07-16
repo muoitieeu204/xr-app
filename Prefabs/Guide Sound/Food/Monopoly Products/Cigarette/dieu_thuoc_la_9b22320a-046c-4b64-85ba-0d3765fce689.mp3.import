@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6bknrw1l55cx"
+path="res://.godot/imported/dieu_thuoc_la_9b22320a-046c-4b64-85ba-0d3765fce689.mp3-f7101a061ef53e60840bf0e8ccc077d5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Cigarette/dieu_thuoc_la_9b22320a-046c-4b64-85ba-0d3765fce689.mp3"
+dest_files=["res://.godot/imported/dieu_thuoc_la_9b22320a-046c-4b64-85ba-0d3765fce689.mp3-f7101a061ef53e60840bf0e8ccc077d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

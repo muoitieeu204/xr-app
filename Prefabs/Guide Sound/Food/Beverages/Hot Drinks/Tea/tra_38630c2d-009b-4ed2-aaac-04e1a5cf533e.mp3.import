@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5fvwsbacikus"
+path="res://.godot/imported/tra_38630c2d-009b-4ed2-aaac-04e1a5cf533e.mp3-81341428766acc1592e83e2e5ef6364c.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/Tea/tra_38630c2d-009b-4ed2-aaac-04e1a5cf533e.mp3"
+dest_files=["res://.godot/imported/tra_38630c2d-009b-4ed2-aaac-04e1a5cf533e.mp3-81341428766acc1592e83e2e5ef6364c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

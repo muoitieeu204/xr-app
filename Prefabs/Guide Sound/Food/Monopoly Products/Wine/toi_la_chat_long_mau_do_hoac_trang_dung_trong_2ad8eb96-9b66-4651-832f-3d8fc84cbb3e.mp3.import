@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsobb7ufhooav"
+path="res://.godot/imported/toi_la_chat_long_mau_do_hoac_trang_dung_trong_2ad8eb96-9b66-4651-832f-3d8fc84cbb3e.mp3-0401091a8295dd79d353eab3d999a23e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Wine/toi_la_chat_long_mau_do_hoac_trang_dung_trong_2ad8eb96-9b66-4651-832f-3d8fc84cbb3e.mp3"
+dest_files=["res://.godot/imported/toi_la_chat_long_mau_do_hoac_trang_dung_trong_2ad8eb96-9b66-4651-832f-3d8fc84cbb3e.mp3-0401091a8295dd79d353eab3d999a23e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

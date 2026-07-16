@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://couxpk2i13p4j"
+path="res://.godot/imported/ban_oi_day_la_qua_gi_vay_5105ff5d-4f59-4469-b1d2-3dbaffeed13a.mp3-2ba3132577f71a999875f569c21145a1.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Apple/ban_oi_day_la_qua_gi_vay_5105ff5d-4f59-4469-b1d2-3dbaffeed13a.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_qua_gi_vay_5105ff5d-4f59-4469-b1d2-3dbaffeed13a.mp3-2ba3132577f71a999875f569c21145a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp6qbcw8riv73"
+path="res://.godot/imported/toi_co_vo_san_sui_mau_vang_nau_phia_tren_co_chum_412ef2ec-c6b3-4b52-b6d4-0a527f5d5df4.mp3-5359bca73f6f44d81c35defda25ccbec.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pineapple/toi_co_vo_san_sui_mau_vang_nau_phia_tren_co_chum_412ef2ec-c6b3-4b52-b6d4-0a527f5d5df4.mp3"
+dest_files=["res://.godot/imported/toi_co_vo_san_sui_mau_vang_nau_phia_tren_co_chum_412ef2ec-c6b3-4b52-b6d4-0a527f5d5df4.mp3-5359bca73f6f44d81c35defda25ccbec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

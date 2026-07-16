@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d23rnmupgvhql"]
+
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_oguan"]
+[ext_resource type="PackedScene" uid="uid://doil6wxunl4f4" path="res://Assets/3D Models For Supermarket/Animal Products/SausagesPackagePickable.tscn" id="2_cql81"]
+[ext_resource type="PackedScene" uid="uid://c28wiihb4tvwh" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/PackOfSausages.glb" id="3_77g5m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hgley"]
+size = Vector3(0.16217041, 0.04437256, 0.10345459)
+
+[node name="SausagesPackage" type="Area3D"]
+script = ExtResource("1_oguan")
+realItem = ExtResource("2_cql81")
+itemName = "túi xúc xích"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00088500977, -0.0105896, 0.0013122559)
+shape = SubResource("BoxShape3D_hgley")
+
+[node name="SausagesPackage" parent="." instance=ExtResource("3_77g5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00088500977, -0.0105896, 0.0013122559)

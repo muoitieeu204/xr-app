@@ -51,7 +51,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v0la0")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_af4od"]
-size = Vector3(0.5595703, 0.5751953, 1)
+size = Vector3(0.40655518, 0.10574341, 0.79304314)
 
 [node name="cash-register2" type="StaticBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_7iebq")
@@ -69,7 +69,7 @@ skeleton = NodePath("")
 collision_mask = 196615
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RollerArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22021484, 0.21240234, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20071411, 0.2035675, -0.004374504)
 shape = SubResource("BoxShape3D_af4od")
 
 [connection signal="body_entered" from="RollerArea" to="." method="_on_roller_area_body_entered"]

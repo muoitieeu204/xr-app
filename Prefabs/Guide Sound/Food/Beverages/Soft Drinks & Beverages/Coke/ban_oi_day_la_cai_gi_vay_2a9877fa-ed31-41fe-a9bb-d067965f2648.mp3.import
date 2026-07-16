@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnib5in0omid8"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_2a9877fa-ed31-41fe-a9bb-d067965f2648.mp3-116f01873c975aa6e2f81c2e8693564f.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/ban_oi_day_la_cai_gi_vay_2a9877fa-ed31-41fe-a9bb-d067965f2648.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_2a9877fa-ed31-41fe-a9bb-d067965f2648.mp3-116f01873c975aa6e2f81c2e8693564f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

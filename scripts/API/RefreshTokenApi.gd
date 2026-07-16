@@ -53,7 +53,7 @@ func _do_refresh():
 		"accept: */*"
 	]
 	
-	http_request.set_tls_options(TLSOptions.client_unsafe())
+	# http_request.set_tls_options(TLSOptions.client_unsafe())
 	http_request.request(refresh_url, headers, HTTPClient.METHOD_POST, json_body)
 
 func _on_refresh_completed(result, responseCode, headers, body):

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bj15s71crgxc7"
+path="res://.godot/imported/toi_la_ca_mot_con_heo_da_duoc_lam_thit_treo_len_06d703da-a889-4008-99ec-598f8dc6d40d.mp3-828132bd4615cf7c2804e9983ad65873.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PigCarcass/toi_la_ca_mot_con_heo_da_duoc_lam_thit_treo_len_06d703da-a889-4008-99ec-598f8dc6d40d.mp3"
+dest_files=["res://.godot/imported/toi_la_ca_mot_con_heo_da_duoc_lam_thit_treo_len_06d703da-a889-4008-99ec-598f8dc6d40d.mp3-828132bd4615cf7c2804e9983ad65873.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

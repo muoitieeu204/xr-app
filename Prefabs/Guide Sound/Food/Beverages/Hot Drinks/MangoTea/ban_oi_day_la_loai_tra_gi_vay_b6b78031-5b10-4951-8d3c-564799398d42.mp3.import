@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqt2d2jb7up2u"
+path="res://.godot/imported/ban_oi_day_la_loai_tra_gi_vay_b6b78031-5b10-4951-8d3c-564799398d42.mp3-bebf2c9c284b44d367baf02a14b1a9c4.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/MangoTea/ban_oi_day_la_loai_tra_gi_vay_b6b78031-5b10-4951-8d3c-564799398d42.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_loai_tra_gi_vay_b6b78031-5b10-4951-8d3c-564799398d42.mp3-bebf2c9c284b44d367baf02a14b1a9c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

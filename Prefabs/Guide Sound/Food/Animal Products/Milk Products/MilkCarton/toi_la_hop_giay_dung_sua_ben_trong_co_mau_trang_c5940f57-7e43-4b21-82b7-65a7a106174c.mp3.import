@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvqbcvmdfu3sq"
+path="res://.godot/imported/toi_la_hop_giay_dung_sua_ben_trong_co_mau_trang_c5940f57-7e43-4b21-82b7-65a7a106174c.mp3-694bcd2300198645d04669deed65718e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Milk Products/MilkCarton/toi_la_hop_giay_dung_sua_ben_trong_co_mau_trang_c5940f57-7e43-4b21-82b7-65a7a106174c.mp3"
+dest_files=["res://.godot/imported/toi_la_hop_giay_dung_sua_ben_trong_co_mau_trang_c5940f57-7e43-4b21-82b7-65a7a106174c.mp3-694bcd2300198645d04669deed65718e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

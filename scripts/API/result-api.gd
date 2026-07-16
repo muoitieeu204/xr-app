@@ -45,7 +45,7 @@ func send_result(data_to_send: Dictionary) -> void:
 		"Content-Type: application/json"
 	]
 	
-	httpRequest.set_tls_options(TLSOptions.client_unsafe())
+	# httpRequest.set_tls_options(TLSOptions.client_unsafe())
 	var err = httpRequest.request(apiUrl, headers, HTTPClient.METHOD_POST, json)
 	if err != OK:
 		print("CRITICAL ERROR: Godot refused to send! Error Code: ", err)

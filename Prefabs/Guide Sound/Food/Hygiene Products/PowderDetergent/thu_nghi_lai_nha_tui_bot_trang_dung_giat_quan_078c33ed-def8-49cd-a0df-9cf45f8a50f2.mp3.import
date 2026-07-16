@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cad54isq1yiah"
+path="res://.godot/imported/thu_nghi_lai_nha_tui_bot_trang_dung_giat_quan_078c33ed-def8-49cd-a0df-9cf45f8a50f2.mp3-5b63994a6ab4bc261df7c6162c9fc87a.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Hygiene Products/PowderDetergent/thu_nghi_lai_nha_tui_bot_trang_dung_giat_quan_078c33ed-def8-49cd-a0df-9cf45f8a50f2.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_tui_bot_trang_dung_giat_quan_078c33ed-def8-49cd-a0df-9cf45f8a50f2.mp3-5b63994a6ab4bc261df7c6162c9fc87a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn5wnfvfyx8hx"
+path="res://.godot/imported/ruou_vang_f8d94239-4542-4ace-b8d5-a8b395feaedd.mp3-3fac25546e64be6f5a5e8c5bf82d0e6b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Wine/ruou_vang_f8d94239-4542-4ace-b8d5-a8b395feaedd.mp3"
+dest_files=["res://.godot/imported/ruou_vang_f8d94239-4542-4ace-b8d5-a8b395feaedd.mp3-3fac25546e64be6f5a5e8c5bf82d0e6b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

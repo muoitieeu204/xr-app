@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://53y08xqkfbah"
+path="res://.godot/imported/thu_nghi_lai_nha_con_biet_gay_buoi_sang_va_de_d1ca1911-a931-44bf-a57b-ec09abc52cd9.mp3-e406b5633e3e60da5fa15e515a1c2ece.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/Chicken/thu_nghi_lai_nha_con_biet_gay_buoi_sang_va_de_d1ca1911-a931-44bf-a57b-ec09abc52cd9.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_con_biet_gay_buoi_sang_va_de_d1ca1911-a931-44bf-a57b-ec09abc52cd9.mp3-e406b5633e3e60da5fa15e515a1c2ece.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

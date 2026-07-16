@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bykxxkf2ft860"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_e9817e7c-3543-4b83-872f-3fecb76d5db4.mp3-b1203c05fac80d74e8082646cbd1825b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Cigarette/ban_oi_day_la_cai_gi_vay_e9817e7c-3543-4b83-872f-3fecb76d5db4.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_e9817e7c-3543-4b83-872f-3fecb76d5db4.mp3-b1203c05fac80d74e8082646cbd1825b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

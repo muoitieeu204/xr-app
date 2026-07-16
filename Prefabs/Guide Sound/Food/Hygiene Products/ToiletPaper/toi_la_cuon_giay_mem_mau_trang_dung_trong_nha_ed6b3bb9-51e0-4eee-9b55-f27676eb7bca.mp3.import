@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b058gw7oyxbi3"
+path="res://.godot/imported/toi_la_cuon_giay_mem_mau_trang_dung_trong_nha_ed6b3bb9-51e0-4eee-9b55-f27676eb7bca.mp3-fd1757339ab996657d077e48393651b4.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Hygiene Products/ToiletPaper/toi_la_cuon_giay_mem_mau_trang_dung_trong_nha_ed6b3bb9-51e0-4eee-9b55-f27676eb7bca.mp3"
+dest_files=["res://.godot/imported/toi_la_cuon_giay_mem_mau_trang_dung_trong_nha_ed6b3bb9-51e0-4eee-9b55-f27676eb7bca.mp3-fd1757339ab996657d077e48393651b4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bia6p3cptq7d6"]
 
 [ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="1_1dtum"]
-[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/FakeChicken.tscn" id="10_skd0j"]
+[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/FakeChicken.tscn" id="10_skd0j"]
 
 [node name="Fridge" instance=ExtResource("1_1dtum")]
 

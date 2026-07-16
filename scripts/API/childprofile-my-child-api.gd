@@ -37,7 +37,7 @@ func fetch_child_profiles() -> void:
 		"accept: application/json"
 	]
 
-	httpRequest.set_tls_options(TLSOptions.client_unsafe())
+	# httpRequest.set_tls_options(TLSOptions.client_unsafe())
 	httpRequest.request(apiUrl, headers, HTTPClient.METHOD_GET)
 
 func _on_request_completed(result: int, responseCode: int, headers: PackedStringArray, body: PackedByteArray) -> void:

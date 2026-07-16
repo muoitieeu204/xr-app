@@ -103,14 +103,14 @@ func _on_login_pressed() -> void:
 	]
 	
 	# Allow unsafe localhost certificates in VR
-	httpRequest.set_tls_options(TLSOptions.client_unsafe())
+	# httpRequest.set_tls_options(TLSOptions.client_unsafe())
 	httpRequest.request(apiUrl, headers, HTTPClient.METHOD_POST, json)
 
 func _on_show_password_toggle(button_pressed:bool) -> void:
 	passwordInput.secret = not button_pressed
 
 func _on_request_completed(result, responseCode, headers, body):
-	print_debug("Request completed! Result code: ", result, " HTTP Status: ", responseCode)
+	print_debug("Request completed! Result code: ", result, " HTTP Status: ", responseCode) 
 	
 	loginButton.disabled = false
 	if forgotButton != null:
@@ -123,7 +123,7 @@ func _on_request_completed(result, responseCode, headers, body):
 	if responseCode == 401:
 		print_debug("Unauthorized: Incorrect email or password.")
 		if errorLabel != null:
-			errorLabel.text = "Incorrect email or password."
+			errorLabel.text = "Sai email hoặc password."
 			errorLabel.visible = true
 		return
 		

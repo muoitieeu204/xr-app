@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://30r20cwwn8n1"
+path="res://.godot/imported/thu_nghi_lai_nha_mieng_trong_giong_ga_nhung_lam_e81fb120-40a5-4fac-8297-53479d8b1a08.mp3-03a5b3e0daad34bab723c3454b77bf51.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/FakeChicken/thu_nghi_lai_nha_mieng_trong_giong_ga_nhung_lam_e81fb120-40a5-4fac-8297-53479d8b1a08.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_mieng_trong_giong_ga_nhung_lam_e81fb120-40a5-4fac-8297-53479d8b1a08.mp3-03a5b3e0daad34bab723c3454b77bf51.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

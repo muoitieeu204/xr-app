@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dn3isbcy54oin"
+path="res://.godot/imported/toi_la_thanh_socola_co_nhieu_thanh_nho_be_ra_f2ff2629-7d90-4db3-a40e-7876bb51466b.mp3-b04ff65d103f95936007f6433ff1693c.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Desserts/KitKat/toi_la_thanh_socola_co_nhieu_thanh_nho_be_ra_f2ff2629-7d90-4db3-a40e-7876bb51466b.mp3"
+dest_files=["res://.godot/imported/toi_la_thanh_socola_co_nhieu_thanh_nho_be_ra_f2ff2629-7d90-4db3-a40e-7876bb51466b.mp3-b04ff65d103f95936007f6433ff1693c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

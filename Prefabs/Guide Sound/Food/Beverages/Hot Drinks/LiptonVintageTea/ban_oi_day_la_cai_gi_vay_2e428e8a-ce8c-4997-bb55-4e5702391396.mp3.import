@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pew43iab332j"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_2e428e8a-ce8c-4997-bb55-4e5702391396.mp3-d6d40f081247328c97ad6c2408f2f33d.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/LiptonVintageTea/ban_oi_day_la_cai_gi_vay_2e428e8a-ce8c-4997-bb55-4e5702391396.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_2e428e8a-ce8c-4997-bb55-4e5702391396.mp3-d6d40f081247328c97ad6c2408f2f33d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

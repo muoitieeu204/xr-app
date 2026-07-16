@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hkb1nvboih0e"
+path="res://.godot/imported/cocacola_7344a682-0ced-4127-9580-c8571b6c3d4a.mp3-02e63ff4c996737d01c5d37efb0cece6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/cocacola_7344a682-0ced-4127-9580-c8571b6c3d4a.mp3"
+dest_files=["res://.godot/imported/cocacola_7344a682-0ced-4127-9580-c8571b6c3d4a.mp3-02e63ff4c996737d01c5d37efb0cece6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

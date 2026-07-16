@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qqlsl3h88wpr"
+path="res://.godot/imported/ban_oi_day_la_qua_gi_vay_855fdcf3-d2bd-48f2-bc39-9f0db0f76aae.mp3-0395102710d38b2f7231695a82004d07.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pineapple/ban_oi_day_la_qua_gi_vay_855fdcf3-d2bd-48f2-bc39-9f0db0f76aae.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_qua_gi_vay_855fdcf3-d2bd-48f2-bc39-9f0db0f76aae.mp3-0395102710d38b2f7231695a82004d07.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

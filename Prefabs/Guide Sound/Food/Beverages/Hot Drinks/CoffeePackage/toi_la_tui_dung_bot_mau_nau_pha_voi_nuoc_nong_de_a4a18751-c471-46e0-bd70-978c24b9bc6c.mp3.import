@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c13ot0chgwdn4"
+path="res://.godot/imported/toi_la_tui_dung_bot_mau_nau_pha_voi_nuoc_nong_de_a4a18751-c471-46e0-bd70-978c24b9bc6c.mp3-d45190f4eebf6b3b0bf37550d6a90e1b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/CoffeePackage/toi_la_tui_dung_bot_mau_nau_pha_voi_nuoc_nong_de_a4a18751-c471-46e0-bd70-978c24b9bc6c.mp3"
+dest_files=["res://.godot/imported/toi_la_tui_dung_bot_mau_nau_pha_voi_nuoc_nong_de_a4a18751-c471-46e0-bd70-978c24b9bc6c.mp3-d45190f4eebf6b3b0bf37550d6a90e1b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

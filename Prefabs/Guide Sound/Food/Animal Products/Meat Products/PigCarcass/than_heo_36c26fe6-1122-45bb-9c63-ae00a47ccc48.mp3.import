@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjd0ugb5qjmnw"
+path="res://.godot/imported/than_heo_36c26fe6-1122-45bb-9c63-ae00a47ccc48.mp3-806f7f5b6e412c43d0982362ca013090.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PigCarcass/than_heo_36c26fe6-1122-45bb-9c63-ae00a47ccc48.mp3"
+dest_files=["res://.godot/imported/than_heo_36c26fe6-1122-45bb-9c63-ae00a47ccc48.mp3-806f7f5b6e412c43d0982362ca013090.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

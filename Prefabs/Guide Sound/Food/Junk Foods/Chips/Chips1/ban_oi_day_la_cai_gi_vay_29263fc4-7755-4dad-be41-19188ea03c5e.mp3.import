@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xtgxgocvn431"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_29263fc4-7755-4dad-be41-19188ea03c5e.mp3-d0c57df8daad130cd3eba960a611f02d.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Chips1/ban_oi_day_la_cai_gi_vay_29263fc4-7755-4dad-be41-19188ea03c5e.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_29263fc4-7755-4dad-be41-19188ea03c5e.mp3-d0c57df8daad130cd3eba960a611f02d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

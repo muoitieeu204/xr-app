@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cm2l0v7hci4tq"
+path="res://.godot/imported/toi_la_hop_keo_ngot_mau_nau_den_tu_nuoc_y_xa_20b76b3a-0393-4559-b634-a67dc610d5ed.mp3-e8a763272ed203773809dc3f169d7bf1.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Desserts/ItalianChocolates/toi_la_hop_keo_ngot_mau_nau_den_tu_nuoc_y_xa_20b76b3a-0393-4559-b634-a67dc610d5ed.mp3"
+dest_files=["res://.godot/imported/toi_la_hop_keo_ngot_mau_nau_den_tu_nuoc_y_xa_20b76b3a-0393-4559-b634-a67dc610d5ed.mp3-e8a763272ed203773809dc3f169d7bf1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

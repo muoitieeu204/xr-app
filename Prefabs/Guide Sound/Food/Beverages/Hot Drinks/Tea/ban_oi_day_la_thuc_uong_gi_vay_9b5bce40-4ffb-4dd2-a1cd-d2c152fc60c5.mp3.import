@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coju2f8q5d2bh"
+path="res://.godot/imported/ban_oi_day_la_thuc_uong_gi_vay_9b5bce40-4ffb-4dd2-a1cd-d2c152fc60c5.mp3-0cb179866637d61816a55e55562a8d47.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/Tea/ban_oi_day_la_thuc_uong_gi_vay_9b5bce40-4ffb-4dd2-a1cd-d2c152fc60c5.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_thuc_uong_gi_vay_9b5bce40-4ffb-4dd2-a1cd-d2c152fc60c5.mp3-0cb179866637d61816a55e55562a8d47.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

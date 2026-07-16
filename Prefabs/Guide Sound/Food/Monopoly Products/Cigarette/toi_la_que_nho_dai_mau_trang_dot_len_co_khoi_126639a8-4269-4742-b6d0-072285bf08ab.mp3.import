@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wrop502nbjnv"
+path="res://.godot/imported/toi_la_que_nho_dai_mau_trang_dot_len_co_khoi_126639a8-4269-4742-b6d0-072285bf08ab.mp3-74ffdcd7ff1d6c5542ce737253aa3d7e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Cigarette/toi_la_que_nho_dai_mau_trang_dot_len_co_khoi_126639a8-4269-4742-b6d0-072285bf08ab.mp3"
+dest_files=["res://.godot/imported/toi_la_que_nho_dai_mau_trang_dot_len_co_khoi_126639a8-4269-4742-b6d0-072285bf08ab.mp3-74ffdcd7ff1d6c5542ce737253aa3d7e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

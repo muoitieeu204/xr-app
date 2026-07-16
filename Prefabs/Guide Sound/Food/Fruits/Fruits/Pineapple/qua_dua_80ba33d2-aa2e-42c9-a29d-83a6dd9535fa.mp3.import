@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yyfmswxok1f7"
+path="res://.godot/imported/qua_dua_80ba33d2-aa2e-42c9-a29d-83a6dd9535fa.mp3-2de7f8e78b78b91ab66bcc305cc30aea.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pineapple/qua_dua_80ba33d2-aa2e-42c9-a29d-83a6dd9535fa.mp3"
+dest_files=["res://.godot/imported/qua_dua_80ba33d2-aa2e-42c9-a29d-83a6dd9535fa.mp3-2de7f8e78b78b91ab66bcc305cc30aea.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

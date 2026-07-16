@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fcg4xu0b6yen"
+path="res://.godot/imported/toi_la_chat_long_dung_trong_chai_dung_de_giat_19f70ac5-56c1-4d33-a630-79e1086c11d9.mp3-53bc54bbcb612103b53d987e53b1cca5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Hygiene Products/LiquidDetergent/toi_la_chat_long_dung_trong_chai_dung_de_giat_19f70ac5-56c1-4d33-a630-79e1086c11d9.mp3"
+dest_files=["res://.godot/imported/toi_la_chat_long_dung_trong_chai_dung_de_giat_19f70ac5-56c1-4d33-a630-79e1086c11d9.mp3-53bc54bbcb612103b53d987e53b1cca5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
