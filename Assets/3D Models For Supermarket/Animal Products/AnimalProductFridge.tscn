@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bia6p3cptq7d6"]
+[gd_scene load_steps=4 format=3 uid="uid://bia6p3cptq7d6"]
 
 [ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="1_1dtum"]
+[ext_resource type="PackedScene" uid="uid://d23rnmupgvhql" path="res://Assets/3D Models For Supermarket/Animal Products/FakeSausagesPackage.tscn" id="3_513nt"]
 [ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/FakeChicken.tscn" id="10_skd0j"]
 
 [node name="Fridge" instance=ExtResource("1_1dtum")]
@@ -8,14 +9,119 @@
 [node name="Chicken" parent="." index="1" instance=ExtResource("10_skd0j")]
 transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, -100, -9.884696, 180.61537)
 
-[node name="Chicken2" parent="." index="2" instance=ExtResource("10_skd0j")]
-transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, -52.607315, -9.884696, 180.61537)
+[node name="Chicken2" parent="Chicken" index="2" instance=ExtResource("10_skd0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47392684, 0, 0)
 
-[node name="Chicken3" parent="." index="3" instance=ExtResource("10_skd0j")]
-transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, 2.2670264, -9.884696, 180.61537)
+[node name="Chicken3" parent="Chicken" index="3" instance=ExtResource("10_skd0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0226703, 0, 0)
 
-[node name="Chicken4" parent="." index="4" instance=ExtResource("10_skd0j")]
-transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, 55.98423, -9.884696, 180.61537)
+[node name="Chicken4" parent="Chicken" index="4" instance=ExtResource("10_skd0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5598423, 0, 0)
 
-[node name="Chicken5" parent="." index="5" instance=ExtResource("10_skd0j")]
-transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, 104.403046, -9.884696, 180.61537)
+[node name="Chicken5" parent="Chicken" index="5" instance=ExtResource("10_skd0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0440304, 0, 0)
+
+[node name="SausagesPackage" parent="." index="2" instance=ExtResource("3_513nt")]
+transform = Transform3D(100, 0, 0, 0, 71.53269, -69.87899, 0, 69.87899, 71.53269, -98.089966, -64.64273, 183.44255)
+
+[node name="SausagesPackage2" parent="SausagesPackage" index="2" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
+
+[node name="SausagesPackage3" parent="SausagesPackage" index="3" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)
+
+[node name="SausagesPackage4" parent="SausagesPackage" index="4" instance=ExtResource("3_513nt")]
+
+[node name="SausagesPackage7" parent="SausagesPackage" index="5" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage8" parent="SausagesPackage" index="6" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17310059, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage9" parent="SausagesPackage" index="7" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33995557, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage10" parent="SausagesPackage" index="8" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33995557, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage11" parent="SausagesPackage" index="9" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16230828, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage12" parent="SausagesPackage" index="10" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016335607, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage5" parent="SausagesPackage" index="11" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
+
+[node name="SausagesPackage6" parent="SausagesPackage" index="12" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)
+
+[node name="SausagesPackage2" parent="." index="3" instance=ExtResource("3_513nt")]
+transform = Transform3D(100, 0, 0, 0, 71.53269, -69.87899, 0, 69.87899, 71.53269, -14.701044, -64.64273, 183.44255)
+
+[node name="SausagesPackage2" parent="SausagesPackage2" index="2" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
+
+[node name="SausagesPackage3" parent="SausagesPackage2" index="3" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)
+
+[node name="SausagesPackage4" parent="SausagesPackage2" index="4" instance=ExtResource("3_513nt")]
+
+[node name="SausagesPackage7" parent="SausagesPackage2" index="5" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage8" parent="SausagesPackage2" index="6" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17310059, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage9" parent="SausagesPackage2" index="7" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33995557, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage10" parent="SausagesPackage2" index="8" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33995557, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage11" parent="SausagesPackage2" index="9" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16230828, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage12" parent="SausagesPackage2" index="10" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016335607, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage5" parent="SausagesPackage2" index="11" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
+
+[node name="SausagesPackage6" parent="SausagesPackage2" index="12" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)
+
+[node name="SausagesPackage3" parent="." index="4" instance=ExtResource("3_513nt")]
+transform = Transform3D(100, 0, 0, 0, 71.53269, -69.87899, 0, 69.87899, 71.53269, 69.81224, -64.64273, 183.44255)
+
+[node name="SausagesPackage2" parent="SausagesPackage3" index="2" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
+
+[node name="SausagesPackage3" parent="SausagesPackage3" index="3" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)
+
+[node name="SausagesPackage4" parent="SausagesPackage3" index="4" instance=ExtResource("3_513nt")]
+
+[node name="SausagesPackage7" parent="SausagesPackage3" index="5" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage8" parent="SausagesPackage3" index="6" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17310059, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage9" parent="SausagesPackage3" index="7" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33995557, 0.0011519194, -0.122044325)
+
+[node name="SausagesPackage10" parent="SausagesPackage3" index="8" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33995557, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage11" parent="SausagesPackage3" index="9" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16230828, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage12" parent="SausagesPackage3" index="10" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016335607, -0.0010418892, -0.23095465)
+
+[node name="SausagesPackage5" parent="SausagesPackage3" index="11" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
+
+[node name="SausagesPackage6" parent="SausagesPackage3" index="12" instance=ExtResource("3_513nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)

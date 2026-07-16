@@ -27,7 +27,7 @@ func stop_checkout_test():
 func _on_speech_recognized(text:String):
 	if currentHeldItemId != "":
 		var cleanText = text.to_lower().replace(",","").replace(".","").replace("?","").replace("!","")
-		var cleanTarget = currentHeldItemId.to_lower()
+		var cleanTarget = currentHeldItemId.to_lower().strip_edges()
 		if cleanText.contains(cleanTarget):
 			print("Correct! Word matched: ", currentHeldItemId)
 			validScannedItem.append(currentHeldItemId)

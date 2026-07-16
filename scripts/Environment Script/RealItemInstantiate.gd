@@ -32,15 +32,6 @@ func pick_up(by: Node3D) -> void:
 	realItemInstance.set_meta("itemNameSound", itemNameSound)
 	realItemInstance.set_meta("hintAudios", hintAudios)
 
-	var labelNode = realItemInstance.find_child("ItemLabel", true,false)
-	if labelNode:
-		labelNode.text = itemName
-		labelNode.visible = true
-		realItemInstance.dropped.connect(func(_pickable): labelNode.visible = false)
-		realItemInstance.picked_up.connect(func(_pickable): labelNode.visible = true)
-	else: 
-		printerr("Item Label name not found!!")
-
 	if itemNameSound:
 		var audioPlayer = AudioStreamPlayer3D.new()
 		audioPlayer.stream = itemNameSound

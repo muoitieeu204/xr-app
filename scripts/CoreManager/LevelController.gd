@@ -30,7 +30,7 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
-	ReplayManager.log_interaction("Correct Answer" + itemName)
+	ReplayManager.log_interaction("Correct Answer " + itemName)
 	print("Score updated: ", currentScore)
 	markTaskComplete(itemName)
 
@@ -43,7 +43,7 @@ func WrongAnswer(point: int, itemName: String) -> void:
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
-	ReplayManager.log_interaction("Wrong Answer" + itemName)
+	ReplayManager.log_interaction("Wrong Answer " + itemName)
 	print("Score updated: ", currentScore)
 
 func FinishLevel():
