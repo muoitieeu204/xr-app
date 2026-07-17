@@ -1,6 +1,6 @@
 [gd_resource type="MeshLibrary" load_steps=661 format=4 uid="uid://cfvea0hls1qt1"]
 
-[ext_resource type="Texture2D" uid="uid://dwxcmb2qc6x8d" path="res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png" id="1_o2ium"]
+[ext_resource type="Texture2D" uid="uid://v0tmqrox0knh" path="res://Assets/kenney_platformer-kit/Models/GLB format/Textures/colormap.png" id="1_o2ium"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rm84w"]
 resource_name = "colormap"

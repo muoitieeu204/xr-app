@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckyncvewbv4t7"]
+
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/RealItemInstantiate.gd" id="1_5k8u1"]
+[ext_resource type="PackedScene" uid="uid://bt8d8rj7njgwh" path="res://Assets/kenney_food-kit/Models/GLB format/avocado.glb" id="2_amfms"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k4xjj"]
+points = PackedVector3Array(-2.7641654e-05, 0.21826582, 0.16300237, 0.07055445, 0.4017664, 0.04071869, -2.7641654e-05, 0.4017664, 0.08146928, -0.070609726, 0.4017664, 0.04071869, -0.14116418, 0.21826582, 0.08146928, -2.7641654e-05, 0.08608718, 0.16300237, 0.14116418, 0.21826582, 0.08146928, 0.07055445, 0.4017664, -0.040782504, -0.070609726, 0.4017664, -0.040782504, -0.14116418, 0.21826582, -0.0815331, -0.14116418, 0.08608718, 0.08146928, 0.14116418, 0.08608718, 0.08146928, -0.09943397, 0, 0.057376325, -2.7641654e-05, 0, 0.11478457, 0.09940633, 0, 0.057376325, 0.14116418, 0.21826582, -0.0815331, -2.7641654e-05, 0.4017664, -0.0815331, -2.7641654e-05, 0.21826582, -0.16300237, -0.14116418, 0.08608718, -0.0815331, 0.14116418, 0.08608718, -0.0815331, -0.09943397, 0, -0.057408236, 0.09940633, 0, -0.057408236, -2.7641654e-05, 0.08608718, -0.16300237, -2.7641654e-05, 0, -0.11481647)
+
+[node name="FakeAvocado" type="Area3D"]
+collision_mask = 196613
+script = ExtResource("1_5k8u1")
+itemId = "trái bơ"
+
+[node name="avocado2" parent="." instance=ExtResource("2_amfms")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.532, 0, 0, 0, 0.532, 0, 0, 0, 0.532, 0.028292358, 0, 0.062101364)
+shape = SubResource("ConvexPolygonShape3D_k4xjj")
+
+[editable path="avocado2"]
