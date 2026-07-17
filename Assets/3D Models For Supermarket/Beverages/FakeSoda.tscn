@@ -60,6 +60,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jcd7a")
 
 [node name="Area3D" type="Area3D"]
+collision_layer = 5
 script = ExtResource("1_g34g3")
 realItem = ExtResource("2_66pxa")
 itemName = "lon nước ngọt"

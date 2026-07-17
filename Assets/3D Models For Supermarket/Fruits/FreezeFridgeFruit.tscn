@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://0ypgd8y8q76v"]
+
+[ext_resource type="PackedScene" uid="uid://oklcm2cowmpk" path="res://Assets/3D Models For Supermarket/Market Equipments/FreezerFridge.tscn" id="1_jfhc2"]
+[ext_resource type="PackedScene" uid="uid://dm2mrwobcdh57" path="res://Assets/3D Models For Supermarket/Fruits/FakeApple.tscn" id="2_rmwrv"]
+
+[node name="FreezerFridge" instance=ExtResource("1_jfhc2")]
+
+[node name="FakeApple" parent="." index="1" instance=ExtResource("2_rmwrv")]
+transform = Transform3D(0.9523805, 0, 0, 0, 0.9523805, 0, 0, 0, 0.9523805, 0.16730087, -1.1718501, 0.27991056)
+
+[node name="FakeApple2" parent="." index="2" instance=ExtResource("2_rmwrv")]
+transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, 0.16730087, -1.1718501, 0.40853196)
+
+[node name="FakeApple3" parent="." index="3" instance=ExtResource("2_rmwrv")]
+transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.16730087, -1.1718501, 0.5323122)
