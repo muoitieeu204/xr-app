@@ -1,19 +1,18 @@
-[gd_scene load_steps=121 format=4 uid="uid://ciondyec656d3"]
+[gd_scene load_steps=120 format=4 uid="uid://ciondyec656d3"]
 
 [ext_resource type="MeshLibrary" uid="uid://8veuacdfrcue" path="res://Assets/mini_markket_mesh_library.tres" id="1_1qkro"]
 [ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/LevelController.gd" id="1_r2rb5"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_acpa7"]
 [ext_resource type="PackedScene" uid="uid://canh6gljuhhoc" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_027.gltf" id="5_r2rb5"]
 [ext_resource type="Texture2D" uid="uid://c7254u0coq67r" path="res://Assets/kenney_mini-market/Models/GLB format/Textures/colormap.png" id="9_acpa7"]
-[ext_resource type="PackedScene" uid="uid://0ypgd8y8q76v" path="res://Assets/3D Models For Supermarket/Fruits/FreezeFridgeFruit.tscn" id="12_h8g51"]
 [ext_resource type="PackedScene" uid="uid://b3xralthu5m31" path="res://Assets/kenney_mini-market/CharacterEmployee.tscn" id="14_c4e85"]
 [ext_resource type="PackedScene" uid="uid://vscosdri0lhs" path="res://Assets/kenney_mini-market/Models/GLB format/fence-door-rotate.glb" id="15_c4e85"]
 [ext_resource type="PackedScene" uid="uid://dyounjrkpjjgc" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle-convertible.glb" id="20_u0m48"]
 [ext_resource type="Texture2D" uid="uid://bh0g6c1klosyp" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="21_d1idn"]
 [ext_resource type="MeshLibrary" uid="uid://bu5pxtjly78gp" path="res://Assets/kenney_3d-road-tiles/city_road_kit_mesh_library_fixed.tres" id="21_ydvpe"]
 [ext_resource type="PackedScene" uid="uid://b5yvsrj3u37yq" path="res://Assets/kenney_prototype-kit/Models/GLB format/vehicle.glb" id="22_acpa7"]
+[ext_resource type="PackedScene" uid="uid://faoy4fnis3kh" path="res://Assets/3D Models For Supermarket/Beverages/SoftDrinkShelf.tscn" id="22_ieq8a"]
 [ext_resource type="PackedScene" uid="uid://brs5wswbahfai" path="res://Assets/kenney_3d-road-tiles/Models/gLTF/roadTile_034.gltf" id="22_ou86s"]
-[ext_resource type="PackedScene" uid="uid://bia6p3cptq7d6" path="res://Assets/3D Models For Supermarket/Animal Products/AnimalProductFridge.tscn" id="22_u0m48"]
 [ext_resource type="PackedScene" uid="uid://vsolum5fqp8s" path="res://Assets/3D Models For Supermarket/Beverages/HotDrinksShelf.tscn" id="23_acpa7"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="23_d1idn"]
 [ext_resource type="PackedScene" uid="uid://crtvxpuyg328w" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall.glb" id="24_acpa7"]
@@ -375,7 +374,7 @@ emission_enabled = true
 resource_name = "FrontColor"
 emission_enabled = true
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_flgrm"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_vmwdo"]
 _surfaces = [{
 "aabb": AABB(0, 0.3, -3, 3, 0.3, 3),
 "format": 34896613377,
@@ -449,7 +448,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("//8AAAAA//8AAAAA////////AAD/////AAAAAAAA////f/8//3//P/9//z//f/8/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_flgrm")
+shadow_mesh = SubResource("ArrayMesh_vmwdo")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a5v7y"]
 data = PackedVector3Array(0, 0.59999996, 0, 3, 0.29999998, 0, 0, 0.29999998, 0, 0, 0.59999996, 0, 3, 0.59999996, 0, 3, 0.29999998, 0, 0, 0.59999996, -3, 0, 0.29999998, 0, 0, 0.29999998, -3, 0, 0.59999996, -3, 0, 0.59999996, 0, 0, 0.29999998, 0, 3, 0.29999998, -3, 0, 0.59999996, -3, 0, 0.29999998, -3, 3, 0.29999998, -3, 3, 0.59999996, -3, 0, 0.59999996, -3, 3, 0.59999996, -3, 3, 0.29999998, 0, 3, 0.59999996, 0, 3, 0.59999996, -3, 3, 0.29999998, -3, 3, 0.29999998, 0, 0, 0.59999996, 0, 3, 0.59999996, -3, 3, 0.59999996, 0, 0, 0.59999996, 0, 0, 0.59999996, -3, 3, 0.59999996, -3, 0, 0, -3, 3, 0.29999998, -3, 0, 0.29999998, -3, 0, 0, -3, 3, 0, -3, 3, 0.29999998, -3, 0, 0, 0, 0, 0.29999998, -3, 0, 0.29999998, 0, 0, 0, 0, 0, 0, -3, 0, 0.29999998, -3, 3, 0, 0, 0, 0.29999998, 0, 3, 0.29999998, 0, 3, 0, 0, 0, 0, 0, 0, 0.29999998, 0, 3, 0.29999998, -3, 3, 0, 0, 3, 0.29999998, 0, 3, 0.29999998, -3, 3, 0, -3, 3, 0, 0, 3, 0, -3, 0, 0, 0, 3, 0, 0, 3, 0, -3, 0, 0, -3, 0, 0, 0, 3, 0.29999998, -3, 0, 0.29999998, 0, 3, 0.29999998, 0, 3, 0.29999998, -3, 0, 0.29999998, -3, 0, 0.29999998, 0)
@@ -1503,9 +1502,6 @@ transform = Transform3D(-1.3113416e-07, 0, -1.3, 0, 3.5, 0, 3, 0, -5.6824803e-08
 [node name="GlassDoor3" parent="Market/MarketArchitecture/GlassDoors" instance=ExtResource("25_h8g51")]
 transform = Transform3D(-1.3113416e-07, 0, -1.3, 0, 3.5, 0, 3, 0, -5.6824803e-08, 6.7037315, 2, -47)
 
-[node name="FreezerFridge" parent="Market/MarketArchitecture/GlassDoors/GlassDoor3/Area3D" index="1" instance=ExtResource("12_h8g51")]
-transform = Transform3D(8.590969e-08, 0, -0.34999996, 0, 0.4580153, 0, 0.8076923, 0, 6.590331e-08, 5, 0.73718643, -12.535591)
-
 [node name="Vehicle" type="Node3D" parent="Market"]
 
 [node name="vehicle-convertible" parent="Market/Vehicle" instance=ExtResource("20_u0m48")]
@@ -2362,20 +2358,31 @@ transparent = 0
 unshaded = true
 scene_properties_keys = PackedStringArray("SlideGuideController.gd")
 
+[node name="Shelf" parent="Market" instance=ExtResource("23_acpa7")]
+transform = Transform3D(-4.589695e-08, 0, 1.0499998, 0, 1.0499998, 0, -1.0499998, 0, -4.589695e-08, 21.848272, 1.051, -27.341309)
+
+[node name="Shelf2" parent="Market" instance=ExtResource("23_acpa7")]
+transform = Transform3D(-4.589695e-08, 0, 1.0499998, 0, 1.0499998, 0, -1.0499998, 0, -4.589695e-08, 21.848272, 1.051, -25.06566)
+
+[node name="Shelf3" parent="Market" instance=ExtResource("23_acpa7")]
+transform = Transform3D(-4.589695e-08, 0, 1.0499998, 0, 1.0499998, 0, -1.0499998, 0, -4.589695e-08, 21.848272, 1.051, -22.764738)
+
+[node name="Shelf4" parent="Market" instance=ExtResource("22_ieq8a")]
+transform = Transform3D(-4.5896957e-08, 0, 1.05, 0, 1.05, 0, -1.05, 0, -4.5896957e-08, 21.833084, 1.051, -20.494097)
+
+[node name="Shelf5" parent="Market" instance=ExtResource("22_ieq8a")]
+transform = Transform3D(-4.5896957e-08, 0, 1.05, 0, 1.05, 0, -1.05, 0, -4.5896957e-08, 21.833084, 1.051, -18.199024)
+
+[node name="Shelf6" parent="Market" instance=ExtResource("22_ieq8a")]
+transform = Transform3D(-4.5896957e-08, 0, 1.05, 0, 1.05, 0, -1.05, 0, -4.5896957e-08, 21.833084, 1.051, -15.942297)
+
 [node name="Spawner" parent="." instance=ExtResource("27_r2rb5")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 32.63623, 2.4271822, -41.87623)
 playerNode = ExtResource("28_c4e85")
 
 [node name="TeleportArea" parent="." instance=ExtResource("28_r2rb5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33, 2.095599, -51)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.41336, 2.0965838, -50.80552)
 target_scene = "uid://bt0ier0gd1sh5"
-holoText = "StarterHub"
-
-[node name="Fridge" parent="." instance=ExtResource("22_u0m48")]
-transform = Transform3D(-0.01, 0, -8.7422775e-10, 0, 0.01, 0, 8.7422775e-10, 0, -0.01, 35, 2, -33)
-
-[node name="Shelf" parent="." instance=ExtResource("23_acpa7")]
-transform = Transform3D(-4.589695e-08, 0, 1.0499998, 0, 1.0499998, 0, -1.0499998, 0, -4.589695e-08, 25.555447, 0.9963826, -27.341309)
 
 [connection signal="item_scanned_for_teaching" from="Market/CashRegister/cash-register2" to="Market/CashRegister/cash-register2/CharacterEmployee" method="_on_item_scanned_for_teaching"]
 [connection signal="item_scanned_for_teaching" from="Market/CashRegister/cash-register3" to="Market/CashRegister/cash-register3/CharacterEmployee" method="_on_item_scanned_for_teaching"]

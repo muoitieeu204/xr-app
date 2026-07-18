@@ -1,0 +1,1154 @@
+[gd_scene load_steps=8 format=3 uid="uid://bk0ikcmoalasp"]
+
+[ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="1_06lpp"]
+[ext_resource type="PackedScene" uid="uid://dm2mrwobcdh57" path="res://Assets/3D Models For Supermarket/Fruits/FakeApple.tscn" id="2_fgjhn"]
+[ext_resource type="PackedScene" uid="uid://dd1pvuih87jmv" path="res://Assets/3D Models For Supermarket/Fruits/FakeGreenApple.tscn" id="3_p71rr"]
+[ext_resource type="PackedScene" uid="uid://dk01pht2o72c7" path="res://Assets/3D Models For Supermarket/Fruits/FakeMango.tscn" id="4_hnwxc"]
+[ext_resource type="AudioStream" uid="uid://co7v51ctvgq3b" path="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Mango/qua_xoai_fc9a7873-f421-4fc9-9fdc-9bed958429fb.mp3" id="5_ejk18"]
+[ext_resource type="AudioStream" uid="uid://c8mkub7t5pxo" path="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Mango/toi_co_mau_vang_cam_hinh_bau_duc_an_rat_ngot_va_dc5df443-0387-4023-85ea-8bef2b032c3c.mp3" id="6_3dhwl"]
+[ext_resource type="PackedScene" uid="uid://d0qpcb5hrnw" path="res://Assets/3D Models For Supermarket/Fruits/FakePear.tscn" id="7_ejk18"]
+
+[node name="Fridge" instance=ExtResource("1_06lpp")]
+
+[node name="FakeApple" parent="." index="1" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -105.55768, -61.276012, 174.83087)
+
+[node name="FakeApple2" parent="FakeApple" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple6" parent="FakeApple" index="6" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0966872)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple6" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple6" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple6" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple6" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple7" parent="FakeApple" index="7" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.085882425)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple7" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple7" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple7" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple7" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple8" parent="FakeApple" index="8" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 0.60181504, -0.79863554, 0, 0.79863554, 0.60181504, 0, 0.12019047, 0.025548577)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple8" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple8" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple8" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple8" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple6" parent="FakeApple/FakeApple8" index="6" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0966872)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple8/FakeApple6" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple8/FakeApple6" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple8/FakeApple6" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple8/FakeApple6" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple7" parent="FakeApple/FakeApple8" index="7" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.085882425)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple8/FakeApple7" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple8/FakeApple7" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple8/FakeApple7" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple8/FakeApple7" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple9" parent="FakeApple" index="9" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9242362, 0, 0)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple9" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple9" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple9" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple9" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple6" parent="FakeApple/FakeApple9" index="6" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0966872)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple9/FakeApple6" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple9/FakeApple6" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple9/FakeApple6" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple9/FakeApple6" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple7" parent="FakeApple/FakeApple9" index="7" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.085882425)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple9/FakeApple7" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple9/FakeApple7" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple9/FakeApple7" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple9/FakeApple7" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple8" parent="FakeApple/FakeApple9" index="8" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 0.60181504, -0.79863554, 0, 0.79863554, 0.60181504, 0, 0.12019047, 0.025548577)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple9/FakeApple8" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple9/FakeApple8" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple9/FakeApple8" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple9/FakeApple8" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple6" parent="FakeApple/FakeApple9/FakeApple8" index="6" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0966872)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple9/FakeApple8/FakeApple6" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple9/FakeApple8/FakeApple6" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple9/FakeApple8/FakeApple6" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple9/FakeApple8/FakeApple6" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple7" parent="FakeApple/FakeApple9/FakeApple8" index="7" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.085882425)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple9/FakeApple8/FakeApple7" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple9/FakeApple8/FakeApple7" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple9/FakeApple8/FakeApple7" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple9/FakeApple8/FakeApple7" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple10" parent="FakeApple" index="10" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7311369, 0, 0)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple10" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple10" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple10" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple10" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple6" parent="FakeApple/FakeApple10" index="6" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0966872)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple10/FakeApple6" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple10/FakeApple6" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple10/FakeApple6" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple10/FakeApple6" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple7" parent="FakeApple/FakeApple10" index="7" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.085882425)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple10/FakeApple7" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple10/FakeApple7" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple10/FakeApple7" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple10/FakeApple7" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple8" parent="FakeApple/FakeApple10" index="8" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 0.60181504, -0.79863554, 0, 0.79863554, 0.60181504, 0, 0.12019047, 0.025548577)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple10/FakeApple8" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple10/FakeApple8" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple10/FakeApple8" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple10/FakeApple8" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple6" parent="FakeApple/FakeApple10/FakeApple8" index="6" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0966872)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple10/FakeApple8/FakeApple6" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple10/FakeApple8/FakeApple6" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple10/FakeApple8/FakeApple6" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple10/FakeApple8/FakeApple6" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeApple7" parent="FakeApple/FakeApple10/FakeApple8" index="7" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.085882425)
+
+[node name="FakeApple2" parent="FakeApple/FakeApple10/FakeApple8/FakeApple7" index="2" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
+
+[node name="FakeApple3" parent="FakeApple/FakeApple10/FakeApple8/FakeApple7" index="3" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21425772, 0, 0)
+
+[node name="FakeApple4" parent="FakeApple/FakeApple10/FakeApple8/FakeApple7" index="4" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
+
+[node name="FakeApple5" parent="FakeApple/FakeApple10/FakeApple8/FakeApple7" index="5" instance=ExtResource("2_fgjhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
+
+[node name="FakeGreenApple" parent="." index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 99.0711, -19.828295, 183.07617)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple6" parent="FakeGreenApple" index="6" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple6" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple6" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple6" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple6" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple7" parent="FakeGreenApple" index="7" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple7" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple7" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple7" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple7" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple9" parent="FakeGreenApple" index="8" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0.060958788)
+
+[node name="FakeGreenApple10" parent="FakeGreenApple" index="9" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0.060958788)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple10" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple10" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple10" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple10" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple11" parent="FakeGreenApple" index="10" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0.060958758)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple11" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple11" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple11" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple11" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple8" parent="FakeGreenApple" index="11" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 0.5976251, -0.80177563, 0, 0.80177563, 0.5976251, 0, -0.09617615, 0.011203021)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple8" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple8" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple8" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple8" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple6" parent="FakeGreenApple/FakeGreenApple8" index="6" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple6" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple6" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple6" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple6" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple7" parent="FakeGreenApple/FakeGreenApple8" index="7" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple7" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple7" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple7" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple8/FakeGreenApple7" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple12" parent="FakeGreenApple" index="12" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.745081, 0, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple6" parent="FakeGreenApple/FakeGreenApple12" index="6" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple6" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple6" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple6" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple6" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple7" parent="FakeGreenApple/FakeGreenApple12" index="7" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple7" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple7" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple7" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple7" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple9" parent="FakeGreenApple/FakeGreenApple12" index="8" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0.060958788)
+
+[node name="FakeGreenApple10" parent="FakeGreenApple/FakeGreenApple12" index="9" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0.060958788)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple10" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple10" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple10" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple10" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple11" parent="FakeGreenApple/FakeGreenApple12" index="10" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0.060958758)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple11" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple11" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple11" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple11" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple8" parent="FakeGreenApple/FakeGreenApple12" index="11" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 0.5976251, -0.80177563, 0, 0.80177563, 0.5976251, 0, -0.09617615, 0.011203021)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple6" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8" index="6" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple6" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple6" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple6" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple6" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple7" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8" index="7" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple7" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple7" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple7" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple12/FakeGreenApple8/FakeGreenApple7" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple13" parent="FakeGreenApple" index="13" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5617094, 0, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple6" parent="FakeGreenApple/FakeGreenApple13" index="6" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple6" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple6" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple6" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple6" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple7" parent="FakeGreenApple/FakeGreenApple13" index="7" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple7" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple7" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple7" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple7" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple9" parent="FakeGreenApple/FakeGreenApple13" index="8" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0.060958788)
+
+[node name="FakeGreenApple10" parent="FakeGreenApple/FakeGreenApple13" index="9" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0.060958788)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple10" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple10" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple10" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple10" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple11" parent="FakeGreenApple/FakeGreenApple13" index="10" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0.060958758)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple11" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple11" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple11" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple11" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple8" parent="FakeGreenApple/FakeGreenApple13" index="11" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 0.5976251, -0.80177563, 0, 0.80177563, 0.5976251, 0, -0.09617615, 0.011203021)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple6" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8" index="6" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095339775, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple6" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple6" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple6" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple6" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeGreenApple7" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8" index="7" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18706858, 0)
+
+[node name="FakeGreenApple2" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple7" index="2" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
+
+[node name="FakeGreenApple3" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple7" index="3" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.158023, 0, 0)
+
+[node name="FakeGreenApple4" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple7" index="4" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
+
+[node name="FakeGreenApple5" parent="FakeGreenApple/FakeGreenApple13/FakeGreenApple8/FakeGreenApple7" index="5" instance=ExtResource("3_p71rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
+
+[node name="FakeMango" parent="." index="3" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 97.64693, 19.703228, 159.54424)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango2" parent="FakeMango" index="2" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango3" parent="FakeMango" index="3" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango4" parent="FakeMango" index="4" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango5" parent="FakeMango" index="5" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango6" parent="FakeMango" index="6" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango7" parent="FakeMango" index="7" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango8" parent="FakeMango" index="8" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango9" parent="FakeMango" index="9" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango10" parent="FakeMango" index="10" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango11" parent="FakeMango" index="11" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango12" parent="FakeMango" index="12" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango13" parent="FakeMango" index="13" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango14" parent="FakeMango" index="14" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango15" parent="FakeMango" index="15" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango16" parent="FakeMango" index="16" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 0.84989256, -0.52695584, 0, 0.52695584, 0.84989256, 0, 0.11396456, 0.09408295)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango2" parent="FakeMango/FakeMango16" index="2" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango3" parent="FakeMango/FakeMango16" index="3" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango4" parent="FakeMango/FakeMango16" index="4" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango5" parent="FakeMango/FakeMango16" index="5" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango6" parent="FakeMango/FakeMango16" index="6" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango7" parent="FakeMango/FakeMango16" index="7" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango8" parent="FakeMango/FakeMango16" index="8" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango9" parent="FakeMango/FakeMango16" index="9" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango10" parent="FakeMango/FakeMango16" index="10" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango11" parent="FakeMango/FakeMango16" index="11" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango12" parent="FakeMango/FakeMango16" index="12" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango13" parent="FakeMango/FakeMango16" index="13" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango14" parent="FakeMango/FakeMango16" index="14" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango15" parent="FakeMango/FakeMango16" index="15" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango17" parent="FakeMango" index="17" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6951398, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango2" parent="FakeMango/FakeMango17" index="2" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango3" parent="FakeMango/FakeMango17" index="3" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango4" parent="FakeMango/FakeMango17" index="4" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango5" parent="FakeMango/FakeMango17" index="5" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango6" parent="FakeMango/FakeMango17" index="6" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango7" parent="FakeMango/FakeMango17" index="7" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango8" parent="FakeMango/FakeMango17" index="8" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango9" parent="FakeMango/FakeMango17" index="9" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango10" parent="FakeMango/FakeMango17" index="10" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango11" parent="FakeMango/FakeMango17" index="11" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango12" parent="FakeMango/FakeMango17" index="12" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango13" parent="FakeMango/FakeMango17" index="13" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango14" parent="FakeMango/FakeMango17" index="14" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango15" parent="FakeMango/FakeMango17" index="15" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango16" parent="FakeMango/FakeMango17" index="16" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 0.84989256, -0.52695584, 0, 0.52695584, 0.84989256, 0, 0.11396456, 0.09408295)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango2" parent="FakeMango/FakeMango17/FakeMango16" index="2" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango3" parent="FakeMango/FakeMango17/FakeMango16" index="3" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango4" parent="FakeMango/FakeMango17/FakeMango16" index="4" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango5" parent="FakeMango/FakeMango17/FakeMango16" index="5" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango6" parent="FakeMango/FakeMango17/FakeMango16" index="6" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango7" parent="FakeMango/FakeMango17/FakeMango16" index="7" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango8" parent="FakeMango/FakeMango17/FakeMango16" index="8" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango9" parent="FakeMango/FakeMango17/FakeMango16" index="9" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango10" parent="FakeMango/FakeMango17/FakeMango16" index="10" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango11" parent="FakeMango/FakeMango17/FakeMango16" index="11" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango12" parent="FakeMango/FakeMango17/FakeMango16" index="12" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango13" parent="FakeMango/FakeMango17/FakeMango16" index="13" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango14" parent="FakeMango/FakeMango17/FakeMango16" index="14" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango15" parent="FakeMango/FakeMango17/FakeMango16" index="15" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango18" parent="FakeMango" index="18" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5664613, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango2" parent="FakeMango/FakeMango18" index="2" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango3" parent="FakeMango/FakeMango18" index="3" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango4" parent="FakeMango/FakeMango18" index="4" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango5" parent="FakeMango/FakeMango18" index="5" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango6" parent="FakeMango/FakeMango18" index="6" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango7" parent="FakeMango/FakeMango18" index="7" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango8" parent="FakeMango/FakeMango18" index="8" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango9" parent="FakeMango/FakeMango18" index="9" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango10" parent="FakeMango/FakeMango18" index="10" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango11" parent="FakeMango/FakeMango18" index="11" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango12" parent="FakeMango/FakeMango18" index="12" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango13" parent="FakeMango/FakeMango18" index="13" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango14" parent="FakeMango/FakeMango18" index="14" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango15" parent="FakeMango/FakeMango18" index="15" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango16" parent="FakeMango/FakeMango18" index="16" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 0.84989256, -0.52695584, 0, 0.52695584, 0.84989256, 0, 0.11396456, 0.09408295)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango2" parent="FakeMango/FakeMango18/FakeMango16" index="2" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango3" parent="FakeMango/FakeMango18/FakeMango16" index="3" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango4" parent="FakeMango/FakeMango18/FakeMango16" index="4" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango5" parent="FakeMango/FakeMango18/FakeMango16" index="5" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango6" parent="FakeMango/FakeMango18/FakeMango16" index="6" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07101238, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango7" parent="FakeMango/FakeMango18/FakeMango16" index="7" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango8" parent="FakeMango/FakeMango18/FakeMango16" index="8" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango9" parent="FakeMango/FakeMango18/FakeMango16" index="9" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15240496, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango10" parent="FakeMango/FakeMango18/FakeMango16" index="10" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango11" parent="FakeMango/FakeMango18/FakeMango16" index="11" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango12" parent="FakeMango/FakeMango18/FakeMango16" index="12" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23546863, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango13" parent="FakeMango/FakeMango18/FakeMango16" index="13" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango14" parent="FakeMango/FakeMango18/FakeMango16" index="14" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.111597896)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakeMango15" parent="FakeMango/FakeMango18/FakeMango16" index="15" instance=ExtResource("4_hnwxc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32347322, 0, 0.21831238)
+itemNameSound = ExtResource("5_ejk18")
+hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
+
+[node name="FakePear" parent="." index="4" instance=ExtResource("7_ejk18")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 103.559685, 53.370857, 162.54596)
+
+[node name="FakePear2" parent="FakePear" index="5" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12860441)
+
+[node name="FakePear3" parent="FakePear" index="6" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114234805, 0, 0)
+
+[node name="FakePear4" parent="FakePear" index="7" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114234805, 0, 0.12860441)
+
+[node name="FakePear5" parent="FakePear" index="8" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22712392, 0, 0)
+
+[node name="FakePear6" parent="FakePear" index="9" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22712392, 0, 0.12860441)
+
+[node name="FakePear7" parent="FakePear" index="10" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822276, 0, 0)
+
+[node name="FakePear2" parent="FakePear/FakePear7" index="5" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12860441)
+
+[node name="FakePear3" parent="FakePear/FakePear7" index="6" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114234805, 0, 0)
+
+[node name="FakePear4" parent="FakePear/FakePear7" index="7" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114234805, 0, 0.12860441)
+
+[node name="FakePear5" parent="FakePear/FakePear7" index="8" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22712392, 0, 0)
+
+[node name="FakePear6" parent="FakePear/FakePear7" index="9" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22712392, 0, 0.12860441)
+
+[node name="FakePear8" parent="FakePear" index="11" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6681135, 0, 0)
+
+[node name="FakePear2" parent="FakePear/FakePear8" index="5" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12860441)
+
+[node name="FakePear3" parent="FakePear/FakePear8" index="6" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114234805, 0, 0)
+
+[node name="FakePear4" parent="FakePear/FakePear8" index="7" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114234805, 0, 0.12860441)
+
+[node name="FakePear5" parent="FakePear/FakePear8" index="8" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22712392, 0, 0)
+
+[node name="FakePear6" parent="FakePear/FakePear8" index="9" instance=ExtResource("7_ejk18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22712392, 0, 0.12860441)

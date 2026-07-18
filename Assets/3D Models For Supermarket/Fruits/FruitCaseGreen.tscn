@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://doaq77tgfvh8e"]
+
+[ext_resource type="PackedScene" uid="uid://dqomo7hmm40aw" path="res://Assets/3D Models For Supermarket/Fruits/FruitCase.tscn" id="1_i2quf"]
+[ext_resource type="Material" uid="uid://1k7ec5xuyr7u" path="res://Prefabs/SurfaceMaterial/FruitCaseGreen.tres" id="2_daljo"]
+
+[node name="Node3D" instance=ExtResource("1_i2quf")]
+
+[node name="Object_2" parent="Fruit case_obj_cleaner_materialmerger_gles" index="0"]
+surface_material_override/0 = ExtResource("2_daljo")
+
+[node name="Object_3" parent="Fruit case_obj_cleaner_materialmerger_gles" index="1"]
+surface_material_override/0 = ExtResource("2_daljo")
+
+[node name="Object_4" parent="Fruit case_obj_cleaner_materialmerger_gles" index="2"]
+surface_material_override/0 = ExtResource("2_daljo")
+
+[node name="Object_5" parent="Fruit case_obj_cleaner_materialmerger_gles" index="3"]
+surface_material_override/0 = ExtResource("2_daljo")

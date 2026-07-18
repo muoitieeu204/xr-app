@@ -76,7 +76,7 @@ holoText = "Tutorial World"
 
 [node name="TeleportArea2" parent="." instance=ExtResource("5_lxn05")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3, 9.661725, 2)
-target_scene = "uid://ciondyec656d3"
+target_scene = "uid://b12kcbqt8cg6r"
 holoText = "Supermarket World"
 
 [node name="Spawner" parent="." instance=ExtResource("6_bipgs")]

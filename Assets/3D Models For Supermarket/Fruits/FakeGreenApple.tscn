@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=4 uid="uid://dd1pvuih87jmv"]
+[gd_scene load_steps=13 format=4 uid="uid://dd1pvuih87jmv"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_gkwbi"]
 [ext_resource type="Texture2D" uid="uid://3kcbkk6ddlts" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/GreenApple_0.png" id="1_libk8"]
 [ext_resource type="Texture2D" uid="uid://b0t4srv44h8la" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/GreenApple_1.png" id="2_b5ac3"]
+[ext_resource type="PackedScene" uid="uid://cljhmp1nqf2cx" path="res://Assets/3D Models For Supermarket/Fruits/GreenApplePickable.tscn" id="2_cvfus"]
 [ext_resource type="AudioStream" uid="uid://utb5ffaucsqy" path="res://Prefabs/Guide Sound/Food/apple/toi_la_qua_tron_tron_co_mau_do_hoac_xanh_an_rat_40f7c3a4-fa4e-49fb-b94c-fb765fab5572 (1).mp3" id="2_uq5lt"]
 [ext_resource type="AudioStream" uid="uid://dx3f5jtkh6m0d" path="res://Prefabs/Guide Sound/Food/apple/toi_la_qua_tron_tron_co_mau_do_hoac_xanh_an_rat_40f7c3a4-fa4e-49fb-b94c-fb765fab5572.mp3" id="3_cvfus"]
 [ext_resource type="Texture2D" uid="uid://cmkwnecx1w57" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/GreenApple_2.png" id="3_mq41w"]
+[ext_resource type="AudioStream" uid="uid://g42q3pens8a6" path="res://Prefabs/Guide Sound/Food/Fruits/Fruits/GreenApple/tao_xanh_96a4463e-b73f-4c9e-b8f0-7fe0dbbc107b.mp3" id="3_sptn7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gkwbi"]
 radius = 0.035835832
@@ -60,8 +62,9 @@ shadow_mesh = SubResource("ArrayMesh_e1kym")
 [node name="FakeGreenApple" type="Area3D"]
 collision_layer = 5
 script = ExtResource("1_gkwbi")
-realItem = null
+realItem = ExtResource("2_cvfus")
 itemName = "quả táo xanh"
+itemNameSound = ExtResource("3_sptn7")
 hintAudios = Array[AudioStream]([ExtResource("2_uq5lt"), ExtResource("3_cvfus")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

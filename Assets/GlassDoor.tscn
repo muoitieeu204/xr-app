@@ -139,7 +139,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_abmgh"]
-size = Vector3(3, 3, 4)
+size = Vector3(1, 3, 4)
 
 [node name="GlassDoor" type="Node3D"]
 script = ExtResource("1_m0jl5")

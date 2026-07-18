@@ -23,6 +23,7 @@ func _ready() -> void:
 
 	# Safely add the chosen mode to the world
 	get_parent().call_deferred("add_child", instance_to_spawn)
+	await get_tree().process_frame
 	
 	if instance_to_spawn is Node3D:
 	# Snap the player/spectator to this Marker's exact position and rotation
