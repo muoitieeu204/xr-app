@@ -12,7 +12,6 @@ size = Vector3(0.19763184, 0.06604004, 0.105407715)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_258sw"]
 resource_name = "Material.001"
-cull_mode = 2
 shading_mode = 0
 albedo_texture = ExtResource("1_5itmq")
 

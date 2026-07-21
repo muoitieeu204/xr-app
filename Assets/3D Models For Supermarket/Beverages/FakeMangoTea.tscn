@@ -12,7 +12,6 @@ size = Vector3(0.17877197, 0.20062256, 0.13427734)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytsai"]
 resource_name = "tea_box"
-cull_mode = 2
 shading_mode = 0
 albedo_texture = ExtResource("6_is7bi")
 

@@ -15,7 +15,6 @@ radius = 0.0390625
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53hka"]
 resource_name = "Scene_-_Root"
-cull_mode = 2
 albedo_texture = ExtResource("2_qfs30")
 metallic = 1.0
 metallic_texture = ExtResource("3_k8t5s")

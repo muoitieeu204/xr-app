@@ -35,13 +35,18 @@ RefreshTokenApi="*res://scripts/API/RefreshTokenApi.gd"
 ResultApi="*res://scripts/API/result-api.gd"
 ReplayManager="*res://Prefabs/PlayerPrefabs/ReplayManager.tscn"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [dotnet]
 
 project/assembly_name="GodotXR _Attempt_1"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/meshcombiner/plugin.cfg")
 
 [global_group]
 
@@ -121,11 +126,13 @@ jolt_3d/simulation/baumgarte_stabilization_factor=0.05
 
 renderer/rendering_method="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
-anti_aliasing/quality/msaa_3d=2
+anti_aliasing/quality/msaa_3d=1
+vrs/mode=2
 
 [xr]
 
 openxr/enabled=true
 openxr/reference_space=1
 openxr/foveation_level=3
+openxr/foveation_dynamic=true
 shaders/enabled=true

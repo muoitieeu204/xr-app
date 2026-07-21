@@ -12,7 +12,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0at7"]
 resource_name = "lambert1"
-cull_mode = 2
 albedo_texture = ExtResource("1_put4o")
 metallic_texture = ExtResource("2_l05m3")
 metallic_texture_channel = 2

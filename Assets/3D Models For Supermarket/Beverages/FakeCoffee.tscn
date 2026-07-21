@@ -12,7 +12,6 @@ size = Vector3(0.1829834, 0.2902832, 0.091308594)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ul2q"]
 resource_name = "Object001_mtl"
-cull_mode = 2
 albedo_texture = ExtResource("1_t3ef3")
 roughness = 0.124342985
 
