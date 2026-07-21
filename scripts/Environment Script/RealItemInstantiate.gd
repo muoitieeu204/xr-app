@@ -5,10 +5,6 @@ extends XRToolsInteractableArea
 @export var itemName : String = ""
 @export var itemNameSound : AudioStream
 @export var hintAudios : Array[AudioStream] = []        
-
-func _ready() -> void:
-	if not self.pointer_event.is_connected(_on_pointer_event):
-		self.pointer_event.connect(_on_pointer_event)
 	
 func can_pick_up(by: Node3D) -> bool:                                                                                                                                                                                  
 	return true                                                                                                                                                                                                           
@@ -40,11 +36,3 @@ func pick_up(by: Node3D) -> void:
 		audioPlayer.play()
 	# Delete the fake item
 	queue_free()
-
-func _on_pointer_event(event: XRToolsPointerEvent):
-	if event.event_type == XRToolsPointerEvent.Type.PRESSED:
-		var controller = event.pointer.get_parent()
-		for child in controller.get_children():
-			if child is XRToolsFunctionPickup:
-				pick_up(child)
-				return
