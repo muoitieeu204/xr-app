@@ -63,5 +63,6 @@ shape = SubResource("BoxShape3D_m35vp")
 
 [node name="Object_2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.084346265, -0.049440358, -0.021008546, 0.020529898, -0.00647212, 0.0976557, -0.049641028, -0.086681955, 0.004691063, 0.3693412, 0.087815434, 0.61511946)
+lod_bias = 0.05
 mesh = SubResource("ArrayMesh_qnowa")
 skeleton = NodePath("")

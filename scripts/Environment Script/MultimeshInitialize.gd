@@ -6,10 +6,24 @@ func _ready() -> void:
 #Load the multimesh onto the fridge
 func multimeshConverter():
 	var meshGroup = {}
-	findAndGroupItems(self, meshGroup)
+	
+	var search_root = self
+	var parent = get_parent()
+	# If this script is on the "Shelf" or "Fridge" model inside a larger prefab (like JunkFoodShelf),
+	# we want to search the parent so we can find all the fake items that are siblings to this mesh.
+	if parent != null and parent.name != "InteractableShelf" and parent.name != "SuperMarket Architecture" and parent.name != "root":
+		search_root = parent
+
+	findAndGroupItems(search_root, meshGroup)
+	
+	var total_meshes = meshGroup.size()
+	var total_items = 0
+	
 	for mesh in meshGroup:
 		var items = meshGroup[mesh]
+		total_items += items.size()
 		buildMultiMesh(mesh,items)
+		
 
 #Recursive func that digs through the fridge to find fake items
 func findAndGroupItems(currentNode: Node, meshGroup: Dictionary):

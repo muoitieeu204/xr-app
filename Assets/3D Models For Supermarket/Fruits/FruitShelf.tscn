@@ -10,11 +10,8 @@
 
 [node name="Fridge" instance=ExtResource("1_06lpp")]
 
-[node name="CombinedMesh" parent="." index="0"]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -2.7162642, -8.610129, 169.79172)
-
 [node name="FakeApple" parent="." index="1" instance=ExtResource("2_fgjhn")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -105.55768, -61.276012, 174.83087)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -105.55768, -54.403114, 4.7565937)
 
 [node name="FakeApple2" parent="FakeApple" index="2" instance=ExtResource("2_fgjhn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101982415, 0, 0)
@@ -284,7 +281,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32068288, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41931403, 0, 0)
 
 [node name="FakeGreenApple" parent="." index="2" instance=ExtResource("3_p71rr")]
-transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 99.0711, -19.828295, 183.07617)
+transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 99.0711, -12.955396, 13.001895)
 
 [node name="FakeGreenApple2" parent="FakeGreenApple" index="2" instance=ExtResource("3_p71rr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08015239, 0, 0)
@@ -653,7 +650,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23770928, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32551068, 0, 0)
 
 [node name="FakeMango" parent="." index="3" instance=ExtResource("4_hnwxc")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 97.64693, 19.703228, 159.54424)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 97.64692, 26.576126, -10.530043)
 itemNameSound = ExtResource("5_ejk18")
 hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
 
@@ -1103,7 +1100,7 @@ itemNameSound = ExtResource("5_ejk18")
 hintAudios = Array[AudioStream]([ExtResource("5_ejk18"), ExtResource("6_3dhwl")])
 
 [node name="FakePear" parent="." index="4" instance=ExtResource("7_ejk18")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 103.559685, 61.65004, 162.54596)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 103.559685, 68.522934, -7.528317)
 
 [node name="FakePear2" parent="FakePear" index="2" instance=ExtResource("7_ejk18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.12860441)

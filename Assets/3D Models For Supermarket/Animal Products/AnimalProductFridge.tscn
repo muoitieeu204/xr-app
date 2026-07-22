@@ -7,11 +7,8 @@
 
 [node name="Fridge" instance=ExtResource("1_1dtum")]
 
-[node name="CombinedMesh" parent="." index="0"]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -2.7162642, -8.610129, 169.2702)
-
 [node name="Chicken" parent="." index="1" instance=ExtResource("10_skd0j")]
-transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, -100, -9.884696, 180.61537)
+transform = Transform3D(100, 0, 0, 0, 86.60254, -50, 0, 50, 86.60254, -100, -0.9867832, 10.45298)
 
 [node name="Chicken2" parent="Chicken" index="2" instance=ExtResource("10_skd0j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47392684, 0, 0)
@@ -26,7 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5598423, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0440304, 0, 0)
 
 [node name="SausagesPackage" parent="." index="2" instance=ExtResource("3_513nt")]
-transform = Transform3D(100, 0, 0, 0, 71.53269, -69.87899, 0, 69.87899, 71.53269, -98.089966, -64.64273, 183.44255)
+transform = Transform3D(100, 0, 0, 0, 71.53269, -69.87899, 0, 69.87899, 71.53269, -98.089966, -55.744816, 13.280159)
 
 [node name="SausagesPackage2" parent="SausagesPackage" index="2" instance=ExtResource("3_513nt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
@@ -131,7 +128,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)
 
 [node name="SausagesPackage4" parent="." index="3" instance=ExtResource("3_513nt")]
-transform = Transform3D(100, 0, 0, 0, 71.53269, -69.87899, 0, 69.87899, 71.53269, -98.089966, 19.95436, 183.44255)
+transform = Transform3D(100, 0, 0, 0, 71.53269, -69.87899, 0, 69.87899, 71.53269, -98.089966, 28.852268, 13.280159)
 
 [node name="SausagesPackage2" parent="SausagesPackage4" index="2" instance=ExtResource("3_513nt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
@@ -236,7 +233,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1686607, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34086967, 0, 0)
 
 [node name="Cheese" parent="." index="4" instance=ExtResource("4_3w2b7")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -116.57321, 56.105953, 179.08574)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -116.57321, 65.00387, 8.923346)
 
 [node name="Area3D2" parent="Cheese" index="2" instance=ExtResource("4_3w2b7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15360522, 0, -1.1920929e-07)

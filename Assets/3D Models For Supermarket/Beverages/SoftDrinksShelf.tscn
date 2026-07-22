@@ -1,0 +1,389 @@
+[gd_scene load_steps=8 format=3 uid="uid://vsolum5fqp8s"]
+
+[ext_resource type="PackedScene" uid="uid://dxis5hrvqkhdg" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelf.tscn" id="1_lu16u"]
+[ext_resource type="PackedScene" uid="uid://k3nr8a4gfjd4" path="res://Assets/3D Models For Supermarket/Beverages/FakeSirWinstonTea.tscn" id="2_g54t7"]
+[ext_resource type="PackedScene" uid="uid://b27yf4lwuf10g" path="res://Assets/3D Models For Supermarket/Beverages/CokeFake.tscn" id="2_x0r4h"]
+[ext_resource type="PackedScene" uid="uid://m3g328gfwjsd" path="res://Assets/3D Models For Supermarket/Beverages/FakeSoda.tscn" id="3_id1d1"]
+[ext_resource type="PackedScene" uid="uid://cxpvrik1qf8pe" path="res://Assets/3D Models For Supermarket/Beverages/FakeTea.tscn" id="3_x0r4h"]
+[ext_resource type="PackedScene" uid="uid://dahcwn4lalkcl" path="res://Assets/3D Models For Supermarket/Beverages/FakeLiptonTea.tscn" id="5_b83nf"]
+[ext_resource type="PackedScene" uid="uid://barc03cyk2if" path="res://Assets/3D Models For Supermarket/Beverages/FakeMangoTea.tscn" id="6_574cq"]
+
+[node name="Shelf" instance=ExtResource("1_lu16u")]
+
+[node name="Cola" type="Node3D" parent="." index="2"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.08997293, 0, 0)
+
+[node name="Area3D2" parent="Cola" index="0" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523804, 0, 0.9523804, 0, 0.9523804, 0, -4.1629885e-08, 0.8734128, 0.7323307, 0.06347359)
+
+[node name="Area3D3" parent="Cola" index="1" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.8734126, 0.7323306, -0.039249044)
+
+[node name="Area3D5" parent="Cola" index="2" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.78307974, 0.7323306, 0.06347359)
+
+[node name="Area3D6" parent="Cola" index="3" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, 0.78307956, 0.7323306, -0.03924903)
+
+[node name="Area3D8" parent="Cola" index="4" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.6911984, 0.7323306, 0.06347359)
+
+[node name="Area3D9" parent="Cola" index="5" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, 0.6911981, 0.7323306, -0.039249044)
+
+[node name="Area3D4" parent="Cola" index="6" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.5342318, 0.7323307, 0.06347359)
+
+[node name="Area3D7" parent="Cola" index="7" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.5342316, 0.7323306, -0.03924904)
+
+[node name="Area3D10" parent="Cola" index="8" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.44389874, 0.7323306, 0.06347359)
+
+[node name="Area3D11" parent="Cola" index="9" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, 0.44389856, 0.7323306, -0.03924903)
+
+[node name="Area3D12" parent="Cola" index="10" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.35201743, 0.7323306, 0.06347359)
+
+[node name="Area3D13" parent="Cola" index="11" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, 0.35201707, 0.7323306, -0.03924904)
+
+[node name="Area3D14" parent="Cola" index="12" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.2067869, 0.7323307, 0.06347359)
+
+[node name="Area3D15" parent="Cola" index="13" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.20678674, 0.7323306, -0.039249036)
+
+[node name="Area3D16" parent="Cola" index="14" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.11645385, 0.7323306, 0.06347359)
+
+[node name="Area3D17" parent="Cola" index="15" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, 0.116453655, 0.7323306, -0.03924903)
+
+[node name="Area3D18" parent="Cola" index="16" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, 0.024572555, 0.7323306, 0.06347359)
+
+[node name="Area3D19" parent="Cola" index="17" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, 0.024572184, 0.7323306, -0.039249036)
+
+[node name="Area3D20" parent="Cola" index="18" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.12449527, 0.7323307, 0.06347359)
+
+[node name="Area3D21" parent="Cola" index="19" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.12449544, 0.7323306, -0.039249033)
+
+[node name="Area3D22" parent="Cola" index="20" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.21482831, 0.7323306, 0.06347359)
+
+[node name="Area3D23" parent="Cola" index="21" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, -0.2148285, 0.7323306, -0.03924903)
+
+[node name="Area3D24" parent="Cola" index="22" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.30670962, 0.7323306, 0.06347359)
+
+[node name="Area3D25" parent="Cola" index="23" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, -0.30670998, 0.7323306, -0.039249033)
+
+[node name="Area3D26" parent="Cola" index="24" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.46176, 0.7323307, 0.06347359)
+
+[node name="Area3D27" parent="Cola" index="25" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.4617602, 0.7323306, -0.03924903)
+
+[node name="Area3D28" parent="Cola" index="26" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.5520931, 0.7323306, 0.06347359)
+
+[node name="Area3D29" parent="Cola" index="27" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, -0.55209327, 0.7323306, -0.03924903)
+
+[node name="Area3D30" parent="Cola" index="28" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.95238036, 0, 0.95238036, 0, 0.95238036, 0, -4.1629885e-08, -0.64397436, 0.7323306, 0.06347359)
+
+[node name="Area3D31" parent="Cola" index="29" instance=ExtResource("2_x0r4h")]
+transform = Transform3D(-4.1629885e-08, 0, -0.9523803, 0, 0.9523803, 0, 0.9523803, 0, -4.1629885e-08, -0.6439747, 0.7323306, -0.03924903)
+
+[node name="Soda" type="Node3D" parent="." index="3"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.0855678, 0, 0)
+
+[node name="Area3D2" parent="Soda" index="0" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.9523805, 0, 8.325976e-08, 0, 0.9523805, 0, -8.325976e-08, 0, -0.9523805, 0.88815963, 1.0326302, 0.06822937)
+
+[node name="Area3D3" parent="Soda" index="1" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.9523804, 0, 8.325977e-08, 0, 0.9523804, 0, -8.325977e-08, 0, -0.9523804, 0.88815963, 1.0326302, -0.04427226)
+
+[node name="Area3D5" parent="Soda" index="2" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, 0.80818367, 1.0326302, 0.06822936)
+
+[node name="Area3D6" parent="Soda" index="3" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.80818367, 1.0326302, -0.04427224)
+
+[node name="Area3D8" parent="Soda" index="4" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.73106474, 1.0326302, 0.06822936)
+
+[node name="Area3D9" parent="Soda" index="5" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.73106474, 1.0326302, -0.04427226)
+
+[node name="Area3D4" parent="Soda" index="6" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.9523804, 0, 8.325976e-08, 0, 0.9523804, 0, -8.325976e-08, 0, -0.9523804, 0.6044381, 1.0326302, 0.06822937)
+
+[node name="Area3D7" parent="Soda" index="7" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, 0.6044381, 1.0326302, -0.04427226)
+
+[node name="Area3D10" parent="Soda" index="8" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, 0.5244621, 1.0326302, 0.06822936)
+
+[node name="Area3D11" parent="Soda" index="9" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.5244621, 1.0326302, -0.044272237)
+
+[node name="Area3D12" parent="Soda" index="10" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.4473432, 1.0326302, 0.06822936)
+
+[node name="Area3D13" parent="Soda" index="11" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.4473432, 1.0326302, -0.04427226)
+
+[node name="Area3D14" parent="Soda" index="12" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.33352527, 1.0326302, 0.06822937)
+
+[node name="Area3D15" parent="Soda" index="13" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, 0.33352527, 1.0326302, -0.04427226)
+
+[node name="Area3D16" parent="Soda" index="14" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, 0.25354925, 1.0326302, 0.06822936)
+
+[node name="Area3D17" parent="Soda" index="15" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.25354925, 1.0326302, -0.044272233)
+
+[node name="Area3D18" parent="Soda" index="16" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.17643037, 1.0326302, 0.06822936)
+
+[node name="Area3D19" parent="Soda" index="17" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.17643037, 1.0326302, -0.04427226)
+
+[node name="Area3D20" parent="Soda" index="18" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, 0.03763511, 1.0326302, 0.06822937)
+
+[node name="Area3D21" parent="Soda" index="19" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, 0.03763511, 1.0326302, -0.04427226)
+
+[node name="Area3D22" parent="Soda" index="20" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, -0.042340897, 1.0326302, 0.06822936)
+
+[node name="Area3D23" parent="Soda" index="21" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.042340897, 1.0326302, -0.04427223)
+
+[node name="Area3D24" parent="Soda" index="22" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.11945977, 1.0326302, 0.06822936)
+
+[node name="Area3D25" parent="Soda" index="23" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.11945977, 1.0326302, -0.04427226)
+
+[node name="Area3D26" parent="Soda" index="24" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.2256085, 1.0326302, 0.06822937)
+
+[node name="Area3D27" parent="Soda" index="25" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, -0.2256085, 1.0326302, -0.04427226)
+
+[node name="Area3D28" parent="Soda" index="26" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, -0.3055845, 1.0326302, 0.06822936)
+
+[node name="Area3D29" parent="Soda" index="27" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.3055845, 1.0326302, -0.044272225)
+
+[node name="Area3D30" parent="Soda" index="28" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.38270336, 1.0326302, 0.06822936)
+
+[node name="Area3D31" parent="Soda" index="29" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.38270336, 1.0326302, -0.04427226)
+
+[node name="Area3D32" parent="Soda" index="30" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.5249909, 1.0326302, 0.06822937)
+
+[node name="Area3D33" parent="Soda" index="31" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, -0.5249909, 1.0326302, -0.04427226)
+
+[node name="Area3D34" parent="Soda" index="32" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325977e-08, 0, 0.95238036, 0, -8.325977e-08, 0, -0.95238036, -0.6049668, 1.0326302, 0.06822936)
+
+[node name="Area3D35" parent="Soda" index="33" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.6049668, 1.0326302, -0.04427222)
+
+[node name="Area3D36" parent="Soda" index="34" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.6820857, 1.0326302, 0.06822936)
+
+[node name="Area3D37" parent="Soda" index="35" instance=ExtResource("3_id1d1")]
+transform = Transform3D(-0.95238036, 0, 8.325976e-08, 0, 0.95238036, 0, -8.325976e-08, 0, -0.95238036, -0.6820857, 1.0326302, -0.04427226)
+
+[node name="LiptonTea" parent="." index="4" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.95238084, 0, 0, 0, 0.95238084, 0, 0, 0, 0.95238084, 0.61910784, 1.7322938, 0.103242345)
+
+[node name="Area3D2" parent="LiptonTea" index="2" instance=ExtResource("5_b83nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, -0.11305298)
+
+[node name="Area3D3" parent="LiptonTea" index="3" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D4" parent="LiptonTea" index="4" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D5" parent="LiptonTea" index="5" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D6" parent="LiptonTea" index="6" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D7" parent="LiptonTea" index="7" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.31998235, -4.7683716e-07, -2.9802322e-08)
+
+[node name="Area3D8" parent="LiptonTea" index="8" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.31998235, -5.9604645e-07, -0.11305298)
+
+[node name="LiptonTea2" parent="LiptonTea" index="9" instance=ExtResource("5_b83nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51046443, -1.1920929e-07, -7.450581e-09)
+
+[node name="Area3D2" parent="LiptonTea/LiptonTea2" index="2" instance=ExtResource("5_b83nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, -0.11305298)
+
+[node name="Area3D3" parent="LiptonTea/LiptonTea2" index="3" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D4" parent="LiptonTea/LiptonTea2" index="4" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D5" parent="LiptonTea/LiptonTea2" index="5" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D6" parent="LiptonTea/LiptonTea2" index="6" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D7" parent="LiptonTea/LiptonTea2" index="7" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.31998235, -4.7683716e-07, -2.9802322e-08)
+
+[node name="Area3D8" parent="LiptonTea/LiptonTea2" index="8" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.31998235, -5.9604645e-07, -0.11305298)
+
+[node name="LiptonTea3" parent="LiptonTea" index="10" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.0137377, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D2" parent="LiptonTea/LiptonTea3" index="2" instance=ExtResource("5_b83nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, -0.11305298)
+
+[node name="Area3D3" parent="LiptonTea/LiptonTea3" index="3" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D4" parent="LiptonTea/LiptonTea3" index="4" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D5" parent="LiptonTea/LiptonTea3" index="5" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D6" parent="LiptonTea/LiptonTea3" index="6" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D7" parent="LiptonTea/LiptonTea3" index="7" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.31998235, -4.7683716e-07, -2.9802322e-08)
+
+[node name="Area3D8" parent="LiptonTea/LiptonTea3" index="8" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.31998235, -5.9604645e-07, -0.11305298)
+
+[node name="LiptonTea4" parent="LiptonTea" index="11" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -1.0137377, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D2" parent="LiptonTea/LiptonTea4" index="2" instance=ExtResource("5_b83nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, -0.11305298)
+
+[node name="Area3D3" parent="LiptonTea/LiptonTea4" index="3" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D4" parent="LiptonTea/LiptonTea4" index="4" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D5" parent="LiptonTea/LiptonTea4" index="5" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.15586776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D6" parent="LiptonTea/LiptonTea4" index="6" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.15586776, -3.5762787e-07, -0.11305298)
+
+[node name="Area3D7" parent="LiptonTea/LiptonTea4" index="7" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, -0.31998235, -4.7683716e-07, -2.9802322e-08)
+
+[node name="Area3D8" parent="LiptonTea/LiptonTea4" index="8" instance=ExtResource("5_b83nf")]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.31998235, -5.9604645e-07, -0.11305298)
+
+[node name="MangoTea" parent="." index="5" instance=ExtResource("6_574cq")]
+transform = Transform3D(0.95238084, 0, 0, 0, 0.95238084, 0, 0, 0, 0.95238084, 0.62198853, 1.3949789, -0.11639529)
+
+[node name="Area3D2" parent="MangoTea" index="2" instance=ExtResource("6_574cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19580373, 0, 0)
+
+[node name="Area3D3" parent="MangoTea" index="3" instance=ExtResource("6_574cq")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.37806085, 0, 0)
+
+[node name="Area3D4" parent="MangoTea" index="4" instance=ExtResource("6_574cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0, 0.14209811)
+
+[node name="Area3D5" parent="MangoTea" index="5" instance=ExtResource("6_574cq")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.19580373, 0, 0.14209811)
+
+[node name="Area3D6" parent="MangoTea" index="6" instance=ExtResource("6_574cq")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -0.37806088, 0, 0.14209811)
+
+[node name="WinstonTea" parent="." index="6" instance=ExtResource("2_g54t7")]
+transform = Transform3D(-0.9999997, 0, 8.7422755e-08, 0, 0.9999997, 0, -8.7422755e-08, 0, -0.9999997, 0, 1.451027, 0.19380093)
+
+[node name="Area3D2" parent="WinstonTea" index="2" instance=ExtResource("2_g54t7")]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, 1.19408545e-08, -1.1920929e-07, 0.13658744)
+
+[node name="Area3D3" parent="WinstonTea" index="3" instance=ExtResource("2_g54t7")]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, -7.1054274e-15, 0, 1, 0.22312523, -1.1920929e-07, 0)
+
+[node name="Area3D4" parent="WinstonTea" index="4" instance=ExtResource("2_g54t7")]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0.22312525, -2.3841858e-07, 0.13658744)
+
+[node name="Area3D5" parent="WinstonTea" index="5" instance=ExtResource("2_g54t7")]
+transform = Transform3D(1, 0, 1.4210855e-14, 0, 1, 0, -1.4210855e-14, 0, 1, 0.43907776, -2.3841858e-07, -1.4901161e-08)
+
+[node name="Area3D6" parent="WinstonTea" index="6" instance=ExtResource("2_g54t7")]
+transform = Transform3D(1, 0, 2.1316282e-14, 0, 1, 0, -2.1316282e-14, 0, 1, 0.4390778, -3.5762787e-07, 0.13658741)
+
+[node name="Area3D7" parent="WinstonTea" index="7" instance=ExtResource("2_g54t7")]
+transform = Transform3D(1, 0, 2.1316282e-14, 0, 1, 0, -2.1316282e-14, 0, 1, 0.6881606, -3.5762787e-07, -1.4901161e-08)
+
+[node name="Area3D8" parent="WinstonTea" index="8" instance=ExtResource("2_g54t7")]
+transform = Transform3D(1, 0, 2.842171e-14, 0, 1, 0, -2.842171e-14, 0, 1, 0.6881606, -4.7683716e-07, 0.1365874)
+
+[node name="Tea" parent="." index="7" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(-0.9523806, 0, 8.325977e-08, 0, 0.9523806, 0, -8.325977e-08, 0, -0.9523806, 0.73015976, 0.28206977, -0.10777048)
+
+[node name="Area3D2" parent="Tea" index="2" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18303019)
+
+[node name="Area3D3" parent="Tea" index="3" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3076677, 0, -2.2351742e-08)
+
+[node name="Area3D4" parent="Tea" index="4" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.99999994, 0, -7.1054274e-15, 0, 0.99999994, 0, 7.1054274e-15, 0, 0.99999994, 0.3076677, 0, -0.18303019)
+
+[node name="Area3D5" parent="Tea" index="5" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.99999994, 0, -7.1054274e-15, 0, 0.99999994, 0, 7.1054274e-15, 0, 0.99999994, 0.6096908, 0, -5.2154064e-08)
+
+[node name="Area3D6" parent="Tea" index="6" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.9999999, 0, -1.4210855e-14, 0, 0.9999999, 0, 1.4210855e-14, 0, 0.9999999, 0.6096908, 0, -0.18303022)
+
+[node name="Area3D7" parent="Tea" index="7" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.9999999, 0, -1.4210855e-14, 0, 0.9999999, 0, 1.4210855e-14, 0, 0.9999999, 0.9073287, 0, -7.4505806e-08)
+
+[node name="Area3D8" parent="Tea" index="8" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.9999998, 0, -2.1316282e-14, 0, 0.9999998, 0, 2.1316282e-14, 0, 0.9999998, 0.90732867, 0, -0.18303023)
+
+[node name="Area3D9" parent="Tea" index="9" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.9999998, 0, -2.1316282e-14, 0, 0.9999998, 0, 2.1316282e-14, 0, 0.9999998, 1.2243136, 0, -1.0430813e-07)
+
+[node name="Area3D10" parent="Tea" index="10" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.99999976, 0, -2.1316282e-14, 0, 0.99999976, 0, 2.1316282e-14, 0, 0.99999976, 1.2243136, 0, -0.18303025)
+
+[node name="Area3D11" parent="Tea" index="11" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.99999976, 0, -2.1316282e-14, 0, 0.99999976, 0, 2.1316282e-14, 0, 0.99999976, 1.530999, 0, -1.3411045e-07)
+
+[node name="Area3D12" parent="Tea" index="12" instance=ExtResource("3_x0r4h")]
+transform = Transform3D(0.9999997, 0, -2.842171e-14, 0, 0.9999997, 0, 2.842171e-14, 0, 0.9999997, 1.530999, 0, -0.18303028)

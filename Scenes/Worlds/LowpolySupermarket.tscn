@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://b12kcbqt8cg6r"]
+[gd_scene load_steps=62 format=4 uid="uid://b12kcbqt8cg6r"]
 
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="1_k20mw"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="1_lfkti"]
@@ -9,13 +9,20 @@
 [ext_resource type="PackedScene" uid="uid://x73t2qbkx5qw" path="res://Assets/3D Models For Supermarket/Supermarket bundles/low_poly_supermarket_combine_mesh.tscn" id="3_mkcw7"]
 [ext_resource type="Texture2D" uid="uid://7gi7u2v0iac2" path="res://Prefabs/HDRI/aerial_asphalt_01_2k.gltf/textures/aerial_asphalt_01_diff_2k.jpg" id="4_sldd2"]
 [ext_resource type="Texture2D" uid="uid://dys54us0w3njo" path="res://Prefabs/HDRI/aerial_asphalt_01_2k.gltf/textures/aerial_asphalt_01_rough_2k.jpg" id="5_2kn1k"]
-[ext_resource type="PackedScene" uid="uid://faoy4fnis3kh" path="res://Assets/3D Models For Supermarket/Beverages/SoftDrinkShelf.tscn" id="5_rlwrm"]
+[ext_resource type="PackedScene" uid="uid://8qgixu6qo0yj" path="res://Assets/kenney_mini-market/Fence.tscn" id="5_7do32"]
+[ext_resource type="PackedScene" uid="uid://faoy4fnis3kh" path="res://Assets/3D Models For Supermarket/Beverages/HotDrinkShelf.tscn" id="5_rlwrm"]
 [ext_resource type="Texture2D" uid="uid://dg64l2mk4b75t" path="res://Prefabs/HDRI/aerial_asphalt_01_2k.gltf/textures/aerial_asphalt_01_nor_gl_2k.jpg" id="6_rlwrm"]
-[ext_resource type="PackedScene" uid="uid://vsolum5fqp8s" path="res://Assets/3D Models For Supermarket/Beverages/HotDrinksShelf.tscn" id="8_duvh4"]
+[ext_resource type="PackedScene" uid="uid://vsolum5fqp8s" path="res://Assets/3D Models For Supermarket/Beverages/SoftDrinksShelf.tscn" id="8_duvh4"]
+[ext_resource type="Texture2D" uid="uid://bh0g6c1klosyp" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="8_ra85v"]
+[ext_resource type="Texture2D" uid="uid://cw2gl2bjts46r" path="res://Assets/Images/Supermarket Level Guide/Đồ uống nóng (1).png" id="9_fhpcg"]
+[ext_resource type="Texture2D" uid="uid://crlal5632sn2" path="res://Assets/Images/Supermarket Level Guide/Đồ uống nóng (2).png" id="10_1nfed"]
 [ext_resource type="PackedScene" uid="uid://vscosdri0lhs" path="res://Assets/kenney_mini-market/Models/GLB format/fence-door-rotate.glb" id="11_15gq7"]
+[ext_resource type="Texture2D" uid="uid://b6kfsih6yvkju" path="res://Assets/Images/Supermarket Level Guide/Đồ uống nóng.png" id="11_1042w"]
 [ext_resource type="PackedScene" uid="uid://bia6p3cptq7d6" path="res://Assets/3D Models For Supermarket/Animal Products/AnimalProductFridge.tscn" id="12_6v2cb"]
 [ext_resource type="PackedScene" uid="uid://jhprmwnakj1e" path="res://Assets/Character/CashierEmployee.tscn" id="12_eqjf7"]
+[ext_resource type="Texture2D" uid="uid://tcamr7pbvoeu" path="res://Assets/Images/Supermarket Level Guide/Đồ uống nóng (4).png" id="12_p8ll3"]
 [ext_resource type="PackedScene" uid="uid://bp8rnmr6uclby" path="res://Assets/3D Models For Supermarket/Junk Foods/JunkFoodShelf.tscn" id="13_bwgcx"]
+[ext_resource type="Texture2D" uid="uid://dqa8wkeiaogke" path="res://Assets/Images/Supermarket Level Guide/Đồ uống nóng (3).png" id="13_wl710"]
 [ext_resource type="PackedScene" uid="uid://bk0ikcmoalasp" path="res://Assets/3D Models For Supermarket/Fruits/FruitShelf.tscn" id="14_pf8qx"]
 [ext_resource type="PackedScene" uid="uid://doaq77tgfvh8e" path="res://Assets/3D Models For Supermarket/Fruits/FruitCaseGreen.tscn" id="15_otcmc"]
 [ext_resource type="PackedScene" uid="uid://digx86yadb4ce" path="res://Assets/3D Models For Supermarket/Market Equipments/FertilizeBags.tscn" id="16_eqjf7"]
@@ -137,6 +144,128 @@ size = Vector3(6.2678375, 3.0601807, 0.36909914)
 [sub_resource type="BoxShape3D" id="BoxShape3D_mkcw7"]
 size = Vector3(7.7935867, 3.0601807, 0.36909914)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ods7"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("8_ra85v")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jfvos"]
+_surfaces = [{
+"aabb": AABB(-0.15, 0, -0.12990381, 0.3, 0.5, 0.25980762),
+"format": 34359742465,
+"index_count": 120,
+"index_data": PackedByteArray("AgAOAAAADgACAAUAAAAOAA8ABQAPAA4ADwADAAAAAwAPAAUAAAADABAABQAQAAMAAAARAAIABQACABEAEAASAAAAAAASABEABQATABAAEQATAAUAAQASABAAEgABABEAEwAEABAAEAAEAAEABAATABEAEQABAAQABgAHAAgABwAGAAsACAAHAAkACwAJAAcACQAMAAgADAAJAAsACAAMABQACwAUAAwACAAVAAYACwAGABUAFAAWAAgACAAWABUACwAXABQAFQAXAAsACgAWABQAFgAKABUAFwANABQAFAANAAoADQAXABUAFQAKAA0A"),
+"lods": [0.20082092, PackedByteArray("AAABAAIAAAACAAMABAABAAAAAgABAAQAAAADAAQABQADAAIABQAEAAMABAAFAAIABgAHAAgACAAHAAkACAAKAAYACwAJAAcABwAGAAsACQAMAAgACgAIAAwADAAJAAsABgAKAA0ADAANAAoADQALAAYACwANAAwA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("zcxMPQAAAACsXLG9zczMvQAAAAAAAAAAzcxMPQAAAACsXLE9zcxMPQAAAD+sXLG9zczMvQAAAD8AAAAAzcxMPQAAAD+sXLE9mpmZPZqZmT6BBQW+mpkZPpqZmT6pE9ClmpmZPZqZmT6BBQU+mpkZPs3MTD6pE9ClmpkZvpqZmT6pE9ClmpmZPc3MTD6BBQW+mpmZPc3MTD6BBQU+mpkZvs3MTD6pE9ClzczMPQAAAAAAAAAAzczMPQAAAD8AAAAAzcxMvQAAAD+sXLG9zcxMvQAAAACsXLE9zcxMvQAAAACsXLG9zcxMvQAAAD+sXLE9mpmZvc3MTD6BBQU+mpmZvZqZmT6BBQW+mpmZvZqZmT6BBQU+mpmZvc3MTD6BBQW+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3igms"]
+resource_name = "pipe-half-section_pipe-half-section"
+lightmap_size_hint = Vector2i(18, 18)
+_surfaces = [{
+"aabb": AABB(-0.15, 0, -0.12990381, 0.3, 0.5, 0.25980762),
+"attribute_data": PackedByteArray("AAAYP5qZOT8AAIA+HMdxPwAAGD+amTk/VVWVPquqaj8AABg/mpk5P1VVlT6O43g/AAAYP2ZmBj+rqio9juN4PwAAGD9mZgY/q6oqPauqaj8AABg/ZmYGP6uqqj0cx3E/AAAYP2ZmBj/255s+AABAPwAAGD+amTk/OY7jPAAAQD8AABg/mpk5PzzH5TwcxzE/AAAYP2ZmBj+HC5w+HMcxPwAAGD+amTk/q6pqPzmO4zwAABg/mpk5P47jeD85juM8AAAYP2ZmBj+rqmo/x3GcPgAAGD9mZgY/juN4P8dxnD4AABg/mpk5P+DMPz8cxzE/AAAYP5qZOT8Zuz8/AABAPwAAGD9mZgY/HMfxPgAAQD8AABg/ZmYGP6zq8T4cxzE/AABgPmZmRj/kOC4/OY7jPAAAYD5mZkY/AABAP6uqKj4AAGA+ZmZGP+Q4Lj/HcZw+AABgPmZmRj8cx/E+q6oqPgAAYD4AAGA/AABAP3IcBz8AAGA+AABgP/ve8j5yHAc/AABgPmZmRj8cx/E+3kT2PgAAYD5mZkY/EnQ/P95E9j4AAGA+ZmZGP6uqaj8cxzE/AABgPmZmRj+O43g/HMcxPwAAYD4AAGA/juN4PwAAQD8AAGA+AABgP6uqaj8AAEA/AABgPmZmRj+O43g/chwHPwAAYD5mZkY/q6pqP3IcBz8AAGA+AABgP6uqaj8cx/E+AABgPgAAYD+O43g/HMfxPgAAYD4AAGA/OY7jPNxE9j4AAGA+AABgP+pZmz7eRPY+AABgPmZmRj/HcZw+chwHPwAAYD5mZkY/Egz1PHIcBz8AAGA+AABgP3Icxz3HcZw+AABgPgAAYD85juM8q6oqPgAAYD4AAGA/chzHPTmO4zwAAGA+AABgP8dxnD6rqio+AAAYP5qZOT9yHIc+juN4PwAAGD+amTk/x3GcPhzHcT8AABg/mpk5P3Ichz6rqmo/AAAYP2ZmBj/kOI49juN4PwAAGD9mZgY/5DiOPauqaj8AABg/ZmYGPzmO4zwcx3E/AAAYP5qZOT8kK+w8dD05PwAAGD9mZgY/x3GcPnQ9OT8AABg/ZmYGP8dxnD50PTk/AAAYP5qZOT8kK+w8dD05PwAAGD9mZgY/HMdxP8dxnD4AABg/mpk5PxzHcT85juM8AAAYP5qZOT8AAEA/dD05PwAAGD9mZgY/61DyPnQ9OT8AABg/mpk5PwAAQD90PTk/AAAYP2ZmBj/rUPI+dD05PwAAYD5mZkY/q6oKPzmO4zwAAGA+ZmZGP6uqCj/HcZw+AABgPgAAYD8AIjA+HMfxPgAAYD5mZkY/vFEyPpHdBD8AAGA+AABgP4xbHj+S3QQ/AABgPmZmRj+czx0/HMfxPgAAYD4AAGA/HMdxPsdxnD4AAGA+AABgPxzHcT45juM8"),
+"format": 34359742519,
+"index_count": 120,
+"index_data": PackedByteArray("AgAqAAAAAAArAAIAAAAsACsALAABACsABQAtAAMAAwAuAAUAAwAvAC4ALwAEAC4ABwAwADEAMQAGAAcAMgAzAAgACAAJADIANAAMAAoACgA1ADQADQA0ADUANQALAA0AEQAOADYANgA3ABEAOAAPABAAEAA5ADgAEgATABQAFAA6ABIAFAA7ADoAOwAVADoAJQAiADwAPAA9ACUAJAA9ADwAPAAjACQAFgA+AD8APwAZABYAPwA+ABcAFwAYAD8AGgAbABwAHAAdABoAHgAfACAAIAAhAB4AJgAnACgAKABAACYAKABBAEAAQQApAEAA"),
+"lods": [0.20082092, PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACAAJAAYACgALAAwADQAMAAsADgAPABAAEAARAA4AEgATABQAFAAVABIAFgAXABgAGAAZABYAGgAbABwAHAAdABoAHgAfACAAIAAhAB4AIgAjACQAJAAlACIAJgAnACgAKAApACYA")],
+"material": SubResource("StandardMaterial3D_3ods7"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 66,
+"vertex_data": PackedByteArray("zcxMPQAAAACsXLG9zczMvQAAAAAAAAAAzcxMPQAAAACsXLE9zcxMPQAAAD+sXLE9zczMvQAAAD8AAAAAzcxMPQAAAD+sXLG9zczMvQAAAD8AAAAAzczMvQAAAAAAAAAAzcxMPQAAAACsXLG9zcxMPQAAAD+sXLG9zcxMPQAAAACsXLG9zcxMPQAAAACsXLE9zcxMPQAAAD+sXLG9zcxMPQAAAD+sXLE9zcxMPQAAAACsXLE9zczMvQAAAAAAAAAAzczMvQAAAD8AAAAAzcxMPQAAAD+sXLE9mpmZPZqZmT6BBQW+mpkZPpqZmT6pE9ClmpmZPZqZmT6BBQU+mpkZvpqZmT6pE9ClmpkZvs3MTD6pE9ClmpmZPc3MTD6BBQW+mpmZPZqZmT6BBQW+mpkZvpqZmT6pE9ClmpkZPpqZmT6pE9ClmpmZPZqZmT6BBQW+mpmZPc3MTD6BBQW+mpkZPs3MTD6pE9ClmpmZPZqZmT6BBQU+mpkZPpqZmT6pE9ClmpkZPs3MTD6pE9ClmpmZPc3MTD6BBQU+mpmZPc3MTD6BBQU+mpkZvs3MTD6pE9ClmpkZvpqZmT6pE9ClmpmZPZqZmT6BBQU+mpmZPc3MTD6BBQU+mpkZPs3MTD6pE9ClmpmZPc3MTD6BBQW+mpkZvs3MTD6pE9ClzczMPQAAAAAAAAAAzcxMvQAAAACsXLE9zcxMvQAAAACsXLG9zczMPQAAAD8AAAAAzcxMvQAAAD+sXLG9zcxMvQAAAD+sXLE9zcxMvQAAAACsXLG9zcxMvQAAAD+sXLG9zcxMvQAAAD+sXLG9zcxMvQAAAACsXLG9zczMPQAAAD8AAAAAzczMPQAAAAAAAAAAzcxMvQAAAACsXLE9zcxMvQAAAD+sXLE9zcxMvQAAAACsXLE9zcxMvQAAAD+sXLE9mpmZvZqZmT6BBQW+mpmZvZqZmT6BBQU+mpmZvc3MTD6BBQU+mpmZvZqZmT6BBQU+mpmZvc3MTD6BBQW+mpmZvZqZmT6BBQW+mpmZvc3MTD6BBQU+mpmZvc3MTD6BBQW+/38AAP///7//fwAA////v/9/AAD///+//3///wAA/7//f///AAD/v/9///8AAP+/AAD/f/9//78AAP9//3//v///JdEAAGzX//8l0QAAbNf//yXRAABs19mu/3///2zX//8l0QAAbNfZrv9///9s19mu/3///2zXAAD/f/9//78AAP9//3//v9mu/3///2zX/3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/78AAP9//3//v///JdEAAGzX//8l0QAAbNcAAP9//3//v////3////////8l0QAAbNf//yXRAABs1////3//////2a7/f///bNf///9//////////3//////2a7/f///bNfZrv9///9s1wAA/3//f/+/AAD/f/9//7/Zrv9///9s1/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//3///wAA/7//f///AAD/v/9///8AAP+/AAAl0dku/78AACXR2S7/vwAAJdHZLv+/AAAl0dku/7////9//////////3//////JVH/fyXR/78lUf9/JdH/vyVR/38l0f+/JVH/fyXR/7//f///AAD/v/9///8AAP+/JVH/fyXR/78lUf9/JdH/vwAAJdHZLv+/AAAl0dku/7//fwAA////v/9/AAD///+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jfvos")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eaww7"]
+albedo_texture = ExtResource("9_fhpcg")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_q1tc0"]
+material = SubResource("StandardMaterial3D_eaww7")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xo3w0"]
+albedo_texture = ExtResource("9_fhpcg")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_gtu05"]
+material = SubResource("StandardMaterial3D_xo3w0")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqw3r"]
+albedo_texture = ExtResource("10_1nfed")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_7cpmx"]
+material = SubResource("StandardMaterial3D_iqw3r")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hhj44"]
+albedo_texture = ExtResource("10_1nfed")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_o7max"]
+material = SubResource("StandardMaterial3D_hhj44")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pb1o"]
+albedo_texture = ExtResource("11_1042w")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_3igms"]
+material = SubResource("StandardMaterial3D_1pb1o")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2muml"]
+albedo_texture = ExtResource("12_p8ll3")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_a0rjl"]
+material = SubResource("StandardMaterial3D_2muml")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jd7ux"]
+albedo_texture = ExtResource("12_p8ll3")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_5lwgq"]
+material = SubResource("StandardMaterial3D_jd7ux")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxxw7"]
+albedo_texture = ExtResource("13_wl710")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_ihxb8"]
+material = SubResource("StandardMaterial3D_nxxw7")
+size = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cikl"]
+albedo_texture = ExtResource("13_wl710")
+emission = Color(0.16565639, 0.16565642, 0.16565639, 1)
+emission_energy_multiplier = 2.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_hha1d"]
+material = SubResource("StandardMaterial3D_0cikl")
+size = Vector2(1, 0.5)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_gtu05"]
 size = Vector2(20, 20)
 
@@ -161,6 +290,7 @@ levelId = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_bake_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6v2cb")
@@ -170,6 +300,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="Supermarket" parent="SuperMarket Architecture" instance=ExtResource("3_mkcw7")]
 transform = Transform3D(-5.5950576e-08, 4.7562186e-21, -1.265, 7.105428e-15, 1.565, 3.537535e-21, 1.28, -8.687497e-15, -5.5294905e-08, 3.2071204, -0.9106547, -4.252966)
+lod_bias = 0.05
 
 [node name="DoorFrame" type="MeshInstance3D" parent="SuperMarket Architecture/Supermarket"]
 transform = Transform3D(0.5210938, 3.552714e-15, 0, -1.7763566e-15, 0.96805114, -8.4703295e-22, 7.1054274e-15, 1.6940659e-21, 0.79051393, 2.4166741, -0.7549129, 0.067287445)
@@ -268,7 +399,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_sldd2")
 shape = SubResource("ConcavePolygonShape3D_2kn1k")
 
 [node name="Glass9" type="MeshInstance3D" parent="SuperMarket Architecture/Supermarket/DoorFrame/Glass"]
-transform = Transform3D(0.21, -3.126226e-15, 2.842171e-14, -2.9178122e-16, 0.99999994, 0, -5.3290705e-15, 0, 1.1764705, -1.5142689, 7.1525574e-07, 4.239711)
+transform = Transform3D(0.24, 6.5711186e-15, 2.9842797e-14, -1.5770684e-15, 1, 4.177992e-15, -6.0903664e-15, -3.5527145e-15, 1.176, -1.4669144, 7.1525574e-07, 4.239711)
 mesh = SubResource("PlaneMesh_duvh4")
 skeleton = NodePath("../../../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_sldd2")
@@ -300,6 +431,18 @@ transform = Transform3D(-4.371138e-08, -5.3626753e-08, 1.0000008, -5.3626753e-08
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SuperMarket Architecture/Supermarket/WallCollisions/WallCollision3"]
 transform = Transform3D(1, -8.277823e-13, 9.7841735e-12, -2.842171e-13, 0.9999998, -4.319868e-19, 1.9184654e-13, -2.6399967e-15, 1.000116, 0.7449379, 0.017883241, 0)
 shape = SubResource("BoxShape3D_mkcw7")
+
+[node name="fence2" parent="SuperMarket Architecture/Supermarket" instance=ExtResource("5_7do32")]
+transform = Transform3D(-1, -5.3626756e-08, -1.509958e-07, -5.3626753e-08, 1, -1.3006131e-14, 1.509958e-07, -4.908717e-15, -1.0000001, 1.9064317, -1.625869, 0.7052219)
+
+[node name="fence3" parent="SuperMarket Architecture/Supermarket" instance=ExtResource("5_7do32")]
+transform = Transform3D(-1, -8.7422784e-08, -6.035982e-08, 8.742279e-08, -1, 8.7422805e-08, -6.0359866e-08, 8.7422826e-08, 1.0000002, 1.9064325, -0.89094573, 0.7052226)
+
+[node name="fence4" parent="SuperMarket Architecture/Supermarket" instance=ExtResource("5_7do32")]
+transform = Transform3D(-1, -5.3626763e-08, -1.509958e-07, -5.3626753e-08, 1, -1.300613e-14, 1.509958e-07, -4.9087177e-15, -1.0000002, 1.9064317, -1.625869, -0.84238577)
+
+[node name="fence5" parent="SuperMarket Architecture/Supermarket" instance=ExtResource("5_7do32")]
+transform = Transform3D(-1, -8.7422784e-08, -6.035981e-08, 8.742279e-08, -1, 8.7422805e-08, -6.0359895e-08, 8.742284e-08, 1.0000004, 1.9064324, -0.89094573, -0.84238505)
 
 [node name="Decoration" type="Node3D" parent="SuperMarket Architecture"]
 transform = Transform3D(1, 2.1175824e-22, 7.1054274e-15, 0, 1, 2.49152e-22, 0, 1.6610134e-22, 0.6666667, 0, 0, 0)
@@ -340,14 +483,110 @@ transform = Transform3D(7.54979e-08, 0, -1, 4.3711392e-08, 1, 3.3001183e-15, 1, 
 [node name="StaticBody3D2" parent="SuperMarket Architecture/Decoration" instance=ExtResource("16_eqjf7")]
 transform = Transform3D(7.54979e-08, 0, -1, 4.3711392e-08, 1, 3.3001183e-15, 1, -4.3711392e-08, 7.54979e-08, 6.999999, -2.6913733, -10.693369)
 
+[node name="Main" type="Node3D" parent="SuperMarket Architecture/Decoration"]
+transform = Transform3D(1, 5.646419e-23, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, 0.539571, -0.05489513, -7.4436274)
+
+[node name="pipe-half-section" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0.4044015, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="pipe-half-section2" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, -0.3695481, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="Front" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main"]
+mesh = SubResource("QuadMesh_q1tc0")
+
+[node name="Back" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_gtu05")
+
+[node name="Main4" type="Node3D" parent="SuperMarket Architecture/Decoration"]
+transform = Transform3D(1, 5.646419e-23, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, 0.5395708, -0.054895233, -9.819806)
+
+[node name="pipe-half-section" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main4"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0.4044015, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="pipe-half-section2" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main4"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, -0.3695481, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="Front" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main4"]
+mesh = SubResource("QuadMesh_7cpmx")
+
+[node name="Back" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main4"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_o7max")
+
+[node name="Main2" type="Node3D" parent="SuperMarket Architecture/Decoration"]
+transform = Transform3D(1, 5.646419e-23, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, 0.53957117, -0.054895017, -4.86141)
+
+[node name="pipe-half-section" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main2"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0.4044015, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="pipe-half-section2" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main2"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, -0.3695481, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="Front" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main2"]
+mesh = SubResource("QuadMesh_3igms")
+
+[node name="Back" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main2"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_3igms")
+
+[node name="Main3" type="Node3D" parent="SuperMarket Architecture/Decoration"]
+transform = Transform3D(1, 5.646419e-23, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, 3.7095096, -0.054895017, -4.8614106)
+
+[node name="pipe-half-section" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main3"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0.4044015, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="pipe-half-section2" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main3"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, -0.3695481, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="Front" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main3"]
+mesh = SubResource("QuadMesh_a0rjl")
+
+[node name="Back" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main3"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_5lwgq")
+
+[node name="Main5" type="Node3D" parent="SuperMarket Architecture/Decoration"]
+transform = Transform3D(1, 5.646419e-23, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, 3.7095094, -0.05489524, -9.998442)
+
+[node name="pipe-half-section" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main5"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, 0.4044015, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="pipe-half-section2" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main5"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.2, -0.3695481, 0.23123205, 0)
+mesh = SubResource("ArrayMesh_3igms")
+skeleton = NodePath("")
+
+[node name="Front" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main5"]
+mesh = SubResource("QuadMesh_ihxb8")
+
+[node name="Back" type="MeshInstance3D" parent="SuperMarket Architecture/Decoration/Main5"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_hha1d")
+
 [node name="InteractableShelf" type="Node3D" parent="SuperMarket Architecture"]
 
 [node name="Fridge" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("12_6v2cb")]
-transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, 2.49152e-24, 0, 1.6610133e-24, 0.006666667, 0.54421014, -2.326805, -8.758413)
-script = null
-
-[node name="Fridge2" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("12_6v2cb")]
-transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, 2.49152e-24, 0, 1.6610133e-24, 0.006666667, 0.54421014, -2.326805, -8.758413)
+transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, -8.326673e-17, 0, 1.6610133e-24, 0.006666667, 0.54421026, -2.4149127, -7.6385894)
 script = null
 
 [node name="Shelf3" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("13_bwgcx")]
@@ -359,18 +598,18 @@ transform = Transform3D(7.927282e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05,
 script = null
 
 [node name="Fridge3" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("14_pf8qx")]
-transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, 2.49152e-24, 0, 1.6610133e-24, 0.006666667, 3.3010716, -2.335515, -8.769684)
+transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, -5.5511148e-17, 0, 1.6610133e-24, 0.006666667, 3.3010716, -2.4144952, -7.645574)
 script = null
 
 [node name="Shelf" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("8_duvh4")]
-transform = Transform3D(7.92728e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651241e-15, 0.7, -3.0597974e-08, 5.2848527e-08, -0.7214145, -3.4499998, -3.487932)
+transform = Transform3D(7.9272816e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651245e-15, 0.7, -3.0597974e-08, 5.2848527e-08, -0.72151625, -3.4453278, -3.4879365)
 script = null
 
 [node name="Shelf2" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("5_rlwrm")]
 transform = Transform3D(7.92728e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651241e-15, 0.7, -3.0597974e-08, 5.2848527e-08, -0.7244476, -3.4551394, -5.0163016)
 
 [node name="fence-door-rotate3" parent="SuperMarket Architecture" instance=ExtResource("11_15gq7")]
-transform = Transform3D(2, -2.9646153e-21, 1.066e-42, 2.9646153e-21, 2, -2.2146852e-22, -1.107e-42, 3.3220278e-22, 1.3333334, 7.006113, -3.4940698, -3.5508728)
+transform = Transform3D(2, -2.9646153e-21, 0, 2.9646153e-21, 2, -2.2146852e-22, 0, 3.3220278e-22, 1.3333334, 7.006113, -3.4940698, -3.5508728)
 
 [node name="Cashier" parent="." instance=ExtResource("17_otcmc")]
 transform = Transform3D(-1.5, -2.4871352e-15, -2.2649371e-07, 7.413219e-15, 1.5, -6.5567086e-08, 2.2649371e-07, -6.5567086e-08, -1.5, 6.3658533, -2.9858434, -6.714336)

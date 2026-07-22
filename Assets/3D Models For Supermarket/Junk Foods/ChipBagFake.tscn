@@ -82,4 +82,5 @@ shape = SubResource("BoxShape3D_16iis")
 
 [node name="CombinedMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00074017793, 0, 0.023919731)
+lod_bias = 0.05
 mesh = SubResource("ArrayMesh_jd3bv")

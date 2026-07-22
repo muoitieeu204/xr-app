@@ -72,5 +72,6 @@ shape = SubResource("CylinderShape3D_66pxa")
 
 [node name="Cylinder__0" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, -6.556708e-08, 1.5, 0, -1.5, -6.556708e-08, 0, 0, 0)
+lod_bias = 0.05
 mesh = SubResource("ArrayMesh_7seew")
 skeleton = NodePath("")

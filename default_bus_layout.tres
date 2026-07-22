@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=6 format=3 uid="uid://dpr132vrqgah0"]
+[gd_resource type="AudioBusLayout" load_steps=7 format=3 uid="uid://dpr132vrqgah0"]
 
 [sub_resource type="AudioEffectBandPassFilter" id="AudioEffectBandPassFilter_wjkik"]
 resource_name = "BandPassFilter"
@@ -12,6 +12,9 @@ resource_name = "Capture"
 buffer_length = 1.0
 
 [sub_resource type="AudioEffectRecord" id="AudioEffectRecord_wjkik"]
+resource_name = "Record"
+
+[sub_resource type="AudioEffectRecord" id="AudioEffectRecord_j3pel"]
 resource_name = "Record"
 
 [sub_resource type="AudioEffectBandPassFilter" id="AudioEffectBandPassFilter_j3pel"]
@@ -39,8 +42,10 @@ bus/2/volume_db = 6.0199986
 bus/2/send = &"Master"
 bus/2/effect/0/effect = SubResource("AudioEffectRecord_wjkik")
 bus/2/effect/0/enabled = true
-bus/2/effect/1/effect = SubResource("AudioEffectBandPassFilter_j3pel")
+bus/2/effect/1/effect = SubResource("AudioEffectRecord_j3pel")
 bus/2/effect/1/enabled = true
+bus/2/effect/2/effect = SubResource("AudioEffectBandPassFilter_j3pel")
+bus/2/effect/2/enabled = true
 bus/3/name = &"Sounds"
 bus/3/solo = false
 bus/3/mute = false

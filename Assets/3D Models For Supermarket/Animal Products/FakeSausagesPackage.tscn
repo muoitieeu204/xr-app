@@ -179,4 +179,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00088500977, -0.0105896, 0
 shape = SubResource("BoxShape3D_hgley")
 
 [node name="CombinedMesh" type="MeshInstance3D" parent="."]
+lod_bias = 0.05
 mesh = SubResource("ArrayMesh_fcvm8")
