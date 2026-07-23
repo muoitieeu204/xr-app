@@ -2,15 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wup33rsfx867"
+uid="uid://bd5emgnmki3c"
 path.s3tc="res://.godot/imported/PackOfSausages_4.png-279786c704e90747db30547d0062093e.s3tc.ctex"
 path.etc2="res://.godot/imported/PackOfSausages_4.png-279786c704e90747db30547d0062093e.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "831b356999e6ae1ee9010b986b89834b"
 }
 
 [deps]
