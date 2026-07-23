@@ -5,6 +5,14 @@ extends Control
 
 @onready var task_list_container = $PanelContainer/VBoxContainer/TaskListContainer
 
+
+func _ready() -> void:
+	await get_tree().process_frame
+	var levelNode = get_tree().get_nodes_in_group("LevelController")
+	if levelNode.size() > 0:
+		var level = levelNode[0]
+		update_tasks(level.taskList, level.completedTask)
+
 # Call this function from your LevelController whenever a task is completed!
 func update_tasks(all_tasks: Array[String], completed_tasks: Array[String]) -> void:
 	# 1. Clear the old list to prevent duplicates
@@ -39,4 +47,8 @@ func update_tasks(all_tasks: Array[String], completed_tasks: Array[String]) -> v
 		hbox.add_child(icon_rect)
 		hbox.add_child(label)
 		task_list_container.add_child(hbox)
+
+
+
+
 

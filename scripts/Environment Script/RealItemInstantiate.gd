@@ -38,6 +38,15 @@ func pick_up(by: Node3D) -> void:
 		realItemInstance.add_child(audioPlayer)
 		audioPlayer.bus = "Sounds"
 		audioPlayer.play()
+	
+	if has_meta("my_multimesh") and has_meta("my_instance_id"):
+		var mmi = get_meta("my_multimesh")
+		var instanceId = get_meta("my_instance_id")
+		if is_instance_valid(mmi):
+			# Teleport it 10,000 meters into the sky so the player can't see it anymore!
+			var hidden_transform = Transform3D().translated(Vector3(0, 10000, 0))
+			mmi.multimesh.set_instance_transform(instanceId, hidden_transform)
+                                                                                       
 	# Delete the fake item
 	queue_free()
 

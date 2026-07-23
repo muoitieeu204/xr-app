@@ -11,6 +11,7 @@ var interactionLog: String = ""
 var startTick: int = 0
 var isLevelFinished: bool = false
 var completedTask : Array[String] = []
+var completionStatus = false
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -56,7 +57,6 @@ func FinishLevel():
 			"sessionId": SessionData.sessionId, # Assuming you have this Autoload
 			"childId": PlayerData.childId, # Assuming you have this Autoload
 			"attemptNumber": 1,
-			"completionStatus": "Completed",
 			"score": currentScore,
 			"startedAt": startedAt,
 			"completedAt": Time.get_datetime_string_from_system(true)+"Z",
@@ -68,6 +68,10 @@ func FinishLevel():
 		finalResult["lessonId"] = levelId
 	else: 
 		finalResult["exeriseId"] = levelId #This need to be fix for the exercise 
+	if completionStatus == true:
+		finalResult["completionStatus"] = "Completed"
+	else: 
+		finalResult["completionStatus"] = "Incompleted"
 	print("Sending result to server: ", JSON.stringify(finalResult))
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()
@@ -78,6 +82,8 @@ func markTaskComplete(taskName: String) -> void:
 	if taskList.has(taskName) and not completedTask.has(taskName):
 		completedTask.append(taskName)
 		get_tree().call_group("TaskUI", "update_tasks", taskList,completedTask)
-	if completedTask.size() == taskList.size():
-		print("All tasks completed!") 
-		currentScore = min(100, currentScore + 20)
+	if not taskList.is_empty() and completedTask.size() >= taskList.size():
+		if not completionStatus:
+			print("All tasks completed!") 
+			currentScore = min(100, currentScore + 20)
+			completionStatus = true

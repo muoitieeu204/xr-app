@@ -60,6 +60,9 @@ func buildMultiMesh(mesh: Mesh, items: Array):
 		var data = items[i]
 		# Use the visual_transform to perfectly match the original visual size and position!
 		mm.set_instance_transform(i, data["visual_transform"])
+		var fakeItemNode = data["item"]
+		fakeItemNode.set_meta("my_multimesh",mmi)
+		fakeItemNode.set_meta("my_instance_id",i)
 
 func findFirstMeshIntance(node: Node) -> MeshInstance3D:
 	if node is MeshInstance3D:

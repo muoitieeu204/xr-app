@@ -287,6 +287,7 @@ transform = Transform3D(7.54979e-08, 4.3711392e-08, 1, 0, 1, -4.3711392e-08, -1,
 script = ExtResource("1_otcmc")
 isLesson = true
 levelId = 1
+taskList = Array[String](["quả táo", "quả xoài"])
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -661,4 +662,5 @@ playerNode = ExtResource("2_k20mw")
 [connection signal="item_scanned_for_teaching" from="Cashier" to="Cashier/Employee" method="_on_item_scanned_for_teaching"]
 
 [editable path="SuperMarket Architecture/Supermarket/DoorFrame/GlassDoor"]
+[editable path="SuperMarket Architecture/InteractableShelf/Shelf"]
 [editable path="SuperMarket Architecture/fence-door-rotate3"]

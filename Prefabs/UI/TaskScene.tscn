@@ -26,7 +26,7 @@ font_color = Color(0.066667, 0.094118, 0.152941, 1)
 outline_size = 4
 outline_color = Color(0.305882, 0.67451, 0.686275, 1)
 
-[node name="TaskScene" type="Control"]
+[node name="TaskScene" type="Control" groups=["TaskUI"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,15 +36,6 @@ grow_vertical = 2
 script = ExtResource("1_script")
 pending_icon = ExtResource("2_0kape")
 completed_icon = ExtResource("3_bea55")
-
-[node name="BackgroundDim" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.992157, 0.960784, 0.627451)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 custom_minimum_size = Vector2(416, 0)
