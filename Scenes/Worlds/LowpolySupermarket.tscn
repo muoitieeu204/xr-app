@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://b12kcbqt8cg6r"]
+[gd_scene load_steps=62 format=4 uid="uid://b12kcbqt8cg6r"]
 
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="1_k20mw"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="1_lfkti"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://doaq77tgfvh8e" path="res://Assets/3D Models For Supermarket/Fruits/FruitCaseGreen.tscn" id="15_otcmc"]
 [ext_resource type="PackedScene" uid="uid://digx86yadb4ce" path="res://Assets/3D Models For Supermarket/Market Equipments/FertilizeBags.tscn" id="16_eqjf7"]
 [ext_resource type="PackedScene" uid="uid://bgvrdxllnjs1d" path="res://Assets/3D Models For Supermarket/Market Equipments/Cashier.tscn" id="17_otcmc"]
-[ext_resource type="Script" uid="uid://u8ibul4awyrb" path="res://scripts/Environment Script/MultimeshInitialize.gd" id="19_fhpcg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rlwrm"]
 panorama = ExtResource("2_2kn1k")
@@ -607,7 +606,6 @@ collision_mask = 1
 
 [node name="Shelf2" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("5_rlwrm")]
 transform = Transform3D(7.92728e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651241e-15, 0.7, -3.0597974e-08, 5.2848527e-08, -0.7244476, -3.4551394, -5.0163016)
-script = ExtResource("19_fhpcg")
 
 [node name="fence-door-rotate3" parent="SuperMarket Architecture" instance=ExtResource("11_15gq7")]
 transform = Transform3D(2, -2.9646153e-21, 0, 2.9646153e-21, 2, -2.2146852e-22, 0, 3.3220278e-22, 1.3333334, 7.006113, -3.4940698, -3.5508728)
