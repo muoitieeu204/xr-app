@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtnb01ikb4a5j"]
+
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_xtjw1"]
+[ext_resource type="PackedScene" uid="uid://mbou4fm2q77v" path="res://Assets/Fishing assets/FishingRodPickable.tscn" id="2_6u0b6"]
+[ext_resource type="PackedScene" uid="uid://c2ldb8fd3ksuk" path="res://Assets/Fishing assets/FishingRod.tscn" id="2_w1jtr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6u0b6"]
+height = 13.178528
+radius = 0.20166016
+
+[node name="Area3D" type="Area3D"]
+collision_layer = 5
+script = ExtResource("1_xtjw1")
+realItem = ExtResource("2_6u0b6")
+itemName = "cần câu cá"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.49999997, 0, 0, 0, 0.49999997, -0.0021914244, 3.29833, 0.0015371405)
+shape = SubResource("CylinderShape3D_6u0b6")
+
+[node name="FishingRod" parent="." instance=ExtResource("2_w1jtr")]
+
+[editable path="FishingRod"]

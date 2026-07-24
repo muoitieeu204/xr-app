@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=17 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://cijjlg2j5o6ye" path="res://scripts/InitializeScript.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="6_r85ih"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="7_enjev"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="8_du2qv"]
+[ext_resource type="PackedScene" uid="uid://dtnb01ikb4a5j" path="res://Assets/Fishing assets/FakeFishingRod.tscn" id="9_enjev"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -55,7 +56,6 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 
 [node name="WaterShader" type="Area3D" parent="." node_paths=PackedStringArray("respawn_point")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.571668, 0)
-visible = false
 collision_mask = 524289
 script = ExtResource("1_m8c15")
 respawn_point = NodePath("../Spawner")
@@ -107,3 +107,6 @@ holoText = "StarterHub"
 [node name="Spawner" parent="." instance=ExtResource("7_enjev")]
 transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, -0.3043599, 0.70082664, -3.2737913)
 playerNode = ExtResource("8_du2qv")
+
+[node name="Area3D" parent="." instance=ExtResource("9_enjev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.0335484)

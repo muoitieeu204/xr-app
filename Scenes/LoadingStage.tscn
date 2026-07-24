@@ -64,14 +64,14 @@ libraries = {
 }
 autoplay = "Scroll"
 
-[node name="ShipPlatform" parent="LoadingScreen" index="4" instance=ExtResource("2_o1xcn")]
-transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, -0.83383346, -7.4061694, -7.6974335)
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="7" groups=["VoiceLines"]]
 stream = ExtResource("3_xlo0q")
 volume_db = -20.0
 pitch_scale = 1.32
 autoplay = true
 bus = &"Sounds"
+
+[node name="ShipPlatform" parent="." index="8" instance=ExtResource("2_o1xcn")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, -0.83383346, -7.4348083, -7.6974335)
 
 [editable path="LoadingScreen"]

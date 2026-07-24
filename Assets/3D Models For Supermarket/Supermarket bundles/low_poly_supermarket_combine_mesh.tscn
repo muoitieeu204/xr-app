@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://x73t2qbkx5qw"]
 
-[ext_resource type="ArrayOccluder3D" uid="uid://cejtb3ikawa70" path="res://Occlusion/low_poly_supermarket_combine_mesh.occ" id="1_b8qte"]
+[ext_resource type="ArrayOccluder3D" uid="uid://cejtb3ikawa70" path="res://Prefabs/Occlusion/low_poly_supermarket_combine_mesh.occ" id="1_b8qte"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5d4x3"]
 resource_name = ".005"

@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://bw1n8kmx2dd6e"]
+[gd_scene load_steps=14 format=4 uid="uid://bw1n8kmx2dd6e"]
 
+[ext_resource type="Script" uid="uid://dfrtmsoh1m8r6" path="res://scripts/ShipPlatform.gd" id="1_okmng"]
 [ext_resource type="PackedScene" uid="uid://b7om36ix41f1d" path="res://Prefabs/Shader/water_shader.tscn" id="2_okmng"]
 [ext_resource type="PackedScene" uid="uid://cb5h0ps5kjqnr" path="res://Assets/ship_low_poly.glb" id="3_5alvd"]
 [ext_resource type="PackedScene" uid="uid://c0kb0k4t2aa86" path="res://Assets/kenney_platformer-kit/Models/GLB format/chest.glb" id="4_q6tnw"]
@@ -62,6 +63,7 @@ bottom_radius = 0.06
 height = 0.665
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_okmng")
 
 [node name="Water" parent="." instance=ExtResource("2_okmng")]
 
