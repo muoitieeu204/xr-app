@@ -191,7 +191,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 collision_mask = 196615
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RollerArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18235017, 0.16347936, -0.0031631202)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1823502, 0.14852539, -0.0031631202)
 shape = SubResource("BoxShape3D_fvajn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
