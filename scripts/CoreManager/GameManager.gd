@@ -5,6 +5,9 @@ var validScannedItem = []
 
 signal speech_result(is_correct: bool)
 signal profile_selected
+signal time_updated(formatted_time: String)
+signal score_updated(new_score: int)
+signal item_name_updated(new_item_name: String)
 func _ready() -> void:
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
@@ -24,9 +27,9 @@ func stop_checkout_test():
 	if speechManager and speechManager.has_method("StopListening"):
 		speechManager.StopListening()
 
-func _on_speech_recognized(text:String):
+func _on_speech_recognized(text: String):
 	if currentHeldItemId != "":
-		var cleanText = text.to_lower().replace(",","").replace(".","").replace("?","").replace("!","")
+		var cleanText = text.to_lower().replace(",", "").replace(".", "").replace("?", "").replace("!", "")
 		var cleanTarget = currentHeldItemId.to_lower().strip_edges()
 		if cleanText.contains(cleanTarget):
 			print("Correct! Word matched: ", currentHeldItemId)
@@ -34,4 +37,4 @@ func _on_speech_recognized(text:String):
 			emit_signal("speech_result", true)
 		else:
 			print("Incorrect! You said: ", text, " | We cleaned it it to: ", cleanText)
-			emit_signal("speech_result", false) 
+			emit_signal("speech_result", false)

@@ -88,7 +88,7 @@ transform = Transform3D(0.50650036, 0, 0.8622398, 0, 1, 0, -0.8622398, 0, 0.5065
 shape = SubResource("BoxShape3D_r85ih")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]
-transform = Transform3D(0.50650036, 0, 0.8622398, 0, 1, 0, -0.8622398, 0, 0.50650036, 6.9233055, -2.7245572, -10.482393)
+transform = Transform3D(0.50650036, 0, 0.8622398, 0, 1, 0, -0.8622398, 0, 0.50650036, 6.9233055, -2.7245572, -8.665824)
 shape = SubResource("BoxShape3D_r85ih")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]

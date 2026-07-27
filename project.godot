@@ -126,8 +126,8 @@ jolt_3d/simulation/baumgarte_stabilization_factor=0.05
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
-anti_aliasing/quality/msaa_3d=1
 occlusion_culling/use_occlusion_culling=true
 vrs/mode=2
 
