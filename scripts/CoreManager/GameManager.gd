@@ -8,6 +8,7 @@ signal profile_selected
 signal time_updated(formatted_time: int)
 signal score_updated(new_score: int)
 signal item_name_updated(new_item_name: String)
+signal hint_updated(hint_text: String)
 func _ready() -> void:
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
@@ -39,4 +40,3 @@ func _on_speech_recognized(text: String):
 			print("Incorrect! You said: ", text, " | We cleaned it it to: ", cleanText)
 			emit_signal("speech_result", false)
 			get_tree().call_group("LevelController", "WrongAnswer", 10, currentHeldItemId, text)
-			

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://beo6363t1bga5"]
+[gd_scene load_steps=6 format=3 uid="uid://beo6363t1bga5"]
 
 [ext_resource type="Script" uid="uid://bbjxhdkd28lqw" path="res://scripts/UI Script/PlayerUIController.gd" id="1_th7ew"]
 
@@ -8,6 +8,11 @@ outline_size = 30
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1no53"]
+font_size = 80
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ubkh"]
 font_size = 80
 outline_size = 30
 outline_color = Color(0, 0, 0, 1)
@@ -56,6 +61,17 @@ theme_override_font_sizes/font_size = 32
 text = "Thời Gian: 00:00"
 label_settings = SubResource("LabelSettings_1no53")
 horizontal_alignment = 2
+
+[node name="MiddleHUD" type="HBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HintLabel" type="Label" parent="MarginContainer/MiddleHUD"]
+layout_mode = 2
+size_flags_horizontal = 3
+label_settings = SubResource("LabelSettings_1ubkh")
+clip_text = true
 
 [node name="BottomHUD" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2

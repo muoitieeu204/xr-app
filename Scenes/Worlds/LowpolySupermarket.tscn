@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://b12kcbqt8cg6r"]
+[gd_scene load_steps=63 format=4 uid="uid://b12kcbqt8cg6r"]
 
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="1_k20mw"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="1_lfkti"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://doaq77tgfvh8e" path="res://Assets/3D Models For Supermarket/Fruits/FruitCaseGreen.tscn" id="15_otcmc"]
 [ext_resource type="PackedScene" uid="uid://digx86yadb4ce" path="res://Assets/3D Models For Supermarket/Market Equipments/FertilizeBags.tscn" id="16_eqjf7"]
 [ext_resource type="PackedScene" uid="uid://bgvrdxllnjs1d" path="res://Assets/3D Models For Supermarket/Market Equipments/Cashier.tscn" id="17_otcmc"]
+[ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/UIHintTriggerZone.tscn" id="28_fhpcg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rlwrm"]
 panorama = ExtResource("2_2kn1k")
@@ -610,10 +611,12 @@ transform = Transform3D(7.92728e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 
 [node name="fence-door-rotate3" parent="SuperMarket Architecture" instance=ExtResource("11_15gq7")]
 transform = Transform3D(2, -2.9646153e-21, 0, 2.9646153e-21, 2, -2.2146852e-22, 0, 3.3220278e-22, 1.3333334, 7.006113, -3.4940698, -3.5508728)
 
-[node name="Cashier" parent="." instance=ExtResource("17_otcmc")]
+[node name="NPCZone" type="Node3D" parent="."]
+
+[node name="Cashier" parent="NPCZone" instance=ExtResource("17_otcmc")]
 transform = Transform3D(-1.5, -2.4871352e-15, -2.2649371e-07, 7.413219e-15, 1.5, -6.5567086e-08, 2.2649371e-07, -6.5567086e-08, -1.5, 6.3658533, -2.9858434, -6.714336)
 
-[node name="Employee" parent="Cashier" instance=ExtResource("12_eqjf7")]
+[node name="Employee" parent="NPCZone/Cashier" instance=ExtResource("12_eqjf7")]
 transform = Transform3D(5.033193e-08, -1.1053935e-15, 0.6666667, 8.345493e-23, 0.6666667, 1.1053942e-15, -0.6666667, -8.345489e-23, 5.033193e-08, -0.57831097, -0.30841088, -0.6087098)
 
 [node name="TeleportArea" parent="." instance=ExtResource("3_duvh4")]
@@ -657,8 +660,15 @@ shape = SubResource("BoxShape3D_15gq7")
 transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, 0.38429534, -2.193885, -3.2845297)
 playerNode = ExtResource("2_k20mw")
 
-[connection signal="item_scanned_for_teaching" from="Cashier" to="Cashier/Employee" method="_on_item_scanned_for_teaching"]
+[node name="HintTrigger" parent="." instance=ExtResource("28_fhpcg")]
+transform = Transform3D(1, 0, 0, 0, 1, 2.49152e-22, 0, 2.49152e-22, 1, 0.6703639, -2.9331002, -4.87408)
+
+[node name="CollisionShape3D" parent="HintTrigger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.49152e-22, 0, 2.49152e-22, 1, 0, 0, 0)
+
+[connection signal="item_scanned_for_teaching" from="NPCZone/Cashier" to="NPCZone/Cashier/Employee" method="_on_item_scanned_for_teaching"]
 
 [editable path="SuperMarket Architecture/Supermarket/DoorFrame/GlassDoor"]
 [editable path="SuperMarket Architecture/InteractableShelf/Shelf"]
 [editable path="SuperMarket Architecture/fence-door-rotate3"]
+[editable path="HintTrigger"]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://dqpsyyclcev87"]
 
 [ext_resource type="Script" uid="uid://ce1q2rq1oursv" path="res://scripts/UI Script/SlideGuideController.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://c1tuydcosceot" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR.png" id="2_i82ux"]
-[ext_resource type="Texture2D" uid="uid://db82or25pnku4" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR2.png" id="3_x1f5s"]
-[ext_resource type="Texture2D" uid="uid://o3n1ksbojqsv" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR3.png" id="4_rvto0"]
-[ext_resource type="Texture2D" uid="uid://cwlxh4s4gm0wi" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR (1).png" id="5_kqrcu"]
-[ext_resource type="Texture2D" uid="uid://cyqdl1ffvnyyf" path="res://Assets/Images/Supermarket Level Guide/Huong Dan Man Choi Sieu Thi VR (2).png" id="6_od6nc"]
+[ext_resource type="Texture2D" uid="uid://14t37ddau6xo" path="res://Assets/Images/Supermarket Level Guide/1784190290131_2686070148081114287_g1299243573826661102_08b67406805c1608363d27e1e55593e5.jpg" id="2_rvto0"]
+[ext_resource type="Texture2D" uid="uid://1e5h5kv4ijhw" path="res://Assets/Images/Supermarket Level Guide/1784190290129_2686070148081114287_g1299243573826661102_8d3d2e20101a58acf59580be98fdb6e3.jpg" id="3_kqrcu"]
+[ext_resource type="Texture2D" uid="uid://yxtcgmoj4ekn" path="res://Assets/Images/Supermarket Level Guide/1784190290130_2686070148081114287_g1299243573826661102_94f16620ca1394368b35cbafcfd3e1f2.jpg" id="4_od6nc"]
+[ext_resource type="Texture2D" uid="uid://cnwep5p7w2le4" path="res://Assets/Images/Supermarket Level Guide/1784190290128_2686070148081114287_g1299243573826661102_147b0e95605275b2436b7d58c75c3679.jpg" id="5_7qrfq"]
+[ext_resource type="Texture2D" uid="uid://b5qs6i0mxry4a" path="res://Assets/Images/Supermarket Level Guide/1784190290127_2686070148081114287_g1299243573826661102_58b1701fa9053ebb5e69d54725551c15.jpg" id="6_t3nr2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
 bg_color = Color(0.305882, 0.67451, 0.686275, 1)
@@ -53,49 +53,54 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="SlidesContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_i82ux")
+texture = ExtResource("2_rvto0")
 
 [node name="TextureRect2" type="TextureRect" parent="SlidesContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_x1f5s")
+texture = ExtResource("3_kqrcu")
 
 [node name="TextureRect3" type="TextureRect" parent="SlidesContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_rvto0")
+texture = ExtResource("4_od6nc")
 
 [node name="TextureRect4" type="TextureRect" parent="SlidesContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_kqrcu")
+texture = ExtResource("5_7qrfq")
 
 [node name="TextureRect5" type="TextureRect" parent="SlidesContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_od6nc")
+texture = ExtResource("6_t3nr2")
 
 [node name="PrevButton" type="Button" parent="."]
 layout_mode = 1
