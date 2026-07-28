@@ -46,12 +46,12 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	correctCount += 1
 	markTaskComplete(itemName)
 
-func WrongAnswer(point: int, itemName: String) -> void:
+func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
 	if completedTask.has(itemName):
 		return
 	currentScore = max(0, currentScore - point)
 	var seccondsPassed = currentTimeSecconds
-	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: " + itemName
+	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: " + itemName +", actual said: " + spokenText 
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
@@ -65,7 +65,6 @@ func FinishLevel():
 		return
 	
 	isLevelFinished = true
-	var currentTick = Time.get_ticks_msec()
 	var finalResult = {
 			"sessionId": SessionData.sessionId, # Assuming you have this Autoload
 			"childId": PlayerData.childId, # Assuming you have this Autoload
@@ -85,7 +84,7 @@ func FinishLevel():
 	if completionStatus == true:
 		finalResult["completionStatus"] = "Completed"
 	else:
-		finalResult["completionStatus"] = "Incomplete "
+		finalResult["completionStatus"] = "Incomplete"
 	print("Sending result to server: ", JSON.stringify(finalResult))
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()

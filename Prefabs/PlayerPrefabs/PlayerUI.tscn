@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://bbjxhdkd28lqw" path="res://scripts/UI Script/PlayerUIController.gd" id="1_th7ew"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_th7ew"]
-font_size = 120
+font_size = 80
 outline_size = 30
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1no53"]
-font_size = 120
+font_size = 80
 outline_size = 30
 outline_color = Color(0, 0, 0, 1)
 
@@ -46,14 +46,14 @@ size_flags_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 32
-text = "Score: 0"
+text = "Điểm: 0"
 label_settings = SubResource("LabelSettings_th7ew")
 
 [node name="TimeLabel" type="Label" parent="MarginContainer/TopHUD"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 32
-text = "Time: 00:00"
+text = "Thời Gian: 00:00"
 label_settings = SubResource("LabelSettings_1no53")
 horizontal_alignment = 2
 
@@ -64,6 +64,5 @@ size_flags_vertical = 8
 [node name="ItemNameLabel" type="Label" parent="MarginContainer/BottomHUD"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
-text = "Item Name"
 label_settings = SubResource("LabelSettings_h0mtw")
 horizontal_alignment = 1

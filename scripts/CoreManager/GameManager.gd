@@ -5,7 +5,7 @@ var validScannedItem = []
 
 signal speech_result(is_correct: bool)
 signal profile_selected
-signal time_updated(formatted_time: String)
+signal time_updated(formatted_time: int)
 signal score_updated(new_score: int)
 signal item_name_updated(new_item_name: String)
 func _ready() -> void:
@@ -38,3 +38,5 @@ func _on_speech_recognized(text: String):
 		else:
 			print("Incorrect! You said: ", text, " | We cleaned it it to: ", cleanText)
 			emit_signal("speech_result", false)
+			get_tree().call_group("LevelController", "WrongAnswer", 10, currentHeldItemId, text)
+			
