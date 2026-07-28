@@ -51,7 +51,7 @@ func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
 		return
 	currentScore = max(0, currentScore - point)
 	var seccondsPassed = currentTimeSecconds
-	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: " + itemName +", actual said: " + spokenText 
+	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
