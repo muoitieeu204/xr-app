@@ -111,12 +111,11 @@ shape = SubResource("CylinderShape3D_wvriy")
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 1.6286762, -0.034445602)
 
 [node name="ReelHinge" parent="." index="4" instance=ExtResource("3_wvriy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0091616735, 0.08787066, -0.025989952)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07169536, 0.27258652, -0.04906042)
 hinge_limit_min = -36000.0
 hinge_limit_max = 36000.0
 
 [node name="InteractableHandle" parent="ReelHinge" index="0" instance=ExtResource("6_lx1sd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079624064, 0.18139279, -0.039355114)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ReelHinge/InteractableHandle" index="0"]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)

@@ -1,260 +1,99 @@
-[gd_scene load_steps=7 format=3 uid="uid://faoy4fnis3kh"]
+[gd_scene load_steps=18 format=3 uid="uid://faoy4fnis3kh"]
 
 [ext_resource type="PackedScene" uid="uid://dxis5hrvqkhdg" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelf.tscn" id="1_665c1"]
 [ext_resource type="PackedScene" uid="uid://dtuk5qh5jjrem" path="res://Assets/3D Models For Supermarket/Beverages/FakeCoffee.tscn" id="2_iljs3"]
 [ext_resource type="PackedScene" uid="uid://dahcwn4lalkcl" path="res://Assets/3D Models For Supermarket/Beverages/FakeLiptonTea.tscn" id="6_1da6q"]
 [ext_resource type="PackedScene" uid="uid://barc03cyk2if" path="res://Assets/3D Models For Supermarket/Beverages/FakeMangoTea.tscn" id="7_42otu"]
+[ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/RowSpawner.gd" id="7_gxxl3"]
+[ext_resource type="ArrayMesh" uid="uid://c1k5plb16yk6f" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/Tea.tres" id="8_1xbn6"]
+[ext_resource type="ArrayMesh" uid="uid://nyalv7xnq2i4" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/MangoTea.tres" id="8_8s7vs"]
 [ext_resource type="PackedScene" uid="uid://k3nr8a4gfjd4" path="res://Assets/3D Models For Supermarket/Beverages/FakeSirWinstonTea.tscn" id="8_nw52f"]
 [ext_resource type="PackedScene" uid="uid://cxpvrik1qf8pe" path="res://Assets/3D Models For Supermarket/Beverages/FakeTea.tscn" id="9_4sxpr"]
+[ext_resource type="ArrayMesh" uid="uid://o7in8qakhgx" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/SirWinstonTea.tres" id="9_ldt6w"]
+[ext_resource type="ArrayMesh" uid="uid://gqpxsscy7m57" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/LiptonTea.tres" id="10_1xbn6"]
+[ext_resource type="ArrayMesh" uid="uid://cxgb3h1sfr5oe" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/Coffee.tres" id="11_ldt6w"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_8s7vs"]
+transform_format = 1
+instance_count = 6
+mesh = ExtResource("8_1xbn6")
+buffer = PackedFloat32Array(-1, 0, 8.742278e-08, 0, 0, 1, 0, 0, -8.742278e-08, 0, -1, 0, -1, 0, 8.742278e-08, -0.3, 0, 1, 0, 0, -8.742278e-08, 0, -1, 0, -1, 0, 8.742278e-08, -0.6, 0, 1, 0, 0, -8.742278e-08, 0, -1, 0, -1, 0, 8.742278e-08, -0.90000004, 0, 1, 0, 0, -8.742278e-08, 0, -1, 0, -1, 0, 8.742278e-08, -1.2, 0, 1, 0, 0, -8.742278e-08, 0, -1, 0, -1, 0, 8.742278e-08, -1.5, 0, 1, 0, 0, -8.742278e-08, 0, -1, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_2gnj1"]
+transform_format = 1
+instance_count = 6
+mesh = ExtResource("9_ldt6w")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, -0.3, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, -0.6, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, -0.90000004, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, -1.2, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, -1.5, 0, 1, 0, 0, 0, 0, 1, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_ldt6w"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("10_1xbn6")
+buffer = PackedFloat32Array(0.01, 0, 0, 0, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -0.2, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -0.4, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -0.6, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -0.8, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -1, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -1.2, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -1.4, 0, 0.01, 0, 0, 0, 0, 0.01, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_hqtpt"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("11_ldt6w")
+buffer = PackedFloat32Array(-0.01, -8.7422775e-10, -3.821371e-17, 0, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0, -0.01, -8.7422775e-10, -3.821371e-17, -0.2, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0, -0.01, -8.7422775e-10, -3.821371e-17, -0.4, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0, -0.01, -8.7422775e-10, -3.821371e-17, -0.6, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0, -0.01, -8.7422775e-10, -3.821371e-17, -0.8, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0, -0.01, -8.7422775e-10, -3.821371e-17, -1, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0, -0.01, -8.7422775e-10, -3.821371e-17, -1.2, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0, -0.01, -8.7422775e-10, -3.821371e-17, -1.4, 0, -4.3711387e-10, 0.01, 0, -8.7422775e-10, 0.01, 4.3711387e-10, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_nansi"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("8_8s7vs")
+buffer = PackedFloat32Array(0.08660254, -0.05, -2.1855695e-09, 0, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -0.2, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -0.4, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -0.6, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -0.8, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -1, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -1.2, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -1.4, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0)
 
 [node name="Shelf" instance=ExtResource("1_665c1")]
 
-[node name="Coffee" type="Node3D" parent="." index="2"]
-
-[node name="Coffee2" parent="Coffee" index="0" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, -0.77887696, 1.8489708, -0.009690821)
-
-[node name="Coffee3" parent="Coffee" index="1" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, -0.5740753, 1.8489708, 0.121880315)
-
-[node name="Coffee4" parent="Coffee" index="2" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, -0.57407516, 1.8489708, -0.009690821)
-
-[node name="Coffee5" parent="Coffee" index="3" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, -0.32630032, 1.8489708, 0.121880315)
-
-[node name="Coffee6" parent="Coffee" index="4" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, -0.32630017, 1.8489708, -0.009690821)
-
-[node name="Coffee7" parent="Coffee" index="5" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, -0.121498674, 1.8489708, 0.121880315)
-
-[node name="Coffee8" parent="Coffee" index="6" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, -0.12149849, 1.8489708, -0.009690821)
-
-[node name="Coffee9" parent="Coffee" index="7" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.11244858, 1.8489708, 0.12188033)
-
-[node name="Coffee10" parent="Coffee" index="8" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.11244864, 1.8489708, -0.009690807)
-
-[node name="Coffee11" parent="Coffee" index="9" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.31725022, 1.8489708, 0.121880315)
-
-[node name="Coffee12" parent="Coffee" index="10" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.31725034, 1.8489708, -0.009690821)
-
-[node name="Coffee13" parent="Coffee" index="11" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.5181195, 1.8489708, 0.121880315)
-
-[node name="Coffee14" parent="Coffee" index="12" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.5181195, 1.8489708, -0.009690821)
-
-[node name="Coffee15" parent="Coffee" index="13" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.7229211, 1.8489708, 0.121880315)
-
-[node name="Coffee16" parent="Coffee" index="14" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.9523803, 0, -8.325976e-08, 0, 0.9523803, 0, 8.325976e-08, 0, -0.9523803, 0.7229212, 1.8489708, -0.009690821)
-
-[node name="Coffee" parent="Coffee" index="15" instance=ExtResource("2_iljs3")]
-transform = Transform3D(-0.95238036, 0, -8.325977e-08, 0, 0.95238036, 0, 8.325977e-08, 0, -0.95238036, -0.778877, 1.8489708, 0.121880315)
-
-[node name="LiptonTea" type="Node3D" parent="." index="3"]
-
-[node name="Area3D2" parent="LiptonTea" index="0" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, -0.7847544, 1.3455523, -0.087104514)
-
-[node name="Area3D3" parent="LiptonTea" index="1" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, -0.62661576, 1.3455523, 0.031316742)
-
-[node name="Area3D4" parent="LiptonTea" index="2" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, -0.6266157, 1.3455523, -0.087104514)
-
-[node name="Area3D5" parent="LiptonTea" index="3" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, -0.44181567, 1.3455523, 0.031316742)
-
-[node name="Area3D6" parent="LiptonTea" index="4" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, -0.4418156, 1.3455523, -0.087104514)
-
-[node name="Area3D7" parent="LiptonTea" index="5" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, -0.28367686, 1.3455523, 0.031316742)
-
-[node name="Area3D8" parent="LiptonTea" index="6" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, -0.2836768, 1.3455523, -0.087104514)
-
-[node name="Area3D9" parent="LiptonTea" index="7" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, -0.08953322, 1.3455523, 0.031316742)
-
-[node name="Area3D10" parent="LiptonTea" index="8" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, -0.089533105, 1.3455523, -0.087104514)
-
-[node name="Area3D11" parent="LiptonTea" index="9" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.068605624, 1.3455523, 0.031316742)
-
-[node name="Area3D12" parent="LiptonTea" index="10" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.068605684, 1.3455523, -0.087104514)
-
-[node name="Area3D13" parent="LiptonTea" index="11" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.2735306, 1.3455523, 0.031316742)
-
-[node name="Area3D14" parent="LiptonTea" index="12" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.27353072, 1.3455523, -0.087104514)
-
-[node name="Area3D15" parent="LiptonTea" index="13" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.43166956, 1.3455523, 0.031316742)
-
-[node name="Area3D16" parent="LiptonTea" index="14" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523803, 0, 0, 0, 0.9523803, 0, 0, 0, 0.9523803, 0.43166956, 1.3455523, -0.087104514)
-
-[node name="Area3D17" parent="LiptonTea" index="15" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523803, 0, 0, 0, 0.9523803, 0, 0, 0, 0.9523803, 0.63538533, 1.3455523, 0.031316742)
-
-[node name="Area3D18" parent="LiptonTea" index="16" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523803, 0, 0, 0, 0.9523803, 0, 0, 0, 0.9523803, 0.63538533, 1.3455523, -0.087104514)
-
-[node name="Area3D19" parent="LiptonTea" index="17" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523803, 0, 0, 0, 0.9523803, 0, 0, 0, 0.9523803, 0.79352415, 1.3455523, 0.031316742)
-
-[node name="Area3D20" parent="LiptonTea" index="18" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.9523803, 0, 0, 0, 0.9523803, 0, 0, 0, 0.9523803, 0.79352427, 1.3455523, -0.087104514)
-
-[node name="LiptonTea" parent="LiptonTea" index="19" instance=ExtResource("6_1da6q")]
-transform = Transform3D(0.95238054, 0, 0, 0, 0.95238054, 0, 0, 0, 0.95238054, -0.7847545, 1.3455523, 0.031316742)
-
-[node name="SirwinstonTea" type="Node3D" parent="." index="4"]
-
-[node name="Area3D2" parent="SirwinstonTea" index="0" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, -0.70629865, 0.63402617, -0.19598238)
-
-[node name="Area3D3" parent="SirwinstonTea" index="1" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, -0.50950676, 0.63402617, -0.055340644)
-
-[node name="Area3D4" parent="SirwinstonTea" index="2" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, -0.50950676, 0.6340261, -0.19598237)
-
-[node name="Area3D5" parent="SirwinstonTea" index="3" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, -0.27425689, 0.63402617, -0.055340644)
-
-[node name="Area3D6" parent="SirwinstonTea" index="4" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, -0.27425689, 0.6340261, -0.19598237)
-
-[node name="Area3D7" parent="SirwinstonTea" index="5" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, -0.077465095, 0.6340261, -0.055340644)
-
-[node name="Area3D8" parent="SirwinstonTea" index="6" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, -0.077465095, 0.63402605, -0.19598235)
-
-[node name="Area3D9" parent="SirwinstonTea" index="7" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.14641182, 0.6340261, -0.055340644)
-
-[node name="Area3D10" parent="SirwinstonTea" index="8" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.14641182, 0.63402605, -0.19598235)
-
-[node name="Area3D11" parent="SirwinstonTea" index="9" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.34320372, 0.63402605, -0.055340644)
-
-[node name="Area3D12" parent="SirwinstonTea" index="10" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.34320372, 0.634026, -0.19598234)
-
-[node name="Area3D13" parent="SirwinstonTea" index="11" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.5618288, 0.63402605, -0.055340644)
-
-[node name="Area3D14" parent="SirwinstonTea" index="12" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.5618288, 0.634026, -0.19598234)
-
-[node name="Area3D15" parent="SirwinstonTea" index="13" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.75862056, 0.634026, -0.055340644)
-
-[node name="Area3D16" parent="SirwinstonTea" index="14" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.9523803, 8.325976e-08, 0, -8.325976e-08, -0.9523803, 0, 0, 0, 0.9523803, 0.75862056, 0.634026, -0.19598232)
-
-[node name="SirwinstonTea2" parent="SirwinstonTea" index="15" instance=ExtResource("8_nw52f")]
-transform = Transform3D(-0.95238036, 8.325977e-08, 0, -8.325977e-08, -0.95238036, 0, 0, 0, 0.95238036, -0.70629865, 0.6340263, -0.055340644)
-
-[node name="TeaBag" type="Node3D" parent="." index="5"]
-
-[node name="Area3D2" parent="TeaBag" index="0" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, -0.69212776, 0.26968727, -0.10529564)
-
-[node name="Area3D3" parent="TeaBag" index="1" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, -0.4197552, 0.26968727, 0.061000485)
-
-[node name="Area3D4" parent="TeaBag" index="2" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, -0.41975522, 0.26968727, -0.10529564)
-
-[node name="Area3D5" parent="TeaBag" index="3" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, -0.107314475, 0.26968727, 0.061000485)
-
-[node name="Area3D6" parent="TeaBag" index="4" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, -0.107314475, 0.26968727, -0.10529564)
-
-[node name="Area3D7" parent="TeaBag" index="5" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, 0.16505824, 0.26968727, 0.061000478)
-
-[node name="Area3D8" parent="TeaBag" index="6" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, 0.16505824, 0.26968727, -0.10529564)
-
-[node name="Area3D9" parent="TeaBag" index="7" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, 0.46891662, 0.26968727, 0.061000485)
-
-[node name="Area3D10" parent="TeaBag" index="8" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, 0.46891662, 0.26968727, -0.10529564)
-
-[node name="Area3D11" parent="TeaBag" index="9" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, 0.7412893, 0.26968727, 0.061000478)
-
-[node name="Area3D12" parent="TeaBag" index="10" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325977e-08, 0, 0.95238024, 0, 8.325977e-08, 0, -0.95238024, 0.7412893, 0.26968727, -0.10529564)
-
-[node name="Area3D13" parent="TeaBag" index="11" instance=ExtResource("9_4sxpr")]
-transform = Transform3D(-0.95238024, 0, -8.325976e-08, 0, 0.95238024, 0, 8.325976e-08, 0, -0.95238024, -0.6921278, 0.26968727, 0.061000485)
-
-[node name="MangoTea" type="Node3D" parent="." index="6"]
-
-[node name="Area3D2" parent="MangoTea" index="0" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.95238054, 0, 0, 0, 0.95238054, 0, 0, 0, 0.95238054, -0.732785, 1.0387291, -0.14251818)
-
-[node name="Area3D3" parent="MangoTea" index="1" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.95238054, 0, 0, 0, 0.95238054, 0, 0, 0, 0.95238054, -0.5488849, 1.0387291, 0.009433031)
-
-[node name="Area3D4" parent="MangoTea" index="2" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523805, 0, 0, 0, 0.9523805, 0, 0, 0, 0.9523805, -0.54888487, 1.0387291, -0.14251816)
-
-[node name="Area3D5" parent="MangoTea" index="3" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.95238054, 0, 0, 0, 0.95238054, 0, 0, 0, 0.95238054, -0.30661157, 1.0387291, 0.009433031)
-
-[node name="Area3D6" parent="MangoTea" index="4" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523805, 0, 0, 0, 0.9523805, 0, 0, 0, 0.9523805, -0.30661145, 1.0387291, -0.14251816)
-
-[node name="Area3D7" parent="MangoTea" index="5" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523805, 0, 0, 0, 0.9523805, 0, 0, 0, 0.9523805, -0.122711435, 1.0387291, 0.009433031)
-
-[node name="Area3D8" parent="MangoTea" index="6" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, -0.122711375, 1.038729, -0.14251815)
-
-[node name="Area3D9" parent="MangoTea" index="7" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523805, 0, 0, 0, 0.9523805, 0, 0, 0, 0.9523805, 0.110779606, 1.0387291, 0.009433031)
-
-[node name="Area3D10" parent="MangoTea" index="8" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, 0.11077971, 1.038729, -0.14251815)
-
-[node name="Area3D11" parent="MangoTea" index="9" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, 0.29467982, 1.038729, 0.009433031)
-
-[node name="Area3D12" parent="MangoTea" index="10" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.29467982, 1.038729, -0.14251815)
-
-[node name="Area3D13" parent="MangoTea" index="11" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523804, 0, 0, 0, 0.9523804, 0, 0, 0, 0.9523804, 0.50069886, 1.038729, 0.009433031)
-
-[node name="Area3D14" parent="MangoTea" index="12" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.500699, 1.038729, -0.14251815)
-
-[node name="Area3D15" parent="MangoTea" index="13" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.6845993, 1.038729, 0.009433031)
-
-[node name="Area3D16" parent="MangoTea" index="14" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.95238036, 0, 0, 0, 0.95238036, 0, 0, 0, 0.95238036, 0.68459934, 1.038729, -0.14251815)
-
-[node name="MangoTea" parent="MangoTea" index="15" instance=ExtResource("7_42otu")]
-transform = Transform3D(0.9523806, 0, 0, 0, 0.9523806, 0, 0, 0, 0.9523806, -0.7327851, 1.0387292, 0.009433031)
+[node name="TeaRowSpawner" type="Node3D" parent="." index="2"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.7746434, 0.25518456, 0)
+script = ExtResource("7_gxxl3")
+item_scene = ExtResource("9_4sxpr")
+item_count = 6
+spacing = Vector3(-0.3, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(0, -180, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="TeaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_8s7vs")
+
+[node name="SirwinstonTeaRowSpawner" type="Node3D" parent="." index="3"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, -2.8561819, -1.5771471, -3.5215306)
+script = ExtResource("7_gxxl3")
+item_scene = ExtResource("8_nw52f")
+item_count = 6
+spacing = Vector3(-0.3, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="SirwinstonTeaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_2gnj1")
+
+[node name="LiptonTeaRowSpawner" type="Node3D" parent="." index="4"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.7076944, 1.3480009, 0)
+script = ExtResource("7_gxxl3")
+item_scene = ExtResource("6_1da6q")
+item_count = 8
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="LiptonTeaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_ldt6w")
+
+[node name="CoffeeRowSpawner" type="Node3D" parent="." index="5"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.69758433, 1.818224, 0)
+script = ExtResource("7_gxxl3")
+item_scene = ExtResource("2_iljs3")
+item_count = 8
+mesh_rotation = Vector3(-90, -180, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="CoffeeRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_hqtpt")
+
+[node name="MangoTeaSpawner" type="Node3D" parent="." index="6"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 1.1274319, 0.6859285, 0.6250198)
+script = ExtResource("7_gxxl3")
+item_scene = ExtResource("7_42otu")
+item_count = 8
+mesh_scale = Vector3(0.1, 0.1, 0.1)
+mesh_rotation = Vector3(-90, 30, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="MangoTeaSpawner" index="0"]
+multimesh = SubResource("MultiMesh_nansi")

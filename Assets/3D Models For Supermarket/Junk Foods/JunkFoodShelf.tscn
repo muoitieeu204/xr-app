@@ -1,249 +1,97 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp8rnmr6uclby"]
+[gd_scene load_steps=15 format=3 uid="uid://bp8rnmr6uclby"]
 
 [ext_resource type="PackedScene" uid="uid://dxis5hrvqkhdg" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelf.tscn" id="1_u6n4l"]
 [ext_resource type="PackedScene" uid="uid://bn4a50p5smv4u" path="res://Assets/3D Models For Supermarket/Junk Foods/ChipBagFake.tscn" id="2_p3n50"]
 [ext_resource type="PackedScene" uid="uid://bqgunevcptvar" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeChipBag2.tscn" id="3_uqddl"]
 [ext_resource type="PackedScene" uid="uid://ctyq5s48u8oyo" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeKitKat.tscn" id="4_8tlo8"]
 [ext_resource type="PackedScene" uid="uid://m3g328gfwjsd" path="res://Assets/3D Models For Supermarket/Beverages/FakeSoda.tscn" id="5_fnmxa"]
+[ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/RowSpawner.gd" id="6_7yrae"]
+[ext_resource type="ArrayMesh" uid="uid://y54tkc5660iy" path="res://Assets/3D Models For Supermarket/Junk Foods/Chips/ChipBag.tres" id="7_8tlo8"]
+[ext_resource type="ArrayMesh" uid="uid://batjjs2r7w3yv" path="res://Assets/3D Models For Supermarket/Junk Foods/Chips/Chip.tres" id="8_8tlo8"]
+[ext_resource type="ArrayMesh" uid="uid://d13xuvvosywfw" path="res://Assets/3D Models For Supermarket/Junk Foods/Desserts/KitKat.tres" id="8_iurrl"]
+[ext_resource type="ArrayMesh" uid="uid://djiljwtw078l1" path="res://Assets/3D Models For Supermarket/Beverages/Soft Drinks & Beverages/Soda.tres" id="10_tloma"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_fnmxa"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("7_8tlo8")
+buffer = PackedFloat32Array(-0.007, 0, 6.119594e-10, 0, 0, 0.007, 0, 0, -6.119594e-10, 0, -0.007, 0, -0.007, 0, 6.119594e-10, -0.3, 0, 0.007, 0, 0, -6.119594e-10, 0, -0.007, 0, -0.007, 0, 6.119594e-10, -0.6, 0, 0.007, 0, 0, -6.119594e-10, 0, -0.007, 0, -0.007, 0, 6.119594e-10, -0.90000004, 0, 0.007, 0, 0, -6.119594e-10, 0, -0.007, 0, -0.007, 0, 6.119594e-10, -1.2, 0, 0.007, 0, 0, -6.119594e-10, 0, -0.007, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_iurrl"]
+transform_format = 1
+instance_count = 7
+mesh = ExtResource("8_8tlo8")
+buffer = PackedFloat32Array(-1, -8.742278e-08, 3.821371e-15, 0, 0, -4.371139e-08, -1, 0, 8.742278e-08, -1, 4.371139e-08, 0, -1, -8.742278e-08, 3.821371e-15, -0.2, 0, -4.371139e-08, -1, 0, 8.742278e-08, -1, 4.371139e-08, 0, -1, -8.742278e-08, 3.821371e-15, -0.4, 0, -4.371139e-08, -1, 0, 8.742278e-08, -1, 4.371139e-08, 0, -1, -8.742278e-08, 3.821371e-15, -0.6, 0, -4.371139e-08, -1, 0, 8.742278e-08, -1, 4.371139e-08, 0, -1, -8.742278e-08, 3.821371e-15, -0.8, 0, -4.371139e-08, -1, 0, 8.742278e-08, -1, 4.371139e-08, 0, -1, -8.742278e-08, 3.821371e-15, -1, 0, -4.371139e-08, -1, 0, 8.742278e-08, -1, 4.371139e-08, 0, -1, -8.742278e-08, 3.821371e-15, -1.2, 0, -4.371139e-08, -1, 0, 8.742278e-08, -1, 4.371139e-08, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_dqnbm"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("8_iurrl")
+buffer = PackedFloat32Array(-0.0075048814, -0.99997187, -8.742278e-08, 0, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.2, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.4, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.6, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.8, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -1, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -1.2, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -1.4, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_r1l5h"]
+transform_format = 1
+instance_count = 15
+mesh = ExtResource("10_tloma")
+buffer = PackedFloat32Array(0.9677751, 0.251816, -1.1007227e-08, 0, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.1, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.2, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.3, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.4, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.5, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.6, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.7, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.8, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -0.90000004, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -1, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -1.1, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -1.2, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -1.3000001, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0, 0.9677751, 0.251816, -1.1007227e-08, -1.4, 0, -4.371139e-08, -1, 0, -0.251816, 0.9677751, -4.2302794e-08, 0)
 
 [node name="Shelf" instance=ExtResource("1_u6n4l")]
 
-[node name="BigBagChip2" type="Node3D" parent="." index="1"]
-
-[node name="Area3D2" parent="BigBagChip2" index="0" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -4.4881667e-29, -8.325977e-08, -7.212443e-29, 0.9523806, -1.01506124e-14, 8.325977e-08, -1.01506124e-14, -0.9523806, -0.62866473, 1.4766426, 0.0068506026)
-
-[node name="Area3D3" parent="BigBagChip2" index="1" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238054, 5.1284204e-29, -8.325976e-08, -7.212443e-29, 0.95238054, -1.0150612e-14, 8.325976e-08, -1.0150612e-14, -0.95238054, -0.38920888, 1.4766426, -0.12048222)
-
-[node name="Area3D4" parent="BigBagChip2" index="2" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238054, 5.1284204e-29, -8.325976e-08, -7.212443e-29, 0.95238054, -1.0150612e-14, 8.325976e-08, -1.0150612e-14, -0.95238054, -0.38920888, 1.4766426, 0.0068506026)
-
-[node name="Area3D5" parent="BigBagChip2" index="3" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -1.8592919e-28, -8.325977e-08, 2.4041445e-29, 0.9523806, -1.0150614e-14, 8.325977e-08, -1.0150614e-14, -0.9523806, -0.14558685, 1.4766426, 0.0068506026)
-
-[node name="Area3D6" parent="BigBagChip2" index="4" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -1.8592919e-28, -8.325976e-08, 4.808289e-29, 0.9523806, -1.0150614e-14, 8.325976e-08, -1.0150614e-14, -0.9523806, 0.09386903, 1.4766426, -0.12048221)
-
-[node name="Area3D7" parent="BigBagChip2" index="5" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -1.8592919e-28, -8.325976e-08, 4.808289e-29, 0.9523806, -1.0150614e-14, 8.325976e-08, -1.0150614e-14, -0.9523806, 0.09386903, 1.4766426, 0.0068506175)
-
-[node name="BigBagChip3" parent="BigBagChip2" index="6" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -7.052377e-29, -8.325977e-08, 9.6165865e-29, 0.9523806, -1.0150612e-14, 8.325977e-08, -1.0150612e-14, -0.9523806, -0.14558685, 1.4766426, -0.12048222)
-
-[node name="Area3D8" parent="BigBagChip2" index="7" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238054, -2.5645296e-28, -8.3259756e-08, -1.4424885e-28, 0.95238054, -1.0150614e-14, 8.3259756e-08, -1.0150614e-14, -0.95238054, 0.33496, 1.4766426, 0.006850589)
-
-[node name="Area3D9" parent="BigBagChip2" index="8" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523805, -2.5645296e-28, -8.3259756e-08, -4.808298e-29, 0.9523805, -1.0150613e-14, 8.3259756e-08, -1.0150613e-14, -0.9523805, 0.574416, 1.4766426, -0.12048221)
-
-[node name="Area3D10" parent="BigBagChip2" index="9" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523805, -2.5645296e-28, -8.3259756e-08, -4.808298e-29, 0.9523805, -1.0150613e-14, 8.3259756e-08, -1.0150613e-14, -0.9523805, 0.574416, 1.4766426, 0.0068506026)
-
-[node name="BigBagChip4" parent="BigBagChip2" index="10" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523805, -1.1540544e-28, -8.325976e-08, 2.4041445e-29, 0.9523805, -1.0150612e-14, 8.325976e-08, -1.0150612e-14, -0.9523805, 0.33496, 1.4766426, -0.12048222)
-
-[node name="BigBagChip2" parent="BigBagChip2" index="11" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238066, 0, -8.325977e-08, 0, 0.95238066, -1.0150611e-14, 8.325977e-08, -1.0150611e-14, -0.95238066, -0.62866473, 1.4766427, -0.12048222)
-
-[node name="BigBagChip" type="Node3D" parent="." index="2"]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -1.1583012, 0)
-
-[node name="Area3D2" parent="BigBagChip" index="0" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -4.4881667e-29, -8.325977e-08, -7.212443e-29, 0.9523806, -1.01506124e-14, 8.325977e-08, -1.01506124e-14, -0.9523806, -0.62866473, 1.4766426, 0.0068506026)
-
-[node name="Area3D3" parent="BigBagChip" index="1" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238054, 5.1284204e-29, -8.325976e-08, -7.212443e-29, 0.95238054, -1.0150612e-14, 8.325976e-08, -1.0150612e-14, -0.95238054, -0.38920888, 1.4766426, -0.12048222)
-
-[node name="Area3D4" parent="BigBagChip" index="2" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238054, 5.1284204e-29, -8.325976e-08, -7.212443e-29, 0.95238054, -1.0150612e-14, 8.325976e-08, -1.0150612e-14, -0.95238054, -0.38920888, 1.4766426, 0.0068506026)
-
-[node name="Area3D5" parent="BigBagChip" index="3" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -1.8592919e-28, -8.325977e-08, 2.4041445e-29, 0.9523806, -1.0150614e-14, 8.325977e-08, -1.0150614e-14, -0.9523806, -0.14558685, 1.4766426, 0.0068506026)
-
-[node name="Area3D6" parent="BigBagChip" index="4" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -1.8592919e-28, -8.325976e-08, 4.808289e-29, 0.9523806, -1.0150614e-14, 8.325976e-08, -1.0150614e-14, -0.9523806, 0.09386903, 1.4766426, -0.12048221)
-
-[node name="Area3D7" parent="BigBagChip" index="5" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -1.8592919e-28, -8.325976e-08, 4.808289e-29, 0.9523806, -1.0150614e-14, 8.325976e-08, -1.0150614e-14, -0.9523806, 0.09386903, 1.4766426, 0.0068506175)
-
-[node name="BigBagChip3" parent="BigBagChip" index="6" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523806, -7.052377e-29, -8.325977e-08, 9.6165865e-29, 0.9523806, -1.0150612e-14, 8.325977e-08, -1.0150612e-14, -0.9523806, -0.14558685, 1.4766426, -0.12048222)
-
-[node name="Area3D8" parent="BigBagChip" index="7" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238054, -2.5645296e-28, -8.3259756e-08, -1.4424885e-28, 0.95238054, -1.0150614e-14, 8.3259756e-08, -1.0150614e-14, -0.95238054, 0.33496, 1.4766426, 0.006850589)
-
-[node name="Area3D9" parent="BigBagChip" index="8" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523805, -2.5645296e-28, -8.3259756e-08, -4.808298e-29, 0.9523805, -1.0150613e-14, 8.3259756e-08, -1.0150613e-14, -0.9523805, 0.574416, 1.4766426, -0.12048221)
-
-[node name="Area3D10" parent="BigBagChip" index="9" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523805, -2.5645296e-28, -8.3259756e-08, -4.808298e-29, 0.9523805, -1.0150613e-14, 8.3259756e-08, -1.0150613e-14, -0.9523805, 0.574416, 1.4766426, 0.0068506026)
-
-[node name="BigBagChip4" parent="BigBagChip" index="10" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.9523805, -1.1540544e-28, -8.325976e-08, 2.4041445e-29, 0.9523805, -1.0150612e-14, 8.325976e-08, -1.0150612e-14, -0.9523805, 0.33496, 1.4766426, -0.12048222)
-
-[node name="BigBagChip2" parent="BigBagChip" index="11" instance=ExtResource("3_uqddl")]
-transform = Transform3D(-0.95238066, 0, -8.325977e-08, 0, 0.95238066, -1.0150611e-14, 8.325977e-08, -1.0150611e-14, -0.95238066, -0.62866473, 1.4766427, -0.12048222)
-
-[node name="Soda" type="Node3D" parent="." index="3"]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.05017803, 0, 0)
-
-[node name="Soda" parent="Soda" index="0" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523807, 0, -8.325977e-08, 0, 0.9523807, 0, 8.325977e-08, 0, -0.9523807, -0.78031385, 1.749332, -0.041781656)
-
-[node name="Soda2" parent="Soda" index="1" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.95238066, 0, -8.325977e-08, 0, 0.95238066, 0, 8.325977e-08, 0, -0.95238066, -0.6765695, 1.7493318, -0.041781653)
-
-[node name="Soda3" parent="Soda" index="2" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523806, 0, -8.325977e-08, 0, 0.9523806, 0, 8.325977e-08, 0, -0.9523806, -0.5837005, 1.7493317, -0.04178165)
-
-[node name="Soda4" parent="Soda" index="3" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.95238054, 0, -8.325977e-08, 0, 0.95238054, 0, 8.325977e-08, 0, -0.95238054, -0.49006253, 1.7493316, -0.041781645)
-
-[node name="Soda5" parent="Soda" index="4" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.95238066, 0, -8.325977e-08, 0, 0.95238066, 0, 8.325977e-08, 0, -0.95238066, -0.39007115, 1.7493318, -0.041781653)
-
-[node name="Soda6" parent="Soda" index="5" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523806, 0, -8.325977e-08, 0, 0.9523806, 0, 8.325977e-08, 0, -0.9523806, -0.28632683, 1.7493317, -0.04178165)
-
-[node name="Soda7" parent="Soda" index="6" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.95238054, 0, -8.325977e-08, 0, 0.95238054, 0, 8.325977e-08, 0, -0.95238054, -0.19345777, 1.7493316, -0.041781645)
-
-[node name="Soda8" parent="Soda" index="7" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523805, 0, -8.325977e-08, 0, 0.9523805, 0, 8.325977e-08, 0, -0.9523805, -0.09981983, 1.7493315, -0.04178164)
-
-[node name="Soda9" parent="Soda" index="8" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523806, 0, -8.325977e-08, 0, 0.9523806, 0, 8.325977e-08, 0, -0.9523806, -0.0056016156, 1.7493317, -0.04178165)
-
-[node name="Soda10" parent="Soda" index="9" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.95238054, 0, -8.325977e-08, 0, 0.95238054, 0, 8.325977e-08, 0, -0.95238054, 0.098142706, 1.7493316, -0.041781645)
-
-[node name="Soda11" parent="Soda" index="10" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523805, 0, -8.325977e-08, 0, 0.9523805, 0, 8.325977e-08, 0, -0.9523805, 0.19101179, 1.7493315, -0.04178164)
-
-[node name="Soda12" parent="Soda" index="11" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523804, 0, -8.325977e-08, 0, 0.9523804, 0, 8.325977e-08, 0, -0.9523804, 0.28464967, 1.7493314, -0.041781638)
-
-[node name="Soda13" parent="Soda" index="12" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.95238054, 0, -8.325977e-08, 0, 0.95238054, 0, 8.325977e-08, 0, -0.95238054, 0.38183087, 1.7493316, -0.041781645)
-
-[node name="Soda14" parent="Soda" index="13" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523805, 0, -8.325977e-08, 0, 0.9523805, 0, 8.325977e-08, 0, -0.9523805, 0.4855752, 1.7493315, -0.04178164)
-
-[node name="Soda15" parent="Soda" index="14" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.9523804, 0, -8.325977e-08, 0, 0.9523804, 0, 8.325977e-08, 0, -0.9523804, 0.5784443, 1.7493314, -0.041781638)
-
-[node name="Soda16" parent="Soda" index="15" instance=ExtResource("5_fnmxa")]
-transform = Transform3D(-0.95238036, 0, -8.325977e-08, 0, 0.95238036, 0, 8.325977e-08, 0, -0.95238036, 0.67208225, 1.7493312, -0.041781634)
-
-[node name="KitKat" type="Node3D" parent="." index="4"]
-
-[node name="KitKat" parent="KitKat" index="0" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.95238066, 0, -0.95238066, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.95238066, -0.70642775, 1.0119517, -0.15201168)
-
-[node name="KitKat2" parent="KitKat" index="1" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523806, 0, -0.9523806, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523806, -0.70642775, 1.0119517, -0.07203859)
-
-[node name="KitKat3" parent="KitKat" index="2" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523806, 0, -0.9523806, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523806, -0.5424913, 1.0119517, -0.15201168)
-
-[node name="KitKat4" parent="KitKat" index="3" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.95238054, 0, -0.95238054, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.95238054, -0.5424913, 1.0119517, -0.07203858)
-
-[node name="KitKat5" parent="KitKat" index="4" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523806, 0, -0.9523806, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523806, -0.33642206, 1.0119517, -0.15201168)
-
-[node name="KitKat6" parent="KitKat" index="5" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.95238054, 0, -0.95238054, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.95238054, -0.33642206, 1.0119517, -0.07203858)
-
-[node name="KitKat7" parent="KitKat" index="6" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.95238054, 0, -0.95238054, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.95238054, -0.17248566, 1.0119517, -0.15201168)
-
-[node name="KitKat8" parent="KitKat" index="7" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523805, 0, -0.9523805, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523805, -0.17248566, 1.0119517, -0.072038576)
-
-[node name="KitKat9" parent="KitKat" index="8" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.95238054, 0, -0.95238054, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.95238054, 0.04285123, 1.0119517, -0.15201168)
-
-[node name="KitKat10" parent="KitKat" index="9" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523805, 0, -0.9523805, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523805, 0.04285123, 1.0119517, -0.072038576)
-
-[node name="KitKat11" parent="KitKat" index="10" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523805, 0, -0.9523805, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523805, 0.20678759, 1.0119517, -0.15201168)
-
-[node name="KitKat12" parent="KitKat" index="11" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523804, 0, -0.9523804, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523804, 0.20678759, 1.0119517, -0.07203857)
-
-[node name="KitKat13" parent="KitKat" index="12" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523805, 0, -0.9523805, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523805, 0.3962967, 1.0119517, -0.15201168)
-
-[node name="KitKat14" parent="KitKat" index="13" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523804, 0, -0.9523804, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523804, 0.3962967, 1.0119517, -0.07203857)
-
-[node name="KitKat15" parent="KitKat" index="14" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.9523804, 0, -0.9523804, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.9523804, 0.56023306, 1.0119517, -0.15201168)
-
-[node name="KitKat16" parent="KitKat" index="15" instance=ExtResource("4_8tlo8")]
-transform = Transform3D(-4.1629885e-08, -0.95238036, 0, -0.95238036, 4.1629885e-08, -8.325977e-08, 8.325977e-08, -3.6394003e-15, -0.95238036, 0.56023306, 1.0119517, -0.07203856)
-
-[node name="Chip" type="Node3D" parent="." index="5"]
-
-[node name="Chip" parent="Chip" index="0" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.9523805, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.9523805, 8.325977e-08, -0.9523805, 4.1629885e-08, 0.7724809, 0.75476384, -0.02797652)
-
-[node name="Chip2" parent="Chip" index="1" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.9523804, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.9523804, 8.325977e-08, -0.9523804, 4.1629885e-08, 0.77248085, 0.7547638, 0.068136565)
-
-[node name="Chip3" parent="Chip" index="2" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.9523804, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.9523804, 8.325977e-08, -0.9523804, 4.1629885e-08, 0.62067777, 0.7547638, -0.027976518)
-
-[node name="Chip4" parent="Chip" index="3" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, 0.6206777, 0.7547637, 0.06813656)
-
-[node name="Chip5" parent="Chip" index="4" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.9523804, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.9523804, 8.325977e-08, -0.9523804, 4.1629885e-08, 0.4154747, 0.7547638, -0.027976518)
-
-[node name="Chip6" parent="Chip" index="5" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, 0.41547465, 0.7547637, 0.06813656)
-
-[node name="Chip7" parent="Chip" index="6" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, 0.2636716, 0.7547637, -0.027976517)
-
-[node name="Chip8" parent="Chip" index="7" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, 0.26367155, 0.75476366, 0.06813655)
-
-[node name="Chip9" parent="Chip" index="8" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, 0.056555238, 0.7547637, -0.027976517)
-
-[node name="Chip10" parent="Chip" index="9" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, 0.05655518, 0.75476366, 0.06813655)
-
-[node name="Chip11" parent="Chip" index="10" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.09524787, 0.75476366, -0.027976515)
-
-[node name="Chip12" parent="Chip" index="11" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.09524793, 0.7547636, 0.06813654)
-
-[node name="Chip13" parent="Chip" index="12" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.30749953, 0.75476366, -0.027976515)
-
-[node name="Chip14" parent="Chip" index="13" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.3074996, 0.7547636, 0.06813654)
-
-[node name="Chip15" parent="Chip" index="14" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.45930266, 0.7547636, -0.027976513)
-
-[node name="Chip16" parent="Chip" index="15" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.45930272, 0.75476354, 0.068136536)
-
-[node name="Chip17" parent="Chip" index="16" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.6807474, 0.75476354, -0.027976511)
-
-[node name="Chip18" parent="Chip" index="17" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.68074745, 0.75476354, 0.068136536)
-
-[node name="Chip19" parent="Chip" index="18" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.8325504, 0.75476354, -0.02797651)
-
-[node name="Chip20" parent="Chip" index="19" instance=ExtResource("2_p3n50")]
-transform = Transform3D(-0.95238036, -8.325977e-08, 3.6394003e-15, 0, -4.1629885e-08, -0.95238036, 8.325977e-08, -0.95238036, 4.1629885e-08, -0.8325504, 0.75476354, 0.068136536)
+[node name="etagere__0" parent="." index="0"]
+transform = Transform3D(0.110845365, 0, 0, 0, -1.8059001e-08, 0.110845365, 0, -0.110845365, -1.8059001e-08, -0.0015336559, 0.0014974958, 0.00045611744)
+
+[node name="BigChipBagRowSpawner" type="Node3D" parent="." index="2"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.5718857, 0.37900624, 0)
+script = ExtResource("6_7yrae")
+item_scene = ExtResource("3_uqddl")
+spacing = Vector3(-0.3, 0, 0)
+mesh_scale = Vector3(0.007, 0.007, 0.007)
+mesh_rotation = Vector3(0, -180, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="BigChipBagRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_fnmxa")
+
+[node name="BigChipBagRowSpawner2" type="Node3D" parent="." index="3"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.5718857, 1.500415, 0)
+script = ExtResource("6_7yrae")
+item_scene = ExtResource("3_uqddl")
+spacing = Vector3(-0.3, 0, 0)
+mesh_scale = Vector3(0.007, 0.007, 0.007)
+mesh_rotation = Vector3(0, -180, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="BigChipBagRowSpawner2" index="0"]
+multimesh = SubResource("MultiMesh_fnmxa")
+
+[node name="ChipRowSpawner" type="Node3D" parent="." index="4"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.5898047, 0.75694996, 0)
+script = ExtResource("6_7yrae")
+item_scene = ExtResource("2_p3n50")
+item_count = 7
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(90, 180, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="ChipRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_iurrl")
+
+[node name="KitKatRowSpawner" type="Node3D" parent="." index="5"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.67606664, 1.0292631, 0)
+script = ExtResource("6_7yrae")
+item_scene = ExtResource("4_8tlo8")
+item_count = 8
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(0, 180, 270.43)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="KitKatRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_dqnbm")
+
+[node name="SodaRowSpawner" type="Node3D" parent="." index="6"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.72358906, 1.7703522, 0)
+script = ExtResource("6_7yrae")
+item_scene = ExtResource("5_fnmxa")
+item_count = 15
+spacing = Vector3(-0.1, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(90, 14.585, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="SodaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_r1l5h")

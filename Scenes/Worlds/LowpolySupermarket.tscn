@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=4 uid="uid://b12kcbqt8cg6r"]
+[gd_scene load_steps=65 format=4 uid="uid://b12kcbqt8cg6r"]
 
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="1_k20mw"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="1_lfkti"]
@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://doaq77tgfvh8e" path="res://Assets/3D Models For Supermarket/Fruits/FruitCaseGreen.tscn" id="15_otcmc"]
 [ext_resource type="PackedScene" uid="uid://digx86yadb4ce" path="res://Assets/3D Models For Supermarket/Market Equipments/FertilizeBags.tscn" id="16_eqjf7"]
 [ext_resource type="PackedScene" uid="uid://bgvrdxllnjs1d" path="res://Assets/3D Models For Supermarket/Market Equipments/Cashier.tscn" id="17_otcmc"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="20_1042w"]
+[ext_resource type="PackedScene" uid="uid://dqpsyyclcev87" path="res://Prefabs/Boards/SupermarketLevelGuide.tscn" id="21_p8ll3"]
 [ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/UIHintTriggerZone.tscn" id="28_fhpcg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rlwrm"]
@@ -131,8 +133,8 @@ size = Vector2(2.5, 2)
 transparency = 1
 cull_mode = 2
 albedo_color = Color(0.8, 0.9019608, 1, 0.43137255)
-metallic = 0.6
-roughness = 0.05
+metallic = 1.0
+roughness = 0.0
 clearcoat_roughness = 0.05
 refraction_scale = 0.03
 
@@ -591,7 +593,7 @@ mesh = SubResource("QuadMesh_hha1d")
 transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, -8.326673e-17, 0, 1.6610133e-24, 0.006666667, 0.54421026, -2.4149127, -7.6385894)
 
 [node name="Shelf3" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("13_bwgcx")]
-transform = Transform3D(7.927282e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651248e-15, 0.7, -3.0597974e-08, 5.2848527e-08, 2.207542, -3.487097, -3.5547647)
+transform = Transform3D(-0.00152151, 0.00030041893, -1.0499973, -0.00011949243, 1.0499998, 0.00030081352, 0.6999983, 0.00017993727, -0.0022822793, 2.207542, -3.487097, -3.5547647)
 
 [node name="Shelf4" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("13_bwgcx")]
 transform = Transform3D(7.927282e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651248e-15, 0.7, -3.0597974e-08, 5.2848527e-08, 2.207542, -3.487097, -5.0786734)
@@ -610,6 +612,14 @@ transform = Transform3D(7.92728e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 
 
 [node name="fence-door-rotate3" parent="SuperMarket Architecture" instance=ExtResource("11_15gq7")]
 transform = Transform3D(2, -2.9646153e-21, 0, 2.9646153e-21, 2, -2.2146852e-22, 0, 3.3220278e-22, 1.3333334, 7.006113, -3.4940698, -3.5508728)
+
+[node name="Guide Screen" parent="SuperMarket Architecture" instance=ExtResource("20_1042w")]
+transform = Transform3D(-4.3711445e-08, 6.5567086e-08, 1, -6.5567086e-08, 1, -6.5567086e-08, -1, -6.556708e-08, -4.3711385e-08, -1.2363653, -2.152302, -1.9560063)
+screen_size = Vector2(1.5, 1.5)
+scene = ExtResource("21_p8ll3")
+viewport_size = Vector2(1280, 720)
+transparent = 1
+scene_properties_keys = PackedStringArray("SlideGuideController.gd")
 
 [node name="NPCZone" type="Node3D" parent="."]
 

@@ -48,5 +48,5 @@ func test_the_upload() -> void:
 		var test_node = get_node("/root/SessionUploader")
 		if test_node:
 			test_node.UploadSessionDataAsync(jsonPath, audioPath)
-		else: 
+		else:
 			print("Error: Cannt find SessionUploader node");
