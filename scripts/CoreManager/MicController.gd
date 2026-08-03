@@ -23,6 +23,7 @@ func start_record():
 	if record_effect:
 		record_effect.set_recording_active(true)
 
+#Test comment
 func start_chunk_record():
 	if chunk_record_effect:
 		chunk_record_effect.set_recording_active(true)
