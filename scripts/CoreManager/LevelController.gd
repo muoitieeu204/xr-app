@@ -107,3 +107,5 @@ func _on_timer_timeout() -> void:
 		return
 	currentTimeSecconds += 1
 	GameManager.time_updated.emit(currentTimeSecconds)
+	if currentTimeSecconds > 0 and currentTimeSecconds % 300 == 0:
+		GameManager.health_warning_triggered.emit()

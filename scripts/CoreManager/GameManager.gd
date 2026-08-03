@@ -9,6 +9,8 @@ signal time_updated(formatted_time: int)
 signal score_updated(new_score: int)
 signal item_name_updated(new_item_name: String)
 signal hint_updated(hint_text: String)
+signal health_warning_triggered
+
 func _ready() -> void:
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
