@@ -108,4 +108,9 @@ func _on_timer_timeout() -> void:
 	currentTimeSecconds += 1
 	GameManager.time_updated.emit(currentTimeSecconds)
 	if currentTimeSecconds > 0 and currentTimeSecconds % 300 == 0:
-		GameManager.health_warning_triggered.emit()
+		var config = ConfigFile.new()
+		var is_enabled = true
+		if config.load("user://settings.cfg") == OK:
+			is_enabled = config.get_value("Game", "HealthWarning", true)
+		if is_enabled:
+			GameManager.health_warning_triggered.emit()

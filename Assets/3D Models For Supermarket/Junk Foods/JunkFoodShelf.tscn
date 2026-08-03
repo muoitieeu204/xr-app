@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/RowSpawner.gd" id="6_7yrae"]
 [ext_resource type="ArrayMesh" uid="uid://y54tkc5660iy" path="res://Assets/3D Models For Supermarket/Junk Foods/Chips/ChipBag.tres" id="7_8tlo8"]
 [ext_resource type="ArrayMesh" uid="uid://batjjs2r7w3yv" path="res://Assets/3D Models For Supermarket/Junk Foods/Chips/Chip.tres" id="8_8tlo8"]
-[ext_resource type="ArrayMesh" uid="uid://d13xuvvosywfw" path="res://Assets/3D Models For Supermarket/Junk Foods/Desserts/KitKat.tres" id="8_iurrl"]
+[ext_resource type="ArrayMesh" uid="uid://cmgl3rkcctgb0" path="res://Assets/3D Models For Supermarket/Junk Foods/Desserts/LowpolyKitKat.tres" id="8_iurrl"]
 [ext_resource type="ArrayMesh" uid="uid://djiljwtw078l1" path="res://Assets/3D Models For Supermarket/Beverages/Soft Drinks & Beverages/Soda.tres" id="10_tloma"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_fnmxa"]
@@ -27,7 +27,7 @@ buffer = PackedFloat32Array(-1, -8.742278e-08, 3.821371e-15, 0, 0, -4.371139e-08
 transform_format = 1
 instance_count = 8
 mesh = ExtResource("8_iurrl")
-buffer = PackedFloat32Array(-0.0075048814, -0.99997187, -8.742278e-08, 0, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.2, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.4, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.6, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -0.8, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -1, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -1.2, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0, -0.0075048814, -0.99997187, -8.742278e-08, -1.4, -0.99997187, 0.0075048814, 0, 0, 6.5609757e-10, 8.742032e-08, -1, 0)
+buffer = PackedFloat32Array(-0.0007070869, 5.3067088e-06, 0.0007071068, 0, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0, -0.0007070869, 5.3067088e-06, 0.0007071068, -0.2, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0, -0.0007070869, 5.3067088e-06, 0.0007071068, -0.4, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0, -0.0007070869, 5.3067088e-06, 0.0007071068, -0.6, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0, -0.0007070869, 5.3067088e-06, 0.0007071068, -0.8, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0, -0.0007070869, 5.3067088e-06, 0.0007071068, -1, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0, -0.0007070869, 5.3067088e-06, 0.0007071068, -1.2, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0, -0.0007070869, 5.3067088e-06, 0.0007071068, -1.4, -0.0007070869, 5.3067524e-06, -0.0007071068, 0, -7.504851e-06, -0.0009999719, -3.090862e-11, 0)
 
 [sub_resource type="MultiMesh" id="MultiMesh_r1l5h"]
 transform_format = 1
@@ -78,8 +78,8 @@ transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.
 script = ExtResource("6_7yrae")
 item_scene = ExtResource("4_8tlo8")
 item_count = 8
-mesh_scale = Vector3(1, 1, 1)
-mesh_rotation = Vector3(0, 180, 270.43)
+mesh_scale = Vector3(0.001, 0.001, 0.001)
+mesh_rotation = Vector3(45, 90, 270.43)
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="KitKatRowSpawner" index="0"]
 multimesh = SubResource("MultiMesh_dqnbm")

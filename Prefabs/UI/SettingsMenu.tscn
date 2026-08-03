@@ -345,6 +345,19 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
+[node name="HealthWarningRow" type="HBoxContainer" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuBox/MarginContainer/VBoxContainer/HealthWarningRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "⏳ Cảnh báo sức khỏe (5 phút)"
+label_settings = SubResource("LabelSettings_row")
+
+[node name="HealthWarningCheck" type="CheckButton" parent="MenuBox/MarginContainer/VBoxContainer/HealthWarningRow"]
+layout_mode = 2
+button_pressed = true
+
 [node name="CloseButton" type="Button" parent="MenuBox/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
