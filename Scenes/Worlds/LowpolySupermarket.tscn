@@ -559,7 +559,7 @@ mesh = SubResource("QuadMesh_hha1d")
 [node name="InteractableShelf" type="Node3D" parent="SuperMarket Architecture"]
 
 [node name="Fridge" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("12_6v2cb")]
-transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, -8.326673e-17, 0, 1.6610133e-24, 0.006666667, 0.54421026, -2.4149127, -7.6385894)
+transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, -1.3877788e-16, 0, 1.6610133e-24, 0.006666667, 0.55025774, -2.4149127, -7.6383643)
 
 [node name="Shelf3" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("13_bwgcx")]
 transform = Transform3D(-0.00152151, 0.00030041893, -1.0499973, -0.00011949243, 1.0499998, 0.00030081352, 0.6999983, 0.00017993727, -0.0022822793, 2.207542, -3.487097, -3.5547647)
