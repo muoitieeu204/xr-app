@@ -2,7 +2,7 @@ extends Node
 class_name MicController
 
 signal audio_saved
-signal chunk_audio_saved
+signal chunk_audio_saved(saved_path: String)
 
 @export var replayController: TelementryController
 
@@ -23,7 +23,6 @@ func start_record():
 	if record_effect:
 		record_effect.set_recording_active(true)
 
-#Test comment
 func start_chunk_record():
 	if chunk_record_effect:
 		chunk_record_effect.set_recording_active(true)
@@ -49,7 +48,7 @@ func stop_record_and_save():
 			var uploader = get_node_or_null("/root/SessionUploader")
 			uploader.UploadSessionDataAsync("user://"+final_json_name, full_save_path, SessionData.accessToken, PlayerData.childId)
 
-func stop_chunk_record_and_save():
+func stop_chunk_record_and_save() -> String:
 	if chunk_record_effect and chunk_record_effect.is_recording_active():
 		chunk_record_effect.set_recording_active(false)
 		chunk_recording = chunk_record_effect.get_recording()
@@ -59,7 +58,9 @@ func stop_chunk_record_and_save():
 		var full_save_path = "user://" + final_chunk_audio_name
 		chunkThreadSavePath = full_save_path	
 		WorkerThreadPool.add_task(_thread_save_chunk_audio)
-		await  self.chunk_audio_saved
+		var savedPath = await  self.chunk_audio_saved
+		return savedPath
+	return ""
 
 func _thread_save_audio() -> void:
 	recording.save_to_wav(threadSavePath)
@@ -69,4 +70,4 @@ func _thread_save_audio() -> void:
 func _thread_save_chunk_audio() -> void:
 	chunk_recording.save_to_wav(chunkThreadSavePath)
 	print("Audio chunk successfully saved in background")
-	call_deferred("emit_signal", "chunk_audio_saved")
+	call_deferred("emit_signal", "chunk_audio_saved",chunkThreadSavePath)

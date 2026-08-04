@@ -34,6 +34,7 @@ PlayerData="*res://Prefabs/PlayerPrefabs/PlayerData.gd"
 RefreshTokenApi="*res://scripts/API/RefreshTokenApi.gd"
 ResultApi="*res://scripts/API/result-api.gd"
 ReplayManager="*res://Prefabs/PlayerPrefabs/ReplayManager.tscn"
+FilesChunksApi="*res://scripts/API/FilesChunksApi.cs"
 
 [display]
 

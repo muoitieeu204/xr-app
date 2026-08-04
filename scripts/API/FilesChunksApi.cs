@@ -6,11 +6,11 @@ using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 
-public partial class chunks_api : Node
+public partial class FilesChunksApi : Node
 {
 	private static readonly System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
 	private readonly string apiUrl = "https://103-162-30-111.sslip.io/api/files/chunks";
-	public async void UploadChunkAsync(string childProfileId, string sessionId, int chunkIndex, string chunkSavePath, bool isFinalChunk, string token)
+	public async void UploadChunkAsync(int childProfileId, string sessionId, int chunkIndex, string chunkSavePath, bool isFinalChunk, string token)
 	{
 		try
 		{
@@ -24,7 +24,7 @@ public partial class chunks_api : Node
 				form.Add(new StringContent(isFinalChunk.ToString()), "IsFinalChunk");
 				var audioContent = new StreamContent(audioStream);
 				audioContent.Headers.ContentType = MediaTypeHeaderValue.Parse("audio/wav");
-				form.Add(audioContent, "Audio", "chunk.wav");
+				form.Add(audioContent, "AudioFile", Path.GetFileName(chunkSavePath));
 				GD.Print($"Uploading chunk {chunkIndex}...");
 				HttpResponseMessage response = await client.PostAsync(apiUrl, form);
 				string responseBody = await response.Content.ReadAsStringAsync();
