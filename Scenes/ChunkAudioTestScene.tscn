@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://dh52v6ckh33nn"]
+
+[ext_resource type="Script" uid="uid://dos66cbl4kcpc" path="res://scripts/ChunkAudioTestScript.gd" id="1_vx7tq"]
+[ext_resource type="Script" uid="uid://dweni8esu18e1" path="res://scripts/CoreManager/MicController.gd" id="2_uhjdg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxk71"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2m5a"]
+bg_color = Color(0.8, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3w2bc"]
+bg_color = Color(0.8, 0.8, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4l9c"]
+bg_color = Color(0.8, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5m3d"]
+bg_color = Color(0.4, 0.4, 0.1, 1)
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_mlgde"]
+
+[node name="ChunkAudioTestScene" type="Control" node_paths=PackedStringArray("micController", "micNode")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vx7tq")
+micController = NodePath("MicController")
+micNode = NodePath("MicController/AudioStreamPlayer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Status: Idle"
+horizontal_alignment = 1
+
+[node name="StartRecordingButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_nxk71")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h2m5a")
+toggle_mode = true
+text = "Start Recording"
+
+[node name="StartChunkRecordButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3w2bc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p4l9c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_k5m3d")
+disabled = true
+toggle_mode = true
+text = "Start Chunk Record"
+
+[node name="MicController" type="Node" parent="."]
+script = ExtResource("2_uhjdg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MicController"]
+stream = SubResource("AudioStreamMicrophone_mlgde")
+bus = &"ReplayMic"
+
+[connection signal="toggled" from="VBoxContainer/StartRecordingButton" to="." method="_on_start_recording_toggled"]
+[connection signal="toggled" from="VBoxContainer/StartChunkRecordButton" to="." method="_on_start_chunk_record_toggled"]
