@@ -256,6 +256,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_onuvk")
 [node name="Replayer" parent="ReplayManager" index="0" node_paths=PackedStringArray("recorded_objects")]
 recorded_objects = [NodePath("../../XRCamera3D"), NodePath("../../LeftController"), NodePath("../../RightController")]
 
+[node name="MicController" parent="ReplayManager" index="1" groups=["MicController"]]
+
 [connection signal="button_pressed" from="LeftController" to="LeftController/UIButtonController" method="_on_left_controller_button_pressed"]
 
 [editable path="LeftController/LeftHand"]

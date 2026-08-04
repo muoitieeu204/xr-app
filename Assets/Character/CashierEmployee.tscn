@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://jhprmwnakj1e"]
+[gd_scene load_steps=28 format=4 uid="uid://jhprmwnakj1e"]
 
 [ext_resource type="Script" uid="uid://nt6onlsgwd67" path="res://scripts/NPCs/NpcController.gd" id="1_84ai0"]
 [ext_resource type="Texture2D" uid="uid://c7mkd173sheui" path="res://Assets/Character/Creative_Character_free_Textures_4.png" id="1_c3k4t"]
@@ -315,16 +315,6 @@ blend_shape_mode = 0
 [sub_resource type="Animation" id="Animation_84ai0"]
 resource_name = "Idle"
 
-[sub_resource type="Animation" id="Animation_bmsno"]
-resource_name = "emote-yes"
-tracks/0/type = "rotation_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton3D:Head")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.2, 1, 0.18833272, 8.824488e-14, -1.4414786e-13, 0.9821053, 0.4333333, 1, 0, 0, 0, 1, 0.6333333, 1, 0.18833272, 8.824488e-14, -1.4414786e-13, 0.9821053, 0.8, 1, 0, 0, 0, 1)
-
 [sub_resource type="Animation" id="Animation_sigga"]
 length = 0.001
 tracks/0/type = "rotation_3d"
@@ -345,6 +335,16 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.2, 1, 5.7802465e-09, -0.25161296, 0.04609378, 0.9667297, 0.6, 1, 1.3645385e-08, 0.29008037, -0.053140752, 0.95552576, 1, 1, 0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_bmsno"]
+resource_name = "emote-yes"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton3D:Head")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.2, 1, 0.18833272, 8.824488e-14, -1.4414786e-13, 0.9821053, 0.4333333, 1, 0, 0, 0, 1, 0.6333333, 1, 0.18833272, 8.824488e-14, -1.4414786e-13, 0.9821053, 0.8, 1, 0, 0, 0, 1)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bmsno"]
 _data = {
 &"Idle": SubResource("Animation_84ai0"),
@@ -357,10 +357,17 @@ _data = {
 radius = 0.4428711
 height = 1.907959
 
-[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84ai0"]
+albedo_color = Color(0.75562954, 0.23084787, 0.22709063, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_bmsno"]
+material = SubResource("StandardMaterial3D_84ai0")
+
+[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player", "npc_record_indicator")]
 script = ExtResource("1_84ai0")
 npc_audio_player = NodePath("AudioStreamPlayer3D")
 npc_animation_player = NodePath("AnimationPlayer")
+npc_record_indicator = NodePath("MeshInstance3D")
 question_1_audio = ExtResource("2_bmsno")
 correct_audio = Array[AudioStream]([ExtResource("3_sigga"), ExtResource("4_gj5ub"), ExtResource("5_76h6f")])
 wrong_audio = Array[AudioStream]([ExtResource("6_4s1g8"), ExtResource("7_2xgaf"), ExtResource("8_d07lw")])
@@ -724,3 +731,7 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9331248, 0)
 shape = SubResource("CapsuleShape3D_84ai0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36502177, 1.62415, 0.42445666)
+mesh = SubResource("SphereMesh_bmsno")
