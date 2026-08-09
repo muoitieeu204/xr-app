@@ -72,6 +72,11 @@ public partial class AzureSpeechManager : Node
 				
 				// Only process the result if we haven't dropped the item!
 				if (_isListening && _currentRecognizer == recognizer) {
+					if (result.Reason == ResultReason.Canceled)
+					{
+						var cancellation = CancellationDetails.FromResult(result);
+						GD.PrintErr($"Azure CANCELED: {cancellation.ErrorCode}| Details: {cancellation.ErrorDetails}");
+					}
 					CallDeferred(MethodName.ProcessResult, result.Text, (int)result.Reason);
 				}
 				
@@ -101,6 +106,11 @@ public partial class AzureSpeechManager : Node
 		{
 			GD.Print("AzureSpeechManager: Speech could not be recognized");
 			EmitSignal(SignalName.OnSpeechFailed, "No Match");
+		}
+		else if(reason == ResultReason.Canceled)
+		{
+			GD.PrintErr("AzureSpeechManager: Speech recognition was canceled. Check your api key");
+			EmitSignal(SignalName.OnSpeechFailed, "Canceled");
 		}
 	}
 

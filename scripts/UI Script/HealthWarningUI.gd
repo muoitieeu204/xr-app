@@ -11,10 +11,6 @@ func _ready():
 
 	GameManager.health_warning_triggered.connect(_show_health_warning)
 
-	# Connect the buttons to their respective actions
-	yes_button.pressed.connect(_on_yes_button_pressed)
-	continue_button.pressed.connect(_on_continue_button_pressed)
-
 func _show_health_warning():
 	show()
 	take_off_headset_screen.hide()

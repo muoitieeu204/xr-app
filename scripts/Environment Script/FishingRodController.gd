@@ -1,16 +1,23 @@
 extends Node
 
 @export var pickable: XRToolsPickable
+@export var reel_handle: XRToolsInteractableHandle
 @export var bait_scene: PackedScene
 @export var rod_tip: Marker3D
 @export var reel_hinge: XRToolsInteractableHinge
+@export var aim_raycast: RayCast3D 
 @export var throw_multiplier: float = 1.5
-@export var reel_speed: float = 0.05
+
 
 var current_bait: RigidBody3D = null
 var previous_tip_pos: Vector3
 var tip_velocity: Vector3
+var velocity_history: Array[Vector3] = [] # Stores our past frames
 var last_hinge_pos: float = 0.0
+
+# Variables for the fishing line
+var line_mesh_instance: MeshInstance3D
+var line_mesh: ImmediateMesh
 
 
 func _ready():
@@ -20,29 +27,23 @@ func _ready():
 
 	# Connect to the parent's action_pressed signal
 	if pickable:
-		pickable.action_pressed.connect(_on_action_pressed)
+		reel_handle.action_pressed.connect(_on_action_pressed)
 
 	if reel_hinge:
 		last_hinge_pos = reel_hinge.hinge_position
 
-
-func _physics_process(delta):
-	# 1. Track the velocity of the rod tip
-	if rod_tip:
-		var current_tip_pos = rod_tip.global_position
-		tip_velocity = (current_tip_pos - previous_tip_pos) / delta
-		previous_tip_pos = current_tip_pos
-
-	# 2. Handle reeling in the bait
-	if is_instance_valid(current_bait) and reel_hinge:
-		var current_hinge_pos = reel_hinge.hinge_position
-		var crank_delta = current_hinge_pos - last_hinge_pos
-		last_hinge_pos = current_hinge_pos
-
-		# If the crank is rotating forward (invert this if it reels backward)
-		if crank_delta > 0.0:
-			var dir_to_rod = (rod_tip.global_position - current_bait.global_position).normalized()
-			current_bait.global_position += dir_to_rod * crank_delta * reel_speed
+	# --- NEW: Setup the fishing line visually ---
+	line_mesh = ImmediateMesh.new()
+	line_mesh_instance = MeshInstance3D.new()
+	line_mesh_instance.mesh = line_mesh
+	
+	var mat = StandardMaterial3D.new()
+	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED # Unlit so we can see it easily
+	mat.albedo_color = Color(1, 1, 1, 0.5) # Semi-transparent white line
+	line_mesh_instance.material_override = mat
+	
+	# Add the line to the root of the game so it draws in world space
+	get_tree().root.call_deferred("add_child", line_mesh_instance)
 
 
 func _on_action_pressed(_pickable):
@@ -64,7 +65,12 @@ func cast_bait():
 	current_bait.global_position = rod_tip.global_position
 
 	# Launch the bait using the tip's flick velocity
-	current_bait.linear_velocity = tip_velocity * throw_multiplier
+	aim_raycast.force_raycast_update()
+	if aim_raycast.is_colliding():
+		current_bait.global_position = aim_raycast.get_collision_point()
+	else: 
+		current_bait.global_position = aim_raycast.to_global(aim_raycast.target_position)
+	current_bait.linear_velocity = Vector3.ZERO
 
 	# Connect to our custom bite signal
 	if current_bait.has_signal("fish_bit"):
@@ -80,3 +86,15 @@ func _on_fish_bit():
 	if controller:
 		# Trigger haptics
 		controller.trigger_haptic_pulse("haptic", 100.0, 0.8, 0.5, 0.0)
+
+
+func _process(_delta):
+	# Always clear the old line drawing first
+	line_mesh.clear_surfaces()
+	
+	# If we have a bait in the water, draw a line to it
+	if is_instance_valid(current_bait) and rod_tip:
+		line_mesh.surface_begin(Mesh.PRIMITIVE_LINES)
+		line_mesh.surface_add_vertex(rod_tip.global_position)
+		line_mesh.surface_add_vertex(current_bait.global_position)
+		line_mesh.surface_end()

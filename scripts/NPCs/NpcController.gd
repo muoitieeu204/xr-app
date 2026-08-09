@@ -99,5 +99,4 @@ func _on_child_correct_answer():
 	get_tree().call_group("LevelController", "CorrectAnswer", 10, current_item_id)   
 
 func _on_child_wrong_answer():
-	get_tree().call_group("LevelController", "WrongAnswer", 5, current_item_id)   
-
+	pass
