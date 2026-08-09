@@ -156,11 +156,17 @@ func _on_request_completed(result, responseCode, headers, body):
 		$LoginBox.visible = false
 		$WelcomeScene.visible = false
 		$LogoutBox.visible = false
-		
-		if childProfileScene != null:
+
+		# --- ROLE-BASED ROUTING ---
+		if SessionData.roleName == "Teacher":
+			# Teacher: chuyển thẳng sang SessionListScene (chọn trẻ trong đó)
+			print_debug("AuthController: Teacher detected → SessionListScene")
+			get_tree().change_scene_to_file("res://Scenes/SessionListScene.tscn")
+		elif childProfileScene != null:
+			# Parent / Student: chọn hồ sơ trẻ như bình thường
 			childProfileScene.visible = true
 		else:
-			$WelcomeScene.visible = true # Fallback just in case
+			$WelcomeScene.visible = true
 			print_debug("WARNING: ChildProfileScene not found!")
 	else:
 		# If the API returned a failure (wrong password, etc.)
