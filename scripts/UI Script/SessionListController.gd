@@ -9,17 +9,17 @@ const BASE_URL        := "https://103-162-30-111.sslip.io/api/files"
 const CHILDREN_API    := "https://103-162-30-111.sslip.io/api/child-profiles/my-students"
 
 # --- Node refs ---
-@onready var child_name_label:  Label          = $Background/VBox/Header/ChildNameLabel
-@onready var session_list:      VBoxContainer  = $Background/VBox/ScrollContainer/SessionList
+@onready var child_name_label:  Label          = $Background/VBox/HeaderPanel/Header/ChildNameLabel
+@onready var session_list:      VBoxContainer  = $Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox/ScrollContainer/SessionList
 @onready var loading_overlay:   Control        = $LoadingOverlay
-@onready var loading_label:     Label          = $LoadingOverlay/LoadingLabel
+@onready var loading_label:     Label          = $LoadingOverlay/CenterContainer/PanelContainer/LoadingLabel
 @onready var error_dialog:      AcceptDialog   = $ErrorDialog
-@onready var back_button:       Button         = $Background/VBox/Header/BackButton
+@onready var back_button:       Button         = $Background/VBox/HeaderPanel/Header/BackButton
 
 # --- Child selector (Bước 1) ---
 @onready var child_selector_panel: Control        = $ChildSelectorPanel
-@onready var children_list:        VBoxContainer  = $ChildSelectorPanel/VBox/ScrollContainer/ChildrenList
-@onready var selector_loading_lbl: Label          = $ChildSelectorPanel/VBox/LoadingLabel
+@onready var children_list:        VBoxContainer  = $ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox/ScrollContainer/ChildrenList
+@onready var selector_loading_lbl: Label          = $ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox/LoadingLabel
 
 # --- HTTP ---
 var _http_children: HTTPRequest
@@ -52,9 +52,20 @@ func _ready() -> void:
 	back_button.mouse_entered.connect(func(): _hover_btn(back_button, true))
 	back_button.mouse_exited.connect(func():  _hover_btn(back_button, false))
 
-	# Bắt đầu ở Bước 1: chọn trẻ
-	child_name_label.text = "Xin chào, " + SessionData.fullName + " 👋"
-	_show_child_selector()
+	# Bắt đầu kiểm tra: nếu đã chọn trẻ trước đó (quay lại từ spectator)
+	if PlayerData.childId > 0:
+		# Bỏ qua Bước 1, chuyển thẳng sang Bước 2 (Danh sách Session của bé)
+		child_selector_panel.visible = false
+		session_list.get_parent().get_parent().visible = true
+		
+		var class_name_text: String = "" # Tên lớp sẽ hiển thị theo header
+		child_name_label.text = "📁 Buổi học của: " + PlayerData.fullName
+		_show_loading("Đang tải danh sách buổi học...")
+		_files_api.fetch_sessions(PlayerData.childId)
+	else:
+		# Bắt đầu ở Bước 1: chọn trẻ
+		child_name_label.text = "Xin chào, " + SessionData.fullName + " 👋"
+		_show_child_selector()
 
 # =======================================================================
 # BƯỚC 1 — CHỌN TRẺ
@@ -106,11 +117,41 @@ func _on_children_completed(result: int, code: int, _headers: PackedStringArray,
 		var age_text:   String = str(child.get("age", "?"))
 		var class_name_text: String = str(child.get("classroomName", ""))
 		if class_name_text.is_empty():
-			btn.text = "👤  %s  (%s tuổi)" % [name_text, age_text]
+			btn.text = "  👤  %s  (%s tuổi)" % [name_text, age_text]
 		else:
-			btn.text = "👤  %s  (%s tuổi)   🏫 %s" % [name_text, age_text, class_name_text]
+			btn.text = "  👤  %s  (%s tuổi)   🏫 %s" % [name_text, age_text, class_name_text]
 		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		btn.custom_minimum_size = Vector2(0, 48)
+		btn.custom_minimum_size = Vector2(0, 52)
+		
+		# Thiết kế style chuẩn VoxCresco cho nút học sinh
+		var style_normal = StyleBoxFlat.new()
+		style_normal.bg_color = Color(0.976471, 0.980392, 0.984314, 1)
+		style_normal.border_width_bottom = 3
+		style_normal.border_color = Color(0.92, 0.93, 0.95, 1)
+		style_normal.corner_radius_top_left = 10
+		style_normal.corner_radius_top_right = 10
+		style_normal.corner_radius_bottom_right = 10
+		style_normal.corner_radius_bottom_left = 10
+		style_normal.content_margin_left = 16
+		
+		var style_hover = style_normal.duplicate()
+		style_hover.bg_color = Color(0.92, 0.96, 0.96, 1)
+		style_hover.border_color = Color(0.305882, 0.67451, 0.686275, 0.5)
+
+		var style_pressed = style_normal.duplicate()
+		style_pressed.bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+		style_pressed.border_color = Color(0.223529, 0.552941, 0.564706, 1)
+		
+		btn.add_theme_stylebox_override("normal", style_normal)
+		btn.add_theme_stylebox_override("hover", style_hover)
+		btn.add_theme_stylebox_override("pressed", style_pressed)
+		btn.add_theme_stylebox_override("focus", style_hover)
+		
+		btn.add_theme_color_override("font_color", Color(0.12, 0.16, 0.22, 1))
+		btn.add_theme_color_override("font_hover_color", Color(0.06, 0.45, 0.47, 1))
+		btn.add_theme_color_override("font_pressed_color", Color(1, 1, 1, 1))
+		btn.add_theme_font_size_override("font_size", 15)
+		
 		btn.mouse_entered.connect(func(): _hover_btn(btn, true))
 		btn.mouse_exited.connect(func():  _hover_btn(btn, false))
 		btn.pressed.connect(_on_child_selected.bind(child))
@@ -157,7 +198,7 @@ func _build_session_cards() -> void:
 		var lbl := Label.new()
 		lbl.text = "Chưa có buổi học nào được ghi lại."
 		lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		lbl.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
+		lbl.add_theme_color_override("font_color", Color(0.5, 0.5, 0.5))
 		session_list.add_child(lbl)
 		return
 
@@ -172,17 +213,17 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 
 	var card := PanelContainer.new()
 	var style := StyleBoxFlat.new()
-	style.bg_color                     = Color(0.13, 0.15, 0.20, 1.0)
-	style.border_width_left            = 3
-	style.border_color                 = Color(0.3, 0.6, 1.0, 1.0)
-	style.corner_radius_top_left       = 10
-	style.corner_radius_top_right      = 10
-	style.corner_radius_bottom_left    = 10
-	style.corner_radius_bottom_right   = 10
+	style.bg_color                     = Color(0.976471, 0.980392, 0.984314, 1)
+	style.border_width_left            = 4
+	style.border_color                 = Color(0.305882, 0.67451, 0.686275, 1) # Viền trái màu ngọc bích
+	style.corner_radius_top_left       = 12
+	style.corner_radius_top_right      = 12
+	style.corner_radius_bottom_left    = 12
+	style.corner_radius_bottom_right   = 12
 	style.content_margin_left          = 16
-	style.content_margin_top           = 12
+	style.content_margin_top           = 14
 	style.content_margin_right         = 16
-	style.content_margin_bottom        = 12
+	style.content_margin_bottom        = 14
 	card.add_theme_stylebox_override("panel", style)
 
 	var hbox := HBoxContainer.new()
@@ -190,8 +231,8 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 	card.add_child(hbox)
 
 	var icon_lbl := Label.new()
-	icon_lbl.text = "🎬"
-	icon_lbl.add_theme_font_size_override("font_size", 28)
+	icon_lbl.text = "🎥"
+	icon_lbl.add_theme_font_size_override("font_size", 26)
 	hbox.add_child(icon_lbl)
 
 	var vbox := VBoxContainer.new()
@@ -200,19 +241,45 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 
 	var name_lbl := Label.new()
 	name_lbl.text = PlayerData.fullName
-	name_lbl.add_theme_font_size_override("font_size", 15)
-	name_lbl.add_theme_color_override("font_color", Color(0.9, 0.95, 1.0))
+	name_lbl.add_theme_font_size_override("font_size", 16)
+	name_lbl.add_theme_color_override("font_color", Color(0.066667, 0.094118, 0.152941, 1))
 	vbox.add_child(name_lbl)
 
 	var date_lbl := Label.new()
 	date_lbl.text = "📅 %s   🗂 %s" % [created_at, folder_id]
 	date_lbl.add_theme_font_size_override("font_size", 12)
-	date_lbl.add_theme_color_override("font_color", Color(0.55, 0.65, 0.8))
+	date_lbl.add_theme_color_override("font_color", Color(0.48, 0.52, 0.58, 1))
 	vbox.add_child(date_lbl)
 
 	var play_btn := Button.new()
 	play_btn.text = "▶  Xem lại"
-	play_btn.custom_minimum_size = Vector2(110, 38)
+	play_btn.custom_minimum_size = Vector2(110, 40)
+	
+	# Style nút Xem lại ngọc bích chuẩn VoxCresco
+	var btn_normal = StyleBoxFlat.new()
+	btn_normal.bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+	btn_normal.border_width_bottom = 3
+	btn_normal.border_color = Color(0.223529, 0.552941, 0.564706, 1)
+	btn_normal.corner_radius_top_left = 8
+	btn_normal.corner_radius_top_right = 8
+	btn_normal.corner_radius_bottom_right = 8
+	btn_normal.corner_radius_bottom_left = 8
+	
+	var btn_hover = btn_normal.duplicate()
+	btn_hover.bg_color = Color(0.36, 0.74, 0.75, 1)
+	
+	var btn_pressed = btn_normal.duplicate()
+	btn_pressed.bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+	btn_pressed.border_width_bottom = 1
+	
+	play_btn.add_theme_stylebox_override("normal", btn_normal)
+	play_btn.add_theme_stylebox_override("hover", btn_hover)
+	play_btn.add_theme_stylebox_override("pressed", btn_pressed)
+	play_btn.add_theme_stylebox_override("focus", btn_hover)
+	
+	play_btn.add_theme_color_override("font_color", Color(1, 1, 1, 1))
+	play_btn.add_theme_font_size_override("font_size", 14)
+	
 	play_btn.mouse_entered.connect(func(): _hover_btn(play_btn, true))
 	play_btn.mouse_exited.connect(func():  _hover_btn(play_btn, false))
 	play_btn.pressed.connect(_on_session_selected.bind(folder_id))
@@ -289,8 +356,10 @@ func _check_downloads_complete() -> void:
 func _on_back_pressed() -> void:
 	if child_selector_panel.visible == false:
 		# Đang ở Bước 2 → quay về Bước 1
+		PlayerData.childId = 0 # Reset lại childId để quay lại danh sách chọn bình thường
 		child_selector_panel.visible = true
 		session_list.get_parent().get_parent().visible = false
+		child_name_label.text = "Xin chào, " + SessionData.fullName + " 👋"
 	else:
 		# Đang ở Bước 1 → quay về Login
 		get_tree().change_scene_to_file("res://Scenes/LoginScene.tscn")

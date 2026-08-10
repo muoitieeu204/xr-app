@@ -1,6 +1,94 @@
-[gd_scene load_steps=2 format=3 uid="uid://session_list_scene"]
+[gd_scene load_steps=12 format=3 uid="uid://session_list_scene"]
 
-[ext_resource type="Script" path="res://scripts/UI Script/SessionListController.gd" id="1_ctrlr"]
+[ext_resource type="Script" uid="uid://dbhpthwdrwuth" path="res://scripts/UI Script/SessionListController.gd" id="1_ctrlr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.223529, 0.552941, 0.564706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(1, 1, 1, 0.2)
+border_width_bottom = 3
+border_color = Color(0.223529, 0.552941, 0.564706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(1, 1, 1, 0.35)
+border_width_bottom = 3
+border_color = Color(0.223529, 0.552941, 0.564706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 1
+border_color = Color(0.223529, 0.552941, 0.564706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 6
+border_color = Color(0.882353, 0.913725, 0.929412, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0.06, 0.15, 0.16, 0.08)
+shadow_size = 30
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1"]
+font_size = 24
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+bg_color = Color(1, 1, 1, 0.95)
+border_width_bottom = 4
+border_color = Color(0.305882, 0.67451, 0.686275, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.1)
+shadow_size = 20
+
+[sub_resource type="Curve" id="Curve_1"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_1"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0, 0.305882, 0.67451, 0.686275, 0.5, 0.45, 0.78, 0.8, 0.5, 0.45, 0.78, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7"]
+bg_color = Color(0.0470588, 0.0784314, 0.0941176, 0.588235)
 
 [node name="SessionListScene" type="Control"]
 layout_mode = 3
@@ -18,7 +106,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.071, 0.086, 0.118, 1)
+color = Color(0.92549, 0.956863, 0.956863, 1)
+
+[node name="Sparkles" type="CPUParticles2D" parent="Background"]
+position = Vector2(640, 360)
+amount = 14
+lifetime = 6.0
+preprocess = 6.0
+randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(640, 360)
+gravity = Vector2(0, -8)
+initial_velocity_max = 12.0
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_1")
+color_ramp = SubResource("Gradient_1")
 
 [node name="VBox" type="VBoxContainer" parent="Background"]
 layout_mode = 1
@@ -29,32 +132,67 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
 
-[node name="Header" type="HBoxContainer" parent="Background/VBox"]
+[node name="HeaderPanel" type="PanelContainer" parent="Background/VBox"]
 layout_mode = 2
-custom_minimum_size = Vector2(0, 70)
-theme_override_constants/separation = 12
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
 
-[node name="BackButton" type="Button" parent="Background/VBox/Header"]
+[node name="Header" type="HBoxContainer" parent="Background/VBox/HeaderPanel"]
 layout_mode = 2
-custom_minimum_size = Vector2(100, 40)
+custom_minimum_size = Vector2(0, 50)
+theme_override_constants/separation = 20
+
+[node name="BackButton" type="Button" parent="Background/VBox/HeaderPanel/Header"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 44)
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
 text = "← Quay lại"
 
-[node name="ChildNameLabel" type="Label" parent="Background/VBox/Header"]
+[node name="ChildNameLabel" type="Label" parent="Background/VBox/HeaderPanel/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-text = "Xin chào! 👋"
-theme_override_font_sizes/font_size = 20
+text = "Danh sách học sinh"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
 
-[node name="Separator" type="HSeparator" parent="Background/VBox"]
-layout_mode = 2
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Background/VBox"]
+[node name="SessionContentArea" type="Control" parent="Background/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="SessionList" type="VBoxContainer" parent="Background/VBox/ScrollContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Background/VBox/SessionContentArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SessionListCard" type="PanelContainer" parent="Background/VBox/SessionContentArea/CenterContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5")
+
+[node name="VBox" type="VBoxContainer" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox"]
+layout_mode = 2
+text = "📁  Lịch sử buổi học của bé"
+label_settings = SubResource("LabelSettings_1")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SessionList" type="VBoxContainer" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
@@ -67,76 +205,80 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelBG" type="ColorRect" parent="ChildSelectorPanel"]
+[node name="CenterContainer" type="CenterContainer" parent="ChildSelectorPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.071, 0.086, 0.118, 1)
 
-[node name="VBox" type="VBoxContainer" parent="ChildSelectorPanel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.1
-anchor_right = 0.5
-anchor_bottom = 0.9
-offset_left = -300
-offset_right = 300
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ChildSelectorCard" type="PanelContainer" parent="ChildSelectorPanel/CenterContainer"]
+custom_minimum_size = Vector2(650, 480)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5")
+
+[node name="VBox" type="VBoxContainer" parent="ChildSelectorPanel/CenterContainer/ChildSelectorCard"]
+layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="TitleLabel" type="Label" parent="ChildSelectorPanel/VBox"]
+[node name="TitleLabel" type="Label" parent="ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox"]
 layout_mode = 2
 text = "👤  Chọn học sinh để xem buổi học"
-theme_override_font_sizes/font_size = 22
+label_settings = SubResource("LabelSettings_1")
 horizontal_alignment = 1
 
-[node name="LoadingLabel" type="Label" parent="ChildSelectorPanel/VBox"]
+[node name="LoadingLabel" type="Label" parent="ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox"]
 layout_mode = 2
 text = "Đang tải..."
 horizontal_alignment = 1
-theme_override_colors/font_color = Color(0.6, 0.7, 0.9, 1)
+theme_override_colors/font_color = Color(0.305882, 0.67451, 0.686275, 1)
+theme_override_font_sizes/font_size = 15
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ChildSelectorPanel/VBox"]
+[node name="ScrollContainer" type="ScrollContainer" parent="ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ChildrenList" type="VBoxContainer" parent="ChildSelectorPanel/VBox/ScrollContainer"]
+[node name="ChildrenList" type="VBoxContainer" parent="ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 10
 
 [node name="LoadingOverlay" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 visible = false
-
-[node name="LoadingBG" type="ColorRect" parent="LoadingOverlay"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.65)
 
-[node name="LoadingLabel" type="Label" parent="LoadingOverlay"]
+[node name="Panel" type="Panel" parent="LoadingOverlay"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-text = "Đang tải..."
-theme_override_font_sizes/font_size = 22
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7")
+
+[node name="CenterContainer" type="CenterContainer" parent="LoadingOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="LoadingOverlay/CenterContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6")
+
+[node name="LoadingLabel" type="Label" parent="LoadingOverlay/CenterContainer/PanelContainer"]
+layout_mode = 2
+text = "Đang tải dữ liệu..."
+theme_override_colors/font_color = Color(0.066667, 0.094118, 0.152941, 1)
+theme_override_font_sizes/font_size = 18
 
 [node name="ErrorDialog" type="AcceptDialog" parent="."]
 initial_position = 2
