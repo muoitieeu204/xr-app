@@ -11,7 +11,7 @@ var chunkIndex: int = 0
 var isFinalChunk: bool = false
 
 var childProfileId: int = 8
-var sessionId: String = "TestSession2"
+var sessionId: String = str(ResourceUID.create_id())
 var chunkSavePath: String = ""
 var token: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjQiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJQaHVjYW4xMTAzMjAwM0BnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiTeG7uSBIdXnhu4FuIFnDqnUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJQYXJlbnQiLCJleHAiOjE3ODYwOTI0NDQsImlzcyI6IkdvZG90WFIiLCJhdWQiOiJHb2RvdFhSIn0.6glCXnv_XDhV-VT4AZZLJb0BCQEfIDIWKFBNaVUMDHI"
 
