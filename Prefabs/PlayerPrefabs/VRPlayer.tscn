@@ -121,7 +121,9 @@ unshaded = true
 scene_properties_keys = PackedStringArray("MenuController.gd")
 
 [node name="HealthWarningUI" parent="XRCamera3D" instance=ExtResource("1_heowi")]
+process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.382)
+visible = false
 scene = ExtResource("6_lc1pl")
 viewport_size = Vector2(1152, 648)
 transparent = 1

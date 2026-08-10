@@ -6,13 +6,14 @@ extends PanelContainer
 @onready var continue_button = $VBoxContainer/ContinueButton
 
 func _ready():
-	#Hide the entire panel
-	hide()
-
 	GameManager.health_warning_triggered.connect(_show_health_warning)
 
 func _show_health_warning():
-	show()
+	var viewport_3d = get_parent().get_parent()
+	if viewport_3d:
+		viewport_3d.process_mode = Node.PROCESS_MODE_INHERIT
+		viewport_3d.show()
+		
 	take_off_headset_screen.hide()
 	main_warning_container.show()
 
@@ -23,4 +24,7 @@ func _on_yes_button_pressed():
 
 func _on_continue_button_pressed():
 	# Just dismiss the warning screen by hiding it
-	hide()
+	var viewport_3d = get_parent().get_parent()
+	if viewport_3d:
+		process_mode = Node.PROCESS_MODE_DISABLED
+		viewport_3d.hide()

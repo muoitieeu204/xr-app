@@ -26,8 +26,16 @@ func _ready() -> void:
 	levelTimer.timeout.connect(_on_timer_timeout)
 	add_child(levelTimer)
 
+	#Reset all state variable
 	currentScore = 0
 	interactionLog = ""
+	isLevelFinished = false
+	completedTask.clear()
+	completionStatus = false
+	correctCount = 0
+	errorCount = 0
+	currentTimeSecconds = 0
+	
 	startedAt = Time.get_datetime_string_from_system(true) + "Z"
 	ReplayManager.start_recording()
 

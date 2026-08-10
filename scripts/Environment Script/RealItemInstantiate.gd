@@ -21,7 +21,7 @@ func pick_up(by: Node3D) -> void:
 	print("DEBUG: Fake item grabbed! Spawning real item...")
 	# Spawn the real item                                                                                                                                                                                                 
 	var realItemInstance = realItem.instantiate()
-	get_tree().current_scene.add_child(realItemInstance)
+	get_tree().add_child(realItemInstance)
 	realItemInstance.global_transform = global_transform
 	# Trick the VR Hand into holding the Real Item instead of this fake one
 	by.picked_up_object = realItemInstance
