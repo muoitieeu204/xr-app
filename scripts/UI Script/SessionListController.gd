@@ -5,8 +5,8 @@ extends Control
 ## Bước 2: Hiện danh sách sessions của trẻ đó
 
 const BASE_URL        := "https://103-162-30-111.sslip.io/api/files"
-# /my-children chỉ dành cho Parent → dùng /child-profiles cho Teacher
-const CHILDREN_API    := "https://103-162-30-111.sslip.io/api/child-profiles?pageSize=100"
+# my-students: Teacher xem học sinh trong lớp mình quản lý (Active enrollment only)
+const CHILDREN_API    := "https://103-162-30-111.sslip.io/api/child-profiles/my-students"
 
 # --- Node refs ---
 @onready var child_name_label:  Label          = $Background/VBox/Header/ChildNameLabel
@@ -87,27 +87,28 @@ func _on_children_completed(result: int, code: int, _headers: PackedStringArray,
 	var json = JSON.parse_string(body.get_string_from_utf8())
 	var children: Array = []
 
-	# /api/child-profiles trả về: { success, data: { items: [...] } }
-	# /api/child-profiles/my-children trả về: { success, data: [...] }
+	# my-students trả về: { success, data: { items: [...] } } (PagedResponse)
 	if json is Dictionary and json.has("data"):
 		var data = json["data"]
-		if data is Array:
-			children = data                          # my-children format
-		elif data is Dictionary and data.has("items"):
-			children = data["items"]                 # pagedResponse format
-	elif json is Array:
-		children = json                              # direct array fallback
+		if data is Dictionary and data.has("items"):
+			children = data["items"]
+		elif data is Array:
+			children = data  # fallback nếu API trả mảng thẳng
 
 	if children.is_empty():
-		selector_loading_lbl.text = "Không có học sinh nào."
+		selector_loading_lbl.text = "Không có học sinh nào trong lớp của bạn."
 		selector_loading_lbl.visible = true
 		return
 
 	for child in children:
 		var btn := Button.new()
-		var name_text: String = str(child.get("fullName", "Không tên"))
-		var age_text:  String = str(child.get("age", "?"))
-		btn.text = "👤  %s  (%s tuổi)" % [name_text, age_text]
+		var name_text:  String = str(child.get("fullName", "Không tên"))
+		var age_text:   String = str(child.get("age", "?"))
+		var class_name_text: String = str(child.get("classroomName", ""))
+		if class_name_text.is_empty():
+			btn.text = "👤  %s  (%s tuổi)" % [name_text, age_text]
+		else:
+			btn.text = "👤  %s  (%s tuổi)   🏫 %s" % [name_text, age_text, class_name_text]
 		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		btn.custom_minimum_size = Vector2(0, 48)
 		btn.mouse_entered.connect(func(): _hover_btn(btn, true))
@@ -116,15 +117,21 @@ func _on_children_completed(result: int, code: int, _headers: PackedStringArray,
 		children_list.add_child(btn)
 
 func _on_child_selected(child_data: Dictionary) -> void:
-	# Set PlayerData
+	# Set PlayerData từ my-students response
 	PlayerData.childId      = int(child_data.get("id", 0))
 	PlayerData.fullName     = str(child_data.get("fullName", ""))
 	PlayerData.age          = int(child_data.get("age", 0))
+	PlayerData.learningLevel = str(child_data.get("learningLevel", ""))
+
+	var class_name_text: String = str(child_data.get("classroomName", ""))
 
 	# Chuyển sang Bước 2
 	child_selector_panel.visible = false
 	session_list.get_parent().get_parent().visible = true
-	child_name_label.text = "📁 Buổi học của: " + PlayerData.fullName
+	if class_name_text.is_empty():
+		child_name_label.text = "📁 Buổi học của: " + PlayerData.fullName
+	else:
+		child_name_label.text = "📁 %s — %s" % [class_name_text, PlayerData.fullName]
 
 	_show_loading("Đang tải danh sách buổi học...")
 	_files_api.fetch_sessions(PlayerData.childId)
