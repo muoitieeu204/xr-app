@@ -1,9 +1,9 @@
 extends Node
 class_name SpectatorManager
 
-@export var dummyScene : PackedScene
-@export var playerAudio : AudioStreamPlayer
-@export var timeSlider : HSlider
+@export var dummyScene: PackedScene
+@export var playerAudio: AudioStreamPlayer
+@export var timeSlider: HSlider
 
 @onready var playPauseButton = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Play_Pause Button"
 @onready var forward_button: Button = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Forward Button"
@@ -15,7 +15,7 @@ class_name SpectatorManager
 var replay_data: Dictionary = {}
 var is_playing: bool = false
 var playback_time: float = 0.0
-var frame_duration: float = 0.1 
+var frame_duration: float = 0.1
 var max_duration: float = 0.0
 var active_dummy: Node3D = null
 
@@ -72,7 +72,7 @@ func load_spectator_data() -> void:
 			if active_dummy: active_dummy.queue_free()
 			active_dummy = dummyScene.instantiate()
 			add_child(active_dummy)
-			active_dummy.global_position = Vector3(28,9,0)
+			active_dummy.global_position = Vector3(28, 9, 0)
 			
 	# --- LOAD WAV (With 44-byte Bypass) ---
 	if FileAccess.file_exists(SessionData.target_audio_path):
@@ -86,7 +86,7 @@ func load_spectator_data() -> void:
 		wav_stream.stereo = true
 		
 		# Slice the text header off the raw bytes to prevent audio static!
-		wav_stream.data = bytes.slice(44) 
+		wav_stream.data = bytes.slice(44)
 		playerAudio.stream = wav_stream
 
 	_update_timer_label()
@@ -131,7 +131,7 @@ func render_frame_at_time(time_sec: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	# Press SPACEBAR to quickly play/pause the replay while testing
-	if event.is_action_pressed("ui_accept"): 
+	if event.is_action_pressed("ui_accept"):
 		if is_playing:
 			is_playing = false
 			playerAudio.stop()
@@ -146,13 +146,13 @@ func _on_timeline_slider_drag_ended(value_changed: bool) -> void:
 	playback_time = timeSlider.value
 	render_frame_at_time(playback_time) # Instantly snap graphics to new time
 	is_playing = true
-	playerAudio.play(playback_time)      # Resume audio from new time
+	playerAudio.play(playback_time) # Resume audio from new time
 	playPauseButton.text = "⏸"
 	_update_timer_label()
 
 func _on_timeline_slider_drag_started() -> void:
-	is_playing = false 
-	playerAudio.stop()	
+	is_playing = false
+	playerAudio.stop()
 	# Force the play button to pop back up without triggering the signal again
 	playPauseButton.set_pressed_no_signal(false)
 	playPauseButton.text = "▶"
@@ -162,13 +162,13 @@ func _on_play_pause_button_pressed() -> void:
 		playback_time = 0.0
 		timeSlider.value = 0.0
 	is_playing = !is_playing
-	if is_playing : 
+	if is_playing:
 		playback_time = timeSlider.value
 		render_frame_at_time(playback_time) # Instantly snap graphics to new time
-		playerAudio.play(playback_time)      # Resume audio from new time
+		playerAudio.play(playback_time) # Resume audio from new time
 		playPauseButton.text = "⏸"
-	else :
-		playerAudio.stop()    # Resume audio from new time
+	else:
+		playerAudio.stop() # Resume audio from new time
 		playPauseButton.text = "▶"
 	_update_timer_label()
 
@@ -193,7 +193,7 @@ func _on_toggle_view_button_pressed() -> void:
 	var freeCam = $SpectatorCam
 	if active_dummy == null:
 		return
-	var dummyCam = active_dummy.find_child("FPVCam",true,false)
+	var dummyCam = active_dummy.find_child("FPVCam", true, false)
 	if dummyCam == null:
 		return
 	if freeCam.current:
@@ -217,7 +217,7 @@ func _on_exit_button_pressed() -> void:
 		active_dummy = null
 	
 	print("Exit Spectator: Switching back to SessionListScene...")
-	get_tree().change_scene_to_file("res://Scenes/SessionListScene.tscn")
+	get_tree().change_scene_to_file("res://Prefabs/UI/SessionListScene.tscn")
 
 # --- Timing Helpers ---
 func _format_time(seconds: float) -> String:

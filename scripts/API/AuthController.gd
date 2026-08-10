@@ -1,16 +1,16 @@
 extends Control
 
-var apiUrl : String = "https://103-162-30-111.sslip.io/api/auth/login"
+var apiUrl: String = "https://103-162-30-111.sslip.io/api/auth/login"
 # var apiUrl : String = "https://localhost:7153/api/auth/login"
 
-@onready var httpRequest = $LoginBox/HTTPRequest                                                                                                                                                                             
-@onready var emailInput = $LoginBox/VBoxContainer/Email                                                                                                                                                                      
-@onready var passwordInput = $LoginBox/VBoxContainer/Password                                                                                                                                                                
-@onready var loginButton = $LoginBox/VBoxContainer/LoginButton                                                                                                                                                               
-@onready var passwordToggle = $LoginBox/VBoxContainer/Password/ShowPasswordToggle   
+@onready var httpRequest = $LoginBox/HTTPRequest
+@onready var emailInput = $LoginBox/VBoxContainer/Email
+@onready var passwordInput = $LoginBox/VBoxContainer/Password
+@onready var loginButton = $LoginBox/VBoxContainer/LoginButton
+@onready var passwordToggle = $LoginBox/VBoxContainer/Password/ShowPasswordToggle
 @onready var errorLabel = $LoginBox/VBoxContainer/ErrorLabel
 @onready var forgotButton = $LoginBox/VBoxContainer/ForgotButton
-@onready var welcomeLabel = $WelcomeScene/WelcomeBox/VBoxContainer/Label2                                                                                 
+@onready var welcomeLabel = $WelcomeScene/WelcomeBox/VBoxContainer/Label2
 @onready var logoutButton = $LogoutBox/VBoxContainer/LogoutButton
 @onready var joinWorldButton = $WelcomeScene/WelcomeBox/VBoxContainer/Button
 
@@ -59,7 +59,7 @@ func _ready() -> void:
 	$WelcomeScene.visible = false
 	$LogoutBox.visible = false
 
-	if logoutButton == null :
+	if logoutButton == null:
 		printerr("Node not found, make sure to assign in the inspector!")
 	else:
 		logoutButton.pressed.connect(_on_logout_button_pressed)
@@ -106,11 +106,11 @@ func _on_login_pressed() -> void:
 	# httpRequest.set_tls_options(TLSOptions.client_unsafe())
 	httpRequest.request(apiUrl, headers, HTTPClient.METHOD_POST, json)
 
-func _on_show_password_toggle(button_pressed:bool) -> void:
+func _on_show_password_toggle(button_pressed: bool) -> void:
 	passwordInput.secret = not button_pressed
 
 func _on_request_completed(result, responseCode, headers, body):
-	print_debug("Request completed! Result code: ", result, " HTTP Status: ", responseCode) 
+	print_debug("Request completed! Result code: ", result, " HTTP Status: ", responseCode)
 	
 	loginButton.disabled = false
 	if forgotButton != null:
@@ -141,7 +141,6 @@ func _on_request_completed(result, responseCode, headers, body):
 		SessionData.fullName = json["data"]["user"]["fullName"]
 		SessionData.roleName = json["data"]["user"]["roleName"]
 		SessionData.isActive = json["data"]["user"]["isActive"]
-		SessionData.sessionId = str(ResourceUID.create_id())
 		print_debug(JSON.stringify(json, "\t"))
 		print_debug("Successfully logged in as ", SessionData.fullName)
 		RefreshTokenApi.start_refresh_timer()
@@ -161,7 +160,7 @@ func _on_request_completed(result, responseCode, headers, body):
 		if SessionData.roleName == "Teacher":
 			# Teacher: chuyển thẳng sang SessionListScene (chọn trẻ trong đó)
 			print_debug("AuthController: Teacher detected → SessionListScene")
-			get_tree().change_scene_to_file("res://Scenes/SessionListScene.tscn")
+			get_tree().change_scene_to_file("res://Prefabs/UI/SessionListScene.tscn")
 		elif childProfileScene != null:
 			# Parent / Student: chọn hồ sơ trẻ như bình thường
 			childProfileScene.visible = true

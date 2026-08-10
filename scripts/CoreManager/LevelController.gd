@@ -19,7 +19,7 @@ var lastEmittedTime: int = -1
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
-	
+	SessionData.sessionId = str(ResourceUID.create_id())
 	var levelTimer = Timer.new()
 	levelTimer.wait_time = 1.0
 	levelTimer.autostart = true

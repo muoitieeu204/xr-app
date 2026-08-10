@@ -10,7 +10,7 @@ public partial class SessionUploader : Node
 	private static readonly System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
 	private readonly string apiUrl = "https://103-162-30-111.sslip.io/api/files";
 	// Called when the node enters the scene tree for the first time.
-	public async void UploadSessionDataAsync(string jsonPath, string audioPath, string token, int childProfileId)
+	public async void UploadSessionDataAsync(string jsonPath, string audioPath, string token, int childProfileId, string childSessionId)
 	{
 		string absoluteJsonPath = ProjectSettings.GlobalizePath(jsonPath);
 		string absoluteAudioPath = ProjectSettings.GlobalizePath(audioPath);
@@ -27,6 +27,10 @@ public partial class SessionUploader : Node
 				var childId = new StringContent(childProfileId.ToString());
 				childId.Headers.ContentType = null;
 				form.Add(childId, "ChildProfileId");
+				// Attach sessionId into request body
+				var sessionId = new StringContent(childSessionId.ToString());
+				childId.Headers.ContentType = null;
+				form.Add(sessionId, "childSessionId");
 				//Use FileStream for json
 				var jsonContent = new StreamContent(jsonStream);
 				jsonContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
