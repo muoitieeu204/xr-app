@@ -1,4 +1,4 @@
-[gd_resource type="ArrayMesh" load_steps=6 format=4 uid="uid://by2u8dywnw1gu"]
+[gd_resource type="ArrayMesh" load_steps=6 format=4 uid="uid://cue7nm8o13qw1"]
 
 [ext_resource type="Texture2D" uid="uid://ceobp5i3hdqwu" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/Chicken_0.png" id="1_3lqdf"]
 [ext_resource type="Texture2D" uid="uid://bu3w1ymoqdl72" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/Chicken_1.png" id="2_td2mt"]
@@ -13,6 +13,7 @@ metallic_texture_channel = 2
 roughness = 0.65228856
 roughness_texture = ExtResource("2_td2mt")
 roughness_texture_channel = 1
+emission_enabled = true
 emission_texture = ExtResource("1_3lqdf")
 normal_enabled = true
 normal_texture = ExtResource("3_oknl5")

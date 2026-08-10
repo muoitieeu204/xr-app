@@ -1,14 +1,93 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7ugp5kvp5qho"]
+[gd_scene load_steps=12 format=3 uid="uid://c7ugp5kvp5qho"]
 
 [ext_resource type="Script" uid="uid://dkdav4ecvsysg" path="res://scripts/CoreManager/SpectatorManager.gd" id="1_880ae"]
 [ext_resource type="PackedScene" uid="uid://g2noyfjbg7o1" path="res://Prefabs/PlayerPrefabs/DummyScene.tscn" id="2_6x0xi"]
 [ext_resource type="Script" uid="uid://de3c0kkgo73wi" path="res://scripts/UI Script/SpectatorCamControl.gd" id="3_xbg42"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ControlBar"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 12.0
+bg_color = Color(0.0470588, 0.0784314, 0.0941176, 0.823529) # Nền đen ngọc bích mờ sang trọng
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.25)
+shadow_size = 12
+shadow_offset = Vector2(0, -2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_BtnRound_Normal"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+bg_color = Color(1, 1, 1, 0.1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_BtnRound_Hover"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_BtnRound_Pressed"]
+content_margin_left = 12.0
+content_margin_right = 12.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ExitBtn_Normal"]
+content_margin_left = 14.0
+content_margin_right = 14.0
+bg_color = Color(0.85098, 0.235294, 0.235294, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ExitBtn_Hover"]
+content_margin_left = 14.0
+content_margin_right = 14.0
+bg_color = Color(0.95, 0.3, 0.3, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ExitBtn_Pressed"]
+content_margin_left = 14.0
+content_margin_right = 14.0
+bg_color = Color(0.7, 0.15, 0.15, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_TopViewBtn"]
+content_margin_left = 14.0
+content_margin_right = 14.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 0.85)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.1)
+shadow_size = 6
+
 [node name="UI" type="CanvasLayer" node_paths=PackedStringArray("playerAudio", "timeSlider")]
 script = ExtResource("1_880ae")
 dummyScene = ExtResource("2_6x0xi")
 playerAudio = NodePath("PlayerSound")
-timeSlider = NodePath("Control/MarginContainer/HBoxContainer/Timeline Slider")
+timeSlider = NodePath("Control/ControlBarPanel/VBoxContainer/TimelineSlider")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -17,50 +96,116 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="ControlBarPanel" type="PanelContainer" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -105.0
+offset_right = -20.0
+offset_bottom = -20.0
 grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ControlBar")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ControlBarPanel"]
 layout_mode = 2
-size_flags_vertical = 8
-theme_override_constants/separation = 4
+theme_override_constants/separation = 8
+alignment = 1
 
-[node name="Play_Pause Button" type="Button" parent="Control/MarginContainer/HBoxContainer"]
+[node name="TimelineSlider" type="HSlider" parent="Control/ControlBarPanel/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-text = "Play"
-
-[node name="Backward Button" type="Button" parent="Control/MarginContainer/HBoxContainer"]
-layout_mode = 2
-text = "<<<"
-
-[node name="Forward Button" type="Button" parent="Control/MarginContainer/HBoxContainer"]
-layout_mode = 2
-text = ">>>"
-
-[node name="Timeline Slider" type="HSlider" parent="Control/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
 step = 0.01
 
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ControlBarPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Play_Pause Button" type="Button" parent="Control/ControlBarPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(46, 36)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_BtnRound_Normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_BtnRound_Hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_BtnRound_Pressed")
+text = "▶"
+
+[node name="Backward Button" type="Button" parent="Control/ControlBarPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(46, 36)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_BtnRound_Normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_BtnRound_Hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_BtnRound_Pressed")
+text = "⏪"
+
+[node name="Forward Button" type="Button" parent="Control/ControlBarPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(46, 36)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_BtnRound_Normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_BtnRound_Hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_BtnRound_Pressed")
+text = "⏩"
+
+[node name="TimerLabel" type="Label" parent="Control/ControlBarPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "00:00 / 00:00"
+theme_override_colors/font_color = Color(0.9, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 14
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="Control/ControlBarPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ExitButton" type="Button" parent="Control/ControlBarPanel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 36)
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_ExitBtn_Normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ExitBtn_Hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ExitBtn_Pressed")
+text = "❌ Thoát"
+
 [node name="ToggleViewButton" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 971.0
-offset_top = 7.0
-offset_right = 1142.2195
-offset_bottom = 61.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "1st Person View
-"
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -190.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 64.0
+grow_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_TopViewBtn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_BtnRound_Hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_BtnRound_Pressed")
+text = "Switch to 3rd Person"
 
 [node name="SpectatorCam" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 36.038727, 0)
@@ -71,9 +216,10 @@ mouse_sensitve = 0.01
 
 [node name="PlayerSound" type="AudioStreamPlayer" parent="."]
 
-[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Play_Pause Button" to="." method="_on_play_pause_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Backward Button" to="." method="_on_backward_button_pressed"]
-[connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Forward Button" to="." method="_on_forward_button_pressed"]
-[connection signal="drag_ended" from="Control/MarginContainer/HBoxContainer/Timeline Slider" to="." method="_on_timeline_slider_drag_ended"]
-[connection signal="drag_started" from="Control/MarginContainer/HBoxContainer/Timeline Slider" to="." method="_on_timeline_slider_drag_started"]
+[connection signal="drag_ended" from="Control/ControlBarPanel/VBoxContainer/TimelineSlider" to="." method="_on_timeline_slider_drag_ended"]
+[connection signal="drag_started" from="Control/ControlBarPanel/VBoxContainer/TimelineSlider" to="." method="_on_timeline_slider_drag_started"]
+[connection signal="pressed" from="Control/ControlBarPanel/VBoxContainer/HBoxContainer/Play_Pause Button" to="." method="_on_play_pause_button_pressed"]
+[connection signal="pressed" from="Control/ControlBarPanel/VBoxContainer/HBoxContainer/Backward Button" to="." method="_on_backward_button_pressed"]
+[connection signal="pressed" from="Control/ControlBarPanel/VBoxContainer/HBoxContainer/Forward Button" to="." method="_on_forward_button_pressed"]
+[connection signal="pressed" from="Control/ControlBarPanel/VBoxContainer/HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Control/ToggleViewButton" to="." method="_on_toggle_view_button_pressed"]

@@ -5,11 +5,12 @@ class_name SpectatorManager
 @export var playerAudio : AudioStreamPlayer
 @export var timeSlider : HSlider
 
-@onready var playPauseButton = $"Control/MarginContainer/HBoxContainer/Play_Pause Button"
-@onready var forward_button: Button = $"Control/MarginContainer/HBoxContainer/Forward Button"
-@onready var backward_button: Button = $"Control/MarginContainer/HBoxContainer/Backward Button"
-@onready var timeline_slider: HSlider = $"Control/MarginContainer/HBoxContainer/Timeline Slider"
+@onready var playPauseButton = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Play_Pause Button"
+@onready var forward_button: Button = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Forward Button"
+@onready var backward_button: Button = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Backward Button"
+@onready var timeline_slider: HSlider = $"Control/ControlBarPanel/VBoxContainer/TimelineSlider"
 @onready var toggle_view_button: Button = $Control/ToggleViewButton
+@onready var timer_label: Label = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/TimerLabel"
 
 var replay_data: Dictionary = {}
 var is_playing: bool = false
@@ -20,6 +21,8 @@ var active_dummy: Node3D = null
 
 func _ready() -> void:
 	load_spectator_data()
+	if toggle_view_button:
+		toggle_view_button.text = "🎥 Góc nhìn thứ ba"
 
 
 func _process(delta: float) -> void:
@@ -35,6 +38,9 @@ func _process(delta: float) -> void:
 	# 4. Update the visual UI slider
 	timeSlider.value = playback_time
 	
+	# Update Timer Label text
+	_update_timer_label()
+	
 	# 5. Move the 3D models
 	render_frame_at_time(playback_time)
 	
@@ -44,7 +50,8 @@ func _process(delta: float) -> void:
 		playerAudio.stop()
 		playback_time = max_duration
 		timeSlider.value = max_duration
-		playPauseButton.text = "Play"
+		playPauseButton.text = "▶"
+		_update_timer_label()
 
 func load_spectator_data() -> void:
 	# --- LOAD JSON ---
@@ -81,6 +88,8 @@ func load_spectator_data() -> void:
 		# Slice the text header off the raw bytes to prevent audio static!
 		wav_stream.data = bytes.slice(44) 
 		playerAudio.stream = wav_stream
+
+	_update_timer_label()
 
 func render_frame_at_time(time_sec: float) -> void:
 	if replay_data.is_empty() or active_dummy == null:
@@ -126,28 +135,27 @@ func _input(event: InputEvent) -> void:
 		if is_playing:
 			is_playing = false
 			playerAudio.stop()
-			playPauseButton.text = "Play"
+			playPauseButton.text = "▶"
 		else:
 			is_playing = true
 			playerAudio.play(playback_time)
-			playPauseButton.text = "Pause"
+			playPauseButton.text = "⏸"
+		_update_timer_label()
 
 func _on_timeline_slider_drag_ended(value_changed: bool) -> void:
 	playback_time = timeSlider.value
 	render_frame_at_time(playback_time) # Instantly snap graphics to new time
 	is_playing = true
 	playerAudio.play(playback_time)      # Resume audio from new time
-
+	playPauseButton.text = "⏸"
+	_update_timer_label()
 
 func _on_timeline_slider_drag_started() -> void:
 	is_playing = false 
 	playerAudio.stop()	
 	# Force the play button to pop back up without triggering the signal again
 	playPauseButton.set_pressed_no_signal(false)
-	playPauseButton.text = "Play"
-
-
-
+	playPauseButton.text = "▶"
 
 func _on_play_pause_button_pressed() -> void:
 	if playback_time >= max_duration - 0.01:
@@ -158,28 +166,28 @@ func _on_play_pause_button_pressed() -> void:
 		playback_time = timeSlider.value
 		render_frame_at_time(playback_time) # Instantly snap graphics to new time
 		playerAudio.play(playback_time)      # Resume audio from new time
-		playPauseButton.text = "Pause"
+		playPauseButton.text = "⏸"
 	else :
 		playerAudio.stop()    # Resume audio from new time
-		playPauseButton.text = "Play"
-	
+		playPauseButton.text = "▶"
+	_update_timer_label()
 
 func _on_backward_button_pressed() -> void:
 	#Use clamp for safe slider calculation
-	playback_time = clamp(timeSlider.value - 0.5, 0.0, max_duration)
+	playback_time = clamp(timeSlider.value - 2.0, 0.0, max_duration) # Tua lùi hẳn 2 giây cho rõ rệt
 	timeSlider.value = playback_time
 	render_frame_at_time(playback_time)
-
 	if is_playing == true:
 		playerAudio.play(playback_time)
-
+	_update_timer_label()
 
 func _on_forward_button_pressed() -> void:
-	playback_time = clamp(timeSlider.value + 0.5, 0.0, max_duration)
+	playback_time = clamp(timeSlider.value + 2.0, 0.0, max_duration) # Tua tiến hẳn 2 giây cho rõ rệt
 	timeSlider.value = playback_time
 	render_frame_at_time(playback_time)
 	if is_playing == true:
 		playerAudio.play(playback_time)
+	_update_timer_label()
 
 func _on_toggle_view_button_pressed() -> void:
 	var freeCam = $SpectatorCam
@@ -189,13 +197,35 @@ func _on_toggle_view_button_pressed() -> void:
 	if dummyCam == null:
 		return
 	if freeCam.current:
-		# If we are in 3rd person, switch TO 1st person
+		# Đang ở góc nhìn thứ 3 (SpectatorCam) -> chuyển sang góc nhìn thứ nhất (Dummy FPV)
 		dummyCam.make_current()
-		toggle_view_button.text = "Switch to 3rd Person"
+		toggle_view_button.text = "👤 Góc nhìn thứ nhất"
 		print("View: 1st Person")
 	else:
-		 # If we are in 1st person, switch TO 3rd person
+		# Đang ở góc nhìn thứ nhất (Dummy FPV) -> chuyển sang góc nhìn thứ ba (SpectatorCam)
 		freeCam.make_current()
-		toggle_view_button.text = "Switch to 1st Person"
+		toggle_view_button.text = "🎥 Góc nhìn thứ ba"
 		print("View: 3rd Person (Free Cam)")
-		
+
+func _on_exit_button_pressed() -> void:
+	# Dừng âm thanh và giải phóng 3D clone
+	is_playing = false
+	if playerAudio:
+		playerAudio.stop()
+	if active_dummy:
+		active_dummy.queue_free()
+		active_dummy = null
+	
+	print("Exit Spectator: Switching back to SessionListScene...")
+	get_tree().change_scene_to_file("res://Scenes/SessionListScene.tscn")
+
+# --- Timing Helpers ---
+func _format_time(seconds: float) -> String:
+	var total_seconds = floor(seconds)
+	var mins = floor(total_seconds / 60)
+	var secs = int(total_seconds) % 60
+	return "%02d:%02d" % [mins, secs]
+
+func _update_timer_label() -> void:
+	if timer_label:
+		timer_label.text = "%s / %s" % [_format_time(playback_time), _format_time(max_duration)]
