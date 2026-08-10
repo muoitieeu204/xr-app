@@ -15,6 +15,7 @@ const CHILDREN_API    := "https://103-162-30-111.sslip.io/api/child-profiles/my-
 @onready var loading_label:     Label          = $LoadingOverlay/CenterContainer/PanelContainer/LoadingLabel
 @onready var error_dialog:      AcceptDialog   = $ErrorDialog
 @onready var back_button:       Button         = $Background/VBox/HeaderPanel/Header/BackButton
+@onready var logout_button:     Button         = $Background/VBox/HeaderPanel/Header/LogoutButton
 
 # --- Child selector (Bước 1) ---
 @onready var child_selector_panel: Control        = $ChildSelectorPanel
@@ -52,11 +53,17 @@ func _ready() -> void:
 	back_button.mouse_entered.connect(func(): _hover_btn(back_button, true))
 	back_button.mouse_exited.connect(func():  _hover_btn(back_button, false))
 
+	# Liên kết nút Đăng xuất
+	logout_button.pressed.connect(_on_logout_pressed)
+	logout_button.mouse_entered.connect(func(): _hover_btn(logout_button, true))
+	logout_button.mouse_exited.connect(func():  _hover_btn(logout_button, false))
+
 	# Bắt đầu kiểm tra: nếu đã chọn trẻ trước đó (quay lại từ spectator)
 	if PlayerData.childId > 0:
 		# Bỏ qua Bước 1, chuyển thẳng sang Bước 2 (Danh sách Session của bé)
 		child_selector_panel.visible = false
 		session_list.get_parent().get_parent().visible = true
+		back_button.visible = true # Hiện nút Quay lại để về Bước 1 khi cần
 		
 		var class_name_text: String = "" # Tên lớp sẽ hiển thị theo header
 		child_name_label.text = "📁 Buổi học của: " + PlayerData.fullName
@@ -65,6 +72,7 @@ func _ready() -> void:
 	else:
 		# Bắt đầu ở Bước 1: chọn trẻ
 		child_name_label.text = "Xin chào, " + SessionData.fullName + " 👋"
+		back_button.visible = false # Ẩn nút Quay lại khi ở Bước 1
 		_show_child_selector()
 
 # =======================================================================
@@ -169,6 +177,7 @@ func _on_child_selected(child_data: Dictionary) -> void:
 	# Chuyển sang Bước 2
 	child_selector_panel.visible = false
 	session_list.get_parent().get_parent().visible = true
+	back_button.visible = true # Hiện nút quay lại khi chuyển sang Bước 2
 	if class_name_text.is_empty():
 		child_name_label.text = "📁 Buổi học của: " + PlayerData.fullName
 	else:
@@ -360,9 +369,23 @@ func _on_back_pressed() -> void:
 		child_selector_panel.visible = true
 		session_list.get_parent().get_parent().visible = false
 		child_name_label.text = "Xin chào, " + SessionData.fullName + " 👋"
+		back_button.visible = false # Ẩn nút quay lại ở Bước 1
 	else:
 		# Đang ở Bước 1 → quay về Login
-		get_tree().change_scene_to_file("res://Scenes/LoginScene.tscn")
+		_on_logout_pressed()
+
+func _on_logout_pressed() -> void:
+	# Báo hiệu cho AuthController ở LoginScene biết cần đăng xuất sạch sẽ
+	SessionData.pending_logout = true
+	
+	# Reset thông tin học sinh ở PlayerData
+	PlayerData.childId = 0
+	PlayerData.fullName = ""
+	PlayerData.age = 0
+	PlayerData.learningLevel = ""
+	
+	print("Redirecting to LoginScene for clean logout...")
+	get_tree().change_scene_to_file("res://Scenes/LoginScene.tscn")
 
 func _show_loading(text: String) -> void:
 	loading_overlay.visible = true

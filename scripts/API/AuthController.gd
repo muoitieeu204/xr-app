@@ -64,7 +64,12 @@ func _ready() -> void:
 	else:
 		logoutButton.pressed.connect(_on_logout_button_pressed)
 
-	_check_auto_login()
+	# Kiểm tra nếu vừa từ Dashboard yêu cầu đăng xuất sang
+	if SessionData.pending_logout:
+		SessionData.pending_logout = false
+		_on_logout_button_pressed()
+	else:
+		_check_auto_login()
 
 func _check_auto_login():
 	if FileAccess.file_exists("user://auth.save"):
