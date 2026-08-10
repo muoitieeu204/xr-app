@@ -63,12 +63,7 @@ func _ready() -> void:
 		printerr("Node not found, make sure to assign in the inspector!")
 	else:
 		logoutButton.pressed.connect(_on_logout_button_pressed)
-
-	# Kiểm tra nếu vừa từ Dashboard yêu cầu đăng xuất sang
-	if SessionData.pending_logout:
-		SessionData.pending_logout = false
-		_on_logout_button_pressed()
-	else:
+		
 		_check_auto_login()
 
 func _check_auto_login():

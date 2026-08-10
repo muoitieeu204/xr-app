@@ -1,6 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://session_list_scene"]
+[gd_scene load_steps=15 format=3 uid="uid://hsdsdi4hs3vf"]
 
 [ext_resource type="Script" uid="uid://dbhpthwdrwuth" path="res://scripts/UI Script/SessionListController.gd" id="1_ctrlr"]
+
+[sub_resource type="Curve" id="Curve_1"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_1"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0, 0.305882, 0.67451, 0.686275, 0.5, 0.45, 0.78, 0.8, 0.5, 0.45, 0.78, 0.8, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
 content_margin_left = 24.0
@@ -22,6 +30,17 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
+content_margin_left = 16.0
+content_margin_right = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 1
+border_color = Color(0.223529, 0.552941, 0.564706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3"]
 content_margin_left = 16.0
 content_margin_right = 16.0
@@ -33,12 +52,37 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4"]
-content_margin_left = 16.0
-content_margin_right = 16.0
-bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Logout_Normal"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.85098, 0.235294, 0.235294, 0.2)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 4
+border_color = Color(0.85098, 0.235294, 0.235294, 0.7)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Logout_Pressed"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.701961, 0.156863, 0.156863, 1)
 border_width_bottom = 1
-border_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_color = Color(0.701961, 0.156863, 0.156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Logout_Hover"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.85098, 0.235294, 0.235294, 1)
+border_width_bottom = 4
+border_color = Color(0.701961, 0.156863, 0.156863, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -64,6 +108,9 @@ shadow_offset = Vector2(0, 10)
 font_size = 24
 font_color = Color(0.066667, 0.094118, 0.152941, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7"]
+bg_color = Color(0.0470588, 0.0784314, 0.0941176, 0.588235)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6"]
 content_margin_left = 24.0
 content_margin_top = 24.0
@@ -78,53 +125,6 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 shadow_color = Color(0, 0, 0, 0.1)
 shadow_size = 20
-
-[sub_resource type="Curve" id="Curve_1"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2, 1), 0.0, 0.0, 0, 0, Vector2(0.8, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 4
-
-[sub_resource type="Gradient" id="Gradient_1"]
-offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
-colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0, 0.305882, 0.67451, 0.686275, 0.5, 0.45, 0.78, 0.8, 0.5, 0.45, 0.78, 0.8, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7"]
-bg_color = Color(0.0470588, 0.0784314, 0.0941176, 0.588235)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Logout_Normal"]
-content_margin_left = 18.0
-content_margin_right = 18.0
-bg_color = Color(0.85098, 0.235294, 0.235294, 0.2)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 4
-border_color = Color(0.85098, 0.235294, 0.235294, 0.7)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Logout_Hover"]
-content_margin_left = 18.0
-content_margin_right = 18.0
-bg_color = Color(0.85098, 0.235294, 0.235294, 1)
-border_width_bottom = 4
-border_color = Color(0.701961, 0.156863, 0.156863, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Logout_Pressed"]
-content_margin_left = 18.0
-content_margin_right = 18.0
-bg_color = Color(0.701961, 0.156863, 0.156863, 1)
-border_width_bottom = 1
-border_color = Color(0.701961, 0.156863, 0.156863, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
 
 [node name="SessionListScene" type="Control"]
 layout_mode = 3
@@ -173,50 +173,55 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1")
 
 [node name="Header" type="HBoxContainer" parent="Background/VBox/HeaderPanel"]
-layout_mode = 2
 custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="BackButton" type="Button" parent="Background/VBox/HeaderPanel/Header"]
 visible = false
-layout_mode = 2
 custom_minimum_size = Vector2(110, 44)
+layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxFlat_2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3")
 text = "← Quay lại"
 
 [node name="ChildNameLabel" type="Label" parent="Background/VBox/HeaderPanel/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
-text = "Danh sách học sinh"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
+text = "Danh sách học sinh"
 
 [node name="LogoutButton" type="Button" parent="Background/VBox/HeaderPanel/Header"]
-layout_mode = 2
 custom_minimum_size = Vector2(120, 44)
+layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxFlat_Logout_Normal")
-theme_override_styles/hover = SubResource("StyleBoxFlat_Logout_Hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_Logout_Pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_Logout_Hover")
 text = "🚪 Đăng xuất"
 
-[node name="SessionContentArea" type="Control" parent="Background/VBox"]
-layout_mode = 2
+[node name="SessionContentArea" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.05138889
+anchor_right = 1.0
+anchor_bottom = 0.94861114
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="CenterContainer" type="CenterContainer" parent="Background/VBox/SessionContentArea"]
+[node name="CenterContainer" type="CenterContainer" parent="SessionContentArea"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -224,30 +229,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SessionListCard" type="PanelContainer" parent="Background/VBox/SessionContentArea/CenterContainer"]
+[node name="SessionListCard" type="PanelContainer" parent="SessionContentArea/CenterContainer"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5")
 
-[node name="VBox" type="VBoxContainer" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard"]
+[node name="VBox" type="VBoxContainer" parent="SessionContentArea/CenterContainer/SessionListCard"]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Title" type="Label" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox"]
+[node name="Title" type="Label" parent="SessionContentArea/CenterContainer/SessionListCard/VBox"]
 layout_mode = 2
 text = "📁  Lịch sử buổi học của bé"
 label_settings = SubResource("LabelSettings_1")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox"]
+[node name="ScrollContainer" type="ScrollContainer" parent="SessionContentArea/CenterContainer/SessionListCard/VBox"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="SessionList" type="VBoxContainer" parent="Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox/ScrollContainer"]
+[node name="SessionList" type="VBoxContainer" parent="SessionContentArea/CenterContainer/SessionListCard/VBox/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
 [node name="ChildSelectorPanel" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -282,10 +288,10 @@ horizontal_alignment = 1
 
 [node name="LoadingLabel" type="Label" parent="ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox"]
 layout_mode = 2
-text = "Đang tải..."
-horizontal_alignment = 1
 theme_override_colors/font_color = Color(0.305882, 0.67451, 0.686275, 1)
 theme_override_font_sizes/font_size = 15
+text = "Đang tải..."
+horizontal_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox"]
 layout_mode = 2
@@ -328,9 +334,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_6")
 
 [node name="LoadingLabel" type="Label" parent="LoadingOverlay/CenterContainer/PanelContainer"]
 layout_mode = 2
-text = "Đang tải dữ liệu..."
 theme_override_colors/font_color = Color(0.066667, 0.094118, 0.152941, 1)
 theme_override_font_sizes/font_size = 18
+text = "Đang tải dữ liệu..."
 
 [node name="ErrorDialog" type="AcceptDialog" parent="."]
 initial_position = 2

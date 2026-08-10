@@ -4,35 +4,36 @@ extends Control
 ## Bước 1: Chọn trẻ (fetch từ API child-profiles)
 ## Bước 2: Hiện danh sách sessions của trẻ đó
 
-const BASE_URL        := "https://103-162-30-111.sslip.io/api/files"
+const BASE_URL := "https://103-162-30-111.sslip.io/api/files"
 # my-students: Teacher xem học sinh trong lớp mình quản lý (Active enrollment only)
-const CHILDREN_API    := "https://103-162-30-111.sslip.io/api/child-profiles/my-students"
+const CHILDREN_API := "https://103-162-30-111.sslip.io/api/child-profiles/my-students"
 
 # --- Node refs ---
-@onready var child_name_label:  Label          = $Background/VBox/HeaderPanel/Header/ChildNameLabel
-@onready var session_list:      VBoxContainer  = $Background/VBox/SessionContentArea/CenterContainer/SessionListCard/VBox/ScrollContainer/SessionList
-@onready var loading_overlay:   Control        = $LoadingOverlay
-@onready var loading_label:     Label          = $LoadingOverlay/CenterContainer/PanelContainer/LoadingLabel
-@onready var error_dialog:      AcceptDialog   = $ErrorDialog
-@onready var back_button:       Button         = $Background/VBox/HeaderPanel/Header/BackButton
-@onready var logout_button:     Button         = $Background/VBox/HeaderPanel/Header/LogoutButton
+@onready var child_name_label: Label = $Background/VBox/HeaderPanel/Header/ChildNameLabel
+@onready var session_content_area: Control = $SessionContentArea
+@onready var session_list: VBoxContainer = $SessionContentArea/CenterContainer/SessionListCard/VBox/ScrollContainer/SessionList
+@onready var loading_overlay: Control = $LoadingOverlay
+@onready var loading_label: Label = $LoadingOverlay/CenterContainer/PanelContainer/LoadingLabel
+@onready var error_dialog: AcceptDialog = $ErrorDialog
+@onready var back_button: Button = $Background/VBox/HeaderPanel/Header/BackButton
+@onready var logout_button: Button = $Background/VBox/HeaderPanel/Header/LogoutButton
 
 # --- Child selector (Bước 1) ---
-@onready var child_selector_panel: Control        = $ChildSelectorPanel
-@onready var children_list:        VBoxContainer  = $ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox/ScrollContainer/ChildrenList
-@onready var selector_loading_lbl: Label          = $ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox/LoadingLabel
+@onready var child_selector_panel: Control = $ChildSelectorPanel
+@onready var children_list: VBoxContainer = $ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox/ScrollContainer/ChildrenList
+@onready var selector_loading_lbl: Label = $ChildSelectorPanel/CenterContainer/ChildSelectorCard/VBox/LoadingLabel
 
 # --- HTTP ---
 var _http_children: HTTPRequest
 var _files_api: Node
 
 # --- State ---
-var _sessions:         Array  = []
+var _sessions: Array = []
 var _selected_folder_id: String = ""
-var _meta_downloaded:  bool   = false
-var _audio_downloaded: bool   = false
-var _meta_path:        String = ""
-var _audio_path:       String = ""
+var _meta_downloaded: bool = false
+var _audio_downloaded: bool = false
+var _meta_path: String = ""
+var _audio_path: String = ""
 
 func _ready() -> void:
 	# Tạo HTTPRequest cho danh sách trẻ
@@ -51,18 +52,18 @@ func _ready() -> void:
 
 	back_button.pressed.connect(_on_back_pressed)
 	back_button.mouse_entered.connect(func(): _hover_btn(back_button, true))
-	back_button.mouse_exited.connect(func():  _hover_btn(back_button, false))
+	back_button.mouse_exited.connect(func(): _hover_btn(back_button, false))
 
 	# Liên kết nút Đăng xuất
 	logout_button.pressed.connect(_on_logout_pressed)
 	logout_button.mouse_entered.connect(func(): _hover_btn(logout_button, true))
-	logout_button.mouse_exited.connect(func():  _hover_btn(logout_button, false))
+	logout_button.mouse_exited.connect(func(): _hover_btn(logout_button, false))
 
 	# Bắt đầu kiểm tra: nếu đã chọn trẻ trước đó (quay lại từ spectator)
 	if PlayerData.childId > 0:
 		# Bỏ qua Bước 1, chuyển thẳng sang Bước 2 (Danh sách Session của bé)
 		child_selector_panel.visible = false
-		session_list.get_parent().get_parent().visible = true
+		session_content_area.visible = true
 		back_button.visible = true # Hiện nút Quay lại để về Bước 1 khi cần
 		
 		var class_name_text: String = "" # Tên lớp sẽ hiển thị theo header
@@ -80,7 +81,7 @@ func _ready() -> void:
 # =======================================================================
 func _show_child_selector() -> void:
 	child_selector_panel.visible = true
-	session_list.get_parent().get_parent().visible = false  # ẩn session list area
+	session_content_area.visible = false # ẩn session list area
 	selector_loading_lbl.text = "Đang tải danh sách học sinh..."
 	selector_loading_lbl.visible = true
 
@@ -112,7 +113,7 @@ func _on_children_completed(result: int, code: int, _headers: PackedStringArray,
 		if data is Dictionary and data.has("items"):
 			children = data["items"]
 		elif data is Array:
-			children = data  # fallback nếu API trả mảng thẳng
+			children = data # fallback nếu API trả mảng thẳng
 
 	if children.is_empty():
 		selector_loading_lbl.text = "Không có học sinh nào trong lớp của bạn."
@@ -121,8 +122,8 @@ func _on_children_completed(result: int, code: int, _headers: PackedStringArray,
 
 	for child in children:
 		var btn := Button.new()
-		var name_text:  String = str(child.get("fullName", "Không tên"))
-		var age_text:   String = str(child.get("age", "?"))
+		var name_text: String = str(child.get("fullName", "Không tên"))
+		var age_text: String = str(child.get("age", "?"))
 		var class_name_text: String = str(child.get("classroomName", ""))
 		if class_name_text.is_empty():
 			btn.text = "  👤  %s  (%s tuổi)" % [name_text, age_text]
@@ -161,22 +162,22 @@ func _on_children_completed(result: int, code: int, _headers: PackedStringArray,
 		btn.add_theme_font_size_override("font_size", 15)
 		
 		btn.mouse_entered.connect(func(): _hover_btn(btn, true))
-		btn.mouse_exited.connect(func():  _hover_btn(btn, false))
+		btn.mouse_exited.connect(func(): _hover_btn(btn, false))
 		btn.pressed.connect(_on_child_selected.bind(child))
 		children_list.add_child(btn)
 
 func _on_child_selected(child_data: Dictionary) -> void:
 	# Set PlayerData từ my-students response
-	PlayerData.childId      = int(child_data.get("id", 0))
-	PlayerData.fullName     = str(child_data.get("fullName", ""))
-	PlayerData.age          = int(child_data.get("age", 0))
+	PlayerData.childId = int(child_data.get("id", 0))
+	PlayerData.fullName = str(child_data.get("fullName", ""))
+	PlayerData.age = int(child_data.get("age", 0))
 	PlayerData.learningLevel = str(child_data.get("learningLevel", ""))
 
 	var class_name_text: String = str(child_data.get("classroomName", ""))
 
 	# Chuyển sang Bước 2
 	child_selector_panel.visible = false
-	session_list.get_parent().get_parent().visible = true
+	session_content_area.visible = true
 	back_button.visible = true # Hiện nút quay lại khi chuyển sang Bước 2
 	if class_name_text.is_empty():
 		child_name_label.text = "📁 Buổi học của: " + PlayerData.fullName
@@ -215,24 +216,24 @@ func _build_session_cards() -> void:
 		session_list.add_child(_create_session_card(session))
 
 func _create_session_card(session: Dictionary) -> PanelContainer:
-	var folder_id:  String = str(session.get("folderId", session.get("id", "?")))
+	var folder_id: String = str(session.get("folderId", session.get("id", "?")))
 	var created_at: String = str(session.get("createdAt", session.get("uploadedAt", "")))
 	if created_at.length() >= 16:
 		created_at = created_at.substr(0, 10) + "  " + created_at.substr(11, 5)
 
 	var card := PanelContainer.new()
 	var style := StyleBoxFlat.new()
-	style.bg_color                     = Color(0.976471, 0.980392, 0.984314, 1)
-	style.border_width_left            = 4
-	style.border_color                 = Color(0.305882, 0.67451, 0.686275, 1) # Viền trái màu ngọc bích
-	style.corner_radius_top_left       = 12
-	style.corner_radius_top_right      = 12
-	style.corner_radius_bottom_left    = 12
-	style.corner_radius_bottom_right   = 12
-	style.content_margin_left          = 16
-	style.content_margin_top           = 14
-	style.content_margin_right         = 16
-	style.content_margin_bottom        = 14
+	style.bg_color = Color(0.976471, 0.980392, 0.984314, 1)
+	style.border_width_left = 4
+	style.border_color = Color(0.305882, 0.67451, 0.686275, 1) # Viền trái màu ngọc bích
+	style.corner_radius_top_left = 12
+	style.corner_radius_top_right = 12
+	style.corner_radius_bottom_left = 12
+	style.corner_radius_bottom_right = 12
+	style.content_margin_left = 16
+	style.content_margin_top = 14
+	style.content_margin_right = 16
+	style.content_margin_bottom = 14
 	card.add_theme_stylebox_override("panel", style)
 
 	var hbox := HBoxContainer.new()
@@ -290,7 +291,7 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 	play_btn.add_theme_font_size_override("font_size", 14)
 	
 	play_btn.mouse_entered.connect(func(): _hover_btn(play_btn, true))
-	play_btn.mouse_exited.connect(func():  _hover_btn(play_btn, false))
+	play_btn.mouse_exited.connect(func(): _hover_btn(play_btn, false))
 	play_btn.pressed.connect(_on_session_selected.bind(folder_id))
 	hbox.add_child(play_btn)
 
@@ -301,22 +302,22 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 # =======================================================================
 func _on_session_selected(folder_id: String) -> void:
 	_selected_folder_id = folder_id
-	_meta_downloaded    = false
-	_audio_downloaded   = false
-	_meta_path          = ""
-	_audio_path         = ""
+	_meta_downloaded = false
+	_audio_downloaded = false
+	_meta_path = ""
+	_audio_path = ""
 
 	_show_loading("Đang tải dữ liệu buổi học...")
 	_files_api.download_metadata(PlayerData.childId, folder_id)
 	_files_api.download_audio(PlayerData.childId, folder_id)
 
 func _on_meta_downloaded(path: String) -> void:
-	_meta_path       = path
+	_meta_path = path
 	_meta_downloaded = true
 	_check_downloads_complete()
 
 func _on_audio_downloaded(path: String) -> void:
-	_audio_path       = path
+	_audio_path = path
 	_audio_downloaded = true
 	_check_downloads_complete()
 
@@ -352,9 +353,9 @@ func _check_downloads_complete() -> void:
 		return
 
 	SessionData.target_replay_path = _meta_path
-	SessionData.target_audio_path  = _audio_path
-	SessionData.target_scene_path  = world_path
-	SessionData.is_spectator       = true
+	SessionData.target_audio_path = _audio_path
+	SessionData.target_scene_path = world_path
+	SessionData.is_spectator = true
 
 	print("SessionList: Launching spectator → ", world_path)
 	get_tree().change_scene_to_file(world_path)
@@ -367,7 +368,7 @@ func _on_back_pressed() -> void:
 		# Đang ở Bước 2 → quay về Bước 1
 		PlayerData.childId = 0 # Reset lại childId để quay lại danh sách chọn bình thường
 		child_selector_panel.visible = true
-		session_list.get_parent().get_parent().visible = false
+		session_content_area.visible = false
 		child_name_label.text = "Xin chào, " + SessionData.fullName + " 👋"
 		back_button.visible = false # Ẩn nút quay lại ở Bước 1
 	else:
@@ -375,21 +376,18 @@ func _on_back_pressed() -> void:
 		_on_logout_pressed()
 
 func _on_logout_pressed() -> void:
-	# Báo hiệu cho AuthController ở LoginScene biết cần đăng xuất sạch sẽ
-	SessionData.pending_logout = true
-	
-	# Reset thông tin học sinh ở PlayerData
-	PlayerData.childId = 0
-	PlayerData.fullName = ""
-	PlayerData.age = 0
-	PlayerData.learningLevel = ""
-	
-	print("Redirecting to LoginScene for clean logout...")
-	get_tree().change_scene_to_file("res://Scenes/LoginScene.tscn")
+	# Reset thông tin 
+	SessionData.clear()
+	PlayerData.clear()
+	if FileAccess.file_exists("user://auth.save"):
+		var dir = DirAccess.open("user://")
+		dir.remove("auth.save")
+		print_debug("User Logout Successfully")
+	get_tree().change_scene_to_file("res://Prefabs/UI/AuthScene.tscn")
 
 func _show_loading(text: String) -> void:
 	loading_overlay.visible = true
-	loading_label.text      = text
+	loading_label.text = text
 
 func _hide_loading() -> void:
 	loading_overlay.visible = false
@@ -397,5 +395,5 @@ func _hide_loading() -> void:
 func _hover_btn(btn: Button, entering: bool) -> void:
 	btn.pivot_offset = btn.size / 2
 	var target := Vector2(1.05, 1.05) if entering else Vector2.ONE
-	var tween  := create_tween()
+	var tween := create_tween()
 	tween.tween_property(btn, "scale", target, 0.15).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
