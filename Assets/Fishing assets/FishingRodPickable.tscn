@@ -14,6 +14,9 @@
 height = 3.3113441
 radius = 0.040527344
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nwh2n"]
+points = PackedVector3Array(0.01142857, 0.050793648, 0.0019032076, -0.0107936505, -0.050793648, -0.0044419584, -0.0107936505, -0.050793648, 0.0050768782, -0.0107936505, 0.050793648, -0.0044419584, 0.0050768782, -0.050793648, -0.0107936505, 0.0019032076, -0.050793648, 0.01142857, -0.0028562108, 0.050793648, 0.01142857, -0.0044419584, 0.050793648, -0.0107936505, 0.01142857, -0.050793648, 0.0019032076, 0.009838472, 0.050793648, -0.0060298815, 0.0066648014, 0.050793648, 0.009838472, -0.0107936505, 0.050793648, 0.0050768782, -0.007617804, -0.050793648, -0.009203552, 0.0050768782, 0.050793648, -0.0107936505, 0.009838472, -0.050793648, 0.0066648014, 0.01142857, -0.050793648, -0.0028562108, -0.0060298815, -0.050793648, 0.009838472, -0.0044419584, -0.050793648, -0.0107936505, -0.009203552, 0.050793648, -0.007617804, 0.0066648014, -0.050793648, 0.009838472, 0.009838472, 0.050793648, 0.0066648014, -0.0028562108, -0.050793648, 0.01142857, 0.0019032076, 0.050793648, 0.01142857, 0.01142857, 0.050793648, -0.0028562108, -0.0060298815, 0.050793648, 0.009838472, 0.009838472, -0.050793648, -0.0060298815, -0.009203552, -0.050793648, -0.007617804, -0.007617804, 0.050793648, -0.009203552)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jbo4"]
 albedo_color = Color(0.17254902, 0.2, 0.23921569, 1)
 metallic = 0.35
@@ -24,9 +27,6 @@ material = SubResource("StandardMaterial3D_0jbo4")
 top_radius = 0.01
 bottom_radius = 0.01
 height = 0.1
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nwh2n"]
-points = PackedVector3Array(0.01142857, 0.050793648, 0.0019032076, -0.0107936505, -0.050793648, -0.0044419584, -0.0107936505, -0.050793648, 0.0050768782, -0.0107936505, 0.050793648, -0.0044419584, 0.0050768782, -0.050793648, -0.0107936505, 0.0019032076, -0.050793648, 0.01142857, -0.0028562108, 0.050793648, 0.01142857, -0.0044419584, 0.050793648, -0.0107936505, 0.01142857, -0.050793648, 0.0019032076, 0.009838472, 0.050793648, -0.0060298815, 0.0066648014, 0.050793648, 0.009838472, -0.0107936505, 0.050793648, 0.0050768782, -0.007617804, -0.050793648, -0.009203552, 0.0050768782, 0.050793648, -0.0107936505, 0.009838472, -0.050793648, 0.0066648014, 0.01142857, -0.050793648, -0.0028562108, -0.0060298815, -0.050793648, 0.009838472, -0.0044419584, -0.050793648, -0.0107936505, -0.009203552, 0.050793648, -0.007617804, 0.0066648014, -0.050793648, 0.009838472, 0.009838472, 0.050793648, 0.0066648014, -0.0028562108, -0.050793648, 0.01142857, 0.0019032076, 0.050793648, 0.01142857, 0.01142857, 0.050793648, -0.0028562108, -0.0060298815, 0.050793648, 0.009838472, 0.009838472, -0.050793648, -0.0060298815, -0.009203552, -0.050793648, -0.007617804, -0.007617804, 0.050793648, -0.009203552)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0qlo"]
 resource_name = "Metal"
@@ -94,12 +94,14 @@ shadow_mesh = SubResource("ArrayMesh_rsneq")
 
 [node name="PickableObject" instance=ExtResource("1_wvriy")]
 
-[node name="FishingRodController" type="Node" parent="." index="0" node_paths=PackedStringArray("pickable", "rod_tip", "reel_hinge")]
+[node name="FishingRodController" type="Node" parent="." index="0" node_paths=PackedStringArray("pickable", "reel_handle", "rod_tip", "reel_hinge", "aim_raycast")]
 script = ExtResource("2_l0ojc")
 pickable = NodePath("..")
+reel_handle = NodePath("../RodHandle/ReelHinge/InteractableHandle")
 bait_scene = ExtResource("3_puqt1")
 rod_tip = NodePath("../RodTip")
-reel_hinge = NodePath("../ReelHinge")
+reel_hinge = NodePath("../RodHandle/ReelHinge")
+aim_raycast = NodePath("../RodTip/RayCast3D")
 
 [node name="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00012373924, 0.8260734, 0.0005449336)
@@ -110,21 +112,28 @@ shape = SubResource("CylinderShape3D_wvriy")
 [node name="RodTip" type="Marker3D" parent="." index="3"]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 1.6286762, -0.034445602)
 
-[node name="ReelHinge" parent="." index="4" instance=ExtResource("3_wvriy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07169536, 0.27258652, -0.04906042)
+[node name="RayCast3D" type="RayCast3D" parent="RodTip" index="0"]
+transform = Transform3D(-1, -8.742278e-08, -3.2840564e-15, 0, -4.371139e-08, -1, 8.742277e-08, -1, 4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -1, -20)
+
+[node name="RodHandle" type="Node3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.073259935, 0.2685291, -0.06125182)
+
+[node name="ReelHinge" parent="RodHandle" index="0" instance=ExtResource("3_wvriy")]
 hinge_limit_min = -36000.0
 hinge_limit_max = 36000.0
 
-[node name="InteractableHandle" parent="ReelHinge" index="0" instance=ExtResource("6_lx1sd")]
+[node name="HandleOrigin" type="Node3D" parent="RodHandle/ReelHinge" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ReelHinge/InteractableHandle" index="0"]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("CylinderMesh_0wt35")
-skeleton = NodePath("../..")
+[node name="InteractableHandle" parent="RodHandle/ReelHinge/HandleOrigin" index="0" instance=ExtResource("6_lx1sd")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ReelHinge/InteractableHandle" index="1"]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RodHandle/ReelHinge/HandleOrigin/InteractableHandle" index="0"]
 shape = SubResource("ConvexPolygonShape3D_nwh2n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RodHandle/ReelHinge" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+mesh = SubResource("CylinderMesh_0wt35")
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="." index="5"]
 visible = false

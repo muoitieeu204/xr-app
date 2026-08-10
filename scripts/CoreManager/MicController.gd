@@ -12,6 +12,7 @@ var recording: AudioStreamWAV
 var chunk_recording: AudioStreamWAV
 var threadSavePath : String = ""
 var chunkThreadSavePath: String = ""
+
 func _ready():
 	var index = AudioServer.get_bus_index("ReplayMic")
 	record_effect = AudioServer.get_bus_effect(index,0)
