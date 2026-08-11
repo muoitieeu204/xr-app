@@ -14,6 +14,7 @@ var isActive: bool = true
 var target_replay_path: String = ""
 var target_audio_path: String = ""
 var target_scene_path: String = ""
+var target_audio_url: String = ""
 var is_spectator: bool = false
 
 func clear():
@@ -25,3 +26,7 @@ func clear():
     userName = ""
     roleName = ""
     isActive = true
+    target_replay_path = ""
+    target_audio_path = ""
+    target_scene_path = ""
+    target_audio_url = ""
