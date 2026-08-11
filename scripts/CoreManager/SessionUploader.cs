@@ -47,7 +47,7 @@ public partial class SessionUploader : Node
 				if (response.IsSuccessStatusCode)
 				{
 					var jsonNode = Godot.Json.ParseString(responseBody);
-					string folderId = jsonNode.AsGodotDictionary()["folderId"].AsString();
+					string folderId = jsonNode.AsGodotDictionary()["sessionId"].AsString();
 					GD.Print($"Upload session replay successful! Server return folderId: {folderId} ");
 				}
 				else GD.Print($"Upload session failed! Server response with: {response.StatusCode}, message: {response.ReasonPhrase}");

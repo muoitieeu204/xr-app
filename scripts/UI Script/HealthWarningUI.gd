@@ -9,6 +9,7 @@ func _ready():
 	GameManager.health_warning_triggered.connect(_show_health_warning)
 
 func _show_health_warning():
+	process_mode = Node.PROCESS_MODE_INHERIT
 	var viewport_3d = get_parent().get_parent()
 	if viewport_3d:
 		viewport_3d.process_mode = Node.PROCESS_MODE_INHERIT

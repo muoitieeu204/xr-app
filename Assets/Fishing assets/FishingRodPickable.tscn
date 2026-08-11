@@ -94,9 +94,10 @@ shadow_mesh = SubResource("ArrayMesh_rsneq")
 
 [node name="PickableObject" instance=ExtResource("1_wvriy")]
 
-[node name="FishingRodController" type="Node" parent="." index="0" node_paths=PackedStringArray("pickable", "rod_tip", "reel_hinge", "aim_raycast")]
+[node name="FishingRodController" type="Node" parent="." index="0" node_paths=PackedStringArray("pickable", "reel_handle", "rod_tip", "reel_hinge", "aim_raycast")]
 script = ExtResource("2_l0ojc")
 pickable = NodePath("..")
+reel_handle = NodePath("../RodHandle/ReelHinge/HandleOrigin/InteractableHandle")
 bait_scene = ExtResource("3_puqt1")
 rod_tip = NodePath("../RodTip")
 reel_hinge = NodePath("../RodHandle/ReelHinge")
@@ -116,9 +117,10 @@ transform = Transform3D(-1, -7.670013e-08, -4.195035e-08, 3.5527137e-15, 0.47985
 target_position = Vector3(0, -1, -20)
 
 [node name="RodHandle" type="Node3D" parent="." index="4"]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.021773249, 0.2685291, -0.06125182)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.036167115, 0.2685291, -0.06125182)
 
 [node name="ReelHinge" parent="RodHandle" index="0" instance=ExtResource("3_wvriy")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 hinge_limit_min = -36000.0
 hinge_limit_max = 36000.0
 

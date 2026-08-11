@@ -36,7 +36,7 @@ func _ready() -> void:
 	errorCount = 0
 	currentTimeSecconds = 0
 	
-	startedAt = Time.get_datetime_string_from_system(true) + "Z"
+	startedAt = Time.get_datetime_string_from_system(false) + "+07:00"
 	ReplayManager.start_recording()
 
 func CorrectAnswer(point: int, itemName: String) -> void:
@@ -80,7 +80,7 @@ func FinishLevel():
 			"errorCount": errorCount,
 			"correctCount": correctCount,
 			"startedAt": startedAt,
-			"completedAt": Time.get_datetime_string_from_system(true) + "Z",
+			"completedAt": Time.get_datetime_string_from_system(true) + "+07:00",
 			"durationSeconds": currentTimeSecconds,
 			"interactionLog": interactionLog,
 			"feedbackText": "" # Game can send data base on current logic
@@ -115,7 +115,7 @@ func _on_timer_timeout() -> void:
 		return
 	currentTimeSecconds += 1
 	GameManager.time_updated.emit(currentTimeSecconds)
-	if currentTimeSecconds > 0 and currentTimeSecconds % 300 == 0:
+	if currentTimeSecconds > 0 and currentTimeSecconds % 30 == 0:
 		var config = ConfigFile.new()
 		var is_enabled = true
 		if config.load("user://settings.cfg") == OK:
