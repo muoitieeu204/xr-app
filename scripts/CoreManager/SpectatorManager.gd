@@ -19,6 +19,11 @@ var frame_duration: float = 0.1
 var max_duration: float = 0.0
 var active_dummy: Node3D = null
 
+# Background Audio Downloading
+var _http_audio: HTTPRequest = null
+var is_audio_loading: bool = false
+var audio_download_progress: float = 0.0
+
 func _ready() -> void:
 	load_spectator_data()
 	if toggle_view_button:
@@ -26,6 +31,13 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if is_audio_loading and _http_audio:
+		var downloaded = _http_audio.get_downloaded_bytes()
+		var total = _http_audio.get_body_size()
+		if total > 0:
+			audio_download_progress = (float(downloaded) / float(total)) * 100.0
+		_update_timer_label()
+
 	if not is_playing:
 		return
 		
@@ -74,22 +86,13 @@ func load_spectator_data() -> void:
 			add_child(active_dummy)
 			active_dummy.global_position = Vector3(28, 9, 0)
 			
-	# --- LOAD WAV (With 44-byte Bypass) ---
-	if FileAccess.file_exists(SessionData.target_audio_path):
-		var file = FileAccess.open(SessionData.target_audio_path, FileAccess.READ)
-		var bytes = file.get_buffer(file.get_length())
-		file.close()
-		
-		var wav_stream = AudioStreamWAV.new()
-		wav_stream.format = AudioStreamWAV.FORMAT_16_BITS
-		wav_stream.mix_rate = int(AudioServer.get_mix_rate())
-		wav_stream.stereo = true
-		
-		# Slice the text header off the raw bytes to prevent audio static!
-		wav_stream.data = bytes.slice(44)
-		playerAudio.stream = wav_stream
-
-	_update_timer_label()
+	# --- LOAD WAV OR DOWNLOAD IN BACKGROUND ---
+	if FileAccess.file_exists(SessionData.target_audio_path) and FileAccess.open(SessionData.target_audio_path, FileAccess.READ).get_length() > 100:
+		_load_audio_file()
+	elif not SessionData.target_audio_url.is_empty():
+		_start_audio_download()
+	else:
+		_update_timer_label()
 
 func render_frame_at_time(time_sec: float) -> void:
 	if replay_data.is_empty() or active_dummy == null:
@@ -228,4 +231,53 @@ func _format_time(seconds: float) -> String:
 
 func _update_timer_label() -> void:
 	if timer_label:
-		timer_label.text = "%s / %s" % [_format_time(playback_time), _format_time(max_duration)]
+		if is_audio_loading:
+			timer_label.text = "%s / %s  ( Đang tải âm thanh: %d%% )" % [_format_time(playback_time), _format_time(max_duration), int(audio_download_progress)]
+		else:
+			timer_label.text = "%s / %s" % [_format_time(playback_time), _format_time(max_duration)]
+
+func _start_audio_download() -> void:
+	is_audio_loading = true
+	_http_audio = HTTPRequest.new()
+	add_child(_http_audio)
+	_http_audio.request_completed.connect(_on_audio_download_completed)
+	
+	_http_audio.set_download_file(SessionData.target_audio_path)
+	
+	var headers = [
+		"Authorization: Bearer " + SessionData.accessToken
+	]
+	var err = _http_audio.request(SessionData.target_audio_url, headers, HTTPClient.METHOD_GET)
+	if err != OK:
+		is_audio_loading = false
+		print("SpectatorManager: Không thể gửi yêu cầu tải audio (lỗi %d)" % err)
+		_update_timer_label()
+
+func _on_audio_download_completed(result: int, responseCode: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+	is_audio_loading = false
+	_update_timer_label()
+	
+	if result != HTTPRequest.RESULT_SUCCESS or responseCode != 200:
+		print("SpectatorManager: Lỗi tải audio trong background!")
+		return
+		
+	print("SpectatorManager: Background audio tải thành công → ", SessionData.target_audio_path)
+	_load_audio_file()
+
+func _load_audio_file() -> void:
+	if FileAccess.file_exists(SessionData.target_audio_path):
+		var file = FileAccess.open(SessionData.target_audio_path, FileAccess.READ)
+		var bytes = file.get_buffer(file.get_length())
+		file.close()
+		
+		var wav_stream = AudioStreamWAV.new()
+		wav_stream.format = AudioStreamWAV.FORMAT_16_BITS
+		wav_stream.mix_rate = int(AudioServer.get_mix_rate())
+		wav_stream.stereo = true
+		
+		wav_stream.data = bytes.slice(44)
+		playerAudio.stream = wav_stream
+		
+		# Sync audio to current playing timeline
+		if is_playing:
+			playerAudio.play(playback_time)

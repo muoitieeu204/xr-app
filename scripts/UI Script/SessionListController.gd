@@ -44,11 +44,13 @@ func _ready() -> void:
 	# Tạo FilesApi node
 	_files_api = load("res://scripts/API/FilesApi.gd").new()
 	add_child(_files_api)
-	_files_api.sessions_loaded.connect(_on_sessions_loaded)
-	_files_api.sessions_load_failed.connect(_on_load_failed)
 	_files_api.metadata_downloaded.connect(_on_meta_downloaded)
 	_files_api.audio_downloaded.connect(_on_audio_downloaded)
 	_files_api.download_failed.connect(_on_download_failed)
+	
+	# Kết nối tới ResultApi Autoload để lấy kết quả chơi
+	ResultApi.results_loaded.connect(_on_sessions_loaded)
+	ResultApi.results_load_failed.connect(_on_load_failed)
 
 	back_button.pressed.connect(_on_back_pressed)
 	back_button.mouse_entered.connect(func(): _hover_btn(back_button, true))
@@ -69,7 +71,7 @@ func _ready() -> void:
 		var class_name_text: String = "" # Tên lớp sẽ hiển thị theo header
 		child_name_label.text = "📁 Buổi học của: " + PlayerData.fullName
 		_show_loading("Đang tải danh sách buổi học...")
-		_files_api.fetch_sessions(PlayerData.childId)
+		ResultApi.fetch_results(PlayerData.childId)
 	else:
 		# Bắt đầu ở Bước 1: chọn trẻ
 		child_name_label.text = "Xin chào, " + SessionData.fullName + " 👋"
@@ -185,7 +187,7 @@ func _on_child_selected(child_data: Dictionary) -> void:
 		child_name_label.text = "📁 %s — %s" % [class_name_text, PlayerData.fullName]
 
 	_show_loading("Đang tải danh sách buổi học...")
-	_files_api.fetch_sessions(PlayerData.childId)
+	ResultApi.fetch_results(PlayerData.childId)
 
 # =======================================================================
 # BƯỚC 2 — DANH SÁCH SESSIONS
@@ -216,10 +218,31 @@ func _build_session_cards() -> void:
 		session_list.add_child(_create_session_card(session))
 
 func _create_session_card(session: Dictionary) -> PanelContainer:
-	var folder_id: String = str(session.get("folderId", session.get("id", "?")))
-	var created_at: String = str(session.get("createdAt", session.get("uploadedAt", "")))
+	var lesson_name: String = str(session.get("lessonName", ""))
+	var exercise_name: String = str(session.get("exerciseName", ""))
+	var title_text: String = ""
+	if not lesson_name.is_empty():
+		title_text = lesson_name
+	elif not exercise_name.is_empty():
+		title_text = exercise_name
+	else:
+		title_text = "Bài học #" + str(session.get("lessonId", session.get("exerciseId", "?")))
+
+	var created_at: String = str(session.get("completedAt", session.get("startedAt", "")))
 	if created_at.length() >= 16:
 		created_at = created_at.substr(0, 10) + "  " + created_at.substr(11, 5)
+
+	var duration_secs: int = int(session.get("durationSeconds", 0))
+	var duration_str: String = ""
+	if duration_secs >= 60:
+		duration_str = str(duration_secs / 60) + "m " + str(duration_secs % 60) + "s"
+	else:
+		duration_str = str(duration_secs) + "s"
+
+	var score: float = float(session.get("score", 0.0))
+	var correct: int = int(session.get("correctCount", 0))
+	var error_cnt: int = int(session.get("errorCount", 0))
+	var session_id: String = str(session.get("sessionId", ""))
 
 	var card := PanelContainer.new()
 	var style := StyleBoxFlat.new()
@@ -250,16 +273,22 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 	hbox.add_child(vbox)
 
 	var name_lbl := Label.new()
-	name_lbl.text = PlayerData.fullName
+	name_lbl.text = title_text
 	name_lbl.add_theme_font_size_override("font_size", 16)
 	name_lbl.add_theme_color_override("font_color", Color(0.066667, 0.094118, 0.152941, 1))
 	vbox.add_child(name_lbl)
 
 	var date_lbl := Label.new()
-	date_lbl.text = "📅 %s   🗂 %s" % [created_at, folder_id]
+	date_lbl.text = "📅 %s   🏆 Điểm: %d   ⏱ %s" % [created_at, int(score), duration_str]
 	date_lbl.add_theme_font_size_override("font_size", 12)
-	date_lbl.add_theme_color_override("font_color", Color(0.48, 0.52, 0.58, 1))
+	date_lbl.add_theme_color_override("font_color", Color(0.223529, 0.552941, 0.564706, 1))
 	vbox.add_child(date_lbl)
+
+	var stats_lbl := Label.new()
+	stats_lbl.text = "✅ Đúng: %d   ❌ Sai: %d   🆔 Session: %s" % [correct, error_cnt, session_id.left(8) + "..."]
+	stats_lbl.add_theme_font_size_override("font_size", 11)
+	stats_lbl.add_theme_color_override("font_color", Color(0.48, 0.52, 0.58, 1))
+	vbox.add_child(stats_lbl)
 
 	var play_btn := Button.new()
 	play_btn.text = "▶  Xem lại"
@@ -292,7 +321,7 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 	
 	play_btn.mouse_entered.connect(func(): _hover_btn(play_btn, true))
 	play_btn.mouse_exited.connect(func(): _hover_btn(play_btn, false))
-	play_btn.pressed.connect(_on_session_selected.bind(folder_id))
+	play_btn.pressed.connect(_on_session_selected.bind(session_id))
 	hbox.add_child(play_btn)
 
 	return card
@@ -307,29 +336,35 @@ func _on_session_selected(folder_id: String) -> void:
 	_meta_path = ""
 	_audio_path = ""
 
-	_show_loading("Đang tải dữ liệu buổi học...")
+	# Tìm audio url từ danh sách session
+	var audio_url := ""
+	for s in _sessions:
+		if str(s.get("sessionId", "")) == folder_id:
+			audio_url = str(s.get("audioRecordUrl", ""))
+			break
+	if audio_url.is_empty():
+		audio_url = "https://103-162-30-111.sslip.io/api/files/%d/%s/DownloadAudio" % [PlayerData.childId, folder_id]
+	
+	SessionData.target_audio_url = audio_url
+	SessionData.target_audio_path = "user://session_audio_%s.wav" % folder_id
+
+	_show_loading("Đang tải thông tin buổi học...")
 	_files_api.download_metadata(PlayerData.childId, folder_id)
-	_files_api.download_audio(PlayerData.childId, folder_id)
 
 func _on_meta_downloaded(path: String) -> void:
 	_meta_path = path
 	_meta_downloaded = true
-	_check_downloads_complete()
+	_launch_replay_with_metadata()
 
 func _on_audio_downloaded(path: String) -> void:
-	_audio_path = path
-	_audio_downloaded = true
-	_check_downloads_complete()
+	pass
 
 func _on_download_failed(error: String) -> void:
 	_hide_loading()
 	error_dialog.dialog_text = "Lỗi tải file:\n" + error
 	error_dialog.popup_centered()
 
-func _check_downloads_complete() -> void:
-	if not (_meta_downloaded and _audio_downloaded):
-		return
-
+func _launch_replay_with_metadata() -> void:
 	_hide_loading()
 
 	var file := FileAccess.open(_meta_path, FileAccess.READ)
@@ -353,11 +388,10 @@ func _check_downloads_complete() -> void:
 		return
 
 	SessionData.target_replay_path = _meta_path
-	SessionData.target_audio_path = _audio_path
 	SessionData.target_scene_path = world_path
 	SessionData.is_spectator = true
 
-	print("SessionList: Launching spectator → ", world_path)
+	print("SessionList: Khởi chạy spectator (tải hình ảnh trước) → ", world_path)
 	get_tree().change_scene_to_file(world_path)
 
 # =======================================================================
