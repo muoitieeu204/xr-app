@@ -1,0 +1,56 @@
+# antigravityignore — Godot 4 + C# + OpenXR project
+# ponytail: only ignore what this project actually generates; see .gitignore for VCS ignores
+
+# ── Godot cache & auto-generated ──────────────────────────────────────────────
+.godot/
+.import/
+*.translation
+*.import
+
+# ── C# / Mono build output ────────────────────────────────────────────────────
+bin/
+obj/
+.mono/
+data_*/
+mono_crash.*.json
+*.csproj.old
+*.sln
+
+# ── Android build artifacts ───────────────────────────────────────────────────
+android/build/
+android/.build_version
+
+# ── Export & credentials (large / sensitive) ──────────────────────────────────
+export.cfg
+export_credentials.cfg
+export_presets.cfg
+
+# ── XR vendor/plugin binaries (huge, not useful for context) ─────────────────
+addons/godotopenxrvendors/
+addons/godot-xr-tools/
+
+# ── Crash & runtime logs ──────────────────────────────────────────────────────
+crash_log.txt
+*.log
+logs/
+
+# ── Large baked/generated assets ─────────────────────────────────────────────
+*.res
+*.converted.scn
+
+# ── OpenXR action map (87 KB generated binary — low signal) ──────────────────
+openxr_action_map.tres
+
+# ── IDE & OS noise ────────────────────────────────────────────────────────────
+.vscode/
+.vs/
+.DS_Store
+Thumbs.db
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+Prefabs/PlayerPrefabs/appsettings.json
+.env
+.env.*
+
+# ── Auto-generated codebase dump (122 KB markdown) ───────────────────────────
+xr_project_codebase.md

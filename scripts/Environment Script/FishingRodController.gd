@@ -5,7 +5,6 @@ extends Node
 @export var bait_scene: PackedScene
 @export var rod_tip: Marker3D
 @export var reel_hinge: XRToolsInteractableHinge
-@export var aim_raycast: RayCast3D 
 @export var throw_multiplier: float = 1.5
 
 
@@ -63,14 +62,12 @@ func cast_bait():
 	current_bait = bait_scene.instantiate()
 	get_tree().root.add_child(current_bait)
 	current_bait.global_position = rod_tip.global_position
+	
+	var forward_direction = rod_tip.global_transform.basis.z
+	# Make the wire curv
+	var arc_direction = (forward_direction + (Vector3.UP * 0.5)).normalized()
 
-	# Launch the bait using the tip's flick velocity
-	aim_raycast.force_raycast_update()
-	if aim_raycast.is_colliding():
-		current_bait.global_position = aim_raycast.get_collision_point()
-	else: 
-		current_bait.global_position = aim_raycast.to_global(aim_raycast.target_position)
-	current_bait.linear_velocity = Vector3.ZERO
+	current_bait.apply_central_impulse(arc_direction * throw_multiplier * 10.0)
 
 	# Connect to our custom bite signal
 	if current_bait.has_signal("fish_bit"):

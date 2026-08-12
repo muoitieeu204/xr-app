@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GodotXR"
-run/main_scene="uid://dacrvo5efu5py"
+run/main_scene="uid://cju1qj48yivih"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -54,11 +54,12 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addon
 
 interactable="Interactable Object"
 VoiceLines=""
-LevelController=""
 TaskUI=""
 MenuUI="Main Menu popup"
 MenuViewport="Vr Player Main Menu"
 MicController=""
+LevelController=""
+FishingLevelController="Fish Level Manager"
 
 [godot_xr_tools]
 

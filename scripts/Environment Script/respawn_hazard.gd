@@ -19,6 +19,10 @@ func _ready() -> void:
 func _on_body_entered(body: Node3D) -> void:
 	print("SOMETHING HIT THE WATER! Body name: ", body.name)
 	
+	if body.has_method("enter_water"):
+		body.enter_water()
+		return
+		
 	# 1. Type check: Is this the player's physics capsule?
 	var player_body = body as XRToolsPlayerBody
 	if not player_body:
