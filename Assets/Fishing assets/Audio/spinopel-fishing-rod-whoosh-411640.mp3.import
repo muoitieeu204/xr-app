@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4lbfweiiou0n"
+path="res://.godot/imported/spinopel-fishing-rod-whoosh-411640.mp3-53ec0d5f0cbfe2a4e8aa59a8f145ed4f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Fishing assets/Audio/spinopel-fishing-rod-whoosh-411640.mp3"
+dest_files=["res://.godot/imported/spinopel-fishing-rod-whoosh-411640.mp3-53ec0d5f0cbfe2a4e8aa59a8f145ed4f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

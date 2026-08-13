@@ -2,6 +2,7 @@ extends RigidBody3D
 
 @onready var timer = $Timer
 
+var is_bitten: bool = false
 signal fish_bit
 
 func _ready() -> void:
@@ -13,7 +14,7 @@ func enter_water():
 	timer.start(random_wait_time)
 
 func _on_timer_timeout():
-	print("Item Bite! Spawning item...")
-
+	print("Fish Bite! Signal pulling now...")
+	is_bitten = true
 	fish_bit.emit()
-	get_tree().call_group("FishingLevelController", "spawn_item", global_position)
+	#TODO: Add spash animation and Warning indicator

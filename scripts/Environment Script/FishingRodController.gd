@@ -6,13 +6,20 @@ extends Node
 @export var rod_tip: Marker3D
 @export var reel_hinge: XRToolsInteractableHinge
 @export var throw_multiplier: float = 1.5
+@export var min_cranks: int = 1
+@export var max_cranks: int = 3
+@export var reel_sound: AudioStreamPlayer3D
 
-
+#Variables for bait spawn
 var current_bait: RigidBody3D = null
-var previous_tip_pos: Vector3
-var tip_velocity: Vector3
-var velocity_history: Array[Vector3] = [] # Stores our past frames
 var last_hinge_pos: float = 0.0
+
+#Variable for reeling phase
+var is_reeling:bool = false
+var target_crank: int = 0
+var current_crank: int = 0
+var crank_progress: float = 0.0
+var click_progress: float = 0.0
 
 # Variables for the fishing line
 var line_mesh_instance: MeshInstance3D
@@ -44,6 +51,53 @@ func _ready():
 	# Add the line to the root of the game so it draws in world space
 	get_tree().root.call_deferred("add_child", line_mesh_instance)
 
+func _physics_process(delta: float) -> void:
+	if is_instance_valid(current_bait) and current_bait.get("is_bitten") == true:
+		var rod_velocity = pickable.linear_velocity
+		if rod_velocity.y > 3.0:
+			print("Successfull yank! Start reeling!")
+			current_bait.is_bitten = false
+
+			is_reeling = true
+			target_crank = randi_range(min_cranks,max_cranks)
+			current_crank = 0
+			crank_progress = 0.0
+			if reel_hinge:
+				last_hinge_pos = reel_hinge.hinge_position
+	
+	if is_reeling and reel_hinge:
+		var current_pos = reel_hinge.hinge_position
+		var moved_amount = abs(current_pos- last_hinge_pos)
+		if moved_amount > 180.0:
+			moved_amount = 0
+
+		crank_progress += moved_amount
+		click_progress += moved_amount
+		last_hinge_pos = current_pos
+
+		if click_progress >= 30.0:
+			click_progress = 0.0
+			if reel_sound:
+				if not reel_sound.playing:
+					reel_sound.pitch_scale = randf_range(0.9,1.1)
+					reel_sound.play()
+			var controller = pickable.get_picked_up_by_controller()
+			if controller:
+				controller.trigger_haptic_pulse("haptic", 10, 0.1, 0.05, 0.0)
+
+		if crank_progress >= 360.0:
+			current_crank +=1
+			crank_progress = 0.0
+			print("Cranked: ", current_pos, "/ ", target_crank)
+			var controller = pickable.get_picked_up_by_controller()
+			if controller:
+				controller.trigger_haptic_pulse("haptic", 50.0,0.5,0.1,0.0)
+			if current_crank >= target_crank:
+				print("Reeling Finished! Item Caught!")
+				is_reeling = false
+				get_tree().call_group("FishingLevelController", "spawn_item", Vector3.ZERO)
+				if is_instance_valid(current_bait):
+					current_bait.queue_free()
 
 func _on_action_pressed(_pickable):
 	# Cast the bait when the trigger is pressed
