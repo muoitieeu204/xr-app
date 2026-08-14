@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=24 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="12_by2g3"]
 [ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_at3n1"]
 [ext_resource type="PackedScene" uid="uid://xacd6pnc7smn" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall-stool.glb" id="13_cscui"]
+[ext_resource type="Script" uid="uid://c7ntv6adlua4w" path="res://scripts/Environment Script/glass_door.gd" id="15_bvhf0"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -50,11 +51,16 @@ size = Vector3(100, 3, 100)
 [sub_resource type="BoxShape3D" id="BoxShape3D_r85ih"]
 size = Vector3(0.01, 10, 20)
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["FishingLevelController"]]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jdhyv"]
+height = 0.5
+radius = 1.5
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["LevelController"]]
 script = ExtResource("1_enjev")
 catchable_items = Array[PackedScene]([ExtResource("2_hrype"), ExtResource("3_by2g3")])
 spawn_marker = NodePath("ItemSpawnerPoint/ItemSpawner")
 isLesson = true
+levelId = 2
 taskList = Array[String](["túi xúc xích", "gà nguyên con"])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -117,11 +123,11 @@ shape = SubResource("BoxShape3D_r85ih")
 
 [node name="NpcZone" type="Node3D" parent="."]
 
-[node name="Npc" parent="NpcZone" instance=ExtResource("12_by2g3")]
-transform = Transform3D(-0.52471405, 0, 0.85127854, 0, 1, 0, -0.85127854, 0, -0.52471405, -4.86086, -0.8199713, 5.703597)
-
-[node name="Stall" parent="NpcZone" instance=ExtResource("13_at3n1")]
+[node name="StallCashier" parent="NpcZone" instance=ExtResource("13_at3n1")]
 transform = Transform3D(1.6934829, 0, 1.0640093, 0, 2, 0, -1.0640093, 0, 1.6934829, -4.1337614, -0.8199711, 5.304629)
+
+[node name="Npc" parent="NpcZone/StallCashier" instance=ExtResource("12_by2g3")]
+transform = Transform3D(0.0042935014, 0, 0.49998155, 0, 0.5, 0, -0.49998155, 0, 0.0042935014, -0.41395855, -1.1920929e-07, -0.024498343)
 
 [node name="TeleportArea" parent="." instance=ExtResource("6_r85ih")]
 transform = Transform3D(0.52278125, 1.4411022e-08, -0.8524669, 4.371139e-08, 1, 4.3711395e-08, 0.8524669, -6.011402e-08, 0.52278125, -5.0211678, 0.2915678, -2.9898114)
@@ -143,4 +149,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -0.2157383, -2.549
 [node name="FishingRodFake" parent="." instance=ExtResource("9_enjev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.0335484)
 
-[connection signal="item_scanned_for_teaching" from="NpcZone/Stall" to="NpcZone/Npc" method="_on_item_scanned_for_teaching"]
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9865394, 0, -2.7776976)
+script = ExtResource("15_bvhf0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.19340515)
+shape = SubResource("CylinderShape3D_jdhyv")
+debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
+
+[connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_area_3d_body_exited"]

@@ -12,6 +12,7 @@ var breath_time: float = 0.0
 
 var current_item_id = ""
 var current_hint_audio = null
+var current_item_name_audio = null
 var failed_attempts = 0
 static var activeTeacher = null
 var chunkIndex: int = 0
@@ -89,7 +90,7 @@ func _on_speech_result(is_correct: bool):
 	if is_correct:
 		print("NPC: Correct! Great job!")
 		if npc_audio_player and correct_audio.size() > 0:
-			dio_player.stream = correct_audio.pick_random()
+			npc_audio_player.stream = correct_audio.pick_random()
 			npc_audio_player.play()
 		if npc_animation_player and npc_animation_player.has_animation("emote-yes"):
 			npc_animation_player.play("emote-yes")
