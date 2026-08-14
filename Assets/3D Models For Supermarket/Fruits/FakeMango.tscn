@@ -58,7 +58,8 @@ collision_layer = 5
 script = ExtResource("1_e7vk4")
 realItem = ExtResource("2_k3ejs")
 itemName = "quả xoài"
-hintAudios = Array[AudioStream]([ExtResource("3_0ubjt"), ExtResource("4_mxl03"), ExtResource("5_kgy4v")])
+itemNameSound = ExtResource("3_0ubjt")
+hintAudios = Array[AudioStream]([ExtResource("4_mxl03"), ExtResource("5_kgy4v")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.9998406, -0.01785377, 0, 0.01785377, 0.9998406, 0, 0, 0, 1, 0.00048550963, 9.9707395e-05, -0.0029130057)

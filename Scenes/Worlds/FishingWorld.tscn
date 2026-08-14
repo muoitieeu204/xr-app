@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=21 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="7_enjev"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="8_du2qv"]
 [ext_resource type="PackedScene" uid="uid://dtnb01ikb4a5j" path="res://Assets/Fishing assets/FakeFishingRod.tscn" id="9_enjev"]
+[ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="12_by2g3"]
+[ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_at3n1"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -47,9 +49,10 @@ size = Vector3(100, 3, 100)
 [sub_resource type="BoxShape3D" id="BoxShape3D_r85ih"]
 size = Vector3(0.01, 10, 20)
 
-[node name="Main" type="Node3D" groups=["FishingLevelController"]]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["FishingLevelController"]]
 script = ExtResource("1_enjev")
 catchable_items = Array[PackedScene]([ExtResource("2_hrype"), ExtResource("3_by2g3")])
+spawn_marker = NodePath("ItemSpawner")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xxvxh")
@@ -109,8 +112,16 @@ shape = SubResource("BoxShape3D_r85ih")
 transform = Transform3D(0.50126916, 0, -0.8652915, 0, 1, 0, 0.8652915, 0, 0.50126916, 7.4329586, -2.7245553, 9.341222)
 shape = SubResource("BoxShape3D_r85ih")
 
+[node name="NpcZone" type="Node3D" parent="."]
+
+[node name="Npc" parent="NpcZone" instance=ExtResource("12_by2g3")]
+transform = Transform3D(-0.52471405, 0, 0.85127854, 0, 1, 0, -0.85127854, 0, -0.52471405, -4.86086, -0.8199713, 5.703597)
+
+[node name="Stall" parent="NpcZone" instance=ExtResource("13_at3n1")]
+transform = Transform3D(1.6934829, 0, 1.0640093, 0, 2, 0, -1.0640093, 0, 1.6934829, -4.1337614, -0.8199711, 5.304629)
+
 [node name="TeleportArea" parent="." instance=ExtResource("6_r85ih")]
-transform = Transform3D(0.52278125, 1.4411022e-08, -0.8524669, 4.371139e-08, 1, 4.3711395e-08, 0.8524669, -6.011402e-08, 0.52278125, -0.76891756, 0.2915678, 3.7664676)
+transform = Transform3D(0.52278125, 1.4411022e-08, -0.8524669, 4.371139e-08, 1, 4.3711395e-08, 0.8524669, -6.011402e-08, 0.52278125, -5.0211678, 0.2915678, -2.9898114)
 target_scene = "uid://bt0ier0gd1sh5"
 holoText = "StarterHub"
 
@@ -118,5 +129,8 @@ holoText = "StarterHub"
 transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, -0.3043599, 0.70082664, -3.2737913)
 playerNode = ExtResource("8_du2qv")
 
-[node name="Area3D" parent="." instance=ExtResource("9_enjev")]
+[node name="ItemSpawner" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -2.3841858e-07, -2.5492582)
+
+[node name="FishingRodFake" parent="." instance=ExtResource("9_enjev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.0335484)

@@ -363,7 +363,7 @@ albedo_color = Color(0.75562954, 0.23084787, 0.22709063, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_bmsno"]
 material = SubResource("StandardMaterial3D_84ai0")
 
-[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player", "npc_record_indicator")]
+[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player", "npc_record_indicator", "body_to_breathe")]
 script = ExtResource("1_84ai0")
 npc_audio_player = NodePath("AudioStreamPlayer3D")
 npc_animation_player = NodePath("AnimationPlayer")
@@ -371,6 +371,7 @@ npc_record_indicator = NodePath("MeshInstance3D")
 question_1_audio = ExtResource("2_bmsno")
 correct_audio = Array[AudioStream]([ExtResource("3_sigga"), ExtResource("4_gj5ub"), ExtResource("5_76h6f")])
 wrong_audio = Array[AudioStream]([ExtResource("6_4s1g8"), ExtResource("7_2xgaf"), ExtResource("8_d07lw")])
+body_to_breathe = NodePath("Skeleton3D")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="."]
 bones/0/name = "Root"

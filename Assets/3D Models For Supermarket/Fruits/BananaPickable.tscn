@@ -62,6 +62,7 @@ mesh = SubResource("ArrayMesh_6dcuu")
 skeleton = NodePath("")
 
 [node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("3_ls6mq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012993164, 0, 0)
 
 [node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("4_0kh1v")]
 

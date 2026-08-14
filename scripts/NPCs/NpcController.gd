@@ -6,6 +6,9 @@ extends Node3D
 @export var question_1_audio : AudioStream
 @export var correct_audio: Array[AudioStream]
 @export var wrong_audio: Array[AudioStream]
+@export var body_to_breathe : Node3D # Assign the Skeleton3D or Mesh here in the inspector
+
+var breath_time: float = 0.0
 
 var current_item_id = ""
 var current_hint_audio = null
@@ -18,7 +21,18 @@ func _ready():
 	var gameManager = get_node_or_null("/root/GameManager")
 	if gameManager:
 		gameManager.connect("speech_result", Callable(self, "_on_speech_result"))
-	npc_record_indicator.visible = false
+	if npc_record_indicator:
+		npc_record_indicator.visible = false
+
+func _process(delta):
+	# Procedurally animate breathing so they don't look like a statue
+	if body_to_breathe:
+		breath_time += delta
+		var breath = sin(breath_time * 2.5) # Speed of breathing
+		# Subtle stretch and squash
+		body_to_breathe.scale.y = 1.0 + (breath * 0.015)
+		body_to_breathe.scale.x = 1.0 + (breath * 0.005)
+		body_to_breathe.scale.z = 1.0 + (breath * 0.005)
 
 # YOU MUST CONNECT THE CASH REGISTER'S 'item_scanned_for_teaching' SIGNAL TO THIS FUNCTION!
 func _on_item_scanned_for_teaching(item_id: String, hint_audio: AudioStream):

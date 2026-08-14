@@ -39,6 +39,7 @@ func _ready() -> void:
 	startedAt = Time.get_datetime_string_from_system(false) + "+07:00"
 	ReplayManager.start_recording()
 
+# ----------------- LEVEL TRACKING LOGIC -----------------
 func CorrectAnswer(point: int, itemName: String) -> void:
 	if completedTask.has(itemName):
 		return

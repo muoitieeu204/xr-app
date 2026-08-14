@@ -1,0 +1,37 @@
+## **Quick Start: How to use the Water Splash System**
+
+This tutorial will show you how to get the splash working in your scene, from dragging the scripts to fine-tuning the look.
+
+### **1. Prepare your Splash Scene**
+Before adding it to your game, make sure your VFX scene is set up correctly:
+*   Ensure your `vfx_controller.gd` script is attached to the **root node** of your splash scene.
+*   In the Inspector, find the **Dynamic VFX Layers** array.
+*   Click **Add Element** and drag your meshes (ripples, pillar, etc.) into the slots.
+*   This lets the script control their visibility and animations all at once.
+
+### **2. Add the Trigger to your Objects**
+To make an object (like a ball, a crate, or a character) cause a splash:
+*   Attach the `splash_trigger.gd` (the generic Node3D script) to the object.
+*   **Assign the References:** In the Inspector, drag your **Water Mesh** and a **Marker3D** (acting as the splash probe) into the script's exported slots.
+*   **Assign the Scene:** Drag your `splash_vfx.tscn` into the **Splash VFX Scene** slot.
+
+### **3. Fine-Tuning the Physics**
+Since this script works on generic nodes, you "fake" the weight to get the right scale:
+*   **Simulated Mass:** Set this higher for heavy objects (like a boulder) to get a wider splash.
+*   **Splash Height Mult:** Increase this if you want the water pillar to shoot up higher based on the fall speed.
+*   **Speed Threshold:** Adjust the `min_speed_act_threshold` so that slow-drifting objects don't trigger a massive explosion.
+
+### **4. Testing in the Editor**
+You don't need to run the game to check your work!
+*   Move your object up and down in the editor viewport.
+*   When the **Probe Node** passes the water's Y level, the splash will instantiate and play its animation.
+*   **Toggle Check:** Use the `test_splash_trigger` checkbox in the Inspector to force a splash at any time.
+
+---
+
+### **Troubleshooting Tips**
+*   **Pillar Behind Water?** Increase the **Render Priority** on your pillar's material to 10.
+*   **Ripples Floating?** Set the ripple node to **Top Level** in the Inspector so it doesn't inherit the parent's vertical scale.
+*   **Invisible in Editor?** Make sure **both** the spawner and controller scripts have `@tool` at the very top.
+
+**Now you're ready to make some waves!**

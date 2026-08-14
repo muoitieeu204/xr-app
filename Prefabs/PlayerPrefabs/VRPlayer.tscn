@@ -133,8 +133,8 @@ scene_properties_keys = PackedStringArray("HealthWarningUI.gd")
 process_mode = 3
 tracker = &"left_hand"
 
-[node name="PlayerUI" parent="LeftController" instance=ExtResource("6_hkkl5")]
-transform = Transform3D(1.9106855e-15, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 1, -1, 0, -4.371139e-08, -0.15877444, 0.020051882, 0)
+[node name="HandUI" parent="LeftController" instance=ExtResource("6_hkkl5")]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -0.15877444, 0.020051882, 0)
 
 [node name="LeftHand" parent="LeftController" instance=ExtResource("1_yu5ic")]
 

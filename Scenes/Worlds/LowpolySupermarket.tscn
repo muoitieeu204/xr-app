@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="1_k20mw"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="1_lfkti"]
-[ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/LevelController.gd" id="1_otcmc"]
+[ext_resource type="Script" uid="uid://d3x6r4t5aj8w3" path="res://scripts/CoreManager/SupermarketLevelController.gd" id="1_otcmc"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_2kn1k"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="2_k20mw"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="3_duvh4"]
@@ -561,14 +561,14 @@ mesh = SubResource("QuadMesh_hha1d")
 [node name="Fridge" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("12_6v2cb")]
 transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, -1.3877788e-16, 0, 1.6610133e-24, 0.006666667, 0.55025774, -2.4149127, -7.6383643)
 
+[node name="Fridge2" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("14_pf8qx")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, -2.7755572e-17, 0, 1.6610133e-24, 0.006666667, 3.301, -2.414, -7.64)
+
 [node name="Shelf3" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("13_bwgcx")]
 transform = Transform3D(-0.00152151, 0.00030041893, -1.0499973, -0.00011949243, 1.0499998, 0.00030081352, 0.6999983, 0.00017993727, -0.0022822793, 2.207542, -3.487097, -3.5547647)
 
 [node name="Shelf4" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("13_bwgcx")]
 transform = Transform3D(7.927282e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651248e-15, 0.7, -3.0597974e-08, 5.2848527e-08, 2.207542, -3.487097, -5.0786734)
-
-[node name="Fridge3" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("14_pf8qx")]
-transform = Transform3D(0.01, 0, 1.110223e-16, 0, 0.01, -5.5511148e-17, 0, 1.6610133e-24, 0.006666667, 3.3010716, -2.4144952, -7.645574)
 
 [node name="Shelf" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("8_duvh4")]
 transform = Transform3D(7.9272816e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651245e-15, 0.7, -3.0597974e-08, 5.2848527e-08, -0.72151625, -3.4453278, -3.4879365)
