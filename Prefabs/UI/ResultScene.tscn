@@ -189,6 +189,57 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
+[node name="StatsGrid" type="GridContainer" parent="CenterContainer/ResultBox/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="ScoreTitle" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "🎯 Điểm số:"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="ScoreValue" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="TimeTitle" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "⏱️ Thời gian:"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="TimeValue" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "0s"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="CorrectTitle" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "✅ Trả lời đúng:"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="CorrectValue" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="WrongTitle" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "❌ Trả lời sai:"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="WrongValue" type="Label" parent="CenterContainer/ResultBox/VBoxContainer/StatsGrid"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_4jofw")
+
+[node name="Spacing4" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
 [node name="RetryButton" type="Button" parent="CenterContainer/ResultBox/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16

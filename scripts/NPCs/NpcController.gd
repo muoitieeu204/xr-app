@@ -21,6 +21,7 @@ func _ready():
 	var gameManager = get_node_or_null("/root/GameManager")
 	if gameManager:
 		gameManager.connect("speech_result", Callable(self, "_on_speech_result"))
+		gameManager.connect("play_npc_teaching_audio",Callable(self, "_on_play_npc_teaching_audio"))
 	if npc_record_indicator:
 		npc_record_indicator.visible = false
 
@@ -88,7 +89,7 @@ func _on_speech_result(is_correct: bool):
 	if is_correct:
 		print("NPC: Correct! Great job!")
 		if npc_audio_player and correct_audio.size() > 0:
-			npc_audio_player.stream = correct_audio.pick_random()
+			dio_player.stream = correct_audio.pick_random()
 			npc_audio_player.play()
 		if npc_animation_player and npc_animation_player.has_animation("emote-yes"):
 			npc_animation_player.play("emote-yes")
@@ -114,3 +115,9 @@ func _on_child_correct_answer():
 
 func _on_child_wrong_answer():
 	pass
+
+func _on_play_npc_teaching_audio(audio_stream: AudioStream):
+	if npc_audio_player and audio_stream:
+		if not npc_audio_player.playing:
+			npc_audio_player.stream= audio_stream
+			npc_audio_player.play()

@@ -4,6 +4,10 @@ extends Control
 @onready var settingMenuScreen = $SettingsMenu 
 @onready var resultScreen =  $ResultScene
 @onready var resultScoreLabel = $ResultScene/CenterContainer/ResultBox/VBoxContainer/ScoreLabel
+@onready var valScore = $ResultScene/CenterContainer/ResultBox/VBoxContainer/StatsGrid/ScoreValue
+@onready var valTime = $ResultScene/CenterContainer/ResultBox/VBoxContainer/StatsGrid/TimeValue
+@onready var valCorrect = $ResultScene/CenterContainer/ResultBox/VBoxContainer/StatsGrid/CorrectValue
+@onready var valWrong = $ResultScene/CenterContainer/ResultBox/VBoxContainer/StatsGrid/WrongValue
 @onready var logoutScreen = $LogoutBox
 
 func _ready():
@@ -70,7 +74,7 @@ func switch_screen(screenName: String):
 		"result":
 			resultScreen.visible = true
 
-func show_result(score: int):
+func show_result(score: int, time_seconds: int = 0, correct: int = 0, wrong: int = 0):
 	if resultScoreLabel:
 		if score <= 50:
 			resultScoreLabel.text = "Chúc mừng bé đã hoàn thành bài học"
@@ -78,4 +82,13 @@ func show_result(score: int):
 			resultScoreLabel.text = "Chúc mừng bé đã hoàn thành bài học tốt"
 		if score >= 100:
 			resultScoreLabel.text = "Chúc mừng bé đã hoàn thành bài học xuất xắc"
+			
+	if valScore: valScore.text = str(score)
+	if valTime:
+		var mins = time_seconds / 60
+		var secs = time_seconds % 60
+		valTime.text = str(mins) + ":" + str(secs).pad_zeros(2)
+	if valCorrect: valCorrect.text = str(correct)
+	if valWrong: valWrong.text = str(wrong)
+	
 	switch_screen("result")

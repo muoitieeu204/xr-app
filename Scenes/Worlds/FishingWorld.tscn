@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=22 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dtnb01ikb4a5j" path="res://Assets/Fishing assets/FakeFishingRod.tscn" id="9_enjev"]
 [ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="12_by2g3"]
 [ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_at3n1"]
+[ext_resource type="PackedScene" uid="uid://xacd6pnc7smn" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall-stool.glb" id="13_cscui"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -52,7 +53,9 @@ size = Vector3(0.01, 10, 20)
 [node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["FishingLevelController"]]
 script = ExtResource("1_enjev")
 catchable_items = Array[PackedScene]([ExtResource("2_hrype"), ExtResource("3_by2g3")])
-spawn_marker = NodePath("ItemSpawner")
+spawn_marker = NodePath("ItemSpawnerPoint/ItemSpawner")
+isLesson = true
+taskList = Array[String](["túi xúc xích", "gà nguyên con"])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xxvxh")
@@ -129,8 +132,15 @@ holoText = "StarterHub"
 transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, -0.3043599, 0.70082664, -3.2737913)
 playerNode = ExtResource("8_du2qv")
 
-[node name="ItemSpawner" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -2.3841858e-07, -2.5492582)
+[node name="ItemSpawnerPoint" type="Node3D" parent="."]
+
+[node name="Stall" parent="ItemSpawnerPoint" instance=ExtResource("13_cscui")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 10.176163, -1.4229829, -2.5347362)
+
+[node name="ItemSpawner" type="Marker3D" parent="ItemSpawnerPoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -0.2157383, -2.5492582)
 
 [node name="FishingRodFake" parent="." instance=ExtResource("9_enjev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.0335484)
+
+[connection signal="item_scanned_for_teaching" from="NpcZone/Stall" to="NpcZone/Npc" method="_on_item_scanned_for_teaching"]

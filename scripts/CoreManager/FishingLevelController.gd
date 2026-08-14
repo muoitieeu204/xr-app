@@ -1,11 +1,11 @@
 @tool
 extends XRToolsSceneBase
 
-# --- FISHING SPECIFIC VARIABLES ---
+@export_group("Fish Specific Variables")
 @export var catchable_items: Array[PackedScene]
-@export var spawn_marker: Marker3D 
+@export var spawn_marker: Marker3D
 
-# --- LEVEL TRACKING VARIABLES (Cloned from Supermarket) ---
+@export_group("Level Tracking Variable")
 @export var isLesson: bool = false
 @export var levelId: int = 0
 @export var taskList: Array[String] = []
@@ -50,9 +50,26 @@ func spawn_item(spawn_position: Vector3 = Vector3.ZERO):
 	if catchable_items.is_empty():
 		push_warning("No catchable items assigned in the FishinLevelController");
 		return
-	var random_item_scene = catchable_items.pick_random()
+	
+	var available_items = []
+	for scene in catchable_items:
+		var temp_instance = scene.instantiate()
+		var item_name = ""
+		if temp_instance.has_meta("itemName"):
+			item_name = temp_instance.get_meta("itemName")
+		if item_name == "" or not completedTask.has(item_name):
+			available_items.append(scene)
+		temp_instance.queue_free
+
+	var random_item_scene = null
+	if available_items.size() >0:
+		random_item_scene = available_items.pick_random()
+	else: 
+		random_item_scene = catchable_items.pick_random()
+	
 	var item_instance = random_item_scene.instantiate()
-	get_tree().root.add_child(item_instance)
+	# get_tree().root.add_child(item_instance)
+	add_child(item_instance)
 	
 	if spawn_marker:
 		item_instance.global_position = spawn_marker.global_position
@@ -97,8 +114,8 @@ func FinishLevel():
 	
 	isLevelFinished = true
 	var finalResult = {
-			"sessionId": SessionData.sessionId, 
-			"childId": PlayerData.childId, 
+			"sessionId": SessionData.sessionId,
+			"childId": PlayerData.childId,
 			"score": currentScore,
 			"errorCount": errorCount,
 			"correctCount": correctCount,
@@ -106,12 +123,12 @@ func FinishLevel():
 			"completedAt": Time.get_datetime_string_from_system(true) + "+07:00",
 			"durationSeconds": currentTimeSecconds,
 			"interactionLog": interactionLog,
-			"feedbackText": "" 
+			"feedbackText": ""
 		}
 	if isLesson == true:
 		finalResult["lessonId"] = levelId
 	else:
-		finalResult["exerciseId"] = levelId 
+		finalResult["exerciseId"] = levelId
 	if completionStatus == true:
 		finalResult["completionStatus"] = "Completed"
 	else:
@@ -119,7 +136,7 @@ func FinishLevel():
 	print("Sending result to server: ", JSON.stringify(finalResult))
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()
-	get_tree().call_group("MenuUI", "show_result", currentScore)
+	get_tree().call_group("MenuUI", "show_result", currentScore, currentTimeSecconds, correctCount, errorCount)
 	get_tree().call_group("MenuViewport", "set_visible", true)
 
 func markTaskComplete(taskName: String) -> void:

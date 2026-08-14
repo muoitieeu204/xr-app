@@ -1,6 +1,7 @@
 @tool
 extends XRToolsSceneBase
 
+@export_group("Level Tracking Variable")
 @export var isLesson: bool = false
 @export var levelId: int = 0
 @export var taskList: Array[String] = []
@@ -97,7 +98,7 @@ func FinishLevel():
 	print("Sending result to server: ", JSON.stringify(finalResult))
 	ResultApi.send_result(finalResult)
 	ReplayManager.stop_recording()
-	get_tree().call_group("MenuUI", "show_result", currentScore)
+	get_tree().call_group("MenuUI", "show_result", currentScore, currentTimeSecconds, correctCount, errorCount)
 	get_tree().call_group("MenuViewport", "set_visible", true)
 
 func markTaskComplete(taskName: String) -> void:

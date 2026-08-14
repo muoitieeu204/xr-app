@@ -10,6 +10,7 @@ signal score_updated(new_score: int)
 signal item_name_updated(new_item_name: String)
 signal hint_updated(hint_text: String)
 signal health_warning_triggered
+signal play_npc_teaching_audio(audio_stream: AudioStream)
 
 func _ready() -> void:
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
