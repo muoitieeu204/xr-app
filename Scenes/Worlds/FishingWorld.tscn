@@ -55,7 +55,7 @@ size = Vector3(0.01, 10, 20)
 height = 0.5
 radius = 1.5
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["LevelController"]]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["FishingLevelController"]]
 script = ExtResource("1_enjev")
 catchable_items = Array[PackedScene]([ExtResource("2_hrype"), ExtResource("3_by2g3")])
 spawn_marker = NodePath("ItemSpawnerPoint/ItemSpawner")

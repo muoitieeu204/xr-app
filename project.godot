@@ -59,6 +59,7 @@ MenuUI="Main Menu popup"
 MenuViewport="Vr Player Main Menu"
 MicController=""
 LevelController=""
+FishingLevelController=""
 
 [godot_xr_tools]
 
