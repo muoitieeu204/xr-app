@@ -1,6 +1,6 @@
 extends Control
 
-@export var titleLabel : Label
+@onready var titleLabel : Label = $MarginContainer/VBoxContainer/Label2
 @export var titleLabelText : String = "Please say: "
 @export var targetWord : String = "":
 	set(value):

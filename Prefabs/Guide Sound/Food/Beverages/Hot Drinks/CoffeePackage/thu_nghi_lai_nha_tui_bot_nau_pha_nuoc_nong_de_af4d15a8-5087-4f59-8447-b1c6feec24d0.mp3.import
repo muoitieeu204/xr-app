@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhi0mfqk0xrav"
+path="res://.godot/imported/thu_nghi_lai_nha_tui_bot_nau_pha_nuoc_nong_de_af4d15a8-5087-4f59-8447-b1c6feec24d0.mp3-82392e3a152fcc297adfd2101aac6c94.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/CoffeePackage/thu_nghi_lai_nha_tui_bot_nau_pha_nuoc_nong_de_af4d15a8-5087-4f59-8447-b1c6feec24d0.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_tui_bot_nau_pha_nuoc_nong_de_af4d15a8-5087-4f59-8447-b1c6feec24d0.mp3-82392e3a152fcc297adfd2101aac6c94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5rqt053fha7q"
+path="res://.godot/imported/thu_nghi_lai_nha_que_nho_trang_dot_len_co_khoi_e68de6ec-1da8-4598-9497-2ca8b15de2f2.mp3-d7366590fae66ca746cbd1c7c8c07371.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Cigarette/thu_nghi_lai_nha_que_nho_trang_dot_len_co_khoi_e68de6ec-1da8-4598-9497-2ca8b15de2f2.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_que_nho_trang_dot_len_co_khoi_e68de6ec-1da8-4598-9497-2ca8b15de2f2.mp3-d7366590fae66ca746cbd1c7c8c07371.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dearsi1xqqbkf"
+path="res://.godot/imported/goi_ca_phe_4dcf9267-75d4-47cc-a2a3-93043a763149.mp3-3a5d27589c6a7d442a376284b86d468a.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/CoffeePackage/goi_ca_phe_4dcf9267-75d4-47cc-a2a3-93043a763149.mp3"
+dest_files=["res://.godot/imported/goi_ca_phe_4dcf9267-75d4-47cc-a2a3-93043a763149.mp3-3a5d27589c6a7d442a376284b86d468a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

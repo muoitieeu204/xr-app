@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu1550hs7n82r"
+path="res://.godot/imported/ban_oi_day_la_qua_gi_vay_848d327f-3472-413a-b228-e37563601947.mp3-0ea6facdf598ca920139569140d07031.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Tomato/ban_oi_day_la_qua_gi_vay_848d327f-3472-413a-b228-e37563601947.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_qua_gi_vay_848d327f-3472-413a-b228-e37563601947.mp3-0ea6facdf598ca920139569140d07031.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bphhoqn2j302a"
+path="res://.godot/imported/toi_la_hop_tra_tui_loc_pha_voi_nuoc_nong_uong_ab5db0ce-c303-4545-8c90-8c1b5bb9737b.mp3-1cdca535c879e45d390b64a94dc34e38.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/LiptonVintageTea/toi_la_hop_tra_tui_loc_pha_voi_nuoc_nong_uong_ab5db0ce-c303-4545-8c90-8c1b5bb9737b.mp3"
+dest_files=["res://.godot/imported/toi_la_hop_tra_tui_loc_pha_voi_nuoc_nong_uong_ab5db0ce-c303-4545-8c90-8c1b5bb9737b.mp3-1cdca535c879e45d390b64a94dc34e38.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

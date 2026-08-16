@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8f0huj3h3nt1"
+path="res://.godot/imported/toi_la_cai_tui_dung_banh_an_vat_ben_trong_gion_d6160988-9c20-4b7b-9e6c-075d801529ee (1).mp3-3f0ca270175fae123a78f5ddc3c1bc22.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBag/toi_la_cai_tui_dung_banh_an_vat_ben_trong_gion_d6160988-9c20-4b7b-9e6c-075d801529ee (1).mp3"
+dest_files=["res://.godot/imported/toi_la_cai_tui_dung_banh_an_vat_ben_trong_gion_d6160988-9c20-4b7b-9e6c-075d801529ee (1).mp3-3f0ca270175fae123a78f5ddc3c1bc22.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

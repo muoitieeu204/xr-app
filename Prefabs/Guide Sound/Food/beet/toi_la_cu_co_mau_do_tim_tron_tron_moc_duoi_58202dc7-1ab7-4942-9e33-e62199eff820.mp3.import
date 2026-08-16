@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7cn3686pl1lv"
+path="res://.godot/imported/toi_la_cu_co_mau_do_tim_tron_tron_moc_duoi_58202dc7-1ab7-4942-9e33-e62199eff820.mp3-8ae81828fdc703cb4d055db83f65a4ee.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/beet/toi_la_cu_co_mau_do_tim_tron_tron_moc_duoi_58202dc7-1ab7-4942-9e33-e62199eff820.mp3"
+dest_files=["res://.godot/imported/toi_la_cu_co_mau_do_tim_tron_tron_moc_duoi_58202dc7-1ab7-4942-9e33-e62199eff820.mp3-8ae81828fdc703cb4d055db83f65a4ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

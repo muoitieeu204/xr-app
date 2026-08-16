@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkphrjsf6bfxu"
+path="res://.godot/imported/toi_la_nhung_khuc_thit_dai_dai_duoc_dong_goi_d12a8ef1-3b7f-499f-8c75-0102e012cec2.mp3-9258903a46b18f99c94fb19ea041a3fd.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PackOfSausages/toi_la_nhung_khuc_thit_dai_dai_duoc_dong_goi_d12a8ef1-3b7f-499f-8c75-0102e012cec2.mp3"
+dest_files=["res://.godot/imported/toi_la_nhung_khuc_thit_dai_dai_duoc_dong_goi_d12a8ef1-3b7f-499f-8c75-0102e012cec2.mp3-9258903a46b18f99c94fb19ea041a3fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

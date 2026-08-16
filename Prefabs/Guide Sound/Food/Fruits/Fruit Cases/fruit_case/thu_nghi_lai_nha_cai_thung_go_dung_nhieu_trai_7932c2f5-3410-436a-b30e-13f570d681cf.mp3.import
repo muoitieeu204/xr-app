@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnusxienpye2m"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_thung_go_dung_nhieu_trai_7932c2f5-3410-436a-b30e-13f570d681cf.mp3-17e247556a2fbdc347bd36cf923fbc37.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruit Cases/fruit_case/thu_nghi_lai_nha_cai_thung_go_dung_nhieu_trai_7932c2f5-3410-436a-b30e-13f570d681cf.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_thung_go_dung_nhieu_trai_7932c2f5-3410-436a-b30e-13f570d681cf.mp3-17e247556a2fbdc347bd36cf923fbc37.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

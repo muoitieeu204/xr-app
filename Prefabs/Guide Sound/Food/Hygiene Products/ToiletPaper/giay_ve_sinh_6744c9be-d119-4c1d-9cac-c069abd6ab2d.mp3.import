@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0n34alisjvc5"
+path="res://.godot/imported/giay_ve_sinh_6744c9be-d119-4c1d-9cac-c069abd6ab2d.mp3-d520087b5de5eee90581ce07b9c1cde5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Hygiene Products/ToiletPaper/giay_ve_sinh_6744c9be-d119-4c1d-9cac-c069abd6ab2d.mp3"
+dest_files=["res://.godot/imported/giay_ve_sinh_6744c9be-d119-4c1d-9cac-c069abd6ab2d.mp3-d520087b5de5eee90581ce07b9c1cde5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

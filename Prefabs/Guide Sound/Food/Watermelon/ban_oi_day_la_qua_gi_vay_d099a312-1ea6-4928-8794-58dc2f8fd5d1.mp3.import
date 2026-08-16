@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://celaiawsfxasi"
+path="res://.godot/imported/ban_oi_day_la_qua_gi_vay_d099a312-1ea6-4928-8794-58dc2f8fd5d1.mp3-78b094df8c632816ff87451519403707.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Watermelon/ban_oi_day_la_qua_gi_vay_d099a312-1ea6-4928-8794-58dc2f8fd5d1.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_qua_gi_vay_d099a312-1ea6-4928-8794-58dc2f8fd5d1.mp3-78b094df8c632816ff87451519403707.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

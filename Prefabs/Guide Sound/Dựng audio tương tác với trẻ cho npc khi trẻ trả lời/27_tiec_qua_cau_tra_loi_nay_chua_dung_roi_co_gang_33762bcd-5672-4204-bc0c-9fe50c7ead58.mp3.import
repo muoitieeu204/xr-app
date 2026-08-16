@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bp0xht85yyftu"
+path="res://.godot/imported/27_tiec_qua_cau_tra_loi_nay_chua_dung_roi_co_gang_33762bcd-5672-4204-bc0c-9fe50c7ead58.mp3-a9feaca52326cd4065670b6ceb6771e8.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/27_tiec_qua_cau_tra_loi_nay_chua_dung_roi_co_gang_33762bcd-5672-4204-bc0c-9fe50c7ead58.mp3"
+dest_files=["res://.godot/imported/27_tiec_qua_cau_tra_loi_nay_chua_dung_roi_co_gang_33762bcd-5672-4204-bc0c-9fe50c7ead58.mp3-a9feaca52326cd4065670b6ceb6771e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

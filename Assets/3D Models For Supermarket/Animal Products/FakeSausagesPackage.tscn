@@ -1,0 +1,25 @@
+[gd_scene load_steps=8 format=3 uid="uid://d23rnmupgvhql"]
+
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_oguan"]
+[ext_resource type="PackedScene" uid="uid://doil6wxunl4f4" path="res://Assets/3D Models For Supermarket/Animal Products/SausagesPackagePickable.tscn" id="2_cql81"]
+[ext_resource type="AudioStream" uid="uid://deg0iuhtt5heo" path="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PackOfSausages/goi_xuc_xich_01482eb5-e71d-4184-ba58-e463338400bd.mp3" id="3_hgley"]
+[ext_resource type="AudioStream" uid="uid://m1qy5ym6pkon" path="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PackOfSausages/thu_nghi_lai_nha_goi_nhieu_khuc_thit_dai_dong_8cc64a25-8d85-47d0-993d-14de7c4aafc7.mp3" id="4_c7ixw"]
+[ext_resource type="AudioStream" uid="uid://dkphrjsf6bfxu" path="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PackOfSausages/toi_la_nhung_khuc_thit_dai_dai_duoc_dong_goi_d12a8ef1-3b7f-499f-8c75-0102e012cec2.mp3" id="5_hoq7k"]
+[ext_resource type="PackedScene" uid="uid://dj77iucnn8irc" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/LowpolyPackOfSausages.glb" id="6_hgley"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hgley"]
+size = Vector3(0.16217041, 0.04437256, 0.10345459)
+
+[node name="SausagesPackage" type="Area3D"]
+collision_layer = 5
+script = ExtResource("1_oguan")
+realItem = ExtResource("2_cql81")
+itemName = "gói xúc xích"
+itemNameSound = ExtResource("3_hgley")
+hintAudios = Array[AudioStream]([ExtResource("4_c7ixw"), ExtResource("5_hoq7k")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00088500977, -0.0105896, 0.0013122559)
+shape = SubResource("BoxShape3D_hgley")
+
+[node name="LowpolyPackOfSausages" parent="." instance=ExtResource("6_hgley")]

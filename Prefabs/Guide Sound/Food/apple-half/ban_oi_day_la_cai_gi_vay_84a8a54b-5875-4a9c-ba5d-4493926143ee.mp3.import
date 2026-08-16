@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5ahc2djahl2o"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_84a8a54b-5875-4a9c-ba5d-4493926143ee.mp3-b4e0021de95657bb27c11c046d9ff95b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/apple-half/ban_oi_day_la_cai_gi_vay_84a8a54b-5875-4a9c-ba5d-4493926143ee.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_84a8a54b-5875-4a9c-ba5d-4493926143ee.mp3-b4e0021de95657bb27c11c046d9ff95b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

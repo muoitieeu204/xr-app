@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5f0s0j06xdv8"
+path="res://.godot/imported/ban_nghi_lai_xem_qua_vo_xanh_ruot_do_nay_ten_la_d8598a3d-9afd-46bc-8e69-2d2a5f8a33b9.mp3-4378d0a1a873a7a4794998a7bd679405.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Watermelon/ban_nghi_lai_xem_qua_vo_xanh_ruot_do_nay_ten_la_d8598a3d-9afd-46bc-8e69-2d2a5f8a33b9.mp3"
+dest_files=["res://.godot/imported/ban_nghi_lai_xem_qua_vo_xanh_ruot_do_nay_ten_la_d8598a3d-9afd-46bc-8e69-2d2a5f8a33b9.mp3-4378d0a1a873a7a4794998a7bd679405.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0pyfxt8q5dpl"
+path="res://.godot/imported/toi_la_chat_long_trong_suot_nhu_nuoc_dung_trong_b962ed1d-1d83-48f3-b3fb-c8f1fa8c1afb.mp3-3bfa4ce35f59c449dcb016f96c876d43.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Vodka/toi_la_chat_long_trong_suot_nhu_nuoc_dung_trong_b962ed1d-1d83-48f3-b3fb-c8f1fa8c1afb.mp3"
+dest_files=["res://.godot/imported/toi_la_chat_long_trong_suot_nhu_nuoc_dung_trong_b962ed1d-1d83-48f3-b3fb-c8f1fa8c1afb.mp3-3bfa4ce35f59c449dcb016f96c876d43.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

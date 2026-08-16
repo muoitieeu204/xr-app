@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://g2noyfjbg7o1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_b6xfv"]
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ur42w"]
+height = 0.345
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0mqg"]
+albedo_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e6ykt"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmciy"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ipmv"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmohg"]
+albedo_color = Color(0.8989168, 0.10775343, 0.17416146, 1)
+
+[node name="DummyReplay" type="Node3D"]
+
+[node name="XRCamera3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_b6xfv")
+
+[node name="FPVCam" type="Camera3D" parent="XRCamera3D"]
+transform = Transform3D(3.333333, 0, 0, 0, 3.333333, 0, 0, 0, 3.333333, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XRCamera3D"]
+transform = Transform3D(0.6199999, 0, 0, 0, 0.6199999, 0, 0, 0, 0.6199999, 0, 0.011511214, -0.26534712)
+mesh = SubResource("CylinderMesh_ur42w")
+surface_material_override/0 = SubResource("StandardMaterial3D_j0mqg")
+
+[node name="LeftController" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, -0.33386073, 0, 0)
+mesh = SubResource("BoxMesh_e6ykt")
+skeleton = NodePath("../XRCamera3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_fmciy")
+
+[node name="RightController" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, 0.31117445, 0, 0)
+mesh = SubResource("BoxMesh_8ipmv")
+skeleton = NodePath("../XRCamera3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_rmohg")

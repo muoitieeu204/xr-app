@@ -1,14 +1,15 @@
-[gd_scene load_steps=73 format=4 uid="uid://cs26wosuk6egg"]
+[gd_scene load_steps=76 format=4 uid="uid://cs26wosuk6egg"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_e2g1d"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="1_xw0nv"]
 [ext_resource type="PackedScene" uid="uid://crtvxpuyg328w" path="res://Assets/kenney_prototype-kit/Models/GLB format/wall.glb" id="2_b3bv3"]
+[ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_dket7"]
 [ext_resource type="PackedScene" uid="uid://d21st8nky57qa" path="res://Assets/kenney_prototype-kit/Models/GLB format/column.glb" id="2_ri6mv"]
 [ext_resource type="PackedScene" uid="uid://b2dnnn88rv0bs" path="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb" id="3_rpmc8"]
 [ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="4_kf1i1"]
 [ext_resource type="PackedScene" uid="uid://cjq5edftlpt0g" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round-small.glb" id="5_b3bv3"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="6_ykflw"]
-[ext_resource type="Texture2D" uid="uid://8054t8qrhji7" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="7_ykflw"]
+[ext_resource type="Texture2D" uid="uid://ni4880cfgnhe" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="7_ykflw"]
 [ext_resource type="PackedScene" uid="uid://y57awkqbs4jp" path="res://Prefabs/InteractableObject/interactable-table.tscn" id="9_3hhen"]
 [ext_resource type="Script" uid="uid://c54peyseci6w2" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding_2.gd" id="9_uqxnd"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="10_0r11v"]
@@ -20,8 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://dqt7w3ir1rvt2" path="res://Prefabs/InteractableObject/climable_ladder.tscn" id="14_e2g1d"]
 [ext_resource type="PackedScene" uid="uid://kqwlr8tlv55l" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-special-area.glb" id="15_ajraq"]
 [ext_resource type="PackedScene" uid="uid://b4uxef3n4qcwm" path="res://Assets/kenney_prototype-kit/Models/GLB format/indicator-square-f.glb" id="16_ajraq"]
-[ext_resource type="Script" uid="uid://craotcurqjn1" path="res://scripts/LadderTrigger.gd" id="16_qec81"]
-[ext_resource type="Script" uid="uid://dwk8a1tg6wtlj" path="res://scripts/basket_trigger.gd" id="17_luug5"]
+[ext_resource type="Script" uid="uid://craotcurqjn1" path="res://scripts/Environment Script/LadderTrigger.gd" id="16_qec81"]
+[ext_resource type="Script" uid="uid://dwk8a1tg6wtlj" path="res://scripts/Environment Script/basket_trigger.gd" id="17_luug5"]
 [ext_resource type="PackedScene" uid="uid://ckivhf17w451h" path="res://Prefabs/InteractableObject/cat-animal-cube.tscn" id="17_y4oqr"]
 [ext_resource type="PackedScene" uid="uid://pfqmgskegt4x" path="res://Prefabs/Boards/BoardViewPort.tscn" id="18_ln6h8"]
 [ext_resource type="PackedScene" uid="uid://0wt7mphnqpbv" path="res://Prefabs/InteractableObject/caterpillar-animal-cube.tscn" id="18_qec81"]
@@ -38,21 +39,21 @@
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="26_efjx1"]
 [ext_resource type="PackedScene" uid="uid://bcmhfm3e5mut5" path="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding-double.glb" id="26_rs4d8"]
 [ext_resource type="PackedScene" uid="uid://cb4st7km0nnuy" path="res://Prefabs/Boards/DoorPromptUI.tscn" id="27_e78ep"]
+[ext_resource type="Script" uid="uid://do0tbh10ergkv" path="res://scripts/Environment Script/AutoOpenDoor.gd" id="27_ullea"]
 [ext_resource type="AudioStream" uid="uid://byot2ngjrfhul" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/8_bay_gio_ban_hay_huong_tia_laser_tu_tay_cam_vao_92b0a34f-4bf7-440c-a975-8413a6863099.mp3" id="28_e78ep"]
 [ext_resource type="AudioStream" uid="uid://6hnmgy604s2w" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/9_ban_co_thay_chiec_nut_tren_ban_khong_hay_dung_5bf336b3-fe94-4888-868b-6d6bbf85d20c.mp3" id="37_rs4d8"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3hhen"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qbgtv"]
+panorama = ExtResource("2_dket7")
 
 [sub_resource type="Sky" id="Sky_q8bqg"]
-sky_material = SubResource("ProceduralSkyMaterial_3hhen")
+sky_material = SubResource("PanoramaSkyMaterial_qbgtv")
 
 [sub_resource type="Environment" id="Environment_0r11v"]
 background_mode = 2
+background_energy_multiplier = 1.35
 sky = SubResource("Sky_q8bqg")
 tonemap_mode = 2
-glow_enabled = true
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uqxnd"]
 points = PackedVector3Array(0.11428417, 1.0078619, 0.50793654, -0.099999994, 0.028342323, -0.47175094, -0.099999994, 0.97159016, -0.47175094, 0.11428417, 1.0078619, -0.50793654, 0.11426243, -0.007837057, 0.50793654, -0.099999994, 0.97159016, 0.47175094, 0.11426243, -0.007837057, -0.50793654, -0.099999994, 0.028342323, 0.47175094, 0.11428417, 0.24618709, 0.50793654)
@@ -211,6 +212,9 @@ data = PackedVector3Array(-0.5, 0.19999999, -0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_4qjy7"]
 size = Vector3(4, 4, 4)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dket7"]
+size = Vector3(1, 1, 1.6019897)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikgg2"]
 albedo_color = Color(0, 0.9843137, 1, 1)
 
@@ -237,7 +241,6 @@ environment = SubResource("Environment_0r11v")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.99722224, -0.04016759, 0.06272389, 0.03416162, 0.5016692, 0.86438465, -0.0661869, 0.8641264, -0.49890354, 0, 0, 0)
-shadow_enabled = true
 
 [node name="Environment" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.884381, 0, 0)
@@ -651,33 +654,41 @@ volume_db = -16.0
 
 [node name="door-sliding-double2" parent="Environment/Zone1" instance=ExtResource("26_rs4d8")]
 transform = Transform3D(8, 0, 0, 0, 5, 0, 0, 0, 5, -54.00341, 3.044947, 6)
+script = ExtResource("27_ullea")
+
+[node name="door-right" parent="Environment/Zone1/door-sliding-double2/door-sliding-double" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="Environment/Zone1/door-sliding-double2"]
+collision_mask = 655361
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Zone1/door-sliding-double2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0.30099487)
+shape = SubResource("BoxShape3D_dket7")
 
 [node name="Zone2" type="Node3D" parent="Environment"]
 
 [node name="Screen1" parent="Environment/Zone2" instance=ExtResource("25_iwvwc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.88438, 5, 33.259693)
 
-[node name="Viewport2Din3D" parent="Environment/Zone2/Screen1" index="0" node_paths=PackedStringArray("titleLabel")]
-scene_properties_keys = PackedStringArray("UIController.gd", "titleLabel", "titleLabelText", "targetWord")
-titleLabel = NodePath("Viewport/Control/MarginContainer/VBoxContainer/Label2")
+[node name="Viewport2Din3D" parent="Environment/Zone2/Screen1" index="0"]
+scene_properties_keys = PackedStringArray("UIController.gd", "titleLabelText", "targetWord")
 titleLabelText = "Con Mèo😺"
 targetWord = "con mèo"
 
 [node name="Screen2" parent="Environment/Zone2" instance=ExtResource("25_iwvwc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.88438, 5, 33.259693)
 
-[node name="Viewport2Din3D" parent="Environment/Zone2/Screen2" index="0" node_paths=PackedStringArray("titleLabel")]
-scene_properties_keys = PackedStringArray("UIController.gd", "titleLabel", "titleLabelText", "targetWord")
-titleLabel = NodePath("Viewport/Control/MarginContainer/VBoxContainer/Label2")
+[node name="Viewport2Din3D" parent="Environment/Zone2/Screen2" index="0"]
+scene_properties_keys = PackedStringArray("UIController.gd", "titleLabelText", "targetWord")
 titleLabelText = "Con Chó🐶"
 targetWord = "con chó"
 
 [node name="Screen3" parent="Environment/Zone2" instance=ExtResource("25_iwvwc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.88438, 5, 33.259693)
 
-[node name="Viewport2Din3D" parent="Environment/Zone2/Screen3" index="0" node_paths=PackedStringArray("titleLabel")]
-scene_properties_keys = PackedStringArray("UIController.gd", "titleLabel", "titleLabelText", "targetWord")
-titleLabel = NodePath("Viewport/Control/MarginContainer/VBoxContainer/Label2")
+[node name="Viewport2Din3D" parent="Environment/Zone2/Screen3" index="0"]
+scene_properties_keys = PackedStringArray("UIController.gd", "titleLabelText", "targetWord")
 titleLabelText = "Con Khỉ🐵"
 targetWord = "con khỉ"
 
@@ -789,12 +800,14 @@ volume_db = -16.0
 bus = &"Sounds"
 
 [node name="Spawner" parent="." instance=ExtResource("10_0r11v")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.033422, 4.501993, 58.676277)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -23.030485, 4.463589, 5.014596)
 playerNode = ExtResource("12_2lgl8")
 
 [node name="TeleportArea" parent="." instance=ExtResource("11_x35nm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4.096805, 59)
+target_scene = "uid://bt0ier0gd1sh5"
 require_unlock = true
+holoText = "StarterHub"
 
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton3" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
@@ -808,6 +821,7 @@ require_unlock = true
 [connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D2/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D2" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D4/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D4" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D5/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D5" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="Environment/Zone1/door-sliding-double2/Area3D" to="Environment/Zone1/door-sliding-double2" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Environment/Zone2/Label3D6/Area3D" to="Environment/Zone2/Label3D6" method="_on_area_3d_body_entered"]
 [connection signal="puzzle_solved" from="Environment/Zone3/Basket/BasketTrigger" to="TeleportArea" method="_on_basket_trigger_puzzle_solved"]
 [connection signal="body_entered" from="Environment/Zone3/Label3D7/Area3D" to="Environment/Zone3/Label3D7" method="_on_area_3d_body_entered"]
@@ -839,6 +853,7 @@ require_unlock = true
 [editable path="Environment/Zone1/floor-thick7"]
 [editable path="Environment/Zone1/floor-thick8"]
 [editable path="Environment/Zone1/Visual+Audio Guide/Label3D"]
+[editable path="Environment/Zone1/door-sliding-double2"]
 [editable path="Environment/Zone2/Screen1"]
 [editable path="Environment/Zone2/Screen2"]
 [editable path="Environment/Zone2/Screen3"]

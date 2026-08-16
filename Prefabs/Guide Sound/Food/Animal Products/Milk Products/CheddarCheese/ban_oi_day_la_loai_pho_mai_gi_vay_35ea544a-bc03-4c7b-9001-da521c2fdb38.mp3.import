@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdtk8xphnmhh4"
+path="res://.godot/imported/ban_oi_day_la_loai_pho_mai_gi_vay_35ea544a-bc03-4c7b-9001-da521c2fdb38.mp3-9e80f7e2a832e0aee3ef1b75619bc566.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Milk Products/CheddarCheese/ban_oi_day_la_loai_pho_mai_gi_vay_35ea544a-bc03-4c7b-9001-da521c2fdb38.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_loai_pho_mai_gi_vay_35ea544a-bc03-4c7b-9001-da521c2fdb38.mp3-9e80f7e2a832e0aee3ef1b75619bc566.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

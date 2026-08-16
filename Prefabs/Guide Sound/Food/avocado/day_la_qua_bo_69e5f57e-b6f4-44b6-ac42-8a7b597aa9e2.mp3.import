@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7npejnswjanw"
+path="res://.godot/imported/day_la_qua_bo_69e5f57e-b6f4-44b6-ac42-8a7b597aa9e2.mp3-c311840a5a34cdaa2223a788ad6471e7.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/avocado/day_la_qua_bo_69e5f57e-b6f4-44b6-ac42-8a7b597aa9e2.mp3"
+dest_files=["res://.godot/imported/day_la_qua_bo_69e5f57e-b6f4-44b6-ac42-8a7b597aa9e2.mp3-c311840a5a34cdaa2223a788ad6471e7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

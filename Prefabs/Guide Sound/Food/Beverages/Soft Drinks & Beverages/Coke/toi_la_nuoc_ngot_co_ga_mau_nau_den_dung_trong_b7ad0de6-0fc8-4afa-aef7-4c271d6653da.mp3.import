@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dla8msjflx58x"
+path="res://.godot/imported/toi_la_nuoc_ngot_co_ga_mau_nau_den_dung_trong_b7ad0de6-0fc8-4afa-aef7-4c271d6653da.mp3-2569a6750ea6102c3c0bd2d468bf7d46.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/toi_la_nuoc_ngot_co_ga_mau_nau_den_dung_trong_b7ad0de6-0fc8-4afa-aef7-4c271d6653da.mp3"
+dest_files=["res://.godot/imported/toi_la_nuoc_ngot_co_ga_mau_nau_den_dung_trong_b7ad0de6-0fc8-4afa-aef7-4c271d6653da.mp3-2569a6750ea6102c3c0bd2d468bf7d46.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

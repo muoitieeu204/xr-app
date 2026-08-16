@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dnk22dhmt8e15"
+path="res://.godot/imported/25_dung_roi_ne_ban_gioi_qua_di_mat_cau_nay_khong_83fbf650-d195-4c36-a689-8044e02916c4.mp3-56d9b327b1689dcdb66fa6c30304f260.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/25_dung_roi_ne_ban_gioi_qua_di_mat_cau_nay_khong_83fbf650-d195-4c36-a689-8044e02916c4.mp3"
+dest_files=["res://.godot/imported/25_dung_roi_ne_ban_gioi_qua_di_mat_cau_nay_khong_83fbf650-d195-4c36-a689-8044e02916c4.mp3-56d9b327b1689dcdb66fa6c30304f260.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

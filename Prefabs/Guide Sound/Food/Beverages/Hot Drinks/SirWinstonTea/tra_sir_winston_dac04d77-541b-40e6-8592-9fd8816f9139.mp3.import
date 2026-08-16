@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bclab63no601j"
+path="res://.godot/imported/tra_sir_winston_dac04d77-541b-40e6-8592-9fd8816f9139.mp3-f59b6f8fa8858e29ba4e2940fc3e5e9b.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/tra_sir_winston_dac04d77-541b-40e6-8592-9fd8816f9139.mp3"
+dest_files=["res://.godot/imported/tra_sir_winston_dac04d77-541b-40e6-8592-9fd8816f9139.mp3-f59b6f8fa8858e29ba4e2940fc3e5e9b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

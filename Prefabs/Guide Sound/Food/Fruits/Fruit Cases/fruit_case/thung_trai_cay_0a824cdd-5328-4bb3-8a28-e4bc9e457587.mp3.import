@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://catvow6qa5bwg"
+path="res://.godot/imported/thung_trai_cay_0a824cdd-5328-4bb3-8a28-e4bc9e457587.mp3-89ca77100c63e6e992c14a4348aecddc.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruit Cases/fruit_case/thung_trai_cay_0a824cdd-5328-4bb3-8a28-e4bc9e457587.mp3"
+dest_files=["res://.godot/imported/thung_trai_cay_0a824cdd-5328-4bb3-8a28-e4bc9e457587.mp3-89ca77100c63e6e992c14a4348aecddc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

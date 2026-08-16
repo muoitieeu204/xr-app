@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8mkub7t5pxo"
+path="res://.godot/imported/toi_co_mau_vang_cam_hinh_bau_duc_an_rat_ngot_va_dc5df443-0387-4023-85ea-8bef2b032c3c.mp3-ff669a5550653436979e109bcf18da58.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Mango/toi_co_mau_vang_cam_hinh_bau_duc_an_rat_ngot_va_dc5df443-0387-4023-85ea-8bef2b032c3c.mp3"
+dest_files=["res://.godot/imported/toi_co_mau_vang_cam_hinh_bau_duc_an_rat_ngot_va_dc5df443-0387-4023-85ea-8bef2b032c3c.mp3-ff669a5550653436979e109bcf18da58.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

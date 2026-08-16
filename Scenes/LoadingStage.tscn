@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://cju1qj48yivih"]
+
+[ext_resource type="PackedScene" uid="uid://bnqnnnet4dw12" path="res://addons/godot-xr-tools/staging/staging.tscn" id="1_eb727"]
+[ext_resource type="PackedScene" uid="uid://bw1n8kmx2dd6e" path="res://Scenes/LoadingPlatform.tscn" id="2_o1xcn"]
+[ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_xlo0q"]
+[ext_resource type="AudioStream" uid="uid://bng7b2y2rn1h3" path="res://Prefabs/Audio/koiroylers-game-start-355980.mp3" id="3_xlo0q"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tjxvg"]
+panorama = ExtResource("2_xlo0q")
+energy_multiplier = 1.1
+
+[sub_resource type="Sky" id="Sky_h8pm0"]
+sky_material = SubResource("PanoramaSkyMaterial_tjxvg")
+
+[sub_resource type="Environment" id="Environment_x8j52"]
+background_mode = 2
+sky = SubResource("Sky_h8pm0")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Animation" id="Animation_2fwe4"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_w1uvp"]
+resource_name = "Scroll"
+loop_mode = 1
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"new_marker",
+"time": 0.04
+}]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u5u6h"]
+_data = {
+&"RESET": SubResource("Animation_2fwe4"),
+&"Scroll": SubResource("Animation_w1uvp")
+}
+
+[node name="Staging" instance=ExtResource("1_eb727")]
+main_scene = "uid://bt0ier0gd1sh5"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="0"]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+environment = SubResource("Environment_x8j52")
+
+[node name="XROrigin3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1876965, 0)
+
+[node name="XRCamera3D" parent="XROrigin3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0067329407, 2.4874592, 0)
+environment = null
+
+[node name="LoadingScreen" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02863884, 0)
+
+[node name="SplashScreen" parent="LoadingScreen" index="0"]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LoadingScreen" index="3"]
+libraries = {
+&"": SubResource("AnimationLibrary_u5u6h")
+}
+autoplay = "Scroll"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="7" groups=["VoiceLines"]]
+stream = ExtResource("3_xlo0q")
+volume_db = -20.0
+pitch_scale = 1.32
+autoplay = true
+bus = &"Sounds"
+
+[node name="ShipPlatform" parent="." index="8" instance=ExtResource("2_o1xcn")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, -0.83383346, -7.4348083, -7.6974335)
+
+[editable path="LoadingScreen"]

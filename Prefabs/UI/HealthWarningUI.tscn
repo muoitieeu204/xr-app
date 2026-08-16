@@ -1,0 +1,146 @@
+[gd_scene load_steps=7 format=3 uid="uid://3g6ga3daydlv"]
+
+[ext_resource type="Script" uid="uid://cg7hxi4b20m1b" path="res://scripts/UI Script/HealthWarningUI.gd" id="1_psq3f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7s4qs"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jofw"]
+font_size = 26
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+outline_size = 3
+outline_color = Color(0.4, 0.2, 0.1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jofw"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pressed"]
+content_margin_top = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vktwn"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="HealthWarningUi" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -212.25
+offset_right = 353.0
+offset_bottom = 212.25
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_7s4qs")
+script = ExtResource("1_psq3f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(416, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Cảnh báo sức khoẻ ⚠️ "
+label_settings = SubResource("LabelSettings_4jofw")
+horizontal_alignment = 1
+
+[node name="Spacing" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "Bạn đã chơi được 5 phút, bạn có muốn nghỉ ngơi"
+label_settings = SubResource("LabelSettings_4jofw")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="YesButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "Có"
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "Không, Tiếp tục chơi"
+
+[node name="TakeOffHeadsetScreen" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="TakeOffHeadsetScreen"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Vui lòng tháo kính VR để nghỉ ngơi"
+label_settings = SubResource("LabelSettings_4jofw")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacing" type="Control" parent="TakeOffHeadsetScreen"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="TakeOffHeadsetScreen"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = " Tiếp tục chơi"
+
+[connection signal="pressed" from="VBoxContainer/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="TakeOffHeadsetScreen/ContinueButton" to="." method="_on_continue_button_pressed"]

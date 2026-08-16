@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl23cne577ard"]
+
+[ext_resource type="Script" uid="uid://csh200lqv1uip" path="res://scripts/API/result-api.gd" id="1_htjul"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_htjul")

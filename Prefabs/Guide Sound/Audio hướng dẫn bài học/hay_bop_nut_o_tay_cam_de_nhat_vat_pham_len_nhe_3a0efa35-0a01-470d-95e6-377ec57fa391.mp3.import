@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dneauogaea5vn"
+path="res://.godot/imported/hay_bop_nut_o_tay_cam_de_nhat_vat_pham_len_nhe_3a0efa35-0a01-470d-95e6-377ec57fa391.mp3-10b6b6f92714e2b87d5351f699b246b1.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/hay_bop_nut_o_tay_cam_de_nhat_vat_pham_len_nhe_3a0efa35-0a01-470d-95e6-377ec57fa391.mp3"
+dest_files=["res://.godot/imported/hay_bop_nut_o_tay_cam_de_nhat_vat_pham_len_nhe_3a0efa35-0a01-470d-95e6-377ec57fa391.mp3-10b6b6f92714e2b87d5351f699b246b1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

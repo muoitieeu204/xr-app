@@ -1,0 +1,98 @@
+[gd_scene load_steps=17 format=3 uid="uid://vsolum5fqp8s"]
+
+[ext_resource type="PackedScene" uid="uid://dxis5hrvqkhdg" path="res://Assets/3D Models For Supermarket/Market Equipments/Shelf.tscn" id="1_lu16u"]
+[ext_resource type="PackedScene" uid="uid://b27yf4lwuf10g" path="res://Assets/3D Models For Supermarket/Beverages/CokeFake.tscn" id="2_x0r4h"]
+[ext_resource type="PackedScene" uid="uid://m3g328gfwjsd" path="res://Assets/3D Models For Supermarket/Beverages/FakeSoda.tscn" id="3_id1d1"]
+[ext_resource type="PackedScene" uid="uid://cxpvrik1qf8pe" path="res://Assets/3D Models For Supermarket/Beverages/FakeTea.tscn" id="3_x0r4h"]
+[ext_resource type="ArrayMesh" uid="uid://dxet16bljbar2" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/LowpolyTea.tres" id="4_nrflm"]
+[ext_resource type="PackedScene" uid="uid://barc03cyk2if" path="res://Assets/3D Models For Supermarket/Beverages/FakeMangoTea.tscn" id="6_574cq"]
+[ext_resource type="ArrayMesh" uid="uid://cmskghiw3qxc" path="res://Assets/3D Models For Supermarket/Beverages/Soft Drinks & Beverages/LowpolyCola.tres" id="6_620mt"]
+[ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/RowSpawner.gd" id="8_1hewl"]
+[ext_resource type="ArrayMesh" uid="uid://djiljwtw078l1" path="res://Assets/3D Models For Supermarket/Beverages/Soft Drinks & Beverages/Soda.tres" id="10_nrflm"]
+[ext_resource type="ArrayMesh" uid="uid://nyalv7xnq2i4" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/MangoTea.tres" id="11_620mt"]
+[ext_resource type="ArrayMesh" uid="uid://gqpxsscy7m57" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/LiptonTea.tres" id="13_eyu0e"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_kunba"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("4_nrflm")
+buffer = PackedFloat32Array(-0.0023365368, 0, 0.0018816473, 0, 0, 0.003, 0, 0, -0.0018816473, 0, -0.0023365368, 0, -0.0023365368, 0, 0.0018816473, -0.4, 0, 0.003, 0, 0, -0.0018816473, 0, -0.0023365368, 0, -0.0023365368, 0, 0.0018816473, -0.8, 0, 0.003, 0, 0, -0.0018816473, 0, -0.0023365368, 0, -0.0023365368, 0, 0.0018816473, -1.2, 0, 0.003, 0, 0, -0.0018816473, 0, -0.0023365368, 0, -0.0023365368, 0, 0.0018816473, -1.6, 0, 0.003, 0, 0, -0.0018816473, 0, -0.0023365368, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_6l130"]
+transform_format = 1
+instance_count = 10
+mesh = ExtResource("6_620mt")
+buffer = PackedFloat32Array(0.0011069286, 0, -0.001665746, 0, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -0.2, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -0.4, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -0.6, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -0.8, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -1, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -1.2, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -1.4, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -1.6, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0, 0.0011069286, 0, -0.001665746, -1.8000001, 0, 0.002, 0, 0, 0.001665746, 0, 0.0011069286, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_nrflm"]
+transform_format = 1
+instance_count = 10
+mesh = ExtResource("10_nrflm")
+buffer = PackedFloat32Array(-1, -8.742278e-08, -3.821371e-15, 0, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -0.2, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -0.4, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -0.6, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -0.8, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -1, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -1.2, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -1.4, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -1.6, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0, -1, -8.742278e-08, -3.821371e-15, -1.8000001, 0, -4.371139e-08, 1, 0, -8.742278e-08, 1, 4.371139e-08, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_meste"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("13_eyu0e")
+buffer = PackedFloat32Array(0.01, 0, 0, 0, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -0.3, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -0.6, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -0.90000004, 0, 0.01, 0, 0, 0, 0, 0.01, 0, 0.01, 0, 0, -1.2, 0, 0.01, 0, 0, 0, 0, 0.01, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_620mt"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("11_620mt")
+buffer = PackedFloat32Array(0.08660254, -0.05, -2.1855695e-09, 0, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -0.4, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -0.8, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -1.2, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0, 0.08660254, -0.05, -2.1855695e-09, -1.6, 0, -4.371139e-09, 0.1, 0, -0.05, -0.08660254, -3.7855172e-09, 0)
+
+[node name="Shelf" instance=ExtResource("1_lu16u")]
+
+[node name="TeaRowSpawner" type="Node3D" parent="." index="2"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.80656713, 0.24782853, 0)
+script = ExtResource("8_1hewl")
+item_scene = ExtResource("3_x0r4h")
+spacing = Vector3(-0.4, 0, 0)
+mesh_scale = Vector3(0.003, 0.003, 0.003)
+mesh_rotation = Vector3(0, 141.155, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="TeaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_kunba")
+
+[node name="ColaRowSpawner" type="Node3D" parent="." index="3"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.9055671, 1.0706128, 0)
+script = ExtResource("8_1hewl")
+item_scene = ExtResource("2_x0r4h")
+item_count = 10
+mesh_scale = Vector3(0.002, 0.002, 0.002)
+mesh_rotation = Vector3(0, -56.395, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="ColaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_6l130")
+
+[node name="SodaRowSpawner" type="Node3D" parent="." index="4"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.9251431, 1.3922468, 0)
+script = ExtResource("8_1hewl")
+item_scene = ExtResource("3_id1d1")
+item_count = 10
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(-90, -180, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="SodaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_nrflm")
+
+[node name="LiptonTeaRowSpawner" type="Node3D" parent="." index="5"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.57686824, 1.7019144, 0)
+script = ExtResource("8_1hewl")
+item_scene = ExtResource("3_x0r4h")
+spacing = Vector3(-0.3, 0, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="LiptonTeaRowSpawner" index="0"]
+multimesh = SubResource("MultiMesh_meste")
+
+[node name="MangoTeaSpawner" type="Node3D" parent="." index="6"]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 1.1815468, 0.6859285, 0.6250197)
+script = ExtResource("8_1hewl")
+item_scene = ExtResource("6_574cq")
+spacing = Vector3(-0.4, 0, 0)
+mesh_scale = Vector3(0.1, 0.1, 0.1)
+mesh_rotation = Vector3(-90, 30, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="MangoTeaSpawner" index="0"]
+multimesh = SubResource("MultiMesh_620mt")

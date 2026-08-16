@@ -1,0 +1,283 @@
+extends Node
+class_name SpectatorManager
+
+@export var dummyScene: PackedScene
+@export var playerAudio: AudioStreamPlayer
+@export var timeSlider: HSlider
+
+@onready var playPauseButton = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Play_Pause Button"
+@onready var forward_button: Button = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Forward Button"
+@onready var backward_button: Button = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/Backward Button"
+@onready var timeline_slider: HSlider = $"Control/ControlBarPanel/VBoxContainer/TimelineSlider"
+@onready var toggle_view_button: Button = $Control/ToggleViewButton
+@onready var timer_label: Label = $"Control/ControlBarPanel/VBoxContainer/HBoxContainer/TimerLabel"
+
+var replay_data: Dictionary = {}
+var is_playing: bool = false
+var playback_time: float = 0.0
+var frame_duration: float = 0.1
+var max_duration: float = 0.0
+var active_dummy: Node3D = null
+
+# Background Audio Downloading
+var _http_audio: HTTPRequest = null
+var is_audio_loading: bool = false
+var audio_download_progress: float = 0.0
+
+func _ready() -> void:
+	load_spectator_data()
+	if toggle_view_button:
+		toggle_view_button.text = "🎥 Góc nhìn thứ ba"
+
+
+func _process(delta: float) -> void:
+	if is_audio_loading and _http_audio:
+		var downloaded = _http_audio.get_downloaded_bytes()
+		var total = _http_audio.get_body_size()
+		if total > 0:
+			audio_download_progress = (float(downloaded) / float(total)) * 100.0
+		_update_timer_label()
+
+	if not is_playing:
+		return
+		
+	# 3. Master Clock: Sync timeline to the audio hardware track
+	if playerAudio.playing:
+		playback_time = playerAudio.get_playback_position()
+	else:
+		playback_time += delta
+		
+	# 4. Update the visual UI slider
+	timeSlider.value = playback_time
+	
+	# Update Timer Label text
+	_update_timer_label()
+	
+	# 5. Move the 3D models
+	render_frame_at_time(playback_time)
+	
+	# 6. Stop when we reach the end
+	if playback_time >= max_duration:
+		is_playing = false
+		playerAudio.stop()
+		playback_time = max_duration
+		timeSlider.value = max_duration
+		playPauseButton.text = "▶"
+		_update_timer_label()
+
+func load_spectator_data() -> void:
+	# --- LOAD JSON ---
+	if FileAccess.file_exists(SessionData.target_replay_path):
+		var file = FileAccess.open(SessionData.target_replay_path, FileAccess.READ)
+		var parsed = JSON.parse_string(file.get_as_text())
+		file.close()
+		
+		if parsed != null:
+			replay_data = parsed["frames"]
+			max_duration = int(parsed["metadata"]["total_recorded_frames"]) * frame_duration
+			
+			# Configure the UI Slider
+			timeSlider.max_value = max_duration
+			timeSlider.step = 0.01
+			
+			# Spawn the 3D Dummy Clone
+			if active_dummy: active_dummy.queue_free()
+			active_dummy = dummyScene.instantiate()
+			add_child(active_dummy)
+			active_dummy.global_position = Vector3(28, 9, 0)
+			
+	# --- LOAD WAV OR DOWNLOAD IN BACKGROUND ---
+	if FileAccess.file_exists(SessionData.target_audio_path) and FileAccess.open(SessionData.target_audio_path, FileAccess.READ).get_length() > 100:
+		_load_audio_file()
+	elif not SessionData.target_audio_url.is_empty():
+		_start_audio_download()
+	else:
+		_update_timer_label()
+
+func render_frame_at_time(time_sec: float) -> void:
+	if replay_data.is_empty() or active_dummy == null:
+		return
+		
+	# 1. Calculate exactly where we are between two frames
+	var exact_frame: float = time_sec / frame_duration
+	var current_idx: int = floor(exact_frame)
+	var next_idx: int = current_idx + 1
+	var lerp_factor: float = exact_frame - current_idx
+	
+	var curr_key: String = str(current_idx)
+	var next_key: String = str(next_idx)
+	
+	if not replay_data.has(curr_key):
+		return
+		
+	# 2. Smoothly Lerp between the current frame and the next frame
+	for node_name in replay_data[curr_key].keys():
+		var dummy_part = active_dummy.get_node_or_null(node_name)
+		if dummy_part:
+			var curr_pos_raw = replay_data[curr_key][node_name]["position"]
+			var curr_rot_raw = replay_data[curr_key][node_name]["rotation"]
+			var curr_pos = Vector3(curr_pos_raw["x"], curr_pos_raw["y"], curr_pos_raw["z"])
+			var curr_rot = Vector3(curr_rot_raw["x"], curr_rot_raw["y"], curr_rot_raw["z"])
+			
+			if replay_data.has(next_key) and replay_data[next_key].has(node_name):
+				var next_pos_raw = replay_data[next_key][node_name]["position"]
+				var next_rot_raw = replay_data[next_key][node_name]["rotation"]
+				var next_pos = Vector3(next_pos_raw["x"], next_pos_raw["y"], next_pos_raw["z"])
+				var next_rot = Vector3(next_rot_raw["x"], next_rot_raw["y"], next_rot_raw["z"])
+				
+				dummy_part.global_position = curr_pos.lerp(next_pos, lerp_factor)
+				dummy_part.global_rotation = curr_rot.lerp(next_rot, lerp_factor)
+			else:
+				# If we are at the very last frame, just snap to it
+				dummy_part.global_position = curr_pos
+				dummy_part.global_rotation = curr_rot
+
+func _input(event: InputEvent) -> void:
+	# Press SPACEBAR to quickly play/pause the replay while testing
+	if event.is_action_pressed("ui_accept"):
+		if is_playing:
+			is_playing = false
+			playerAudio.stop()
+			playPauseButton.text = "▶"
+		else:
+			is_playing = true
+			playerAudio.play(playback_time)
+			playPauseButton.text = "⏸"
+		_update_timer_label()
+
+func _on_timeline_slider_drag_ended(value_changed: bool) -> void:
+	playback_time = timeSlider.value
+	render_frame_at_time(playback_time) # Instantly snap graphics to new time
+	is_playing = true
+	playerAudio.play(playback_time) # Resume audio from new time
+	playPauseButton.text = "⏸"
+	_update_timer_label()
+
+func _on_timeline_slider_drag_started() -> void:
+	is_playing = false
+	playerAudio.stop()
+	# Force the play button to pop back up without triggering the signal again
+	playPauseButton.set_pressed_no_signal(false)
+	playPauseButton.text = "▶"
+
+func _on_play_pause_button_pressed() -> void:
+	if playback_time >= max_duration - 0.01:
+		playback_time = 0.0
+		timeSlider.value = 0.0
+	is_playing = !is_playing
+	if is_playing:
+		playback_time = timeSlider.value
+		render_frame_at_time(playback_time) # Instantly snap graphics to new time
+		playerAudio.play(playback_time) # Resume audio from new time
+		playPauseButton.text = "⏸"
+	else:
+		playerAudio.stop() # Resume audio from new time
+		playPauseButton.text = "▶"
+	_update_timer_label()
+
+func _on_backward_button_pressed() -> void:
+	#Use clamp for safe slider calculation
+	playback_time = clamp(timeSlider.value - 2.0, 0.0, max_duration) # Tua lùi hẳn 2 giây cho rõ rệt
+	timeSlider.value = playback_time
+	render_frame_at_time(playback_time)
+	if is_playing == true:
+		playerAudio.play(playback_time)
+	_update_timer_label()
+
+func _on_forward_button_pressed() -> void:
+	playback_time = clamp(timeSlider.value + 2.0, 0.0, max_duration) # Tua tiến hẳn 2 giây cho rõ rệt
+	timeSlider.value = playback_time
+	render_frame_at_time(playback_time)
+	if is_playing == true:
+		playerAudio.play(playback_time)
+	_update_timer_label()
+
+func _on_toggle_view_button_pressed() -> void:
+	var freeCam = $SpectatorCam
+	if active_dummy == null:
+		return
+	var dummyCam = active_dummy.find_child("FPVCam", true, false)
+	if dummyCam == null:
+		return
+	if freeCam.current:
+		# Đang ở góc nhìn thứ 3 (SpectatorCam) -> chuyển sang góc nhìn thứ nhất (Dummy FPV)
+		dummyCam.make_current()
+		toggle_view_button.text = "👤 Góc nhìn thứ nhất"
+		print("View: 1st Person")
+	else:
+		# Đang ở góc nhìn thứ nhất (Dummy FPV) -> chuyển sang góc nhìn thứ ba (SpectatorCam)
+		freeCam.make_current()
+		toggle_view_button.text = "🎥 Góc nhìn thứ ba"
+		print("View: 3rd Person (Free Cam)")
+
+func _on_exit_button_pressed() -> void:
+	# Dừng âm thanh và giải phóng 3D clone
+	is_playing = false
+	if playerAudio:
+		playerAudio.stop()
+	if active_dummy:
+		active_dummy.queue_free()
+		active_dummy = null
+	
+	print("Exit Spectator: Switching back to SessionListScene...")
+	get_tree().change_scene_to_file("res://Prefabs/UI/SessionListScene.tscn")
+
+# --- Timing Helpers ---
+func _format_time(seconds: float) -> String:
+	var total_seconds = floor(seconds)
+	var mins = floor(total_seconds / 60)
+	var secs = int(total_seconds) % 60
+	return "%02d:%02d" % [mins, secs]
+
+func _update_timer_label() -> void:
+	if timer_label:
+		if is_audio_loading:
+			timer_label.text = "%s / %s  ( Đang tải âm thanh: %d%% )" % [_format_time(playback_time), _format_time(max_duration), int(audio_download_progress)]
+		else:
+			timer_label.text = "%s / %s" % [_format_time(playback_time), _format_time(max_duration)]
+
+func _start_audio_download() -> void:
+	is_audio_loading = true
+	_http_audio = HTTPRequest.new()
+	add_child(_http_audio)
+	_http_audio.request_completed.connect(_on_audio_download_completed)
+	
+	_http_audio.set_download_file(SessionData.target_audio_path)
+	
+	var headers = [
+		"Authorization: Bearer " + SessionData.accessToken
+	]
+	var err = _http_audio.request(SessionData.target_audio_url, headers, HTTPClient.METHOD_GET)
+	if err != OK:
+		is_audio_loading = false
+		print("SpectatorManager: Không thể gửi yêu cầu tải audio (lỗi %d)" % err)
+		_update_timer_label()
+
+func _on_audio_download_completed(result: int, responseCode: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+	is_audio_loading = false
+	_update_timer_label()
+	
+	if result != HTTPRequest.RESULT_SUCCESS or responseCode != 200:
+		print("SpectatorManager: Lỗi tải audio trong background!")
+		return
+		
+	print("SpectatorManager: Background audio tải thành công → ", SessionData.target_audio_path)
+	_load_audio_file()
+
+func _load_audio_file() -> void:
+	if FileAccess.file_exists(SessionData.target_audio_path):
+		var file = FileAccess.open(SessionData.target_audio_path, FileAccess.READ)
+		var bytes = file.get_buffer(file.get_length())
+		file.close()
+		
+		var wav_stream = AudioStreamWAV.new()
+		wav_stream.format = AudioStreamWAV.FORMAT_16_BITS
+		wav_stream.mix_rate = int(AudioServer.get_mix_rate())
+		wav_stream.stereo = true
+		
+		wav_stream.data = bytes.slice(44)
+		playerAudio.stream = wav_stream
+		
+		# Sync audio to current playing timeline
+		if is_playing:
+			playerAudio.play(playback_time)

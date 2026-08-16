@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chjox2uqaqbb2"
+path="res://.godot/imported/toi_la_thuc_uong_co_mau_vang_co_bot_trang_nguoi_74cfd4ce-3d0f-4951-b3a2-06a3a7e4f5a8.mp3-f4cf0d1c601c5553f3fac936267d80dc.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Beer/toi_la_thuc_uong_co_mau_vang_co_bot_trang_nguoi_74cfd4ce-3d0f-4951-b3a2-06a3a7e4f5a8.mp3"
+dest_files=["res://.godot/imported/toi_la_thuc_uong_co_mau_vang_co_bot_trang_nguoi_74cfd4ce-3d0f-4951-b3a2-06a3a7e4f5a8.mp3-f4cf0d1c601c5553f3fac936267d80dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

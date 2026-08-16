@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dq0ya523026uw"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_c0e1e6c8-c4a7-464f-b218-20f74b42aea9.mp3-3c8df8fca17b62b9a3187f901d3542a6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/ban_oi_day_la_cai_gi_vay_c0e1e6c8-c4a7-464f-b218-20f74b42aea9.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_c0e1e6c8-c4a7-464f-b218-20f74b42aea9.mp3-3c8df8fca17b62b9a3187f901d3542a6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

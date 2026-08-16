@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://deg0iuhtt5heo"
+path="res://.godot/imported/goi_xuc_xich_01482eb5-e71d-4184-ba58-e463338400bd.mp3-bf1c4529b29ac35d54100c7ca9fd09bf.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Meat Products/PackOfSausages/goi_xuc_xich_01482eb5-e71d-4184-ba58-e463338400bd.mp3"
+dest_files=["res://.godot/imported/goi_xuc_xich_01482eb5-e71d-4184-ba58-e463338400bd.mp3-bf1c4529b29ac35d54100c7ca9fd09bf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

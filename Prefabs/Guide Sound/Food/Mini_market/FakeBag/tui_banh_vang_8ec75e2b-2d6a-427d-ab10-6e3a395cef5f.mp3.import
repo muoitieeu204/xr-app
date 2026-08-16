@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7lej0dehpg86"
+path="res://.godot/imported/tui_banh_vang_8ec75e2b-2d6a-427d-ab10-6e3a395cef5f.mp3-0961ad5ca8f6844f3fcb572f821785db.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBag/tui_banh_vang_8ec75e2b-2d6a-427d-ab10-6e3a395cef5f.mp3"
+dest_files=["res://.godot/imported/tui_banh_vang_8ec75e2b-2d6a-427d-ab10-6e3a395cef5f.mp3-0961ad5ca8f6844f3fcb572f821785db.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

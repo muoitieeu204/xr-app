@@ -1,0 +1,205 @@
+[gd_scene load_steps=14 format=3 uid="uid://bq6frg3g1t8mh"]
+
+[sub_resource type="Gradient" id="Gradient_teal_glow"]
+colors = PackedColorArray(0.305882, 0.67451, 0.686275, 0.25098, 0.305882, 0.67451, 0.686275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_teal_glow"]
+gradient = SubResource("Gradient_teal_glow")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_pink_glow"]
+colors = PackedColorArray(1, 0.556863, 0.556863, 0.25098, 1, 0.556863, 0.556863, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pink_glow"]
+gradient = SubResource("Gradient_pink_glow")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_menu"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 8
+border_color = Color(0.952941, 0.956863, 0.964706, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.05)
+shadow_size = 40
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 28
+font_color = Color(0.066667, 0.094118, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+content_margin_top = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_logout_normal"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.9, 0.4, 0.4, 1)
+border_width_bottom = 4
+border_color = Color(0.7, 0.3, 0.3, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_logout_pressed"]
+content_margin_top = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.8, 0.35, 0.35, 1)
+border_width_bottom = 2
+border_color = Color(0.7, 0.3, 0.3, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_logout_hover"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.8, 0.35, 0.35, 1)
+border_width_bottom = 4
+border_color = Color(0.7, 0.3, 0.3, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="MenuScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundDim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.992157, 0.960784, 0.627451)
+
+[node name="GlowTopRight" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -350.0
+offset_bottom = 350.0
+grow_horizontal = 0
+texture = SubResource("GradientTexture2D_teal_glow")
+
+[node name="GlowBottomLeft" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -350.0
+offset_right = 350.0
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_pink_glow")
+
+[node name="MenuBox" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(400, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -240.0
+offset_right = 200.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_menu")
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuBox"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuBox/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Title" type="Label" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "⏸ PAUSE MENU"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="MenuBox/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="BtnSetting" type="Button" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "⚙️ Setting"
+
+[node name="Spacer2" type="Control" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BtnLogout" type="Button" parent="MenuBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_logout_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_logout_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_logout_hover")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_focus")
+text = "🚪 Logout"

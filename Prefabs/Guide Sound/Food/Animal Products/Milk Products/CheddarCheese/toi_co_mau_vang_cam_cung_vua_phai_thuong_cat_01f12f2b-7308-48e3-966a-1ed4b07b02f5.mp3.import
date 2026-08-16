@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmrta7bw35l54"
+path="res://.godot/imported/toi_co_mau_vang_cam_cung_vua_phai_thuong_cat_01f12f2b-7308-48e3-966a-1ed4b07b02f5.mp3-a59ba9f0668826e5dd8dd097cb0aaf34.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Animal Products/Milk Products/CheddarCheese/toi_co_mau_vang_cam_cung_vua_phai_thuong_cat_01f12f2b-7308-48e3-966a-1ed4b07b02f5.mp3"
+dest_files=["res://.godot/imported/toi_co_mau_vang_cam_cung_vua_phai_thuong_cat_01f12f2b-7308-48e3-966a-1ed4b07b02f5.mp3-a59ba9f0668826e5dd8dd097cb0aaf34.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

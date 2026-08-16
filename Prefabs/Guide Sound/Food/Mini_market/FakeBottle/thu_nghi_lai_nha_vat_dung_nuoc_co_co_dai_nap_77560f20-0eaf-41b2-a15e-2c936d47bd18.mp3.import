@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cusx7t23ebxc"
+path="res://.godot/imported/thu_nghi_lai_nha_vat_dung_nuoc_co_co_dai_nap_77560f20-0eaf-41b2-a15e-2c936d47bd18.mp3-f21190c7066befc9e307176224af8390.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/thu_nghi_lai_nha_vat_dung_nuoc_co_co_dai_nap_77560f20-0eaf-41b2-a15e-2c936d47bd18.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_vat_dung_nuoc_co_co_dai_nap_77560f20-0eaf-41b2-a15e-2c936d47bd18.mp3-f21190c7066befc9e307176224af8390.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

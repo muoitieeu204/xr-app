@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djc6x1nymgxe1"
+path="res://.godot/imported/10_mon_do_con_dang_cam_co_ten_la_gi_1109dbd7-cb7e-4aca-ba80-531e823a126b.mp3-3aa57930523829589c54c2cd105d4b4e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/10_mon_do_con_dang_cam_co_ten_la_gi_1109dbd7-cb7e-4aca-ba80-531e823a126b.mp3"
+dest_files=["res://.godot/imported/10_mon_do_con_dang_cam_co_ten_la_gi_1109dbd7-cb7e-4aca-ba80-531e823a126b.mp3-3aa57930523829589c54c2cd105d4b4e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://foegirbunkmw"
+path="res://.godot/imported/qua_tao_c995bdc5-ee16-442a-8b55-1de6a96f4c9f.mp3-c9eadbc70f64ae1adf3e21ce9a7dc5cd.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Apple/qua_tao_c995bdc5-ee16-442a-8b55-1de6a96f4c9f.mp3"
+dest_files=["res://.godot/imported/qua_tao_c995bdc5-ee16-442a-8b55-1de6a96f4c9f.mp3-c9eadbc70f64ae1adf3e21ce9a7dc5cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhqemnmr3fqjc"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_lam_tu_giay_cung_de_dung_ef6c4f51-9571-42b2-82b1-1c8f3e123c66.mp3-bd7e519ca3a35a3ae50b1383edfd5163.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeCarton2/thu_nghi_lai_nha_cai_lam_tu_giay_cung_de_dung_ef6c4f51-9571-42b2-82b1-1c8f3e123c66.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_lam_tu_giay_cung_de_dung_ef6c4f51-9571-42b2-82b1-1c8f3e123c66.mp3-bd7e519ca3a35a3ae50b1383edfd5163.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

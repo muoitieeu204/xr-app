@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2mlemvfjb7yg"
+path="res://.godot/imported/thu_nghi_lai_nha_tra_co_mui_thom_xoai_ngot_diu_0c5dbe36-70d8-47cc-a9b1-94ee60695007.mp3-d44f4f22ddccd1688404b145e83c62e7.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/MangoTea/thu_nghi_lai_nha_tra_co_mui_thom_xoai_ngot_diu_0c5dbe36-70d8-47cc-a9b1-94ee60695007.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_tra_co_mui_thom_xoai_ngot_diu_0c5dbe36-70d8-47cc-a9b1-94ee60695007.mp3-d44f4f22ddccd1688404b145e83c62e7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

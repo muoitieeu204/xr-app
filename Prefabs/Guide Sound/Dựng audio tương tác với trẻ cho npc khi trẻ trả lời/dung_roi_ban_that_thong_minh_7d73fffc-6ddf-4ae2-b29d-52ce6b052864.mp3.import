@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn3c2a3la7x2w"
+path="res://.godot/imported/dung_roi_ban_that_thong_minh_7d73fffc-6ddf-4ae2-b29d-52ce6b052864.mp3-b9f8dec3d631836273572df64de752b8.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/dung_roi_ban_that_thong_minh_7d73fffc-6ddf-4ae2-b29d-52ce6b052864.mp3"
+dest_files=["res://.godot/imported/dung_roi_ban_that_thong_minh_7d73fffc-6ddf-4ae2-b29d-52ce6b052864.mp3-b9f8dec3d631836273572df64de752b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvej5q2f0frem"
+path="res://.godot/imported/thu_nghi_lai_nha_chai_chat_long_dung_giat_quan_ebb564a2-8f8d-41cc-845d-ce81d22fa2b0.mp3-ba2b8c012522e104bb9a2c9e4708627e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Hygiene Products/LiquidDetergent/thu_nghi_lai_nha_chai_chat_long_dung_giat_quan_ebb564a2-8f8d-41cc-845d-ce81d22fa2b0.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_chai_chat_long_dung_giat_quan_ebb564a2-8f8d-41cc-845d-ce81d22fa2b0.mp3-ba2b8c012522e104bb9a2c9e4708627e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

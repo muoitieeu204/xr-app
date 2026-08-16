@@ -1,0 +1,88 @@
+[gd_scene load_steps=15 format=3 uid="uid://bk0ikcmoalasp"]
+
+[ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="1_06lpp"]
+[ext_resource type="PackedScene" uid="uid://dm2mrwobcdh57" path="res://Assets/3D Models For Supermarket/Fruits/FakeApple.tscn" id="2_fgjhn"]
+[ext_resource type="PackedScene" uid="uid://dd1pvuih87jmv" path="res://Assets/3D Models For Supermarket/Fruits/FakeGreenApple.tscn" id="3_p71rr"]
+[ext_resource type="PackedScene" uid="uid://dk01pht2o72c7" path="res://Assets/3D Models For Supermarket/Fruits/FakeMango.tscn" id="4_hnwxc"]
+[ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/RowSpawner.gd" id="8_diu1w"]
+[ext_resource type="PackedScene" uid="uid://dcdlplkk7if88" path="res://Assets/3D Models For Supermarket/Fruits/FakeBanana.tscn" id="9_diu1w"]
+[ext_resource type="ArrayMesh" uid="uid://bk0e624mn81fh" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/Apple.tres" id="9_i00jv"]
+[ext_resource type="ArrayMesh" uid="uid://chjag24flsmkk" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/GreenApple.tres" id="10_e1tde"]
+[ext_resource type="ArrayMesh" uid="uid://530j2sj5w06v" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/Banana.res" id="10_i00jv"]
+[ext_resource type="ArrayMesh" uid="uid://cv0fy4dei7emw" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/Mango.tres" id="11_i00jv"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_sxxh4"]
+transform_format = 1
+instance_count = 10
+mesh = ExtResource("9_i00jv")
+buffer = PackedFloat32Array(0.005, 0, 0, 0, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 0.25, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 0.5, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 0.75, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 1, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 1.25, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 1.5, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 1.75, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 2, 0, 0.005, 0, 0, 0, 0, 0.005, 0, 0.005, 0, 0, 2.25, 0, 0.005, 0, 0, 0, 0, 0.005, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_bf1wc"]
+transform_format = 1
+instance_count = 10
+mesh = ExtResource("10_e1tde")
+buffer = PackedFloat32Array(0.01, 0, 0, 0, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 0.25, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 0.5, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 0.75, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 1, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 1.25, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 1.5, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 1.75, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 2, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0, 0.01, 0, 0, 2.25, 0, -0.0017364819, 0.009848077, 0, 0, -0.009848077, -0.0017364819, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_e1tde"]
+transform_format = 1
+instance_count = 10
+mesh = ExtResource("11_i00jv")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 0.25, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 0.5, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 0.75, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 1, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 1.25, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 1.5, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 1.75, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 2, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0, 1, 0, 0, 2.25, 0, 0.9865151, 0.16367033, 0, 0, -0.16367033, 0.9865151, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_vd161"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("10_i00jv")
+buffer = PackedFloat32Array(-0.0068404013, 0.018793853, 8.215054e-10, 0, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0, -0.0068404013, 0.018793853, 8.215054e-10, 0.1, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0, -0.0068404013, 0.018793853, 8.215054e-10, 0.2, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0, -0.0068404013, 0.018793853, 8.215054e-10, 0.3, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0, -0.0068404013, 0.018793853, 8.215054e-10, 0.4, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0, -0.0068404013, 0.018793853, 8.215054e-10, 0.5, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0, -0.0068404013, 0.018793853, 8.215054e-10, 0.6, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0, -0.0068404013, 0.018793853, 8.215054e-10, 0.7, 0, -8.7422775e-10, 0.02, 0, 0.018793853, 0.0068404013, 2.9900343e-10, 0)
+
+[node name="Fridge" instance=ExtResource("1_06lpp")]
+
+[node name="AppleRowSpawner" type="Node3D" parent="." index="2"]
+transform = Transform3D(100, 0, 0, 0, 52.99193, -84.80481, 0, 84.80481, 52.99193, -109.03685, -51.419598, 25.906336)
+script = ExtResource("8_diu1w")
+item_scene = ExtResource("2_fgjhn")
+item_count = 10
+spacing = Vector3(0.25, 0, 0)
+mesh_scale = Vector3(0.005, 0.005, 0.005)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="AppleRowSpawner" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_sxxh4")
+
+[node name="GreenAppleRowSpawner" type="Node3D" parent="." index="3"]
+transform = Transform3D(100, 0, 0, 0, 34.202015, -93.96926, 0, 93.96926, 34.202015, -109.307396, -8.834616, 18.477743)
+script = ExtResource("8_diu1w")
+item_scene = ExtResource("3_p71rr")
+item_count = 10
+spacing = Vector3(0.25, 0, 0)
+mesh_rotation = Vector3(-100, 0, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="GreenAppleRowSpawner" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_bf1wc")
+
+[node name="MangoRowSpawner" type="Node3D" parent="." index="4"]
+transform = Transform3D(100, 0, 0, 0, -15.298579, 98.82284, 0, -98.82284, -15.298579, -106.87344, 27.681416, 23.675446)
+script = ExtResource("8_diu1w")
+item_scene = ExtResource("4_hnwxc")
+item_count = 10
+spacing = Vector3(0.25, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(-9.42, 0, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="MangoRowSpawner" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_e1tde")
+
+[node name="BananaRowSpawner" type="Node3D" parent="." index="5"]
+transform = Transform3D(300, 0, 0, 0, 158.97578, -254.41441, 0, 254.41441, 158.97578, -78.98332, 61.40336, 23.22804)
+script = ExtResource("8_diu1w")
+item_scene = ExtResource("9_diu1w")
+item_count = 8
+spacing = Vector3(0.1, 0, 0)
+mesh_scale = Vector3(0.02, 0.02, 0.02)
+mesh_rotation = Vector3(-90, 250, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="BananaRowSpawner" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_vd161")

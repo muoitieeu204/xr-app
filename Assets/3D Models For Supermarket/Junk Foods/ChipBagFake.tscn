@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://bn4a50p5smv4u"]
+
+[ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_jd3bv"]
+[ext_resource type="PackedScene" uid="uid://dq0rudx5smwfo" path="res://Assets/3D Models For Supermarket/Junk Foods/ChipBagPickable.tscn" id="2_7xb1r"]
+[ext_resource type="AudioStream" uid="uid://byjk6dlkcoy2f" path="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Chips1/khoai_tay_chien_lat_ca375cce-e41c-4b9e-ae8f-f3a9379cbcf8.mp3" id="3_r7wap"]
+[ext_resource type="AudioStream" uid="uid://dfwduaupx3ldu" path="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Chips1/toi_la_nhung_lat_mong_gion_dung_trong_tui_an_e716937b-739c-428f-a4b0-21f2153ce255.mp3" id="4_fp54b"]
+[ext_resource type="AudioStream" uid="uid://out7m83evffi" path="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Chips1/thu_nghi_lai_nha_tui_lat_mong_gion_an_vat_nay_104fa46d-44b4-4dd2-b39a-60d68279b823.mp3" id="5_5ekpi"]
+[ext_resource type="ArrayMesh" uid="uid://batjjs2r7w3yv" path="res://Assets/3D Models For Supermarket/Junk Foods/Chips/Chip.tres" id="6_lsl4k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_16iis"]
+size = Vector3(0.12390137, 0.044815063, 0.19586182)
+
+[node name="Area3D" type="Area3D"]
+collision_layer = 5
+script = ExtResource("1_jd3bv")
+realItem = ExtResource("2_7xb1r")
+itemName = "túi khoai tây chiên lát"
+itemNameSound = ExtResource("3_r7wap")
+hintAudios = Array[AudioStream]([ExtResource("4_fp54b"), ExtResource("5_5ekpi")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012817383, 0.008094788, 0.03036499)
+shape = SubResource("BoxShape3D_16iis")
+
+[node name="CombinedMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00074017793, 0, 0.023919731)
+lod_bias = 0.05
+mesh = ExtResource("6_lsl4k")

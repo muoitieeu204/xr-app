@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6co7xmq1y6ws"
+path="res://.godot/imported/minh_nghe_chua_ro_ban_noi_to_hon_nhe_6eac2d40-47bc-4ef1-a9d4-527340c76d96.mp3-095fd2396ca819ea323fd5445bd14952.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/minh_nghe_chua_ro_ban_noi_to_hon_nhe_6eac2d40-47bc-4ef1-a9d4-527340c76d96.mp3"
+dest_files=["res://.godot/imported/minh_nghe_chua_ro_ban_noi_to_hon_nhe_6eac2d40-47bc-4ef1-a9d4-527340c76d96.mp3-095fd2396ca819ea323fd5445bd14952.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

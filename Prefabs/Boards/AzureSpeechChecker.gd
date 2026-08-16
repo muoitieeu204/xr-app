@@ -1,11 +1,12 @@
 extends Node
 
-@export var speechManager : Node
 @export var recordButton : Button
 @export var outputLabel : Label
 
+var speechManager : Node
 var assignWord: String = ""
 func _ready() -> void:
+	speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if(speechManager == null):
 		printerr("Node not found, make sure to assign it!!")
 		return

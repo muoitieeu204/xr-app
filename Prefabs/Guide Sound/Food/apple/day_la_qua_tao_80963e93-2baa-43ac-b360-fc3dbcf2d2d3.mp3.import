@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4jhdcid88x12"
+path="res://.godot/imported/day_la_qua_tao_80963e93-2baa-43ac-b360-fc3dbcf2d2d3.mp3-21e818381829b8ccac56e1dd63e61bad.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/apple/day_la_qua_tao_80963e93-2baa-43ac-b360-fc3dbcf2d2d3.mp3"
+dest_files=["res://.godot/imported/day_la_qua_tao_80963e93-2baa-43ac-b360-fc3dbcf2d2d3.mp3-21e818381829b8ccac56e1dd63e61bad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

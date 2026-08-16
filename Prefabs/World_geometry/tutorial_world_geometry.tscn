@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b2dnnn88rv0bs" path="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb" id="1_q3kpf"]
 [ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="2_nw4y8"]
-[ext_resource type="PackedScene" uid="uid://b6jji0b685hmk" path="res://Prefabs/VoiceCommandHandler.tscn" id="3_e5dr6"]
+[ext_resource type="PackedScene" uid="uid://b6jji0b685hmk" path="res://scripts/Environment Script/VoiceCommandHandler.tscn" id="3_e5dr6"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="4_30it3"]
 [ext_resource type="PackedScene" uid="uid://chy5bpaqrk4ei" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round.glb" id="5_nnr6a"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="6_fmjue"]

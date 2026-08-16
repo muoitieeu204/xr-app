@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7jbhjjviuk3t"
+path="res://.godot/imported/thu_nghi_lai_nha_cai_co_quai_xach_dung_de_dung_235d2bdb-1205-41bc-8659-be1126c7479b.mp3-36ada9ce06e8a7e383c93b4c1d8fae6f.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bag-flat/thu_nghi_lai_nha_cai_co_quai_xach_dung_de_dung_235d2bdb-1205-41bc-8659-be1126c7479b.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_cai_co_quai_xach_dung_de_dung_235d2bdb-1205-41bc-8659-be1126c7479b.mp3-36ada9ce06e8a7e383c93b4c1d8fae6f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

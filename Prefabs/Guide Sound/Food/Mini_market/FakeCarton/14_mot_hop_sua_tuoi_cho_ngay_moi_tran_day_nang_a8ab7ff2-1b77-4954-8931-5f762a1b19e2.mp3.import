@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cacm73w1med3x"
+path="res://.godot/imported/14_mot_hop_sua_tuoi_cho_ngay_moi_tran_day_nang_a8ab7ff2-1b77-4954-8931-5f762a1b19e2.mp3-c0d68541eb4a9da67071029bfe33914e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Mini_market/FakeCarton/14_mot_hop_sua_tuoi_cho_ngay_moi_tran_day_nang_a8ab7ff2-1b77-4954-8931-5f762a1b19e2.mp3"
+dest_files=["res://.godot/imported/14_mot_hop_sua_tuoi_cho_ngay_moi_tran_day_nang_a8ab7ff2-1b77-4954-8931-5f762a1b19e2.mp3-c0d68541eb4a9da67071029bfe33914e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

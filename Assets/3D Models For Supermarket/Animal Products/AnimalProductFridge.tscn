@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://bia6p3cptq7d6"]
+
+[ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="1_1dtum"]
+[ext_resource type="PackedScene" uid="uid://d23rnmupgvhql" path="res://Assets/3D Models For Supermarket/Animal Products/FakeSausagesPackage.tscn" id="3_513nt"]
+[ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="4_3w2b7"]
+[ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/RowSpawner.gd" id="5_kothn"]
+[ext_resource type="ArrayMesh" uid="uid://by2u8dywnw1gu" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/Chicken.tres" id="6_4n4wm"]
+[ext_resource type="ArrayMesh" uid="uid://doss4be4vw2dd" path="res://Assets/3D Models For Supermarket/Animal Products/Milk Products/Cheese.tres" id="6_p2s4g"]
+[ext_resource type="ArrayMesh" uid="uid://nk3x3tsw8k1g" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/LowpolyPackOfSausages.tres" id="8_p2s4g"]
+[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/FakeChicken.tscn" id="10_skd0j"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_4n4wm"]
+transform_format = 1
+instance_count = 5
+mesh = ExtResource("6_4n4wm")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 0.8660254, -0.5, 0, 0, 0.5, 0.8660254, 0, 1, 0, 0, 0.5, 0, 0.8660254, -0.5, 0, 0, 0.5, 0.8660254, 0, 1, 0, 0, 1, 0, 0.8660254, -0.5, 0, 0, 0.5, 0.8660254, 0, 1, 0, 0, 1.5, 0, 0.8660254, -0.5, 0, 0, 0.5, 0.8660254, 0, 1, 0, 0, 2, 0, 0.8660254, -0.5, 0, 0, 0.5, 0.8660254, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_pkfpe"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("6_p2s4g")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0.3, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0.6, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0.90000004, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1.2, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1.5, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1.8000001, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 2.1000001, 0, 1, 0, 0, 0, 0, 1, 0)
+
+[sub_resource type="MultiMesh" id="MultiMesh_p2s4g"]
+transform_format = 1
+instance_count = 8
+mesh = ExtResource("8_p2s4g")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0, 1, 0, 0, 0.3, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0, 1, 0, 0, 0.6, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0, 1, 0, 0, 0.90000004, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0, 1, 0, 0, 1.2, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0, 1, 0, 0, 1.5, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0, 1, 0, 0, 1.8000001, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0, 1, 0, 0, 2.1000001, 0, 0.9659258, -0.25881904, 0, 0, 0.25881904, 0.9659258, 0)
+
+[node name="Fridge" instance=ExtResource("1_1dtum")]
+
+[node name="ChickenRowSpawner" type="Node3D" parent="." index="2"]
+transform = Transform3D(100, 0, 0, 0, 86.59999, 0, 0, 0, 50, -99.216576, -1.1917934, 7.8578353)
+script = ExtResource("5_kothn")
+item_scene = ExtResource("10_skd0j")
+spacing = Vector3(0.5, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(30, 0, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="ChickenRowSpawner" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_4n4wm")
+
+[node name="CheeseRowSpawner" type="Node3D" parent="." index="3"]
+transform = Transform3D(100, 0, 0, 0, 62.29481, 34.73292, 0, -60.157406, 35.966988, -103.394844, 72.56168, 18.5855)
+script = ExtResource("5_kothn")
+item_scene = ExtResource("4_3w2b7")
+item_count = 8
+spacing = Vector3(0.3, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="CheeseRowSpawner" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_pkfpe")
+
+[node name="SausagesPackerRowSpawner" type="Node3D" parent="." index="4"]
+transform = Transform3D(100, 0, 0, 0, 62.29481, -34.73292, 0, 60.157406, 35.966988, -107.44164, 34.691517, 23.200714)
+script = ExtResource("5_kothn")
+item_scene = ExtResource("3_513nt")
+item_count = 8
+spacing = Vector3(0.3, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+mesh_rotation = Vector3(15, 0, 0)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="SausagesPackerRowSpawner" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_p2s4g")
+
+[node name="SausagesPackerRowSpawner2" type="Node3D" parent="." index="5"]
+transform = Transform3D(100, 0, 0, 0, 62.29481, -34.73292, 0, 60.157406, 35.966988, -107.44164, -43.151604, 23.200714)
+script = ExtResource("5_kothn")
+item_scene = ExtResource("3_513nt")
+item_count = 8
+spacing = Vector3(0.3, 0, 0)
+mesh_scale = Vector3(1, 1, 1)
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="SausagesPackerRowSpawner2" index="0"]
+lod_bias = 0.05
+multimesh = SubResource("MultiMesh_p2s4g")

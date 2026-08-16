@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b17bvpsawpw1a"
+path="res://.godot/imported/ban_oi_day_la_qua_gi_vay_bf842ef9-06dd-418f-818d-2b92d50f852e.mp3-d639fc5e138dbdc95d8e049486fc9ce5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pear/ban_oi_day_la_qua_gi_vay_bf842ef9-06dd-418f-818d-2b92d50f852e.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_qua_gi_vay_bf842ef9-06dd-418f-818d-2b92d50f852e.mp3-d639fc5e138dbdc95d8e049486fc9ce5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

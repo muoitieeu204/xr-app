@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1ss5fm7avn3x"]
+
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_74bi1"]
+[ext_resource type="PackedScene" uid="uid://beo6363t1bga5" path="res://Prefabs/PlayerPrefabs/PlayerUI.tscn" id="2_b1dny"]
+[ext_resource type="Script" uid="uid://byuaw41r1hsuf" path="res://Prefabs/PlayerPrefabs/UIVisibleController.gd" id="4_b1dny"]
+
+[node name="Main" type="Node3D"]
+
+[node name="WristUI" parent="." instance=ExtResource("1_74bi1")]
+screen_size = Vector2(0.29, 0.175)
+collision_layer = 0
+scene = ExtResource("2_b1dny")
+viewport_size = Vector2(1280, 720)
+transparent = 1
+unshaded = true
+scene_properties_keys = PackedStringArray("PlayerUIController.gd")
+
+[node name="UIVisibleController" type="Node" parent="." node_paths=PackedStringArray("uiViewport")]
+script = ExtResource("4_b1dny")
+uiViewport = NodePath("../WristUI")

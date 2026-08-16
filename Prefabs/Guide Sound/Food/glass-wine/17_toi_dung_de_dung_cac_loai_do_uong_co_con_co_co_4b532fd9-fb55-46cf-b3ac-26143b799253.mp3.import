@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsqcsq0svw57h"
+path="res://.godot/imported/17_toi_dung_de_dung_cac_loai_do_uong_co_con_co_co_4b532fd9-fb55-46cf-b3ac-26143b799253.mp3-814842cd8779e06ecaa48773ec0cd179.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/glass-wine/17_toi_dung_de_dung_cac_loai_do_uong_co_con_co_co_4b532fd9-fb55-46cf-b3ac-26143b799253.mp3"
+dest_files=["res://.godot/imported/17_toi_dung_de_dung_cac_loai_do_uong_co_con_co_co_4b532fd9-fb55-46cf-b3ac-26143b799253.mp3-814842cd8779e06ecaa48773ec0cd179.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

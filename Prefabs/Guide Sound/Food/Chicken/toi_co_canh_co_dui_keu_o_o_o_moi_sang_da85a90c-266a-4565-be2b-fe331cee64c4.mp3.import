@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbmng2nlpb3lx"
+path="res://.godot/imported/toi_co_canh_co_dui_keu_o_o_o_moi_sang_da85a90c-266a-4565-be2b-fe331cee64c4.mp3-c815d2dd8f71bfc6dda89e0f4bb41516.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Chicken/toi_co_canh_co_dui_keu_o_o_o_moi_sang_da85a90c-266a-4565-be2b-fe331cee64c4.mp3"
+dest_files=["res://.godot/imported/toi_co_canh_co_dui_keu_o_o_o_moi_sang_da85a90c-266a-4565-be2b-fe331cee64c4.mp3-c815d2dd8f71bfc6dda89e0f4bb41516.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

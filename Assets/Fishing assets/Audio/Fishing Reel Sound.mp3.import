@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d2pov5q8koak5"
+path="res://.godot/imported/Fishing Reel Sound.mp3-2e1b1873780ffb2657a146ca62b0f22e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Fishing assets/Audio/Fishing Reel Sound.mp3"
+dest_files=["res://.godot/imported/Fishing Reel Sound.mp3-2e1b1873780ffb2657a146ca62b0f22e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

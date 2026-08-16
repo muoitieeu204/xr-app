@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca1iirmkb3kl"
+path="res://.godot/imported/ban_oi_day_la_cu_gi_vay_3d81fac7-1824-472f-8796-58a85a73ddec.mp3-4043223bbcfc55ab143b101e2b342fb6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/beet/ban_oi_day_la_cu_gi_vay_3d81fac7-1824-472f-8796-58a85a73ddec.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cu_gi_vay_3d81fac7-1824-472f-8796-58a85a73ddec.mp3-4043223bbcfc55ab143b101e2b342fb6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

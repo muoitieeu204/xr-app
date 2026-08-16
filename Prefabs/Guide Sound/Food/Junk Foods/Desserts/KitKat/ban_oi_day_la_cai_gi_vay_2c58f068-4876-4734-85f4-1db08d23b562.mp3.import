@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2me68tpt22gy"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_2c58f068-4876-4734-85f4-1db08d23b562.mp3-8db2010efbab2473fd08566643c8deb3.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Desserts/KitKat/ban_oi_day_la_cai_gi_vay_2c58f068-4876-4734-85f4-1db08d23b562.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_2c58f068-4876-4734-85f4-1db08d23b562.mp3-8db2010efbab2473fd08566643c8deb3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

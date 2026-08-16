@@ -1,0 +1,162 @@
+[gd_scene load_steps=24 format=3 uid="uid://02rsk8jpt617"]
+
+[ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
+[ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
+[ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="1_sf545"]
+[ext_resource type="Shader" uid="uid://c0yvptvmdwuam" path="res://Scenes/water_shader.gdshader" id="2_3jmkl"]
+[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/FakeChicken.tscn" id="2_hrype"]
+[ext_resource type="PackedScene" uid="uid://d23rnmupgvhql" path="res://Assets/3D Models For Supermarket/Animal Products/FakeSausagesPackage.tscn" id="3_by2g3"]
+[ext_resource type="PackedScene" uid="uid://cktjpyqd1jidl" path="res://Assets/LowpolyIsland.tscn" id="5_r85ih"]
+[ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="6_r85ih"]
+[ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="7_enjev"]
+[ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="8_du2qv"]
+[ext_resource type="PackedScene" uid="uid://dtnb01ikb4a5j" path="res://Assets/Fishing assets/FakeFishingRod.tscn" id="9_enjev"]
+[ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="12_by2g3"]
+[ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_at3n1"]
+[ext_resource type="PackedScene" uid="uid://xacd6pnc7smn" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall-stool.glb" id="13_cscui"]
+[ext_resource type="Script" uid="uid://c7ntv6adlua4w" path="res://scripts/Environment Script/glass_door.gd" id="15_bvhf0"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
+panorama = ExtResource("1_sf545")
+
+[sub_resource type="Sky" id="Sky_nvpip"]
+sky_material = SubResource("PanoramaSkyMaterial_excqj")
+
+[sub_resource type="Environment" id="Environment_xxvxh"]
+background_mode = 2
+background_energy_multiplier = 0.7
+sky = SubResource("Sky_nvpip")
+tonemap_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_sf545"]
+size = Vector2(100, 100)
+subdivide_width = 64
+subdivide_depth = 64
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_04ajj"]
+render_priority = 0
+shader = ExtResource("2_3jmkl")
+shader_parameter/WATER_COL = Color(0.04, 0.38, 0.88, 1)
+shader_parameter/WATER2_COL = Color(0.04, 0.35, 0.78, 1)
+shader_parameter/FOAM_COL = Color(0.8125, 0.9609, 0.9648, 1)
+shader_parameter/distortion_speed = 2.0
+shader_parameter/tile = Vector2(50, 50)
+shader_parameter/height = 10.0
+shader_parameter/wave_size = Vector2(6, 6)
+shader_parameter/wave_speed = 3.755
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_enjev"]
+size = Vector3(100, 3, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r85ih"]
+size = Vector3(0.01, 10, 20)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jdhyv"]
+height = 0.5
+radius = 1.5
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["LevelController"]]
+script = ExtResource("1_enjev")
+catchable_items = Array[PackedScene]([ExtResource("2_hrype"), ExtResource("3_by2g3")])
+spawn_marker = NodePath("ItemSpawnerPoint/ItemSpawner")
+isLesson = true
+levelId = 2
+taskList = Array[String](["túi xúc xích", "gà nguyên con"])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xxvxh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+
+[node name="WaterShader" type="Area3D" parent="." node_paths=PackedStringArray("respawn_point")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.571668, 0)
+collision_mask = 524293
+gravity_space_override = 3
+gravity = 0.0
+linear_damp_space_override = 3
+linear_damp = 10.0
+angular_damp_space_override = 3
+angular_damp = 5.0
+script = ExtResource("1_m8c15")
+respawn_point = NodePath("../Spawner")
+
+[node name="Water" type="MeshInstance3D" parent="WaterShader"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3039732, 1.425847, -1.399037)
+mesh = SubResource("PlaneMesh_sf545")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_04ajj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WaterShader"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.619618, 0)
+shape = SubResource("BoxShape3D_enjev")
+
+[node name="low_poly_pirate_island" parent="." instance=ExtResource("5_r85ih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.359273, 0)
+
+[node name="BarrierCollision" type="StaticBody3D" parent="low_poly_pirate_island"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.370778, -2.724558, 0)
+shape = SubResource("BoxShape3D_r85ih")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.501773, -2.724558, 0)
+shape = SubResource("BoxShape3D_r85ih")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]
+transform = Transform3D(0.50650036, 0, 0.8622398, 0, 1, 0, -0.8622398, 0, 0.50650036, -3.080279, -2.724558, 10.76873)
+shape = SubResource("BoxShape3D_r85ih")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]
+transform = Transform3D(0.50650036, 0, 0.8622398, 0, 1, 0, -0.8622398, 0, 0.50650036, 6.9233055, -2.7245572, -8.665824)
+shape = SubResource("BoxShape3D_r85ih")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]
+transform = Transform3D(0.50126916, 0, -0.8652915, 0, 1, 0, 0.8652915, 0, 0.50126916, -4.6309004, -2.7245553, -9.974037)
+shape = SubResource("BoxShape3D_r85ih")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="low_poly_pirate_island/BarrierCollision"]
+transform = Transform3D(0.50126916, 0, -0.8652915, 0, 1, 0, 0.8652915, 0, 0.50126916, 7.4329586, -2.7245553, 9.341222)
+shape = SubResource("BoxShape3D_r85ih")
+
+[node name="NpcZone" type="Node3D" parent="."]
+
+[node name="StallCashier" parent="NpcZone" instance=ExtResource("13_at3n1")]
+transform = Transform3D(1.6934829, 0, 1.0640093, 0, 2, 0, -1.0640093, 0, 1.6934829, -4.1337614, -0.8199711, 5.304629)
+
+[node name="Npc" parent="NpcZone/StallCashier" instance=ExtResource("12_by2g3")]
+transform = Transform3D(0.0042935014, 0, 0.49998155, 0, 0.5, 0, -0.49998155, 0, 0.0042935014, -0.41395855, -1.1920929e-07, -0.024498343)
+
+[node name="TeleportArea" parent="." instance=ExtResource("6_r85ih")]
+transform = Transform3D(0.52278125, 1.4411022e-08, -0.8524669, 4.371139e-08, 1, 4.3711395e-08, 0.8524669, -6.011402e-08, 0.52278125, -5.0211678, 0.2915678, -2.9898114)
+target_scene = "uid://bt0ier0gd1sh5"
+holoText = "StarterHub"
+
+[node name="Spawner" parent="." instance=ExtResource("7_enjev")]
+transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, -0.3043599, 0.70082664, -3.2737913)
+playerNode = ExtResource("8_du2qv")
+
+[node name="ItemSpawnerPoint" type="Node3D" parent="."]
+
+[node name="Stall" parent="ItemSpawnerPoint" instance=ExtResource("13_cscui")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 10.176163, -1.4229829, -2.5347362)
+
+[node name="ItemSpawner" type="Marker3D" parent="ItemSpawnerPoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -0.2157383, -2.5492582)
+
+[node name="FishingRodFake" parent="." instance=ExtResource("9_enjev")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.0335484)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9865394, 0, -2.7776976)
+script = ExtResource("15_bvhf0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.19340515)
+shape = SubResource("CylinderShape3D_jdhyv")
+debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
+
+[connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
+[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_area_3d_body_exited"]

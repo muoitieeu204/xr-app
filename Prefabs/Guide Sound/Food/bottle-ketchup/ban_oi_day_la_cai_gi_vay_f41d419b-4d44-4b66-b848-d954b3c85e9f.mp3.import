@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b70xk3bjobg8s"
+path="res://.godot/imported/ban_oi_day_la_cai_gi_vay_f41d419b-4d44-4b66-b848-d954b3c85e9f.mp3-aacc70b47668c07b8a2cc68f6516b7cc.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/bottle-ketchup/ban_oi_day_la_cai_gi_vay_f41d419b-4d44-4b66-b848-d954b3c85e9f.mp3"
+dest_files=["res://.godot/imported/ban_oi_day_la_cai_gi_vay_f41d419b-4d44-4b66-b848-d954b3c85e9f.mp3-aacc70b47668c07b8a2cc68f6516b7cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

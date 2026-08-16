@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0hlrlc8jwwum"
+path="res://.godot/imported/thu_nghi_lai_nha_hop_nho_dung_nhieu_dieu_thuoc_a183b794-69c7-4e4a-b8ec-f3158b541cc1.mp3-c99d3365ad4c7211843f15e64127e4b3.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Monopoly Products/Cigarette1/thu_nghi_lai_nha_hop_nho_dung_nhieu_dieu_thuoc_a183b794-69c7-4e4a-b8ec-f3158b541cc1.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_hop_nho_dung_nhieu_dieu_thuoc_a183b794-69c7-4e4a-b8ec-f3158b541cc1.mp3-c99d3365ad4c7211843f15e64127e4b3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

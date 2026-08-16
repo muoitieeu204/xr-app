@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc1ggbd07p60y"
+path="res://.godot/imported/toi_phinh_to_o_duoi_nho_o_tren_an_gion_va_mong_7741956a-b432-4078-bdac-60af99329a44.mp3-76bc567ceb13c4fdfad97efb6fbac168.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pear/toi_phinh_to_o_duoi_nho_o_tren_an_gion_va_mong_7741956a-b432-4078-bdac-60af99329a44.mp3"
+dest_files=["res://.godot/imported/toi_phinh_to_o_duoi_nho_o_tren_an_gion_va_mong_7741956a-b432-4078-bdac-60af99329a44.mp3-76bc567ceb13c4fdfad97efb6fbac168.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

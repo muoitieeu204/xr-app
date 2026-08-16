@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://doqgebgfxfg8x"]
 
-[ext_resource type="Script" uid="uid://sdgif64tmxp2" path="res://scripts/AzureSpeechManager.cs" id="1_cdeuh"]
+[ext_resource type="Script" uid="uid://sdgif64tmxp2" path="res://scripts/CoreManager/AzureSpeechManager.cs" id="1_cdeuh"]
 [ext_resource type="Script" uid="uid://crxsv8367bn3x" path="res://Prefabs/Boards/UIController.gd" id="1_ddyxf"]
 [ext_resource type="Script" uid="uid://c0a43qhll1qeb" path="res://Prefabs/Boards/AzureSpeechChecker.gd" id="2_ddyxf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_10sii"]
 font_size = 64
 
-[node name="Control" type="Control" node_paths=PackedStringArray("titleLabel")]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,17 +15,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ddyxf")
-titleLabel = NodePath("MarginContainer/VBoxContainer/Label2")
 titleLabelText = "Con Chó🐶"
 targetWord = "con chó"
 
 [node name="AzureManager" type="Node" parent="."]
 script = ExtResource("1_cdeuh")
 
-[node name="CheckerBoardController" type="Node" parent="." node_paths=PackedStringArray("speechManager", "recordButton", "outputLabel")]
+[node name="CheckerBoardController" type="Node" parent="." node_paths=PackedStringArray("recordButton", "outputLabel")]
 unique_name_in_owner = true
 script = ExtResource("2_ddyxf")
-speechManager = NodePath("../AzureManager")
 recordButton = NodePath("../MarginContainer/VBoxContainer/Button")
 outputLabel = NodePath("../MarginContainer/VBoxContainer/Label")
 

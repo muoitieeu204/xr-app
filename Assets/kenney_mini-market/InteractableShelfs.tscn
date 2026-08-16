@@ -1,0 +1,127 @@
+[gd_scene load_steps=8 format=3 uid="uid://kk3ilhskw5px"]
+
+[ext_resource type="PackedScene" uid="uid://cngiglc3db05c" path="res://Assets/kenney_mini-market/FakeShelfBag.tscn" id="1_jy3vd"]
+[ext_resource type="PackedScene" uid="uid://i134r505gwsa" path="res://Assets/kenney_mini-market/FakeShelfBox.tscn" id="2_xob1i"]
+[ext_resource type="PackedScene" uid="uid://bxvk8ja6jom74" path="res://Assets/kenney_mini-market/DisplayBread.tscn" id="3_kbn52"]
+[ext_resource type="PackedScene" uid="uid://b67kn2fqwbkvy" path="res://Assets/kenney_mini-market/DisplayWatermelon.tscn" id="4_chorf"]
+[ext_resource type="PackedScene" uid="uid://daysnqe2mrqcs" path="res://Assets/kenney_mini-market/DisplayTomato.tscn" id="5_hmyyu"]
+[ext_resource type="PackedScene" uid="uid://50wk5a1g78ll" path="res://Assets/kenney_mini-market/FakeShelfEnd.tscn" id="6_v88io"]
+[ext_resource type="PackedScene" uid="uid://bvg614f3o0mp6" path="res://Assets/kenney_mini-market/ShelfEnd2.tscn" id="7_d7awt"]
+
+[node name="InteractableShelf" type="Node3D"]
+
+[node name="ShelfBag" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2.734)
+
+[node name="shelf-bags2" parent="ShelfBag" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -26.001867)
+
+[node name="shelf-bags3" parent="ShelfBag" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -28.055159)
+
+[node name="shelf-bags4" parent="ShelfBag" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -23.942976)
+
+[node name="shelf-bags5" parent="ShelfBag" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -32.194782)
+
+[node name="shelf-bags6" parent="ShelfBag" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -34.248074)
+
+[node name="shelf-bags7" parent="ShelfBag" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -30.13589)
+
+[node name="ShelfBag2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 2.734)
+
+[node name="shelf-bags2" parent="ShelfBag2" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -26.001867)
+
+[node name="shelf-bags3" parent="ShelfBag2" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -28.055159)
+
+[node name="shelf-bags4" parent="ShelfBag2" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -23.942976)
+
+[node name="shelf-bags5" parent="ShelfBag2" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -32.194782)
+
+[node name="shelf-bags6" parent="ShelfBag2" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -34.248074)
+
+[node name="shelf-bags7" parent="ShelfBag2" instance=ExtResource("1_jy3vd")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 21.56487, 1, -30.13589)
+
+[node name="ShelfBox" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.376341)
+
+[node name="FakeShelfBox" parent="ShelfBox" instance=ExtResource("2_xob1i")]
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.283691, 1.0943806, -26.203087)
+
+[node name="FakeShelfBox2" parent="ShelfBox" instance=ExtResource("2_xob1i")]
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -24.151041)
+
+[node name="FakeShelfBox3" parent="ShelfBox" instance=ExtResource("2_xob1i")]
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -22.12266)
+
+[node name="FakeShelfBox4" parent="ShelfBox" instance=ExtResource("2_xob1i")]
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -20.07773)
+
+[node name="FakeShelfBox5" parent="ShelfBox" instance=ExtResource("2_xob1i")]
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -18.025692)
+
+[node name="FakeShelfBox6" parent="ShelfBox" instance=ExtResource("2_xob1i")]
+transform = Transform3D(-1.09278474e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278474e-07, 25.28378, 1.0936477, -15.997311)
+
+[node name="DisplayBread" parent="." instance=ExtResource("3_kbn52")]
+transform = Transform3D(-5, 0, 7.54979e-07, 0, 5, 0, -7.54979e-07, 0, -5, 5, 1, -3)
+
+[node name="DisplayBread4" parent="DisplayBread" instance=ExtResource("3_kbn52")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4000003, 0, 3.5762787e-07)
+
+[node name="DisplayWatermelon" parent="DisplayBread" instance=ExtResource("4_chorf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79999995, 0, 1.1920929e-07)
+
+[node name="DisplayTomato" parent="DisplayBread" instance=ExtResource("5_hmyyu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999999, 0, 2.3841858e-07)
+
+[node name="ShelfEnd" type="Node3D" parent="."]
+
+[node name="ShelfEnd10" parent="ShelfEnd" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -27.5531)
+
+[node name="ShelfEnd11" parent="ShelfEnd" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -29.5531)
+
+[node name="ShelfEnd12" parent="ShelfEnd" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -31.5531)
+
+[node name="shelf-end2" parent="ShelfEnd" instance=ExtResource("7_d7awt")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -21.5531)
+
+[node name="shelf-end3" parent="ShelfEnd" instance=ExtResource("7_d7awt")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -23.5531)
+
+[node name="ShelfEnd2" type="Node3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, -33.142853)
+
+[node name="ShelfEnd7" parent="ShelfEnd2" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -21.5531)
+
+[node name="ShelfEnd8" parent="ShelfEnd2" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -23.5531)
+
+[node name="ShelfEnd9" parent="ShelfEnd2" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -25.5531)
+
+[node name="ShelfEnd10" parent="ShelfEnd2" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -27.5531)
+
+[node name="ShelfEnd11" parent="ShelfEnd2" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -29.5531)
+
+[node name="ShelfEnd12" parent="ShelfEnd2" instance=ExtResource("6_v88io")]
+transform = Transform3D(-1.09278474e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278474e-07, 30, 1, -31.5531)
+
+[node name="shelf-end4" parent="ShelfEnd2" instance=ExtResource("7_d7awt")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 7.5890923, 1, -29)

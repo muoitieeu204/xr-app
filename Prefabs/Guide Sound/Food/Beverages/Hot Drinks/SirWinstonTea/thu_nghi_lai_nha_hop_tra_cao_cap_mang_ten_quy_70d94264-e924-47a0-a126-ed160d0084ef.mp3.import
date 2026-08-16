@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxrm2hljgkkih"
+path="res://.godot/imported/thu_nghi_lai_nha_hop_tra_cao_cap_mang_ten_quy_70d94264-e924-47a0-a126-ed160d0084ef.mp3-c2ebbfb18ad94aa62158d2c5b2053a5f.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/thu_nghi_lai_nha_hop_tra_cao_cap_mang_ten_quy_70d94264-e924-47a0-a126-ed160d0084ef.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_hop_tra_cao_cap_mang_ten_quy_70d94264-e924-47a0-a126-ed160d0084ef.mp3-c2ebbfb18ad94aa62158d2c5b2053a5f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

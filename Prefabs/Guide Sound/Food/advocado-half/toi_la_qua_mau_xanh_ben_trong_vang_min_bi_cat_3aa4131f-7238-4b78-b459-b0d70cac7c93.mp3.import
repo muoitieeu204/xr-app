@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bismie2008pua"
+path="res://.godot/imported/toi_la_qua_mau_xanh_ben_trong_vang_min_bi_cat_3aa4131f-7238-4b78-b459-b0d70cac7c93.mp3-3edb1dd03f271167b37fda6fe36cb5e0.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/advocado-half/toi_la_qua_mau_xanh_ben_trong_vang_min_bi_cat_3aa4131f-7238-4b78-b459-b0d70cac7c93.mp3"
+dest_files=["res://.godot/imported/toi_la_qua_mau_xanh_ben_trong_vang_min_bi_cat_3aa4131f-7238-4b78-b459-b0d70cac7c93.mp3-3edb1dd03f271167b37fda6fe36cb5e0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

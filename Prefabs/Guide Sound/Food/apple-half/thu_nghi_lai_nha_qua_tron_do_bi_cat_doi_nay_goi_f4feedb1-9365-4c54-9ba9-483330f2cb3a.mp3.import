@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pg7ucy4vtjel"
+path="res://.godot/imported/thu_nghi_lai_nha_qua_tron_do_bi_cat_doi_nay_goi_f4feedb1-9365-4c54-9ba9-483330f2cb3a.mp3-f50a84ba5ff8d16ead921feec00dcd9e.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/apple-half/thu_nghi_lai_nha_qua_tron_do_bi_cat_doi_nay_goi_f4feedb1-9365-4c54-9ba9-483330f2cb3a.mp3"
+dest_files=["res://.godot/imported/thu_nghi_lai_nha_qua_tron_do_bi_cat_doi_nay_goi_f4feedb1-9365-4c54-9ba9-483330f2cb3a.mp3-f50a84ba5ff8d16ead921feec00dcd9e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
