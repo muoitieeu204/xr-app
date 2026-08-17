@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://dorwh24bkxu7y"]
+
+[ext_resource type="Script" uid="uid://dmivs2rlbp1ia" path="res://scripts/Environment Script/TaskwayPoint.gd" id="1_jnmd1"]
+[ext_resource type="AudioStream" uid="uid://b2cs84t8ee1dm" path="res://Assets/Audio/clean_double_pop_n_magic_sparkle_alert_sound.mp3" id="2_7rgwd"]
+[ext_resource type="Texture2D" uid="uid://e3a5qg1yfcmm" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/minimap_arrow_a.png" id="3_nxxi6"]
+
+[sub_resource type="Animation" id="Animation_wui0w"]
+resource_name = "task_point_spin"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.1415927), Vector3(0, 0.7853982, -3.1415927), Vector3(0, 1.5707964, -3.1415927), Vector3(0, 2.0943952, -3.1415927), Vector3(0, 2.8797932, -3.1415927), Vector3(0, 3.6651914, -3.1415927), Vector3(0, 5.148721, -3.1415927), Vector3(0, 5.7595863, -3.1415927), Vector3(0, 6.2831855, -3.1415927)]
+}
+
+[sub_resource type="Animation" id="Animation_u3c16"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.1415927)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_amuud"]
+_data = {
+&"RESET": SubResource("Animation_u3c16"),
+&"task_point_spin": SubResource("Animation_wui0w")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x2ulc"]
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("indicator_sound")]
+script = ExtResource("1_jnmd1")
+indicator_sound = NodePath("AudioStreamPlayer3D")
+
+[node name="Label3D" type="Label3D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_7rgwd")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("3_nxxi6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 524289
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

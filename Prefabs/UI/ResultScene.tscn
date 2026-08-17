@@ -56,7 +56,7 @@ outline_size = 8
 outline_color = Color(0.4, 0.2, 0.1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_score"]
-font_size = 48
+font_size = 32
 font_color = Color(0.305882, 0.67451, 0.686275, 1)
 outline_size = 4
 outline_color = Color(0.239216, 0.541176, 0.54902, 1)

@@ -363,15 +363,16 @@ albedo_color = Color(0.75562954, 0.23084787, 0.22709063, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_bmsno"]
 material = SubResource("StandardMaterial3D_84ai0")
 
-[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player", "npc_record_indicator", "body_to_breathe")]
+[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player", "body_to_breathe", "npc_record_indicator", "npc_label_indicator")]
 script = ExtResource("1_84ai0")
 npc_audio_player = NodePath("AudioStreamPlayer3D")
 npc_animation_player = NodePath("AnimationPlayer")
-npc_record_indicator = NodePath("MeshInstance3D")
 question_1_audio = ExtResource("2_bmsno")
 correct_audio = Array[AudioStream]([ExtResource("3_sigga"), ExtResource("4_gj5ub"), ExtResource("5_76h6f")])
 wrong_audio = Array[AudioStream]([ExtResource("6_4s1g8"), ExtResource("7_2xgaf"), ExtResource("8_d07lw")])
 body_to_breathe = NodePath("Skeleton3D")
+npc_record_indicator = NodePath("RecordIndicator")
+npc_label_indicator = NodePath("RecordIndicator/Label3D")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="."]
 bones/0/name = "Root"
@@ -733,6 +734,11 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9331248, 0)
 shape = SubResource("CapsuleShape3D_84ai0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="RecordIndicator" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36502177, 1.62415, 0.42445666)
 mesh = SubResource("SphereMesh_bmsno")
+
+[node name="Label3D" type="Label3D" parent="RecordIndicator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.0235062, 2.1238441)
+pixel_size = 0.03
+billboard = 1
