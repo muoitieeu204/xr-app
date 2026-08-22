@@ -742,3 +742,4 @@ mesh = SubResource("SphereMesh_bmsno")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.0235062, 2.1238441)
 pixel_size = 0.03
 billboard = 1
+outline_modulate = Color(0.11858145, 0.11858136, 0.11858138, 1)

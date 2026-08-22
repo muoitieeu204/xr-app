@@ -6,6 +6,10 @@ extends XRToolsSceneBase
 @export var levelId: int = 0
 @export var taskList: Array[String] = []
 
+@export_group("Level Tutorial Variable")
+@export var waypointPrefab: PackedScene
+@export var waypointSequence: Array[Node3D]
+
 var currentScore: int = 0
 var startedAt: String = ""
 var interactionLog: String = ""
@@ -14,6 +18,8 @@ var completedTask: Array[String] = []
 var completionStatus = false
 var correctCount: int = 0
 var errorCount: int = 0
+var currentStepIndex: int = 0
+var currentWaypoint: Node3D = null
 
 var currentTimeSecconds: int = 0
 var lastEmittedTime: int = -1
@@ -39,6 +45,7 @@ func _ready() -> void:
 	
 	startedAt = Time.get_datetime_string_from_system(false) + "+07:00"
 	ReplayManager.start_recording()
+	show_next_waypoint()
 
 # ----------------- LEVEL TRACKING LOGIC -----------------
 func CorrectAnswer(point: int, itemName: String) -> void:
@@ -124,3 +131,13 @@ func _on_timer_timeout() -> void:
 			is_enabled = config.get_value("Game", "HealthWarning", true)
 		if is_enabled:
 			GameManager.health_warning_triggered.emit()
+
+func show_next_waypoint() -> void:
+	if is_instance_valid(currentWaypoint):
+		currentWaypoint.queue_free()
+	
+	if currentStepIndex < waypointSequence.size() and waypointPrefab:
+		var target = waypointSequence[currentStepIndex]
+		currentWaypoint = waypointPrefab.instantiate()
+		add_child(currentWaypoint)
+		currentWaypoint.global_position = target.global_position

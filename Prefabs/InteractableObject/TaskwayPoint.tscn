@@ -4,6 +4,21 @@
 [ext_resource type="AudioStream" uid="uid://b2cs84t8ee1dm" path="res://Assets/Audio/clean_double_pop_n_magic_sparkle_alert_sound.mp3" id="2_7rgwd"]
 [ext_resource type="Texture2D" uid="uid://e3a5qg1yfcmm" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/minimap_arrow_a.png" id="3_nxxi6"]
 
+[sub_resource type="Animation" id="Animation_u3c16"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.1415927)]
+}
+
 [sub_resource type="Animation" id="Animation_wui0w"]
 resource_name = "task_point_spin"
 length = 1.6
@@ -21,21 +36,6 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, -3.1415927), Vector3(0, 0.7853982, -3.1415927), Vector3(0, 1.5707964, -3.1415927), Vector3(0, 2.0943952, -3.1415927), Vector3(0, 2.8797932, -3.1415927), Vector3(0, 3.6651914, -3.1415927), Vector3(0, 5.148721, -3.1415927), Vector3(0, 5.7595863, -3.1415927), Vector3(0, 6.2831855, -3.1415927)]
 }
 
-[sub_resource type="Animation" id="Animation_u3c16"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, -3.1415927)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amuud"]
 _data = {
 &"RESET": SubResource("Animation_u3c16"),
@@ -49,6 +49,11 @@ script = ExtResource("1_jnmd1")
 indicator_sound = NodePath("AudioStreamPlayer3D")
 
 [node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6314093, 0)
+billboard = 1
+outline_modulate = Color(0.06053029, 0.06053038, 0.060530327, 1)
+text = "Bé hãy lại đây"
+autowrap_mode = 2
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_7rgwd")
