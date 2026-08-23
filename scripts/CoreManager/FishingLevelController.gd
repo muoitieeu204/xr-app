@@ -15,6 +15,7 @@ var startedAt: String = ""
 var interactionLog: String = ""
 var isLevelFinished: bool = false
 var completedTask: Array[String] = []
+var attemptedItems: Array[String] = []
 var completionStatus = false
 var correctCount: int = 0
 var errorCount: int = 0
@@ -37,6 +38,7 @@ func _ready() -> void:
 	interactionLog = ""
 	isLevelFinished = false
 	completedTask.clear()
+	attemptedItems.clear()
 	completionStatus = false
 	correctCount = 0
 	errorCount = 0
@@ -87,11 +89,14 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Correct Answer " + itemName)
 	
-	if taskList.has(itemName) and not completedTask.has(itemName):
+	if taskList.has(itemName) and not attemptedItems.has(itemName):
+		attemptedItems.append(itemName) # Lock the score forever
 		correctCount += 1
 		currentScore = min(100, currentScore + point)
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
+		
+	if not completedTask.has(itemName):
 		markTaskComplete(itemName)
 	else:
 		print("Not in task list or already completed. Logged, but no score change!")
@@ -104,7 +109,8 @@ func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
 	
-	if taskList.has(itemName) and not completedTask.has(itemName):
+	if taskList.has(itemName) and not attemptedItems.has(itemName):
+		attemptedItems.append(itemName) # Lock the score forever
 		errorCount += 1
 		currentScore = max(0, currentScore - point)
 		print("Score updated: ", currentScore)
