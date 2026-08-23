@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://es27af61bm2n"]
+[gd_scene load_steps=28 format=4 uid="uid://es27af61bm2n"]
 
 [ext_resource type="Script" uid="uid://nt6onlsgwd67" path="res://scripts/NPCs/NpcController.gd" id="1_h6g2f"]
 [ext_resource type="AudioStream" uid="uid://bux71gkg4bvxk" path="res://Prefabs/Guide Sound/Food/Mini_market/FakeBottle/ban_oi_day_la_cai_gi_vay_82ce6a09-6c73-4efb-b64e-e681949f2bb4.mp3" id="2_250oy"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b1yq8a4hroo8l" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/26_o_chua_chinh_xac_mat_roi_khong_sao_dau_ban_thu_567f6636-6434-4e78-b45f-85acf25faaa1.mp3" id="6_y41o8"]
 [ext_resource type="AudioStream" uid="uid://bp0xht85yyftu" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/27_tiec_qua_cau_tra_loi_nay_chua_dung_roi_co_gang_33762bcd-5672-4204-bc0c-9fe50c7ead58.mp3" id="7_ffhln"]
 [ext_resource type="AudioStream" uid="uid://btqo58r0aar1x" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/chua_dung_roi_ban_nghi_lai_xem_nao_8d1261c0-b266-428f-9b42-48bdf887c939.mp3" id="8_5fiif"]
+[ext_resource type="AudioStream" uid="uid://dxc3y1fftlwy0" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/29_chua_dung_mat_roi_nhung_khong_sao_ne_qua_mon_6248e493-d8be-4be9-94fd-ffd802a2e4b8.mp3" id="9_250oy"]
 [ext_resource type="Texture2D" uid="uid://c7mkd173sheui" path="res://Assets/Character/Creative_Character_free_Textures_4.png" id="9_r7boe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y645v"]
@@ -352,9 +353,10 @@ npc_animation_player = NodePath("AnimationPlayer")
 question_1_audio = ExtResource("2_250oy")
 correct_audio = Array[AudioStream]([ExtResource("3_axlr3"), ExtResource("4_sheod"), ExtResource("5_6u0xv")])
 wrong_audio = Array[AudioStream]([ExtResource("6_y41o8"), ExtResource("7_ffhln"), ExtResource("8_5fiif")])
+skip_audio = ExtResource("9_250oy")
 body_to_breathe = NodePath("Skeleton3D")
 npc_record_indicator = NodePath("RecordIndicator")
-npc_label_indicator = NodePath("RecordIndicator/Label3D")
+npc_label_indicator = NodePath("Label3D")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="."]
 bones/0/name = "Root"
@@ -705,8 +707,8 @@ shape = SubResource("CapsuleShape3D_84ai0")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36502177, 1.62415, 0.42445666)
 mesh = SubResource("SphereMesh_bmsno")
 
-[node name="Label3D" type="Label3D" parent="RecordIndicator"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.0235062, 2.1238441)
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36502177, 1.4217994, 0.63684106)
 pixel_size = 0.03
-billboard = 1
+billboard = 2
 outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)

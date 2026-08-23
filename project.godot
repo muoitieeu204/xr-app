@@ -60,6 +60,7 @@ MenuViewport="Vr Player Main Menu"
 MicController=""
 LevelController=""
 FishingLevelController=""
+pickable=""
 
 [godot_xr_tools]
 

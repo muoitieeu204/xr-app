@@ -44,16 +44,16 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x2ulc"]
 
-[node name="Node3D" type="Node3D" node_paths=PackedStringArray("indicator_sound")]
+[node name="TaskwayPoint" type="Node3D" node_paths=PackedStringArray("indicator_sound")]
 script = ExtResource("1_jnmd1")
 indicator_sound = NodePath("AudioStreamPlayer3D")
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6314093, 0)
-billboard = 1
-outline_modulate = Color(0.06053029, 0.06053038, 0.060530327, 1)
-text = "Bé hãy lại đây"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
 autowrap_mode = 2
+width = 300.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_7rgwd")
@@ -70,7 +70,7 @@ libraries = {
 autoplay = "task_point_spin"
 
 [node name="Area3D" type="Area3D" parent="."]
-collision_mask = 524289
+collision_mask = 524288
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_x2ulc")

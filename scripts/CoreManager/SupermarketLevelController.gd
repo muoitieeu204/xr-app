@@ -6,8 +6,8 @@ extends XRToolsSceneBase
 @export var levelId: int = 0
 @export var taskList: Array[String] = []
 
+#Item pointer is even num, CashRegister pointer is odd num
 @export_group("Level Tutorial Variable")
-@export var waypointPrefab: PackedScene
 @export var waypointSequence: Array[Node3D]
 
 var currentScore: int = 0
@@ -19,10 +19,10 @@ var completionStatus = false
 var correctCount: int = 0
 var errorCount: int = 0
 var currentStepIndex: int = 0
-var currentWaypoint: Node3D = null
 
 var currentTimeSecconds: int = 0
 var lastEmittedTime: int = -1
+
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
@@ -49,33 +49,38 @@ func _ready() -> void:
 
 # ----------------- LEVEL TRACKING LOGIC -----------------
 func CorrectAnswer(point: int, itemName: String) -> void:
-	if completedTask.has(itemName):
-		return
-	currentScore = min(100, currentScore + point)
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Correct Answer " + itemName)
-	print("Score updated: ", currentScore)
-	GameManager.score_updated.emit(currentScore)
-	correctCount += 1
-	markTaskComplete(itemName)
+	
+	if taskList.has(itemName) and not completedTask.has(itemName):
+		correctCount += 1
+		currentScore = min(100, currentScore + point)
+		print("Score updated: ", currentScore)
+		GameManager.score_updated.emit(currentScore)
+		markTaskComplete(itemName)
+	else:
+		print("Not in task list or already completed. Logged, but no score change!")
 
 func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
-	if completedTask.has(itemName):
-		return
-	currentScore = max(0, currentScore - point)
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
-	print("Score updated: ", currentScore)
-	GameManager.score_updated.emit(currentScore)
-	errorCount += 1
+	
+	if taskList.has(itemName) and not completedTask.has(itemName):
+		errorCount += 1
+		currentScore = max(0, currentScore - point)
+		print("Score updated: ", currentScore)
+		GameManager.score_updated.emit(currentScore)
+		
+	if errorCount >= 10:
+		skip_to_exit()
 
 func FinishLevel():
 	if isLevelFinished == true:
@@ -112,12 +117,17 @@ func markTaskComplete(taskName: String) -> void:
 	if taskList.has(taskName) and not completedTask.has(taskName):
 		completedTask.append(taskName)
 		get_tree().call_group("TaskUI", "update_tasks", taskList, completedTask)
+		advance_tutorial_step()
 	if not taskList.is_empty() and completedTask.size() >= taskList.size():
 		if not completionStatus:
 			print("All tasks completed!")
 			currentScore = min(100, currentScore + 20)
 			GameManager.score_updated.emit(currentScore)
 			completionStatus = true
+			var logMessage = "[" + str(currentTimeSecconds) + "s] Điểm bonus hoàn thành nhiệm vụ: +20 điểm thưởng!"
+			if interactionLog == "":
+				interactionLog = logMessage
+			else: interactionLog += " | " + logMessage
 
 func _on_timer_timeout() -> void:
 	if isLevelFinished:
@@ -131,13 +141,30 @@ func _on_timer_timeout() -> void:
 			is_enabled = config.get_value("Game", "HealthWarning", true)
 		if is_enabled:
 			GameManager.health_warning_triggered.emit()
+	if currentTimeSecconds == 900:
+		skip_to_exit()
 
 func show_next_waypoint() -> void:
-	if is_instance_valid(currentWaypoint):
-		currentWaypoint.queue_free()
-	
-	if currentStepIndex < waypointSequence.size() and waypointPrefab:
+	for point in waypointSequence:
+		if is_instance_valid(point):
+			point.hide()
+			point.process_mode = Node.PROCESS_MODE_DISABLED
+	if currentStepIndex < waypointSequence.size():
 		var target = waypointSequence[currentStepIndex]
-		currentWaypoint = waypointPrefab.instantiate()
-		add_child(currentWaypoint)
-		currentWaypoint.global_position = target.global_position
+		if is_instance_valid(target):
+			target.show()
+			target.process_mode = Node.PROCESS_MODE_INHERIT
+
+	
+func advance_tutorial_step() -> void:
+	currentStepIndex += 1
+	show_next_waypoint()
+
+func skip_to_exit() -> void:
+	currentStepIndex = waypointSequence.size() - 1
+	show_next_waypoint()
+	print("Tutorial skipped! Guiding player to the exit")
+
+func item_grabbed_for_tutorial() -> void:
+	if currentStepIndex % 2 == 0 and currentStepIndex < waypointSequence.size() - 1:
+		advance_tutorial_step()
