@@ -12,6 +12,7 @@ const CHILDREN_API := "https://103-162-30-111.sslip.io/api/child-profiles/my-stu
 @onready var child_name_label: Label = $Background/VBox/HeaderPanel/Header/ChildNameLabel
 @onready var session_content_area: Control = $SessionContentArea
 @onready var session_list: VBoxContainer = $SessionContentArea/CenterContainer/SessionListCard/VBox/ScrollContainer/SessionList
+@onready var search_input: LineEdit = $SessionContentArea/CenterContainer/SessionListCard/VBox/SearchInput
 @onready var loading_overlay: Control = $LoadingOverlay
 @onready var loading_label: Label = $LoadingOverlay/CenterContainer/PanelContainer/LoadingLabel
 @onready var error_dialog: AcceptDialog = $ErrorDialog
@@ -60,6 +61,9 @@ func _ready() -> void:
 	logout_button.pressed.connect(_on_logout_pressed)
 	logout_button.mouse_entered.connect(func(): _hover_btn(logout_button, true))
 	logout_button.mouse_exited.connect(func(): _hover_btn(logout_button, false))
+
+	# Kết nối ô tìm kiếm session
+	search_input.text_changed.connect(_on_search_text_changed)
 
 	# Bắt đầu kiểm tra: nếu đã chọn trẻ trước đó (quay lại từ spectator)
 	if PlayerData.childId > 0:
@@ -194,6 +198,7 @@ func _on_child_selected(child_data: Dictionary) -> void:
 # =======================================================================
 func _on_sessions_loaded(sessions: Array) -> void:
 	_sessions = sessions
+	search_input.text = ""
 	_hide_loading()
 	_build_session_cards()
 
@@ -202,20 +207,39 @@ func _on_load_failed(error: String) -> void:
 	error_dialog.dialog_text = "Lỗi tải danh sách:\n" + error
 	error_dialog.popup_centered()
 
-func _build_session_cards() -> void:
+func _build_session_cards(sessions_to_display: Array = _sessions) -> void:
 	for child in session_list.get_children():
 		child.queue_free()
 
-	if _sessions.is_empty():
+	if sessions_to_display.is_empty():
 		var lbl := Label.new()
-		lbl.text = "Chưa có buổi học nào được ghi lại."
+		if not search_input.text.strip_edges().is_empty():
+			lbl.text = "Không tìm thấy buổi học nào phù hợp với từ khóa."
+		else:
+			lbl.text = "Chưa có buổi học nào được ghi lại."
 		lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		lbl.add_theme_color_override("font_color", Color(0.5, 0.5, 0.5))
 		session_list.add_child(lbl)
 		return
 
-	for session in _sessions:
+	for session in sessions_to_display:
 		session_list.add_child(_create_session_card(session))
+
+# ponytail: Filter local sessions array in memory by query string (Session ID, Lesson Name, Date)
+func _on_search_text_changed(new_text: String) -> void:
+	var query := new_text.strip_edges().to_lower()
+	if query.is_empty():
+		_build_session_cards(_sessions)
+		return
+
+	var filtered := _sessions.filter(func(s: Dictionary) -> bool:
+		var session_id: String = str(s.get("sessionId", "")).to_lower()
+		var lesson_name: String = str(s.get("lessonName", "")).to_lower()
+		var exercise_name: String = str(s.get("exerciseName", "")).to_lower()
+		var created_at: String = str(s.get("completedAt", s.get("startedAt", ""))).to_lower()
+		return query in session_id or query in lesson_name or query in exercise_name or query in created_at
+	)
+	_build_session_cards(filtered)
 
 func _create_session_card(session: Dictionary) -> PanelContainer:
 	var lesson_name: String = str(session.get("lessonName", ""))
@@ -278,17 +302,12 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 	name_lbl.add_theme_color_override("font_color", Color(0.066667, 0.094118, 0.152941, 1))
 	vbox.add_child(name_lbl)
 
-	var date_lbl := Label.new()
-	date_lbl.text = "📅 %s   🏆 Điểm: %d   ⏱ %s" % [created_at, int(score), duration_str]
-	date_lbl.add_theme_font_size_override("font_size", 12)
-	date_lbl.add_theme_color_override("font_color", Color(0.223529, 0.552941, 0.564706, 1))
-	vbox.add_child(date_lbl)
-
-	var stats_lbl := Label.new()
-	stats_lbl.text = "✅ Đúng: %d   ❌ Sai: %d   🆔 Session: %s" % [correct, error_cnt, session_id.left(8) + "..."]
-	stats_lbl.add_theme_font_size_override("font_size", 11)
-	stats_lbl.add_theme_color_override("font_color", Color(0.48, 0.52, 0.58, 1))
-	vbox.add_child(stats_lbl)
+	# ponytail: Streamlined card layout — showing only Date/Time and Session ID to keep UI clean and prevent API null mismatch issues
+	var info_lbl := Label.new()
+	info_lbl.text = "📅 %s   •   🆔 Session: %s" % [created_at, session_id]
+	info_lbl.add_theme_font_size_override("font_size", 13)
+	info_lbl.add_theme_color_override("font_color", Color(0.35, 0.42, 0.50, 1))
+	vbox.add_child(info_lbl)
 
 	var play_btn := Button.new()
 	play_btn.text = "▶  Xem lại"
