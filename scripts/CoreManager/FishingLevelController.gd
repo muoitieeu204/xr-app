@@ -1,7 +1,7 @@
 @tool
 extends XRToolsSceneBase
 
-@export_group("Fish Specific Variables")
+@export_group("Fish  Variables")
 @export var catchable_items: Array[PackedScene]
 @export var spawn_marker: Marker3D
 
@@ -15,6 +15,7 @@ var startedAt: String = ""
 var interactionLog: String = ""
 var isLevelFinished: bool = false
 var completedTask: Array[String] = []
+var attemptedItems: Array[String] = []
 var completionStatus = false
 var correctCount: int = 0
 var errorCount: int = 0
@@ -37,6 +38,7 @@ func _ready() -> void:
 	interactionLog = ""
 	isLevelFinished = false
 	completedTask.clear()
+	attemptedItems.clear()
 	completionStatus = false
 	correctCount = 0
 	errorCount = 0
@@ -59,7 +61,7 @@ func spawn_item(spawn_position: Vector3 = Vector3.ZERO):
 			item_name = temp_instance.get_meta("itemName")
 		if item_name == "" or not completedTask.has(item_name):
 			available_items.append(scene)
-		temp_instance.queue_free
+		temp_instance.queue_free()
 
 	var random_item_scene = null
 	if available_items.size() >0:
@@ -80,33 +82,39 @@ func spawn_item(spawn_position: Vector3 = Vector3.ZERO):
 
 # ----------------- LEVEL TRACKING LOGIC -----------------
 func CorrectAnswer(point: int, itemName: String) -> void:
-	if completedTask.has(itemName):
-		return
-	currentScore = min(100, currentScore + point)
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Correct Answer " + itemName)
-	print("Score updated: ", currentScore)
-	GameManager.score_updated.emit(currentScore)
-	correctCount += 1
-	markTaskComplete(itemName)
+	
+	if taskList.has(itemName) and not attemptedItems.has(itemName):
+		attemptedItems.append(itemName) # Lock the score forever
+		correctCount += 1
+		currentScore = min(100, currentScore + point)
+		print("Score updated: ", currentScore)
+		GameManager.score_updated.emit(currentScore)
+		
+	if not completedTask.has(itemName):
+		markTaskComplete(itemName)
+	else:
+		print("Not in task list or already completed. Logged, but no score change!")
 
 func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
-	if completedTask.has(itemName):
-		return
-	currentScore = max(0, currentScore - point)
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
-	print("Score updated: ", currentScore)
-	GameManager.score_updated.emit(currentScore)
-	errorCount += 1
+	
+	if taskList.has(itemName) and not attemptedItems.has(itemName):
+		attemptedItems.append(itemName) # Lock the score forever
+		errorCount += 1
+		currentScore = max(0, currentScore - point)
+		print("Score updated: ", currentScore)
+		GameManager.score_updated.emit(currentScore)
 
 func FinishLevel():
 	if isLevelFinished == true:
@@ -149,6 +157,9 @@ func markTaskComplete(taskName: String) -> void:
 			currentScore = min(100, currentScore + 20)
 			GameManager.score_updated.emit(currentScore)
 			completionStatus = true
+			var logMsg = "[" + str(currentTimeSecconds) + "s] Hoàn thành tất cả nhiệm vụ: +20 Điểm thưởng!"
+			if interactionLog == "": interactionLog = logMsg
+			else: interactionLog += " | " + logMsg
 
 func _on_timer_timeout() -> void:
 	if isLevelFinished:

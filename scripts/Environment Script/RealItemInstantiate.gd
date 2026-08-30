@@ -23,6 +23,7 @@ func pick_up(by: Node3D) -> void:
 	var realItemInstance = realItem.instantiate()
 	get_parent().add_child(realItemInstance)
 	realItemInstance.global_transform = global_transform
+	realItemInstance.add_to_group("pickable")
 	# Trick the VR Hand into holding the Real Item instead of this fake one
 	by.picked_up_object = realItemInstance
 	realItemInstance.pick_up(by)
@@ -42,6 +43,7 @@ func pick_up(by: Node3D) -> void:
 	GameManager.item_name_updated.emit(itemName)
 	realItemInstance.dropped.connect(func(_pickable): GameManager.item_name_updated.emit(""))
 	realItemInstance.grabbed.connect(func(_pickable, _by): GameManager.item_name_updated.emit(itemName))
+	get_tree().call_group("LevelController", "item_grabbed_for_tutorial")
 	# Delete the fake item
 	queue_free()
 

@@ -56,7 +56,7 @@ outline_size = 8
 outline_color = Color(0.4, 0.2, 0.1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_score"]
-font_size = 48
+font_size = 32
 font_color = Color(0.305882, 0.67451, 0.686275, 1)
 outline_size = 4
 outline_color = Color(0.239216, 0.541176, 0.54902, 1)
@@ -176,20 +176,12 @@ size_flags_horizontal = 4
 text = "🏆 KẾT QUẢ 🏆"
 label_settings = SubResource("LabelSettings_4jofw")
 
-[node name="Spacing" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
-custom_minimum_size = Vector2(0, 8)
-layout_mode = 2
-
 [node name="ScoreLabel" type="Label" parent="CenterContainer/ResultBox/VBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_score")
 horizontal_alignment = 1
 autowrap_mode = 3
-
-[node name="Spacing2" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
-custom_minimum_size = Vector2(0, 8)
-layout_mode = 2
 
 [node name="StatsGrid" type="GridContainer" parent="CenterContainer/ResultBox/VBoxContainer"]
 layout_mode = 2
@@ -238,10 +230,6 @@ layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_4jofw")
 
-[node name="Spacing4" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
-custom_minimum_size = Vector2(0, 8)
-layout_mode = 2
-
 [node name="RetryButton" type="Button" parent="CenterContainer/ResultBox/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
@@ -249,10 +237,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
 text = "🔄 Chơi Lại"
-
-[node name="Spacing3" type="Control" parent="CenterContainer/ResultBox/VBoxContainer"]
-custom_minimum_size = Vector2(0, 8)
-layout_mode = 2
 
 [node name="PromptHBox" type="HBoxContainer" parent="CenterContainer/ResultBox/VBoxContainer"]
 layout_mode = 2

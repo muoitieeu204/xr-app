@@ -16,6 +16,7 @@ func _ready() -> void:
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
 		speechManager.OnSpeechRecognized.connect(_on_speech_recognized)
+		speechManager.OnSpeechFailed.connect(_on_speech_failed)
 
 func start_checkout_test(itemId: String):
 	currentHeldItemId = itemId
@@ -43,3 +44,9 @@ func _on_speech_recognized(text: String):
 			print("Incorrect! You said: ", text, " | We cleaned it it to: ", cleanText)
 			emit_signal("speech_result", false)
 			get_tree().call_group("LevelController", "WrongAnswer", 10, currentHeldItemId, text)
+
+func _on_speech_failed(reason: String):
+	if currentHeldItemId != "":
+		print("Speech failed or silent! Reasong: ", reason)
+		emit_signal("speech_result", false)
+		get_tree().call_group("LevelController", "WrongAnswer", 5, currentHeldItemId, "[Không nghe rõ/ Im lặng]")

@@ -17,7 +17,7 @@ func _ready():
 	
 	refresh_timer = Timer.new()
 	refresh_timer.wait_time = refresh_delay_sec
-	refresh_timer.one_shot = true
+	refresh_timer.one_shot = false
 	refresh_timer.autostart = false
 	add_child(refresh_timer)
 	refresh_timer.timeout.connect(_on_timer_timeout)

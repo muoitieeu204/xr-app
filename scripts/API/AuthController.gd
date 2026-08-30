@@ -156,17 +156,30 @@ func _on_request_completed(result, responseCode, headers, body):
 		$WelcomeScene.visible = false
 		$LogoutBox.visible = false
 
-		# --- ROLE-BASED ROUTING ---
-		if SessionData.roleName == "Teacher":
-			# Teacher: chuyển thẳng sang SessionListScene (chọn trẻ trong đó)
-			print_debug("AuthController: Teacher detected → SessionListScene")
-			get_tree().change_scene_to_file("res://Prefabs/UI/SessionListScene.tscn")
-		elif childProfileScene != null:
-			# Parent / Student: chọn hồ sơ trẻ như bình thường
-			childProfileScene.visible = true
+		# --- ROLE & PLATFORM BASED ROUTING WITH FAILSAFE  ---
+		var is_vr_device : bool = OS.has_feature("android") or OS.has_feature("mobile") or OS.has_feature("vr_client")
+		var replay_scene := "res://Prefabs/UI/SessionListScene.tscn"
+
+		if not is_vr_device:
+			# Desktop Client: STRICTLY allow Teacher role only
+			if SessionData.roleName == "Teacher" and ResourceLoader.exists(replay_scene):
+				print_debug("AuthController: Teacher detected → SessionListScene")
+				get_tree().change_scene_to_file(replay_scene)
+			else:
+				# Block Parent/Student accounts on Desktop and keep login box open
+				print_debug("AuthController: Non-teacher role rejected on Desktop Client")
+				$LoginBox.visible = true
+				if errorLabel != null:
+					errorLabel.text = "Tài khoản không có quyền truy cập Replay trên Desktop (Dành riêng cho giáo viên)."
+					errorLabel.visible = true
+				SessionData.clear()
 		else:
-			$WelcomeScene.visible = true
-			print_debug("WARNING: ChildProfileScene not found!")
+			# VR / Mobile Client: Route Parent / Student accounts to child profiles selector
+			if childProfileScene != null:
+				childProfileScene.visible = true
+			else:
+				$WelcomeScene.visible = true
+				print_debug("WARNING: ChildProfileScene not found!")
 	else:
 		# If the API returned a failure (wrong password, etc.)
 		print_debug("API returned success: false")

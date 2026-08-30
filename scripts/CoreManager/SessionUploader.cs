@@ -29,7 +29,7 @@ public partial class SessionUploader : Node
 				form.Add(childId, "ChildProfileId");
 				// Attach sessionId into request body
 				var sessionId = new StringContent(childSessionId.ToString());
-				childId.Headers.ContentType = null;
+				sessionId.Headers.ContentType = null;
 				form.Add(sessionId, "childSessionId");
 				//Use FileStream for json
 				var jsonContent = new StreamContent(jsonStream);

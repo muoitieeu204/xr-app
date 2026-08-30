@@ -22,4 +22,4 @@ func close_door():
 	is_open = false
 	print("Signal received! Playing sliding door animation...")
 	animation_player.play("close")
-	
+

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GodotXR"
-run/main_scene="uid://dacrvo5efu5py"
+run/main_scene="uid://bho8ebcx5lvhs"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -60,6 +60,7 @@ MenuViewport="Vr Player Main Menu"
 MicController=""
 LevelController=""
 FishingLevelController=""
+pickable=""
 
 [godot_xr_tools]
 

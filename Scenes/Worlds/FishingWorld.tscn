@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="12_by2g3"]
 [ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_at3n1"]
 [ext_resource type="PackedScene" uid="uid://xacd6pnc7smn" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall-stool.glb" id="13_cscui"]
-[ext_resource type="Script" uid="uid://c7ntv6adlua4w" path="res://scripts/Environment Script/glass_door.gd" id="15_bvhf0"]
+[ext_resource type="Script" uid="uid://cmiv00xaa7tgc" path="res://scripts/Environment Script/FishingLevelResultSceneTrigger.gd" id="15_bvhf0"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -53,7 +53,7 @@ size = Vector3(0.01, 10, 20)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_jdhyv"]
 height = 0.5
-radius = 1.5
+radius = 2.3
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["FishingLevelController"]]
 script = ExtResource("1_enjev")
@@ -151,6 +151,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.03
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9865394, 0, -2.7776976)
+collision_mask = 524289
 script = ExtResource("15_bvhf0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
@@ -159,4 +160,4 @@ shape = SubResource("CylinderShape3D_jdhyv")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 
 [connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
-[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

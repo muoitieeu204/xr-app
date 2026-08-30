@@ -52,6 +52,7 @@ size = Vector3(0.039733887, 0.17010498, 0.169281)
 
 [node name="Sketchfab_Scene" type="Area3D"]
 collision_layer = 5
+audio_bus_name = &"Sounds"
 script = ExtResource("1_cc613")
 realItem = ExtResource("2_m4xvb")
 itemName = "trái chuối"
