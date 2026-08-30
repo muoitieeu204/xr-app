@@ -10,7 +10,7 @@ This VR app operates in tandem with a Web Dashboard (managed by Parents, Teacher
 
 ---
 
-## ⚠️ Medical Disclaimer (BR-01)
+## ⚠️ Medical Disclaimer 
 **GodotXR is designed as a supportive learning aid and intervention tool.** It is *not* a replacement for professional speech therapy or medical diagnosis. All clinical metrics and gameplay mechanics are intended to support, not replace, the guidance of certified Speech-Language Pathologists (SLPs).
 
 ---
