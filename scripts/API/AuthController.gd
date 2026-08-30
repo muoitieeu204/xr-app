@@ -157,7 +157,8 @@ func _on_request_completed(result, responseCode, headers, body):
 		$LogoutBox.visible = false
 
 		# --- ROLE & PLATFORM BASED ROUTING WITH FAILSAFE  ---
-		var is_vr_device : bool = OS.has_feature("android") or OS.has_feature("mobile") or OS.has_feature("vr_client")
+		# var is_vr_device: bool = true use this in dev environment
+		var is_vr_device : bool = OS.has_feature("android") or OS.has_feature("mobile") or OS.has_feature("vr_client") 
 		var replay_scene := "res://Prefabs/UI/SessionListScene.tscn"
 
 		if not is_vr_device:
