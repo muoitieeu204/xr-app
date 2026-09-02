@@ -1,3 +1,52 @@
-[gd_scene format=3 uid="uid://b2d2vo76kuhf"]
+[gd_scene load_steps=8 format=3 uid="uid://b2d2vo76kuhf"]
 
-[node name="CreateExerciseTest" type="Node3D"]
+[ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_jthux"]
+[ext_resource type="Script" uid="uid://cqrtqmjr3he3t" path="res://scripts/API/GetLessionItemsApi.gd" id="2_eamvy"]
+[ext_resource type="Script" uid="uid://bcjhw27fhfvio" path="res://scripts/Environment Script/spawner.gd" id="3_eamvy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l8al3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_vpilm"]
+sky_material = SubResource("ProceduralSkyMaterial_l8al3")
+
+[sub_resource type="Environment" id="Environment_egtfv"]
+background_mode = 2
+sky = SubResource("Sky_vpilm")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_yq2ea"]
+size = Vector2(20, 20)
+
+[node name="CreateExerciseTest" type="Node3D" node_paths=PackedStringArray("item_slot_spawner")]
+script = ExtResource("1_jthux")
+item_slot_spawner = [NodePath("slot 1"), NodePath("slot 2")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_egtfv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_yq2ea")
+
+[node name="ExerciseDataController" type="Node" parent="."]
+script = ExtResource("2_eamvy")
+
+[node name="ItemSpawner" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11.135, 0)
+
+[node name="slot 1" type="Marker3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.9688587, 1.351123, -4.888297)
+script = ExtResource("3_eamvy")
+
+[node name="slot 2" type="Marker3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.7499495, 1.351123, -7.7265215)
+script = ExtResource("3_eamvy")
