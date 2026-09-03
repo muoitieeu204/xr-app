@@ -30,8 +30,8 @@ tonemap_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_sf545"]
 size = Vector2(100, 100)
-subdivide_width = 64
-subdivide_depth = 64
+subdivide_width = 8
+subdivide_depth = 8
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_04ajj"]
 render_priority = 0
@@ -149,15 +149,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -0.2157383, -2.549
 [node name="FishingRodFake" parent="." instance=ExtResource("9_enjev")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.0335484)
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="ResultScreenTrigger" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9865394, 0, -2.7776976)
 collision_mask = 524289
 script = ExtResource("15_bvhf0")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ResultScreenTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.19340515)
 shape = SubResource("CylinderShape3D_jdhyv")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 
 [connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
-[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="ResultScreenTrigger" to="ResultScreenTrigger" method="_on_body_entered"]
