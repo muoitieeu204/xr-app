@@ -35,6 +35,8 @@ RefreshTokenApi="*res://scripts/API/RefreshTokenApi.gd"
 ResultApi="*res://scripts/API/result-api.gd"
 ReplayManager="*res://Prefabs/PlayerPrefabs/ReplayManager.tscn"
 FilesChunksApi="*res://scripts/API/FilesChunksApi.cs"
+ExerciseData="*res://scripts/CoreManager/ExerciseData.gd"
+GetLessionItemsApi="*res://scripts/API/GetLessionItemsApi.gd"
 
 [display]
 
