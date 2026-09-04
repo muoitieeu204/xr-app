@@ -64,7 +64,7 @@ func _ready() -> void:
 	else:
 		logoutButton.pressed.connect(_on_logout_button_pressed)
 		
-		_check_auto_login()
+	_check_auto_login()
 
 func _check_auto_login():
 	if FileAccess.file_exists("user://auth.save"):
@@ -158,7 +158,7 @@ func _on_request_completed(result, responseCode, headers, body):
 
 		# --- ROLE & PLATFORM BASED ROUTING WITH FAILSAFE  ---
 		# var is_vr_device: bool = true use this in dev environment
-		var is_vr_device : bool = OS.has_feature("android") or OS.has_feature("mobile") or OS.has_feature("vr_client") 
+		var is_vr_device: bool = OS.has_feature("android") or OS.has_feature("mobile") or OS.has_feature("vr_client")
 		var replay_scene := "res://Prefabs/UI/SessionListScene.tscn"
 
 		if not is_vr_device:
@@ -192,13 +192,7 @@ func _on_request_completed(result, responseCode, headers, body):
 			errorLabel.visible = true
 		
 func _on_logout_button_pressed() -> void:
-	SessionData.accessToken = ""
-	SessionData.refreshToken = ""
-	SessionData.userId = 0
-	SessionData.fullName = ""
-	SessionData.userName = ""
-	SessionData.roleName = ""
-	SessionData.isActive = false
+	SessionData.clear()
 	PlayerData.clear()
 	print_debug("User Logout Successfully")
 	

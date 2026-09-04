@@ -3,21 +3,6 @@ extends Node
 var apiUrl: String = "https://103-162-30-111.sslip.io/api/results/submit"
 var httpRequest: HTTPRequest
 
-# --- ALL API PAYLOAD FIELDS ---
-# var sessionId: String = ""
-# var childId: int = 0
-# var exerciseId: int = 0
-# var lessonId: int = 0
-# var attemptNumber: int = 0
-# var completionStatus: String = ""
-# var score: int = 0
-# var startedAt: String = ""
-# var completedAt: String = ""  
-# var durationSeconds: int = 0
-# var interactionLog: String = ""
-# var feedbackText: String = ""
-
-
 signal results_loaded(results: Array)
 signal results_load_failed(error: String)
 
