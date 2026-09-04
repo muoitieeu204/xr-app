@@ -6,6 +6,7 @@ extends Node3D
 @export var question_1_audio: AudioStream
 @export var correct_audio: Array[AudioStream]
 @export var wrong_audio: Array[AudioStream]
+@export var ssd_repeat_audio: Array[AudioStream]
 @export var skip_audio: AudioStream
 @export var body_to_breathe: Node3D # Assign the Skeleton3D or Mesh here in the inspector
 
@@ -23,6 +24,7 @@ static var activeTeacher = null
 var chunkIndex: int = 0
 var isFinalChunk: bool = false
 var is_first_azure_call: bool = true
+
 
 func _ready():
 	var gameManager = get_node_or_null("/root/GameManager")
@@ -44,10 +46,11 @@ func _process(delta):
 		body_to_breathe.scale.z = 1.0 + (breath * 0.005)
 
 # YOU MUST CONNECT THE CASH REGISTER'S 'item_scanned_for_teaching' SIGNAL TO THIS FUNCTION!
-func _on_item_scanned_for_teaching(item_id: String, hint_audio: AudioStream):
+func _on_item_scanned_for_teaching(item_id: String, hint_audio: AudioStream, item_name: AudioStream):
 	activeTeacher = self
 	current_item_id = item_id
 	current_hint_audio = hint_audio
+	current_item_name_audio = item_name
 	failed_attempts = 0
 	
 	print("NPC: Received item scan for ", current_item_id)
@@ -151,12 +154,26 @@ func _on_speech_result(is_correct: bool):
 		if npc_label_indicator:
 			npc_label_indicator.visible = true
 			npc_label_indicator.text = "❌" + " bé đã nói sai rồi "
-		if npc_audio_player and wrong_audio.size() > 0:
-			npc_audio_player.stream = wrong_audio.pick_random()
-			npc_audio_player.play()
-			if npc_animation_player and npc_animation_player.has_animation("emote-no"):
-				npc_animation_player.play("emote-no")
-			await npc_audio_player.finished
+		if PlayerData.childType == "DisorderType":
+			if npc_audio_player and ssd_repeat_audio.size()>0:
+				npc_audio_player.stream = ssd_repeat_audio.pick_random()
+				npc_audio_player.play()
+				if npc_animation_player and npc_animation_player.has_animation("emote-no"):
+					npc_animation_player.play("emote-no")
+				await  npc_audio_player.finished
+		
+			if npc_audio_player and current_item_name_audio:
+				npc_audio_player.stream = current_item_name_audio
+				npc_audio_player.play()
+				await  npc_audio_player.finished
+		else:
+			if npc_audio_player and wrong_audio.size() > 0:
+				npc_audio_player.stream = wrong_audio.pick_random()
+				npc_audio_player.play()
+				if npc_animation_player and npc_animation_player.has_animation("emote-no"):
+					npc_animation_player.play("emote-no")
+				await npc_audio_player.finished
+		
 		_on_child_wrong_answer()
 		if failed_attempts < 3:
 			ask_question_2()

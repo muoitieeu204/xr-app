@@ -10,7 +10,7 @@ extends XRToolsSceneBase
 @export_group("Level Tutorial Variable")
 @export var waypointSequence: Array[Node3D]
 
-var maxScore: int = 0 #TODO : Call api to get maxScore from lesson
+var maxScore: int = 0 # TODO : Call api to get maxScore from lesson
 var currentScore: int = 0
 var startedAt: String = ""
 var interactionLog: String = ""
@@ -46,7 +46,8 @@ func _ready() -> void:
 	errorCount = 0
 	currentTimeSecconds = 0
 	
-	startedAt = Time.get_datetime_string_from_system(false) + "+07:00"
+	var tz_offset = Time.get_offset_string_from_offset_minutes(Time.get_time_zone_from_system().bias)
+	startedAt = Time.get_datetime_string_from_system(false) + tz_offset
 	ReplayManager.start_recording()
 	show_next_waypoint()
 
@@ -94,6 +95,7 @@ func FinishLevel():
 		return
 	
 	isLevelFinished = true
+	var tz_offset = Time.get_offset_string_from_offset_minutes(Time.get_time_zone_from_system().bias)
 	var finalResult = {
 			"sessionId": SessionData.sessionId, # Assuming you have this Autoload
 			"childId": PlayerData.childId, # Assuming you have this Autoload
@@ -101,7 +103,7 @@ func FinishLevel():
 			"errorCount": errorCount,
 			"correctCount": correctCount,
 			"startedAt": startedAt,
-			"completedAt": Time.get_datetime_string_from_system(true) + "+07:00",
+			"completedAt": Time.get_datetime_string_from_system(false) + tz_offset,
 			"durationSeconds": currentTimeSecconds,
 			"interactionLog": interactionLog,
 			"feedbackText": "" # Game can send data base on current logic

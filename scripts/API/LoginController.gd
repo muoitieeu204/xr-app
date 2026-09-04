@@ -1,8 +1,5 @@
 extends Node
-
-var apiUrl : String = "https://103-162-30-111.sslip.io/api/auth/lgin"
-# var apiUrl : String = "https://localhost:7153/api/auth/login"
-
+var apiUrl : String = ApiConfig.baseUrl + "/api/auth/login"
 @onready var httpRequest = $"../HTTPRequest"
 @onready var emailInput = $"../VBoxContainer/Email"
 @onready var passwordInput = $"../VBoxContainer/Password"

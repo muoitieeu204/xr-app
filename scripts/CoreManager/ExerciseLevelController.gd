@@ -50,7 +50,8 @@ func _ready() -> void:
 	errorCount = 0
 	currentTimeSecconds = 0
 	
-	startedAt = Time.get_datetime_string_from_system(false) + "+07:00"
+	var tz_offset = Time.get_offset_string_from_offset_minutes(Time.get_time_zone_from_system().bias)
+	startedAt = Time.get_datetime_string_from_system(false) + tz_offset
 	ReplayManager.start_recording()
 	show_next_waypoint()
 	
@@ -122,22 +123,23 @@ func FinishLevel():
 		return
 	
 	isLevelFinished = true
+	var tz_offset = Time.get_offset_string_from_offset_minutes(Time.get_time_zone_from_system().bias)
 	var finalResult = {
-			"sessionId": SessionData.sessionId, 
-			"childId": PlayerData.childId, 
+			"sessionId": SessionData.sessionId,
+			"childId": PlayerData.childId,
 			"score": currentScore,
 			"errorCount": errorCount,
 			"correctCount": correctCount,
 			"startedAt": startedAt,
-			"completedAt": Time.get_datetime_string_from_system(true) + "+07:00",
+			"completedAt": Time.get_datetime_string_from_system(false) + tz_offset,
 			"durationSeconds": currentTimeSecconds,
 			"interactionLog": interactionLog,
-			"feedbackText": "" 
+			"feedbackText": ""
 		}
 	if isLesson == true:
 		finalResult["lessonId"] = levelId
 	else:
-		finalResult["exerciseId"] = levelId 
+		finalResult["exerciseId"] = levelId
 	if completionStatus == true:
 		finalResult["completionStatus"] = "Completed"
 	else:

@@ -26,6 +26,7 @@ input/transcribe/use_gpu=true
 
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
 XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+ApiConfig="*res://scripts/CoreManager/ApiConfig.gd"
 SessionData="*res://scripts/CoreManager/SessionData.gd"
 SessionUploader="*res://scripts/CoreManager/SessionUploader.cs"
 AzureSpeechManager="*res://scripts/CoreManager/AzureSpeechManager.cs"
@@ -36,7 +37,7 @@ ResultApi="*res://scripts/API/result-api.gd"
 ReplayManager="*res://Prefabs/PlayerPrefabs/ReplayManager.tscn"
 FilesChunksApi="*res://scripts/API/FilesChunksApi.cs"
 ExerciseData="*res://scripts/CoreManager/ExerciseData.gd"
-GetLessionItemsApi="*res://scripts/API/GetLessionItemsApi.gd"
+GetLessionItemsApi="*res://scripts/API/GetExerciseItemsApi.gd"
 
 [display]
 
@@ -63,6 +64,7 @@ MicController=""
 LevelController=""
 FishingLevelController=""
 pickable=""
+ExerciseLevelController=""
 
 [godot_xr_tools]
 

@@ -1,6 +1,5 @@
 extends Node
-
-var apiUrl: String = "https://103-162-30-111.sslip.io/api/results/submit"
+var apiUrl: String = ApiConfig.baseUrl + "/api/results/submit"
 var httpRequest: HTTPRequest
 
 signal results_loaded(results: Array)
@@ -19,7 +18,7 @@ func _ready() -> void:
 
 
 func fetch_results(child_id: int) -> void:
-	var url := "https://103-162-30-111.sslip.io/api/results/by-child/" + str(child_id)
+	var url := ApiConfig.baseUrl + "/api/results/by-child/" + str(child_id)
 	var headers = [
 		"Authorization: Bearer " + SessionData.accessToken,
 		"Accept: application/json"

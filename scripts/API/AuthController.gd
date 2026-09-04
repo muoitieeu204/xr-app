@@ -1,8 +1,5 @@
 extends Control
-
-var apiUrl: String = "https://103-162-30-111.sslip.io/api/auth/login"
-# var apiUrl : String = "https://localhost:7153/api/auth/login"
-
+var apiUrl: String = ApiConfig.baseUrl + "/api/auth/login"
 @onready var httpRequest = $LoginBox/HTTPRequest
 @onready var emailInput = $LoginBox/VBoxContainer/Email
 @onready var passwordInput = $LoginBox/VBoxContainer/Password

@@ -1,6 +1,6 @@
 extends Control
 
-var apiUrl: String = "https://103-162-30-111.sslip.io/api/child-profiles/my-children"
+var apiUrl: String = ApiConfig.baseUrl + "/api/child-profiles/my-children"
 
 @export var welcome_scene_path: NodePath = ^"../WelcomeScene"
 
@@ -80,7 +80,7 @@ func _on_profile_selected(child_data: Dictionary) -> void:
 	show_status_message("Đang chuẩn bị lớp học cho bé... 🔍", false)
 
 	var child_id = int(child_data.get("id", 0))
-	var check_url = "https://103-162-30-111.sslip.io/api/enrollments/child/" + str(child_id)
+	var check_url = ApiConfig.baseUrl + "/api/enrollments/child/" + str(child_id)
 
 	var check_http = HTTPRequest.new()
 	add_child(check_http)

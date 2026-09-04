@@ -1,8 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2d2vo76kuhf"]
 
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_jthux"]
-[ext_resource type="Script" uid="uid://cqrtqmjr3he3t" path="res://scripts/API/GetLessionItemsApi.gd" id="2_eamvy"]
+[ext_resource type="Script" uid="uid://cqrtqmjr3he3t" path="res://scripts/API/GetExerciseItemsApi.gd" id="2_eamvy"]
 [ext_resource type="Script" uid="uid://bcjhw27fhfvio" path="res://scripts/Environment Script/spawner.gd" id="3_eamvy"]
+
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_l8al3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

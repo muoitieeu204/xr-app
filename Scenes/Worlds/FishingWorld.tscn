@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=25 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_at3n1"]
 [ext_resource type="PackedScene" uid="uid://xacd6pnc7smn" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall-stool.glb" id="13_cscui"]
 [ext_resource type="Script" uid="uid://cmiv00xaa7tgc" path="res://scripts/Environment Script/FishingLevelResultSceneTrigger.gd" id="15_bvhf0"]
+[ext_resource type="PackedScene" uid="uid://dorwh24bkxu7y" path="res://Prefabs/InteractableObject/TaskwayPoint.tscn" id="16_jdhyv"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -24,7 +25,6 @@ sky_material = SubResource("PanoramaSkyMaterial_excqj")
 
 [sub_resource type="Environment" id="Environment_xxvxh"]
 background_mode = 2
-background_energy_multiplier = 1.2
 sky = SubResource("Sky_nvpip")
 tonemap_mode = 2
 
@@ -55,19 +55,21 @@ size = Vector3(0.01, 10, 20)
 height = 0.5
 radius = 2.3
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker") groups=["FishingLevelController"]]
+[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker", "waypointSequence") groups=["FishingLevelController"]]
 script = ExtResource("1_enjev")
 catchable_items = Array[PackedScene]([ExtResource("2_hrype"), ExtResource("3_by2g3")])
 spawn_marker = NodePath("ItemSpawnerPoint/ItemSpawner")
 isLesson = true
 levelId = 2
 taskList = Array[String](["túi xúc xích", "gà nguyên con"])
+waypointSequence = [NodePath("LevelTutorial/PickupFishingRod"), NodePath("LevelTutorial/FishingHere"), NodePath("LevelTutorial/PickupItemHere"), NodePath("LevelTutorial/DropHere"), NodePath("LevelTutorial/FishingHere2"), NodePath("LevelTutorial/PickupItemHere2"), NodePath("LevelTutorial/DropHere2"), NodePath("LevelTutorial/ExitHere")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xxvxh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.74999994, -0.124999985, 0.6495191, 0.43301278, 0.6495191, 0.625, -0.5000001, 0.7500001, -0.43301266, 0, 0, 0)
+light_energy = 0.29
 
 [node name="WaterShader" type="Area3D" parent="." node_paths=PackedStringArray("respawn_point")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.571668, 0)
@@ -130,9 +132,9 @@ transform = Transform3D(1.6934829, 0, 1.0640093, 0, 2, 0, -1.0640093, 0, 1.69348
 transform = Transform3D(0.0042935014, 0, 0.49998155, 0, 0.5, 0, -0.49998155, 0, 0.0042935014, -0.41395855, -1.1920929e-07, -0.024498343)
 
 [node name="TeleportArea" parent="." instance=ExtResource("6_r85ih")]
-transform = Transform3D(0.52278125, 1.4411022e-08, -0.8524669, 4.371139e-08, 1, 4.3711395e-08, 0.8524669, -6.011402e-08, 0.52278125, -5.0211678, 0.2915678, -2.9898114)
+transform = Transform3D(-0.45339954, 7.3190044e-08, -0.8913074, 1.038254e-07, 1, 2.9300384e-08, 0.8913074, -7.9255585e-08, -0.45339954, -5.0211678, 0.2915678, -2.9898114)
 target_scene = "uid://bt0ier0gd1sh5"
-holoText = "StarterHub"
+holoText = "Starter Hub"
 
 [node name="ResultScreenTrigger" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9865394, 0, -2.7776976)
@@ -157,7 +159,66 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 10.176163, -1.4229829, -2.534
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -0.2157383, -2.5492582)
 
 [node name="FishingRodFake" parent="." instance=ExtResource("9_enjev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6913105, -0.8199713, -5.0335484)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39812315, -0.8199713, -5.140254)
+
+[node name="LevelTutorial" type="Node3D" parent="."]
+
+[node name="PickupFishingRod" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41627717, -0.37417254, -5.1585436)
+
+[node name="Label3D" parent="LevelTutorial/PickupFishingRod" index="0"]
+text = "Lấy cần câu  ở đây nè "
+
+[node name="FishingHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.696667, -1.2297752, -0.18234724)
+
+[node name="Label3D" parent="LevelTutorial/FishingHere" index="0"]
+text = "Lấy cần câu  ở đây nè "
+
+[node name="FishingHere2" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.696667, -1.2297752, -0.18234724)
+
+[node name="Label3D" parent="LevelTutorial/FishingHere2" index="0"]
+text = "Lấy cần câu  ở đây nè "
+
+[node name="PickupItemHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.207211, -1.2297752, -1.4142947)
+
+[node name="Label3D" parent="LevelTutorial/PickupItemHere" index="0"]
+text = "Lấy cần câu  ở đây nè "
+
+[node name="PickupItemHere2" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.207211, -1.2297752, -1.4142947)
+
+[node name="Label3D" parent="LevelTutorial/PickupItemHere2" index="0"]
+text = "Lấy cần câu  ở đây nè "
+
+[node name="DropHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(0.91907346, 0, 0.39408627, 0, 1, 0, -0.39408627, 0, 0.91907346, -3.1908836, -0.43236804, 4.7745175)
+
+[node name="Label3D" parent="LevelTutorial/DropHere" index="0"]
+text = "Lấy cần câu  ở đây nè "
+
+[node name="DropHere2" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(0.91907346, 0, 0.39408627, 0, 1, 0, -0.39408627, 0, 0.91907346, -3.1908836, -0.43236804, 4.7745175)
+
+[node name="Label3D" parent="LevelTutorial/DropHere2" index="0"]
+text = "Lấy cần câu  ở đây nè "
+
+[node name="ExitHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8774357, -0.27014792, -1.8045214)
+
+[node name="Label3D" parent="LevelTutorial/ExitHere" index="0"]
+text = "Lấy cần câu  ở đây nè "
 
 [connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
 [connection signal="body_entered" from="ResultScreenTrigger" to="ResultScreenTrigger" method="_on_body_entered"]
+
+[editable path="LevelTutorial/PickupFishingRod"]
+[editable path="LevelTutorial/FishingHere"]
+[editable path="LevelTutorial/FishingHere2"]
+[editable path="LevelTutorial/PickupItemHere"]
+[editable path="LevelTutorial/PickupItemHere2"]
+[editable path="LevelTutorial/DropHere"]
+[editable path="LevelTutorial/DropHere2"]
+[editable path="LevelTutorial/ExitHere"]
