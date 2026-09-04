@@ -13,6 +13,10 @@ signal health_warning_triggered
 signal play_npc_teaching_audio(audio_stream: AudioStream)
 
 func _ready() -> void:
+	var xr_interface = XRServer.find_interface("OpenXR")
+	if xr_interface and xr_interface.is_initialized():
+		xr_interface.set_display_refresh_rate(72.0)
+		
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
 		speechManager.OnSpeechRecognized.connect(_on_speech_recognized)

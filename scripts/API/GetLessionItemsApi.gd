@@ -1,7 +1,7 @@
 extends Node
 
 #Need to update api, current api is for testing per lesson only 
-var apiUrl: String = "https://103-162-30-111.sslip.io/api/lessons/1/client-config"
+var apiUrl: String = "https://103-162-30-111.sslip.io/api/lessons/%d/client-config"
 var httpRequest: HTTPRequest
 
 signal exercise_data_loaded(data: Array)
@@ -12,12 +12,13 @@ func _ready() -> void:
 	add_child(httpRequest)
 	httpRequest.request_completed.connect(_on_fetch_completed)
 
-func fetch_exercise_data() -> void:
+func fetch_exercise_data(lesson_id: int) -> void:
 	var headers := [
 		"Authorization: Bearer " + SessionData.accessToken,
 		"accept: application/json"
 	]
-	var response = httpRequest.request(apiUrl, headers, HTTPClient.METHOD_GET)
+	var url = apiUrl % lesson_id
+	var response = httpRequest.request(url, headers, HTTPClient.METHOD_GET)
 	if response != OK:
 		exercise_data_load_failed.emit("Không thể kết nối API Results (lỗi %d)" % response)
 
