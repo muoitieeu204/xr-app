@@ -144,7 +144,6 @@ func _on_speech_result(is_correct: bool):
 			npc_audio_player.play()
 		if npc_animation_player and npc_animation_player.has_animation("emote-yes"):
 			npc_animation_player.play("emote-yes")
-		_on_child_correct_answer()
 		await get_tree().create_timer(3.0).timeout
 		if npc_label_indicator:
 			npc_label_indicator.visible = false
@@ -173,8 +172,6 @@ func _on_speech_result(is_correct: bool):
 				if npc_animation_player and npc_animation_player.has_animation("emote-no"):
 					npc_animation_player.play("emote-no")
 				await npc_audio_player.finished
-		
-		_on_child_wrong_answer()
 		if failed_attempts < 3:
 			ask_question_2()
 		else:
@@ -192,12 +189,6 @@ func _on_speech_result(is_correct: bool):
 			await get_tree().create_timer(3.0).timeout
 			if npc_label_indicator:
 				npc_label_indicator.visible = false
-
-func _on_child_correct_answer():
-	get_tree().call_group("LevelController", "CorrectAnswer", 20, current_item_id)
-
-func _on_child_wrong_answer():
-	pass
 
 func _on_play_npc_teaching_audio(audio_stream: AudioStream):
 	if npc_audio_player and audio_stream:

@@ -252,14 +252,14 @@ transform = Transform3D(-0.035963453, 0, -0.9993531, 0, 1, 0, 0.9993531, 0, -0.0
 target_scene = "uid://bt0ier0gd1sh5"
 holoText = "Starter Hub"
 
-[node name="ResultScreenTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.556455, 3.805084, -7.34717)
+[node name="ResultScreenTrigger" type="Area3D" parent="TeleportArea"]
+transform = Transform3D(-0.035963453, 0, 0.9993531, 0, 1, 0, -0.9993531, 0, -0.035963453, 0.21073103, -0.29156804, -0.04223442)
 collision_mask = 524289
 script = ExtResource("11_rlmto")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ResultScreenTrigger"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TeleportArea/ResultScreenTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.19340515)
 shape = SubResource("CylinderShape3D_i0qbo")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 
-[connection signal="body_entered" from="ResultScreenTrigger" to="ResultScreenTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]

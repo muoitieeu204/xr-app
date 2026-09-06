@@ -13,4 +13,4 @@ func _on_roller_area_body_entered(body: Node3D) -> void:
 		var name = body.get_meta("itemNameSound")
 		
 		print("Cash Register detected: ", id)
-		emit_signal("item_scanned_for_teaching", id, hint)
+		emit_signal("item_scanned_for_teaching", id, hint, name)

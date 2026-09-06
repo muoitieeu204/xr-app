@@ -54,11 +54,11 @@ func _ready() -> void:
 # ----------------- LEVEL TRACKING LOGIC -----------------
 func CorrectAnswer(point: int, itemName: String) -> void:
 	var seccondsPassed = currentTimeSecconds
-	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
+	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName + " + 20 điểm"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
-	ReplayManager.log_interaction("Correct Answer " + itemName)
+	ReplayManager.log_interaction("Correct Answer " + itemName + " + 20 điểm")
 	
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
@@ -74,11 +74,11 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 
 func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
 	var seccondsPassed = currentTimeSecconds
-	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
+	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'" + "- 10 điểm"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
-	ReplayManager.log_interaction("Wrong Answer " + itemName)
+	ReplayManager.log_interaction("Wrong Answer " + itemName + "- 10 điểm")
 	
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever

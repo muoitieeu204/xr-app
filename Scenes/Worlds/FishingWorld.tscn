@@ -136,12 +136,12 @@ transform = Transform3D(-0.45339954, 7.3190044e-08, -0.8913074, 1.038254e-07, 1,
 target_scene = "uid://bt0ier0gd1sh5"
 holoText = "Starter Hub"
 
-[node name="ResultScreenTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9865394, 0, -2.7776976)
+[node name="ResultScreenTrigger" type="Area3D" parent="TeleportArea"]
+transform = Transform3D(-0.45339954, 1.0382543e-07, 0.8913074, 7.319004e-08, 1, -7.9255564e-08, -0.8913074, 2.9300384e-08, -0.45339954, 0.1733582, -0.29156783, -0.12703705)
 collision_mask = 524289
 script = ExtResource("15_bvhf0")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ResultScreenTrigger"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TeleportArea/ResultScreenTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.19340515)
 shape = SubResource("CylinderShape3D_jdhyv")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
@@ -212,7 +212,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8774357, -0.27014792, -1.8
 text = "Lấy cần câu  ở đây nè "
 
 [connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
-[connection signal="body_entered" from="ResultScreenTrigger" to="ResultScreenTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]
 
 [editable path="LevelTutorial/PickupFishingRod"]
 [editable path="LevelTutorial/FishingHere"]

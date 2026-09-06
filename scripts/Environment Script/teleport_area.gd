@@ -11,6 +11,7 @@ extends Area3D
 @export var portalLabel: Label3D
 @export var successSound: AudioStream
 @export var errorSound: AudioStream
+@export var buttonPressedAudio: AudioStream
 @export var holoText: String = "Teleport Area"
 
 @onready var label = $TextRingMesh/SubViewport/Label
@@ -103,3 +104,19 @@ func _set_portal_color(color: Color) -> void:
 
 func _on_basket_trigger_puzzle_solved() -> void:
 	unlock_portal()
+
+func _on_interactable_area_button_button_pressed(button: Variant) -> void:
+	target_scene = "res://Scenes/Worlds/ExerciseLevel1.tscn"
+	if portalAudio and buttonPressedAudio and holoText:
+		portalAudio.stream = buttonPressedAudio
+		portalAudio.volume_db = -0.8
+		portalAudio.play()
+		holoText = "Exercise Level 1"
+
+func _on_interactable_area_button_2_button_pressed(button: Variant) -> void:
+	target_scene = "res://Scenes/Worlds/ExerciseLevel2.tscn"
+	if portalAudio and buttonPressedAudio:
+		portalAudio.stream = buttonPressedAudio
+		portalAudio.volume_db = -0.8
+		portalAudio.play()
+		holoText = "Exercise Level 2"
