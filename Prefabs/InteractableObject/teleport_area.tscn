@@ -109,7 +109,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_m4xex")
 
 [node name="Teleport Text" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 1.4032338, 0)
-billboard = 2
 outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
 font_size = 48
 autowrap_mode = 2

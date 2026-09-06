@@ -54,4 +54,4 @@ func _on_speech_failed(reason: String):
 	if currentHeldItemId != "":
 		print("Speech failed or silent! Reasong: ", reason)
 		emit_signal("speech_result", false)
-		get_tree().call_group("LevelController", "WrongAnswer", 5, currentHeldItemId, "[Không nghe rõ/ Im lặng]" + "-5 điểm")
+		get_tree().call_group("LevelController", "WrongAnswer", 5, currentHeldItemId, "[Không nghe rõ/ Im lặng]")

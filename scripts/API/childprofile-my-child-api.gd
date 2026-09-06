@@ -10,7 +10,7 @@ var apiUrl: String = ApiConfig.baseUrl + "/api/child-profiles/my-children"
 @onready var templateButton: Button = $ProfileBox/VBoxContainer/ScrollContainer/ProfilesGrid/TemplateButton
 @onready var replayButton: Button = $ProfileBox/VBoxContainer/ReplayButton
 @onready var welcomeScene: Control = get_node_or_null(welcome_scene_path)
-var interactionLog : TextDirection
+var interactionLog: TextDirection
 
 var children_data: Array = []
 
@@ -137,6 +137,7 @@ func _on_enrollment_check_completed(result: int, responseCode: int, headers: Pac
 			PlayerData.age = int(child_data.get("age", 0))
 			PlayerData.gender = str(child_data.get("gender", ""))
 			PlayerData.learningLevel = str(child_data.get("learningLevel", ""))
+			PlayerData.childType = str(child_data.get("childType", ""))
 			PlayerData.status = str(child_data.get("status", ""))
 
 			if welcomeScene == null:

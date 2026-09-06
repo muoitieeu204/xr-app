@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://b12kcbqt8cg6r"]
+[gd_scene load_steps=67 format=4 uid="uid://b12kcbqt8cg6r"]
 
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="1_k20mw"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="1_lfkti"]
@@ -28,6 +28,8 @@
 [ext_resource type="PackedScene" uid="uid://bgvrdxllnjs1d" path="res://Assets/3D Models For Supermarket/Market Equipments/Cashier.tscn" id="17_otcmc"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="20_1042w"]
 [ext_resource type="PackedScene" uid="uid://dqpsyyclcev87" path="res://Prefabs/Boards/SupermarketLevelGuide.tscn" id="21_p8ll3"]
+[ext_resource type="AudioStream" uid="uid://cvhj3kxqfbmai" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/30_gan_dung_roi_day_ban_nghe_minh_doc_cham_lai_mot_7fd5c685-7cbe-4545-b878-5117d7c2f2d2.mp3" id="23_wl710"]
+[ext_resource type="AudioStream" uid="uid://bvovm60qpkejp" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3" id="24_eaww7"]
 [ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/UIHintTriggerZone.tscn" id="28_fhpcg"]
 [ext_resource type="PackedScene" uid="uid://dorwh24bkxu7y" path="res://Prefabs/InteractableObject/TaskwayPoint.tscn" id="30_1042w"]
 
@@ -598,7 +600,8 @@ scene_properties_keys = PackedStringArray("SlideGuideController.gd")
 transform = Transform3D(-1.5, -2.4871352e-15, -2.2649371e-07, 7.413219e-15, 1.5, -6.5567086e-08, 2.2649371e-07, -6.5567086e-08, -1.5, 6.3658533, -2.9858434, -6.714336)
 
 [node name="Employee" parent="NPCZone/Cashier" instance=ExtResource("12_eqjf7")]
-transform = Transform3D(5.033193e-08, -1.1053935e-15, 0.6666667, 8.345493e-23, 0.6666667, 1.1053942e-15, -0.6666667, -8.345489e-23, 5.033193e-08, -0.57831097, -0.30841088, -0.6087098)
+transform = Transform3D(5.0331924e-08, -1.1053935e-15, 0.6666667, 8.3454927e-23, 0.6666667, 1.1053942e-15, -0.6666667, -8.345489e-23, 5.0331924e-08, -0.5779872, -0.3138497, -0.60855985)
+ssd_repeat_audio = Array[AudioStream]([ExtResource("23_wl710"), ExtResource("24_eaww7")])
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 6.352747e-22, 0, 0, 1, 2.49152e-22, 0, 2.4915196e-22, 1, 2.848959, -3.4551394, -3.4718218)

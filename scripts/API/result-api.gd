@@ -52,20 +52,6 @@ func _on_fetch_completed(result: int, responseCode: int, _headers: PackedStringA
 
 
 func send_result(data_to_send: Dictionary) -> void:
-	#Inject lessonId/exerciseId 
-	# completedAt = Time.get_datetime_string_from_system()
-	# var data_to_send = {
-	# 	"sessionId": sessionId,
-	# 	"childId": childId,
-	# 	"attemptNumber": attemptNumber,
-	# 	"completionStatus": completionStatus,
-	# 	"score": score,
-	# 	"startedAt": startedAt,
-	# 	"completedAt": completedAt,
-	# 	"durationSeconds": durationSeconds,
-	# 	"interactionLog": interactionLog,
-	# 	"feedbackText": feedbackText
-	# }
 	var json = JSON.stringify(data_to_send)
 	var headers = [
 		"Authorization: Bearer " + SessionData.accessToken,

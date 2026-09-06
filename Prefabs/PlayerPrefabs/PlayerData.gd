@@ -7,7 +7,7 @@ var fullName: String = ""
 var age: int = 0
 var gender: String = ""
 var learningLevel: String = ""
-var childType: String = "Normal" # Change back to "" after debug
+var childType: String = "" # Change back to "" after debug
 var status: String = ""
 
 func clear():
