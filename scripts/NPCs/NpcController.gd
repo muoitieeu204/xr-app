@@ -174,7 +174,7 @@ func _on_speech_result(is_correct: bool):
 				await npc_audio_player.finished
 		if failed_attempts < 3:
 			if PlayerData.childType == "Rối loạn âm lời nói(SSD)":
-				ask_question_1()
+				ask_question_1() # create new method here 
 			else:
 				ask_question_2()
 		else:
