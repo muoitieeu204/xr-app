@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://10bjo82afb23"
+path="res://.godot/imported/33_kinh_lup_049c2ab6-0e84-4752-bb42-72424ee8c4ff.mp3-7220a4c7d1aac4f10d5c9cc10660fbc2.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Item/Magnifying/33_kinh_lup_049c2ab6-0e84-4752-bb42-72424ee8c4ff.mp3"
+dest_files=["res://.godot/imported/33_kinh_lup_049c2ab6-0e84-4752-bb42-72424ee8c4ff.mp3-7220a4c7d1aac4f10d5c9cc10660fbc2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

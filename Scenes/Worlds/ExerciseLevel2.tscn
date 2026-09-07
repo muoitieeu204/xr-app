@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://brrsfmpsgnf4l"]
+[gd_scene load_steps=31 format=3 uid="uid://brrsfmpsgnf4l"]
 
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_750ww"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_red2x"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="9_m3nmu"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="10_np1km"]
 [ext_resource type="Script" uid="uid://dafp3g5f51n3w" path="res://scripts/Environment Script/ExerciseLevelResultSceneTrigger.gd" id="11_rnf3f"]
+[ext_resource type="PackedScene" uid="uid://cafrk5bet0ple" path="res://Assets/ExerciseLevelAsset/MagnifyingPickable.tscn" id="12_red2x"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b2p4l"]
 panorama = ExtResource("2_red2x")
@@ -262,5 +263,8 @@ script = ExtResource("11_rnf3f")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.19340515)
 shape = SubResource("CylinderShape3D_i0qbo")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
+
+[node name="PickableObject" parent="." instance=ExtResource("12_red2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4554615, 5.242256, 13.45901)
 
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]

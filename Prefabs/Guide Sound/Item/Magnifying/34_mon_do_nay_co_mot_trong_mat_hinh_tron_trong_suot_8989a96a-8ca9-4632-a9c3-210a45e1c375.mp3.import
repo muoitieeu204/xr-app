@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwab2for0nf6s"
+path="res://.godot/imported/34_mon_do_nay_co_mot_trong_mat_hinh_tron_trong_suot_8989a96a-8ca9-4632-a9c3-210a45e1c375.mp3-c2bd01821d67824774b23058f64cbbb1.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Item/Magnifying/34_mon_do_nay_co_mot_trong_mat_hinh_tron_trong_suot_8989a96a-8ca9-4632-a9c3-210a45e1c375.mp3"
+dest_files=["res://.godot/imported/34_mon_do_nay_co_mot_trong_mat_hinh_tron_trong_suot_8989a96a-8ca9-4632-a9c3-210a45e1c375.mp3-c2bd01821d67824774b23058f64cbbb1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
