@@ -118,7 +118,7 @@ func _on_speech_result(is_correct: bool):
 			if PlayerData.childType == "Rối loạn âm lời nói(SSD)":
 				await _play_and_record_speech(current_item_name_audio)
 			else:
-				ask_question_2()
+				await ask_question_2()
 		else:
 			print("NPC: Failed again. Let's move on or give the direct answer!")
 			if npc_label_indicator:

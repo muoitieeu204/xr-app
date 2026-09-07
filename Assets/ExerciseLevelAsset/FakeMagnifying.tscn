@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://dwkv0kfu368op"]
+[gd_scene load_steps=14 format=4 uid="uid://dwkv0kfu368op"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_exfhh"]
+[ext_resource type="PackedScene" uid="uid://cafrk5bet0ple" path="res://Assets/ExerciseLevelAsset/MagnifyingPickable.tscn" id="2_85xjd"]
 [ext_resource type="AudioStream" uid="uid://10bjo82afb23" path="res://Prefabs/Guide Sound/Item/Magnifying/33_kinh_lup_049c2ab6-0e84-4752-bb42-72424ee8c4ff.mp3" id="2_c3t3s"]
 [ext_resource type="Texture2D" uid="uid://bjvq3ns1hqbrn" path="res://Assets/ExerciseLevelAsset/styled_magnifying_glass_0.png" id="3_hdw01"]
 [ext_resource type="AudioStream" uid="uid://dwab2for0nf6s" path="res://Prefabs/Guide Sound/Item/Magnifying/34_mon_do_nay_co_mot_trong_mat_hinh_tron_trong_suot_8989a96a-8ca9-4632-a9c3-210a45e1c375.mp3" id="3_m8m68"]
@@ -63,6 +64,7 @@ points = PackedVector3Array(-0.58417624, -0.17557621, -0.9236522, 1.0466478, 0.1
 collision_layer = 5
 audio_bus_name = &"Sounds"
 script = ExtResource("1_exfhh")
+realItem = ExtResource("2_85xjd")
 itemName = "Kính Lúp"
 itemNameSound = ExtResource("2_c3t3s")
 hintAudios = Array[AudioStream]([ExtResource("3_m8m68"), ExtResource("4_85xjd"), ExtResource("5_300ak")])

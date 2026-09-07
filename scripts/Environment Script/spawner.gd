@@ -21,5 +21,7 @@ func spawn_item(scene: PackedScene) -> Node3D:
 	
 	var instance = scene.instantiate() as Node3D
 	add_child(instance)
+	instance.visible = false
+	instance.collision_layer = 8 #collision layer 4 in editor
 	instance.global_position = global_position
 	return instance
