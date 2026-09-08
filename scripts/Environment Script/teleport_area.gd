@@ -107,20 +107,20 @@ func _on_basket_trigger_puzzle_solved() -> void:
 
 func _on_interactable_area_button_button_pressed(button: Variant) -> void:
 	target_scene = "res://Scenes/Worlds/ExerciseLevel1.tscn"
-	if portalAudio and buttonPressedAudio and holoText:
+	if portalAudio and buttonPressedAudio and label:
 		unlock_portal()
 		portalAudio.stream = buttonPressedAudio
 		portalAudio.volume_db = -0.8
 		portalAudio.play()
 		portalLabel.text = "Exercise Level 1"
-		holoText = "Exercise Level 1"
+		label.text = "Exercise Level 1"
 
 func _on_interactable_area_button_2_button_pressed(button: Variant) -> void:
 	target_scene = "res://Scenes/Worlds/ExerciseLevel2.tscn"
-	if portalAudio and buttonPressedAudio and holoText:
+	if portalAudio and buttonPressedAudio and label:
 		unlock_portal()
 		portalAudio.stream = buttonPressedAudio
 		portalAudio.volume_db = -0.8
 		portalAudio.play()
 		portalLabel.text = "Exercise Level 2"
-		holoText = "Exercise Level 2"
+		label.text = "Exercise Level 2"
