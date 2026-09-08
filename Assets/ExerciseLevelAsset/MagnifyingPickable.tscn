@@ -13,8 +13,8 @@
 [ext_resource type="Material" uid="uid://b3yphtfwir57w" path="res://Prefabs/SurfaceMaterial/ObjectHighlight.tres" id="11_c1o4c"]
 [ext_resource type="Script" uid="uid://c5n56l6768sga" path="res://scripts/Environment Script/MagnifyingController.gd" id="12_f71sk"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7d1j8"]
-points = PackedVector3Array(-0.58417624, -0.17557621, -0.9236522, 1.0466478, 0.16418573, 0.29938424, 1.0466478, -0.17557621, 0.29938424, -0.10847627, 0.09620673, 3.289076, -1.0598762, 0.16418573, -0.31234682, -0.040430766, -0.17557621, 3.2205384, 0.5026961, 0.16418573, -0.9913385, -1.0598762, -0.17557621, 0.29938424, 0.09504166, 0.16418573, 3.2205384, 0.8425113, -0.17557621, -0.7197418, 0.16288097, -0.10759721, 3.2205384, -0.3122004, 0.16418573, -1.0598762, 0.29876578, -0.17557621, -1.0598762, 1.0466478, 0.16418573, -0.31234682, -0.17631559, 0.09620673, 3.2205384, -1.0598762, -0.17557621, -0.31234682, -0.7879004, 0.16418573, -0.78785384, -0.17631559, -0.039651476, 3.2205384, -0.10847627, 0.16418573, 3.2205384, -0.9198446, 0.1416, 0.40776744, 1.0466478, -0.17557621, -0.31234682, 0.16288097, 0.09620673, 3.2205384, -0.3122004, -0.17557621, -1.0598762, 0.8425113, 0.16418573, -0.7197418, 0.09504166, -0.17557621, 3.2205384, -0.7879004, -0.17557621, -0.78785384, -0.10847627, -0.10759721, 3.289076, 0.29876578, 0.16418573, -1.0598762, 0.7066265, -0.17557621, -0.85596585, 0.9783961, -0.17557621, -0.51625717, 0.09504166, 0.09620673, 3.289076, -0.9237852, 0.16418573, -0.5839435)
+[sub_resource type="BoxShape3D" id="BoxShape3D_f71sk"]
+size = Vector3(2.0195923, 0.33007813, 4.296814)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_736ab"]
 resource_name = "glass.001"
@@ -75,14 +75,12 @@ metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_f71sk"]
 height = 0.6002197
-radius = 0.071777344
 
 [node name="PickableObject" instance=ExtResource("1_eifmw")]
-collision_layer = 8
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(0.07, 0, 0, 0, -3.059797e-09, -0.07, 0, 0.07, -3.059797e-09, -0.012875676, 0.1269942, 0.088459566)
-shape = SubResource("ConvexPolygonShape3D_7d1j8")
+transform = Transform3D(0.07, 0, 0, 0, -3.059797e-09, -0.07, 0, 0.07, -3.059797e-09, -0.012875676, 0.05339068, 0.088459566)
+shape = SubResource("BoxShape3D_f71sk")
 
 [node name="Object_4" type="MeshInstance3D" parent="." index="1"]
 transform = Transform3D(0.07, 0, 0, 0, -3.059797e-09, -0.07, 0, 0.07, -3.059797e-09, -0.012875676, 0.1269942, 0.088459566)

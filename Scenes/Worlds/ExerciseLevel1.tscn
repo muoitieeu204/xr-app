@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bu73omc55ibvk"]
+[gd_scene load_steps=32 format=3 uid="uid://bu73omc55ibvk"]
 
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="1_fewtt"]
 [ext_resource type="ArrayMesh" uid="uid://cab5253bndmge" path="res://Assets/ExerciseLevelAsset/LowpolyFloatingIsland.tres" id="1_vcr52"]
@@ -11,7 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="9_74vv2"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="10_rlmto"]
 [ext_resource type="Script" uid="uid://dafp3g5f51n3w" path="res://scripts/Environment Script/ExerciseLevelResultSceneTrigger.gd" id="11_rlmto"]
-[ext_resource type="PackedScene" uid="uid://cafrk5bet0ple" path="res://Assets/ExerciseLevelAsset/MagnifyingPickable.tscn" id="12_egqm1"]
+[ext_resource type="PackedScene" uid="uid://dwkv0kfu368op" path="res://Assets/ExerciseLevelAsset/FakeMagnifying.tscn" id="12_egqm1"]
+[ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="13_i0qbo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b2p4l"]
 panorama = ExtResource("1_fewtt")
@@ -103,7 +104,7 @@ mesh = ExtResource("1_vcr52")
 [node name="GroundCollision" type="CollisionShape3D" parent="Environment/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_7kdwa")
 
-[node name="WaterShader" type="Area3D" parent="."]
+[node name="WaterShader" type="Area3D" parent="." node_paths=PackedStringArray("respawn_point")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3665724, 0)
 collision_mask = 524293
 gravity_space_override = 3
@@ -113,6 +114,7 @@ linear_damp = 10.0
 angular_damp_space_override = 3
 angular_damp = 5.0
 script = ExtResource("3_b2p4l")
+respawn_point = NodePath("../Spawner")
 
 [node name="Water" type="MeshInstance3D" parent="WaterShader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3039732, 1.425847, -1.399037)
@@ -263,7 +265,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.
 shape = SubResource("CylinderShape3D_i0qbo")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 
-[node name="PickableObject" parent="." instance=ExtResource("12_egqm1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.657693, 3.9385629, -12.12295)
+[node name="FakeMagnifying" parent="." instance=ExtResource("12_egqm1")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -6.483516, 4.1160398, -11.994479)
+
+[node name="Area3D" parent="." instance=ExtResource("13_i0qbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2250404, 3.412198, -12.058381)
 
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]

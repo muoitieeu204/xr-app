@@ -102,11 +102,6 @@ func _on_speech_result(is_correct: bool):
 				if npc_animation_player and npc_animation_player.has_animation("emote-no"):
 					npc_animation_player.play("emote-no")
 				await npc_audio_player.finished
-		
-			if npc_audio_player and current_item_name_audio:
-				npc_audio_player.stream = current_item_name_audio
-				npc_audio_player.play()
-				await npc_audio_player.finished
 		else:
 			if npc_audio_player and wrong_audio.size() > 0:
 				npc_audio_player.stream = wrong_audio.pick_random()
