@@ -56,31 +56,41 @@ func _ready() -> void:
 	show_next_waypoint()
 	
 	# --- EXERCISE API LOGIC ---
-	GetLessionItemsApi.exercise_data_loaded.connect(_on_data_loaded)
-	GetLessionItemsApi.exercise_data_load_failed.connect(_on_data_failed)
+	GetExerciseItemsApi.exercise_data_loaded.connect(_on_data_loaded)
+	GetExerciseItemsApi.exercise_data_load_failed.connect(_on_data_failed)
 	print("🔍 Requesting exercise data from API for level: ", levelId)
 	
 	# Fetch the API using the exported levelId!
-	GetLessionItemsApi.fetch_exercise_data(levelId)
+	GetExerciseItemsApi.fetch_exercise_data(levelId)
 
 # ----------------- EXERCISE API LOGIC -----------------
 func _on_data_loaded(_data: Array) -> void:
+	taskList.clear() # Clear any old data from the Godot Inspector
 	for slot_info in ExerciseData.items:
 		var slot_name: String = str(slot_info.get("slotName", ""))
 		var raw_asset = slot_info.get("itemAsset")
 		var asset_dict: Dictionary = raw_asset if raw_asset is Dictionary else {}
 		var item_name: String = str(asset_dict.get("ItemName", ""))
+		
+		# --- DYNAMICALLY ADD TO TASK LIST ---
+		if item_name != "":
+			taskList.append(item_name)
+		# ------------------------------------
+		
 		if item_catalog.has(item_name):
 			var packed_scene: PackedScene = item_catalog[item_name]
 			var spawn_marker = find_child(slot_name, true, false)
 			if spawn_marker and spawn_marker.has_method("spawn_item"):
 				spawn_marker.spawn_item(packed_scene)
+	
+	print("✅ Dynamic Task List Created: ", taskList)
+	get_tree().call_group("TaskUI", "update_tasks", taskList, completedTask)
 
 func _on_data_failed(error_msg: String) -> void:
 	push_error("❌ API Fetch Failed: " + error_msg)
 
 # ----------------- LEVEL TRACKING LOGIC -----------------
-func CorrectAnswer(point: int, itemName: String) -> void:
+func CorrectAnswer(itemName: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
 	if interactionLog == "":
@@ -91,7 +101,13 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
 		correctCount += 1
-		currentScore = min(100, currentScore + point)
+		var earned_points = 0
+		for slot in ExerciseData.items:
+			var asset = slot.get("itemAsset")
+			if asset is Dictionary and asset.get("ItemName", "") == itemName:
+				earned_points = slot.get("correctPoints", 0)
+				break
+		currentScore += earned_points
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
 		
@@ -100,7 +116,7 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	else:
 		print("Not in task list or already completed. Logged, but no score change!")
 
-func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
+func WrongAnswer(itemName: String, spokenText: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	if interactionLog == "":
@@ -108,10 +124,19 @@ func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
 	
+	if spokenText == "[Không nghe rõ/ Im lặng]":
+		return
+
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
 		errorCount += 1
-		currentScore = max(0, currentScore - point)
+		var lost_points = 0
+		for slot in ExerciseData.items:
+			var asset = slot.get("itemAsset")
+			if asset is Dictionary and asset.get("ItemName", "") == itemName:
+				lost_points = slot.get("wrongPoints", 0)
+				break
+		currentScore = max(0, currentScore - lost_points)
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
 		

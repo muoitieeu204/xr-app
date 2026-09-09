@@ -14,6 +14,9 @@ extends Area3D
 @export var buttonPressedAudio: AudioStream
 @export var holoText: String = "Teleport Area"
 
+@export_category("Telelport API Logic")
+@export var target_lesson_id: int = 0
+
 @onready var label = $TextRingMesh/SubViewport/Label
 
 var isUnlocked: bool = false
@@ -30,7 +33,7 @@ func _ready() -> void:
 		# Automatically unlocked!
 		isUnlocked = true
 		_set_portal_color(Color(0.0, 0.0, 1.0, 0.3)) # Blue
-
+	GetAllLessonApi.lesson_data_loaded.connect(_on_lesson_data_ready)
 func _on_body_entered(_body: Node3D) -> void:
 	var playerBody := _body as XRToolsPlayerBody
 	if not playerBody:
@@ -105,22 +108,49 @@ func _set_portal_color(color: Color) -> void:
 func _on_basket_trigger_puzzle_solved() -> void:
 	unlock_portal()
 
+func _on_lesson_data_ready(data: Array) -> void:
+	setup_portal_dynamically()
+
+func setup_portal_dynamically() -> void:
+	if target_lesson_id == 0:
+		return
+	
+	var found_lesson: Dictionary = {}
+	for lesson in LessonData.response_data:
+		if lesson.get("id") == target_lesson_id:
+			found_lesson = lesson
+			break
+	
+	if found_lesson.is_empty():
+		print("Lesson ID %d not found in API! Locking portal." % target_lesson_id)
+		return
+	
+	if found_lesson.get("status") != "Active":
+		print("Lesson is disabled in API. Locking portal.")
+		return
+
+	var lesson_name = found_lesson.get("lessonName", "Unknow Lesson")
+	portalLabel.text = lesson_name
+	label.text = lesson_name
+	
+	unlock_portal()
+
 func _on_interactable_area_button_button_pressed(button: Variant) -> void:
 	target_scene = "res://Scenes/Worlds/ExerciseLevel1.tscn"
-	if portalAudio and buttonPressedAudio and label:
+	portalLabel.text = "Bài tập 1"
+	label.text = "Bài tập 1"
+	if portalAudio and buttonPressedAudio:
 		unlock_portal()
 		portalAudio.stream = buttonPressedAudio
 		portalAudio.volume_db = -0.8
 		portalAudio.play()
-		portalLabel.text = "Exercise Level 1"
-		label.text = "Exercise Level 1"
 
 func _on_interactable_area_button_2_button_pressed(button: Variant) -> void:
 	target_scene = "res://Scenes/Worlds/ExerciseLevel2.tscn"
-	if portalAudio and buttonPressedAudio and label:
+	portalLabel.text = "Bài tập 2"
+	label.text = "Bài tập 2"
+	if portalAudio and buttonPressedAudio:
 		unlock_portal()
 		portalAudio.stream = buttonPressedAudio
 		portalAudio.volume_db = -0.8
 		portalAudio.play()
-		portalLabel.text = "Exercise Level 2"
-		label.text = "Exercise Level 2"

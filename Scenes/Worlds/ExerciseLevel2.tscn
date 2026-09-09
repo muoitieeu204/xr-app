@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://brrsfmpsgnf4l"]
+[gd_scene load_steps=35 format=3 uid="uid://brrsfmpsgnf4l"]
 
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_750ww"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_red2x"]
@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="10_np1km"]
 [ext_resource type="Script" uid="uid://dafp3g5f51n3w" path="res://scripts/Environment Script/ExerciseLevelResultSceneTrigger.gd" id="11_rnf3f"]
 [ext_resource type="PackedScene" uid="uid://dwkv0kfu368op" path="res://Assets/ExerciseLevelAsset/FakeMagnifying.tscn" id="12_red2x"]
+[ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_2mvu4"]
+[ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="14_d5p2s"]
+[ext_resource type="AudioStream" uid="uid://cvhj3kxqfbmai" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/30_gan_dung_roi_day_ban_nghe_minh_doc_cham_lai_mot_7fd5c685-7cbe-4545-b878-5117d7c2f2d2.mp3" id="15_xjo5t"]
+[ext_resource type="AudioStream" uid="uid://bvovm60qpkejp" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3" id="16_m3nmu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b2p4l"]
 panorama = ExtResource("2_red2x")
@@ -81,7 +85,7 @@ size = Vector3(0.01, 10, 1.8060524)
 height = 0.5
 radius = 2.3
 
-[node name="ExerciseLevel1" type="Node3D" node_paths=PackedStringArray("item_slot_spawner")]
+[node name="ExerciseLevel1" type="Node3D" node_paths=PackedStringArray("item_slot_spawner") groups=["ExerciseLevelController", "LevelController"]]
 script = ExtResource("1_750ww")
 item_slot_spawner = [NodePath("Item Spawner/slot 1"), NodePath("Item Spawner/slot 2"), NodePath("Item Spawner/slot 3"), NodePath("Item Spawner/slot 4"), NodePath("Item Spawner/slot 5"), NodePath("Item Spawner/slot 6"), NodePath("Item Spawner/slot 7"), NodePath("Item Spawner/slot 8"), NodePath("Item Spawner/slot 9"), NodePath("Item Spawner/slot 10")]
 
@@ -268,4 +272,16 @@ debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 [node name="FakeMagnifying" parent="." instance=ExtResource("12_red2x")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.4554615, 5.242256, 13.45901)
 
+[node name="NpcZone" type="Node3D" parent="."]
+transform = Transform3D(0.6188748, 0, -0.78548974, 0, 1, 0, 0.78548974, 0, 0.6188748, -12.033102, 4.257328, 8.519952)
+
+[node name="StallCashier" parent="NpcZone" instance=ExtResource("13_2mvu4")]
+transform = Transform3D(1.6934829, 0, 1.0640093, 0, 2, 0, -1.0640093, 0, 1.6934829, 0, 0, 0)
+
+[node name="Npc" parent="NpcZone/StallCashier" instance=ExtResource("14_d5p2s")]
+transform = Transform3D(0.0042935014, 0, 0.49998155, 0, 0.5, 0, -0.49998155, 0, 0.0042935014, -0.41395855, -1.1920929e-07, -0.024498343)
+ssd_repeat_audio = Array[AudioStream]([ExtResource("15_xjo5t"), ExtResource("16_m3nmu")])
+
+[connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea" method="_on_result_screen_trigger_body_entered"]
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]
+[connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]

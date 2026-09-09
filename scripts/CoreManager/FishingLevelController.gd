@@ -13,6 +13,10 @@ extends XRToolsSceneBase
 @export_group("Level Tutorial Variable")
 @export var waypointSequence: Array[Node3D]
 
+var maxScore: int = 60
+var completionBonusPoints: int = 20
+var correctAnswerScore: int = 20
+var incorrectAnswerScore: int = 10
 var currentScore: int = 0
 var startedAt: String = ""
 var interactionLog: String = ""
@@ -30,6 +34,16 @@ var lastEmittedTime: int = -1
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
+	
+	for lesson in LessonData.response_data:
+		if lesson.get("id") == levelId:
+			maxScore = lesson.get("maxScore", 60)
+			completionBonusPoints = lesson.get("completionBonusPoints", 20)
+			correctAnswerScore = lesson.get("correctAnswerScore", 20)
+			incorrectAnswerScore = lesson.get("incorrectAnswerScore", 10)
+			print("✅ Loaded dynamic scores for level: ", levelId)
+			break
+	
 	SessionData.sessionId = str(ResourceUID.create_id())
 	var levelTimer = Timer.new()
 	levelTimer.wait_time = 1.0
@@ -89,7 +103,7 @@ func spawn_item(spawn_position: Vector3 = Vector3.ZERO):
 	fishing_completed_for_tutorial()
 
 # ----------------- LEVEL TRACKING LOGIC -----------------
-func CorrectAnswer(point: int, itemName: String) -> void:
+func CorrectAnswer(itemName: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
 	if interactionLog == "":
@@ -100,7 +114,7 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
 		correctCount += 1
-		currentScore = min(100, currentScore + point)
+		currentScore = min(maxScore, currentScore + correctAnswerScore)
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
 		
@@ -109,7 +123,7 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	else:
 		print("Not in task list or already completed. Logged, but no score change!")
 
-func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
+func WrongAnswer(itemName: String, spokenText: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	if interactionLog == "":
@@ -117,10 +131,13 @@ func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
 	
+	if spokenText == "[Không nghe rõ/ Im lặng]":
+		return
+		
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
 		errorCount += 1
-		currentScore = max(0, currentScore - point)
+		currentScore = max(0, currentScore - incorrectAnswerScore)
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
 

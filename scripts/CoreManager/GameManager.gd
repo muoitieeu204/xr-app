@@ -44,14 +44,14 @@ func _on_speech_recognized(text: String):
 			print("Correct! Word matched: ", currentHeldItemId)
 			validScannedItem.append(currentHeldItemId)
 			emit_signal("speech_result", true)
-			get_tree().call_group("LevelController", "CorrectAnswer", 20, currentHeldItemId)
+			get_tree().call_group("LevelController", "CorrectAnswer", currentHeldItemId)
 		else:
 			print("Incorrect! You said: ", text, " | We cleaned it it to: ", cleanText)
 			emit_signal("speech_result", false)
-			get_tree().call_group("LevelController", "WrongAnswer", 10, currentHeldItemId, text)
+			get_tree().call_group("LevelController", "WrongAnswer", currentHeldItemId, text)
 
 func _on_speech_failed(reason: String):
 	if currentHeldItemId != "":
 		print("Speech failed or silent! Reasong: ", reason)
 		emit_signal("speech_result", false)
-		get_tree().call_group("LevelController", "WrongAnswer", 5, currentHeldItemId, "[Không nghe rõ/ Im lặng]")
+		get_tree().call_group("LevelController", "WrongAnswer", currentHeldItemId, "[Không nghe rõ/ Im lặng]")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=34 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -18,6 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://xacd6pnc7smn" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall-stool.glb" id="13_cscui"]
 [ext_resource type="Script" uid="uid://cmiv00xaa7tgc" path="res://scripts/Environment Script/FishingLevelResultSceneTrigger.gd" id="15_bvhf0"]
 [ext_resource type="PackedScene" uid="uid://dorwh24bkxu7y" path="res://Prefabs/InteractableObject/TaskwayPoint.tscn" id="16_jdhyv"]
+[ext_resource type="Script" uid="uid://dmivs2rlbp1ia" path="res://scripts/Environment Script/TaskwayPoint.gd" id="19_4j4qx"]
+[ext_resource type="AudioStream" uid="uid://b2cs84t8ee1dm" path="res://Assets/Audio/clean_double_pop_n_magic_sparkle_alert_sound.mp3" id="20_c2ys4"]
+[ext_resource type="Texture2D" uid="uid://e3a5qg1yfcmm" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/minimap_arrow_a.png" id="21_3romh"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -57,13 +60,53 @@ size = Vector3(0.01, 10, 20)
 height = 0.5
 radius = 2.3
 
-[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker", "waypointSequence") groups=["FishingLevelController"]]
+[sub_resource type="Animation" id="Animation_u3c16"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -3.1415927)]
+}
+
+[sub_resource type="Animation" id="Animation_wui0w"]
+resource_name = "task_point_spin"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -3.1415927), Vector3(0, 0.7853982, -3.1415927), Vector3(0, 1.5707964, -3.1415927), Vector3(0, 2.0943952, -3.1415927), Vector3(0, 2.8797932, -3.1415927), Vector3(0, 3.6651914, -3.1415927), Vector3(0, 5.148721, -3.1415927), Vector3(0, 5.7595863, -3.1415927), Vector3(0, 6.2831855, -3.1415927)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_amuud"]
+_data = {
+&"RESET": SubResource("Animation_u3c16"),
+&"task_point_spin": SubResource("Animation_wui0w")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x2ulc"]
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker", "waypointSequence") groups=["FishingLevelController", "LevelController"]]
 script = ExtResource("1_enjev")
 catchable_items = Array[PackedScene]([ExtResource("2_hrype"), ExtResource("3_by2g3")])
 spawn_marker = NodePath("ItemSpawnerPoint/ItemSpawner")
 isLesson = true
 levelId = 2
-taskList = Array[String](["túi xúc xích", "gà nguyên con"])
+taskList = Array[String](["gói xúc xích", "gà nguyên con"])
 waypointSequence = [NodePath("LevelTutorial/PickupFishingRod"), NodePath("LevelTutorial/FishingHere"), NodePath("LevelTutorial/PickupItemHere"), NodePath("LevelTutorial/DropHere"), NodePath("LevelTutorial/FishingHere2"), NodePath("LevelTutorial/PickupItemHere2"), NodePath("LevelTutorial/DropHere2"), NodePath("LevelTutorial/ExitHere")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -172,56 +215,252 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41627717, -0.37417254, -5.
 [node name="Label3D" parent="LevelTutorial/PickupFishingRod" index="0"]
 text = "Lấy cần câu  ở đây nè "
 
-[node name="FishingHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+[node name="FishingHere" type="Node3D" parent="LevelTutorial" node_paths=PackedStringArray("indicator_sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.696667, -1.2297752, -0.18234724)
+script = ExtResource("19_4j4qx")
+indicator_sound = NodePath("AudioStreamPlayer3D")
 
-[node name="Label3D" parent="LevelTutorial/FishingHere" index="0"]
-text = "Lấy cần câu  ở đây nè "
+[node name="Label3D" type="Label3D" parent="LevelTutorial/FishingHere"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+text = "Hãy bắt đầu câu cá ở đây nè"
+autowrap_mode = 2
+width = 300.0
 
-[node name="FishingHere2" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LevelTutorial/FishingHere"]
+stream = ExtResource("20_c2ys4")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="LevelTutorial/FishingHere"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("21_3romh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelTutorial/FishingHere"]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="LevelTutorial/FishingHere"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/FishingHere/Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[node name="FishingHere2" type="Node3D" parent="LevelTutorial" node_paths=PackedStringArray("indicator_sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.696667, -1.2297752, -0.18234724)
+script = ExtResource("19_4j4qx")
+indicator_sound = NodePath("AudioStreamPlayer3D")
 
-[node name="Label3D" parent="LevelTutorial/FishingHere2" index="0"]
-text = "Lấy cần câu  ở đây nè "
+[node name="Label3D" type="Label3D" parent="LevelTutorial/FishingHere2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+text = "Câu cá ở đây nè"
+autowrap_mode = 2
+width = 300.0
 
-[node name="PickupItemHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LevelTutorial/FishingHere2"]
+stream = ExtResource("20_c2ys4")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="LevelTutorial/FishingHere2"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("21_3romh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelTutorial/FishingHere2"]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="LevelTutorial/FishingHere2"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/FishingHere2/Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[node name="PickupItemHere" type="Node3D" parent="LevelTutorial" node_paths=PackedStringArray("indicator_sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.207211, -1.2297752, -1.4142947)
+script = ExtResource("19_4j4qx")
+indicator_sound = NodePath("AudioStreamPlayer3D")
 
-[node name="Label3D" parent="LevelTutorial/PickupItemHere" index="0"]
-text = "Lấy cần câu  ở đây nè "
+[node name="Label3D" type="Label3D" parent="LevelTutorial/PickupItemHere"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+text = "Nhặt vật phẩm câu được ở đây"
+autowrap_mode = 2
+width = 300.0
 
-[node name="PickupItemHere2" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LevelTutorial/PickupItemHere"]
+stream = ExtResource("20_c2ys4")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="LevelTutorial/PickupItemHere"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("21_3romh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelTutorial/PickupItemHere"]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="LevelTutorial/PickupItemHere"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/PickupItemHere/Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[node name="PickupItemHere2" type="Node3D" parent="LevelTutorial" node_paths=PackedStringArray("indicator_sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.207211, -1.2297752, -1.4142947)
+script = ExtResource("19_4j4qx")
+indicator_sound = NodePath("AudioStreamPlayer3D")
 
-[node name="Label3D" parent="LevelTutorial/PickupItemHere2" index="0"]
-text = "Lấy cần câu  ở đây nè "
+[node name="Label3D" type="Label3D" parent="LevelTutorial/PickupItemHere2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+text = "Nhặt vật phẩm câu được ở đây"
+autowrap_mode = 2
+width = 300.0
 
-[node name="DropHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LevelTutorial/PickupItemHere2"]
+stream = ExtResource("20_c2ys4")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="LevelTutorial/PickupItemHere2"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("21_3romh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelTutorial/PickupItemHere2"]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="LevelTutorial/PickupItemHere2"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/PickupItemHere2/Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[node name="DropHere" type="Node3D" parent="LevelTutorial" node_paths=PackedStringArray("indicator_sound")]
 transform = Transform3D(0.91907346, 0, 0.39408627, 0, 1, 0, -0.39408627, 0, 0.91907346, -3.1908836, -0.43236804, 4.7745175)
+script = ExtResource("19_4j4qx")
+indicator_sound = NodePath("AudioStreamPlayer3D")
 
-[node name="Label3D" parent="LevelTutorial/DropHere" index="0"]
-text = "Lấy cần câu  ở đây nè "
+[node name="Label3D" type="Label3D" parent="LevelTutorial/DropHere"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+text = "Đặt đồ lên đây để trả lời NPC"
+autowrap_mode = 2
+width = 300.0
 
-[node name="DropHere2" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LevelTutorial/DropHere"]
+stream = ExtResource("20_c2ys4")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="LevelTutorial/DropHere"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("21_3romh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelTutorial/DropHere"]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="LevelTutorial/DropHere"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/DropHere/Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[node name="DropHere2" type="Node3D" parent="LevelTutorial" node_paths=PackedStringArray("indicator_sound")]
 transform = Transform3D(0.91907346, 0, 0.39408627, 0, 1, 0, -0.39408627, 0, 0.91907346, -3.1908836, -0.43236804, 4.7745175)
+script = ExtResource("19_4j4qx")
+indicator_sound = NodePath("AudioStreamPlayer3D")
 
-[node name="Label3D" parent="LevelTutorial/DropHere2" index="0"]
-text = "Lấy cần câu  ở đây nè "
+[node name="Label3D" type="Label3D" parent="LevelTutorial/DropHere2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+text = "Đặt đồ lên đây để trả lời NPC"
+autowrap_mode = 2
+width = 300.0
 
-[node name="ExitHere" parent="LevelTutorial" instance=ExtResource("16_jdhyv")]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LevelTutorial/DropHere2"]
+stream = ExtResource("20_c2ys4")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="LevelTutorial/DropHere2"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("21_3romh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelTutorial/DropHere2"]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="LevelTutorial/DropHere2"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/DropHere2/Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[node name="ExitHere" type="Node3D" parent="LevelTutorial" node_paths=PackedStringArray("indicator_sound")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8774357, -0.27014792, -1.8045214)
+script = ExtResource("19_4j4qx")
+indicator_sound = NodePath("AudioStreamPlayer3D")
 
-[node name="Label3D" parent="LevelTutorial/ExitHere" index="0"]
-text = "Lấy cần câu  ở đây nè "
+[node name="Label3D" type="Label3D" parent="LevelTutorial/ExitHere"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5154395, 0)
+billboard = 2
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+text = " Ra đây để kết thúc màn chơi "
+autowrap_mode = 2
+width = 300.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="LevelTutorial/ExitHere"]
+stream = ExtResource("20_c2ys4")
+bus = &"Sounds"
+
+[node name="Sprite3D" type="Sprite3D" parent="LevelTutorial/ExitHere"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 2, 0)
+texture = ExtResource("21_3romh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LevelTutorial/ExitHere"]
+libraries = {
+&"": SubResource("AnimationLibrary_amuud")
+}
+autoplay = "task_point_spin"
+
+[node name="Area3D" type="Area3D" parent="LevelTutorial/ExitHere"]
+collision_mask = 524288
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/ExitHere/Area3D"]
+shape = SubResource("BoxShape3D_x2ulc")
+debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
 
 [connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]
+[connection signal="body_entered" from="LevelTutorial/FishingHere/Area3D" to="LevelTutorial/FishingHere" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="LevelTutorial/FishingHere2/Area3D" to="LevelTutorial/FishingHere2" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="LevelTutorial/PickupItemHere/Area3D" to="LevelTutorial/PickupItemHere" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="LevelTutorial/PickupItemHere2/Area3D" to="LevelTutorial/PickupItemHere2" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="LevelTutorial/DropHere/Area3D" to="LevelTutorial/DropHere" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="LevelTutorial/DropHere2/Area3D" to="LevelTutorial/DropHere2" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="LevelTutorial/ExitHere/Area3D" to="LevelTutorial/ExitHere" method="_on_area_3d_body_entered"]
 
 [editable path="LevelTutorial/PickupFishingRod"]
-[editable path="LevelTutorial/FishingHere"]
-[editable path="LevelTutorial/FishingHere2"]
-[editable path="LevelTutorial/PickupItemHere"]
-[editable path="LevelTutorial/PickupItemHere2"]
-[editable path="LevelTutorial/DropHere"]
-[editable path="LevelTutorial/DropHere2"]
-[editable path="LevelTutorial/ExitHere"]

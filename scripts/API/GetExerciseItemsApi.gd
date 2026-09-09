@@ -1,6 +1,5 @@
 extends Node
 
-#Need to update api, current api is for testing per lesson only 
 var apiUrl: String = ApiConfig.baseUrl + "/api/lessons/%d/client-config"
 var httpRequest: HTTPRequest
 
