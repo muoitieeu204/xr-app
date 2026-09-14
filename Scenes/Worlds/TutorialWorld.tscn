@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="4_kf1i1"]
 [ext_resource type="PackedScene" uid="uid://cjq5edftlpt0g" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round-small.glb" id="5_b3bv3"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="6_ykflw"]
-[ext_resource type="Texture2D" uid="uid://ni4880cfgnhe" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="7_ykflw"]
+[ext_resource type="Texture2D" uid="uid://bh0g6c1klosyp" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="7_ykflw"]
 [ext_resource type="PackedScene" uid="uid://y57awkqbs4jp" path="res://Prefabs/InteractableObject/interactable-table.tscn" id="9_3hhen"]
 [ext_resource type="Script" uid="uid://c54peyseci6w2" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding_2.gd" id="9_uqxnd"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="10_0r11v"]
@@ -434,7 +434,7 @@ mesh = SubResource("ArrayMesh_ropn8")
 shape = SubResource("ConvexPolygonShape3D_0r11v")
 
 [node name="Viewport2Din3D" parent="Environment/InteractableStructure/Door2" instance=ExtResource("26_efjx1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31.205975, 4.541245, 54.153946)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31.205975, 4.541245, 56.24569)
 screen_size = Vector2(1, 1)
 scene = ExtResource("27_e78ep")
 transparent = 0

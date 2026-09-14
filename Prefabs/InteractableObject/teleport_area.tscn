@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4mettyqpc1cu"]
+[gd_scene load_steps=17 format=3 uid="uid://b4mettyqpc1cu"]
 
 [ext_resource type="Script" uid="uid://bubjo0pgcpwas" path="res://scripts/Environment Script/teleport_area.gd" id="1_b1v42"]
 [ext_resource type="Shader" uid="uid://jt7yuo5fk1yr" path="res://Prefabs/Shader/teleport_area_shader.gdshader" id="2_4h3l1"]
 [ext_resource type="AudioStream" uid="uid://d11stv3umutt6" path="res://Prefabs/Audio/TeleportSuccess.mp3" id="2_m4xex"]
 [ext_resource type="AudioStream" uid="uid://co7k1ewpgq4b6" path="res://Prefabs/Audio/TeleportDenied.mp3" id="3_bnh0a"]
 [ext_resource type="Script" uid="uid://cstbwtrbrr1lg" path="res://scripts/Environment Script/text_ring_mesh.gd" id="3_slshs"]
+[ext_resource type="AudioStream" uid="uid://dfdrsgm4qucq7" path="res://Prefabs/Audio/freesound_community-game-teleport-90735.mp3" id="4_f46ko"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4h3l1"]
 cap_top = false
@@ -55,14 +56,16 @@ top_radius = 0.495
 bottom_radius = 0.585
 height = 0.246
 
-[node name="TeleportArea" type="Area3D" node_paths=PackedStringArray("portalMesh", "portalAudio")]
+[node name="TeleportArea" type="Area3D" node_paths=PackedStringArray("portalMesh", "portalAudio", "portalLabel")]
 collision_layer = 524288
 collision_mask = 524288
 script = ExtResource("1_b1v42")
 portalMesh = NodePath("Teleport pillar")
 portalAudio = NodePath("TeleportSound")
+portalLabel = NodePath("Teleport Text")
 successSound = ExtResource("2_m4xex")
 errorSound = ExtResource("3_bnh0a")
+buttonPressedAudio = ExtResource("4_f46ko")
 
 [node name="Teleport pillar" type="MeshInstance3D" parent="."]
 mesh = SubResource("CylinderMesh_4h3l1")
@@ -105,3 +108,9 @@ mesh = SubResource("CylinderMesh_bnh0a")
 surface_material_override/0 = SubResource("StandardMaterial3D_m4xex")
 
 [node name="TeleportSound" type="AudioStreamPlayer3D" parent="."]
+
+[node name="Teleport Text" type="Label3D" parent="."]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 2, 0)
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+font_size = 48
+autowrap_mode = 2

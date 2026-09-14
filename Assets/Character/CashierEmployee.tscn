@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://jhprmwnakj1e"]
+[gd_scene load_steps=29 format=4 uid="uid://jhprmwnakj1e"]
 
 [ext_resource type="Script" uid="uid://nt6onlsgwd67" path="res://scripts/NPCs/NpcController.gd" id="1_84ai0"]
 [ext_resource type="Texture2D" uid="uid://c7mkd173sheui" path="res://Assets/Character/Creative_Character_free_Textures_4.png" id="1_c3k4t"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://b1yq8a4hroo8l" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/26_o_chua_chinh_xac_mat_roi_khong_sao_dau_ban_thu_567f6636-6434-4e78-b45f-85acf25faaa1.mp3" id="6_4s1g8"]
 [ext_resource type="AudioStream" uid="uid://bp0xht85yyftu" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/27_tiec_qua_cau_tra_loi_nay_chua_dung_roi_co_gang_33762bcd-5672-4204-bc0c-9fe50c7ead58.mp3" id="7_2xgaf"]
 [ext_resource type="AudioStream" uid="uid://btqo58r0aar1x" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/chua_dung_roi_ban_nghi_lai_xem_nao_8d1261c0-b266-428f-9b42-48bdf887c939.mp3" id="8_d07lw"]
+[ext_resource type="AudioStream" uid="uid://dxc3y1fftlwy0" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/29_chua_dung_mat_roi_nhung_khong_sao_ne_qua_mon_6248e493-d8be-4be9-94fd-ffd802a2e4b8.mp3" id="9_bmsno"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y645v"]
 resource_name = "Color"
@@ -363,15 +364,17 @@ albedo_color = Color(0.75562954, 0.23084787, 0.22709063, 1)
 [sub_resource type="SphereMesh" id="SphereMesh_bmsno"]
 material = SubResource("StandardMaterial3D_84ai0")
 
-[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player", "npc_record_indicator", "body_to_breathe")]
+[node name="Skeleton" type="StaticBody3D" node_paths=PackedStringArray("npc_audio_player", "npc_animation_player", "body_to_breathe", "npc_record_indicator", "npc_label_indicator")]
 script = ExtResource("1_84ai0")
 npc_audio_player = NodePath("AudioStreamPlayer3D")
 npc_animation_player = NodePath("AnimationPlayer")
-npc_record_indicator = NodePath("MeshInstance3D")
 question_1_audio = ExtResource("2_bmsno")
 correct_audio = Array[AudioStream]([ExtResource("3_sigga"), ExtResource("4_gj5ub"), ExtResource("5_76h6f")])
 wrong_audio = Array[AudioStream]([ExtResource("6_4s1g8"), ExtResource("7_2xgaf"), ExtResource("8_d07lw")])
+skip_audio = ExtResource("9_bmsno")
 body_to_breathe = NodePath("Skeleton3D")
+npc_record_indicator = NodePath("RecordIndicator")
+npc_label_indicator = NodePath("Label3D")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="."]
 bones/0/name = "Root"
@@ -723,6 +726,7 @@ skin = SubResource("Skin_xha5r")
 skeleton = NodePath("../..")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+bus = &"Sounds"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -733,6 +737,12 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9331248, 0)
 shape = SubResource("CapsuleShape3D_84ai0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="RecordIndicator" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36502177, 1.62415, 0.42445666)
 mesh = SubResource("SphereMesh_bmsno")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.36502177, 1.4217994, 0.63684106)
+pixel_size = 0.03
+billboard = 2
+outline_modulate = Color(0.11858145, 0.11858136, 0.11858138, 1)

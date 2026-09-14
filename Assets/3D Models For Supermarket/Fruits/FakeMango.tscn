@@ -55,6 +55,7 @@ shadow_mesh = SubResource("ArrayMesh_g3qkc")
 
 [node name="FakeMango" type="Area3D"]
 collision_layer = 5
+audio_bus_name = &"Sounds"
 script = ExtResource("1_e7vk4")
 realItem = ExtResource("2_k3ejs")
 itemName = "quả xoài"

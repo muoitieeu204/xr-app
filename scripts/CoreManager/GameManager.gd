@@ -13,9 +13,14 @@ signal health_warning_triggered
 signal play_npc_teaching_audio(audio_stream: AudioStream)
 
 func _ready() -> void:
+	var xr_interface = XRServer.find_interface("OpenXR")
+	if xr_interface and xr_interface.is_initialized():
+		xr_interface.set_display_refresh_rate(72.0)
+		
 	var speechManager = get_node_or_null("/root/AzureSpeechManager")
 	if speechManager:
 		speechManager.OnSpeechRecognized.connect(_on_speech_recognized)
+		speechManager.OnSpeechFailed.connect(_on_speech_failed)
 
 func start_checkout_test(itemId: String):
 	currentHeldItemId = itemId
@@ -39,7 +44,14 @@ func _on_speech_recognized(text: String):
 			print("Correct! Word matched: ", currentHeldItemId)
 			validScannedItem.append(currentHeldItemId)
 			emit_signal("speech_result", true)
+			get_tree().call_group("LevelController", "CorrectAnswer", currentHeldItemId)
 		else:
 			print("Incorrect! You said: ", text, " | We cleaned it it to: ", cleanText)
 			emit_signal("speech_result", false)
-			get_tree().call_group("LevelController", "WrongAnswer", 10, currentHeldItemId, text)
+			get_tree().call_group("LevelController", "WrongAnswer", currentHeldItemId, text)
+
+func _on_speech_failed(reason: String):
+	if currentHeldItemId != "":
+		print("Speech failed or silent! Reasong: ", reason)
+		emit_signal("speech_result", false)
+		get_tree().call_group("LevelController", "WrongAnswer", currentHeldItemId, "[Không nghe rõ/ Im lặng]")

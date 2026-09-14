@@ -1,22 +1,6 @@
 extends Node
-
-var apiUrl: String = "https://103-162-30-111.sslip.io/api/results/submit"
+var apiUrl: String = ApiConfig.baseUrl + "/api/results/submit"
 var httpRequest: HTTPRequest
-
-# --- ALL API PAYLOAD FIELDS ---
-# var sessionId: String = ""
-# var childId: int = 0
-# var exerciseId: int = 0
-# var lessonId: int = 0
-# var attemptNumber: int = 0
-# var completionStatus: String = ""
-# var score: int = 0
-# var startedAt: String = ""
-# var completedAt: String = ""  
-# var durationSeconds: int = 0
-# var interactionLog: String = ""
-# var feedbackText: String = ""
-
 
 signal results_loaded(results: Array)
 signal results_load_failed(error: String)
@@ -34,7 +18,7 @@ func _ready() -> void:
 
 
 func fetch_results(child_id: int) -> void:
-	var url := "https://103-162-30-111.sslip.io/api/results/by-child/" + str(child_id)
+	var url := ApiConfig.baseUrl + "/api/results/by-child/" + str(child_id)
 	var headers = [
 		"Authorization: Bearer " + SessionData.accessToken,
 		"Accept: application/json"
@@ -68,20 +52,6 @@ func _on_fetch_completed(result: int, responseCode: int, _headers: PackedStringA
 
 
 func send_result(data_to_send: Dictionary) -> void:
-	#Inject lessonId/exerciseId 
-	# completedAt = Time.get_datetime_string_from_system()
-	# var data_to_send = {
-	# 	"sessionId": sessionId,
-	# 	"childId": childId,
-	# 	"attemptNumber": attemptNumber,
-	# 	"completionStatus": completionStatus,
-	# 	"score": score,
-	# 	"startedAt": startedAt,
-	# 	"completedAt": completedAt,
-	# 	"durationSeconds": durationSeconds,
-	# 	"interactionLog": interactionLog,
-	# 	"feedbackText": feedbackText
-	# }
 	var json = JSON.stringify(data_to_send)
 	var headers = [
 		"Authorization: Bearer " + SessionData.accessToken,

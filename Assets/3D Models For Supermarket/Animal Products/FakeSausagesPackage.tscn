@@ -12,6 +12,7 @@ size = Vector3(0.16217041, 0.04437256, 0.10345459)
 
 [node name="SausagesPackage" type="Area3D"]
 collision_layer = 5
+audio_bus_name = &"Sounds"
 script = ExtResource("1_oguan")
 realItem = ExtResource("2_cql81")
 itemName = "gói xúc xích"

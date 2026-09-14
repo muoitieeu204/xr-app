@@ -1,10 +1,7 @@
 extends Node3D
 
 @export var spawn_object: Array[PackedScene]
-@export var spawn_pos : Array[Vector3]
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	_spawn()
+@export var spawn_pos: Array[Vector3]
 
 func _spawn():
 	for i in range(spawn_object.size()):
@@ -12,7 +9,19 @@ func _spawn():
 		var spawn = obj.instantiate() as Node3D
 		add_child(spawn)
 		if i < spawn_pos.size():
-			spawn.position= spawn_pos[i]
-		else :
-			spawn.position = Vector3(i * 2.0, 0 , 0)
+			spawn.position = spawn_pos[i]
+		else:
+			spawn.position = Vector3(i * 2.0, 0, 0)
 			
+
+func spawn_item(scene: PackedScene) -> Node3D:
+	if scene == null:
+		push_warning("Cannot spawn null PackedScene!")
+		return
+	
+	var instance = scene.instantiate() as Node3D
+	add_child(instance)
+	instance.visible = false
+	instance.collision_layer = 8 #collision layer 4 in editor
+	instance.global_position = global_position
+	return instance

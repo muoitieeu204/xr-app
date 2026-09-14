@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cek0oqhsqqdt4"
+path="res://.godot/imported/35_cac_nha_tham_hiem_nhi_thuong_mang_mon_do_nay_theo_1fe269f1-8de8-4c80-a6a2-787ba3575edb.mp3-599ac0d715f301164b9e65971ff52150.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Item/Magnifying/35_cac_nha_tham_hiem_nhi_thuong_mang_mon_do_nay_theo_1fe269f1-8de8-4c80-a6a2-787ba3575edb.mp3"
+dest_files=["res://.godot/imported/35_cac_nha_tham_hiem_nhi_thuong_mang_mon_do_nay_theo_1fe269f1-8de8-4c80-a6a2-787ba3575edb.mp3-599ac0d715f301164b9e65971ff52150.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,7 +3,7 @@ extends Node
 ## FilesApi — Wrap các endpoint /api/files
 ## Dùng làm Autoload HOẶC gọi trực tiếp từ scene
 
-const BASE_URL := "https://103-162-30-111.sslip.io/api/files"
+var BASE_URL := ApiConfig.baseUrl + "/api/files"
 
 signal sessions_loaded(sessions: Array)
 signal sessions_load_failed(error: String)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://dcdlplkk7if88"]
+[gd_scene load_steps=12 format=4 uid="uid://dcdlplkk7if88"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_cc613"]
 [ext_resource type="Texture2D" uid="uid://dfirdld8dbxip" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/Banana_0.jpg" id="1_evb1w"]
 [ext_resource type="PackedScene" uid="uid://cqgeqwier1wbw" path="res://Assets/3D Models For Supermarket/Fruits/BananaPickable.tscn" id="2_m4xvb"]
+[ext_resource type="AudioStream" uid="uid://vx5dh14sx1k" path="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Banana/32_qua_chuoi_c7798573-0965-4030-b390-d6694b2cce83.mp3" id="3_828s7"]
 [ext_resource type="AudioStream" uid="uid://ckigtqgsxk8qs" path="res://Prefabs/Guide Sound/Food/Banana/goi_y_toi_co_mau_vang_va_hinh_cong_nhu_mat_4b2b4852-2f8d-4d31-9571-36d69b7fb0bd.mp3" id="3_bddp3"]
 [ext_resource type="AudioStream" uid="uid://d3mxoss3qu0qp" path="res://Prefabs/Guide Sound/Food/Banana/toi_la_trai_cay_mau_vang_cong_cong_5299c72a-67d6-422e-8453-55201c626230.mp3" id="4_828s7"]
 [ext_resource type="AudioStream" uid="uid://by0ht86mwypci" path="res://Prefabs/Guide Sound/Food/Banana/ban_thu_nghi_lai_xem_qua_mau_vang_cong_cong_e96cdb1d-1d54-400d-8aa9-725a77a1db64.mp3" id="5_earmm"]
@@ -52,9 +53,11 @@ size = Vector3(0.039733887, 0.17010498, 0.169281)
 
 [node name="Sketchfab_Scene" type="Area3D"]
 collision_layer = 5
+audio_bus_name = &"Sounds"
 script = ExtResource("1_cc613")
 realItem = ExtResource("2_m4xvb")
 itemName = "trái chuối"
+itemNameSound = ExtResource("3_828s7")
 hintAudios = Array[AudioStream]([ExtResource("3_bddp3"), ExtResource("4_828s7"), ExtResource("5_earmm")])
 
 [node name="Object_3" type="MeshInstance3D" parent="."]

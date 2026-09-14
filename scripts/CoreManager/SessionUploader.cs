@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 public partial class SessionUploader : Node
 {
 	private static readonly System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
-	private readonly string apiUrl = "https://103-162-30-111.sslip.io/api/files";
+	private string ApiUrl => (string)GetNode("/root/ApiConfig").Get("baseUrl") + "/api/files";
 	// Called when the node enters the scene tree for the first time.
 	public async void UploadSessionDataAsync(string jsonPath, string audioPath, string token, int childProfileId, string childSessionId)
 	{
@@ -29,7 +29,7 @@ public partial class SessionUploader : Node
 				form.Add(childId, "ChildProfileId");
 				// Attach sessionId into request body
 				var sessionId = new StringContent(childSessionId.ToString());
-				childId.Headers.ContentType = null;
+				sessionId.Headers.ContentType = null;
 				form.Add(sessionId, "childSessionId");
 				//Use FileStream for json
 				var jsonContent = new StreamContent(jsonStream);
@@ -42,7 +42,7 @@ public partial class SessionUploader : Node
 				form.Add(audioContent, "Audio", Path.GetFileName(absoluteAudioPath));
 
 				GD.Print("Starting upload to server...");
-				HttpResponseMessage response = await client.PostAsync(apiUrl, form);
+				HttpResponseMessage response = await client.PostAsync(ApiUrl, form);
 				string responseBody = await response.Content.ReadAsStringAsync();
 				if (response.IsSuccessStatusCode)
 				{

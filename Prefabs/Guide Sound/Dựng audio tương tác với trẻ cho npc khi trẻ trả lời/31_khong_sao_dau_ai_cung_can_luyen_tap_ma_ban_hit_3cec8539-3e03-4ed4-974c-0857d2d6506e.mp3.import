@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bvovm60qpkejp"
+path="res://.godot/imported/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3-98bcac72ca8085600c59673a671f1765.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3"
+dest_files=["res://.godot/imported/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3-98bcac72ca8085600c59673a671f1765.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

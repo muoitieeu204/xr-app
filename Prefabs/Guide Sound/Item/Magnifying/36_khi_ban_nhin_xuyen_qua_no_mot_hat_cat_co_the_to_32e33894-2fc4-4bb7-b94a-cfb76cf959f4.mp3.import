@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nimoy176wi7s"
+path="res://.godot/imported/36_khi_ban_nhin_xuyen_qua_no_mot_hat_cat_co_the_to_32e33894-2fc4-4bb7-b94a-cfb76cf959f4.mp3-80a64916ce032e1db5ec9c0d91067319.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Item/Magnifying/36_khi_ban_nhin_xuyen_qua_no_mot_hat_cat_co_the_to_32e33894-2fc4-4bb7-b94a-cfb76cf959f4.mp3"
+dest_files=["res://.godot/imported/36_khi_ban_nhin_xuyen_qua_no_mot_hat_cat_co_the_to_32e33894-2fc4-4bb7-b94a-cfb76cf959f4.mp3-80a64916ce032e1db5ec9c0d91067319.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -64,6 +64,7 @@ points = PackedVector3Array(-10.289436, -8.889021, -11.819241, 15.712876, 2.8433
 [node name="Chicken" type="Area3D"]
 collision_layer = 5
 collision_mask = 1245189
+audio_bus_name = &"Sounds"
 script = ExtResource("1_l05m3")
 realItem = ExtResource("2_8fnpe")
 itemName = "gà nguyên con "

@@ -1,6 +1,6 @@
 extends Control
 
-var apiUrl: String = "https://103-162-30-111.sslip.io/api/child-profiles/my-children"
+var apiUrl: String = ApiConfig.baseUrl + "/api/child-profiles/my-children"
 
 @export var welcome_scene_path: NodePath = ^"../WelcomeScene"
 
@@ -8,8 +8,9 @@ var apiUrl: String = "https://103-162-30-111.sslip.io/api/child-profiles/my-chil
 @onready var profilesContainer: GridContainer = $ProfileBox/VBoxContainer/ScrollContainer/ProfilesGrid
 @onready var loadingLabel: Label = $ProfileBox/VBoxContainer/LoadingLabel
 @onready var templateButton: Button = $ProfileBox/VBoxContainer/ScrollContainer/ProfilesGrid/TemplateButton
+@onready var replayButton: Button = $ProfileBox/VBoxContainer/ReplayButton
 @onready var welcomeScene: Control = get_node_or_null(welcome_scene_path)
-var interactionLog : TextDirection
+var interactionLog: TextDirection
 
 var children_data: Array = []
 
@@ -17,6 +18,12 @@ func _ready() -> void:
 	templateButton.visible = false
 	loadingLabel.visible = true
 	loadingLabel.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	
+	if replayButton != null:
+		replayButton.visible = SessionData.roleName == "Parent" and OS.has_feature("pc")
+		replayButton.pressed.connect(_on_replay_button_pressed)
+		replayButton.mouse_entered.connect(_on_btn_hover.bind(replayButton))
+		replayButton.mouse_exited.connect(_on_btn_unhover.bind(replayButton))
 	
 	if loadingLabel.label_settings == null:
 		loadingLabel.label_settings = LabelSettings.new()
@@ -28,6 +35,13 @@ func _ready() -> void:
 
 func _on_visibility_changed() -> void:
 	if visible:
+		if replayButton != null:
+			var is_vr_active = false
+			if XRServer.primary_interface != null:
+				is_vr_active = XRServer.primary_interface.is_initialized()
+				
+			replayButton.visible = SessionData.roleName == "Parent" and OS.has_feature("pc") and not is_vr_active
+			
 		for child in profilesContainer.get_children():
 			if child != templateButton:
 				child.queue_free()
@@ -80,7 +94,7 @@ func _on_profile_selected(child_data: Dictionary) -> void:
 	show_status_message("Đang chuẩn bị lớp học cho bé... 🔍", false)
 
 	var child_id = int(child_data.get("id", 0))
-	var check_url = "https://103-162-30-111.sslip.io/api/enrollments/child/" + str(child_id)
+	var check_url = ApiConfig.baseUrl + "/api/enrollments/child/" + str(child_id)
 
 	var check_http = HTTPRequest.new()
 	add_child(check_http)
@@ -123,6 +137,7 @@ func _on_enrollment_check_completed(result: int, responseCode: int, headers: Pac
 			PlayerData.age = int(child_data.get("age", 0))
 			PlayerData.gender = str(child_data.get("gender", ""))
 			PlayerData.learningLevel = str(child_data.get("learningLevel", ""))
+			PlayerData.childType = str(child_data.get("childType", ""))
 			PlayerData.status = str(child_data.get("status", ""))
 
 			if welcomeScene == null:
@@ -184,3 +199,6 @@ func _on_btn_hover(btn: Button) -> void:
 func _on_btn_unhover(btn: Button) -> void:
 	var tween := create_tween()
 	tween.tween_property(btn, "scale", Vector2.ONE, 0.15)
+
+func _on_replay_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Prefabs/UI/SessionListScene.tscn")
