@@ -59,6 +59,7 @@ shadow_mesh = SubResource("ArrayMesh_rh8nb")
 
 [node name="Area3D" type="Area3D"]
 collision_layer = 5
+audio_bus_name = &"Sounds"
 script = ExtResource("1_gect6")
 realItem = ExtResource("2_si8vt")
 itemName = "hộp trà lipton"
