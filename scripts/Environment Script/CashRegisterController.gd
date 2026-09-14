@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-signal item_scanned_for_teaching(item_id, hint_audio)
+signal item_scanned_for_teaching(item_id, hint_audio, item_name)
 
 # CONNECT YOUR ROLLER AREA3D'S 'body_entered' SIGNAL TO THIS FUNCTION!
 func _on_roller_area_body_entered(body: Node3D) -> void:
@@ -10,6 +10,7 @@ func _on_roller_area_body_entered(body: Node3D) -> void:
 		var id = body.get_meta("itemName")
 		var hintArray = body.get_meta("hintAudios")
 		var hint = hintArray.pick_random()
+		var name = body.get_meta("itemNameSound")
 		
 		print("Cash Register detected: ", id)
-		emit_signal("item_scanned_for_teaching", id, hint)
+		emit_signal("item_scanned_for_teaching", id, hint, name)

@@ -42,6 +42,7 @@ _surfaces = [{
 
 [node name="Area3D" type="Area3D"]
 collision_layer = 5
+audio_bus_name = &"Sounds"
 script = ExtResource("1_nn763")
 realItem = ExtResource("2_pftnu")
 itemName = "kẹo kitkat"

@@ -183,6 +183,14 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 2
 
+[node name="ReplayButton" type="Button" parent="ProfileBox/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_4jofw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vktwn")
+text = "Đi đến Replay"
+
 [node name="LogoutButton" type="Button" parent="ProfileBox/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18

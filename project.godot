@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GodotXR"
-run/main_scene="uid://bho8ebcx5lvhs"
+run/main_scene="uid://dacrvo5efu5py"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -26,6 +26,7 @@ input/transcribe/use_gpu=true
 
 XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
 XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+ApiConfig="*res://scripts/CoreManager/ApiConfig.gd"
 SessionData="*res://scripts/CoreManager/SessionData.gd"
 SessionUploader="*res://scripts/CoreManager/SessionUploader.cs"
 AzureSpeechManager="*res://scripts/CoreManager/AzureSpeechManager.cs"
@@ -36,7 +37,9 @@ ResultApi="*res://scripts/API/result-api.gd"
 ReplayManager="*res://Prefabs/PlayerPrefabs/ReplayManager.tscn"
 FilesChunksApi="*res://scripts/API/FilesChunksApi.cs"
 ExerciseData="*res://scripts/CoreManager/ExerciseData.gd"
-GetLessionItemsApi="*res://scripts/API/GetLessionItemsApi.gd"
+GetExerciseItemsApi="*res://scripts/API/GetExerciseItemsApi.gd"
+LessonData="*res://scripts/CoreManager/LessonData.gd"
+GetAllLessonApi="*res://scripts/API/GetAllLessonApi.gd"
 
 [display]
 
@@ -63,6 +66,7 @@ MicController=""
 LevelController=""
 FishingLevelController=""
 pickable=""
+ExerciseLevelController=""
 
 [godot_xr_tools]
 
@@ -124,6 +128,7 @@ stop={
 [physics]
 
 3d/run_on_separate_thread=true
+common/physics_ticks_per_second=72
 3d/physics_engine="Jolt Physics"
 jolt_physics_3d/limits/world_boundary_shape_size=1000.0
 3d/solver/solver_iterations=12
@@ -135,6 +140,8 @@ jolt_3d/simulation/baumgarte_stabilization_factor=0.05
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/size=2048
+lights_and_shadows/directional_shadow/size.mobile=1024
 occlusion_culling/use_occlusion_culling=true
 vrs/mode=2
 

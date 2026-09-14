@@ -3,21 +3,28 @@ extends Area3D
 #Targer scene name
 @export_file("*.tscn") var target_scene: String
 
-@export_category("Puzzle Logic")
+
+@export_category("Teleport Logic")
 @export var require_unlock: bool = false
 @export var portalMesh: MeshInstance3D
 @export var portalAudio: AudioStreamPlayer3D
+@export var portalLabel: Label3D
 @export var successSound: AudioStream
 @export var errorSound: AudioStream
-@export var holoText : String = "Teleport Area"
+@export var buttonPressedAudio: AudioStream
+@export var holoText: String = "Teleport Area"
 
-@onready var label = $TextRingMesh/SubViewport/Label 
+@export_category("Telelport API Logic")
+@export var target_lesson_id: int = 0
 
-var isUnlocked : bool = false
+@onready var label = $TextRingMesh/SubViewport/Label
+
+var isUnlocked: bool = false
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	label.text = holoText
+	portalLabel.text = holoText
 	
 	if require_unlock:
 		# Initialize portal to RED (locked)
@@ -26,11 +33,11 @@ func _ready() -> void:
 		# Automatically unlocked!
 		isUnlocked = true
 		_set_portal_color(Color(0.0, 0.0, 1.0, 0.3)) # Blue
-
+	GetAllLessonApi.lesson_data_loaded.connect(_on_lesson_data_ready)
 func _on_body_entered(_body: Node3D) -> void:
 	var playerBody := _body as XRToolsPlayerBody
 	if not playerBody:
-		return	
+		return
 		
 	if isUnlocked:
 		# Portal is active, teleport the player!
@@ -40,10 +47,9 @@ func _on_body_entered(_body: Node3D) -> void:
 			portalAudio.play()
 			
 		if not target_scene or target_scene == "":
-		
 			return
 		#Find the XRToolsSceneBase is a child node of 
-		var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
+		var scene_base: XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
 		if not scene_base:
 			return
 			
@@ -99,6 +105,52 @@ func _set_portal_color(color: Color) -> void:
 		# mat.set_shader_parameter("scanline_color", color)
 
 
-
 func _on_basket_trigger_puzzle_solved() -> void:
 	unlock_portal()
+
+func _on_lesson_data_ready(data: Array) -> void:
+	setup_portal_dynamically()
+
+func setup_portal_dynamically() -> void:
+	if target_lesson_id == 0:
+		return
+	
+	var found_lesson: Dictionary = {}
+	for lesson in LessonData.response_data:
+		if lesson.get("id") == target_lesson_id:
+			found_lesson = lesson
+			break
+	
+	if found_lesson.is_empty():
+		print("Lesson ID %d not found in API! Locking portal." % target_lesson_id)
+		return
+	
+	if found_lesson.get("status") != "Active":
+		print("Lesson is disabled in API. Locking portal.")
+		return
+
+	var lesson_name = found_lesson.get("lessonName", "Unknow Lesson")
+	portalLabel.text = lesson_name
+	label.text = lesson_name
+	
+	unlock_portal()
+
+func _on_interactable_area_button_button_pressed(button: Variant) -> void:
+	target_scene = "res://Scenes/Worlds/ExerciseLevel1.tscn"
+	portalLabel.text = "Bài tập 1"
+	label.text = "Bài tập 1"
+	if portalAudio and buttonPressedAudio:
+		unlock_portal()
+		portalAudio.stream = buttonPressedAudio
+		portalAudio.volume_db = -0.8
+		portalAudio.play()
+
+func _on_interactable_area_button_2_button_pressed(button: Variant) -> void:
+	target_scene = "res://Scenes/Worlds/ExerciseLevel2.tscn"
+	portalLabel.text = "Bài tập 2"
+	label.text = "Bài tập 2"
+	if portalAudio and buttonPressedAudio:
+		unlock_portal()
+		portalAudio.stream = buttonPressedAudio
+		portalAudio.volume_db = -0.8
+		portalAudio.play()

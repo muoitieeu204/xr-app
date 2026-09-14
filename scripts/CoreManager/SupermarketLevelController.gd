@@ -10,7 +10,10 @@ extends XRToolsSceneBase
 @export_group("Level Tutorial Variable")
 @export var waypointSequence: Array[Node3D]
 
-var maxScore: int = 0 #TODO : Call api to get maxScore from lesson
+var maxScore: int = 60
+var completionBonusPoints: int = 20
+var correctAnswerScore: int = 20
+var incorrectAnswerScore: int = 10
 var currentScore: int = 0
 var startedAt: String = ""
 var interactionLog: String = ""
@@ -28,6 +31,16 @@ var lastEmittedTime: int = -1
 func _ready() -> void:
 	if Engine.is_editor_hint():
 		return
+	
+	for lesson in LessonData.response_data:
+		if lesson.get("id") == levelId:
+			maxScore = lesson.get("maxScore", 60)
+			completionBonusPoints = lesson.get("completionBonusPoints", 20)
+			correctAnswerScore = lesson.get("correctAnswerScore", 20)
+			incorrectAnswerScore = lesson.get("incorrectAnswerScore", 10)
+			print("✅ Loaded dynamic scores for level: ", levelId)
+			break
+			  
 	SessionData.sessionId = str(ResourceUID.create_id())
 	var levelTimer = Timer.new()
 	levelTimer.wait_time = 1.0
@@ -46,12 +59,13 @@ func _ready() -> void:
 	errorCount = 0
 	currentTimeSecconds = 0
 	
-	startedAt = Time.get_datetime_string_from_system(false) + "+07:00"
+	var tz_offset = Time.get_offset_string_from_offset_minutes(Time.get_time_zone_from_system().bias)
+	startedAt = Time.get_datetime_string_from_system(false) + tz_offset
 	ReplayManager.start_recording()
 	show_next_waypoint()
 
 # ----------------- LEVEL TRACKING LOGIC -----------------
-func CorrectAnswer(point: int, itemName: String) -> void:
+func CorrectAnswer(itemName: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
 	if interactionLog == "":
@@ -62,7 +76,7 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
 		correctCount += 1
-		currentScore = min(100, currentScore + point)
+		currentScore = min(maxScore, currentScore + correctAnswerScore)
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
 		
@@ -71,18 +85,22 @@ func CorrectAnswer(point: int, itemName: String) -> void:
 	else:
 		print("Not in task list or already completed. Logged, but no score change!")
 
-func WrongAnswer(point: int, itemName: String, spokenText: String) -> void:
+func WrongAnswer(itemName: String, spokenText: String) -> void:
 	var seccondsPassed = currentTimeSecconds
+
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
+
+	if spokenText == "[Không nghe rõ/ Im lặng]":
+		return
 	
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
 		errorCount += 1
-		currentScore = max(0, currentScore - point)
+		currentScore = max(0, currentScore - incorrectAnswerScore)
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
 		
@@ -94,6 +112,7 @@ func FinishLevel():
 		return
 	
 	isLevelFinished = true
+	var tz_offset = Time.get_offset_string_from_offset_minutes(Time.get_time_zone_from_system().bias)
 	var finalResult = {
 			"sessionId": SessionData.sessionId, # Assuming you have this Autoload
 			"childId": PlayerData.childId, # Assuming you have this Autoload
@@ -101,7 +120,7 @@ func FinishLevel():
 			"errorCount": errorCount,
 			"correctCount": correctCount,
 			"startedAt": startedAt,
-			"completedAt": Time.get_datetime_string_from_system(true) + "+07:00",
+			"completedAt": Time.get_datetime_string_from_system(false) + tz_offset,
 			"durationSeconds": currentTimeSecconds,
 			"interactionLog": interactionLog,
 			"feedbackText": "" # Game can send data base on current logic

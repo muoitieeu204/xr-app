@@ -1,8 +1,5 @@
 extends Control
-
-var apiUrl: String = "https://103-162-30-111.sslip.io/api/auth/login"
-# var apiUrl : String = "https://localhost:7153/api/auth/login"
-
+var apiUrl: String = ApiConfig.baseUrl + "/api/auth/login"
 @onready var httpRequest = $LoginBox/HTTPRequest
 @onready var emailInput = $LoginBox/VBoxContainer/Email
 @onready var passwordInput = $LoginBox/VBoxContainer/Password
@@ -64,7 +61,7 @@ func _ready() -> void:
 	else:
 		logoutButton.pressed.connect(_on_logout_button_pressed)
 		
-		_check_auto_login()
+	_check_auto_login()
 
 func _check_auto_login():
 	if FileAccess.file_exists("user://auth.save"):
@@ -158,20 +155,26 @@ func _on_request_completed(result, responseCode, headers, body):
 
 		# --- ROLE & PLATFORM BASED ROUTING WITH FAILSAFE  ---
 		# var is_vr_device: bool = true use this in dev environment
-		var is_vr_device : bool = OS.has_feature("android") or OS.has_feature("mobile") or OS.has_feature("vr_client") 
+		var is_vr_device: bool = OS.has_feature("android") or OS.has_feature("mobile") or OS.has_feature("vr_client")
 		var replay_scene := "res://Prefabs/UI/SessionListScene.tscn"
 
 		if not is_vr_device:
-			# Desktop Client: STRICTLY allow Teacher role only
+			# Desktop Client
 			if SessionData.roleName == "Teacher" and ResourceLoader.exists(replay_scene):
 				print_debug("AuthController: Teacher detected → SessionListScene")
 				get_tree().change_scene_to_file(replay_scene)
+			elif SessionData.roleName == "Parent":
+				print_debug("AuthController: Parent detected on Desktop → ChildProfileScene")
+				if childProfileScene != null:
+					childProfileScene.visible = true
+				else:
+					$WelcomeScene.visible = true
 			else:
-				# Block Parent/Student accounts on Desktop and keep login box open
-				print_debug("AuthController: Non-teacher role rejected on Desktop Client")
+				# Block other roles on Desktop and keep login box open
+				print_debug("AuthController: Unauthorized role rejected on Desktop Client")
 				$LoginBox.visible = true
 				if errorLabel != null:
-					errorLabel.text = "Tài khoản không có quyền truy cập Replay trên Desktop (Dành riêng cho giáo viên)."
+					errorLabel.text = "Tài khoản không có quyền truy cập ứng dụng trên Desktop."
 					errorLabel.visible = true
 				SessionData.clear()
 		else:
@@ -192,13 +195,7 @@ func _on_request_completed(result, responseCode, headers, body):
 			errorLabel.visible = true
 		
 func _on_logout_button_pressed() -> void:
-	SessionData.accessToken = ""
-	SessionData.refreshToken = ""
-	SessionData.userId = 0
-	SessionData.fullName = ""
-	SessionData.userName = ""
-	SessionData.roleName = ""
-	SessionData.isActive = false
+	SessionData.clear()
 	PlayerData.clear()
 	print_debug("User Logout Successfully")
 	

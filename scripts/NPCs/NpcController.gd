@@ -6,6 +6,7 @@ extends Node3D
 @export var question_1_audio: AudioStream
 @export var correct_audio: Array[AudioStream]
 @export var wrong_audio: Array[AudioStream]
+@export var ssd_repeat_audio: Array[AudioStream]
 @export var skip_audio: AudioStream
 @export var body_to_breathe: Node3D # Assign the Skeleton3D or Mesh here in the inspector
 
@@ -23,6 +24,7 @@ static var activeTeacher = null
 var chunkIndex: int = 0
 var isFinalChunk: bool = false
 var is_first_azure_call: bool = true
+
 
 func _ready():
 	var gameManager = get_node_or_null("/root/GameManager")
@@ -44,77 +46,20 @@ func _process(delta):
 		body_to_breathe.scale.z = 1.0 + (breath * 0.005)
 
 # YOU MUST CONNECT THE CASH REGISTER'S 'item_scanned_for_teaching' SIGNAL TO THIS FUNCTION!
-func _on_item_scanned_for_teaching(item_id: String, hint_audio: AudioStream):
+func _on_item_scanned_for_teaching(item_id: String, hint_audio: AudioStream, item_name: AudioStream):
 	activeTeacher = self
 	current_item_id = item_id
 	current_hint_audio = hint_audio
+	current_item_name_audio = item_name
 	failed_attempts = 0
 	
 	print("NPC: Received item scan for ", current_item_id)
 	ask_question_1()
 
 func ask_question_1():
-	var micController = get_tree().get_first_node_in_group("MicController")
-	if npc_audio_player and question_1_audio:
-		npc_audio_player.stream = question_1_audio
-		npc_audio_player.play()
-		var audio_length = question_1_audio.get_length()
-		var wait_time = max(0.0, audio_length - 0.5)
-		#Wait 0.5s to start capture child voice before start record
-		await get_tree().create_timer(wait_time).timeout
-
-		if micController:
-			micController.start_chunk_record()
-		await npc_audio_player.finished
-	else:
-		if micController:
-			micController.start_chunk_record()
-
-	var gameManager = get_node_or_null("/root/GameManager")
-	if gameManager:
-		gameManager.start_checkout_test(current_item_id)
-	if is_first_azure_call:
-		await get_tree().create_timer(1.2).timeout
-		is_first_azure_call = false
-	else:
-		await get_tree().create_timer(0.4).timeout
-
-	if micController:
-		npc_record_indicator.visible = true
-	if npc_label_indicator:
-		npc_label_indicator.visible = true
-		npc_label_indicator.text = "🗣️ " + current_item_id
+	await (_play_and_record_speech(question_1_audio))
 func ask_question_2():
-	var micController = get_tree().get_first_node_in_group("MicController")
-	if npc_audio_player and current_hint_audio:
-		npc_audio_player.stream = current_hint_audio
-		npc_audio_player.play()
-		var audio_length = current_hint_audio.get_length()
-		var wait_time = max(0.0, audio_length - 0.5)
-		#Wait 0.5s to start capture child voice before start record
-		await get_tree().create_timer(wait_time).timeout
-
-		if micController:
-			micController.start_chunk_record()
-		await npc_audio_player.finished
-	else:
-		if micController:
-			micController.start_chunk_record()
-	
-	var gameManager = get_node_or_null("/root/GameManager")
-	if gameManager:
-		gameManager.start_checkout_test(current_item_id)
-	if is_first_azure_call:
-		await get_tree().create_timer(1.2).timeout
-		is_first_azure_call = false
-	else:
-		await get_tree().create_timer(0.4).timeout
-	
-	if micController:
-		npc_record_indicator.visible = true
-	if npc_label_indicator:
-		npc_label_indicator.visible = true
-		npc_label_indicator.text = "🗣️ " + current_item_id
+	await (_play_and_record_speech(current_hint_audio))
 
 func _on_speech_result(is_correct: bool):
 	# If this NPC isn't the one who scanned the item, ignore the signal!
@@ -141,7 +86,6 @@ func _on_speech_result(is_correct: bool):
 			npc_audio_player.play()
 		if npc_animation_player and npc_animation_player.has_animation("emote-yes"):
 			npc_animation_player.play("emote-yes")
-		_on_child_correct_answer()
 		await get_tree().create_timer(3.0).timeout
 		if npc_label_indicator:
 			npc_label_indicator.visible = false
@@ -151,15 +95,25 @@ func _on_speech_result(is_correct: bool):
 		if npc_label_indicator:
 			npc_label_indicator.visible = true
 			npc_label_indicator.text = "❌" + " bé đã nói sai rồi "
-		if npc_audio_player and wrong_audio.size() > 0:
-			npc_audio_player.stream = wrong_audio.pick_random()
-			npc_audio_player.play()
-			if npc_animation_player and npc_animation_player.has_animation("emote-no"):
-				npc_animation_player.play("emote-no")
-			await npc_audio_player.finished
-		_on_child_wrong_answer()
+		if PlayerData.childType == "Rối loạn âm lời nói(SSD)":
+			if npc_audio_player and ssd_repeat_audio.size() > 0:
+				npc_audio_player.stream = ssd_repeat_audio.pick_random()
+				npc_audio_player.play()
+				if npc_animation_player and npc_animation_player.has_animation("emote-no"):
+					npc_animation_player.play("emote-no")
+				await npc_audio_player.finished
+		else:
+			if npc_audio_player and wrong_audio.size() > 0:
+				npc_audio_player.stream = wrong_audio.pick_random()
+				npc_audio_player.play()
+				if npc_animation_player and npc_animation_player.has_animation("emote-no"):
+					npc_animation_player.play("emote-no")
+				await npc_audio_player.finished
 		if failed_attempts < 3:
-			ask_question_2()
+			if PlayerData.childType == "Rối loạn âm lời nói(SSD)":
+				await _play_and_record_speech(current_item_name_audio)
+			else:
+				await ask_question_2()
 		else:
 			print("NPC: Failed again. Let's move on or give the direct answer!")
 			if npc_label_indicator:
@@ -176,14 +130,38 @@ func _on_speech_result(is_correct: bool):
 			if npc_label_indicator:
 				npc_label_indicator.visible = false
 
-func _on_child_correct_answer():
-	get_tree().call_group("LevelController", "CorrectAnswer", 20, current_item_id)
-
-func _on_child_wrong_answer():
-	pass
-
 func _on_play_npc_teaching_audio(audio_stream: AudioStream):
 	if npc_audio_player and audio_stream:
 		if not npc_audio_player.playing:
 			npc_audio_player.stream = audio_stream
 			npc_audio_player.play()
+
+func _play_and_record_speech(audio_to_play: AudioStream):
+	var micController = get_tree().get_first_node_in_group("MicController")
+	if npc_audio_player and audio_to_play:
+		npc_audio_player.stream = audio_to_play
+		npc_audio_player.play()
+		var audio_length = audio_to_play.get_length()
+		var wait_time = max(0.0, audio_length - 0.5)
+		await get_tree().create_timer(wait_time).timeout
+		if micController:
+			micController.start_chunk_record()
+		await  npc_audio_player.finished
+	else:
+		if micController:
+			micController.start_chunk_record()
+	
+	var gameManager = get_node_or_null("/root/GameManager")
+	if gameManager:
+		gameManager.start_checkout_test(current_item_id)
+	if is_first_azure_call:
+		await get_tree().create_timer(1.2).timeout
+		is_first_azure_call = false
+	else:
+		await get_tree().create_timer(0.4).timeout
+
+	if micController:
+		npc_record_indicator.visible = true
+	if npc_label_indicator:
+		npc_label_indicator.visible = true
+		npc_label_indicator.text = "🗣️ " + current_item_id

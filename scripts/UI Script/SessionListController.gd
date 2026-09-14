@@ -4,9 +4,10 @@ extends Control
 ## Bước 1: Chọn trẻ (fetch từ API child-profiles)
 ## Bước 2: Hiện danh sách sessions của trẻ đó
 
-const BASE_URL := "https://103-162-30-111.sslip.io/api/files"
+var BASE_URL := ApiConfig.baseUrl + "/api/files"
 # my-students: Teacher xem học sinh trong lớp mình quản lý (Active enrollment only)
-const CHILDREN_API := "https://103-162-30-111.sslip.io/api/child-profiles/my-students"
+const PAGE_SIZE := 8
+var CHILDREN_API := ApiConfig.baseUrl + "/api/child-profiles/my-students"
 
 # --- Node refs ---
 @onready var child_name_label: Label = $Background/VBox/HeaderPanel/Header/ChildNameLabel
@@ -362,7 +363,7 @@ func _on_session_selected(folder_id: String) -> void:
 			audio_url = str(s.get("audioRecordUrl", ""))
 			break
 	if audio_url.is_empty():
-		audio_url = "https://103-162-30-111.sslip.io/api/files/%d/%s/DownloadAudio" % [PlayerData.childId, folder_id]
+		audio_url = ApiConfig.baseUrl + "/api/files/%d/%s/DownloadAudio" % [PlayerData.childId, folder_id]
 	
 	SessionData.target_audio_url = audio_url
 	SessionData.target_audio_path = "user://session_audio_%s.wav" % folder_id
