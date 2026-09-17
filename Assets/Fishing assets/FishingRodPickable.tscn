@@ -150,6 +150,7 @@ hinge_limit_max = 36000.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
 
 [node name="InteractableHandle" parent="RodHandle/ReelHinge/HandleOrigin" index="0" instance=ExtResource("6_lx1sd")]
+snap_distance = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RodHandle/ReelHinge/HandleOrigin/InteractableHandle" index="0"]
 shape = SubResource("SphereShape3D_lx1sd")
