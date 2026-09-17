@@ -68,12 +68,16 @@ func _ready() -> void:
 func CorrectAnswer(itemName: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
+	var is_scoring = taskList.has(itemName) and not attemptedItems.has(itemName)
+	if is_scoring:
+		logMessage += " (+" + str(correctAnswerScore) + " điểm)"
+			
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Correct Answer " + itemName)
 	
-	if taskList.has(itemName) and not attemptedItems.has(itemName):
+	if is_scoring:
 		attemptedItems.append(itemName) # Lock the score forever
 		correctCount += 1
 		currentScore = min(maxScore, currentScore + correctAnswerScore)
@@ -86,17 +90,17 @@ func CorrectAnswer(itemName: String) -> void:
 		print("Not in task list or already completed. Logged, but no score change!")
 
 func WrongAnswer(itemName: String, spokenText: String) -> void:
+	if spokenText == "[Không nghe rõ/ Im lặng]":
+		return
 	var seccondsPassed = currentTimeSecconds
-
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
+	var is_scoring = taskList.has(itemName) and not attemptedItems.has(itemName)
+	if is_scoring:
+		logMessage += " (-" + str(incorrectAnswerScore) + " điểm)"	
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
-
-	if spokenText == "[Không nghe rõ/ Im lặng]":
-		return
-	
 	if taskList.has(itemName) and not attemptedItems.has(itemName):
 		attemptedItems.append(itemName) # Lock the score forever
 		errorCount += 1

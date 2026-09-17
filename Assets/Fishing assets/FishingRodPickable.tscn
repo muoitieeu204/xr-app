@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://of0m4bhfqu16" path="res://Assets/Fishing assets/Audio/successful_catch_sound.mp3" id="15_l8mn3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wkyu8"]
-size = Vector3(0.044158936, 1.6518555, 0.017730713)
+size = Vector3(0.15215683, 1.6518555, 0.104652405)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lx1sd"]
 radius = 0.05
@@ -131,7 +131,7 @@ bite_sound = NodePath("../RodSFX/ItemBitSound")
 successful_catch_sound = NodePath("../RodSFX/SucccessfulCatch")
 
 [node name="CollisionShape3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0002593994, 0.8203125, 0.0005950928)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05114174, 0.8203125, -0.026668549)
 shape = SubResource("BoxShape3D_wkyu8")
 
 [node name="FishingRod" parent="." index="2" instance=ExtResource("3_l0ojc")]
@@ -206,6 +206,7 @@ stream = ExtResource("15_l8mn3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16332105, 0.4879611, 0)
 pixel_size = 0.0005
 billboard = 1
+outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
 text = "🐟 cắn câu, hãy kéo cần câu lên!!"
 
 [editable path="FishingRod"]

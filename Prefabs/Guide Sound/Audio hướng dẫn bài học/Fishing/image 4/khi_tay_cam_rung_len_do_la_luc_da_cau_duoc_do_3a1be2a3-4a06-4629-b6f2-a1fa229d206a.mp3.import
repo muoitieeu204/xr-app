@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://icgkif7mhvhn"
+path="res://.godot/imported/khi_tay_cam_rung_len_do_la_luc_da_cau_duoc_do_3a1be2a3-4a06-4629-b6f2-a1fa229d206a.mp3-dd7b7fe8fdf133c21e491fc818ea2fa6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 4/khi_tay_cam_rung_len_do_la_luc_da_cau_duoc_do_3a1be2a3-4a06-4629-b6f2-a1fa229d206a.mp3"
+dest_files=["res://.godot/imported/khi_tay_cam_rung_len_do_la_luc_da_cau_duoc_do_3a1be2a3-4a06-4629-b6f2-a1fa229d206a.mp3-dd7b7fe8fdf133c21e491fc818ea2fa6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

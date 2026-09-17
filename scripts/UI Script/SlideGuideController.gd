@@ -1,8 +1,11 @@
 extends Control
 
+@export var slide_audios: Array[AudioStream]
+
 @onready var slides_container = $SlidesContainer
 @onready var prev_button = $PrevButton
 @onready var next_button = $NextButton
+@onready var guide_audio_node = $GuideAudio
 
 var current_slide = 0
 
@@ -29,7 +32,12 @@ func update_slides():
 	# Disable the Next button if we are on the very last page
 	if next_button:
 		next_button.disabled = (current_slide == total_slides - 1)
-
+	if guide_audio_node and slide_audios.size() > current_slide:
+		var current_audio = slide_audios[current_slide]
+		if current_audio != null:
+			guide_audio_node.stream = current_audio
+			guide_audio_node.play()
+			
 func _on_next_button_pressed():
 	if slides_container and current_slide < slides_container.get_child_count() - 1:
 		current_slide += 1

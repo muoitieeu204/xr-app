@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://i14upr717bcw"
+path="res://.godot/imported/nghe_xong_cau_hoi_roi_con_hay_tra_loi_that_to_va_2193e236-261b-43d7-8b23-93a3d7e90e76.mp3-402c286b42c12c48bca32164b0282b20.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/tutorial/image 4/nghe_xong_cau_hoi_roi_con_hay_tra_loi_that_to_va_2193e236-261b-43d7-8b23-93a3d7e90e76.mp3"
+dest_files=["res://.godot/imported/nghe_xong_cau_hoi_roi_con_hay_tra_loi_that_to_va_2193e236-261b-43d7-8b23-93a3d7e90e76.mp3-402c286b42c12c48bca32164b0282b20.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

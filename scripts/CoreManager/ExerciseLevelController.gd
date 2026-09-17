@@ -93,20 +93,23 @@ func _on_data_failed(error_msg: String) -> void:
 func CorrectAnswer(itemName: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
-	if interactionLog == "":
-		interactionLog = logMessage
-	else: interactionLog += " | " + logMessage
-	ReplayManager.log_interaction("Correct Answer " + itemName)
-	
-	if taskList.has(itemName) and not attemptedItems.has(itemName):
-		attemptedItems.append(itemName) # Lock the score forever
-		correctCount += 1
-		var earned_points = 0
+	var is_scoring = taskList.has(itemName) and not attemptedItems.has(itemName)
+	var earned_points = 0
+	if is_scoring:
 		for slot in ExerciseData.items:
 			var asset = slot.get("itemAsset")
 			if asset is Dictionary and asset.get("ItemName", "") == itemName:
 				earned_points = slot.get("correctPoints", 0)
 				break
+		logMessage += " (+" + str(earned_points) + " điểm)"
+	if interactionLog == "":
+		interactionLog = logMessage
+	else: interactionLog += " | " + logMessage
+	ReplayManager.log_interaction("Correct Answer " + itemName)
+	
+	if is_scoring:
+		attemptedItems.append(itemName) # Lock the score forever
+		correctCount += 1
 		currentScore += earned_points
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
@@ -117,26 +120,27 @@ func CorrectAnswer(itemName: String) -> void:
 		print("Not in task list or already completed. Logged, but no score change!")
 
 func WrongAnswer(itemName: String, spokenText: String) -> void:
+	if spokenText == "[Không nghe rõ/ Im lặng]":
+		return
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
+	var is_scoring = taskList.has(itemName) and not attemptedItems.has(itemName)
+	var earned_points = 0
+	if is_scoring:
+		for slot in ExerciseData.items:
+			var asset = slot.get("itemAsset")
+			if asset is Dictionary and asset.get("ItemName", "") == itemName:
+				earned_points = slot.get("wrongPoints", 0)
+				break
+		logMessage += " (-" + str(earned_points) + " điểm)"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
 	ReplayManager.log_interaction("Wrong Answer " + itemName)
-	
-	if spokenText == "[Không nghe rõ/ Im lặng]":
-		return
-
-	if taskList.has(itemName) and not attemptedItems.has(itemName):
+	if is_scoring:
 		attemptedItems.append(itemName) # Lock the score forever
 		errorCount += 1
-		var lost_points = 0
-		for slot in ExerciseData.items:
-			var asset = slot.get("itemAsset")
-			if asset is Dictionary and asset.get("ItemName", "") == itemName:
-				lost_points = slot.get("wrongPoints", 0)
-				break
-		currentScore = max(0, currentScore - lost_points)
+		currentScore = max(0, currentScore - earned_points)
 		print("Score updated: ", currentScore)
 		GameManager.score_updated.emit(currentScore)
 		
