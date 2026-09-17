@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://ddlknb3fsmtkj"]
 
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_b0wjr"]
-[ext_resource type="Texture2D" uid="uid://br1lydvtd711j" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/Pineapple_0.jpg" id="1_kr51n"]
+[ext_resource type="Texture2D" uid="uid://k1edy0dck4hq" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/Pineapple_0.jpg" id="1_kr51n"]
 [ext_resource type="PackedScene" uid="uid://ytt5worbug5s" path="res://Assets/3D Models For Supermarket/Fruits/PineApplePickable.tscn" id="2_6s1fj"]
 [ext_resource type="AudioStream" uid="uid://yyfmswxok1f7" path="res://Prefabs/Guide Sound/Food/Fruits/Fruits/Pineapple/qua_dua_80ba33d2-aa2e-42c9-a29d-83a6dd9535fa.mp3" id="2_a6a8t"]
 [ext_resource type="Texture2D" uid="uid://cl38t3jn1ttos" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/Pineapple_1.png" id="2_j5vm2"]
@@ -49,6 +49,7 @@ _surfaces = [{
 
 [node name="FakePineApple" type="Area3D"]
 collision_layer = 5
+audio_bus_name = &"Sounds"
 script = ExtResource("1_b0wjr")
 realItem = ExtResource("2_6s1fj")
 itemName = "quả dứa"
