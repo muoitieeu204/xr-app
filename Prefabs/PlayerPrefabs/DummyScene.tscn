@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://g2noyfjbg7o1"]
+[gd_scene load_steps=9 format=3 uid="uid://g2noyfjbg7o1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_b6xfv"]
 height = 1.0
@@ -21,7 +21,10 @@ size = Vector3(0.5, 0.5, 0.5)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmohg"]
 albedo_color = Color(0.8989168, 0.10775343, 0.17416146, 1)
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ur42w"]
+
 [node name="DummyReplay" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="XRCamera3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -35,6 +38,11 @@ transform = Transform3D(0.6199999, 0, 0, 0, 0.6199999, 0, 0, 0, 0.6199999, 0, 0.
 mesh = SubResource("CylinderMesh_ur42w")
 surface_material_override/0 = SubResource("StandardMaterial3D_j0mqg")
 
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="XRCamera3D"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -1.3706113, 0)
+remote_path = NodePath("../../Body")
+update_rotation = false
+
 [node name="LeftController" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, -0.33386073, 0, 0)
 mesh = SubResource("BoxMesh_e6ykt")
@@ -46,3 +54,7 @@ transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, 0.
 mesh = SubResource("BoxMesh_8ipmv")
 skeleton = NodePath("../XRCamera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_rmohg")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, 0, -0.41118342, 0)
+mesh = SubResource("CapsuleMesh_ur42w")

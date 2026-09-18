@@ -44,8 +44,11 @@ buffer = PackedFloat32Array(0.08660254, -0.05, -2.1855695e-09, 0, 0, -4.371139e-
 
 [node name="Shelf" instance=ExtResource("1_lu16u")]
 
+[node name="etagere__0" parent="." index="0"]
+transform = Transform3D(0.110845365, 0, 0, 0, -1.8059001e-08, 0.110845365, 0, -0.110845365, -1.8059001e-08, 0.001555738, 0, 1.6462236e-05)
+
 [node name="TeaRowSpawner" type="Node3D" parent="." index="2"]
-transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.80656713, 0.24782853, 0)
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0.80656713, 0.2885215, 0)
 script = ExtResource("8_1hewl")
 item_scene = ExtResource("3_x0r4h")
 spacing = Vector3(-0.4, 0, 0)

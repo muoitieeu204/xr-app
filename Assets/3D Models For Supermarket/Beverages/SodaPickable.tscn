@@ -85,11 +85,11 @@ mesh = SubResource("ArrayMesh_5gsia")
 skeleton = NodePath("")
 
 [node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("5_3flab")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02221062, -0.06230642)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07388603, -0.05042268)
 hand_pose = SubResource("Resource_n2ja4")
 
 [node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("8_jt5ua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02221062, -0.06230642)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07388603, -0.05042268)
 hand_pose = SubResource("Resource_aqgkw")
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="." index="4"]

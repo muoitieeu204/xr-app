@@ -592,7 +592,8 @@ screen_size = Vector2(1.5, 1.5)
 scene = ExtResource("21_p8ll3")
 viewport_size = Vector2(1280, 720)
 transparent = 1
-scene_properties_keys = PackedStringArray("SlideGuideController.gd")
+scene_properties_keys = PackedStringArray("SlideGuideController.gd", "slide_audios")
+slide_audios = Array[AudioStream]([])
 
 [node name="NPCZone" type="Node3D" parent="."]
 
