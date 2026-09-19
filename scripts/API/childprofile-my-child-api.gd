@@ -35,19 +35,33 @@ func _ready() -> void:
 
 func _on_visibility_changed() -> void:
 	if visible:
-		if replayButton != null:
-			var is_vr_active = false
-			if XRServer.primary_interface != null:
-				is_vr_active = XRServer.primary_interface.is_initialized()
-				
-			replayButton.visible = SessionData.roleName == "Parent" and OS.has_feature("pc") and not is_vr_active
+		var is_vr_active = false
+		if XRServer.primary_interface != null:
+			is_vr_active = XRServer.primary_interface.is_initialized()
 			
-		for child in profilesContainer.get_children():
-			if child != templateButton:
-				child.queue_free()
+		var is_pc_parent = SessionData.roleName == "Parent" and OS.has_feature("pc") and not is_vr_active
+		
+		if replayButton != null:
+			replayButton.visible = is_pc_parent
+			
+		var titleLabel = $ProfileBox/VBoxContainer/Title
+		var scrollContainer = $ProfileBox/VBoxContainer/ScrollContainer
+		
+		if is_pc_parent:
+			titleLabel.visible = false
+			scrollContainer.visible = false
+			loadingLabel.visible = false
+			return # No need to fetch profiles if we just want Replay on PC
+		else:
+			titleLabel.visible = true
+			scrollContainer.visible = true
+			
+			for child in profilesContainer.get_children():
+				if child != templateButton:
+					child.queue_free()
 
-		show_status_message("Đang tải danh sách bé yêu... 🎈", false)
-		fetch_child_profiles()
+			show_status_message("Đang tải danh sách bé yêu... 🎈", false)
+			fetch_child_profiles()
 
 func fetch_child_profiles() -> void:
 	var headers := [

@@ -205,7 +205,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 10.176163, -1.4229829, -2.534
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.195188, -0.2157383, -2.5492582)
 
 [node name="FishingRodFake" parent="." instance=ExtResource("9_enjev")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39812315, -0.8199713, -5.140254)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39919293, -0.81425786, -5.1414523)
 
 [node name="LevelTutorial" type="Node3D" parent="."]
 

@@ -18,8 +18,9 @@ config/icon="res://icon.svg"
 [audio]
 
 buses/default_bus_layout="uid://dpr132vrqgah0"
+driver/output_latency=30
 driver/enable_input=true
-driver/mix_rate=16000
+driver/mix_rate=44800
 input/transcribe/use_gpu=true
 
 [autoload]
@@ -148,6 +149,7 @@ vrs/mode=2
 [xr]
 
 openxr/enabled=true
+openxr/enabled.no_vr=false
 openxr/reference_space=1
 openxr/foveation_level=3
 openxr/foveation_dynamic=true
