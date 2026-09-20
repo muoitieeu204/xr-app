@@ -149,8 +149,8 @@ vrs/mode=2
 [xr]
 
 openxr/enabled=true
-openxr/enabled.no_vr=false
 openxr/reference_space=1
 openxr/foveation_level=3
 openxr/foveation_dynamic=true
 shaders/enabled=true
+openxr/enabled.no_vr=false

@@ -39,8 +39,8 @@ func _ready():
 			interactive_item.position = local_pos
 			
 			for child in interactive_item.get_children():
-				if child is CollisionShape3D:
-					child.hide()
+				if child is MeshInstance3D:
+					child.queue_free()
 			
 			interactive_item.set_meta("multimesh_id", i)
 

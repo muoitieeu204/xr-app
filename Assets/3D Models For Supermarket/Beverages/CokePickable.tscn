@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_tfg2o"]
 [ext_resource type="Texture2D" uid="uid://biblh61rw0dym" path="res://Assets/3D Models For Supermarket/Beverages/Soft Drinks & Beverages/Coke_0.jpg" id="2_i0oe6"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_qhyej"]
-[ext_resource type="Animation" uid="uid://ky28birj4su6" path="res://addons/godot-xr-tools/hands/animations/right/Default pose.res" id="4_1n61r"]
+[ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="4_tfg2o"]
 [ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_1roev"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="6_k10bk"]
-[ext_resource type="Animation" uid="uid://dlxa6f6hwurka" path="res://addons/godot-xr-tools/hands/animations/left/Default pose.res" id="7_t1yws"]
+[ext_resource type="Animation" uid="uid://dgfeikrugfewi" path="res://addons/godot-xr-tools/hands/animations/left/Cup.res" id="7_i0oe6"]
 [ext_resource type="Script" uid="uid://0b7wkxi4vymb" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="8_03okc"]
 [ext_resource type="Material" uid="uid://b3yphtfwir57w" path="res://Prefabs/SurfaceMaterial/ObjectHighlight.tres" id="9_c3wv5"]
 [ext_resource type="Script" uid="uid://0iajq3ctumod" path="res://scripts/Environment Script/UnFreezePickable.gd" id="10_32u6l"]
@@ -48,12 +48,12 @@ _surfaces = [{
 
 [sub_resource type="Resource" id="Resource_7401x"]
 script = ExtResource("5_1roev")
-closed_pose = ExtResource("4_1n61r")
+closed_pose = ExtResource("4_tfg2o")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [sub_resource type="Resource" id="Resource_avxg3"]
 script = ExtResource("5_1roev")
-closed_pose = ExtResource("7_t1yws")
+closed_pose = ExtResource("7_i0oe6")
 metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
 
 [node name="PickableObject" instance=ExtResource("1_tfg2o")]
@@ -66,11 +66,11 @@ shape = SubResource("CylinderShape3D_058qy")
 mesh = SubResource("ArrayMesh_tfg2o")
 
 [node name="GrabPointHandRight" parent="." index="2" instance=ExtResource("3_qhyej")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06058772)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0133425705, 0.043271072, -0.07608415)
 hand_pose = SubResource("Resource_7401x")
 
 [node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("6_k10bk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.06108004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0145069435, 0.04703252, -0.0774481)
 hand_pose = SubResource("Resource_avxg3")
 
 [node name="XRToolsHighlightVisible" type="Node3D" parent="." index="4"]

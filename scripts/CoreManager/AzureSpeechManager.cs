@@ -38,7 +38,6 @@ public partial class AzureSpeechManager : Node
 				// These must match the exact names inside the AzureService JSON block!
 				string encodedKey = azureSettings["SubscriptionKey"].AsString();
 				SubscriptionKey = Marshalls.Base64ToUtf8(encodedKey);
-				
 				Region = azureSettings["Region"].AsString();
 				Language = azureSettings["Language"].AsString();
 				

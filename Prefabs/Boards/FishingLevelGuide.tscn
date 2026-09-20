@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqpsyyclcev87"]
+[gd_scene load_steps=10 format=3 uid="uid://cu61yolwym4gi"]
 
-[ext_resource type="Script" uid="uid://ce1q2rq1oursv" path="res://scripts/UI Script/SlideGuideController.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://b2iudvmt28lj8" path="res://Assets/Images/Supermarket Level Guide/1785259467985_2686070148081114287_g1299243573826661102_89d4eebc4bcb35c78b983f79f192e50a.jpg" id="2_rvto0"]
-[ext_resource type="Texture2D" uid="uid://c5y4ifih6qduo" path="res://Assets/Images/Supermarket Level Guide/1785259366930_2686070148081114287_g1299243573826661102_08b65e855965e1e062d3337898bbf8f1.jpg" id="3_rvto0"]
-[ext_resource type="Texture2D" uid="uid://b61oy8ab0wtql" path="res://Assets/Images/Supermarket Level Guide/1785259534331_2686070148081114287_g1299243573826661102_bf6360f7f6e3ba0a251cefb105b8b994.jpg" id="4_rvto0"]
-[ext_resource type="Texture2D" uid="uid://bgwnroamqxuci" path="res://Assets/Images/Supermarket Level Guide/1785259594350_2686070148081114287_g1299243573826661102_b8be0a1dfd7fcdf5ecdab621efda620f.jpg" id="5_rvto0"]
-[ext_resource type="Texture2D" uid="uid://cet238p47bdsl" path="res://Assets/Images/Supermarket Level Guide/1785259661882_2686070148081114287_g1299243573826661102_28541e29c07c608b5ee3e77375c1e636.jpg" id="6_rvto0"]
+[ext_resource type="Script" uid="uid://ce1q2rq1oursv" path="res://scripts/UI Script/SlideGuideController.gd" id="1_ccfvf"]
+[ext_resource type="Texture2D" uid="uid://cv5mlncyirkmu" path="res://Assets/Images/Fishing Level Guide/1789915742305_1646333652232827185_g1299243573826661102_673c95ed7fa60897377395b12d1bc9e5.jpg" id="2_ccfvf"]
+[ext_resource type="Texture2D" uid="uid://b8fwrb1a4g5e2" path="res://Assets/Images/Fishing Level Guide/1789915742336_1646333652232827185_g1299243573826661102_a76c86f424e9a03ec207d8585c6a0d82.jpg" id="3_lf1wf"]
+[ext_resource type="Texture2D" uid="uid://b2w1w66xmm7ee" path="res://Assets/Images/Fishing Level Guide/1789915742392_1646333652232827185_g1299243573826661102_f31f39105489a7ac50ab3597e84122ee.jpg" id="4_dj323"]
+[ext_resource type="Texture2D" uid="uid://dcnhf84i0eals" path="res://Assets/Images/Fishing Level Guide/1789915742357_1646333652232827185_g1299243573826661102_a7f85ee670af0e2723fe67ddf092de81.jpg" id="5_o3ptx"]
+[ext_resource type="Texture2D" uid="uid://bx46fulih4oq7" path="res://Assets/Images/Fishing Level Guide/1789915742377_1646333652232827185_g1299243573826661102_fd9b268554269e0a2fb8485540a1eaac.jpg" id="6_ervnr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
 bg_color = Color(0.305882, 0.67451, 0.686275, 1)
@@ -42,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_script")
+script = ExtResource("1_ccfvf")
 
 [node name="SlidesContainer" type="Control" parent="."]
 layout_mode = 1
@@ -59,9 +59,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_rvto0")
+texture = ExtResource("2_ccfvf")
 expand_mode = 1
-stretch_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="SlidesContainer"]
 visible = false
@@ -71,7 +70,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_rvto0")
+texture = ExtResource("3_lf1wf")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="SlidesContainer"]
@@ -82,7 +81,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_rvto0")
+texture = ExtResource("4_dj323")
 expand_mode = 1
 
 [node name="TextureRect4" type="TextureRect" parent="SlidesContainer"]
@@ -93,7 +92,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_rvto0")
+texture = ExtResource("5_o3ptx")
 expand_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="SlidesContainer"]
@@ -104,7 +103,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_rvto0")
+texture = ExtResource("6_ervnr")
 expand_mode = 1
 
 [node name="PrevButton" type="Button" parent="."]

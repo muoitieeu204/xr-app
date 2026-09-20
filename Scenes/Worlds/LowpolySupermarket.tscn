@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://b12kcbqt8cg6r"]
+[gd_scene load_steps=72 format=4 uid="uid://b12kcbqt8cg6r"]
 
 [ext_resource type="PackedScene" uid="uid://vqp31n7iy4bk" path="res://Assets/GlassDoor.tscn" id="1_k20mw"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="1_lfkti"]
@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://cvhj3kxqfbmai" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/30_gan_dung_roi_day_ban_nghe_minh_doc_cham_lai_mot_7fd5c685-7cbe-4545-b878-5117d7c2f2d2.mp3" id="23_wl710"]
 [ext_resource type="AudioStream" uid="uid://i14upr717bcw" path="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/tutorial/image 4/nghe_xong_cau_hoi_roi_con_hay_tra_loi_that_to_va_2193e236-261b-43d7-8b23-93a3d7e90e76.mp3" id="24_7cpmx"]
 [ext_resource type="AudioStream" uid="uid://bvovm60qpkejp" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3" id="24_eaww7"]
+[ext_resource type="AudioStream" uid="uid://dd35lymwdctme" path="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/tutorial/image 5/con_da_hoan_thanh_xong_nhiem_vu_roi_gioi_qua_e339765a-ea01-483b-9be0-1bff0e4e25bd.mp3" id="25_yhauw"]
 [ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/UIHintTriggerZone.tscn" id="28_fhpcg"]
 [ext_resource type="PackedScene" uid="uid://dorwh24bkxu7y" path="res://Prefabs/InteractableObject/TaskwayPoint.tscn" id="30_1042w"]
 
@@ -576,7 +577,7 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, -2.7755572e-17, 0, 1.6610133e-24, 0
 transform = Transform3D(-0.00152151, 0.00030041893, -1.0499973, -0.00011949243, 1.0499998, 0.00030081352, 0.6999983, 0.00017993727, -0.0022822793, 2.207542, -3.487097, -3.5547647)
 
 [node name="Shelf4" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("13_bwgcx")]
-transform = Transform3D(7.927282e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651248e-15, 0.7, -3.0597974e-08, 5.2848527e-08, 2.207542, -3.487097, -5.0786734)
+transform = Transform3D(7.927283e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.465125e-15, 0.7, -3.0597974e-08, 5.2848527e-08, 2.205901, -3.487097, -5.0739193)
 
 [node name="Shelf" parent="SuperMarket Architecture/InteractableShelf" instance=ExtResource("8_duvh4")]
 transform = Transform3D(7.9272816e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 3.4651245e-15, 0.7, -3.0597974e-08, 5.2848527e-08, -0.72151625, -3.4453278, -3.4879365)
@@ -591,13 +592,13 @@ transform = Transform3D(7.92728e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 
 transform = Transform3D(2, -2.9646153e-21, 0, 2.9646153e-21, 2, -2.2146852e-22, 0, 3.3220278e-22, 1.3333334, 7.006113, -3.4940698, -3.5508728)
 
 [node name="Guide Screen" parent="SuperMarket Architecture" instance=ExtResource("20_1042w")]
-transform = Transform3D(-4.3711445e-08, 6.5567086e-08, 1, -6.5567086e-08, 1, -6.5567086e-08, -1, -6.556708e-08, -4.3711385e-08, -1.2363653, -2.152302, -1.9560063)
+transform = Transform3D(-4.3711452e-08, 6.5567086e-08, 1, -6.5567086e-08, 1, -6.5567086e-08, -1, -6.556708e-08, -4.3711385e-08, -1.2395728, -2.152302, -1.9905602)
 screen_size = Vector2(1.5, 1.5)
 scene = ExtResource("21_p8ll3")
 viewport_size = Vector2(1280, 720)
 transparent = 1
 scene_properties_keys = PackedStringArray("SlideGuideController.gd", "slide_audios")
-slide_audios = Array[AudioStream]([ExtResource("21_gtu05"), ExtResource("22_yhauw"), ExtResource("23_iqw3r"), ExtResource("24_7cpmx"), null])
+slide_audios = Array[AudioStream]([ExtResource("22_yhauw"), ExtResource("21_gtu05"), ExtResource("23_iqw3r"), ExtResource("24_7cpmx"), ExtResource("25_yhauw")])
 
 [node name="NPCZone" type="Node3D" parent="."]
 

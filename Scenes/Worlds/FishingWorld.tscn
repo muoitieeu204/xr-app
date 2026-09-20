@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=41 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -21,6 +21,13 @@
 [ext_resource type="Script" uid="uid://dmivs2rlbp1ia" path="res://scripts/Environment Script/TaskwayPoint.gd" id="19_4j4qx"]
 [ext_resource type="AudioStream" uid="uid://b2cs84t8ee1dm" path="res://Assets/Audio/clean_double_pop_n_magic_sparkle_alert_sound.mp3" id="20_c2ys4"]
 [ext_resource type="Texture2D" uid="uid://e3a5qg1yfcmm" path="res://Assets/kenney_ui-pack-adventure/PNG/Double/minimap_arrow_a.png" id="21_3romh"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="22_3romh"]
+[ext_resource type="PackedScene" uid="uid://cu61yolwym4gi" path="res://Prefabs/Boards/FishingLevelGuide.tscn" id="23_03388"]
+[ext_resource type="AudioStream" uid="uid://bfrvjamgn863k" path="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 1/chao_mung_ban_den_voi_tro_choi_cau_do_vat_hay_su_a6cc205a-4260-4851-ab69-54246bf2151d.mp3" id="24_nw16v"]
+[ext_resource type="AudioStream" uid="uid://dolear3ia0qwc" path="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 2/dua_tay_lai_gan_can_cau_sau_do_bop_giu_nut_co_de_733f9a07-7c26-47ce-bcc8-01af6d9d0cd7.mp3" id="25_c14p1"]
+[ext_resource type="AudioStream" uid="uid://dd5gy6si25ouk" path="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 3/nam_tay_cam_bang_tay_thuan_roi_vung_tay_ra_truoc_bfb3fda9-5ad8-41ec-9a9f-fc57bea00527.mp3" id="26_a0s0r"]
+[ext_resource type="AudioStream" uid="uid://icgkif7mhvhn" path="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 4/khi_tay_cam_rung_len_do_la_luc_da_cau_duoc_do_3a1be2a3-4a06-4629-b6f2-a1fa229d206a.mp3" id="27_47qot"]
+[ext_resource type="AudioStream" uid="uid://bqhm1j3xon1xk" path="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 5/do_vat_cau_duoc_se_xuat_hien_tren_ban_chi_can_b2142d00-cd1e-4fdc-83e4-1b4bbe09ce20.mp3" id="28_w6mfe"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_excqj"]
 panorama = ExtResource("1_sf545")
@@ -452,6 +459,15 @@ collision_mask = 524288
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelTutorial/ExitHere/Area3D"]
 shape = SubResource("BoxShape3D_x2ulc")
 debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
+
+[node name="Guide Screen" parent="." instance=ExtResource("22_3romh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66214967, 0.32094097, -5.6611614)
+screen_size = Vector2(2.5, 1.5)
+scene = ExtResource("23_03388")
+viewport_size = Vector2(1280, 720)
+transparent = 1
+scene_properties_keys = PackedStringArray("SlideGuideController.gd", "slide_audios")
+slide_audios = Array[AudioStream]([ExtResource("24_nw16v"), ExtResource("25_c14p1"), ExtResource("26_a0s0r"), ExtResource("27_47qot"), ExtResource("28_w6mfe")])
 
 [connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]
