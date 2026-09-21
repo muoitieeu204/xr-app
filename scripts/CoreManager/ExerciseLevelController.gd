@@ -11,11 +11,7 @@ extends XRToolsSceneBase
 
 @export_group("Exercise Specific Variables")
 @export var item_slot_spawner: Array[Marker3D] = []
-@export var item_catalog: Dictionary[String, PackedScene] = {
-		"trái chuối": preload("res://Assets/3D Models For Supermarket/Fruits/FakeBanana.tscn"),
-		"kẹo kitkat": preload("res://Assets/3D Models For Supermarket/Junk Foods/FakeKitKat.tscn")
-}
-
+@export var item_catalog: Dictionary[String, PackedScene]
 var currentScore: int = 0
 var startedAt: String = ""
 var interactionLog: String = ""
@@ -169,6 +165,7 @@ func FinishLevel():
 		finalResult["lessonId"] = levelId
 	else:
 		finalResult["exerciseId"] = levelId
+		finalResult["lessonId"] = levelId
 	if completionStatus == true:
 		finalResult["completionStatus"] = "Completed"
 	else:

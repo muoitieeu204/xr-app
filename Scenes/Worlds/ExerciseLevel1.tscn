@@ -1,11 +1,16 @@
-[gd_scene load_steps=35 format=3 uid="uid://bu73omc55ibvk"]
+[gd_scene load_steps=40 format=3 uid="uid://bu73omc55ibvk"]
 
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="1_fewtt"]
 [ext_resource type="ArrayMesh" uid="uid://cab5253bndmge" path="res://Assets/ExerciseLevelAsset/LowpolyFloatingIsland.tres" id="1_vcr52"]
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_vk61c"]
 [ext_resource type="Script" uid="uid://cqrtqmjr3he3t" path="res://scripts/API/GetExerciseItemsApi.gd" id="2_dihdv"]
+[ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="2_y8enq"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="3_b2p4l"]
+[ext_resource type="PackedScene" uid="uid://d23rnmupgvhql" path="res://Assets/3D Models For Supermarket/Animal Products/FakeSausagesPackage.tscn" id="3_rrij2"]
+[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/FakeChicken.tscn" id="4_eanvs"]
 [ext_resource type="Shader" uid="uid://c0yvptvmdwuam" path="res://Scenes/water_shader.gdshader" id="4_vk61c"]
+[ext_resource type="PackedScene" uid="uid://dcdlplkk7if88" path="res://Assets/3D Models For Supermarket/Fruits/FakeBanana.tscn" id="5_bhbrr"]
+[ext_resource type="PackedScene" uid="uid://ctyq5s48u8oyo" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeKitKat.tscn" id="6_c8qxb"]
 [ext_resource type="Script" uid="uid://bcjhw27fhfvio" path="res://scripts/Environment Script/spawner.gd" id="7_uk56b"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="8_uk56b"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="9_74vv2"]
@@ -88,6 +93,13 @@ radius = 2.3
 [node name="ExerciseLevel1" type="Node3D" node_paths=PackedStringArray("item_slot_spawner") groups=["ExerciseLevelController", "LevelController"]]
 script = ExtResource("1_vk61c")
 item_slot_spawner = [NodePath("Item Spawner/slot 1"), NodePath("Item Spawner/slot 2"), NodePath("Item Spawner/slot 3"), NodePath("Item Spawner/slot 4"), NodePath("Item Spawner/slot 5"), NodePath("Item Spawner/slot 6"), NodePath("Item Spawner/slot 7"), NodePath("Item Spawner/slot 8"), NodePath("Item Spawner/slot 9"), NodePath("Item Spawner/slot 10")]
+item_catalog = Dictionary[String, PackedScene]({
+"gà nguyên con": ExtResource("4_eanvs"),
+"gói xúc xích": ExtResource("3_rrij2"),
+"kẹo kitkat": ExtResource("6_c8qxb"),
+"phô mai": ExtResource("2_y8enq"),
+"trái chuối": ExtResource("5_bhbrr")
+})
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fewtt")
@@ -120,7 +132,6 @@ script = ExtResource("3_b2p4l")
 respawn_point = NodePath("../Spawner")
 
 [node name="Water" type="MeshInstance3D" parent="WaterShader"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3039732, 1.425847, -1.399037)
 mesh = SubResource("PlaneMesh_dihdv")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_uk56b")

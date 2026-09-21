@@ -85,8 +85,9 @@ size = Vector3(0.01, 10, 1.8060524)
 height = 0.5
 radius = 2.3
 
-[node name="ExerciseLevel1" type="Node3D" node_paths=PackedStringArray("item_slot_spawner") groups=["ExerciseLevelController", "LevelController"]]
+[node name="ExerciseLevel2" type="Node3D" node_paths=PackedStringArray("item_slot_spawner") groups=["ExerciseLevelController", "LevelController"]]
 script = ExtResource("1_750ww")
+levelId = 2
 item_slot_spawner = [NodePath("Item Spawner/slot 1"), NodePath("Item Spawner/slot 2"), NodePath("Item Spawner/slot 3"), NodePath("Item Spawner/slot 4"), NodePath("Item Spawner/slot 5"), NodePath("Item Spawner/slot 6"), NodePath("Item Spawner/slot 7"), NodePath("Item Spawner/slot 8"), NodePath("Item Spawner/slot 9"), NodePath("Item Spawner/slot 10")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
