@@ -1,21 +1,39 @@
-[gd_scene load_steps=35 format=3 uid="uid://brrsfmpsgnf4l"]
+[gd_scene load_steps=53 format=3 uid="uid://brrsfmpsgnf4l"]
 
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_750ww"]
+[ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="2_m3nmu"]
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_red2x"]
+[ext_resource type="PackedScene" uid="uid://b2k7bg42d0js7" path="res://Assets/3D Models For Supermarket/Animal Products/FakeChicken.tscn" id="3_np1km"]
 [ext_resource type="Script" uid="uid://cqrtqmjr3he3t" path="res://scripts/API/GetExerciseItemsApi.gd" id="3_r3s03"]
 [ext_resource type="ArrayMesh" uid="uid://cab5253bndmge" path="res://Assets/ExerciseLevelAsset/LowpolyFloatingIsland.tres" id="4_ge4hj"]
+[ext_resource type="PackedScene" uid="uid://d23rnmupgvhql" path="res://Assets/3D Models For Supermarket/Animal Products/FakeSausagesPackage.tscn" id="4_rnf3f"]
+[ext_resource type="PackedScene" uid="uid://dtuk5qh5jjrem" path="res://Assets/3D Models For Supermarket/Beverages/FakeCoffee.tscn" id="5_aqjf2"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="5_fbnbl"]
 [ext_resource type="Shader" uid="uid://c0yvptvmdwuam" path="res://Scenes/water_shader.gdshader" id="6_2mvu4"]
+[ext_resource type="PackedScene" uid="uid://dahcwn4lalkcl" path="res://Assets/3D Models For Supermarket/Beverages/FakeLiptonTea.tscn" id="6_p7way"]
 [ext_resource type="Script" uid="uid://bcjhw27fhfvio" path="res://scripts/Environment Script/spawner.gd" id="7_d5p2s"]
+[ext_resource type="PackedScene" uid="uid://barc03cyk2if" path="res://Assets/3D Models For Supermarket/Beverages/FakeMangoTea.tscn" id="7_m0onk"]
 [ext_resource type="PackedScene" uid="uid://c812bw4xilybc" path="res://Prefabs/ModeSpawner.tscn" id="8_xjo5t"]
+[ext_resource type="PackedScene" uid="uid://k3nr8a4gfjd4" path="res://Assets/3D Models For Supermarket/Beverages/FakeSirWinstonTea.tscn" id="8_yhq32"]
+[ext_resource type="PackedScene" uid="uid://m3g328gfwjsd" path="res://Assets/3D Models For Supermarket/Beverages/FakeSoda.tscn" id="9_g1cqr"]
 [ext_resource type="PackedScene" uid="uid://dtp04c42gwtvy" path="res://Prefabs/PlayerPrefabs/VRPlayer.tscn" id="9_m3nmu"]
+[ext_resource type="PackedScene" uid="uid://cxpvrik1qf8pe" path="res://Assets/3D Models For Supermarket/Beverages/FakeTea.tscn" id="10_70rfg"]
 [ext_resource type="PackedScene" uid="uid://b4mettyqpc1cu" path="res://Prefabs/InteractableObject/teleport_area.tscn" id="10_np1km"]
+[ext_resource type="PackedScene" uid="uid://dm2mrwobcdh57" path="res://Assets/3D Models For Supermarket/Fruits/FakeApple.tscn" id="11_hq0md"]
 [ext_resource type="Script" uid="uid://dafp3g5f51n3w" path="res://scripts/Environment Script/ExerciseLevelResultSceneTrigger.gd" id="11_rnf3f"]
+[ext_resource type="PackedScene" uid="uid://dd1pvuih87jmv" path="res://Assets/3D Models For Supermarket/Fruits/FakeGreenApple.tscn" id="12_8wvv4"]
 [ext_resource type="PackedScene" uid="uid://dwkv0kfu368op" path="res://Assets/ExerciseLevelAsset/FakeMagnifying.tscn" id="12_red2x"]
 [ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_2mvu4"]
+[ext_resource type="PackedScene" uid="uid://dcdlplkk7if88" path="res://Assets/3D Models For Supermarket/Fruits/FakeBanana.tscn" id="13_6dfiq"]
 [ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="14_d5p2s"]
+[ext_resource type="PackedScene" uid="uid://dk01pht2o72c7" path="res://Assets/3D Models For Supermarket/Fruits/FakeMango.tscn" id="14_m86rb"]
 [ext_resource type="AudioStream" uid="uid://cvhj3kxqfbmai" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/30_gan_dung_roi_day_ban_nghe_minh_doc_cham_lai_mot_7fd5c685-7cbe-4545-b878-5117d7c2f2d2.mp3" id="15_xjo5t"]
+[ext_resource type="PackedScene" uid="uid://d0qpcb5hrnw" path="res://Assets/3D Models For Supermarket/Fruits/FakePear.tscn" id="15_yv1ms"]
 [ext_resource type="AudioStream" uid="uid://bvovm60qpkejp" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3" id="16_m3nmu"]
+[ext_resource type="PackedScene" uid="uid://ddlknb3fsmtkj" path="res://Assets/3D Models For Supermarket/Fruits/FakePineApple.tscn" id="16_uod80"]
+[ext_resource type="PackedScene" uid="uid://bn4a50p5smv4u" path="res://Assets/3D Models For Supermarket/Junk Foods/ChipBagFake.tscn" id="17_yhq32"]
+[ext_resource type="PackedScene" uid="uid://bqgunevcptvar" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeChipBag2.tscn" id="18_g1cqr"]
+[ext_resource type="PackedScene" uid="uid://ctyq5s48u8oyo" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeKitKat.tscn" id="19_70rfg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b2p4l"]
 panorama = ExtResource("2_red2x")
@@ -89,6 +107,26 @@ radius = 2.3
 script = ExtResource("1_750ww")
 levelId = 2
 item_slot_spawner = [NodePath("Item Spawner/slot 1"), NodePath("Item Spawner/slot 2"), NodePath("Item Spawner/slot 3"), NodePath("Item Spawner/slot 4"), NodePath("Item Spawner/slot 5"), NodePath("Item Spawner/slot 6"), NodePath("Item Spawner/slot 7"), NodePath("Item Spawner/slot 8"), NodePath("Item Spawner/slot 9"), NodePath("Item Spawner/slot 10")]
+item_catalog = Dictionary[String, PackedScene]({
+"gà nguyên con": ExtResource("3_np1km"),
+"gói cà phê": ExtResource("5_aqjf2"),
+"gói xúc xích": ExtResource("4_rnf3f"),
+"hộp trà thượng hạng": ExtResource("8_yhq32"),
+"kẹo kitkat": ExtResource("19_70rfg"),
+"lon nước ngọt": ExtResource("9_g1cqr"),
+"phô mai": ExtResource("2_m3nmu"),
+"quả chuối": ExtResource("13_6dfiq"),
+"quả dứa": ExtResource("16_uod80"),
+"quả lê": ExtResource("15_yv1ms"),
+"quả táo": ExtResource("11_hq0md"),
+"quả táo xanh": ExtResource("12_8wvv4"),
+"quả xoài": ExtResource("14_m86rb"),
+"trà": ExtResource("10_70rfg"),
+"trà lipton": ExtResource("6_p7way"),
+"trà xoài": ExtResource("7_m0onk"),
+"túi khoai tây chiên": ExtResource("18_g1cqr"),
+"túi khoai tây chiên lát": ExtResource("17_yhq32")
+})
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fewtt")
