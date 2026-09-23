@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=42 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -106,6 +106,9 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x2ulc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nw16v"]
+size = Vector3(1.5341797, 1, 1.6456299)
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker", "waypointSequence") groups=["FishingLevelController", "LevelController"]]
 script = ExtResource("1_enjev")
@@ -460,14 +463,23 @@ collision_mask = 524288
 shape = SubResource("BoxShape3D_x2ulc")
 debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
 
-[node name="Guide Screen" parent="." instance=ExtResource("22_3romh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.66214967, 0.32094097, -5.6611614)
+[node name="Guide Screen" parent="." node_paths=PackedStringArray("audio_trigger") instance=ExtResource("22_3romh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.325003, 0.32094097, -5.865574)
 screen_size = Vector2(2.5, 1.5)
 scene = ExtResource("23_03388")
 viewport_size = Vector2(1280, 720)
 transparent = 1
-scene_properties_keys = PackedStringArray("SlideGuideController.gd", "slide_audios")
+scene_properties_keys = PackedStringArray("SlideGuideController.gd", "slide_audios", "audio_trigger")
 slide_audios = Array[AudioStream]([ExtResource("24_nw16v"), ExtResource("25_c14p1"), ExtResource("26_a0s0r"), ExtResource("27_47qot"), ExtResource("28_w6mfe")])
+audio_trigger = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="Guide Screen"]
+collision_mask = 655360
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Guide Screen/Area3D"]
+transform = Transform3D(1, 4.3408996e-16, -1.3322676e-15, 0, 1, 0, 0, 0, 1, -0.05419922, -0.7803316, 0.322815)
+shape = SubResource("BoxShape3D_nw16v")
+debug_color = Color(0.9399652, 1.1262596e-05, 0.6192461, 0.41960785)
 
 [connection signal="item_scanned_for_teaching" from="NpcZone/StallCashier" to="NpcZone/StallCashier/Npc" method="_on_item_scanned_for_teaching"]
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]

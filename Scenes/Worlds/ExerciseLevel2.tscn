@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://brrsfmpsgnf4l"]
+[gd_scene load_steps=54 format=3 uid="uid://brrsfmpsgnf4l"]
 
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_750ww"]
 [ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="2_m3nmu"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://bn4a50p5smv4u" path="res://Assets/3D Models For Supermarket/Junk Foods/ChipBagFake.tscn" id="17_yhq32"]
 [ext_resource type="PackedScene" uid="uid://bqgunevcptvar" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeChipBag2.tscn" id="18_g1cqr"]
 [ext_resource type="PackedScene" uid="uid://ctyq5s48u8oyo" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeKitKat.tscn" id="19_70rfg"]
+[ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/InteractableObject/UIHintTriggerZone.tscn" id="26_g1cqr"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b2p4l"]
 panorama = ExtResource("2_red2x")
@@ -253,41 +254,71 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.707783)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9498825, 4, -6)
 script = ExtResource("7_d5p2s")
 
+[node name="HintTrigger" parent="Item Spawner/slot 1" instance=ExtResource("26_g1cqr")]
+hint_text = "Đồ vật nằm trên bãi cỏ  "
+
 [node name="slot 2" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4586573, 3.7763605, -9.805558)
 script = ExtResource("7_d5p2s")
+
+[node name="HintTrigger" parent="Item Spawner/slot 2" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm gần mép sông"
 
 [node name="slot 3" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999247, 3.671918, -5.22548)
 script = ExtResource("7_d5p2s")
 
+[node name="HintTrigger" parent="Item Spawner/slot 3" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm gần bãi đá "
+
 [node name="slot 4" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.851881, 3.7265778, -6.592767)
 script = ExtResource("7_d5p2s")
+
+[node name="HintTrigger" parent="Item Spawner/slot 4" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm gần mép sông này"
 
 [node name="slot 5" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2868625, 3.4490297, -14.430597)
 script = ExtResource("7_d5p2s")
 
+[node name="HintTrigger" parent="Item Spawner/slot 5" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm gần bụi cỏ ngay tảng đá"
+
 [node name="slot 6" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.371004, 4.0458975, -15.872278)
 script = ExtResource("7_d5p2s")
+
+[node name="HintTrigger" parent="Item Spawner/slot 6" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm trên bãi cỏ gần đây"
 
 [node name="slot 7" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.19693, 4.804248, -6.112627)
 script = ExtResource("7_d5p2s")
 
+[node name="HintTrigger" parent="Item Spawner/slot 7" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm xung quanh bãi đá"
+
 [node name="slot 8" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.590342, 4.6291947, -3.4449577)
 script = ExtResource("7_d5p2s")
+
+[node name="HintTrigger" parent="Item Spawner/slot 8" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm gần tảng đá to"
 
 [node name="slot 9" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.296812, 3.5983787, -1.5860977)
 script = ExtResource("7_d5p2s")
 
+[node name="HintTrigger" parent="Item Spawner/slot 9" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm xung quanh bãi đá"
+
 [node name="slot 10" type="Marker3D" parent="Item Spawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.934195, 4, -1.1392097)
 script = ExtResource("7_d5p2s")
+
+[node name="HintTrigger" parent="Item Spawner/slot 10" instance=ExtResource("26_g1cqr")]
+hint_text = "Kiếm gần tảng đá nhỏ"
 
 [node name="Spawner" parent="." instance=ExtResource("8_xjo5t")]
 transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, -8.269366, 5.5918884, 15.253275)

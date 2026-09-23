@@ -42,7 +42,7 @@ func _ready():
 
 	# Connect to the parent's action_pressed signal
 	if pickable:
-		pickable.action_pressed.connect(_on_action_pressed)
+		reel_handle.action_pressed.connect(_on_action_pressed)
 
 	if reel_hinge:
 		last_hinge_pos = reel_hinge.hinge_position
