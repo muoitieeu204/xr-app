@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://irgusrkwd42a"
+path="res://.godot/imported/tui_khoai_tay_chien_lat.mp3-cdff06dfd6c0f6e16be0aaf6fa5a4482.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Chips1/tui_khoai_tay_chien_lat.mp3"
+dest_files=["res://.godot/imported/tui_khoai_tay_chien_lat.mp3-cdff06dfd6c0f6e16be0aaf6fa5a4482.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

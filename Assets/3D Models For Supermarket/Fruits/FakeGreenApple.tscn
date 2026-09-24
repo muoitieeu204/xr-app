@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://utb5ffaucsqy" path="res://Prefabs/Guide Sound/Food/apple/toi_la_qua_tron_tron_co_mau_do_hoac_xanh_an_rat_40f7c3a4-fa4e-49fb-b94c-fb765fab5572 (1).mp3" id="2_uq5lt"]
 [ext_resource type="AudioStream" uid="uid://dx3f5jtkh6m0d" path="res://Prefabs/Guide Sound/Food/apple/toi_la_qua_tron_tron_co_mau_do_hoac_xanh_an_rat_40f7c3a4-fa4e-49fb-b94c-fb765fab5572.mp3" id="3_cvfus"]
 [ext_resource type="Texture2D" uid="uid://cmkwnecx1w57" path="res://Assets/3D Models For Supermarket/Fruits/Fruits/GreenApple_2.png" id="3_mq41w"]
-[ext_resource type="AudioStream" uid="uid://g42q3pens8a6" path="res://Prefabs/Guide Sound/Food/Fruits/Fruits/GreenApple/tao_xanh_96a4463e-b73f-4c9e-b8f0-7fe0dbbc107b.mp3" id="3_sptn7"]
+[ext_resource type="AudioStream" uid="uid://bljrkf6ux6ujb" path="res://Prefabs/Guide Sound/Food/Fruits/Fruits/GreenApple/39_qua_tao_xanh_fb9532e0-bacb-4811-a0cd-d81c2906fa0c.mp3" id="3_sptn7"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_gkwbi"]
 radius = 0.035835832

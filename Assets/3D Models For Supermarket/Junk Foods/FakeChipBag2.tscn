@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_as3nq"]
 [ext_resource type="PackedScene" uid="uid://bai8edcdf40il" path="res://Assets/3D Models For Supermarket/Junk Foods/ChipBag2Pickable.tscn" id="2_2nybr"]
 [ext_resource type="Texture2D" uid="uid://hkao7ewivgaa" path="res://Assets/3D Models For Supermarket/Junk Foods/Chips/Fries_0.png" id="2_ntb0d"]
-[ext_resource type="AudioStream" uid="uid://bxmkpjfs3alix" path="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Fries/khoai_tay_chien_76b8ea85-1f4a-469a-80fa-4e7e1b3c74f8.mp3" id="3_kcm2a"]
+[ext_resource type="AudioStream" uid="uid://cnhefcbrcn4qj" path="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Fries/41_tui_khoai_tay_chien_61f1cbe3-d052-4510-88a9-d1087ea1678d.mp3" id="3_2nybr"]
 [ext_resource type="AudioStream" uid="uid://l3h0ff1jc2o6" path="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Fries/thu_nghi_lai_nha_que_khoai_vang_chien_gion_an_3871f102-997b-4a43-888c-3d3bd29c452b.mp3" id="4_giwws"]
 [ext_resource type="AudioStream" uid="uid://uwi6sa4igeq" path="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Fries/toi_la_nhung_que_dai_vang_uom_chien_gion_thuong_628c7692-90dc-423d-8870-f91a0bfad870.mp3" id="5_7bcwa"]
 
@@ -55,7 +55,7 @@ audio_bus_name = &"Sounds"
 script = ExtResource("1_as3nq")
 realItem = ExtResource("2_2nybr")
 itemName = "túi khoai tây chiên"
-itemNameSound = ExtResource("3_kcm2a")
+itemNameSound = ExtResource("3_2nybr")
 hintAudios = Array[AudioStream]([ExtResource("4_giwws"), ExtResource("5_7bcwa")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

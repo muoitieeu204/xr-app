@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpel232jrjb8b"
+path="res://.godot/imported/38_lon_nuoc_mau_do_03113a26-3361-4f49-a0ab-d69c1ba53dfd.mp3-f6414425cceede8e727a7c6906618d63.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/38_lon_nuoc_mau_do_03113a26-3361-4f49-a0ab-d69c1ba53dfd.mp3"
+dest_files=["res://.godot/imported/38_lon_nuoc_mau_do_03113a26-3361-4f49-a0ab-d69c1ba53dfd.mp3-f6414425cceede8e727a7c6906618d63.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

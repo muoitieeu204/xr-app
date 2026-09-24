@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdmqlx3yainl0"
+path="res://.godot/imported/37_hop_tra_thuong_hang_bca021d5-8aed-4d6b-869a-327204bab566.mp3-ae013797b1fa799a45c20b78088c27cf.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/37_hop_tra_thuong_hang_bca021d5-8aed-4d6b-869a-327204bab566.mp3"
+dest_files=["res://.godot/imported/37_hop_tra_thuong_hang_bca021d5-8aed-4d6b-869a-327204bab566.mp3-ae013797b1fa799a45c20b78088c27cf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfrvjamgn863k"
+path="res://.godot/imported/chao_mung_ban_den_voi_tro_choi_cau_do_vat_hay_su_a6cc205a-4260-4851-ab69-54246bf2151d.mp3-986c294804eb2a3fc356810e46815803.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 1/chao_mung_ban_den_voi_tro_choi_cau_do_vat_hay_su_a6cc205a-4260-4851-ab69-54246bf2151d.mp3"
+dest_files=["res://.godot/imported/chao_mung_ban_den_voi_tro_choi_cau_do_vat_hay_su_a6cc205a-4260-4851-ab69-54246bf2151d.mp3-986c294804eb2a3fc356810e46815803.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

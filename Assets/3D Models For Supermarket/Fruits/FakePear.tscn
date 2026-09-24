@@ -67,7 +67,7 @@ collision_layer = 5
 audio_bus_name = &"Sounds"
 script = ExtResource("1_igdas")
 realItem = ExtResource("2_s1eh7")
-itemName = "trai lê"
+itemName = "quả lê"
 itemNameSound = ExtResource("3_jb0km")
 hintAudios = Array[AudioStream]([ExtResource("3_jb0km"), ExtResource("5_rfmbn")])
 

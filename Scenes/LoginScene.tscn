@@ -43,6 +43,7 @@ sky_material = SubResource("ProceduralSkyMaterial_t1kom")
 
 [sub_resource type="Environment" id="Environment_55k4d"]
 background_mode = 2
+background_energy_multiplier = 0.8
 sky = SubResource("Sky_3b7j4")
 tonemap_mode = 2
 glow_enabled = true
@@ -79,7 +80,6 @@ environment = SubResource("Environment_55k4d")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
 
 [node name="Floor" type="StaticBody3D" parent="."]
 
@@ -117,7 +117,8 @@ show_laser = 2
 laser_length = 1
 
 [node name="StartXR" parent="." instance=ExtResource("9_3b7j4")]
-target_refresh_rate = 90.0
+render_target_size_multiplier = 0.85
+target_refresh_rate = 72.0
 
 [node name="Room" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 8, 0, 0, 0, 1, 0, -8.205, 0)
@@ -192,32 +193,11 @@ transform = Transform3D(1, 0, 0, 0, 0.125, 0, 0, 0, 1, 0, 1.025625, 0)
 [node name="lampSquareCeiling" parent="Room/Lamp Row" instance=ExtResource("11_20fn3")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 10.896101, 10.967665, -7.5614195)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Room/Lamp Row/lampSquareCeiling"]
-transform = Transform3D(0.14285715, 0, 0, 0, -6.2444863e-09, 0.14285715, 0, -0.14285715, -6.2444863e-09, 0.060035944, 0.013438702, -0.06618893)
-shadow_enabled = true
-shadow_bias = 0.0
-spot_range = 20.0
-spot_angle = 60.0
-
 [node name="lampSquareCeiling2" parent="Room/Lamp Row" instance=ExtResource("11_20fn3")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 10.896101, 10.967665, -1.5614195)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Room/Lamp Row/lampSquareCeiling2"]
-transform = Transform3D(0.14285715, 0, 0, 0, -6.2444863e-09, 0.14285715, 0, -0.14285715, -6.2444863e-09, 0.060035944, 0.013438702, -0.06618893)
-shadow_enabled = true
-shadow_bias = 0.0
-spot_range = 20.0
-spot_angle = 60.0
-
 [node name="lampSquareCeiling3" parent="Room/Lamp Row" instance=ExtResource("11_20fn3")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 10.896101, 10.967665, 4.4385805)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Room/Lamp Row/lampSquareCeiling3"]
-transform = Transform3D(0.14285715, 0, 0, 0, -6.2444863e-09, 0.14285715, 0, -0.14285715, -6.2444863e-09, 0.060035944, 0.013438702, -0.06618893)
-shadow_enabled = true
-shadow_bias = 0.0
-spot_range = 20.0
-spot_angle = 60.0
 
 [node name="Lamp Row2" type="Node3D" parent="Room"]
 transform = Transform3D(1, 0, 0, 0, 0.125, 0, 0, 0, 1, -21, 1.025625, 0)
@@ -225,32 +205,11 @@ transform = Transform3D(1, 0, 0, 0, 0.125, 0, 0, 0, 1, -21, 1.025625, 0)
 [node name="lampSquareCeiling" parent="Room/Lamp Row2" instance=ExtResource("11_20fn3")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 10.896101, 10.967665, -7.5614195)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Room/Lamp Row2/lampSquareCeiling"]
-transform = Transform3D(0.14285715, 0, 0, 0, -6.2444863e-09, 0.14285715, 0, -0.14285715, -6.2444863e-09, 0.060035944, 0.013438702, -0.06618893)
-shadow_enabled = true
-shadow_bias = 0.0
-spot_range = 20.0
-spot_angle = 60.0
-
 [node name="lampSquareCeiling2" parent="Room/Lamp Row2" instance=ExtResource("11_20fn3")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 10.896101, 10.967665, -1.5614195)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Room/Lamp Row2/lampSquareCeiling2"]
-transform = Transform3D(0.14285715, 0, 0, 0, -6.2444863e-09, 0.14285715, 0, -0.14285715, -6.2444863e-09, 0.060035944, 0.013438702, -0.06618893)
-shadow_enabled = true
-shadow_bias = 0.0
-spot_range = 20.0
-spot_angle = 60.0
-
 [node name="lampSquareCeiling3" parent="Room/Lamp Row2" instance=ExtResource("11_20fn3")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 10.896101, 10.967665, 4.4385805)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Room/Lamp Row2/lampSquareCeiling3"]
-transform = Transform3D(0.14285715, 0, 0, 0, -6.2444863e-09, 0.14285715, 0, -0.14285715, -6.2444863e-09, 0.060035944, 0.013438702, -0.06618893)
-shadow_enabled = true
-shadow_bias = 0.0
-spot_range = 20.0
-spot_angle = 60.0
 
 [node name="speaker" parent="Room" instance=ExtResource("16_7xet5")]
 transform = Transform3D(-2.6226832e-07, 0, 6, 0, 0.75, 0, -6, 0, -2.6226832e-07, -6.5782204, 1.031875, -16.583223)
