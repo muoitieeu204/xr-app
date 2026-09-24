@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cud521eqxsi7u" path="res://Assets/3D Models For Supermarket/Market Equipments/Fridge.tscn" id="1_1dtum"]
 [ext_resource type="PackedScene" uid="uid://d23rnmupgvhql" path="res://Assets/3D Models For Supermarket/Animal Products/FakeSausagesPackage.tscn" id="3_513nt"]
 [ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="4_3w2b7"]
-[ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/RowSpawner.gd" id="5_kothn"]
+[ext_resource type="Script" uid="uid://e56270s7uav0" path="res://scripts/Environment Script/RowSpawner.gd" id="5_kothn"]
 [ext_resource type="ArrayMesh" uid="uid://cue7nm8o13qw1" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/Chicken.tres" id="6_4n4wm"]
 [ext_resource type="ArrayMesh" uid="uid://doss4be4vw2dd" path="res://Assets/3D Models For Supermarket/Animal Products/Milk Products/Cheese.tres" id="6_p2s4g"]
 [ext_resource type="ArrayMesh" uid="uid://nk3x3tsw8k1g" path="res://Assets/3D Models For Supermarket/Animal Products/Meat Products/LowpolyPackOfSausages.tres" id="8_p2s4g"]
@@ -25,7 +25,7 @@ buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0.3, 0,
 transform_format = 1
 instance_count = 8
 mesh = ExtResource("8_p2s4g")
-buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0.3, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0.6, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0.90000004, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1.2, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1.5, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1.8000001, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 2.1000001, 0, 1, 0, 0, 0, 0, 1, 0)
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1.1, 0, 1, 0, 0, 0.3, 0, 1, 0, 0, 0, 0, 1.1, 0, 1, 0, 0, 0.6, 0, 1, 0, 0, 0, 0, 1.1, 0, 1, 0, 0, 0.90000004, 0, 1, 0, 0, 0, 0, 1.1, 0, 1, 0, 0, 1.2, 0, 1, 0, 0, 0, 0, 1.1, 0, 1, 0, 0, 1.5, 0, 1, 0, 0, 0, 0, 1.1, 0, 1, 0, 0, 1.8000001, 0, 1, 0, 0, 0, 0, 1.1, 0, 1, 0, 0, 2.1000001, 0, 1, 0, 0, 0, 0, 1.1, 0)
 
 [node name="Fridge" instance=ExtResource("1_1dtum")]
 
@@ -59,7 +59,7 @@ script = ExtResource("5_kothn")
 item_scene = ExtResource("3_513nt")
 item_count = 8
 spacing = Vector3(0.3, 0, 0)
-mesh_scale = Vector3(1, 1, 1)
+mesh_scale = Vector3(1, 1, 1.1)
 mesh_rotation = Vector3(15, 0, 0)
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="SausagesPackerRowSpawner" index="0"]
@@ -72,7 +72,7 @@ script = ExtResource("5_kothn")
 item_scene = ExtResource("3_513nt")
 item_count = 8
 spacing = Vector3(0.3, 0, 0)
-mesh_scale = Vector3(1, 1, 1)
+mesh_scale = Vector3(1, 1, 1.1)
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="SausagesPackerRowSpawner2" index="0"]
 lod_bias = 0.05

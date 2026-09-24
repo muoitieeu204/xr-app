@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqhm1j3xon1xk"
+path="res://.godot/imported/do_vat_cau_duoc_se_xuat_hien_tren_ban_chi_can_b2142d00-cd1e-4fdc-83e4-1b4bbe09ce20.mp3-2d42f9801e55d6880bdc1165e249bc39.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Fishing/image 5/do_vat_cau_duoc_se_xuat_hien_tren_ban_chi_can_b2142d00-cd1e-4fdc-83e4-1b4bbe09ce20.mp3"
+dest_files=["res://.godot/imported/do_vat_cau_duoc_se_xuat_hien_tren_ban_chi_can_b2142d00-cd1e-4fdc-83e4-1b4bbe09ce20.mp3-2d42f9801e55d6880bdc1165e249bc39.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

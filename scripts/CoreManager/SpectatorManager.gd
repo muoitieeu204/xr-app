@@ -177,7 +177,7 @@ func _on_play_pause_button_pressed() -> void:
 
 func _on_backward_button_pressed() -> void:
 	#Use clamp for safe slider calculation
-	playback_time = clamp(timeSlider.value - 2.0, 0.0, max_duration) # Tua lùi hẳn 2 giây cho rõ rệt
+	playback_time = clamp(timeSlider.value - 5.0, 0.0, max_duration) # Tua lùi hẳn 2 giây cho rõ rệt
 	timeSlider.value = playback_time
 	render_frame_at_time(playback_time)
 	if is_playing == true:
@@ -185,7 +185,7 @@ func _on_backward_button_pressed() -> void:
 	_update_timer_label()
 
 func _on_forward_button_pressed() -> void:
-	playback_time = clamp(timeSlider.value + 2.0, 0.0, max_duration) # Tua tiến hẳn 2 giây cho rõ rệt
+	playback_time = clamp(timeSlider.value + 5.0, 0.0, max_duration) # Tua tiến hẳn 2 giây cho rõ rệt
 	timeSlider.value = playback_time
 	render_frame_at_time(playback_time)
 	if is_playing == true:

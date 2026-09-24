@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnhefcbrcn4qj"
+path="res://.godot/imported/41_tui_khoai_tay_chien_61f1cbe3-d052-4510-88a9-d1087ea1678d.mp3-5f7fa7e33eeda2fb3891ff40496a19e8.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Food/Junk Foods/Chips/Fries/41_tui_khoai_tay_chien_61f1cbe3-d052-4510-88a9-d1087ea1678d.mp3"
+dest_files=["res://.godot/imported/41_tui_khoai_tay_chien_61f1cbe3-d052-4510-88a9-d1087ea1678d.mp3-5f7fa7e33eeda2fb3891ff40496a19e8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

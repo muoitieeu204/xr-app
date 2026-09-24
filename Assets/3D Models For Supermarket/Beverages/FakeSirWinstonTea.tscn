@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ll0u4vel73c" path="res://Assets/3D Models For Supermarket/Beverages/Hot Drinks/SirWinstonTea_0.jpg" id="1_5itmq"]
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_kfgmx"]
 [ext_resource type="PackedScene" uid="uid://b170dhiaes30h" path="res://Assets/3D Models For Supermarket/Beverages/PickableSirWinstonTea.tscn" id="2_ff2f1"]
-[ext_resource type="AudioStream" uid="uid://bclab63no601j" path="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/tra_sir_winston_dac04d77-541b-40e6-8592-9fd8816f9139.mp3" id="3_7mku3"]
+[ext_resource type="AudioStream" uid="uid://bdmqlx3yainl0" path="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/37_hop_tra_thuong_hang_bca021d5-8aed-4d6b-869a-327204bab566.mp3" id="3_kfgmx"]
 [ext_resource type="AudioStream" uid="uid://q644pgwogqnn" path="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/toi_la_hop_tra_cao_cap_co_ten_cua_mot_quy_ong_3568b290-ce2d-4e14-8cd9-27deeca4c5d0.mp3" id="4_3g4mh"]
 [ext_resource type="AudioStream" uid="uid://cxrm2hljgkkih" path="res://Prefabs/Guide Sound/Food/Beverages/Hot Drinks/SirWinstonTea/thu_nghi_lai_nha_hop_tra_cao_cap_mang_ten_quy_70d94264-e924-47a0-a126-ed160d0084ef.mp3" id="5_1rpoc"]
 
@@ -55,7 +55,7 @@ audio_bus_name = &"Sounds"
 script = ExtResource("1_kfgmx")
 realItem = ExtResource("2_ff2f1")
 itemName = "hộp trà thượng hạng"
-itemNameSound = ExtResource("3_7mku3")
+itemNameSound = ExtResource("3_kfgmx")
 hintAudios = Array[AudioStream]([ExtResource("4_3g4mh"), ExtResource("5_1rpoc")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

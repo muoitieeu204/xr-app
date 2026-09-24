@@ -18,6 +18,11 @@ func request_highlight(by: Node3D, enable: bool) -> void:
 
 	# 2. Godot XR Tools automatically calls this when you press the Grab Button!                                                                                                                                           
 func pick_up(by: Node3D) -> void:
+	# If hand already holding something, drop it first
+	if is_instance_valid(by.get("picked_up_object")) and by.get("picked_up_object") != self:
+		if by.has_method("drop_object"):
+			by.drop_object()
+
 	print("DEBUG: Fake item grabbed! Spawning real item...")
 	# Spawn the real item                                                                                                                                                                                                 
 	var realItemInstance = realItem.instantiate()
@@ -44,6 +49,12 @@ func pick_up(by: Node3D) -> void:
 	realItemInstance.dropped.connect(func(_pickable): GameManager.item_name_updated.emit(""))
 	realItemInstance.grabbed.connect(func(_pickable, _by): GameManager.item_name_updated.emit(itemName))
 	get_tree().call_group("LevelController", "item_grabbed_for_tutorial")
+
+	if has_meta("multimesh_id"):
+		var mm_id = get_meta("multimesh_id")
+		var mm = get_parent().get_node_or_null("MultiMeshInstance3D")
+		if mm and mm.multimesh:
+			mm.multimesh.set_instance_transform(mm_id, Transform3D(Basis().scaled(Vector3.ZERO), Vector3.ZERO))
 	# Delete the fake item
 	queue_free()
 
@@ -52,5 +63,8 @@ func _on_pointer_event(event: XRToolsPointerEvent):
 		var controller = event.pointer.get_parent()
 		for child in controller.get_children():
 			if child is XRToolsFunctionPickup:
-				pick_up(child)
+				if child.has_method("_pick_up_object"):
+					child._pick_up_object(self)
+				else:
+					pick_up(child)
 				return

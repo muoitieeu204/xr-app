@@ -38,6 +38,10 @@ var _meta_path: String = ""
 var _audio_path: String = ""
 
 func _ready() -> void:
+	if SessionData.roleName == "Parent":
+		CHILDREN_API = ApiConfig.baseUrl + "/api/child-profiles/my-children"
+	else:
+		CHILDREN_API = ApiConfig.baseUrl + "/api/child-profiles/my-students"
 	# Tạo HTTPRequest cho danh sách trẻ
 	_http_children = HTTPRequest.new()
 	add_child(_http_children)

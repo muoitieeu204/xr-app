@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://biblh61rw0dym" path="res://Assets/3D Models For Supermarket/Beverages/Soft Drinks & Beverages/Coke_0.jpg" id="1_hbphv"]
 [ext_resource type="Script" uid="uid://dhde05oj44qbo" path="res://scripts/Environment Script/RealItemInstantiate.gd" id="1_sdfqs"]
 [ext_resource type="PackedScene" uid="uid://bp6e8jjx6h125" path="res://Assets/3D Models For Supermarket/Beverages/CokePickable.tscn" id="2_ub7li"]
-[ext_resource type="AudioStream" uid="uid://hkb1nvboih0e" path="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/cocacola_7344a682-0ced-4127-9580-c8571b6c3d4a.mp3" id="3_5na3e"]
+[ext_resource type="AudioStream" uid="uid://bpel232jrjb8b" path="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/38_lon_nuoc_mau_do_03113a26-3361-4f49-a0ab-d69c1ba53dfd.mp3" id="3_ub7li"]
 [ext_resource type="AudioStream" uid="uid://cpv3e6dmtseyj" path="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/Coke/thu_nghi_lai_nha_nuoc_ngot_co_ga_mau_nau_den_55a3569d-ce99-47c4-a4d2-329aa7e53f05.mp3" id="4_tduav"]
 [ext_resource type="AudioStream" uid="uid://dpeiu64y6owmp" path="res://Prefabs/Guide Sound/Food/Beverages/Soft Drinks & Beverages/SodaCan/toi_la_cai_lon_bang_kim_loai_dung_nuoc_co_ga_ben_abf29e26-4488-472f-996f-0f08761e34c4.mp3" id="5_llaop"]
 
@@ -46,8 +46,8 @@ collision_layer = 5
 audio_bus_name = &"Sounds"
 script = ExtResource("1_sdfqs")
 realItem = ExtResource("2_ub7li")
-itemName = "lon cocacola"
-itemNameSound = ExtResource("3_5na3e")
+itemName = "lon nước màu đỏ"
+itemNameSound = ExtResource("3_ub7li")
 hintAudios = Array[AudioStream]([ExtResource("4_tduav"), ExtResource("5_llaop")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
