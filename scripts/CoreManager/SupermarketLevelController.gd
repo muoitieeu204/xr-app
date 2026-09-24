@@ -96,7 +96,7 @@ func WrongAnswer(itemName: String, spokenText: String) -> void:
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	var is_scoring = taskList.has(itemName) and not attemptedItems.has(itemName)
 	if is_scoring:
-		logMessage += " (-" + str(incorrectAnswerScore) + " điểm)"	
+		logMessage += " (-" + str(incorrectAnswerScore) + " điểm)"
 	if interactionLog == "":
 		interactionLog = logMessage
 	else: interactionLog += " | " + logMessage
@@ -120,6 +120,8 @@ func FinishLevel():
 	var finalResult = {
 			"sessionId": SessionData.sessionId, # Assuming you have this Autoload
 			"childId": PlayerData.childId, # Assuming you have this Autoload
+			"lessonId": levelId,
+			"isExercise": not isLesson,
 			"score": currentScore,
 			"errorCount": errorCount,
 			"correctCount": correctCount,
@@ -129,10 +131,6 @@ func FinishLevel():
 			"interactionLog": interactionLog,
 			"feedbackText": "" # Game can send data base on current logic
 		}
-	if isLesson == true:
-		finalResult["lessonId"] = levelId
-	else:
-		finalResult["exerciseId"] = levelId # This need to be fix for the exercise
 	if completionStatus == true:
 		finalResult["completionStatus"] = "Completed"
 	else:

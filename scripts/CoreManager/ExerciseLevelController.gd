@@ -152,6 +152,8 @@ func FinishLevel():
 	var finalResult = {
 			"sessionId": SessionData.sessionId,
 			"childId": PlayerData.childId,
+			"lessonId": levelId,
+			"isExercise": not isLesson,
 			"score": currentScore,
 			"errorCount": errorCount,
 			"correctCount": correctCount,
@@ -161,11 +163,6 @@ func FinishLevel():
 			"interactionLog": interactionLog,
 			"feedbackText": ""
 		}
-	if isLesson == true:
-		finalResult["lessonId"] = levelId
-	else:
-		finalResult["exerciseId"] = levelId
-		finalResult["lessonId"] = levelId
 	if completionStatus == true:
 		finalResult["completionStatus"] = "Completed"
 	else:

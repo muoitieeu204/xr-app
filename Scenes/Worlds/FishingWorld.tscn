@@ -464,7 +464,7 @@ shape = SubResource("BoxShape3D_x2ulc")
 debug_color = Color(3.465414e-06, 0.8431878, 0.2712374, 0.41960785)
 
 [node name="Guide Screen" parent="." node_paths=PackedStringArray("audio_trigger") instance=ExtResource("22_3romh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.325003, 0.32094097, -5.865574)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.325003, 0.44105655, -5.865574)
 screen_size = Vector2(2.5, 1.5)
 scene = ExtResource("23_03388")
 viewport_size = Vector2(1280, 720)

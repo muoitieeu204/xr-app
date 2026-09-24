@@ -594,7 +594,7 @@ transform = Transform3D(7.92728e-08, -2.9646153e-22, -1.05, 4.589696e-08, 1.05, 
 transform = Transform3D(2, -2.9646153e-21, 0, 2.9646153e-21, 2, -2.2146852e-22, 0, 3.3220278e-22, 1.3333334, 7.006113, -3.4940698, -3.5508728)
 
 [node name="Guide Screen" parent="SuperMarket Architecture" node_paths=PackedStringArray("audio_trigger") instance=ExtResource("20_1042w")]
-transform = Transform3D(-4.3711452e-08, 6.5567086e-08, 1, -6.5567086e-08, 1, -6.5567086e-08, -1, -6.556708e-08, -4.3711385e-08, -1.2395728, -2.152302, -1.9905602)
+transform = Transform3D(-4.371146e-08, 6.5567086e-08, 1, -6.5567086e-08, 1, -6.5567086e-08, -1, -6.556708e-08, -4.3711385e-08, -1.2395728, -2.1102483, -1.9905602)
 screen_size = Vector2(1.5, 1.5)
 scene = ExtResource("21_p8ll3")
 viewport_size = Vector2(1280, 720)
