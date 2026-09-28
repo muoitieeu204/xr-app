@@ -18,6 +18,7 @@ func request_highlight(by: Node3D, enable: bool) -> void:
 
 	# 2. Godot XR Tools automatically calls this when you press the Grab Button!                                                                                                                                           
 func pick_up(by: Node3D) -> void:
+	itemName = itemName.strip_edges()
 	# If hand already holding something, drop it first
 	if is_instance_valid(by.get("picked_up_object")) and by.get("picked_up_object") != self:
 		if by.has_method("drop_object"):

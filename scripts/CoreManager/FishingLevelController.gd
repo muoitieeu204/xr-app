@@ -73,7 +73,10 @@ func spawn_item(spawn_position: Vector3 = Vector3.ZERO):
 	if catchable_items.is_empty():
 		push_warning("No catchable items assigned in the FishinLevelController");
 		return
-	
+	var active_item_names = []
+	for child in get_children():
+		if child.has_meta("itemName"):
+			active_item_names.append(child.get_meta("itemName"))
 	var available_items = []
 	for scene in catchable_items:
 		var temp_instance = scene.instantiate()
@@ -83,6 +86,8 @@ func spawn_item(spawn_position: Vector3 = Vector3.ZERO):
 		if item_name == "" or not completedTask.has(item_name):
 			available_items.append(scene)
 		temp_instance.queue_free()
+		if not active_item_names.has(item_name) and not completedTask.has(item_name):
+			available_items.append(scene)
 
 	var random_item_scene = null
 	if available_items.size() > 0:

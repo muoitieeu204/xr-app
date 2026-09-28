@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://frdstio4xc48"
+path="res://.godot/imported/43_khi_lai_gan_vi_tri_co_do_vat_an_giau_he_thong_se_247059db-46df-4b35-ad34-c9e7f3a588cd.mp3.mp3-b47dd9510e3719ed9ae42ce9806b70f6.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Audio hướng dẫn bài học/Exercise_level_audio/43_khi_lai_gan_vi_tri_co_do_vat_an_giau_he_thong_se_247059db-46df-4b35-ad34-c9e7f3a588cd.mp3.mp3"
+dest_files=["res://.godot/imported/43_khi_lai_gan_vi_tri_co_do_vat_an_giau_he_thong_se_247059db-46df-4b35-ad34-c9e7f3a588cd.mp3.mp3-b47dd9510e3719ed9ae42ce9806b70f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
