@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxc3y1fftlwy0"
+path="res://.godot/imported/29_chua_dung_mat_roi_nhung_khong_sao_ne_qua_mon_6248e493-d8be-4be9-94fd-ffd802a2e4b8.mp3-5f68982e0674274088cc5998c35ac824.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/NPC_interact_audio/29_chua_dung_mat_roi_nhung_khong_sao_ne_qua_mon_6248e493-d8be-4be9-94fd-ffd802a2e4b8.mp3"
+dest_files=["res://.godot/imported/29_chua_dung_mat_roi_nhung_khong_sao_ne_qua_mon_6248e493-d8be-4be9-94fd-ffd802a2e4b8.mp3-5f68982e0674274088cc5998c35ac824.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

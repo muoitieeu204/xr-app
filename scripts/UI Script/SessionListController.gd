@@ -258,8 +258,11 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 		title_text = "Bài học #" + str(session.get("lessonId", session.get("exerciseId", "?")))
 
 	var created_at: String = str(session.get("completedAt", session.get("startedAt", "")))
-	if created_at.length() >= 16:
-		created_at = created_at.substr(0, 10) + "  " + created_at.substr(11, 5)
+	if not created_at.is_empty():
+		var unix_time = Time.get_unix_time_from_datetime_string(created_at)
+		var vn_time = unix_time + (7 * 3600) # UTC+7 (Vietnam)
+		var dt = Time.get_datetime_dict_from_unix_time(vn_time)
+		created_at = "%04d-%02d-%02d  %02d:%02d" % [dt.year, dt.month, dt.day, dt.hour, dt.minute]
 
 	var duration_secs: int = int(session.get("durationSeconds", 0))
 	var duration_str: String = ""
@@ -302,14 +305,14 @@ func _create_session_card(session: Dictionary) -> PanelContainer:
 	hbox.add_child(vbox)
 
 	var name_lbl := Label.new()
-	name_lbl.text = title_text
+	name_lbl.text = "🆔 Session #" + session_id
 	name_lbl.add_theme_font_size_override("font_size", 16)
 	name_lbl.add_theme_color_override("font_color", Color(0.066667, 0.094118, 0.152941, 1))
 	vbox.add_child(name_lbl)
 
 	# ponytail: Streamlined card layout — showing only Date/Time and Session ID to keep UI clean and prevent API null mismatch issues
 	var info_lbl := Label.new()
-	info_lbl.text = "📅 %s   •   🆔 Session: %s" % [created_at, session_id]
+	info_lbl.text = "📅 %s   •    📘 Bài học: %s" % [created_at, title_text]
 	info_lbl.add_theme_font_size_override("font_size", 13)
 	info_lbl.add_theme_color_override("font_color", Color(0.35, 0.42, 0.50, 1))
 	vbox.add_child(info_lbl)

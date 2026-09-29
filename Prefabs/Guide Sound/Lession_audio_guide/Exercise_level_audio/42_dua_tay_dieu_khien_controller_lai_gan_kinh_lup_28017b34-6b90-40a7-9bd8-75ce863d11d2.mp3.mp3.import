@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr3h0oj4eb2l4"
+path="res://.godot/imported/42_dua_tay_dieu_khien_controller_lai_gan_kinh_lup_28017b34-6b90-40a7-9bd8-75ce863d11d2.mp3.mp3-6aa5df26a626c9a90804679e03441571.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Lession_audio_guide/Exercise_level_audio/42_dua_tay_dieu_khien_controller_lai_gan_kinh_lup_28017b34-6b90-40a7-9bd8-75ce863d11d2.mp3.mp3"
+dest_files=["res://.godot/imported/42_dua_tay_dieu_khien_controller_lai_gan_kinh_lup_28017b34-6b90-40a7-9bd8-75ce863d11d2.mp3.mp3-6aa5df26a626c9a90804679e03441571.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

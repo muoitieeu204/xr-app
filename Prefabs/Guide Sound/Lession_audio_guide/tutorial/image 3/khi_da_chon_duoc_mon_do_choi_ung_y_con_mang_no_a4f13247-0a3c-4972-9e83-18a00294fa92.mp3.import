@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdx11m3ormp3u"
+path="res://.godot/imported/khi_da_chon_duoc_mon_do_choi_ung_y_con_mang_no_a4f13247-0a3c-4972-9e83-18a00294fa92.mp3-8b112ea6c07a1f8d784500776ac6fc78.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Lession_audio_guide/tutorial/image 3/khi_da_chon_duoc_mon_do_choi_ung_y_con_mang_no_a4f13247-0a3c-4972-9e83-18a00294fa92.mp3"
+dest_files=["res://.godot/imported/khi_da_chon_duoc_mon_do_choi_ung_y_con_mang_no_a4f13247-0a3c-4972-9e83-18a00294fa92.mp3-8b112ea6c07a1f8d784500776ac6fc78.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

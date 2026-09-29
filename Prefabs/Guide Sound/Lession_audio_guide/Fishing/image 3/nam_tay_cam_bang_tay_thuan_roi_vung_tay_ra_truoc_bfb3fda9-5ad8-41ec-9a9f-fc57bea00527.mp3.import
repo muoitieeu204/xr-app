@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd5gy6si25ouk"
+path="res://.godot/imported/nam_tay_cam_bang_tay_thuan_roi_vung_tay_ra_truoc_bfb3fda9-5ad8-41ec-9a9f-fc57bea00527.mp3-6f18442e748d47c62bec63ecf8dd9269.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Lession_audio_guide/Fishing/image 3/nam_tay_cam_bang_tay_thuan_roi_vung_tay_ra_truoc_bfb3fda9-5ad8-41ec-9a9f-fc57bea00527.mp3"
+dest_files=["res://.godot/imported/nam_tay_cam_bang_tay_thuan_roi_vung_tay_ra_truoc_bfb3fda9-5ad8-41ec-9a9f-fc57bea00527.mp3-6f18442e748d47c62bec63ecf8dd9269.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cffgivy112eq"
+path="res://.godot/imported/nghe_xong_cau_hoi_roi_con_hay_tra_loi_that_to_va_2193e236-261b-43d7-8b23-93a3d7e90e76.mp3-f2b5315a187657596cca895a5d658a9a.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Lession_audio_guide/tutorial/image 3/nghe_xong_cau_hoi_roi_con_hay_tra_loi_that_to_va_2193e236-261b-43d7-8b23-93a3d7e90e76.mp3"
+dest_files=["res://.godot/imported/nghe_xong_cau_hoi_roi_con_hay_tra_loi_that_to_va_2193e236-261b-43d7-8b23-93a3d7e90e76.mp3-f2b5315a187657596cca895a5d658a9a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

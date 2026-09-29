@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfkar37n88vhi"
+path="res://.godot/imported/con_dua_cay_dieu_khien_trong_tay_lai_gan_mon_do_9d38e9f2-8875-49b3-bade-6e382e196450.mp3-5913c7103a00dffb2af3cfa662e8177c.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Lession_audio_guide/tutorial/image 1/con_dua_cay_dieu_khien_trong_tay_lai_gan_mon_do_9d38e9f2-8875-49b3-bade-6e382e196450.mp3"
+dest_files=["res://.godot/imported/con_dua_cay_dieu_khien_trong_tay_lai_gan_mon_do_9d38e9f2-8875-49b3-bade-6e382e196450.mp3-5913c7103a00dffb2af3cfa662e8177c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
