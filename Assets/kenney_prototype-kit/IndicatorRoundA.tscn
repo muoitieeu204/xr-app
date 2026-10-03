@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://c2h6ch3df0bew"]
 
-[ext_resource type="Texture2D" uid="uid://8054t8qrhji7" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="1_ogqvl"]
+[ext_resource type="Texture2D" uid="uid://bh0g6c1klosyp" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="1_ogqvl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhruy"]
 resource_name = "colormap"
@@ -64,6 +64,7 @@ _data = {
 [node name="indicator-round-a" type="Node3D" parent="."]
 
 [node name="rotate-y" type="MeshInstance3D" parent="indicator-round-a"]
+transform = Transform3D(0.22578901, 0, 0.9741762, 0, 1, 0, -0.9741762, 0, 0.22578901, 0, 0, 0)
 mesh = SubResource("ArrayMesh_8qmj3")
 skeleton = NodePath("")
 
@@ -72,3 +73,4 @@ libraries = {
 &"": SubResource("AnimationLibrary_c43jm")
 }
 autoplay = "animation"
+speed_scale = 0.2

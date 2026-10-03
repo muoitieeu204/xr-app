@@ -208,6 +208,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16332105, 0.4879611, 0)
 pixel_size = 0.0005
 billboard = 1
 outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
-text = "🐟 cắn câu, hãy kéo cần câu lên!!"
+text = "🐟 cắn câu, hãy kéo cần câu mạnh lên!!"
 
 [editable path="FishingRod"]
