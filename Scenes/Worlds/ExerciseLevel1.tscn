@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://bu73omc55ibvk"]
+[gd_scene load_steps=63 format=3 uid="uid://bu73omc55ibvk"]
 
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="1_fewtt"]
 [ext_resource type="ArrayMesh" uid="uid://cab5253bndmge" path="res://Assets/ExerciseLevelAsset/LowpolyFloatingIsland.tres" id="1_vcr52"]
@@ -33,6 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://bvovm60qpkejp" path="res://Prefabs/Guide Sound/NPC_interact_audio/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3" id="16_rrij2"]
 [ext_resource type="PackedScene" uid="uid://ddlknb3fsmtkj" path="res://Assets/3D Models For Supermarket/Fruits/FakePineApple.tscn" id="17_colbs"]
 [ext_resource type="PackedScene" uid="uid://bqgunevcptvar" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeChipBag2.tscn" id="18_pmkhr"]
+[ext_resource type="PackedScene" uid="uid://c2h6ch3df0bew" path="res://Assets/kenney_prototype-kit/IndicatorRoundA.tscn" id="30_oamqk"]
 [ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/InteractableObject/UIHintTriggerZone.tscn" id="34_hun6n"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="35_colbs"]
 [ext_resource type="PackedScene" uid="uid://cn17tdk4yicpr" path="res://Prefabs/Boards/ExerciseLevelGuide.tscn" id="36_0rhqd"]
@@ -110,8 +111,11 @@ size = Vector3(0.01, 10, 1.6892534)
 height = 0.5
 radius = 2.3
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jue6r"]
+size = Vector3(0.017578125, 1, 1.3048248)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jtmna"]
-size = Vector3(1.5341797, 1, 1.6456299)
+size = Vector3(1.5341797, 1, 1.1626587)
 
 [node name="ExerciseLevel1" type="Node3D" node_paths=PackedStringArray("item_slot_spawner") groups=["ExerciseLevelController", "LevelController"]]
 script = ExtResource("1_vk61c")
@@ -344,6 +348,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.
 shape = SubResource("CylinderShape3D_i0qbo")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 
+[node name="indicator-round-a2" parent="TeleportArea/ResultScreenTrigger" instance=ExtResource("30_oamqk")]
+transform = Transform3D(4.341076, 0, 0, 0, 1, 0, 0, 0, 4.2274017, 0, -0.7961588, 0)
+
+[node name="TeleportBarrier" type="CollisionShape3D" parent="TeleportArea"]
+transform = Transform3D(0.7349858, 0, 0.6780828, 0, 1, 0, -0.6780828, 0, 0.7349858, -1.6083851, -0.36222744, 1.5250969)
+shape = SubResource("BoxShape3D_jue6r")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="TeleportBarrier4" type="CollisionShape3D" parent="TeleportArea"]
+transform = Transform3D(0.334333, 0, 0.9424552, 0, 1, 0, -0.9424552, 0, 0.334333, -0.5333667, -0.36222744, 2.2862654)
+shape = SubResource("BoxShape3D_jue6r")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="TeleportBarrier5" type="CollisionShape3D" parent="TeleportArea"]
+transform = Transform3D(-0.26020148, 0, 0.9655547, 0, 1, 0, -0.9655547, 0, -0.26020148, 0.67889786, -0.36222744, 2.3239317)
+shape = SubResource("BoxShape3D_jue6r")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="TeleportBarrier2" type="CollisionShape3D" parent="TeleportArea"]
+transform = Transform3D(0.9730341, 0, 0.23066117, 0, 1, 0, -0.23066117, 0, 0.9730341, -2.1879797, -0.36222744, 0.5143957)
+shape = SubResource("BoxShape3D_jue6r")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="TeleportBarrier3" type="CollisionShape3D" parent="TeleportArea"]
+transform = Transform3D(0.9797957, 0, -0.20000085, 0, 1, 0, 0.20000085, 0, 0.9797957, -2.1287365, -0.36222744, -0.56274605)
+shape = SubResource("BoxShape3D_jue6r")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
 [node name="FakeMagnifying" parent="." instance=ExtResource("12_egqm1")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -5.7160034, 4.4724746, -12.844163)
 
@@ -371,7 +403,7 @@ audio_trigger = NodePath("Area3D")
 collision_mask = 655360
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Guide Screen/Area3D"]
-transform = Transform3D(1, 4.3408996e-16, -1.3322676e-15, 0, 1, 0, 0, 0, 1, -0.05419922, -0.7803316, 0.322815)
+transform = Transform3D(1, 4.3408996e-16, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, -0.054198265, -0.7803316, 0.56430197)
 shape = SubResource("BoxShape3D_jtmna")
 debug_color = Color(0.9399652, 1.1262596e-05, 0.6192461, 0.41960785)
 

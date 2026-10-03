@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://02rsk8jpt617"]
+[gd_scene load_steps=43 format=3 uid="uid://02rsk8jpt617"]
 
 [ext_resource type="Script" uid="uid://s8hj7wf3sby2" path="res://scripts/CoreManager/FishingLevelController.gd" id="1_enjev"]
 [ext_resource type="Script" uid="uid://d37i0vyjmvpn0" path="res://scripts/Environment Script/respawn_hazard.gd" id="1_m8c15"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="12_by2g3"]
 [ext_resource type="PackedScene" uid="uid://bmdgtam6u0y1m" path="res://Assets/Fishing assets/CashierStall.tscn" id="13_at3n1"]
 [ext_resource type="PackedScene" uid="uid://xacd6pnc7smn" path="res://Assets/kenney_fantasy-town-kit_2.0/Models/GLB format/stall-stool.glb" id="13_cscui"]
+[ext_resource type="PackedScene" uid="uid://c2h6ch3df0bew" path="res://Assets/kenney_prototype-kit/IndicatorRoundA.tscn" id="14_c14p1"]
 [ext_resource type="Script" uid="uid://cmiv00xaa7tgc" path="res://scripts/Environment Script/FishingLevelResultSceneTrigger.gd" id="15_bvhf0"]
 [ext_resource type="PackedScene" uid="uid://dorwh24bkxu7y" path="res://Prefabs/InteractableObject/TaskwayPoint.tscn" id="16_jdhyv"]
 [ext_resource type="Script" uid="uid://dmivs2rlbp1ia" path="res://scripts/Environment Script/TaskwayPoint.gd" id="19_4j4qx"]
@@ -108,7 +109,7 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_x2ulc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nw16v"]
-size = Vector3(1.5341797, 1, 1.6456299)
+size = Vector3(1.5341797, 1, 1.1709595)
 
 [node name="Main" type="Node3D" node_paths=PackedStringArray("spawn_marker", "waypointSequence") groups=["FishingLevelController", "LevelController"]]
 script = ExtResource("1_enjev")
@@ -201,6 +202,9 @@ script = ExtResource("15_bvhf0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.19340515)
 shape = SubResource("CylinderShape3D_jdhyv")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
+
+[node name="indicator-round-a2" parent="TeleportArea/ResultScreenTrigger" instance=ExtResource("14_c14p1")]
+transform = Transform3D(4.341076, 0, 0, 0, 1, 0, 0, 0, 4.2274017, 0, -0.7961588, 0)
 
 [node name="Spawner" parent="." instance=ExtResource("7_enjev")]
 transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.3711392e-08, -1.1920929e-07, -4.371139e-08, 1, -0.3043599, 0.70082664, -3.2737913)
@@ -477,7 +481,7 @@ audio_trigger = NodePath("Area3D")
 collision_mask = 655360
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Guide Screen/Area3D"]
-transform = Transform3D(1, 4.3408996e-16, -1.3322676e-15, 0, 1, 0, 0, 0, 1, -0.05419922, -0.7803316, 0.322815)
+transform = Transform3D(1, 4.3408996e-16, -1.3322676e-15, 0, 1, 0, 0, 0, 1, -0.05419922, -0.7803316, 0.56015015)
 shape = SubResource("BoxShape3D_nw16v")
 debug_color = Color(0.9399652, 1.1262596e-05, 0.6192461, 0.41960785)
 

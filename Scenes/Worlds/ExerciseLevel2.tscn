@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://brrsfmpsgnf4l"]
+[gd_scene load_steps=63 format=3 uid="uid://brrsfmpsgnf4l"]
 
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_750ww"]
 [ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="2_m3nmu"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://bqgunevcptvar" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeChipBag2.tscn" id="18_g1cqr"]
 [ext_resource type="PackedScene" uid="uid://ctyq5s48u8oyo" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeKitKat.tscn" id="19_70rfg"]
 [ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/InteractableObject/UIHintTriggerZone.tscn" id="26_g1cqr"]
+[ext_resource type="PackedScene" uid="uid://c2h6ch3df0bew" path="res://Assets/kenney_prototype-kit/IndicatorRoundA.tscn" id="31_6nfup"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="36_hq0md"]
 [ext_resource type="PackedScene" uid="uid://cn17tdk4yicpr" path="res://Prefabs/Boards/ExerciseLevelGuide.tscn" id="37_8wvv4"]
 [ext_resource type="AudioStream" uid="uid://7cms4f4tr4cy" path="res://Prefabs/Guide Sound/Lession_audio_guide/Exercise_level_audio/46_chao_mung_den_voi_tro_choi_truy_tim_do_vat_ban_d2088859-1755-439d-8814-1160ae047aeb.mp3.mp3" id="38_uod80"]
@@ -78,7 +79,7 @@ shader_parameter/wave_speed = 3.755
 size = Vector3(100, 3, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fewtt"]
-size = Vector3(0.01, 5, 40)
+size = Vector3(0.017578125, 1, 1.3048248)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vk61c"]
 size = Vector3(0.01, 10, 3.5159523)
@@ -112,7 +113,7 @@ height = 0.5
 radius = 2.3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6dfiq"]
-size = Vector3(1.5341797, 1, 1.6456299)
+size = Vector3(1.5341797, 1, 1.15094)
 
 [node name="ExerciseLevel2" type="Node3D" node_paths=PackedStringArray("item_slot_spawner") groups=["ExerciseLevelController", "LevelController"]]
 script = ExtResource("1_750ww")
@@ -349,6 +350,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.
 shape = SubResource("CylinderShape3D_i0qbo")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 
+[node name="indicator-round-a2" parent="TeleportArea/ResultScreenTrigger" instance=ExtResource("31_6nfup")]
+transform = Transform3D(4.341076, 0, 0, 0, 1, 0, 0, 0, 4.2274017, 0, -0.7961588, 0)
+
 [node name="FakeMagnifying" parent="." instance=ExtResource("12_red2x")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.4554615, 5.242256, 13.45901)
 
@@ -376,7 +380,7 @@ audio_trigger = NodePath("Area3D")
 collision_mask = 655360
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Guide Screen/Area3D"]
-transform = Transform3D(1, 4.3408996e-16, -1.3322676e-15, 0, 1, 0, 0, 0, 1, -0.05419922, -0.7803316, 0.322815)
+transform = Transform3D(1, 4.3408999e-16, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -0.05419922, -0.7803316, 0.57016134)
 shape = SubResource("BoxShape3D_6dfiq")
 debug_color = Color(0.9399652, 1.1262596e-05, 0.6192461, 0.41960785)
 
