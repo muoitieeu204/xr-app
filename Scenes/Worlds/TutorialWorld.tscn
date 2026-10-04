@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=4 uid="uid://cs26wosuk6egg"]
+[gd_scene load_steps=73 format=4 uid="uid://cs26wosuk6egg"]
 
 [ext_resource type="Script" uid="uid://c8cjugws3yttg" path="res://scripts/InitialTestScript.gd" id="1_e2g1d"]
 [ext_resource type="MeshLibrary" uid="uid://dgdj8jhydaaht" path="res://Assets/prototype_mesh_library.tres" id="1_xw0nv"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://tpuef2dwf38s" path="res://Prefabs/HDRI/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="2_dket7"]
 [ext_resource type="PackedScene" uid="uid://d21st8nky57qa" path="res://Assets/kenney_prototype-kit/Models/GLB format/column.glb" id="2_ri6mv"]
 [ext_resource type="PackedScene" uid="uid://b2dnnn88rv0bs" path="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding.glb" id="3_rpmc8"]
-[ext_resource type="Script" uid="uid://c1jilwykg7n4a" path="res://Assets/kenney_prototype-kit/Models/GLB format/door_sliding.gd" id="4_kf1i1"]
 [ext_resource type="PackedScene" uid="uid://cjq5edftlpt0g" path="res://Assets/kenney_prototype-kit/Models/GLB format/button-floor-round-small.glb" id="5_b3bv3"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="6_ykflw"]
 [ext_resource type="Texture2D" uid="uid://bh0g6c1klosyp" path="res://Assets/kenney_prototype-kit/Models/GLB format/Textures/colormap.png" id="7_ykflw"]
@@ -36,9 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://c5s7gp2mllh4w" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/6_neu_ban_can_luon_lach_qua_cac_khe_hep_hoac_nhat_d70f53aa-0b41-4880-bb20-9ab649a00cb2.mp3.mp3" id="23_efjx1"]
 [ext_resource type="AudioStream" uid="uid://gpxr2eub6e00" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/5_xuat_sac_ban_da_nam_vung_toan_bo_cac_thao_tac_di_e9353316-d08d-49c0-a04d-7ebb8bc8bf2a.mp3.mp3" id="24_e78ep"]
 [ext_resource type="PackedScene" uid="uid://dsr5hwjiii4jk" path="res://Prefabs/Boards/InteractBoard.tscn" id="25_iwvwc"]
-[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="26_efjx1"]
 [ext_resource type="PackedScene" uid="uid://bcmhfm3e5mut5" path="res://Assets/kenney_prototype-kit/Models/GLB format/door-sliding-double.glb" id="26_rs4d8"]
-[ext_resource type="PackedScene" uid="uid://cb4st7km0nnuy" path="res://Prefabs/Boards/DoorPromptUI.tscn" id="27_e78ep"]
 [ext_resource type="Script" uid="uid://do0tbh10ergkv" path="res://scripts/Environment Script/AutoOpenDoor.gd" id="27_ullea"]
 [ext_resource type="AudioStream" uid="uid://byot2ngjrfhul" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/8_bay_gio_ban_hay_huong_tia_laser_tu_tay_cam_vao_92b0a34f-4bf7-440c-a975-8413a6863099.mp3" id="28_e78ep"]
 [ext_resource type="AudioStream" uid="uid://6hnmgy604s2w" path="res://Assets/Audio/Zone1 Audio/Vbee_GodotXR/9_ban_co_thay_chiec_nut_tren_ban_khong_hay_dung_5bf336b3-fe94-4888-868b-6d6bbf85d20c.mp3" id="37_rs4d8"]
@@ -64,11 +61,11 @@ points = PackedVector3Array(0.11428417, 1.0078619, 0.50793654, -0.099999994, 0.0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fau3q"]
 points = PackedVector3Array(0.114263974, 1.0077376, 0.114263974, -0.099999994, 0.028437033, -0.099999994, -0.10791475, -0.0077376366, 0.114263974, 0.114263974, -0.0077376366, -0.10791475, -0.099999994, 0.971563, -0.099999994, 0.114263974, -0.0077376366, 0.114263974, -0.10791475, 1.0077376, 0.114263974, 0.114263974, 1.0077376, -0.10791475)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ykflw"]
-data = PackedVector3Array(-0.14999999, 2.3999999, 0, -0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 0, 2.1, 0.14999999, 0, 0, 0.14999999, 0, 0, -0.14999999, 0, 0, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 0, -0.225, 1.275, 1.65, 0.225, 1.275, 1.65, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.9499999, 0.225, 0.525, 1.9499999, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, -0.225, 0.525, 1.65, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.9499999, -0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.14999999, 0, 2.1, -0.14999999, 0, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, -0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 0.75, 1.875, -0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 1.05, 1.875, -0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.875, -0.375, 1.05, 1.875, -0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 1.05, 1.875, -0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.875, 0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, -0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 1.05, 1.7249999, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.7249999, 0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.375, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 1.05, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.525, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.525, 1.05, 1.875, 0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.875, 0.525, 1.05, 1.875, 0.375, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 0.75, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, -0.375, 1.05, 1.875, -0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 1.05, 1.875, -0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 1.05, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.375, 1.05, 1.875, -0.375, 0.75, 1.875, -0.525, 0.75, 1.875, -0.375, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 1.05, 1.875, 0.525, 0.75, 1.875, 0.375, 0.75, 1.875, -0.525, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.525, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, 0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.7249999, -0.375, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, 0.375, 0.75, 1.875, 0.375, 0.75, 1.875, -0.375, 0.75, 1.875, -0.375, 0.75, 1.7249999, 0.375, 0.59999996, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.875)
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3hhen"]
 points = PackedVector3Array(0.104739524, 0.0547619, 0.15238094, -0.09601123, 3.469447e-18, -0.13968253, -0.13968253, 3.469447e-18, -0.09601123, -0.104739524, 0.0547619, -0.15238094, 0.13968253, -3.469447e-18, -0.09601123, -0.09601123, 0, 0.13968253, -0.15238094, 0.0547619, 0.104739524, 0.104739524, 0.0547619, -0.15238094, 0.09601123, -3.469447e-18, 0.13968253, 0.15238094, 0.0547619, 0.104739524, -0.15238094, 0.0547619, -0.104739524, 0.15238094, 0.0547619, -0.104739524, -0.104739524, 0.0547619, 0.15238094, -0.13968253, -3.469447e-18, 0.09601123, 0.09601123, 0, -0.13968253, 0.13968253, 3.469447e-18, 0.09601123)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ykflw"]
+data = PackedVector3Array(-0.14999999, 2.3999999, 0, -0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 0, 2.1, 0.14999999, 0, 0, 0.14999999, 0, 0, -0.14999999, 0, 0, -0.14999999, 0, 2.1, -0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 0, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 2.1, -0.14999999, 2.3999999, 0, -0.225, 1.275, 1.65, 0.225, 1.275, 1.65, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.9499999, 0.225, 0.525, 1.9499999, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, -0.225, 0.525, 1.65, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.225, 1.275, 1.9499999, -0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 0.525, 1.9499999, -0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.9499999, 0.225, 1.275, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.9499999, 0.225, 1.275, 1.9499999, -0.225, 1.275, 1.65, -0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 0.525, 1.65, 0.225, 1.275, 1.65, -0.225, 1.275, 1.65, -0.14999999, 0, 2.1, -0.14999999, 0, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 0, -0.14999999, 2.3999999, 2.1, -0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, 0.14999999, 2.3999999, 0, 0.14999999, 0, 0, 0.14999999, 0, 0, 0.14999999, 0, 2.1, 0.14999999, 2.3999999, 2.1, -0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 0.75, 1.875, -0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.875, -0.375, 1.05, 1.875, -0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 0.75, 1.875, -0.375, 1.05, 1.875, -0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.7249999, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 1.05, 1.875, -0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.875, 0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, -0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 1.05, 1.7249999, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.7249999, 0.375, 1.1999999, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.375, 1.1999999, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.48749998, 1.1625, 1.7249999, -0.48749998, 1.1625, 1.7249999, 0.375, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.375, 1.05, 1.7249999, -0.48749998, 1.1625, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 1.05, 1.7249999, 0.375, 1.05, 1.7249999, -0.375, 0.75, 1.7249999, -0.375, 1.05, 1.7249999, -0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 1.05, 1.7249999, -0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, -0.375, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.525, 0.75, 1.7249999, -0.525, 0.75, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.525, 0.75, 1.7249999, -0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.48749998, 0.6375, 1.7249999, -0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.525, 1.05, 1.875, 0.525, 1.05, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.7249999, 0.525, 0.75, 1.875, 0.525, 1.05, 1.875, 0.375, 0.75, 1.7249999, 0.375, 1.05, 1.7249999, 0.375, 1.05, 1.875, 0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 0.75, 1.7249999, -0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.7249999, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.875, -0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.7249999, 0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, -0.48749998, 1.1625, 1.875, -0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.875, -0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.48749998, 1.1625, 1.875, -0.525, 1.05, 1.875, -0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, -0.375, 1.05, 1.875, -0.525, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, -0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.05, 1.875, 0.48749998, 1.1625, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.525, 1.05, 1.875, -0.375, 1.05, 1.875, 0.375, 0.75, 1.875, 0.375, 1.05, 1.875, 0.525, 1.05, 1.875, -0.525, 0.75, 1.875, -0.375, 1.05, 1.875, -0.375, 0.75, 1.875, -0.525, 0.75, 1.875, -0.375, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 1.05, 1.875, 0.525, 0.75, 1.875, 0.375, 0.75, 1.875, -0.525, 0.75, 1.875, 0.375, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, -0.525, 0.75, 1.875, 0.525, 0.75, 1.875, -0.48749998, 0.6375, 1.875, 0.525, 0.75, 1.875, 0.48749998, 0.6375, 1.875, -0.375, 0.59999996, 1.875, -0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.875, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 1.1999999, 1.7249999, 0.48749998, 1.1625, 1.7249999, 0.48749998, 1.1625, 1.875, 0.48749998, 1.1625, 1.875, 0.375, 1.1999999, 1.875, 0.375, 1.1999999, 1.7249999, -0.375, 0.75, 1.7249999, 0.375, 0.75, 1.7249999, 0.375, 0.75, 1.875, 0.375, 0.75, 1.875, -0.375, 0.75, 1.875, -0.375, 0.75, 1.7249999, 0.375, 0.59999996, 1.875, 0.48749998, 0.6375, 1.875, 0.48749998, 0.6375, 1.7249999, 0.48749998, 0.6375, 1.7249999, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.875, -0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.875, 0.375, 0.59999996, 1.7249999, 0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.7249999, -0.375, 0.59999996, 1.875)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d7fv8"]
 resource_name = "colormap"
@@ -256,7 +253,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 3, 0)
 
 [node name="wall2" parent="Environment/Wall" instance=ExtResource("2_b3bv3")]
-transform = Transform3D(-8.742278e-08, 0, 2.1, 0, 1.605, 0, -2, 0, -9.1793915e-08, -58.97797, 5.4341645, 32.997425)
+transform = Transform3D(-8.742278e-08, 0, 2.1, 0, 4, 0, -2, 0, -9.1793915e-08, -58.97797, 3.060062, 32.997425)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Wall/wall2/wall" index="0"]
 
@@ -352,21 +349,6 @@ shape = SubResource("ConvexPolygonShape3D_fau3q")
 
 [node name="Door" type="Node3D" parent="Environment/InteractableStructure"]
 
-[node name="door-sliding2" parent="Environment/InteractableStructure/Door" instance=ExtResource("3_rpmc8")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -58.175766, 3.1814017, 32.86716)
-script = ExtResource("4_kf1i1")
-
-[node name="door-sliding" parent="Environment/InteractableStructure/Door/door-sliding2" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13488746, -0.111371994)
-
-[node name="door" parent="Environment/InteractableStructure/Door/door-sliding2/door-sliding" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07771301, 0, -0.10789108)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Environment/InteractableStructure/Door/door-sliding2/door-sliding/door" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/InteractableStructure/Door/door-sliding2/door-sliding/door/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_ykflw")
-
 [node name="InteractableAreaButton" parent="Environment/InteractableStructure/Door" instance=ExtResource("6_ykflw")]
 transform = Transform3D(-8.742278e-08, 2, 8.742278e-08, 0, -8.742278e-08, 2, 2, 8.742278e-08, 3.821371e-15, -60.790638, 4.3715878, 30.087427)
 button = NodePath("button-floor-round-small2/button-floor-round-small/button")
@@ -375,17 +357,6 @@ button = NodePath("button-floor-round-small2/button-floor-round-small/button")
 transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/InteractableStructure/Door/InteractableAreaButton"]
-transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_3hhen")
-
-[node name="InteractableAreaButton3" parent="Environment/InteractableStructure/Door" instance=ExtResource("6_ykflw")]
-transform = Transform3D(-8.742278e-08, 2, 8.742278e-08, 0, -8.742278e-08, 2, 2, 8.742278e-08, 3.821371e-15, -60.790638, 4.3715878, 35.76216)
-button = NodePath("button-floor-round-small2/button-floor-round-small/button")
-
-[node name="button-floor-round-small2" parent="Environment/InteractableStructure/Door/InteractableAreaButton3" instance=ExtResource("5_b3bv3")]
-transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/InteractableStructure/Door/InteractableAreaButton3"]
 transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_3hhen")
 
@@ -432,15 +403,6 @@ mesh = SubResource("ArrayMesh_ropn8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/InteractableStructure/Door2/InteractableAreaButton2"]
 shape = SubResource("ConvexPolygonShape3D_0r11v")
-
-[node name="Viewport2Din3D" parent="Environment/InteractableStructure/Door2" instance=ExtResource("26_efjx1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31.205975, 4.541245, 56.24569)
-screen_size = Vector2(1, 1)
-scene = ExtResource("27_e78ep")
-transparent = 0
-scene_properties_keys = PackedStringArray()
-
-[node name="Control" parent="Environment/InteractableStructure/Door2/Viewport2Din3D" instance=ExtResource("27_e78ep")]
 
 [node name="Zone1" type="Node3D" parent="Environment"]
 
@@ -568,7 +530,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0076669455, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_06nu6")
 
 [node name="indicator-special-area2" parent="Environment/Zone1" instance=ExtResource("15_ajraq")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -37.81559, 3.0735023, 4.828159)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -58.845726, 3.0735023, 35.441395)
 
 [node name="GuidingBoard" parent="Environment/Zone1" instance=ExtResource("18_ln6h8")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -41.54303, 5.153576, 7.991928)
@@ -800,7 +762,7 @@ volume_db = -16.0
 bus = &"Sounds"
 
 [node name="Spawner" parent="." instance=ExtResource("10_0r11v")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -23.030485, 4.463589, 5.014596)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -43.83803, 4.463589, 35.228416)
 playerNode = ExtResource("12_2lgl8")
 
 [node name="TeleportArea" parent="." instance=ExtResource("11_x35nm")]
@@ -809,12 +771,8 @@ target_scene = "uid://bt0ier0gd1sh5"
 require_unlock = true
 holoText = "StarterHub"
 
-[connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
-[connection signal="button_pressed" from="Environment/InteractableStructure/Door/InteractableAreaButton3" to="Environment/InteractableStructure/Door/door-sliding2" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
 [connection signal="button_pressed" from="Environment/InteractableStructure/Door2/InteractableAreaButton2" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_interactable_area_button_button_pressed"]
-[connection signal="doorCommandClose" from="Environment/InteractableStructure/Door2/Viewport2Din3D/Control/VoiceCommandHandler" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_voice_command_handler_door_command_close"]
-[connection signal="doorCommandOpen" from="Environment/InteractableStructure/Door2/Viewport2Din3D/Control/VoiceCommandHandler" to="Environment/InteractableStructure/Door2/door-sliding3" method="_on_voice_command_handler_door_command_open"]
 [connection signal="body_entered" from="Environment/Zone1/Ladder/LadderTrigger/Area3D" to="Environment/Zone1/Ladder/LadderTrigger" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Environment/Zone1/Ladder/LadderTrigger2/Area3D" to="Environment/Zone1/Ladder/LadderTrigger2" method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Environment/Zone1/Visual+Audio Guide/Label3D3/Area3D" to="Environment/Zone1/Visual+Audio Guide/Label3D3" method="_on_area_3d_body_entered"]
@@ -834,13 +792,10 @@ holoText = "StarterHub"
 [editable path="Environment/Column/column3"]
 [editable path="Environment/Column/column5"]
 [editable path="Environment/Column/column4"]
-[editable path="Environment/InteractableStructure/Door/door-sliding2"]
 [editable path="Environment/InteractableStructure/Door/InteractableAreaButton/button-floor-round-small2"]
-[editable path="Environment/InteractableStructure/Door/InteractableAreaButton3/button-floor-round-small2"]
 [editable path="Environment/InteractableStructure/Door2/door-sliding3"]
 [editable path="Environment/InteractableStructure/Door2/InteractableAreaButton/button-floor-round-small3"]
 [editable path="Environment/InteractableStructure/Door2/InteractableAreaButton2/button-floor-round-small3"]
-[editable path="Environment/InteractableStructure/Door2/Viewport2Din3D/Control"]
 [editable path="Environment/Zone1/wall-corner2"]
 [editable path="Environment/Zone1/wall-corner3"]
 [editable path="Environment/Zone1/stairs2"]

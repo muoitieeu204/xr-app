@@ -351,28 +351,30 @@ debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 [node name="indicator-round-a2" parent="TeleportArea/ResultScreenTrigger" instance=ExtResource("30_oamqk")]
 transform = Transform3D(4.341076, 0, 0, 0, 1, 0, 0, 0, 4.2274017, 0, -0.7961588, 0)
 
-[node name="TeleportBarrier" type="CollisionShape3D" parent="TeleportArea"]
-transform = Transform3D(0.7349858, 0, 0.6780828, 0, 1, 0, -0.6780828, 0, 0.7349858, -1.6083851, -0.36222744, 1.5250969)
+[node name="TeleportBarrier" type="StaticBody3D" parent="."]
+
+[node name="TeleportBarrier" type="CollisionShape3D" parent="TeleportBarrier"]
+transform = Transform3D(0.65121156, 0, -0.7588966, 0, 1, 0, 0.7588966, 0, 0.65121156, -11.057351, 3.7344246, -9.221476)
 shape = SubResource("BoxShape3D_jue6r")
 debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
 
-[node name="TeleportBarrier4" type="CollisionShape3D" parent="TeleportArea"]
-transform = Transform3D(0.334333, 0, 0.9424552, 0, 1, 0, -0.9424552, 0, 0.334333, -0.5333667, -0.36222744, 2.2862654)
+[node name="TeleportBarrier4" type="CollisionShape3D" parent="TeleportBarrier"]
+transform = Transform3D(0.9298218, 0, -0.36801067, 0, 1, 0, 0.36801067, 0, 0.9298218, -11.8566885, 3.7344246, -8.174527)
 shape = SubResource("BoxShape3D_jue6r")
 debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
 
-[node name="TeleportBarrier5" type="CollisionShape3D" parent="TeleportArea"]
-transform = Transform3D(-0.26020148, 0, 0.9655547, 0, 1, 0, -0.9655547, 0, -0.26020148, 0.67889786, -0.36222744, 2.3239317)
+[node name="TeleportBarrier5" type="CollisionShape3D" parent="TeleportBarrier"]
+transform = Transform3D(0.97428787, 0, 0.22530848, 0, 1, 0, -0.22530848, 0, 0.97428787, -11.937927, 3.7344246, -6.9644012)
 shape = SubResource("BoxShape3D_jue6r")
 debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
 
-[node name="TeleportBarrier2" type="CollisionShape3D" parent="TeleportArea"]
-transform = Transform3D(0.9730341, 0, 0.23066117, 0, 1, 0, -0.23066117, 0, 0.9730341, -2.1879797, -0.36222744, 0.5143957)
+[node name="TeleportBarrier2" type="CollisionShape3D" parent="TeleportBarrier"]
+transform = Transform3D(0.1955183, 0, -0.9807, 0, 1, 0, 0.9807, 0, 0.1955183, -10.026459, 3.7344246, -9.764347)
 shape = SubResource("BoxShape3D_jue6r")
 debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
 
-[node name="TeleportBarrier3" type="CollisionShape3D" parent="TeleportArea"]
-transform = Transform3D(0.9797957, 0, -0.20000085, 0, 1, 0, 0.20000085, 0, 0.9797957, -2.1287365, -0.36222744, -0.56274605)
+[node name="TeleportBarrier3" type="CollisionShape3D" parent="TeleportBarrier"]
+transform = Transform3D(-0.23510832, 0, -0.9719691, 0, 1, 0, 0.9719691, 0, -0.23510832, -8.952145, 3.7344246, -9.666405)
 shape = SubResource("BoxShape3D_jue6r")
 debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
 

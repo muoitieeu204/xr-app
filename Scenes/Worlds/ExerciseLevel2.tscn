@@ -78,9 +78,6 @@ shader_parameter/wave_speed = 3.755
 [sub_resource type="BoxShape3D" id="BoxShape3D_74vv2"]
 size = Vector3(100, 3, 100)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fewtt"]
-size = Vector3(0.017578125, 1, 1.3048248)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_vk61c"]
 size = Vector3(0.01, 10, 3.5159523)
 
@@ -107,6 +104,9 @@ size = Vector3(0.01, 10, 3.2386696)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b4nsm"]
 size = Vector3(0.01, 10, 1.8060524)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6nfup"]
+size = Vector3(0.01, 5, 40)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_i0qbo"]
 height = 0.5
@@ -183,26 +183,6 @@ shape = SubResource("BoxShape3D_74vv2")
 [node name="WallBarrier" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.248632, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.388731, 0, 0)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.685862, 0, 0)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 18.307625)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -18.507355)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="WallBarrier"]
 transform = Transform3D(0.5959166, 0, 0.8030463, 0, 1, 0, -0.8030463, 0, 0.5959166, 1.690583, -2.5498328, 3.2237303)
 shape = SubResource("BoxShape3D_vk61c")
@@ -257,6 +237,26 @@ debug_color = Color(0.95104367, 3.080368e-06, 0.56803226, 0.41960785)
 transform = Transform3D(-0.3654942, 0, 0.9308137, 0, 1, 0, -0.9308137, 0, -0.3654942, 17.953056, -2.5498333, 11.368821)
 shape = SubResource("BoxShape3D_b4nsm")
 debug_color = Color(0.95104367, 3.080368e-06, 0.56803226, 0.41960785)
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.388731, 0, 0)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.685862, 0, 0)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 18.307625)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -18.507355)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
 
 [node name="Item Spawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.707783)
@@ -336,7 +336,7 @@ transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.37
 playerNode = ExtResource("9_m3nmu")
 
 [node name="TeleportArea" parent="." instance=ExtResource("10_np1km")]
-transform = Transform3D(-0.035963453, 0, -0.9993531, 0, 1, 0, 0.9993531, 0, -0.035963453, -16.173805, 5.525997, 9.610201)
+transform = Transform3D(-0.035963453, 0, -0.9993531, 0, 1, 0, 0.9993531, 0, -0.035963453, -16.173805, 5.216329, 9.610201)
 target_scene = "uid://bt0ier0gd1sh5"
 holoText = "Starter Hub"
 
