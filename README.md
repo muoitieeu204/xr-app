@@ -53,7 +53,7 @@ The gameplay mechanics are directly mapped to American Speech-Language-Hearing A
 * **Game Engine:** Godot Engine (GodotXR)
 * **Supported Hardware:** Standalone VR headsets (Meta Quest 2, Meta Quest 3, or equivalent)
 * **Input:** VR Controllers, Head Tracking, Built-in Microphone
-* **Speech Recognition:** Vosk AI (Speech-to-Text Integration)
+* **Speech Recognition:** Azure Speech Service AI (Speech-to-Text Integration)
 * **Connectivity:** Active Wi-Fi connection required for cloud synchronization, session uploading, and fetching personalized exercise data from the backend.
 
 ---
