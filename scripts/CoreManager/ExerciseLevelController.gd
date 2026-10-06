@@ -90,7 +90,7 @@ func CorrectAnswer(itemName: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Correct Answer: " + itemName
 	var is_scoring = taskList.has(itemName) and not attemptedItems.has(itemName)
-	var earned_points = 0
+	var earned_points: int = 0
 	if is_scoring:
 		for slot in ExerciseData.items:
 			var asset = slot.get("itemAsset")
@@ -121,7 +121,7 @@ func WrongAnswer(itemName: String, spokenText: String) -> void:
 	var seccondsPassed = currentTimeSecconds
 	var logMessage = "[" + str(seccondsPassed) + "s] Wrong Answer: từ đúng " + "'" + itemName + "'" + ", trẻ nói: " + "'" + spokenText + "'"
 	var is_scoring = taskList.has(itemName) and not attemptedItems.has(itemName)
-	var earned_points = 0
+	var earned_points: int = 0
 	if is_scoring:
 		for slot in ExerciseData.items:
 			var asset = slot.get("itemAsset")

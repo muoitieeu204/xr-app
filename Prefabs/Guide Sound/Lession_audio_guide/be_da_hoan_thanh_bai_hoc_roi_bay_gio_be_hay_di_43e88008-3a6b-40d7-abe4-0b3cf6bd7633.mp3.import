@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqtfn6nojymnr"
+path="res://.godot/imported/be_da_hoan_thanh_bai_hoc_roi_bay_gio_be_hay_di_43e88008-3a6b-40d7-abe4-0b3cf6bd7633.mp3-b0f603e93682fb6e3ebd057d15b00ee5.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Lession_audio_guide/be_da_hoan_thanh_bai_hoc_roi_bay_gio_be_hay_di_43e88008-3a6b-40d7-abe4-0b3cf6bd7633.mp3"
+dest_files=["res://.godot/imported/be_da_hoan_thanh_bai_hoc_roi_bay_gio_be_hay_di_43e88008-3a6b-40d7-abe4-0b3cf6bd7633.mp3-b0f603e93682fb6e3ebd057d15b00ee5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

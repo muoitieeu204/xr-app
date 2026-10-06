@@ -1,0 +1,148 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn17tdk4yicpr"]
+
+[ext_resource type="Script" uid="uid://ce1q2rq1oursv" path="res://scripts/UI Script/SlideGuideController.gd" id="1_jqxj5"]
+[ext_resource type="Texture2D" uid="uid://crmtnsdy3ugi5" path="res://Assets/Images/Exercise Level Guide/1790321205527_1646333652232827185_g1299243573826661102_88b49b25229d33b286c3ce73bdd1d3e2.jpg" id="2_jqxj5"]
+[ext_resource type="Texture2D" uid="uid://cu0okv0b0coi7" path="res://Assets/Images/Exercise Level Guide/1790321147496_1646333652232827185_g1299243573826661102_c5828fe34cd261733112e3ce4b48448d.jpg" id="3_14a3g"]
+[ext_resource type="Texture2D" uid="uid://yverc5wxjq6j" path="res://Assets/Images/Exercise Level Guide/1790321147495_1646333652232827185_g1299243573826661102_eb33b1d253602fbcd8f09d3518c00d2b.jpg" id="4_ixawk"]
+[ext_resource type="Texture2D" uid="uid://d2uo1i6881dey" path="res://Assets/Images/Exercise Level Guide/1790321147498_1646333652232827185_g1299243573826661102_68b9d1b3d0ff90d74d00cb51020c61b0.jpg" id="5_gsctc"]
+[ext_resource type="Texture2D" uid="uid://dgth0n05yyjal" path="res://Assets/Images/Exercise Level Guide/Gemini_Generated_Image_2lf3242lf3242lf3.png" id="6_jqxj5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.305882, 0.67451, 0.686275, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+content_margin_top = 4.0
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 2
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.223529, 0.552941, 0.564706, 1)
+border_width_bottom = 4
+border_color = Color(0.239216, 0.541176, 0.54902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jqxj5")
+
+[node name="SlidesContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="SlidesContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jqxj5")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="SlidesContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_14a3g")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="SlidesContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ixawk")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="SlidesContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gsctc")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="SlidesContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_jqxj5")
+expand_mode = 1
+
+[node name="PrevButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -82.0
+offset_right = 182.0
+offset_bottom = -32.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Trước"
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -82.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "Tiếp"
+
+[node name="GuideAudio" type="AudioStreamPlayer" parent="."]
+bus = &"Sounds"
+
+[connection signal="pressed" from="PrevButton" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

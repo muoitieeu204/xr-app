@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btj2kujoy2tm7"
+path="res://.godot/imported/24_wow_xuat_sac_qua_ban_da_doan_hoan_toan_chinh_9fc8c84e-7d2a-44a0-a334-52ca60ead4bf.mp3-5e67b4596b1c15ce6b5ff70724bea649.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/NPC_interact_audio/24_wow_xuat_sac_qua_ban_da_doan_hoan_toan_chinh_9fc8c84e-7d2a-44a0-a334-52ca60ead4bf.mp3"
+dest_files=["res://.godot/imported/24_wow_xuat_sac_qua_ban_da_doan_hoan_toan_chinh_9fc8c84e-7d2a-44a0-a334-52ca60ead4bf.mp3-5e67b4596b1c15ce6b5ff70724bea649.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

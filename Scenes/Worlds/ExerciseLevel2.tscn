@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://brrsfmpsgnf4l"]
+[gd_scene load_steps=63 format=3 uid="uid://brrsfmpsgnf4l"]
 
 [ext_resource type="Script" uid="uid://ci2sixjede42k" path="res://scripts/CoreManager/ExerciseLevelController.gd" id="1_750ww"]
 [ext_resource type="PackedScene" uid="uid://dewbgxglcjik2" path="res://Assets/3D Models For Supermarket/Animal Products/FakeCheese.tscn" id="2_m3nmu"]
@@ -27,14 +27,22 @@
 [ext_resource type="PackedScene" uid="uid://dcdlplkk7if88" path="res://Assets/3D Models For Supermarket/Fruits/FakeBanana.tscn" id="13_6dfiq"]
 [ext_resource type="PackedScene" uid="uid://es27af61bm2n" path="res://Assets/Character/FisherMan.tscn" id="14_d5p2s"]
 [ext_resource type="PackedScene" uid="uid://dk01pht2o72c7" path="res://Assets/3D Models For Supermarket/Fruits/FakeMango.tscn" id="14_m86rb"]
-[ext_resource type="AudioStream" uid="uid://cvhj3kxqfbmai" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/30_gan_dung_roi_day_ban_nghe_minh_doc_cham_lai_mot_7fd5c685-7cbe-4545-b878-5117d7c2f2d2.mp3" id="15_xjo5t"]
+[ext_resource type="AudioStream" uid="uid://cvhj3kxqfbmai" path="res://Prefabs/Guide Sound/NPC_interact_audio/30_gan_dung_roi_day_ban_nghe_minh_doc_cham_lai_mot_7fd5c685-7cbe-4545-b878-5117d7c2f2d2.mp3" id="15_xjo5t"]
 [ext_resource type="PackedScene" uid="uid://d0qpcb5hrnw" path="res://Assets/3D Models For Supermarket/Fruits/FakePear.tscn" id="15_yv1ms"]
-[ext_resource type="AudioStream" uid="uid://bvovm60qpkejp" path="res://Prefabs/Guide Sound/Dựng audio tương tác với trẻ cho npc khi trẻ trả lời/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3" id="16_m3nmu"]
+[ext_resource type="AudioStream" uid="uid://bvovm60qpkejp" path="res://Prefabs/Guide Sound/NPC_interact_audio/31_khong_sao_dau_ai_cung_can_luyen_tap_ma_ban_hit_3cec8539-3e03-4ed4-974c-0857d2d6506e.mp3" id="16_m3nmu"]
 [ext_resource type="PackedScene" uid="uid://ddlknb3fsmtkj" path="res://Assets/3D Models For Supermarket/Fruits/FakePineApple.tscn" id="16_uod80"]
 [ext_resource type="PackedScene" uid="uid://bn4a50p5smv4u" path="res://Assets/3D Models For Supermarket/Junk Foods/ChipBagFake.tscn" id="17_yhq32"]
 [ext_resource type="PackedScene" uid="uid://bqgunevcptvar" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeChipBag2.tscn" id="18_g1cqr"]
 [ext_resource type="PackedScene" uid="uid://ctyq5s48u8oyo" path="res://Assets/3D Models For Supermarket/Junk Foods/FakeKitKat.tscn" id="19_70rfg"]
 [ext_resource type="PackedScene" uid="uid://bsgink18quft3" path="res://Prefabs/InteractableObject/UIHintTriggerZone.tscn" id="26_g1cqr"]
+[ext_resource type="PackedScene" uid="uid://c2h6ch3df0bew" path="res://Assets/kenney_prototype-kit/IndicatorRoundA.tscn" id="31_6nfup"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="36_hq0md"]
+[ext_resource type="PackedScene" uid="uid://cn17tdk4yicpr" path="res://Prefabs/Boards/ExerciseLevelGuide.tscn" id="37_8wvv4"]
+[ext_resource type="AudioStream" uid="uid://7cms4f4tr4cy" path="res://Prefabs/Guide Sound/Lession_audio_guide/Exercise_level_audio/46_chao_mung_den_voi_tro_choi_truy_tim_do_vat_ban_d2088859-1755-439d-8814-1160ae047aeb.mp3.mp3" id="38_uod80"]
+[ext_resource type="AudioStream" uid="uid://dr3h0oj4eb2l4" path="res://Prefabs/Guide Sound/Lession_audio_guide/Exercise_level_audio/42_dua_tay_dieu_khien_controller_lai_gan_kinh_lup_28017b34-6b90-40a7-9bd8-75ce863d11d2.mp3.mp3" id="39_6nfup"]
+[ext_resource type="AudioStream" uid="uid://frdstio4xc48" path="res://Prefabs/Guide Sound/Lession_audio_guide/Exercise_level_audio/43_khi_lai_gan_vi_tri_co_do_vat_an_giau_he_thong_se_247059db-46df-4b35-ad34-c9e7f3a588cd.mp3.mp3" id="40_7b5mf"]
+[ext_resource type="AudioStream" uid="uid://duwaqtbuguybm" path="res://Prefabs/Guide Sound/Lession_audio_guide/Exercise_level_audio/44_khi_dua_kinh_lup_soi_trung_tam_vi_tri_phat_ra_tin_c588ccd4-6172-4dd3-a32c-cee7a1eb5486.mp3.mp3" id="41_hlxgy"]
+[ext_resource type="AudioStream" uid="uid://dyobm2u1fi3qx" path="res://Prefabs/Guide Sound/Lession_audio_guide/Exercise_level_audio/45_cam_mon_do_vua_tim_duoc_va_di_chuyen_lai_vi_tri_b8acdab7-d360-4a43-91db-9c1f6d092873.mp3.mp3" id="42_i66ty"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b2p4l"]
 panorama = ExtResource("2_red2x")
@@ -70,9 +78,6 @@ shader_parameter/wave_speed = 3.755
 [sub_resource type="BoxShape3D" id="BoxShape3D_74vv2"]
 size = Vector3(100, 3, 100)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fewtt"]
-size = Vector3(0.01, 5, 40)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_vk61c"]
 size = Vector3(0.01, 10, 3.5159523)
 
@@ -100,9 +105,15 @@ size = Vector3(0.01, 10, 3.2386696)
 [sub_resource type="BoxShape3D" id="BoxShape3D_b4nsm"]
 size = Vector3(0.01, 10, 1.8060524)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6nfup"]
+size = Vector3(0.01, 5, 40)
+
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_i0qbo"]
 height = 0.5
 radius = 2.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6dfiq"]
+size = Vector3(1.5341797, 1, 1.15094)
 
 [node name="ExerciseLevel2" type="Node3D" node_paths=PackedStringArray("item_slot_spawner") groups=["ExerciseLevelController", "LevelController"]]
 script = ExtResource("1_750ww")
@@ -172,26 +183,6 @@ shape = SubResource("BoxShape3D_74vv2")
 [node name="WallBarrier" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.248632, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.388731, 0, 0)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.685862, 0, 0)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 18.307625)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="WallBarrier"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -18.507355)
-shape = SubResource("BoxShape3D_fewtt")
-debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
-
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="WallBarrier"]
 transform = Transform3D(0.5959166, 0, 0.8030463, 0, 1, 0, -0.8030463, 0, 0.5959166, 1.690583, -2.5498328, 3.2237303)
 shape = SubResource("BoxShape3D_vk61c")
@@ -247,74 +238,94 @@ transform = Transform3D(-0.3654942, 0, 0.9308137, 0, 1, 0, -0.9308137, 0, -0.365
 shape = SubResource("BoxShape3D_b4nsm")
 debug_color = Color(0.95104367, 3.080368e-06, 0.56803226, 0.41960785)
 
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.388731, 0, 0)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.685862, 0, 0)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 18.307625)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="WallBarrier"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -18.507355)
+shape = SubResource("BoxShape3D_6nfup")
+debug_color = Color(0.94868225, 3.85046e-06, 0.57950264, 0.41960785)
+
 [node name="Item Spawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.707783)
 
 [node name="slot 1" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9498825, 4, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9498825, 4.66918, -6)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 1" instance=ExtResource("26_g1cqr")]
 hint_text = "Đồ vật nằm trên bãi cỏ  "
 
 [node name="slot 2" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4586573, 3.7763605, -9.805558)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4586573, 4.359322, -9.805558)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 2" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm gần mép sông"
 
 [node name="slot 3" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999247, 3.671918, -5.22548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9999247, 4.5660486, -5.22548)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 3" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm gần bãi đá "
 
 [node name="slot 4" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.851881, 3.7265778, -6.592767)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.851881, 4.2130227, -6.592767)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 4" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm gần mép sông này"
 
 [node name="slot 5" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2868625, 3.4490297, -14.430597)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2868625, 4.097702, -14.430597)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 5" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm gần bụi cỏ ngay tảng đá"
 
 [node name="slot 6" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.371004, 4.0458975, -15.872278)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.371004, 4.7100525, -15.872278)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 6" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm trên bãi cỏ gần đây"
 
 [node name="slot 7" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.19693, 4.804248, -6.112627)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.19693, 5.641139, -6.112627)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 7" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm xung quanh bãi đá"
 
 [node name="slot 8" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.590342, 4.6291947, -3.4449577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.590342, 5.225466, -3.4449577)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 8" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm gần tảng đá to"
 
 [node name="slot 9" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.296812, 3.5983787, -1.5860977)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.296812, 4.413546, -1.5860977)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 9" instance=ExtResource("26_g1cqr")]
 hint_text = "Kiếm xung quanh bãi đá"
 
 [node name="slot 10" type="Marker3D" parent="Item Spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.934195, 4, -1.1392097)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.934195, 4.653141, -1.1392097)
 script = ExtResource("7_d5p2s")
 
 [node name="HintTrigger" parent="Item Spawner/slot 10" instance=ExtResource("26_g1cqr")]
@@ -325,7 +336,7 @@ transform = Transform3D(1, 2.6822243e-22, 1.1920929e-07, -1.6580903e-15, 1, 4.37
 playerNode = ExtResource("9_m3nmu")
 
 [node name="TeleportArea" parent="." instance=ExtResource("10_np1km")]
-transform = Transform3D(-0.035963453, 0, -0.9993531, 0, 1, 0, 0.9993531, 0, -0.035963453, -16.173805, 5.525997, 9.610201)
+transform = Transform3D(-0.035963453, 0, -0.9993531, 0, 1, 0, 0.9993531, 0, -0.035963453, -16.173805, 5.216329, 9.610201)
 target_scene = "uid://bt0ier0gd1sh5"
 holoText = "Starter Hub"
 
@@ -339,6 +350,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010884762, -0.5453604, -0.
 shape = SubResource("CylinderShape3D_i0qbo")
 debug_color = Color(0.73378634, 4.3317675e-07, 0.39714065, 0.41960785)
 
+[node name="indicator-round-a2" parent="TeleportArea/ResultScreenTrigger" instance=ExtResource("31_6nfup")]
+transform = Transform3D(4.341076, 0, 0, 0, 1, 0, 0, 0, 4.2274017, 0, -0.7961588, 0)
+
 [node name="FakeMagnifying" parent="." instance=ExtResource("12_red2x")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -8.4554615, 5.242256, 13.45901)
 
@@ -351,6 +365,24 @@ transform = Transform3D(1.6934829, 0, 1.0640093, 0, 2, 0, -1.0640093, 0, 1.69348
 [node name="Npc" parent="NpcZone/StallCashier" instance=ExtResource("14_d5p2s")]
 transform = Transform3D(0.0042935014, 0, 0.49998155, 0, 0.5, 0, -0.49998155, 0, 0.0042935014, -0.41395855, -1.1920929e-07, -0.024498343)
 ssd_repeat_audio = Array[AudioStream]([ExtResource("15_xjo5t"), ExtResource("16_m3nmu")])
+
+[node name="Guide Screen" parent="." node_paths=PackedStringArray("audio_trigger") instance=ExtResource("36_hq0md")]
+transform = Transform3D(-0.61217594, 0, -0.79072154, 0, 1, 0, 0.79072154, 0, -0.61217594, -4.9624457, 5.676638, 16.814743)
+screen_size = Vector2(2.5, 1.5)
+scene = ExtResource("37_8wvv4")
+viewport_size = Vector2(1280, 720)
+transparent = 1
+scene_properties_keys = PackedStringArray("SlideGuideController.gd", "slide_audios", "audio_trigger")
+slide_audios = Array[AudioStream]([ExtResource("38_uod80"), ExtResource("39_6nfup"), ExtResource("40_7b5mf"), ExtResource("41_hlxgy"), ExtResource("42_i66ty")])
+audio_trigger = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="Guide Screen"]
+collision_mask = 655360
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Guide Screen/Area3D"]
+transform = Transform3D(1, 4.3408999e-16, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -0.05419922, -0.7803316, 0.57016134)
+shape = SubResource("BoxShape3D_6dfiq")
+debug_color = Color(0.9399652, 1.1262596e-05, 0.6192461, 0.41960785)
 
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea" method="_on_result_screen_trigger_body_entered"]
 [connection signal="body_entered" from="TeleportArea/ResultScreenTrigger" to="TeleportArea/ResultScreenTrigger" method="_on_body_entered"]

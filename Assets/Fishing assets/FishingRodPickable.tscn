@@ -150,7 +150,7 @@ hinge_limit_max = 36000.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
 
 [node name="InteractableHandle" parent="RodHandle/ReelHinge/HandleOrigin" index="0" instance=ExtResource("6_lx1sd")]
-snap_distance = 0.5
+snap_distance = 0.7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RodHandle/ReelHinge/HandleOrigin/InteractableHandle" index="0"]
 shape = SubResource("SphereShape3D_lx1sd")
@@ -208,6 +208,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16332105, 0.4879611, 0)
 pixel_size = 0.0005
 billboard = 1
 outline_modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
-text = "🐟 cắn câu, hãy kéo cần câu lên!!"
+text = "🐟 cắn câu, hãy kéo cần câu mạnh lên!!"
 
 [editable path="FishingRod"]

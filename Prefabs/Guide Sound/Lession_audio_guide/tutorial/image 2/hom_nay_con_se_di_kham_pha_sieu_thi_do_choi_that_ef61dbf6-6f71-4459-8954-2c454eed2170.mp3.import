@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0q5452jko05l"
+path="res://.godot/imported/hom_nay_con_se_di_kham_pha_sieu_thi_do_choi_that_ef61dbf6-6f71-4459-8954-2c454eed2170.mp3-4da0679a7cc245eca9cf5d00fb4b1606.mp3str"
+
+[deps]
+
+source_file="res://Prefabs/Guide Sound/Lession_audio_guide/tutorial/image 2/hom_nay_con_se_di_kham_pha_sieu_thi_do_choi_that_ef61dbf6-6f71-4459-8954-2c454eed2170.mp3"
+dest_files=["res://.godot/imported/hom_nay_con_se_di_kham_pha_sieu_thi_do_choi_that_ef61dbf6-6f71-4459-8954-2c454eed2170.mp3-4da0679a7cc245eca9cf5d00fb4b1606.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

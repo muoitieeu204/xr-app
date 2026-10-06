@@ -117,7 +117,6 @@ show_laser = 2
 laser_length = 1
 
 [node name="StartXR" parent="." instance=ExtResource("9_3b7j4")]
-render_target_size_multiplier = 0.85
 target_refresh_rate = 72.0
 
 [node name="Room" type="GridMap" parent="."]
